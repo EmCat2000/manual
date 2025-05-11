@@ -695,25 +695,25 @@
   {
     "objectID": "blocks/motion/forward.html",
     "href": "blocks/motion/forward.html",
-    "title": "move steps",
+    "title": "Move",
     "section": "",
     "text": "Example Images\nMoves a sprite a set number of steps (one coordinate) in whichever direction the sprite is facing",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
-      "move  steps"
+      "Move"
     ]
   },
   {
     "objectID": "blocks/motion/forward.html#example-projects",
     "href": "blocks/motion/forward.html#example-projects",
-    "title": "move steps",
+    "title": "Move",
     "section": "Example Projects",
     "text": "Example Projects",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
-      "move  steps"
+      "Move"
     ]
   },
   {
@@ -1098,6 +1098,558 @@
       "Appendices",
       "Motion Blocks",
       "direction"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doSwitchToCostume.html",
+    "href": "blocks/looks/doSwitchToCostume.html",
+    "title": "switch to costume",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "switch to costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doSwitchToCostume.html#example-projects",
+    "href": "blocks/looks/doSwitchToCostume.html#example-projects",
+    "title": "switch to costume",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "switch to costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doWearNextCostume.html",
+    "href": "blocks/looks/doWearNextCostume.html",
+    "title": "next costume",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "next costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doWearNextCostume.html#example-projects",
+    "href": "blocks/looks/doWearNextCostume.html#example-projects",
+    "title": "next costume",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "next costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/getCostumeIdx.html",
+    "href": "blocks/looks/getCostumeIdx.html",
+    "title": "costume number",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "costume number"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/getCostumeIdx.html#example-projects",
+    "href": "blocks/looks/getCostumeIdx.html#example-projects",
+    "title": "costume number",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "costume number"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doSayFor.html",
+    "href": "blocks/looks/doSayFor.html",
+    "title": "say for secs",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "say  for  secs"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doSayFor.html#example-projects",
+    "href": "blocks/looks/doSayFor.html#example-projects",
+    "title": "say for secs",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "say  for  secs"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/bubble.html",
+    "href": "blocks/looks/bubble.html",
+    "title": "say",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "say"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/bubble.html#example-projects",
+    "href": "blocks/looks/bubble.html#example-projects",
+    "title": "say",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "say"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doThinkFor.html",
+    "href": "blocks/looks/doThinkFor.html",
+    "title": "think for secs",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "think  for  secs"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doThinkFor.html#example-projects",
+    "href": "blocks/looks/doThinkFor.html#example-projects",
+    "title": "think for secs",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "think  for  secs"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doThink.html",
+    "href": "blocks/looks/doThink.html",
+    "title": "think",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "think"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doThink.html#example-projects",
+    "href": "blocks/looks/doThink.html#example-projects",
+    "title": "think",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "think"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportGetImageAttribute.html",
+    "href": "blocks/looks/reportGetImageAttribute.html",
+    "title": "Attribute of Costume",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Attribute of Costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportGetImageAttribute.html#example-projects",
+    "href": "blocks/looks/reportGetImageAttribute.html#example-projects",
+    "title": "Attribute of Costume",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Attribute of Costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportNewCostumeStretched.html",
+    "href": "blocks/looks/reportNewCostumeStretched.html",
+    "title": "Stretch Costume",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Stretch Costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportNewCostumeStretched.html#example-projects",
+    "href": "blocks/looks/reportNewCostumeStretched.html#example-projects",
+    "title": "Stretch Costume",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Stretch Costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportNewCostumeSkewed.html",
+    "href": "blocks/looks/reportNewCostumeSkewed.html",
+    "title": "Skew Costume by Degrees",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Skew Costume by Degrees"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportNewCostumeSkewed.html#example-projects",
+    "href": "blocks/looks/reportNewCostumeSkewed.html#example-projects",
+    "title": "Skew Costume by Degrees",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Skew Costume by Degrees"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportNewCostume.html",
+    "href": "blocks/looks/reportNewCostume.html",
+    "title": "New Costume",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "New Costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportNewCostume.html#example-projects",
+    "href": "blocks/looks/reportNewCostume.html#example-projects",
+    "title": "New Costume",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "New Costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/changeEffect.html",
+    "href": "blocks/looks/changeEffect.html",
+    "title": "change effect by",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "change  effect by"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/changeEffect.html#example-projects",
+    "href": "blocks/looks/changeEffect.html#example-projects",
+    "title": "change effect by",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "change  effect by"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/setEffect.html",
+    "href": "blocks/looks/setEffect.html",
+    "title": "set effect to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "set  effect to"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/setEffect.html#example-projects",
+    "href": "blocks/looks/setEffect.html#example-projects",
+    "title": "set effect to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "set  effect to"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/clearEffects.html",
+    "href": "blocks/looks/clearEffects.html",
+    "title": "clear graphic effects",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "clear graphic effects"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/clearEffects.html#example-projects",
+    "href": "blocks/looks/clearEffects.html#example-projects",
+    "title": "clear graphic effects",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "clear graphic effects"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/getEffect.html",
+    "href": "blocks/looks/getEffect.html",
+    "title": "_ effect",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "_ effect"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/getEffect.html#example-projects",
+    "href": "blocks/looks/getEffect.html#example-projects",
+    "title": "_ effect",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "_ effect"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/changeScale.html",
+    "href": "blocks/looks/changeScale.html",
+    "title": "change size by",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "change size by"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/changeScale.html#example-projects",
+    "href": "blocks/looks/changeScale.html#example-projects",
+    "title": "change size by",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "change size by"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/setScale.html",
+    "href": "blocks/looks/setScale.html",
+    "title": "Set Sprite Size",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Set Sprite Size"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/setScale.html#example-projects",
+    "href": "blocks/looks/setScale.html#example-projects",
+    "title": "Set Sprite Size",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Set Sprite Size"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/getScale.html",
+    "href": "blocks/looks/getScale.html",
+    "title": "size",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "size"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/getScale.html#example-projects",
+    "href": "blocks/looks/getScale.html#example-projects",
+    "title": "size",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "size"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/show.html",
+    "href": "blocks/looks/show.html",
+    "title": "show",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "show"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/show.html#example-projects",
+    "href": "blocks/looks/show.html#example-projects",
+    "title": "show",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "show"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/hide.html",
+    "href": "blocks/looks/hide.html",
+    "title": "hide",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "hide"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/hide.html#example-projects",
+    "href": "blocks/looks/hide.html#example-projects",
+    "title": "hide",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "hide"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportShown.html",
+    "href": "blocks/looks/reportShown.html",
+    "title": "shown?",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "shown?"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportShown.html#example-projects",
+    "href": "blocks/looks/reportShown.html#example-projects",
+    "title": "shown?",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "shown?"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/goToLayer.html",
+    "href": "blocks/looks/goToLayer.html",
+    "title": "go to layer",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "go to  layer"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/goToLayer.html#example-projects",
+    "href": "blocks/looks/goToLayer.html#example-projects",
+    "title": "go to layer",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "go to  layer"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/goBack.html",
+    "href": "blocks/looks/goBack.html",
+    "title": "go back layers",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "go back  layers"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/goBack.html#example-projects",
+    "href": "blocks/looks/goBack.html#example-projects",
+    "title": "go back layers",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "go back  layers"
     ]
   },
   {
