@@ -88,8 +88,8 @@ book:
   language: en
   edition: 10
   license: CC-BY-NC-SA 4.0
-  url: https://snap-cloud.github.io/manual/
-  public-url: https://snap-cloud.github.io/manual/
+  url: https://manual.snap.berkeley.edu/
+  public-url: https://manual.snap.berkeley.edu/
   # TODO: Should we auto-commit this to the Snap repo?
   pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
   # doi:
@@ -103,7 +103,7 @@ book:
     pinned: true
     logo: images/snap-logo.png
     logo-alt: Snap! Logo
-    logo-href: https://snap-cloud.github.io/manual/
+    logo-href: https://snap.berkeley.edu/
     tools:
   # sidebar:
     # style: "docked"
@@ -148,31 +148,31 @@ book:
         - blocks/motion/xPosition.qmd
         - blocks/motion/yPosition.qmd
         - blocks/motion/direction.qmd
-    # - part: Looks Blocks
-    #   chapters:
-    #     - blocks/looks/doSwitchToCostume.qmd
-    #     - blocks/looks/doWearNextCostume.qmd
-    #     - blocks/looks/getCostumeIdx.qmd
-    #     - blocks/looks/doSayFor.qmd
-    #     - blocks/looks/bubble.qmd
-    #     - blocks/looks/doThinkFor.qmd
-    #     - blocks/looks/doThink.qmd
-    #     - blocks/looks/reportGetImageAttribute.qmd
-    #     - blocks/looks/reportNewCostumeStretched.qmd
-    #     - blocks/looks/reportNewCostumeSkewed.qmd
-    #     - blocks/looks/reportNewCostume.qmd
-    #     - blocks/looks/changeEffect.qmd
-    #     - blocks/looks/setEffect.qmd
-    #     - blocks/looks/clearEffects.qmd
-    #     - blocks/looks/getEffect.qmd
-    #     - blocks/looks/changeScale.qmd
-    #     - blocks/looks/setScale.qmd
-    #     - blocks/looks/getScale.qmd
-    #     - blocks/looks/show.qmd
-    #     - blocks/looks/hide.qmd
-    #     - blocks/looks/reportShown.qmd
-    #     - blocks/looks/goToLayer.qmd
-    #     - blocks/looks/goBack.qmd
+    - part: Looks Blocks
+      chapters:
+        - blocks/looks/doSwitchToCostume.qmd
+        - blocks/looks/doWearNextCostume.qmd
+        - blocks/looks/getCostumeIdx.qmd
+        - blocks/looks/doSayFor.qmd
+        - blocks/looks/bubble.qmd
+        - blocks/looks/doThinkFor.qmd
+        - blocks/looks/doThink.qmd
+        - blocks/looks/reportGetImageAttribute.qmd
+        - blocks/looks/reportNewCostumeStretched.qmd
+        - blocks/looks/reportNewCostumeSkewed.qmd
+        - blocks/looks/reportNewCostume.qmd
+        - blocks/looks/changeEffect.qmd
+        - blocks/looks/setEffect.qmd
+        - blocks/looks/clearEffects.qmd
+        - blocks/looks/getEffect.qmd
+        - blocks/looks/changeScale.qmd
+        - blocks/looks/setScale.qmd
+        - blocks/looks/getScale.qmd
+        - blocks/looks/show.qmd
+        - blocks/looks/hide.qmd
+        - blocks/looks/reportShown.qmd
+        - blocks/looks/goToLayer.qmd
+        - blocks/looks/goBack.qmd
     - part: Sound Blocks
       chapters:
         - blocks/sound/playSound.qmd
