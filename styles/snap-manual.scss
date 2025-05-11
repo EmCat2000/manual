@@ -1,4 +1,71 @@
 /*-- scss:defaults --*/
+// $h2-font-size:          1.6rem !default;
+// $headings-font-weight:  500 !default;
+$bs-navbar-brand-color: #FFF;
+$bs-navbar-brand-hover-color: #FFF;
+
+/*-- scss:rules --*/
+:root, [data-theme='dark'] {
+  // Berkeley Color Palette
+  // https://brand.berkeley.edu/visual-identity/colors/
+  // School Colors
+  --berkeley-blue: #002676;
+  --california-gold: #FDB515;
+  //  Primary Colors
+  --blue-dark: #010133;
+  --gold-dark: #FC9313;
+  --green-dark: #00553A;
+  --rose-dark: #770747;
+  --purple-dark: #431170;
+  // alternatives (medium)
+  --blue-medium: #004AAE;
+  --gold-medium: #FFC31B;
+  --green-medium: #018943;
+  --rose-medium: #E7115E;
+  --purple-medium: #8236C7;
+  // alternatives (light)
+  --blue-light: #9FD1FF;
+  --gold-light: #FFE88D;
+  --green-light: #B3E59A;
+  --rose-light: #FFCFE5;
+  --purple-light: #D9CEFF;
+  --gray-medium: #808080;
+  --gray-light: #F2F2F2;
+
+  // Bootstrap Variables
+  --bs-navbar-color: #FFF;
+  --bs-navbar-hover-color: rgba(150.45, 150.45, 150.45, 0.8);
+  // --bs-navbar-disabled-color: rgba(150.45, 150.45, 150.45, 0.75);
+  --bs-navbar-active-color: #FFF;
+  --bs-navbar-brand-color: #FFF;
+  --bs-navbar-brand-hover-color: #FFF;
+  --bs-navbar-toggler-border-color: #FFF;
+}
+
+.navbar {
+  background-color: var(--berkeley-blue);
+  color: #FFF;
+
+  .navbar-brand {
+    color: #FFF;
+
+    &:hover, &:focus {
+      color: #FFF;
+    }
+  }
+  .quarto-navbar-tools .quarto-navigation-tool {
+    color: #FFF;
+
+    &:hover, &:focus {
+      color: #FFF;
+    }
+  }
+
+  #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {
+    color: #FFF;
+  }
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Freight+Text+Pro:wght@400;700&display=swap');

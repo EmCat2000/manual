@@ -1,6 +1,8 @@
-# Snap! Reference Manual {.unnumbered}
+---
+toc: false
+---
 
-## Table of Contents
+## Table of Contents {.unnumbered .unlisted}
 
 - [Acknowledgements](content/00-acknowledgements/index.md)
 - [Blocks, Scripts, & Sprites](content/01-blocks-scripts-and-sprites/index.md)
@@ -18,6 +20,7 @@
 - Appendix
     - [Appendix A. Snap! color library](content/13-appendix-a-snap-color-library/index.md)
     - [Appendix B. APL Features](content/14-appendix-b-apl-features/index.md)
+    - [All Blocks Reference](blocks/index.md)
 - [Index](content/index-list.qmd)
 
 \index{home}

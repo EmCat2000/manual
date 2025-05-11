@@ -23,6 +23,9 @@ format:
       roman-numerals: true
     filters:
       - scripts/collect-index.lua
+    link-external-icon: true
+    link-external-newwindow: true
+    smooth-scroll: true
     theme:
       - default
       - styles/snap-manual.scss
@@ -76,15 +79,15 @@ format:
       - blocks/help/
 
 book:
-  title: Snap! Reference Manual
+  title: Snap<em>!</em> Reference Manual
   output-file: snap-manual
-  author: Brian Harvey & Jens Mönig
+  author: Brian Harvey, Jens Mönig, Michael Ball, Jadga Hügle, Victoria Phelps, Bernat Romagosa
   date: May 8, 2025
-  description: A manual for Snap! TODO
+  description: A manual for Snap!
   references: references.bib
   cover-image: images/cover-image.png
-  cover-image-alt: Snap! Manual Cover Image TODO
-  favicon: images/snap-logo.png
+  cover-image-alt: Snap! Manual Cover Image
+  favicon: images/favicon.png
   language: en
   edition: 10
   license: CC-BY-NC-SA 4.0
@@ -103,11 +106,11 @@ book:
     pinned: true
     logo: images/snap-logo.png
     logo-alt: Snap! Logo
-    logo-href: https://snap.berkeley.edu/
+    logo-href: https://docs.snap.berkeley.edu/
     tools:
-  # sidebar:
-    # style: "docked"
-    # search: true
+  sidebar:
+    style: "docked"
+    search: true
   repo-url: https://github.com/snap-cloud/manual/
   repo-actions: [edit]
   chapters:
