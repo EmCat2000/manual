@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# go back _ layers {.unnumbered}
+# go back  layers {.unnumbered}
 
 {{< include ../_block.qmd >}}

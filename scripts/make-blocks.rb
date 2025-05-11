@@ -55,7 +55,7 @@ end
 def block_template(block)
   template = TEMPLATE.dup
   template.gsub!('{{ label }}', block['label'])
-  template.gsub!('{{ title }}', title(block['label']))
+  template.gsub!('{{ title }}', title(block['selector']))
   template.gsub!('{{ selector }}', block['selector'])
   template.gsub!('{{ type }}', block['type'])
   template.gsub!('{{ category }}', block['category'])

@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# turn ↻ _ degrees {.unnumbered}
+# turn ↻  degrees {.unnumbered}
 
 {{< include ../_block.qmd >}}

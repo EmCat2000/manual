@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# reshape _ to _ {.unnumbered}
+# reshape  to  {.unnumbered}
 
 {{< include ../_block.qmd >}}

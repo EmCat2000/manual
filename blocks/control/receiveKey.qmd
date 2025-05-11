@@ -4,7 +4,7 @@ label: "when _ key pressed _"
 block_spec: "when %keyHat key pressed %keyName"
 help_screen: "receiveKey.png"
 selector: "receiveKey"
-type: 
+type: hat
 category: control
 arguments:
   - name: distance
@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# when _ key pressed _ {.unnumbered}
+# when  key pressed  {.unnumbered}
 
 {{< include ../_block.qmd >}}

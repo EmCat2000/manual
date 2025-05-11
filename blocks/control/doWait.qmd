@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# wait _ secs {.unnumbered}
+# wait  secs {.unnumbered}
 
 {{< include ../_block.qmd >}}

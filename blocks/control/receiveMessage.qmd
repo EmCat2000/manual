@@ -4,7 +4,7 @@ label: "when I receive _ _"
 block_spec: "when I receive %msgHat %message"
 help_screen: "receiveMessage.png"
 selector: "receiveMessage"
-type: 
+type: hat
 category: control
 arguments:
   - name: distance
@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# when I receive _ _ {.unnumbered}
+# when I receive {.unnumbered}
 
 {{< include ../_block.qmd >}}

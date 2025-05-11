@@ -1,10 +1,10 @@
 project:
   type: book
   output-dir: _book
-  # resources:
   preview:
     port: 8081
     browser: true
+  # resources:
   # pre-render:
   # post-render:
 
@@ -57,6 +57,7 @@ format:
     number-depth: 1
     documentclass: book
     papersize: letter
+    # TODO: In order to enable fonts, they need to be added to the GitHub Workflow.
     # mainfont: Baskerville
     # monofont: Source Code Pro
     # sansfont: Helvetica
@@ -82,7 +83,7 @@ book:
   license: CC-BY-NC-SA 4.0
   url: https://snap-cloud.github.io/manual/
   public-url: https://snap-cloud.github.io/manual/
-  # TODO: Should we auto-commit this to the snap repo?
+  # TODO: Should we auto-commit this to the Snap repo?
   pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
   # doi:
   # abstract:
@@ -140,31 +141,31 @@ book:
         - blocks/motion/xPosition.qmd
         - blocks/motion/yPosition.qmd
         - blocks/motion/direction.qmd
-    - part: Looks Blocks
-      chapters:
-        - blocks/looks/doSwitchToCostume.qmd
-        - blocks/looks/doWearNextCostume.qmd
-        - blocks/looks/getCostumeIdx.qmd
-        - blocks/looks/doSayFor.qmd
-        - blocks/looks/bubble.qmd
-        - blocks/looks/doThinkFor.qmd
-        - blocks/looks/doThink.qmd
-        - blocks/looks/reportGetImageAttribute.qmd
-        - blocks/looks/reportNewCostumeStretched.qmd
-        - blocks/looks/reportNewCostumeSkewed.qmd
-        - blocks/looks/reportNewCostume.qmd
-        - blocks/looks/changeEffect.qmd
-        - blocks/looks/setEffect.qmd
-        - blocks/looks/clearEffects.qmd
-        - blocks/looks/getEffect.qmd
-        - blocks/looks/changeScale.qmd
-        - blocks/looks/setScale.qmd
-        - blocks/looks/getScale.qmd
-        - blocks/looks/show.qmd
-        - blocks/looks/hide.qmd
-        - blocks/looks/reportShown.qmd
-        - blocks/looks/goToLayer.qmd
-        - blocks/looks/goBack.qmd
+    # - part: Looks Blocks
+    #   chapters:
+    #     - blocks/looks/doSwitchToCostume.qmd
+    #     - blocks/looks/doWearNextCostume.qmd
+    #     - blocks/looks/getCostumeIdx.qmd
+    #     - blocks/looks/doSayFor.qmd
+    #     - blocks/looks/bubble.qmd
+    #     - blocks/looks/doThinkFor.qmd
+    #     - blocks/looks/doThink.qmd
+    #     - blocks/looks/reportGetImageAttribute.qmd
+    #     - blocks/looks/reportNewCostumeStretched.qmd
+    #     - blocks/looks/reportNewCostumeSkewed.qmd
+    #     - blocks/looks/reportNewCostume.qmd
+    #     - blocks/looks/changeEffect.qmd
+    #     - blocks/looks/setEffect.qmd
+    #     - blocks/looks/clearEffects.qmd
+    #     - blocks/looks/getEffect.qmd
+    #     - blocks/looks/changeScale.qmd
+    #     - blocks/looks/setScale.qmd
+    #     - blocks/looks/getScale.qmd
+    #     - blocks/looks/show.qmd
+    #     - blocks/looks/hide.qmd
+    #     - blocks/looks/reportShown.qmd
+    #     - blocks/looks/goToLayer.qmd
+    #     - blocks/looks/goBack.qmd
     - part: Sound Blocks
       chapters:
         - blocks/sound/playSound.qmd
@@ -205,6 +206,9 @@ book:
         - blocks/pen/reportPenTrailsAsCostume.qmd
         - blocks/pen/doPasteOn.qmd
         - blocks/pen/doCutFrom.qmd
+        - blocks/pen/reportColor.qmd
+        - blocks/pen/reportColorAttribute.qmd
+        - blocks/pen/reportNewColor.qmd
     - part: Control Blocks
       chapters:
         - blocks/control/receiveGo.qmd
@@ -303,7 +307,6 @@ book:
         - blocks/operators/reportUnicodeAsLetter.qmd
         - blocks/operators/reportIsA.qmd
         - blocks/operators/reportVariadicIsIdentical.qmd
-        # - blocks/operators/reportJSFunction.qmd
     - part: Variables Blocks
       chapters:
         - blocks/variables/doSetVar.qmd
@@ -333,6 +336,9 @@ book:
         - blocks/lists/reportConcatenatedLists.qmd
         - blocks/lists/reportReshape.qmd
         - blocks/lists/reportCrossproduct.qmd
+    # - part: Advanced and Hidden Blocks
+    #   chapters:
+        # - blocks/operators/reportJSFunction.qmd
         # - blocks/other/doPrimitive.qmd
         # - blocks/other/doApplyExtension.qmd
         # - blocks/other/reportApplyExtension.qmd

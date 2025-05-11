@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# join _ {.unnumbered}
+# join  {.unnumbered}
 
 {{< include ../_block.qmd >}}

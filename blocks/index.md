@@ -188,12 +188,6 @@ reportCrossproduct
 | [`is _ a _ ?`](/blocks/operators/reportIsA.html) | [![block 'is _ a _ ?'](/blocks/images/block_reportIsA.png)](/blocks/operators/reportIsA.html) | predicate | operators | true |
 | [`is _ ?`](/blocks/operators/reportVariadicIsIdentical.html) | [![block 'is _ ?'](/blocks/images/block_reportVariadicIsIdentical.png)](/blocks/operators/reportVariadicIsIdentical.html) | predicate | operators | true |
 | [`JavaScript function ( _ ) { _ }`](/blocks/operators/reportJSFunction.html) | [![block 'JavaScript function ( _ ) { _ }'](/blocks/images/block_reportJSFunction.png)](/blocks/operators/reportJSFunction.html) | reporter | operators | true |
-| [`blocks json`](/blocks/variables/reportGetVar.html) | [![block 'blocks json'](/blocks/images/block_reportGetVar.png)](/blocks/variables/reportGetVar.html) | reporter | variables | true |
-| [`blocks list`](/blocks/variables/reportGetVar.html) | [![block 'blocks list'](/blocks/images/block_reportGetVar.png)](/blocks/variables/reportGetVar.html) | reporter | variables | true |
-| [`blocks table md`](/blocks/variables/reportGetVar.html) | [![block 'blocks table md'](/blocks/images/block_reportGetVar.png)](/blocks/variables/reportGetVar.html) | reporter | variables | true |
-| [`HEADER`](/blocks/variables/reportGetVar.html) | [![block 'HEADER'](/blocks/images/block_reportGetVar.png)](/blocks/variables/reportGetVar.html) | reporter | variables | true |
-| [`missing screens`](/blocks/variables/reportGetVar.html) | [![block 'missing screens'](/blocks/images/block_reportGetVar.png)](/blocks/variables/reportGetVar.html) | reporter | variables | true |
-| [`test-block`](/blocks/variables/reportGetVar.html) | [![block 'test-block'](/blocks/images/block_reportGetVar.png)](/blocks/variables/reportGetVar.html) | reporter | variables | true |
 | [`set _ to _`](/blocks/variables/doSetVar.html) | [![block 'set _ to _'](/blocks/images/block_doSetVar.png)](/blocks/variables/doSetVar.html) | command | variables | true |
 | [`change _ by _`](/blocks/variables/doChangeVar.html) | [![block 'change _ by _'](/blocks/images/block_doChangeVar.png)](/blocks/variables/doChangeVar.html) | command | variables | true |
 | [`show variable _`](/blocks/variables/doShowVar.html) | [![block 'show variable _'](/blocks/images/block_doShowVar.png)](/blocks/variables/doShowVar.html) | command | variables | true |

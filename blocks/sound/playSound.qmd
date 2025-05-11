@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# play sound _ {.unnumbered}
+# Play Sound {.unnumbered}
 
 {{< include ../_block.qmd >}}

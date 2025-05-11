@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# set video transparency to _ {.unnumbered}
+# set video transparency to  {.unnumbered}
 
 {{< include ../_block.qmd >}}

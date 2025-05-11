@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# pick random _ to _ {.unnumbered}
+# pick random  to  {.unnumbered}
 
 {{< include ../_block.qmd >}}

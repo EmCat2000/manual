@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# switch to scene _ _ {.unnumbered}
+# switch to scene   {.unnumbered}
 
 {{< include ../_block.qmd >}}

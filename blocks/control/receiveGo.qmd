@@ -4,7 +4,7 @@ label: "when $greenflag clicked"
 block_spec: "when $greenflag clicked"
 help_screen: "receiveGo.png"
 selector: "receiveGo"
-type: 
+type: hat
 category: control
 arguments:
   - name: distance
@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# when <img src="/images/greenflag.png" alt="Green Flag" class="icon" /> clicked {.unnumbered}
+# When Green Flag Clicked {.unnumbered}
 
 {{< include ../_block.qmd >}}

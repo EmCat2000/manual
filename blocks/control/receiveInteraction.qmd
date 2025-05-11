@@ -4,7 +4,7 @@ label: "when I am _"
 block_spec: "when I am %interaction"
 help_screen: "receiveInteraction.png"
 selector: "receiveInteraction"
-type: 
+type: hat
 category: control
 arguments:
   - name: distance
@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# when I am _ {.unnumbered}
+# when I am  {.unnumbered}
 
 {{< include ../_block.qmd >}}

@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# switch to costume _ {.unnumbered}
+# switch to costume  {.unnumbered}
 
 {{< include ../_block.qmd >}}

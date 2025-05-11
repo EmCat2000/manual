@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# a new clone of _ {.unnumbered}
+# a new clone of  {.unnumbered}
 
 {{< include ../_block.qmd >}}

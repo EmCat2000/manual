@@ -4,7 +4,7 @@ label: "when _"
 block_spec: "when %b"
 help_screen: "receiveConditionEvent.png"
 selector: "receiveConditionEvent"
-type: 
+type: hat
 category: control
 arguments:
   - name: distance
@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# when _ {.unnumbered}
+# when {.unnumbered}
 
 {{< include ../_block.qmd >}}

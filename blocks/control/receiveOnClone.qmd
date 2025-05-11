@@ -4,7 +4,7 @@ label: "when I start as a clone"
 block_spec: "when I start as a clone"
 help_screen: "receiveOnClone.png"
 selector: "receiveOnClone"
-type: 
+type: hat
 category: control
 arguments:
   - name: distance

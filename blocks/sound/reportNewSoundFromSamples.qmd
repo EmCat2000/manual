@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# new sound _ rate _ Hz {.unnumbered}
+# New Sound Rate Hz {.unnumbered}
 
 {{< include ../_block.qmd >}}

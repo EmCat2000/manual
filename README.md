@@ -18,11 +18,7 @@ The reference manual for the [Snap<em>!</em> programming language][sbe]. ([GitHu
 [snap_gh]: https://github.com/jmoenig/snap/
 
 ## Authors
-Brian Harvey & Jens Mönig
-
-## 2025 Rewrite
-
-There are 3 compoents, for the most part, you should focus on working the Quarto to render the Snap! manual.also
+Brian Harvey, Jens Mönig, Michael Ball, Jadge Hügle, Victoria Phelps
 
 ## Quarto
 This version of the Snap! manual is built using [Quarto][quarto].
@@ -63,11 +59,18 @@ Your webpage will automatically refresh as you save changes to files.
 quarto render
 ```
 
-## JupyterBook
+## Writing Style
 
-You can use JuypterBook 2 (alpha) to also build the book.
+* The `content/` folder contains the markdown files, organized by chapter.
+    * Images sho
+* The `blockly/` folder contains 1 markdown file per block, organized by palette.
+  * `blocks/images/` one image per block.
 
-Instructions coming soon.
+## VSCode and Editing
+
+* Use the GitHub Codespace link to edit the book in the browser.
+https://quarto.org/docs/visual-editor/vscode/
+
 
 ## Document Conversion
 If you are making large updates to the md structure, it may be worth working on the script to convert the Word document to markdown.
@@ -80,10 +83,9 @@ ruby convert-word-doc.rb
 
 This conversion script dumps content into `conversion/chapters/` and then copies it into the `content/` folder.
 
-## Hosting the book
+## Published Book
 
 The website is hosted on GitHub pages, compiled by the `quarto.yml` workflow.
-The PDF is... TBD.
 
 ## Credits
 

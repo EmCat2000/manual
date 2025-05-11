@@ -4,7 +4,7 @@ label: "when _ is edited _"
 block_spec: "when %edit is edited %message"
 help_screen: "receiveUserEdit.png"
 selector: "receiveUserEdit"
-type: 
+type: hat
 category: control
 arguments:
   - name: distance
@@ -24,6 +24,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# when _ is edited _ {.unnumbered}
+# when  is edited  {.unnumbered}
 
 {{< include ../_block.qmd >}}
