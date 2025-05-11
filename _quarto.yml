@@ -88,8 +88,8 @@ book:
   language: en
   edition: 10
   license: CC-BY-NC-SA 4.0
-  url: https://manual.snap.berkeley.edu/
-  public-url: https://manual.snap.berkeley.edu/
+  url: https://docs.snap.berkeley.edu/
+  public-url: https://docs.snap.berkeley.edu/
   # TODO: Should we auto-commit this to the Snap repo?
   pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
   # doi:
