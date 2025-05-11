@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "define _ _ _"
 block_spec: "define %upvar %s %repRing"

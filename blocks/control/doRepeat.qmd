@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "repeat _ _"
 block_spec: "repeat %n %loop"

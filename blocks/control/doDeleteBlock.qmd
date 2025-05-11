@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "delete block _"
 block_spec: "delete block %repRing"

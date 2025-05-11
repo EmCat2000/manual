@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "show variable _"
 block_spec: "show variable %var"

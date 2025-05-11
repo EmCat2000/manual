@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "point in direction _"
 block_spec: "point in direction %dir"

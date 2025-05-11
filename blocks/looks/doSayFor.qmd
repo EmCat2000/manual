@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "say _ for _ secs"
 block_spec: "say %s for %n secs"

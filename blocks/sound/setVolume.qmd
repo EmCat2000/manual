@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "set volume to _ %"
 block_spec: "set volume to %n %"

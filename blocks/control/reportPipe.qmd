@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "pipe _ $arrowRight _"
 block_spec: "pipe %s $arrowRight %mult%repRing"

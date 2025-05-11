@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "broadcast _ _ and wait"
 block_spec: "broadcast %msg %receive and wait"

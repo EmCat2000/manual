@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "set _ to _"
 block_spec: "set %var to %s"

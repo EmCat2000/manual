@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "all but first of _"
 block_spec: "all but first of %l"

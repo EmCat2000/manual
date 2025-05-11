@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "unicode _ as letter"
 block_spec: "unicode %n as letter"

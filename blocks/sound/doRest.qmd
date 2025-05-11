@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "rest for _ beats"
 block_spec: "rest for %n beats"

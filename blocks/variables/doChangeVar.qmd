@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "change _ by _"
 block_spec: "change %var by %n"

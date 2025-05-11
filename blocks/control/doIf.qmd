@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "if _ _ _"
 block_spec: "if %b %c %elseif"

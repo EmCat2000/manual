@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "set pen size to _"
 block_spec: "set pen size to %n"

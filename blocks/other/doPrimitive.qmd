@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "_ primitive _"
 block_spec: "%bool primitive %prim"

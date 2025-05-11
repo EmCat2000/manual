@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "map _ over _"
 block_spec: "map %repRing over %l"

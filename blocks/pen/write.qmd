@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "write _ size _"
 block_spec: "write %s size %n"

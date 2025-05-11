@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "new sound _ rate _ Hz"
 block_spec: "new sound %l rate %rate Hz"

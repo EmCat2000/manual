@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "switch to scene _ _"
 block_spec: "switch to scene %scn %send"

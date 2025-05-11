@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "switch to costume _"
 block_spec: "switch to costume %cst"

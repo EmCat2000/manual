@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "wait until _"
 block_spec: "wait until %boolUE"

@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Moves a sprite a set number of steps (one coordinate) in whichever direction the sprite is facing
 label: "move _ steps"
 block_spec: "move %n steps"
@@ -24,6 +25,6 @@ example_images:
     description: Move forward by 10 steps
 ---
 
-# move  steps {.unnumbered}
+# Move {.unnumbered}
 
 {{< include ../_block.qmd >}}

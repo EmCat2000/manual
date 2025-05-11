@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "_ of text _"
 block_spec: "%ta of text %s"

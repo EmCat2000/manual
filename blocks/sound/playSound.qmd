@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "play sound _"
 block_spec: "play sound %snd"

@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "index of _ in _"
 block_spec: "index of %s in %l"

@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "unicode of _"
 block_spec: "unicode of %s"

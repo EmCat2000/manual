@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "add _ to _"
 block_spec: "add %s to %l"

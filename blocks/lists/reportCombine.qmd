@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "combine _ using _"
 block_spec: "combine %l using %repRing"

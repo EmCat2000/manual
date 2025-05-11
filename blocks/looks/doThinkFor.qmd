@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "think _ for _ secs"
 block_spec: "think %s for %n secs"

@@ -16,18 +16,25 @@ appendix-style: none
 
 format:
   html:
-    toc: true
+    toc: false
     roman-numerals: true
     section-numbering:
       style: roman
       roman-numerals: true
     filters:
       - scripts/collect-index.lua
-    theme: [styles/snap-manual.scss]
+    theme:
+      - default
+      - styles/snap-manual.scss
+    fontsize: 16px
+    # mainfont:
+    # monofont:
+    respect-user-color-scheme: true
     strip-comment: true
     html-math-method: katex
     navbar:
       logo: images/snap-logo.png
+      logo-alt: Snap! Logo
     # include-in-header:
     #   - text: |
     #       <script src="https://examples.org/demo.js"></script>

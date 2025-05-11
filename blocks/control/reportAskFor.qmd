@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "ask _ for _ _"
 block_spec: "ask %spr for %repRing %inputs"

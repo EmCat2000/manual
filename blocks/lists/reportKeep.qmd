@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "keep items _ from _"
 block_spec: "keep items %predRing from %l"

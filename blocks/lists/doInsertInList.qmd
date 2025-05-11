@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "insert _ at _ of _"
 block_spec: "insert %s at %idx of %l"

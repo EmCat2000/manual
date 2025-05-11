@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "reset timer"
 block_spec: "reset timer"

@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "clear graphic effects"
 block_spec: "clear graphic effects"

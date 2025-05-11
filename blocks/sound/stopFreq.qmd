@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "stop frequency"
 block_spec: "stop frequency"

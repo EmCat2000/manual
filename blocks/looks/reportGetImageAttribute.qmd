@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "_ of costume _"
 block_spec: "%img of costume %cst"

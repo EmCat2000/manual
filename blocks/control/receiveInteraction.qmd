@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "when I am _"
 block_spec: "when I am %interaction"

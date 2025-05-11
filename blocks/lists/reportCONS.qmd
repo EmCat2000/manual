@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "_ in front of _"
 block_spec: "%s in front of %l"

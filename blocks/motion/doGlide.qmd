@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "glide _ secs to x: _ y: _"
 block_spec: "glide %n secs to x: %n y: %n"

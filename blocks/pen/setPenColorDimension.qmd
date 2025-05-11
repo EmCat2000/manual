@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "set pen _ to _"
 block_spec: "set pen %clrdim to %n"

@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "set _ effect to _"
 block_spec: "set %eff effect to %n"

@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "inherit _"
 block_spec: "inherit %shd"

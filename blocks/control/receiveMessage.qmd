@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "when I receive _ _"
 block_spec: "when I receive %msgHat %message"

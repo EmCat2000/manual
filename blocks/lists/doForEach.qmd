@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "for each _ in _ _"
 block_spec: "for each %upvar in %l %cla"

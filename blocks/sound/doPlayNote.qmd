@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "play note _ for _ beats"
 block_spec: "play note %note for %n beats"

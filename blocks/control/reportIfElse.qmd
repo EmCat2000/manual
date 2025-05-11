@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "if _ then _ else _"
 block_spec: "if %b then %anyUE else %anyUE"

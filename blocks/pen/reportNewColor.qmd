@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "new color _"
 block_spec: "new color %hsbt"

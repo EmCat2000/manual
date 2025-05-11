@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "set tempo to _ bpm"
 block_spec: "set tempo to %n bpm"

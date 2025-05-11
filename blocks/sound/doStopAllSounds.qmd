@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "stop all sounds"
 block_spec: "stop all sounds"

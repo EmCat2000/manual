@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "join _"
 block_spec: "join %words"

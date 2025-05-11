@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "change tempo by _"
 block_spec: "change tempo by %n"

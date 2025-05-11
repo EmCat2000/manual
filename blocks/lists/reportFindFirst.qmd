@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "find first item _ in _"
 block_spec: "find first item %predRing in %l"

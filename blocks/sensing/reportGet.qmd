@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "my _"
 block_spec: "my %get"

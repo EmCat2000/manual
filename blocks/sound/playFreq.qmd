@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "play frequency _ Hz"
 block_spec: "play frequency %n Hz"

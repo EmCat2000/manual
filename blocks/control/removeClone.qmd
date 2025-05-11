@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "delete this clone"
 block_spec: "delete this clone"

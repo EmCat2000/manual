@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "ask _ and wait"
 block_spec: "ask %s and wait"

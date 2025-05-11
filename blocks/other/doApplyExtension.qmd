@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "extension _ _"
 block_spec: "extension %ext %mult%s"

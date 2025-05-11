@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Turns the sprite a specified degree of angle in the clockwise direction
 label: "turn $clockwise _ degrees"
 block_spec: "turn $clockwise %n degrees"

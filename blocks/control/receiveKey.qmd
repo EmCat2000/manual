@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "when _ key pressed _"
 block_spec: "when %keyHat key pressed %keyName"

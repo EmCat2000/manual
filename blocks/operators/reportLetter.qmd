@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "letter _ of _"
 block_spec: "letter %ix of %s"

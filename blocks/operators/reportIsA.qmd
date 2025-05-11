@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "is _ a _ ?"
 block_spec: "is %s a %typ ?"

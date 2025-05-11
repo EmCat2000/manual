@@ -1,4 +1,5 @@
 ---
+toc: false
 block_description: Complete Me
 label: "_ mod _"
 block_spec: "%n mod %n"
