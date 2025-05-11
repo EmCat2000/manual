@@ -1,9 +1,8 @@
 ---
+title: All Snap<em>!</em> Blocks Reference
 page-layout: full
-margin-width: 1px
+# margin-width: 1px
 ---
-
-# All Snap<em>!</em> Blocks Reference {.unnumbered}
 
 <!-- TODO: These images are missing:
 reportNewCostumeSkewed

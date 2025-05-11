@@ -43,7 +43,12 @@ format:
     #       <script src="https://examples.org/demo.js"></script>
     #   - file: analytics.html
     #   - comments.html
-    # include-before-body: header.html
+    include-after-body:
+      - text: |
+          <script>
+            const nav = document.querySelector('nav');
+            nav.insertAdjacentHTML('afterend', '<div class="trapezoid"></div>');
+          </script>
   # epub:
   #   css: styles/epub.css
   #   cover-image: cover.png
