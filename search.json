@@ -2953,7 +2953,7 @@
     "href": "blocks/control/doFor.html",
     "title": "for _ = to",
     "section": "",
-    "text": "Example Images\nComplete Me",
+    "text": "Example Images\nThe for block lets you make a loop with a new variable (i) that starts a 1 and increments by 1 value, up to 10.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
