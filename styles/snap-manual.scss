@@ -7,7 +7,8 @@ $bs-navbar-brand-hover-color: #FFF;
 /*-- scss:uses --*/
 
 /*-- scss:rules --*/
-:root, [data-theme='dark'] {
+:root,
+:root[data-theme='dark'] {
   // Berkeley Color Palette
   // https://brand.berkeley.edu/visual-identity/colors/
   // School Colors
@@ -78,9 +79,7 @@ $bs-navbar-brand-hover-color: #FFF;
   border-right: 9px solid transparent;
   height: 0;
   width: 64px;
-  color: var(--berkeley-blue)
-  /* margin-top: -14px; */
-  /* top: 14px; */
+  color: var(--berkeley-blue);
 }
 
 .trapezoid-footer {
