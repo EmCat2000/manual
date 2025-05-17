@@ -4,7 +4,10 @@ project:
   preview:
     port: 8081
     browser: true
-  # resources:
+  # These files are included in the published website.
+  resources:
+    - CNAME
+    - LICENSE
   # pre-render:
   #   - blocks/render-block-files.py
   # post-render:
