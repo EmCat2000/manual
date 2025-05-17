@@ -1,6 +1,6 @@
 ---
 toc: false
-block_description: Complete Me
+block_description: Runs the scripts in a loop until the stop button is clicked.
 label: "forever _"
 block_spec: "forever %loop"
 help_screen: "doForever.png"
