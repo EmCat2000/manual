@@ -8,6 +8,7 @@ project:
   resources:
     - CNAME
     - LICENSE
+    - README.md
   # pre-render:
   #   - blocks/render-block-files.py
   # post-render:
