@@ -715,5 +715,4733 @@
       "Motion Blocks",
       "Move"
     ]
+  },
+  {
+    "objectID": "blocks/motion/turn.html",
+    "href": "blocks/motion/turn.html",
+    "title": "turn ↻ degrees",
+    "section": "",
+    "text": "Example Images\nTurns the sprite a specified degree of angle in the clockwise direction",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "turn ↻  degrees"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/turn.html#example-projects",
+    "href": "blocks/motion/turn.html#example-projects",
+    "title": "turn ↻ degrees",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "turn ↻  degrees"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/turnLeft.html",
+    "href": "blocks/motion/turnLeft.html",
+    "title": "turn ↺ degrees",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "turn ↺  degrees"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/turnLeft.html#example-projects",
+    "href": "blocks/motion/turnLeft.html#example-projects",
+    "title": "turn ↺ degrees",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "turn ↺  degrees"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/setHeading.html",
+    "href": "blocks/motion/setHeading.html",
+    "title": "point in direction",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "point in direction"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/setHeading.html#example-projects",
+    "href": "blocks/motion/setHeading.html#example-projects",
+    "title": "point in direction",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "point in direction"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/doFaceTowards.html",
+    "href": "blocks/motion/doFaceTowards.html",
+    "title": "point towards",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "point towards"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/doFaceTowards.html#example-projects",
+    "href": "blocks/motion/doFaceTowards.html#example-projects",
+    "title": "point towards",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "point towards"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/gotoXY.html",
+    "href": "blocks/motion/gotoXY.html",
+    "title": "go to x: y:",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "go to x:  y:"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/gotoXY.html#example-projects",
+    "href": "blocks/motion/gotoXY.html#example-projects",
+    "title": "go to x: y:",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "go to x:  y:"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/doGotoObject.html",
+    "href": "blocks/motion/doGotoObject.html",
+    "title": "go to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "go to"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/doGotoObject.html#example-projects",
+    "href": "blocks/motion/doGotoObject.html#example-projects",
+    "title": "go to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "go to"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/doGlide.html",
+    "href": "blocks/motion/doGlide.html",
+    "title": "Glide Secs to Position",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "Glide Secs to Position"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/doGlide.html#example-projects",
+    "href": "blocks/motion/doGlide.html#example-projects",
+    "title": "Glide Secs to Position",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "Glide Secs to Position"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/changeXPosition.html",
+    "href": "blocks/motion/changeXPosition.html",
+    "title": "change x by",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "change x by"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/changeXPosition.html#example-projects",
+    "href": "blocks/motion/changeXPosition.html#example-projects",
+    "title": "change x by",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "change x by"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/setXPosition.html",
+    "href": "blocks/motion/setXPosition.html",
+    "title": "set x to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "set x to"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/setXPosition.html#example-projects",
+    "href": "blocks/motion/setXPosition.html#example-projects",
+    "title": "set x to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "set x to"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/changeYPosition.html",
+    "href": "blocks/motion/changeYPosition.html",
+    "title": "change y by",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "change y by"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/changeYPosition.html#example-projects",
+    "href": "blocks/motion/changeYPosition.html#example-projects",
+    "title": "change y by",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "change y by"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/setYPosition.html",
+    "href": "blocks/motion/setYPosition.html",
+    "title": "set y to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "set y to"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/setYPosition.html#example-projects",
+    "href": "blocks/motion/setYPosition.html#example-projects",
+    "title": "set y to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "set y to"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/bounceOffEdge.html",
+    "href": "blocks/motion/bounceOffEdge.html",
+    "title": "if on edge, bounce",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "if on edge, bounce"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/bounceOffEdge.html#example-projects",
+    "href": "blocks/motion/bounceOffEdge.html#example-projects",
+    "title": "if on edge, bounce",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "if on edge, bounce"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/getPosition.html",
+    "href": "blocks/motion/getPosition.html",
+    "title": "position",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "position"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/getPosition.html#example-projects",
+    "href": "blocks/motion/getPosition.html#example-projects",
+    "title": "position",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "position"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/xPosition.html",
+    "href": "blocks/motion/xPosition.html",
+    "title": "x position",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "x position"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/xPosition.html#example-projects",
+    "href": "blocks/motion/xPosition.html#example-projects",
+    "title": "x position",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "x position"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/yPosition.html",
+    "href": "blocks/motion/yPosition.html",
+    "title": "y position",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "y position"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/yPosition.html#example-projects",
+    "href": "blocks/motion/yPosition.html#example-projects",
+    "title": "y position",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "y position"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/direction.html",
+    "href": "blocks/motion/direction.html",
+    "title": "direction",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "direction"
+    ]
+  },
+  {
+    "objectID": "blocks/motion/direction.html#example-projects",
+    "href": "blocks/motion/direction.html#example-projects",
+    "title": "direction",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Motion Blocks",
+      "direction"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doSwitchToCostume.html",
+    "href": "blocks/looks/doSwitchToCostume.html",
+    "title": "switch to costume",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "switch to costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doSwitchToCostume.html#example-projects",
+    "href": "blocks/looks/doSwitchToCostume.html#example-projects",
+    "title": "switch to costume",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "switch to costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doWearNextCostume.html",
+    "href": "blocks/looks/doWearNextCostume.html",
+    "title": "next costume",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "next costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doWearNextCostume.html#example-projects",
+    "href": "blocks/looks/doWearNextCostume.html#example-projects",
+    "title": "next costume",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "next costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/getCostumeIdx.html",
+    "href": "blocks/looks/getCostumeIdx.html",
+    "title": "costume number",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "costume number"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/getCostumeIdx.html#example-projects",
+    "href": "blocks/looks/getCostumeIdx.html#example-projects",
+    "title": "costume number",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "costume number"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doSayFor.html",
+    "href": "blocks/looks/doSayFor.html",
+    "title": "say for secs",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "say  for  secs"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doSayFor.html#example-projects",
+    "href": "blocks/looks/doSayFor.html#example-projects",
+    "title": "say for secs",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "say  for  secs"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/bubble.html",
+    "href": "blocks/looks/bubble.html",
+    "title": "say",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "say"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/bubble.html#example-projects",
+    "href": "blocks/looks/bubble.html#example-projects",
+    "title": "say",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "say"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doThinkFor.html",
+    "href": "blocks/looks/doThinkFor.html",
+    "title": "think for secs",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "think  for  secs"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doThinkFor.html#example-projects",
+    "href": "blocks/looks/doThinkFor.html#example-projects",
+    "title": "think for secs",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "think  for  secs"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doThink.html",
+    "href": "blocks/looks/doThink.html",
+    "title": "think",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "think"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/doThink.html#example-projects",
+    "href": "blocks/looks/doThink.html#example-projects",
+    "title": "think",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "think"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportGetImageAttribute.html",
+    "href": "blocks/looks/reportGetImageAttribute.html",
+    "title": "Attribute of Costume",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Attribute of Costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportGetImageAttribute.html#example-projects",
+    "href": "blocks/looks/reportGetImageAttribute.html#example-projects",
+    "title": "Attribute of Costume",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Attribute of Costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportNewCostumeStretched.html",
+    "href": "blocks/looks/reportNewCostumeStretched.html",
+    "title": "Stretch Costume",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Stretch Costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportNewCostumeStretched.html#example-projects",
+    "href": "blocks/looks/reportNewCostumeStretched.html#example-projects",
+    "title": "Stretch Costume",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Stretch Costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportNewCostumeSkewed.html",
+    "href": "blocks/looks/reportNewCostumeSkewed.html",
+    "title": "Skew Costume by Degrees",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Skew Costume by Degrees"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportNewCostumeSkewed.html#example-projects",
+    "href": "blocks/looks/reportNewCostumeSkewed.html#example-projects",
+    "title": "Skew Costume by Degrees",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Skew Costume by Degrees"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportNewCostume.html",
+    "href": "blocks/looks/reportNewCostume.html",
+    "title": "New Costume",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "New Costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportNewCostume.html#example-projects",
+    "href": "blocks/looks/reportNewCostume.html#example-projects",
+    "title": "New Costume",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "New Costume"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/changeEffect.html",
+    "href": "blocks/looks/changeEffect.html",
+    "title": "change effect by",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "change  effect by"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/changeEffect.html#example-projects",
+    "href": "blocks/looks/changeEffect.html#example-projects",
+    "title": "change effect by",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "change  effect by"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/setEffect.html",
+    "href": "blocks/looks/setEffect.html",
+    "title": "set effect to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "set  effect to"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/setEffect.html#example-projects",
+    "href": "blocks/looks/setEffect.html#example-projects",
+    "title": "set effect to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "set  effect to"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/clearEffects.html",
+    "href": "blocks/looks/clearEffects.html",
+    "title": "clear graphic effects",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "clear graphic effects"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/clearEffects.html#example-projects",
+    "href": "blocks/looks/clearEffects.html#example-projects",
+    "title": "clear graphic effects",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "clear graphic effects"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/getEffect.html",
+    "href": "blocks/looks/getEffect.html",
+    "title": "_ effect",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "_ effect"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/getEffect.html#example-projects",
+    "href": "blocks/looks/getEffect.html#example-projects",
+    "title": "_ effect",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "_ effect"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/changeScale.html",
+    "href": "blocks/looks/changeScale.html",
+    "title": "change size by",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "change size by"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/changeScale.html#example-projects",
+    "href": "blocks/looks/changeScale.html#example-projects",
+    "title": "change size by",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "change size by"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/setScale.html",
+    "href": "blocks/looks/setScale.html",
+    "title": "Set Sprite Size",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Set Sprite Size"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/setScale.html#example-projects",
+    "href": "blocks/looks/setScale.html#example-projects",
+    "title": "Set Sprite Size",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "Set Sprite Size"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/getScale.html",
+    "href": "blocks/looks/getScale.html",
+    "title": "size",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "size"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/getScale.html#example-projects",
+    "href": "blocks/looks/getScale.html#example-projects",
+    "title": "size",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "size"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/show.html",
+    "href": "blocks/looks/show.html",
+    "title": "show",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "show"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/show.html#example-projects",
+    "href": "blocks/looks/show.html#example-projects",
+    "title": "show",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "show"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/hide.html",
+    "href": "blocks/looks/hide.html",
+    "title": "hide",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "hide"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/hide.html#example-projects",
+    "href": "blocks/looks/hide.html#example-projects",
+    "title": "hide",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "hide"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportShown.html",
+    "href": "blocks/looks/reportShown.html",
+    "title": "shown?",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "shown?"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/reportShown.html#example-projects",
+    "href": "blocks/looks/reportShown.html#example-projects",
+    "title": "shown?",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "shown?"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/goToLayer.html",
+    "href": "blocks/looks/goToLayer.html",
+    "title": "go to layer",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "go to  layer"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/goToLayer.html#example-projects",
+    "href": "blocks/looks/goToLayer.html#example-projects",
+    "title": "go to layer",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "go to  layer"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/goBack.html",
+    "href": "blocks/looks/goBack.html",
+    "title": "go back layers",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "go back  layers"
+    ]
+  },
+  {
+    "objectID": "blocks/looks/goBack.html#example-projects",
+    "href": "blocks/looks/goBack.html#example-projects",
+    "title": "go back layers",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Looks Blocks",
+      "go back  layers"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/playSound.html",
+    "href": "blocks/sound/playSound.html",
+    "title": "Play Sound",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Play Sound"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/playSound.html#example-projects",
+    "href": "blocks/sound/playSound.html#example-projects",
+    "title": "Play Sound",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Play Sound"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doPlaySoundUntilDone.html",
+    "href": "blocks/sound/doPlaySoundUntilDone.html",
+    "title": "Play Sound Until Done",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Play Sound Until Done"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doPlaySoundUntilDone.html#example-projects",
+    "href": "blocks/sound/doPlaySoundUntilDone.html#example-projects",
+    "title": "Play Sound Until Done",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Play Sound Until Done"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doStopAllSounds.html",
+    "href": "blocks/sound/doStopAllSounds.html",
+    "title": "Stop All Sounds",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Stop All Sounds"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doStopAllSounds.html#example-projects",
+    "href": "blocks/sound/doStopAllSounds.html#example-projects",
+    "title": "Stop All Sounds",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Stop All Sounds"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doPlaySoundAtRate.html",
+    "href": "blocks/sound/doPlaySoundAtRate.html",
+    "title": "Play Sound Hz",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Play Sound Hz"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doPlaySoundAtRate.html#example-projects",
+    "href": "blocks/sound/doPlaySoundAtRate.html#example-projects",
+    "title": "Play Sound Hz",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Play Sound Hz"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/reportGetSoundAttribute.html",
+    "href": "blocks/sound/reportGetSoundAttribute.html",
+    "title": "Attribute Of Sound",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Attribute Of Sound"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/reportGetSoundAttribute.html#example-projects",
+    "href": "blocks/sound/reportGetSoundAttribute.html#example-projects",
+    "title": "Attribute Of Sound",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Attribute Of Sound"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/reportNewSoundFromSamples.html",
+    "href": "blocks/sound/reportNewSoundFromSamples.html",
+    "title": "New Sound Rate Hz",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "New Sound Rate Hz"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/reportNewSoundFromSamples.html#example-projects",
+    "href": "blocks/sound/reportNewSoundFromSamples.html#example-projects",
+    "title": "New Sound Rate Hz",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "New Sound Rate Hz"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doRest.html",
+    "href": "blocks/sound/doRest.html",
+    "title": "Rest For Beats",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Rest For Beats"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doRest.html#example-projects",
+    "href": "blocks/sound/doRest.html#example-projects",
+    "title": "Rest For Beats",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Rest For Beats"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doPlayNote.html",
+    "href": "blocks/sound/doPlayNote.html",
+    "title": "Play Note For Beats",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Play Note For Beats"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doPlayNote.html#example-projects",
+    "href": "blocks/sound/doPlayNote.html#example-projects",
+    "title": "Play Note For Beats",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Play Note For Beats"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doSetInstrument.html",
+    "href": "blocks/sound/doSetInstrument.html",
+    "title": "Set Instrument",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Set Instrument"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doSetInstrument.html#example-projects",
+    "href": "blocks/sound/doSetInstrument.html#example-projects",
+    "title": "Set Instrument",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Set Instrument"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doChangeTempo.html",
+    "href": "blocks/sound/doChangeTempo.html",
+    "title": "Change Tempo",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Change Tempo"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doChangeTempo.html#example-projects",
+    "href": "blocks/sound/doChangeTempo.html#example-projects",
+    "title": "Change Tempo",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Change Tempo"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doSetTempo.html",
+    "href": "blocks/sound/doSetTempo.html",
+    "title": "Set Tempo",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Set Tempo"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/doSetTempo.html#example-projects",
+    "href": "blocks/sound/doSetTempo.html#example-projects",
+    "title": "Set Tempo",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Set Tempo"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/getTempo.html",
+    "href": "blocks/sound/getTempo.html",
+    "title": "Tempo",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Tempo"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/getTempo.html#example-projects",
+    "href": "blocks/sound/getTempo.html#example-projects",
+    "title": "Tempo",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Tempo"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/changeVolume.html",
+    "href": "blocks/sound/changeVolume.html",
+    "title": "Change Volume",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Change Volume"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/changeVolume.html#example-projects",
+    "href": "blocks/sound/changeVolume.html#example-projects",
+    "title": "Change Volume",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Change Volume"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/setVolume.html",
+    "href": "blocks/sound/setVolume.html",
+    "title": "Set Volume",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Set Volume"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/setVolume.html#example-projects",
+    "href": "blocks/sound/setVolume.html#example-projects",
+    "title": "Set Volume",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Set Volume"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/getVolume.html",
+    "href": "blocks/sound/getVolume.html",
+    "title": "Volume",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Volume"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/getVolume.html#example-projects",
+    "href": "blocks/sound/getVolume.html#example-projects",
+    "title": "Volume",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Volume"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/changePan.html",
+    "href": "blocks/sound/changePan.html",
+    "title": "Change Balance",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Change Balance"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/changePan.html#example-projects",
+    "href": "blocks/sound/changePan.html#example-projects",
+    "title": "Change Balance",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Change Balance"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/setPan.html",
+    "href": "blocks/sound/setPan.html",
+    "title": "Set Balance To",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Set Balance To"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/setPan.html#example-projects",
+    "href": "blocks/sound/setPan.html#example-projects",
+    "title": "Set Balance To",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Set Balance To"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/getPan.html",
+    "href": "blocks/sound/getPan.html",
+    "title": "Report Balance",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Report Balance"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/getPan.html#example-projects",
+    "href": "blocks/sound/getPan.html#example-projects",
+    "title": "Report Balance",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Report Balance"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/playFreq.html",
+    "href": "blocks/sound/playFreq.html",
+    "title": "Play Frequency Hz",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Play Frequency Hz"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/playFreq.html#example-projects",
+    "href": "blocks/sound/playFreq.html#example-projects",
+    "title": "Play Frequency Hz",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Play Frequency Hz"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/stopFreq.html",
+    "href": "blocks/sound/stopFreq.html",
+    "title": "Stop Frequency",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Stop Frequency"
+    ]
+  },
+  {
+    "objectID": "blocks/sound/stopFreq.html#example-projects",
+    "href": "blocks/sound/stopFreq.html#example-projects",
+    "title": "Stop Frequency",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sound Blocks",
+      "Stop Frequency"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/clear.html",
+    "href": "blocks/pen/clear.html",
+    "title": "clear",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "clear"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/clear.html#example-projects",
+    "href": "blocks/pen/clear.html#example-projects",
+    "title": "clear",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "clear"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/down.html",
+    "href": "blocks/pen/down.html",
+    "title": "pen down",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "pen down"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/down.html#example-projects",
+    "href": "blocks/pen/down.html#example-projects",
+    "title": "pen down",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "pen down"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/up.html",
+    "href": "blocks/pen/up.html",
+    "title": "pen up",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "pen up"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/up.html#example-projects",
+    "href": "blocks/pen/up.html#example-projects",
+    "title": "pen up",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "pen up"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/getPenDown.html",
+    "href": "blocks/pen/getPenDown.html",
+    "title": "pen down?",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "pen down?"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/getPenDown.html#example-projects",
+    "href": "blocks/pen/getPenDown.html#example-projects",
+    "title": "pen down?",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "pen down?"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/setColor.html",
+    "href": "blocks/pen/setColor.html",
+    "title": "set pen color to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "set pen color to"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/setColor.html#example-projects",
+    "href": "blocks/pen/setColor.html#example-projects",
+    "title": "set pen color to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "set pen color to"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/changePenColorDimension.html",
+    "href": "blocks/pen/changePenColorDimension.html",
+    "title": "change pen by",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "change pen  by"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/changePenColorDimension.html#example-projects",
+    "href": "blocks/pen/changePenColorDimension.html#example-projects",
+    "title": "change pen by",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "change pen  by"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/setPenColorDimension.html",
+    "href": "blocks/pen/setPenColorDimension.html",
+    "title": "set pen to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "set pen  to"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/setPenColorDimension.html#example-projects",
+    "href": "blocks/pen/setPenColorDimension.html#example-projects",
+    "title": "set pen to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "set pen  to"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/getPenAttribute.html",
+    "href": "blocks/pen/getPenAttribute.html",
+    "title": "pen",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "pen"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/getPenAttribute.html#example-projects",
+    "href": "blocks/pen/getPenAttribute.html#example-projects",
+    "title": "pen",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "pen"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/changeSize.html",
+    "href": "blocks/pen/changeSize.html",
+    "title": "change pen size by",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "change pen size by"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/changeSize.html#example-projects",
+    "href": "blocks/pen/changeSize.html#example-projects",
+    "title": "change pen size by",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "change pen size by"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/setSize.html",
+    "href": "blocks/pen/setSize.html",
+    "title": "set pen size to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "set pen size to"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/setSize.html#example-projects",
+    "href": "blocks/pen/setSize.html#example-projects",
+    "title": "set pen size to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "set pen size to"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/doStamp.html",
+    "href": "blocks/pen/doStamp.html",
+    "title": "stamp",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "stamp"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/doStamp.html#example-projects",
+    "href": "blocks/pen/doStamp.html#example-projects",
+    "title": "stamp",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "stamp"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/floodFill.html",
+    "href": "blocks/pen/floodFill.html",
+    "title": "fill",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "fill"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/floodFill.html#example-projects",
+    "href": "blocks/pen/floodFill.html#example-projects",
+    "title": "fill",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "fill"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/write.html",
+    "href": "blocks/pen/write.html",
+    "title": "write size",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "write  size"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/write.html#example-projects",
+    "href": "blocks/pen/write.html#example-projects",
+    "title": "write size",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "write  size"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/reportPenTrailsAsCostume.html",
+    "href": "blocks/pen/reportPenTrailsAsCostume.html",
+    "title": "pen trails",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "pen trails"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/reportPenTrailsAsCostume.html#example-projects",
+    "href": "blocks/pen/reportPenTrailsAsCostume.html#example-projects",
+    "title": "pen trails",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "pen trails"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/doPasteOn.html",
+    "href": "blocks/pen/doPasteOn.html",
+    "title": "paste on",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "paste on"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/doPasteOn.html#example-projects",
+    "href": "blocks/pen/doPasteOn.html#example-projects",
+    "title": "paste on",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "paste on"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/doCutFrom.html",
+    "href": "blocks/pen/doCutFrom.html",
+    "title": "cut from",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "cut from"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/doCutFrom.html#example-projects",
+    "href": "blocks/pen/doCutFrom.html#example-projects",
+    "title": "cut from",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "cut from"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/reportColor.html",
+    "href": "blocks/pen/reportColor.html",
+    "title": "Color",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "Color"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/reportColor.html#example-projects",
+    "href": "blocks/pen/reportColor.html#example-projects",
+    "title": "Color",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "Color"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/reportColorAttribute.html",
+    "href": "blocks/pen/reportColorAttribute.html",
+    "title": "Color Attribute",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "Color Attribute"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/reportColorAttribute.html#example-projects",
+    "href": "blocks/pen/reportColorAttribute.html#example-projects",
+    "title": "Color Attribute",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "Color Attribute"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/reportNewColor.html",
+    "href": "blocks/pen/reportNewColor.html",
+    "title": "new color",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "new color"
+    ]
+  },
+  {
+    "objectID": "blocks/pen/reportNewColor.html#example-projects",
+    "href": "blocks/pen/reportNewColor.html#example-projects",
+    "title": "new color",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Pen Blocks",
+      "new color"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveGo.html",
+    "href": "blocks/control/receiveGo.html",
+    "title": "When Green Flag Clicked",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "When Green Flag Clicked"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveGo.html#example-projects",
+    "href": "blocks/control/receiveGo.html#example-projects",
+    "title": "When Green Flag Clicked",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "When Green Flag Clicked"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveUserEdit.html",
+    "href": "blocks/control/receiveUserEdit.html",
+    "title": "when is edited",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "when  is edited"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveUserEdit.html#example-projects",
+    "href": "blocks/control/receiveUserEdit.html#example-projects",
+    "title": "when is edited",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "when  is edited"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveOnClone.html",
+    "href": "blocks/control/receiveOnClone.html",
+    "title": "when I start as a clone",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "when I start as a clone"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveOnClone.html#example-projects",
+    "href": "blocks/control/receiveOnClone.html#example-projects",
+    "title": "when I start as a clone",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "when I start as a clone"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveMessage.html",
+    "href": "blocks/control/receiveMessage.html",
+    "title": "when I receive",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "when I receive"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveMessage.html#example-projects",
+    "href": "blocks/control/receiveMessage.html#example-projects",
+    "title": "when I receive",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "when I receive"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveKey.html",
+    "href": "blocks/control/receiveKey.html",
+    "title": "when key pressed",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "when  key pressed"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveKey.html#example-projects",
+    "href": "blocks/control/receiveKey.html#example-projects",
+    "title": "when key pressed",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "when  key pressed"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveConditionEvent.html",
+    "href": "blocks/control/receiveConditionEvent.html",
+    "title": "when",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "when"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveConditionEvent.html#example-projects",
+    "href": "blocks/control/receiveConditionEvent.html#example-projects",
+    "title": "when",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "when"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveInteraction.html",
+    "href": "blocks/control/receiveInteraction.html",
+    "title": "when I am",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "when I am"
+    ]
+  },
+  {
+    "objectID": "blocks/control/receiveInteraction.html#example-projects",
+    "href": "blocks/control/receiveInteraction.html#example-projects",
+    "title": "when I am",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "when I am"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doBroadcast.html",
+    "href": "blocks/control/doBroadcast.html",
+    "title": "broadcast",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "broadcast"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doBroadcast.html#example-projects",
+    "href": "blocks/control/doBroadcast.html#example-projects",
+    "title": "broadcast",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "broadcast"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doBroadcastAndWait.html",
+    "href": "blocks/control/doBroadcastAndWait.html",
+    "title": "broadcast and wait",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "broadcast   and wait"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doBroadcastAndWait.html#example-projects",
+    "href": "blocks/control/doBroadcastAndWait.html#example-projects",
+    "title": "broadcast and wait",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "broadcast   and wait"
+    ]
+  },
+  {
+    "objectID": "blocks/other/doWarp.html",
+    "href": "blocks/other/doWarp.html",
+    "title": "Warp",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "Warp"
+    ]
+  },
+  {
+    "objectID": "blocks/other/doWarp.html#example-projects",
+    "href": "blocks/other/doWarp.html#example-projects",
+    "title": "Warp",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "Warp"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doWait.html",
+    "href": "blocks/control/doWait.html",
+    "title": "wait secs",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "wait  secs"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doWait.html#example-projects",
+    "href": "blocks/control/doWait.html#example-projects",
+    "title": "wait secs",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "wait  secs"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doWaitUntil.html",
+    "href": "blocks/control/doWaitUntil.html",
+    "title": "wait until",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "wait until"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doWaitUntil.html#example-projects",
+    "href": "blocks/control/doWaitUntil.html#example-projects",
+    "title": "wait until",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "wait until"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doForever.html",
+    "href": "blocks/control/doForever.html",
+    "title": "forever",
+    "section": "",
+    "text": "Example Images\nRuns the scripts in a loop until the stop button is clicked.",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "forever"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doForever.html#example-projects",
+    "href": "blocks/control/doForever.html#example-projects",
+    "title": "forever",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "forever"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doRepeat.html",
+    "href": "blocks/control/doRepeat.html",
+    "title": "repeat",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "repeat"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doRepeat.html#example-projects",
+    "href": "blocks/control/doRepeat.html#example-projects",
+    "title": "repeat",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "repeat"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doUntil.html",
+    "href": "blocks/control/doUntil.html",
+    "title": "repeat until",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "repeat until"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doUntil.html#example-projects",
+    "href": "blocks/control/doUntil.html#example-projects",
+    "title": "repeat until",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "repeat until"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doFor.html",
+    "href": "blocks/control/doFor.html",
+    "title": "for _ = to",
+    "section": "",
+    "text": "Example Images\nThe for block lets you make a loop with a new variable (i) that starts a 1 and increments by 1 value, up to 10.",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "for _ =  to"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doFor.html#example-projects",
+    "href": "blocks/control/doFor.html#example-projects",
+    "title": "for _ = to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "for _ =  to"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doIf.html",
+    "href": "blocks/control/doIf.html",
+    "title": "if",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "if"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doIf.html#example-projects",
+    "href": "blocks/control/doIf.html#example-projects",
+    "title": "if",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "if"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doIfElse.html",
+    "href": "blocks/control/doIfElse.html",
+    "title": "if else",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "if   else"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doIfElse.html#example-projects",
+    "href": "blocks/control/doIfElse.html#example-projects",
+    "title": "if else",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "if   else"
+    ]
+  },
+  {
+    "objectID": "blocks/control/reportIfElse.html",
+    "href": "blocks/control/reportIfElse.html",
+    "title": "if then else",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "if  then  else"
+    ]
+  },
+  {
+    "objectID": "blocks/control/reportIfElse.html#example-projects",
+    "href": "blocks/control/reportIfElse.html#example-projects",
+    "title": "if then else",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "if  then  else"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doReport.html",
+    "href": "blocks/control/doReport.html",
+    "title": "report",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "report"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doReport.html#example-projects",
+    "href": "blocks/control/doReport.html#example-projects",
+    "title": "report",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "report"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doStopThis.html",
+    "href": "blocks/control/doStopThis.html",
+    "title": "stop",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "stop"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doStopThis.html#example-projects",
+    "href": "blocks/control/doStopThis.html#example-projects",
+    "title": "stop",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "stop"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doRun.html",
+    "href": "blocks/control/doRun.html",
+    "title": "run",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "run"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doRun.html#example-projects",
+    "href": "blocks/control/doRun.html#example-projects",
+    "title": "run",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "run"
+    ]
+  },
+  {
+    "objectID": "blocks/control/fork.html",
+    "href": "blocks/control/fork.html",
+    "title": "launch",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "launch"
+    ]
+  },
+  {
+    "objectID": "blocks/control/fork.html#example-projects",
+    "href": "blocks/control/fork.html#example-projects",
+    "title": "launch",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "launch"
+    ]
+  },
+  {
+    "objectID": "blocks/control/evaluate.html",
+    "href": "blocks/control/evaluate.html",
+    "title": "call",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "call"
+    ]
+  },
+  {
+    "objectID": "blocks/control/evaluate.html#example-projects",
+    "href": "blocks/control/evaluate.html#example-projects",
+    "title": "call",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "call"
+    ]
+  },
+  {
+    "objectID": "blocks/control/reportPipe.html",
+    "href": "blocks/control/reportPipe.html",
+    "title": "pipe →",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "pipe  →"
+    ]
+  },
+  {
+    "objectID": "blocks/control/reportPipe.html#example-projects",
+    "href": "blocks/control/reportPipe.html#example-projects",
+    "title": "pipe →",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "pipe  →"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doTellTo.html",
+    "href": "blocks/control/doTellTo.html",
+    "title": "tell to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "tell  to"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doTellTo.html#example-projects",
+    "href": "blocks/control/doTellTo.html#example-projects",
+    "title": "tell to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "tell  to"
+    ]
+  },
+  {
+    "objectID": "blocks/control/reportAskFor.html",
+    "href": "blocks/control/reportAskFor.html",
+    "title": "ask for",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "ask  for"
+    ]
+  },
+  {
+    "objectID": "blocks/control/reportAskFor.html#example-projects",
+    "href": "blocks/control/reportAskFor.html#example-projects",
+    "title": "ask for",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "ask  for"
+    ]
+  },
+  {
+    "objectID": "blocks/control/createClone.html",
+    "href": "blocks/control/createClone.html",
+    "title": "create a clone of",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "create a clone of"
+    ]
+  },
+  {
+    "objectID": "blocks/control/createClone.html#example-projects",
+    "href": "blocks/control/createClone.html#example-projects",
+    "title": "create a clone of",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "create a clone of"
+    ]
+  },
+  {
+    "objectID": "blocks/control/newClone.html",
+    "href": "blocks/control/newClone.html",
+    "title": "a new clone of",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "a new clone of"
+    ]
+  },
+  {
+    "objectID": "blocks/control/newClone.html#example-projects",
+    "href": "blocks/control/newClone.html#example-projects",
+    "title": "a new clone of",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "a new clone of"
+    ]
+  },
+  {
+    "objectID": "blocks/control/removeClone.html",
+    "href": "blocks/control/removeClone.html",
+    "title": "delete this clone",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "delete this clone"
+    ]
+  },
+  {
+    "objectID": "blocks/control/removeClone.html#example-projects",
+    "href": "blocks/control/removeClone.html#example-projects",
+    "title": "delete this clone",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "delete this clone"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doPauseAll.html",
+    "href": "blocks/control/doPauseAll.html",
+    "title": "pause all ⏸",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "pause all ⏸"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doPauseAll.html#example-projects",
+    "href": "blocks/control/doPauseAll.html#example-projects",
+    "title": "pause all ⏸",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "pause all ⏸"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doSwitchToScene.html",
+    "href": "blocks/control/doSwitchToScene.html",
+    "title": "switch to scene",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "switch to scene"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doSwitchToScene.html#example-projects",
+    "href": "blocks/control/doSwitchToScene.html#example-projects",
+    "title": "switch to scene",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "switch to scene"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doDefineBlock.html",
+    "href": "blocks/control/doDefineBlock.html",
+    "title": "define",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "define"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doDefineBlock.html#example-projects",
+    "href": "blocks/control/doDefineBlock.html#example-projects",
+    "title": "define",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "define"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doDeleteBlock.html",
+    "href": "blocks/control/doDeleteBlock.html",
+    "title": "delete block",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "delete block"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doDeleteBlock.html#example-projects",
+    "href": "blocks/control/doDeleteBlock.html#example-projects",
+    "title": "delete block",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "delete block"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doSetBlockAttribute.html",
+    "href": "blocks/control/doSetBlockAttribute.html",
+    "title": "set of block to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "set  of block  to"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doSetBlockAttribute.html#example-projects",
+    "href": "blocks/control/doSetBlockAttribute.html#example-projects",
+    "title": "set of block to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "set  of block  to"
+    ]
+  },
+  {
+    "objectID": "blocks/control/reportBlockAttribute.html",
+    "href": "blocks/control/reportBlockAttribute.html",
+    "title": "Attribute Of Block",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "Attribute Of Block"
+    ]
+  },
+  {
+    "objectID": "blocks/control/reportBlockAttribute.html#example-projects",
+    "href": "blocks/control/reportBlockAttribute.html#example-projects",
+    "title": "Attribute Of Block",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "Attribute Of Block"
+    ]
+  },
+  {
+    "objectID": "blocks/control/reportEnvironment.html",
+    "href": "blocks/control/reportEnvironment.html",
+    "title": "this",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "this"
+    ]
+  },
+  {
+    "objectID": "blocks/control/reportEnvironment.html#example-projects",
+    "href": "blocks/control/reportEnvironment.html#example-projects",
+    "title": "this",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "this"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doSetSlot.html",
+    "href": "blocks/control/doSetSlot.html",
+    "title": "set slot to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "set slot  to"
+    ]
+  },
+  {
+    "objectID": "blocks/control/doSetSlot.html#example-projects",
+    "href": "blocks/control/doSetSlot.html#example-projects",
+    "title": "set slot to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Control Blocks",
+      "set slot  to"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportTouchingObject.html",
+    "href": "blocks/sensing/reportTouchingObject.html",
+    "title": "touching ?",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "touching  ?"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportTouchingObject.html#example-projects",
+    "href": "blocks/sensing/reportTouchingObject.html#example-projects",
+    "title": "touching ?",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "touching  ?"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportTouchingColor.html",
+    "href": "blocks/sensing/reportTouchingColor.html",
+    "title": "touching ?",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "touching  ?"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportTouchingColor.html#example-projects",
+    "href": "blocks/sensing/reportTouchingColor.html#example-projects",
+    "title": "touching ?",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "touching  ?"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportColorIsTouchingColor.html",
+    "href": "blocks/sensing/reportColorIsTouchingColor.html",
+    "title": "color is touching ?",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "color  is touching  ?"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportColorIsTouchingColor.html#example-projects",
+    "href": "blocks/sensing/reportColorIsTouchingColor.html#example-projects",
+    "title": "color is touching ?",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "color  is touching  ?"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/doAsk.html",
+    "href": "blocks/sensing/doAsk.html",
+    "title": "ask and wait",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "ask  and wait"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/doAsk.html#example-projects",
+    "href": "blocks/sensing/doAsk.html#example-projects",
+    "title": "ask and wait",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "ask  and wait"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/getLastAnswer.html",
+    "href": "blocks/sensing/getLastAnswer.html",
+    "title": "answer",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "answer"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/getLastAnswer.html#example-projects",
+    "href": "blocks/sensing/getLastAnswer.html#example-projects",
+    "title": "answer",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "answer"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportMousePosition.html",
+    "href": "blocks/sensing/reportMousePosition.html",
+    "title": "mouse position",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "mouse position"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportMousePosition.html#example-projects",
+    "href": "blocks/sensing/reportMousePosition.html#example-projects",
+    "title": "mouse position",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "mouse position"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportMouseX.html",
+    "href": "blocks/sensing/reportMouseX.html",
+    "title": "mouse x",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "mouse x"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportMouseX.html#example-projects",
+    "href": "blocks/sensing/reportMouseX.html#example-projects",
+    "title": "mouse x",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "mouse x"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportMouseY.html",
+    "href": "blocks/sensing/reportMouseY.html",
+    "title": "mouse y",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "mouse y"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportMouseY.html#example-projects",
+    "href": "blocks/sensing/reportMouseY.html#example-projects",
+    "title": "mouse y",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "mouse y"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportMouseDown.html",
+    "href": "blocks/sensing/reportMouseDown.html",
+    "title": "mouse down?",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "mouse down?"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportMouseDown.html#example-projects",
+    "href": "blocks/sensing/reportMouseDown.html#example-projects",
+    "title": "mouse down?",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "mouse down?"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportKeyPressed.html",
+    "href": "blocks/sensing/reportKeyPressed.html",
+    "title": "key pressed?",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "key  pressed?"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportKeyPressed.html#example-projects",
+    "href": "blocks/sensing/reportKeyPressed.html#example-projects",
+    "title": "key pressed?",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "key  pressed?"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportRelationTo.html",
+    "href": "blocks/sensing/reportRelationTo.html",
+    "title": "Distance To",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "Distance To"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportRelationTo.html#example-projects",
+    "href": "blocks/sensing/reportRelationTo.html#example-projects",
+    "title": "Distance To",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "Distance To"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportAspect.html",
+    "href": "blocks/sensing/reportAspect.html",
+    "title": "Color at Location",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "Color at Location"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportAspect.html#example-projects",
+    "href": "blocks/sensing/reportAspect.html#example-projects",
+    "title": "Color at Location",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "Color at Location"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/doResetTimer.html",
+    "href": "blocks/sensing/doResetTimer.html",
+    "title": "reset timer",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "reset timer"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/doResetTimer.html#example-projects",
+    "href": "blocks/sensing/doResetTimer.html#example-projects",
+    "title": "reset timer",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "reset timer"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/getTimer.html",
+    "href": "blocks/sensing/getTimer.html",
+    "title": "timer",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "timer"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/getTimer.html#example-projects",
+    "href": "blocks/sensing/getTimer.html#example-projects",
+    "title": "timer",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "timer"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportDate.html",
+    "href": "blocks/sensing/reportDate.html",
+    "title": "current",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "current"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportDate.html#example-projects",
+    "href": "blocks/sensing/reportDate.html#example-projects",
+    "title": "current",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "current"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportAttributeOf.html",
+    "href": "blocks/sensing/reportAttributeOf.html",
+    "title": "Attribute Of",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "Attribute Of"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportAttributeOf.html#example-projects",
+    "href": "blocks/sensing/reportAttributeOf.html#example-projects",
+    "title": "Attribute Of",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "Attribute Of"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportGet.html",
+    "href": "blocks/sensing/reportGet.html",
+    "title": "my",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "my"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportGet.html#example-projects",
+    "href": "blocks/sensing/reportGet.html#example-projects",
+    "title": "my",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "my"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportObject.html",
+    "href": "blocks/sensing/reportObject.html",
+    "title": "object",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "object"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportObject.html#example-projects",
+    "href": "blocks/sensing/reportObject.html#example-projects",
+    "title": "object",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "object"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportURL.html",
+    "href": "blocks/sensing/reportURL.html",
+    "title": "url",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "url"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportURL.html#example-projects",
+    "href": "blocks/sensing/reportURL.html#example-projects",
+    "title": "url",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "url"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportAudio.html",
+    "href": "blocks/sensing/reportAudio.html",
+    "title": "microphone",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "microphone"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportAudio.html#example-projects",
+    "href": "blocks/sensing/reportAudio.html#example-projects",
+    "title": "microphone",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "microphone"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportVideo.html",
+    "href": "blocks/sensing/reportVideo.html",
+    "title": "video on",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "video  on"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportVideo.html#example-projects",
+    "href": "blocks/sensing/reportVideo.html#example-projects",
+    "title": "video on",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "video  on"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/doSetVideoTransparency.html",
+    "href": "blocks/sensing/doSetVideoTransparency.html",
+    "title": "set video transparency to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "set video transparency to"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/doSetVideoTransparency.html#example-projects",
+    "href": "blocks/sensing/doSetVideoTransparency.html#example-projects",
+    "title": "set video transparency to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "set video transparency to"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportGlobalFlag.html",
+    "href": "blocks/sensing/reportGlobalFlag.html",
+    "title": "is on?",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "is  on?"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/reportGlobalFlag.html#example-projects",
+    "href": "blocks/sensing/reportGlobalFlag.html#example-projects",
+    "title": "is on?",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "is  on?"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/doSetGlobalFlag.html",
+    "href": "blocks/sensing/doSetGlobalFlag.html",
+    "title": "set to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "set  to"
+    ]
+  },
+  {
+    "objectID": "blocks/sensing/doSetGlobalFlag.html#example-projects",
+    "href": "blocks/sensing/doSetGlobalFlag.html#example-projects",
+    "title": "set to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Sensing Blocks",
+      "set  to"
+    ]
+  },
+  {
+    "objectID": "blocks/other/reifyScript.html",
+    "href": "blocks/other/reifyScript.html",
+    "title": "Command Ring",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Command Ring"
+    ]
+  },
+  {
+    "objectID": "blocks/other/reifyScript.html#example-projects",
+    "href": "blocks/other/reifyScript.html#example-projects",
+    "title": "Command Ring",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Command Ring"
+    ]
+  },
+  {
+    "objectID": "blocks/other/reifyReporter.html",
+    "href": "blocks/other/reifyReporter.html",
+    "title": "Reporter Ring",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Reporter Ring"
+    ]
+  },
+  {
+    "objectID": "blocks/other/reifyReporter.html#example-projects",
+    "href": "blocks/other/reifyReporter.html#example-projects",
+    "title": "Reporter Ring",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Reporter Ring"
+    ]
+  },
+  {
+    "objectID": "blocks/other/reifyPredicate.html",
+    "href": "blocks/other/reifyPredicate.html",
+    "title": "Predicate Ring",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Predicate Ring"
+    ]
+  },
+  {
+    "objectID": "blocks/other/reifyPredicate.html#example-projects",
+    "href": "blocks/other/reifyPredicate.html#example-projects",
+    "title": "Predicate Ring",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Predicate Ring"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicSum.html",
+    "href": "blocks/operators/reportVariadicSum.html",
+    "title": "_",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicSum.html#example-projects",
+    "href": "blocks/operators/reportVariadicSum.html#example-projects",
+    "title": "_",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportDifference.html",
+    "href": "blocks/operators/reportDifference.html",
+    "title": "Subtract",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Subtract"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportDifference.html#example-projects",
+    "href": "blocks/operators/reportDifference.html#example-projects",
+    "title": "Subtract",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Subtract"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicProduct.html",
+    "href": "blocks/operators/reportVariadicProduct.html",
+    "title": "_",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicProduct.html#example-projects",
+    "href": "blocks/operators/reportVariadicProduct.html#example-projects",
+    "title": "_",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportQuotient.html",
+    "href": "blocks/operators/reportQuotient.html",
+    "title": "Division",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Division"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportQuotient.html#example-projects",
+    "href": "blocks/operators/reportQuotient.html#example-projects",
+    "title": "Division",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Division"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportPower.html",
+    "href": "blocks/operators/reportPower.html",
+    "title": "Power of Number",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Power of Number"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportPower.html#example-projects",
+    "href": "blocks/operators/reportPower.html#example-projects",
+    "title": "Power of Number",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Power of Number"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportModulus.html",
+    "href": "blocks/operators/reportModulus.html",
+    "title": "Mod",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Mod"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportModulus.html#example-projects",
+    "href": "blocks/operators/reportModulus.html#example-projects",
+    "title": "Mod",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Mod"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicMin.html",
+    "href": "blocks/operators/reportVariadicMin.html",
+    "title": "_",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicMin.html#example-projects",
+    "href": "blocks/operators/reportVariadicMin.html#example-projects",
+    "title": "_",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicMax.html",
+    "href": "blocks/operators/reportVariadicMax.html",
+    "title": "_",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicMax.html#example-projects",
+    "href": "blocks/operators/reportVariadicMax.html#example-projects",
+    "title": "_",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportRound.html",
+    "href": "blocks/operators/reportRound.html",
+    "title": "round",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "round"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportRound.html#example-projects",
+    "href": "blocks/operators/reportRound.html#example-projects",
+    "title": "round",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "round"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportMonadic.html",
+    "href": "blocks/operators/reportMonadic.html",
+    "title": "Math Functions",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Math Functions"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportMonadic.html#example-projects",
+    "href": "blocks/operators/reportMonadic.html#example-projects",
+    "title": "Math Functions",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Math Functions"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportAtan2.html",
+    "href": "blocks/operators/reportAtan2.html",
+    "title": "atan2 ÷",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "atan2  ÷"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportAtan2.html#example-projects",
+    "href": "blocks/operators/reportAtan2.html#example-projects",
+    "title": "atan2 ÷",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "atan2  ÷"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportRandom.html",
+    "href": "blocks/operators/reportRandom.html",
+    "title": "pick random to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "pick random  to"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportRandom.html#example-projects",
+    "href": "blocks/operators/reportRandom.html#example-projects",
+    "title": "pick random to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "pick random  to"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicLessThan.html",
+    "href": "blocks/operators/reportVariadicLessThan.html",
+    "title": "_",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicLessThan.html#example-projects",
+    "href": "blocks/operators/reportVariadicLessThan.html#example-projects",
+    "title": "_",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicEquals.html",
+    "href": "blocks/operators/reportVariadicEquals.html",
+    "title": "_",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicEquals.html#example-projects",
+    "href": "blocks/operators/reportVariadicEquals.html#example-projects",
+    "title": "_",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicGreaterThan.html",
+    "href": "blocks/operators/reportVariadicGreaterThan.html",
+    "title": "_",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicGreaterThan.html#example-projects",
+    "href": "blocks/operators/reportVariadicGreaterThan.html#example-projects",
+    "title": "_",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicAnd.html",
+    "href": "blocks/operators/reportVariadicAnd.html",
+    "title": "_",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicAnd.html#example-projects",
+    "href": "blocks/operators/reportVariadicAnd.html#example-projects",
+    "title": "_",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicOr.html",
+    "href": "blocks/operators/reportVariadicOr.html",
+    "title": "_",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicOr.html#example-projects",
+    "href": "blocks/operators/reportVariadicOr.html#example-projects",
+    "title": "_",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportNot.html",
+    "href": "blocks/operators/reportNot.html",
+    "title": "not",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "not"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportNot.html#example-projects",
+    "href": "blocks/operators/reportNot.html#example-projects",
+    "title": "not",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "not"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportBoolean.html",
+    "href": "blocks/operators/reportBoolean.html",
+    "title": "_",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportBoolean.html#example-projects",
+    "href": "blocks/operators/reportBoolean.html#example-projects",
+    "title": "_",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "_"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportJoinWords.html",
+    "href": "blocks/operators/reportJoinWords.html",
+    "title": "join",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "join"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportJoinWords.html#example-projects",
+    "href": "blocks/operators/reportJoinWords.html#example-projects",
+    "title": "join",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "join"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportTextSplit.html",
+    "href": "blocks/operators/reportTextSplit.html",
+    "title": "split by",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "split  by"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportTextSplit.html#example-projects",
+    "href": "blocks/operators/reportTextSplit.html#example-projects",
+    "title": "split by",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "split  by"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportLetter.html",
+    "href": "blocks/operators/reportLetter.html",
+    "title": "letter of",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "letter  of"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportLetter.html#example-projects",
+    "href": "blocks/operators/reportLetter.html#example-projects",
+    "title": "letter of",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "letter  of"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportTextAttribute.html",
+    "href": "blocks/operators/reportTextAttribute.html",
+    "title": "Attribute of Text",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Attribute of Text"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportTextAttribute.html#example-projects",
+    "href": "blocks/operators/reportTextAttribute.html#example-projects",
+    "title": "Attribute of Text",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "Attribute of Text"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportUnicode.html",
+    "href": "blocks/operators/reportUnicode.html",
+    "title": "unicode of",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "unicode of"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportUnicode.html#example-projects",
+    "href": "blocks/operators/reportUnicode.html#example-projects",
+    "title": "unicode of",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "unicode of"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportUnicodeAsLetter.html",
+    "href": "blocks/operators/reportUnicodeAsLetter.html",
+    "title": "unicode as letter",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "unicode  as letter"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportUnicodeAsLetter.html#example-projects",
+    "href": "blocks/operators/reportUnicodeAsLetter.html#example-projects",
+    "title": "unicode as letter",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "unicode  as letter"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportIsA.html",
+    "href": "blocks/operators/reportIsA.html",
+    "title": "is a ?",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "is  a  ?"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportIsA.html#example-projects",
+    "href": "blocks/operators/reportIsA.html#example-projects",
+    "title": "is a ?",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "is  a  ?"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicIsIdentical.html",
+    "href": "blocks/operators/reportVariadicIsIdentical.html",
+    "title": "is ?",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "is  ?"
+    ]
+  },
+  {
+    "objectID": "blocks/operators/reportVariadicIsIdentical.html#example-projects",
+    "href": "blocks/operators/reportVariadicIsIdentical.html#example-projects",
+    "title": "is ?",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Operators Blocks",
+      "is  ?"
+    ]
+  },
+  {
+    "objectID": "blocks/variables/doSetVar.html",
+    "href": "blocks/variables/doSetVar.html",
+    "title": "set to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "set  to"
+    ]
+  },
+  {
+    "objectID": "blocks/variables/doSetVar.html#example-projects",
+    "href": "blocks/variables/doSetVar.html#example-projects",
+    "title": "set to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "set  to"
+    ]
+  },
+  {
+    "objectID": "blocks/variables/doChangeVar.html",
+    "href": "blocks/variables/doChangeVar.html",
+    "title": "change by",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "change  by"
+    ]
+  },
+  {
+    "objectID": "blocks/variables/doChangeVar.html#example-projects",
+    "href": "blocks/variables/doChangeVar.html#example-projects",
+    "title": "change by",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "change  by"
+    ]
+  },
+  {
+    "objectID": "blocks/variables/doShowVar.html",
+    "href": "blocks/variables/doShowVar.html",
+    "title": "show variable",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "show variable"
+    ]
+  },
+  {
+    "objectID": "blocks/variables/doShowVar.html#example-projects",
+    "href": "blocks/variables/doShowVar.html#example-projects",
+    "title": "show variable",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "show variable"
+    ]
+  },
+  {
+    "objectID": "blocks/variables/doHideVar.html",
+    "href": "blocks/variables/doHideVar.html",
+    "title": "hide variable",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "hide variable"
+    ]
+  },
+  {
+    "objectID": "blocks/variables/doHideVar.html#example-projects",
+    "href": "blocks/variables/doHideVar.html#example-projects",
+    "title": "hide variable",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "hide variable"
+    ]
+  },
+  {
+    "objectID": "blocks/other/doDeclareVariables.html",
+    "href": "blocks/other/doDeclareVariables.html",
+    "title": "Script variables",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "Script variables"
+    ]
+  },
+  {
+    "objectID": "blocks/other/doDeclareVariables.html#example-projects",
+    "href": "blocks/other/doDeclareVariables.html#example-projects",
+    "title": "Script variables",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "Script variables"
+    ]
+  },
+  {
+    "objectID": "blocks/variables/doDeleteAttr.html",
+    "href": "blocks/variables/doDeleteAttr.html",
+    "title": "inherit",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "inherit"
+    ]
+  },
+  {
+    "objectID": "blocks/variables/doDeleteAttr.html#example-projects",
+    "href": "blocks/variables/doDeleteAttr.html#example-projects",
+    "title": "inherit",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "inherit"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportNewList.html",
+    "href": "blocks/lists/reportNewList.html",
+    "title": "list",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "list"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportNewList.html#example-projects",
+    "href": "blocks/lists/reportNewList.html#example-projects",
+    "title": "list",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "list"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportNumbers.html",
+    "href": "blocks/lists/reportNumbers.html",
+    "title": "numbers from to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "numbers from  to"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportNumbers.html#example-projects",
+    "href": "blocks/lists/reportNumbers.html#example-projects",
+    "title": "numbers from to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "numbers from  to"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportCONS.html",
+    "href": "blocks/lists/reportCONS.html",
+    "title": "In Front Of",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "In Front Of"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportCONS.html#example-projects",
+    "href": "blocks/lists/reportCONS.html#example-projects",
+    "title": "In Front Of",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "In Front Of"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportListItem.html",
+    "href": "blocks/lists/reportListItem.html",
+    "title": "item of",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "item  of"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportListItem.html#example-projects",
+    "href": "blocks/lists/reportListItem.html#example-projects",
+    "title": "item of",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "item  of"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportCDR.html",
+    "href": "blocks/lists/reportCDR.html",
+    "title": "all but first of",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "all but first of"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportCDR.html#example-projects",
+    "href": "blocks/lists/reportCDR.html#example-projects",
+    "title": "all but first of",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "all but first of"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportListAttribute.html",
+    "href": "blocks/lists/reportListAttribute.html",
+    "title": "Report List Attribute",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "Report List Attribute"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportListAttribute.html#example-projects",
+    "href": "blocks/lists/reportListAttribute.html#example-projects",
+    "title": "Report List Attribute",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "Report List Attribute"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportListIndex.html",
+    "href": "blocks/lists/reportListIndex.html",
+    "title": "index of in",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "index of  in"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportListIndex.html#example-projects",
+    "href": "blocks/lists/reportListIndex.html#example-projects",
+    "title": "index of in",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "index of  in"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportListContainsItem.html",
+    "href": "blocks/lists/reportListContainsItem.html",
+    "title": "List Contains",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "List Contains"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportListContainsItem.html#example-projects",
+    "href": "blocks/lists/reportListContainsItem.html#example-projects",
+    "title": "List Contains",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "List Contains"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportListIsEmpty.html",
+    "href": "blocks/lists/reportListIsEmpty.html",
+    "title": "is empty?",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "is  empty?"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportListIsEmpty.html#example-projects",
+    "href": "blocks/lists/reportListIsEmpty.html#example-projects",
+    "title": "is empty?",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "is  empty?"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportMap.html",
+    "href": "blocks/lists/reportMap.html",
+    "title": "map over",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "map  over"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportMap.html#example-projects",
+    "href": "blocks/lists/reportMap.html#example-projects",
+    "title": "map over",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "map  over"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportKeep.html",
+    "href": "blocks/lists/reportKeep.html",
+    "title": "keep items from",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "keep items  from"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportKeep.html#example-projects",
+    "href": "blocks/lists/reportKeep.html#example-projects",
+    "title": "keep items from",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "keep items  from"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportFindFirst.html",
+    "href": "blocks/lists/reportFindFirst.html",
+    "title": "find first item in",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "find first item  in"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportFindFirst.html#example-projects",
+    "href": "blocks/lists/reportFindFirst.html#example-projects",
+    "title": "find first item in",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "find first item  in"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportCombine.html",
+    "href": "blocks/lists/reportCombine.html",
+    "title": "combine using",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "combine  using"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportCombine.html#example-projects",
+    "href": "blocks/lists/reportCombine.html#example-projects",
+    "title": "combine using",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "combine  using"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/doForEach.html",
+    "href": "blocks/lists/doForEach.html",
+    "title": "for each in",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "for each  in"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/doForEach.html#example-projects",
+    "href": "blocks/lists/doForEach.html#example-projects",
+    "title": "for each in",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "for each  in"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/doAddToList.html",
+    "href": "blocks/lists/doAddToList.html",
+    "title": "add to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "add  to"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/doAddToList.html#example-projects",
+    "href": "blocks/lists/doAddToList.html#example-projects",
+    "title": "add to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "add  to"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/doDeleteFromList.html",
+    "href": "blocks/lists/doDeleteFromList.html",
+    "title": "delete of",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "delete  of"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/doDeleteFromList.html#example-projects",
+    "href": "blocks/lists/doDeleteFromList.html#example-projects",
+    "title": "delete of",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "delete  of"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/doInsertInList.html",
+    "href": "blocks/lists/doInsertInList.html",
+    "title": "insert at of",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "insert  at  of"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/doInsertInList.html#example-projects",
+    "href": "blocks/lists/doInsertInList.html#example-projects",
+    "title": "insert at of",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "insert  at  of"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/doReplaceInList.html",
+    "href": "blocks/lists/doReplaceInList.html",
+    "title": "replace item of with",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "replace item  of  with"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/doReplaceInList.html#example-projects",
+    "href": "blocks/lists/doReplaceInList.html#example-projects",
+    "title": "replace item of with",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "replace item  of  with"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportConcatenatedLists.html",
+    "href": "blocks/lists/reportConcatenatedLists.html",
+    "title": "append",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "append"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportConcatenatedLists.html#example-projects",
+    "href": "blocks/lists/reportConcatenatedLists.html#example-projects",
+    "title": "append",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "append"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportReshape.html",
+    "href": "blocks/lists/reportReshape.html",
+    "title": "reshape to",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "reshape  to"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportReshape.html#example-projects",
+    "href": "blocks/lists/reportReshape.html#example-projects",
+    "title": "reshape to",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "reshape  to"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportCrossproduct.html",
+    "href": "blocks/lists/reportCrossproduct.html",
+    "title": "combinations",
+    "section": "",
+    "text": "Example Images\nComplete Me",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "combinations"
+    ]
+  },
+  {
+    "objectID": "blocks/lists/reportCrossproduct.html#example-projects",
+    "href": "blocks/lists/reportCrossproduct.html#example-projects",
+    "title": "combinations",
+    "section": "Example Projects",
+    "text": "Example Projects",
+    "crumbs": [
+      "Appendices",
+      "Variables Blocks",
+      "combinations"
+    ]
   }
 ]
