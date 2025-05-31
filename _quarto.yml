@@ -21,7 +21,8 @@ appendix-style: none
 
 format:
   html:
-    toc: false
+    aria: true # requires quarto-dev / v1.8+
+    toc: true
     roman-numerals: true
     section-numbering:
       style: roman

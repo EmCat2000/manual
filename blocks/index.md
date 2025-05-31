@@ -1,7 +1,6 @@
 ---
 title: All Snap<em>!</em> Blocks Reference
 page-layout: full
-# margin-width: 1px
 ---
 
 <!-- TODO: These images are missing:

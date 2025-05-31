@@ -1,9 +1,23 @@
-{{< meta block_description >}}
+{{ block_description }}
 
-![The "{{< meta title >}}" block](/blocks/images/block_{{< meta selector >}}.png)
+![The "{{ title }}" block](/blocks/images/block_{{ selector }}.png)\
 
-![help screen for the block "{{< meta title >}}"](../help/{{< meta help_screen >}})
+![help screen for the block "{{ title }}"](../help/{{ help_screen }})\
 
 ## Example Images
 
+{{ #example_images }}
+  ![{{ description }}]({{ image }})\
+{{ /example_images }}
+{{ ^example_images }}
+No examples yet.
+{{ /example_images}}
+
 ## Example Projects
+
+{{ #example_projects }}
+- [{{ name }}]({{ url }})
+{{ /example_projects }}
+{{ ^example_projects }}
+No examples yet.
+{{ /example_projects}}
