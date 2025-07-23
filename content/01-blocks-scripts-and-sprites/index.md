@@ -440,16 +440,15 @@ tend to use letters between i and n to represent integer values, but in
 programming languages we don’t have to restrict ourselves to
 single-letter variable names.)
 
-###  Global Variable \index{variable:global} s \index{global variable}
+### Global Variable\index{variable:global}s \index{global variable}
 
 You can create variables “by hand” that aren’t limited to being used
 within a single block. At the top of the Variables palette, click the
-“Make a variable \index{Make a variable} ” button:
+“Make a variable\index{Make a variable}” button:
 
 ![image97.png](assets/image97.png) <!--  style="width:2.05208in;height:2.27083in" / -->
 
-This
-will bring up a dialog window in which you can give your variable a
+This will bring up a dialog window in which you can give your variable a
 name:
 
 ![image96.png](assets/image96.png) <!--  style="width:3.1875in;height:1.84375in" / -->
