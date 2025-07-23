@@ -177,7 +177,7 @@ ignored. There is also a <code>stop this block</code> block\index{stop block blo
 that has a similar purpose, ending the block invocation early, for
 command blocks. (By contrast, the stop this script block\index{stop
 script block} stops not only the current block invocation, but also the
-entire toplevel script that called it.) <!-- is "\index{stop block block}" actually correct? --MF -->
+entire toplevel script that called it.)
 
 Here’s a slightly more
 compact way to write the <code>factorial</code> function:
