@@ -7,7 +7,9 @@
 ## Example Images
 
 {{ #example_images }}
-  ![{{ description }}]({{ image }})\
+
+  ![{{ description }}]({{ image }})
+
 {{ /example_images }}
 {{ ^example_images }}
 No examples yet.
@@ -15,9 +17,17 @@ No examples yet.
 
 ## Example Projects
 
+These example projects show the block in the context of a larger project. They will contain other blcoks, too.
+
 {{ #example_projects }}
-- [{{ name }}]({{ url }})
+
+  * [{{ title }}]({{ url }})
+
 {{ /example_projects }}
 {{ ^example_projects }}
 No examples yet.
 {{ /example_projects}}
+
+---
+
+_Individual pages for each block a new. Most blocks don't yet additional links and images. If you have any questions, please post in the Snap! forum._

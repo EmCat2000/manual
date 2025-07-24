@@ -61,8 +61,8 @@ end
 -- Process LaTeX-style \index{} commands in RawInline elements
 function RawInline(el)
   if el.format == "tex" or el.format == "latex" then
-    -- Look for \index{term} pattern
-    local term = el.text:match("\\index%{(.-)%}")
+    -- Look for \s*\index{term} pattern
+    local term = el.text:match("%s?\\index%{(.-)%}")
 
     if term then
       -- Append entry to the index file

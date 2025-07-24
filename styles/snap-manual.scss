@@ -92,3 +92,23 @@ $bs-navbar-brand-hover-color: #FFF;
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Freight Text Pro', serif;
 }
+
+// Block (page) titles cannot have their own classes added to them
+// So we will override Quarto's CSS where these titles appear.
+.title code,
+.menu-text code {
+  font-family: 'Source Code Pro', 'Monaco', 'Menlo', monospace;
+  color: #000;
+  background-color: unset;
+}
+
+.image-2x {
+  width: 50%;
+  height: auto;
+}
+
+.inline-image {
+  padding: 0;
+  line-height: 1.8;
+  vertical-align: middle;
+}
