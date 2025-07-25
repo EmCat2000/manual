@@ -1,10 +1,10 @@
-# Snap! Manual Conventions
+# Snap*!* Manual Conventions
 
 ## Technical Notes
 
 * To add an index entry use `text...\index{entry name}`
 * There should be no space after the index definition.
-* Write "Snap!" as `Snap_!_` in markdown.
+* Write "Snap!" as `Snap<em>!</em>` in markdown.
 
 ## Writing Code
 * Variables in Snap! should be written as `<var>my variable</var>`, e.g. <var>counter</var>

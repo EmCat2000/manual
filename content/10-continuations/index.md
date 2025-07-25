@@ -20,7 +20,7 @@ the block. For example, in the script
 the continuation of the move
 100 steps block is
 
-![image875.png](assets/image875.png) <!--  style="width:1.59375in;height:0.70833in" / --> 
+![image875.png](assets/image875.png) <!--  style="width:1.59375in;height:0.70833in" / -->
 
  But some situations are more
 complicated. For example, what is the continuation of move 100 steps in
@@ -49,7 +49,7 @@ We have to put a repeat 3 block in the *picture* of the continuation,
 but the actual continuation is made from the evaluator’s internal
 bookkeeping of where it’s up to in a script. So it’s really the original
 script plus some extra information. But the pictures here do correctly
-represent what work the process still has left to do.)  
+represent what work the process still has left to do.)
 
 When
 a block is used inside a custom block, its continuation may include
@@ -59,12 +59,12 @@ block
 
 and then use that block in a script:
 
-![image880.png](assets/image880.png) <!--  style="width:0.72917in;height:0.59375in" / --> 
+![image880.png](assets/image880.png) <!--  style="width:0.72917in;height:0.59375in" / -->
 
 then the continuation of the
 first use of move 100 steps is
 
-![image881.png](assets/image881.png) <!--  style="width:1.66667in;height:1.26042in" / --> 
+![image881.png](assets/image881.png) <!--  style="width:1.66667in;height:1.26042in" / -->
 
 in which part comes from
 inside the square block and part comes from the call to square.
@@ -77,11 +77,11 @@ no input slots. But the continuation of a *reporter* block has to do
 something with the value reported by the block, so it takes that value
 as input. For example, in the script
 
-![image882.png](assets/image882.png) <!--  style="width:2.1875in;height:0.57292in" / --> 
+![image882.png](assets/image882.png) <!--  style="width:2.1875in;height:0.57292in" / -->
 
 the continuation of the 3+4 block is
 
-![image883.png](assets/image883.png) <!--  style="width:3.57292in;height:0.57292in" / --> 
+![image883.png](assets/image883.png) <!--  style="width:3.57292in;height:0.57292in" / -->
 
 Of course the name result in
 that picture is arbitrary; any name could be used, or no name at all by
@@ -89,7 +89,7 @@ using the empty-slot notation for input substitution.
 
 ## Continuation Passing Style
 
-Like all \index{continuation passing style} programming languages,
+Like all\index{continuation passing style} programming languages,
 Snap*!* evaluates compositions of nested reporters from the inside out.
 For example, in the expression
 ![image884.png](assets/image884.png) <!--  style="width:1.3125in;height:0.22917in" / --> Snap*!*
@@ -131,7 +131,7 @@ We can check that these blocks give the results we want:
 The original expression can
 now be represented as
 
-![image908.png](assets/image908.png) <!--  style="width:5.53333in;height:2.31806in" / --> 
+![image908.png](assets/image908.png) <!--  style="width:5.53333in;height:2.31806in" / -->
 
 If you read this top to
 bottom, don’t you get “Add two and two, take the factorial of that, add
@@ -144,7 +144,7 @@ subtle virtues. One of them is that each script is just one block long
 block), so each block doesn’t have to remember what else to do—in the
 vocabulary of this section, the (implicit) continuation of each block is
 empty. Instead of the usual picture of recursion, with a bunch of little
-people \index{little people} all waiting for each other, with CPS
+people\index{little people} all waiting for each other, with CPS
 \index{CPS} what happens is that each little person hands off the
 problem to the next one and goes to the beach, so there’s only one
 active little person at a time. In this example, we start with Alfred,
@@ -155,7 +155,7 @@ who computes 29. And so on, until finally Sam, a say specialist, says
 the value 2.107757298379527×10<sup>132</sup>, which is a very large
 number!
 
-![image909.png](assets/image909.png) <!--  style="width:2.19306in;height:1.05278in" / --> 
+![image909.png](assets/image909.png) <!--  style="width:2.19306in;height:1.05278in" / -->
 
 Go back to the definitions of these blocks. The ones, such as add, that
 correspond to primitive reporters are simple; they just call the
@@ -189,7 +189,7 @@ Here’s the classic example. We want to write a recursive block that
 takes a list of numbers as input, and reports the product of all the
 numbers:
 
-![image911.png](assets/image911.png) <!--  style="width:3.89583in;height:1.34167in" / --> 
+![image911.png](assets/image911.png) <!--  style="width:3.89583in;height:1.34167in" / -->
 
 But we can improve the
 efficiency of this block, in the case of a list that includes a zero; as
@@ -202,14 +202,14 @@ the list 1,2,3,0,4,5. We find the zero on the third recursive call (the
 fourth call altogether), as the first item of the sublist 0,4,5. What is
 the continuation of the report 0 block? It’s
 
-![image912.png](assets/image912.png) <!--  style="width:4.33333in;height:0.41667in" / --> 
+![image912.png](assets/image912.png) <!--  style="width:4.33333in;height:0.41667in" / -->
 
 Even though we already know
 that result is zero, we’re going to do three unnecessary multiplications
 while unwinding the recursive calls.
 
  We can improve upon this by
-capturing the continuation \index{call w/continuation block } of the
+capturing the continuation\index{call w/continuation block } of the
 top-level call to product:
 
 ![image913.png](assets/image913.png) <!--  style="width:4.03819in;height:1.92569in" / --> ![image914.png](assets/image914.png) <!--  style="width:3.94514in;height:1.09792in" / -->
@@ -220,7 +220,7 @@ one-input script, as shown in the product example. It calls that script
 with *the continuation of the* call-with-continuation *block itself* as
 its input. In this case, that continuation is
 
-![image915.png](assets/image915.png) <!--  style="width:2.70833in;height:0.29167in" / --> 
+![image915.png](assets/image915.png) <!--  style="width:2.70833in;height:0.29167in" / -->
 
 reporting to whichever script
 called product. If the input list doesn’t include a zero, then nothing
@@ -231,7 +231,7 @@ continuation,* with an input of 0. The continuation immediately reports
 that 0 to the caller of product, *without* unwinding all the recursive
 calls and without the unnecessary multiplications.
 
-![image917.png](assets/image917.png) <!--  style="width:4.40625in;height:1.15625in" / --> 
+![image917.png](assets/image917.png) <!--  style="width:4.40625in;height:1.15625in" / -->
 
  I could have written product
 a little more simply using a Reporter ring instead of a Command ring:
@@ -252,7 +252,7 @@ w/continuation is an input.
 
 ###  Nonlocal exit
 
-Many programming \index{nonlocal exit} languages have a break command
+Many programming\index{nonlocal exit} languages have a break command
 \index{break command} that can be used inside a looping construct such
 as repeat to end the repetition early. Using first class continuations,
 we can generalize this mechanism to allow nonlocal exit even within a
@@ -262,12 +262,12 @@ loops:
 ![image920.png](assets/image920.png) <!--  style="width:1.85417in;height:2.65347in" / -->
 
 The upvar break has as its
-value a continuation \index{run w/continuation} that can be called from
+value a continuation\index{run w/continuation} that can be called from
 anywhere in the program to jump immediately to whatever comes after the
 catch block in its script. Here’s an example with two nested invocations
-of catch \index{catch block}, with the upvar renamed in the outer one:
+of catch\index{catch block}, with the upvar renamed in the outer one:
 
-![image923.png](assets/image923.png) <!--  style="width:1.85417in;height:2.65347in" / --> 
+![image923.png](assets/image923.png) <!--  style="width:1.85417in;height:2.65347in" / -->
 
 As shown, this will say 1, then 2, then 3, then exit both nested catches
 and think “Hmm.” If in the run block the variable break is used instead
@@ -281,13 +281,13 @@ value to its own continuation, but instead reports a value (which it
 takes as an additional input, in addition to the catch tag) to *the
 corresponding catch block*’s continuation:
 
-![image924.png](assets/image924.png) <!--  style="width:1.85417in;height:2.65347in" / --> 
+![image924.png](assets/image924.png) <!--  style="width:1.85417in;height:2.65347in" / -->
 
 Without the throw, the inner call reports 5, the + block reports 8, so
 the catch block reports 8, and the × block reports 80. With the throw,
 the inner call doesn’t report at all, and neither does the + block. The
 throw block’s input of 20 becomes the value reported by the catch block,
-and the × block multiplies 10 and 20.  
+and the × block multiplies 10 and 20.
 
 
 **Creating a Thread System**
@@ -309,14 +309,14 @@ automatically, there is generally no need for the user to think about
 threads. But, just to show that this, too, is not magic, here is an
 implementation of a simple thread system. It uses a global variable
 named tasks that initially contains an empty list. Each use of the
-C-shaped thread block \index{thread block} adds a continuation (the
-ringed script) to the list. The yield block \index{yield block} uses run
+C-shaped thread block\index{thread block} adds a continuation (the
+ringed script) to the list. The yield block\index{yield block} uses run
 w/continuation to create a continuation for a partly done thread, adds
 it to the task list, and then runs the first waiting task. The
 end** **thread block (which is automatically added at the end of every
 thread’s script by the thread block) just runs the next waiting task.
 
-![image925.png](assets/image925.png) <!--  style="width:1.85417in;height:2.65347in" / --> 
+![image925.png](assets/image925.png) <!--  style="width:1.85417in;height:2.65347in" / -->
 
 Here is a sample script using the thread system. One thread says
 numbers; the other says letters. The number thread yields after every
@@ -325,9 +325,8 @@ sequence of speech balloons is
 1,2,a,3,b,c,d,e,4,5,f,g,h,i,6,7,j,k,l,m,n,o,8,9,10,11,
 p,q,r,s,t,u,12,13,v,w,x,y,z,14,15,16,17,18,…30.
 
-![image928.png](assets/image928.png) <!--  style="width:2.94792in;height:4.25417in" / --> 
+![image928.png](assets/image928.png) <!--  style="width:2.94792in;height:4.25417in" / -->
 
 If we wanted this to behave exactly like Snap*!*’s own threads, we’d
 define new versions of repeat and so on that run yield after each
 repetition.
-

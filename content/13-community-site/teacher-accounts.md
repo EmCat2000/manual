@@ -1,6 +1,6 @@
 # Teacher Accounts
 
-Snap_!_ supports basic teacher account functionality.
+Snap<em>!</em> supports basic teacher account functionality.
 
 ## Bulk Account Creation
 

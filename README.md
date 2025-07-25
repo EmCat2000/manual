@@ -1,4 +1,4 @@
-# The Snap_!_ Reference Manual
+# The Snap*!* Reference Manual
 > by Brian Harvey, Jens Mönig
 
 ![Snap! Logo](./images/snap-logo.png)
