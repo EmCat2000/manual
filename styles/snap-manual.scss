@@ -103,12 +103,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .image-2x {
-  width: 50%;
+  width: 25%;
   height: auto;
 }
 
-.inline-image {
+.image-inline {
   padding: 0;
   line-height: 1.8;
   vertical-align: middle;
+}
+
+// Slightly smaller than 100% for inline blocks.
+.image-2x.image-inline {
+  width: 20%
 }
