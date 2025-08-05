@@ -4,29 +4,33 @@ require 'fileutils'
 dest = 'blocks'
 TEMPLATE = <<~TEMPLATE
 ---
-block_description: Complete Me
-label: "{{ label }}"
-block_spec: "{{ block_spec }}"
-help_screen: "{{ selector }}.png"
-selector: "{{ selector }}"
-type: {{ type }}
-category: {{ category }}
-arguments:
-  - name: distance
-    type: number
-    default: 10
-    description: The distance to move forward
-returns: None
-exmaple_projects:
-  - title: Example Project 1
-    url: https://example.com/project1
-  - title: Example Project 1
-    url: https://example.com/project1
-example_images:
-  - image: move_forward.png
-    description: Move forward by 10 steps
-  - image: move_forward.png
-    description: Move forward by 10 steps
+toc: false
+title: "{{ title }}"
+partial-data:
+  title: "{{ title }}"
+  block_description: Complete Me
+  label: "{{ label }}"
+  block_spec: "{{ block_spec }}"
+  help_screen: "{{ selector }}.png"
+  selector: "{{ selector }}"
+  type: {{ type }}
+  category: {{ category }}
+  arguments:
+    - name: distance
+        type: number
+      default: 10
+      description: The distance to move forward
+  returns: None
+  exmaple_projects:
+    - title: Example Project 1
+      url: https://example.com/project1
+    - title: Example Project 1
+      url: https://example.com/project1
+  example_images:
+    - image: move_forward.png
+      description: Move forward by 10 steps
+    - image: move_forward.png
+      description: Move forward by 10 steps
 ---
 
 # {{ title }} {.unnumbered}
@@ -49,7 +53,7 @@ def title(label)
   SYMBOL_MAP.each do |symbol, html|
     label.gsub!(symbol.to_s, html)
   end
-  label
+  label.gsub(/\s+/, ' ').strip
 end
 
 def block_template(block)

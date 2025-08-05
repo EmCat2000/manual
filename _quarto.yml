@@ -4,6 +4,8 @@ project:
   preview:
     port: 8081
     browser: true
+    watch-inputs: false
+    navigate: false
   # These files are included in the published website.
   resources:
     - CNAME
@@ -16,12 +18,14 @@ project:
 bibliography: references.bib
 # Don't number subsections as chapters.
 number-depth: 1
-toc-depth: 1
-appendix-style: none
+# Setting toc-depth to 1 disables displaying the pre-page toc
+# toc-depth: 1
+# appendix-style: none
 
 format:
   html:
-    toc: false
+    aria: true # requires quarto-dev / v1.8+
+    toc: true
     roman-numerals: true
     section-numbering:
       style: roman
@@ -106,7 +110,6 @@ book:
   license: CC-BY-NC-SA 4.0
   url: https://docs.snap.berkeley.edu/
   public-url: https://docs.snap.berkeley.edu/
-  # TODO: Should we auto-commit this to the Snap repo?
   pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
   # doi:
   # abstract:
@@ -125,8 +128,8 @@ book:
     style: "docked"
     search: true
   repo-url: https://github.com/snap-cloud/manual/
-  issue-url: https://forum.snap.berkeley.edu/c/help/8
-  repo-actions: [edit]
+  issue-url: https://forum.snap.berkeley.edu/c/manual/77
+  repo-actions: none # [edit]
   chapters:
     - index.qmd
     - content/00-acknowledgements/index.md
@@ -142,6 +145,7 @@ book:
     - content/10-continuations/index.md
     - content/11-metaprogramming/index.md
     - content/12-user-interface-elements/index.md
+    - content/13-community-site/index.md
   appendices:
     - content/13-appendix-a-snap-color-library/index.md
     - content/14-appendix-b-apl-features/index.md
@@ -360,11 +364,11 @@ book:
         - blocks/lists/reportConcatenatedLists.qmd
         - blocks/lists/reportReshape.qmd
         - blocks/lists/reportCrossproduct.qmd
-    # - part: Advanced and Hidden Blocks
-    #   chapters:
-        # - blocks/operators/reportJSFunction.qmd
-        # - blocks/other/doPrimitive.qmd
-        # - blocks/other/doApplyExtension.qmd
-        # - blocks/other/reportApplyExtension.qmd
+    - part: Advanced and Hidden Blocks
+      chapters:
+        - blocks/operators/reportJSFunction.qmd
+        - blocks/other/doPrimitive.qmd
+        - blocks/other/doApplyExtension.qmd
+        - blocks/other/reportApplyExtension.qmd
     # - references.qmd
     # - content/index-list.qmd

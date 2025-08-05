@@ -1,27 +1,27 @@
 #  Object Oriented Programming with Sprites
 
-Object oriented programming \index{object oriented programming} is a
+Object oriented programming\index{object oriented programming} is a
 style based around the abstraction *object:* a collection of *data* and
 \index{method} *methods* (procedures, which from our point of view are
-just more data) that you interact with by sending it a \index{message}
+just more data) that you interact with by sending it a\index{message}
 *message* (just a name, maybe in the form of a text string, and perhaps
 additional inputs). The object responds to the message by carrying out a
 method, which may or may not report a value back to the asker. Some
-people emphasize the \index{data hiding} *data hiding* aspect of OOP
+people emphasize the\index{data hiding} *data hiding* aspect of OOP
 (because each object has local variables that other objects can access
 only by sending request messages to the owning object) while others
 emphasize the *simulation* aspect (in which each object abstractly
 represents something in the world, and the interactions of objects in
 the program model real interactions of real people or things). Data
 hiding is important for large multi-programmer industrial projects, but
-for Snap*!* users it’s the simulation \index{simulation} aspect that’s
+for Snap*!* users it’s the simulation\index{simulation} aspect that’s
 important. Our approach is therefore less restrictive than that of some
 other OOP languages; we give objects easy access to each others’ data
 and methods.
 
 Technically, object oriented programming rests on three legs: (1)
 \index{message passing} *Message passing:* There is a notation by which
-any object can send a message to another object. (2) \index{local state}
+any object can send a message to another object. (2)\index{local state}
 *Local state:* Each object can remember the important past history of
 the computation it has performed. (“Important” means that it need not
 remember every message it has handled, but only the lasting effects of
@@ -36,19 +36,19 @@ programmed explicitly.
 ##  First Class Sprites
 
 Like Scratch, Snap*!* comes with things that are natural objects: its
-sprites \index{sprite}. Each sprite can own local variables; each
+sprites\index{sprite}. Each sprite can own local variables; each
 sprite has its own scripts (methods). A Scratch animation is plainly a
 simulation of the interaction of characters in a play. There are two
 ways in which Scratch sprites are less versatile than the objects of an
 OOP language. First, Scratch message passing is weak in three respects:
-Messages can only be broadcast \index{broadcast block}, not addressed
+Messages can only be broadcast\index{broadcast block}, not addressed
 to an individual sprite; messages can’t take inputs; and methods can’t
 return values to their caller. Second, and more basic, in the OOP
 paradigm objects are *data;* they can be the value of a variable, an
 element of a list, and so on, but that’s not the case for Scratch
 sprites.
 
-Snap*!* sprites are ﬁrst class \index{ﬁrst class sprites} data. They can
+Snap*!* sprites are ﬁrst class\index{ﬁrst class sprites} data. They can
 be created and deleted by a script, stored in a variable or list, and
 sent messages individually. The children of a sprite can inherit
 sprite-local variables, methods (sprite-local procedures), and other
@@ -57,17 +57,17 @@ attributes (e.g., x position).
 
 
 The fundamental means by
-which programs get access to sprites is the my reporter block \index{my} reporter
+which programs get access to sprites is the my reporter block\index{my} reporter
 block. It has a dropdown-menu input slot that, when clicked, gives
-access to all the sprites, plus the stage \index{stage}. ![image745.png](assets/image745.png) <!--  style="width:0.66667in;height:0.19444in" / --> reports a
+access to all the sprites, plus the stage\index{stage}. ![image745.png](assets/image745.png) <!--  style="width:0.66667in;height:0.19444in" / --> reports a
 single sprite, the one asking the question. ![image744.png](assets/image744.png) <!--  style="width:1.08333in;height:0.19444in" / -->   reports a list of all
 sprites other than the one asking the question. ![image743.png](assets/image743.png) <!--  style="width:0.96528in;height:0.19444in" / -->  reports a list of all
 sprites that are *near* the one asking—the ones that are candidates for
-having collided with this one, for example. The my block \index{my
+having collided with this one, for example. The my block\index{my
 block} has many other options, discussed below. If you know the name of
 a particular sprite, the object reporter will report the sprite itself.
 
-<!-- ![image746.png](assets/image746.png) style="width:3.55208in;height:0.51042in" / ![image747.png](assets/image747.png)   style="width:2.69143in;height:1.25in" alt="C:\Documents and Settings\bh\Desktop\Scratch002.png" / -->  
+<!-- ![image746.png](assets/image746.png) style="width:3.55208in;height:0.51042in" / ![image747.png](assets/image747.png)   style="width:2.69143in;height:1.25in" alt="C:\Documents and Settings\bh\Desktop\Scratch002.png" / -->
 
 An object or
 list of objects reported by my or object can be used as input to any
@@ -90,9 +90,9 @@ number of essentially identical sprites that behave like the example.
 copies any more. (As we’ll see, “copies” is the wrong word because the
 parent and the children *share* a lot of properties. That’s why we use
 the word “clones” to describe the children rather than “copies.”) These
-are *temporary* clones \index{temporary clone}. They are automatically
+are *temporary* clones\index{temporary clone}. They are automatically
 deleted when the user presses either the green flag or the red stop
-sign. In Scratch 2.0 and later, all clones \index{clone:temporary} are
+sign. In Scratch 2.0 and later, all clones\index{clone:temporary} are
 temporary.
 
 The other kind of situation is what happens when you want
@@ -109,8 +109,8 @@ of Cocker Spaniel (so there are four altogether) and two clones of
 Rottweiler. Maybe you hide the Dog sprite after all this, since it’s no
 breed in particular. Each dog has its own position, special behaviors,
 and so on. You want to save all of these dogs in the project. These are
-*permanent* clones \index{permanent clone}. In BYOB 3.1, the
-predecessor to Snap*!,* all clones \index{clone:permanent} are
+*permanent* clones\index{permanent clone}. In BYOB 3.1, the
+predecessor to Snap*!,* all clones\index{clone:permanent} are
 permanent.
 
  One advantage
@@ -179,16 +179,16 @@ allowed us to write ask and tell as tool procedures in Snap*!* itself.
 That technique still works, but is deprecated, because nobody understood
 it, and now we have the more straightforward primitives.
 
-### Polymorphism \index{polymorphism} 
+### Polymorphism\index{polymorphism}
 
 Suppose you have a Dog sprite
 with two clones CockerSpaniel and PitBull. In the Dog sprite you define
-this method \index{method} (“For this sprite only” block
+this method\index{method} (“For this sprite only” block
 \index{block:sprite-local} ):
 
-![image763.png](assets/image763.png) <!--  style="width:1.67361in;height:1.40208in" / --> 
+![image763.png](assets/image763.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
-Note the *loca*tion (map-pin) symbol \index{map-pin symbol} before the
+Note the *loca*tion (map-pin) symbol\index{map-pin symbol} before the
 block’s name. The symbol is not part of the block title; it’s a visual
 reminder that this is a sprite-*loca*l block. Sprite-local variables are
 similarly marked.
@@ -196,11 +196,11 @@ similarly marked.
 But you don’t define greet as friend or greet as enemy in Dog. Each kind
 of dog has a different behavior. Here’s what a CockerSpaniel does:
 
-![image764.png](assets/image764.png) <!--  style="width:1.67361in;height:1.40208in" / --> 
+![image764.png](assets/image764.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
 And here’s what a PitBull does:
 
-![image765.png](assets/image765.png) <!--  style="width:1.67361in;height:1.40208in" / --> 
+![image765.png](assets/image765.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
 Greet is defined in the Dog sprite. If Fido is a particular cocker
 spaniel, and you ask Fido to greet someone, Fido inherits the greet
@@ -237,13 +237,13 @@ uniform programming interface in Scratch:
   displays the name, above the scripting area.
 
 The block, if any, that examines a variable or attribute
-\index{attribute} is called its \index{getter} *getter;* a block (there
+\index{attribute} is called its\index{getter} *getter;* a block (there
 may be more than one, as in the direction example above) that modifies a
-variable or attribute is called a \index{setter} *setter.*
+variable or attribute is called a\index{setter} *setter.*
 
 In Snap*!* we allow virtually all attributes to be examined. But instead
 of adding dozens of reporters, we use a more uniform interface for
-attributes: The my block \index{my block} ’s menu (in Sensing; see page
+attributes: The my block\index{my block} ’s menu (in Sensing; see page
 [78](#attrib.pnglist-of-attributes)) includes many of the attributes of
 a sprite. It serves as a general getter for those attributes, e.g., my
 \[anchor\] to find the sprite, if any, to which this sprite is attached
@@ -251,7 +251,7 @@ in a nesting arrangement (see page
 [10](#nesting-sprites-anchors-and-parts)). Similarly, the same set block
 used to set variable values allows setting some sprite attributes.
 
-![image766.png](assets/image766.png) <!--  style="width:1.67361in;height:1.40208in" / --> 
+![image766.png](assets/image766.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
 ##  Prototyping: Parents and Children
 
@@ -270,11 +270,11 @@ stage; and when you like it, you use it as the prototype from which to
 clone other dogs. If you later discover a bug in the behavior of dogs,
 you can edit a method in the parent, and all of the children will
 automatically share the new version of the method block. Experienced
-class/instance \index{class/instance} programmers may find prototyping
+class/instance\index{class/instance} programmers may find prototyping
 \index{prototyping} strange at first, but it is actually a more
 expressive system, because you can easily simulate a class/instance
 hierarchy by hiding the prototype sprite! Prototyping is also a better
-fit with the Scratch design principle \index{design principle} that
+fit with the Scratch design principle\index{design principle} that
 everything in a project should be concrete and visible on the stage; in
 class/instance OOP the programming process begins with an abstract,
 invisible entity, the class, that must be designed before any concrete
@@ -283,13 +283,13 @@ objects can be made.[7]
 There are three ways to make a child sprite. If you control-click or
 right-click on a sprite in the “sprite corral” at the bottom right
 corner of the window, you get a menu that includes “clone” as one of the
-choices. There is an a new clone of block \index{a new clone of block}
+choices. There is an a new clone of block\index{a new clone of block}
 in the Control palette that creates and reports a child sprite. And
-sprites have a “parent” attribute \index{parent attribute} that can be
+sprites have a “parent” attribute\index{parent attribute} that can be
 set, like any attribute, thereby *changing* the parent of an existing
 sprite.
 
-![image766.png](assets/image766.png) <!--  style="width:1.67361in;height:1.40208in" / --> 
+![image766.png](assets/image766.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
 ##  Inheritance by Delegation
 
@@ -320,7 +320,7 @@ the traditional colors.
 > the block lists all the things this sprite can inherit from its parent
 > (which might be nothing, if this sprite has no parent) and is not
 > already inheriting. But that would prevent telling a child to inherit,
-> so if the inherit block \index{inherit block} is inside a ring, its
+> so if the inherit block\index{inherit block} is inside a ring, its
 > pulldown menu includes all the things a child could inherit from this
 > sprite. Right-clicking on the scripting area of a permanent clone
 > gives a menu option to share the entire collection of scripts from its
@@ -336,7 +336,7 @@ in the parent (and therefore in itself and all its siblings)? Remember
 that in this system any object can tell any other object to do
 something:
 
-![image779.png](assets/image779.png) <!--  style="width:5.07292in;height:0.58333in" / --> 
+![image779.png](assets/image779.png) <!--  style="width:5.07292in;height:0.58333in" / -->
 
 When a sprite gets a message
 for which it doesn’t have a corresponding block, the message is
@@ -353,58 +353,58 @@ the message was delegated.
 <!-- ![image781.png](assets/image781.png) ![image782.png](assets/image782.png)  -->
 
 At the right is a picture of
-the dropdown menu of attributes \index{attributes, list of} in the my
+the dropdown menu of attributes\index{attributes, list of} in the my
 block.
 
-![image770.png](assets/image770.png) <!--  style="width:5.07292in;height:0.58333in" / --> 
+![image770.png](assets/image770.png) <!--  style="width:5.07292in;height:0.58333in" / -->
 
 Several of these are not real attributes, but things related to
 attributes:
 
-- self \index{self (in my block)} : this sprite
+- self\index{self (in my block)} : this sprite
 
-- neighbors \index{neighbors (in my block)} : a list of *nearby*
+- neighbors\index{neighbors (in my block)} : a list of *nearby*
   sprites[8]
 
-- other sprites \index{other sprites (in my block)} : a list of all
+- other sprites\index{other sprites (in my block)} : a list of all
   sprites except myself
 
-- stage \index{stage (in my block)} : the stage, which is first-class,
+- stage\index{stage (in my block)} : the stage, which is first-class,
   like a sprite
 
-- clones \index{clones (in my block)} : a list of my *temporary* clones
+- clones\index{clones (in my block)} : a list of my *temporary* clones
 
-- other clones \index{other clones (in my block)} : a list of my
+- other clones\index{other clones (in my block)} : a list of my
   *temporary* siblings
 
-- parts \index{parts (in my block)} : a list of sprites whose anchor
+- parts\index{parts (in my block)} : a list of sprites whose anchor
   attribute is this sprite
 
-- children \index{children (in my block)} : a list of all my clones,
+- children\index{children (in my block)} : a list of all my clones,
   temporary and permanent
 
 The others are individual attributes:
 
-- anchor \index{anchor (in my block)} : the sprite of which I am a
+- anchor\index{anchor (in my block)} : the sprite of which I am a
   (nested) part
 
-- parent \index{parent (in my block)} : the sprite of which I am a clone
+- parent\index{parent (in my block)} : the sprite of which I am a clone
 
 - temporary?: am I a temporary clone?
 
-- name \index{name (in my block)} : my name (same as parent’s name if
+- name\index{name (in my block)} : my name (same as parent’s name if
   I’m temporary)
 
-- costumes \index{costumes (in my block)} : a list of the sprite’s
+- costumes\index{costumes (in my block)} : a list of the sprite’s
   costumes
 
-- sounds \index{sounds (in my block)} : a list of the sprite’s sounds
+- sounds\index{sounds (in my block)} : a list of the sprite’s sounds
 
 - blocks: a list of the blocks visible in this sprite
 
 - categories: a list of all the block category names
 
-- dangling? \index{dangling? (in my block)} : True if I am a part and
+- dangling?\index{dangling? (in my block)} : True if I am a part and
   not in synchronous orbit
 
 - draggable?: True if the user can move me with the mouse
@@ -413,13 +413,13 @@ The others are individual attributes:
   costume *as seen right now,* or the left, etc., edge of my bounding
   box, taking rotation into account.
 
-- rotation x \index{rotation x (in my block)}, rotation y
-  \index{rotation y (in my block)} : when reading with my, the same as x
+- rotation x\index{rotation x (in my block)}, rotation y
+ \index{rotation y (in my block)} : when reading with my, the same as x
   position, y position. When set, changes the sprite’s rotation center
   *without moving the sprite,* like dragging the rotation center in the
   paint editor.
 
-- center x \index{center x (in my block)}, center y \index{center y (in
+- center x\index{center x (in my block)}, center y\index{center y (in
   my block)} : the x and y position of the center of my
 
 > bounding box, rounded oﬀ–the geometric center of the costume.
@@ -427,7 +427,7 @@ The others are individual attributes:
 ## First Class Costumes and Sounds
 
 Costumes and sounds don’t have methods, as sprites do; you can’t ask
-them to do things. But they *are* first class: \index{costumes, first
+them to do things. But they *are* first class:\index{costumes, first
 class} you can make a list of them, put them in variables, use them as
 input to a procedure, and so on. My \[costumes\] and my \[sounds\]
 report lists of them.
@@ -436,7 +436,7 @@ report lists of them.
 
 The components of a
 costume are its name, width, height, and pixels. The ![image783.png](assets/image783.png) <!--  style="width:1.63194in;height:0.1875in" alt="Macintosh HD:Users:bh:Desktop:ofcostume.png" / -->  block gives access
-to these components \index{of costume block} using its left menu. From
+to these components\index{of costume block} using its left menu. From
 its right menu you can choose the current costume, the Turtle costume,
 or any costume in the sprite’s wardrobe. Since costumes are first class,
 you can also drop an expression whose value is a costume, or a list of
@@ -448,11 +448,11 @@ of the sprite’s current direction. (This is different from the
 *sprite’s* width and height, reported by the my block.)
 
 But the really interesting part of a costume is its bitmap
-\index{bitmap}, a list of *pixels*. (A pixel \index{pixel}, short for
+\index{bitmap}, a list of *pixels*. (A pixel\index{pixel}, short for
 “picture element,” represents one dot on your display.) Each pixel is
 itself a list of four items, the red, green, and blue components of its
 color (in the range 0-255) and what is standardly called its
-“transparency \index{transparency} ” but should be called its opacity,
+“transparency\index{transparency} ” but should be called its opacity,
 also in the range 0-255, in which 0 means that the pixel is invisible
 and 255 means that it’s fully opaque: you can’t see anything from a
 rearward layer at that point on the stage. (Costume pixels typically
@@ -474,7 +474,7 @@ reflects the way bitmaps are stored in the computer’s hardware and
 operating system, but also makes it easy to produce transformations of a
 costume with map:
 
-![image784.png](assets/image784.png) <!--  style="width:1.63194in;height:0.1875in" alt="Macintosh HD:Users:bh:Desktop:ofcostume.png" / --> 
+![image784.png](assets/image784.png) <!--  style="width:1.63194in;height:0.1875in" alt="Macintosh HD:Users:bh:Desktop:ofcostume.png" / -->
 
 In this simplest possible transformation, the red value of all the
 pixels have been changed to a constant 150. Colors that were red in the
@@ -491,7 +491,7 @@ the corner of its picture), it will be converted to pixels first.
 
 One important
 point to see here is that a bitmap (list of pixels) is not, by itself, a
-costume. The new costume block \index{new costume block} creates a
+costume. The new costume block\index{new costume block} creates a
 costume by combining a bitmap, a width, and a height. But, as in the
 example above, switch to costume will accept a bitmap as input and will
 automatically use the width and height of the current costume. Note that
@@ -499,22 +499,22 @@ there’s no name input; costumes computed in this way are all named
 costume. Note also that the use of switch to costume does *not* add the
 computed costume to the sprite’s wardrobe; to do that, say
 
-![image790.png](assets/image790.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / --> 
+![image790.png](assets/image790.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / -->
 
 Here’s a more interesting example of color manipulation:
 
-![image791.png](assets/image791.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / --> 
+![image791.png](assets/image791.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / -->
 
 Each
 color value is constrained to be 0, 80, 160, or 240. This gives the
 picture a more cartoonish look. Alternatively, you can do the
 computation taking advantage of hyperblocks:
 
-![image797.png](assets/image797.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / --> 
+![image797.png](assets/image797.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / -->
 
 Here’s one way to exchange red and green values:
 
-![image798.png](assets/image798.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / --> 
+![image798.png](assets/image798.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / -->
 
 It’s the ![image804.png](assets/image804.png) <!--  style="width:0.95833in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:2-1-3-4.png" / --> list that
 determines the rearrangement of colors: green➔red, red➔green, and the
@@ -531,7 +531,7 @@ expression such as ![image809.png](assets/image809.png) <!--  style="width:1.722
 original width and height, as advertised, so you can make fun house
 mirror versions of costumes:
 
-![image805.png](assets/image805.png) <!--  style="width:0.95833in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:2-1-3-4.png" / --> 
+![image805.png](assets/image805.png) <!--  style="width:0.95833in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:2-1-3-4.png" / -->
 
 The resulting costumes can be used with switch to costume and so on.
 
@@ -541,7 +541,7 @@ projects using these blocks:
 
 
 Using the
-video on block \index{video on block} turns on the camera and displays
+video on block\index{video on block} turns on the camera and displays
 what it sees on the stage, regardless of the inputs given. The camera
 remains on until you click the red stop button, your program runs the
 stop all block, or you turn it off explicitly with the  ![image814.png](assets/image814.png) <!--  style="width:1.40278in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:mirror-video.png" / --> block. The video
@@ -560,7 +560,7 @@ trims it to fit on the selected sprite. (Video snap on stage means to
 use the entire stage-sized rectangle.) For example, here’s a camera
 snapshot trimmed to fit Alonzo:
 
-![image815.png](assets/image815.png) <!--  style="width:1.20417in;height:1.6125in" / --> 
+![image815.png](assets/image815.png) <!--  style="width:1.20417in;height:1.6125in" / -->
 
  The
 “Video Capture” project in the Examples collection repeatedly takes such
@@ -578,7 +578,7 @@ where the snapshot was taken, its costume exactly fits in with the rest
 of the full-stage video. If you were to add a move 100 steps block after
 the switch to costume, you’d see something like this:
 
-![image817.png](assets/image817.png) <!--  style="width:2.66667in;height:2in" alt="Macintosh HD:Users:bh:Desktop:offset-video.png" / --> 
+![image817.png](assets/image817.png) <!--  style="width:2.66667in;height:2in" alt="Macintosh HD:Users:bh:Desktop:offset-video.png" / -->
 
 This time, the sprite’s costume was captured at one position, and then
 the sprite is shown at a different position. (You probably wouldn’t want
@@ -586,7 +586,7 @@ to do this, but perhaps it’s helpful for explanatory purposes.)
 
 What you *would* want to do is push the sprite around the stage:
 
-![image819.png](assets/image819.png) <!--  style="width:2.66667in;height:2in" alt="Macintosh HD:Users:bh:Desktop:offset-video.png" / --> 
+![image819.png](assets/image819.png) <!--  style="width:2.66667in;height:2in" alt="Macintosh HD:Users:bh:Desktop:offset-video.png" / -->
 
 (Really these
 should be Jens’s picture; it’s his project. But he’s vacationing. ☺)
@@ -604,24 +604,24 @@ first to push a balloon around the stage.
 
 ### Media Computation with Sounds
 
-The starting point for computation with sound \index{sound} is the
-microphone block \index{microphone block}. It starts by recording a
-brief burst of sound from your microphone \index{microphone}. (How
+The starting point for computation with sound\index{sound} is the
+microphone block\index{microphone block}. It starts by recording a
+brief burst of sound from your microphone\index{microphone}. (How
 brief? On my computer, 0.010667 seconds, but you’ll see shortly how to
 ﬁnd out or control the sample size on your computer.)
 
-![image825.png](assets/image825.png) <!--  style="width:3.09028in;height:1.92361in" alt="Macintosh HD:Users:bh:Desktop:microphone.png" / --> 
+![image825.png](assets/image825.png) <!--  style="width:3.09028in;height:1.92361in" alt="Macintosh HD:Users:bh:Desktop:microphone.png" / -->
 
 Just as the *pixel* is
 the smallest piece of a picture, the *sample* is the smallest piece of a
 sound ![image826.png](assets/image826.png) <!--  style="width:1.96528in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:sample-rate.png" / --> . It says here: that on my computer, 48,000 samples are recorded
-per second, so each sample \index{sample} is 1/48,000 of a second. The
+per second, so each sample\index{sample} is 1/48,000 of a second. The
 value of a sample is between -1 and 1, and represents the sound pressure
 on the microphone—how hard the air is pushing—at that instant. (You can
 skip the next page or so if you know about Fourier analysis.) Here’s a
 picture of 400 samples:
 
-![image827.png](assets/image827.png) <!--  style="width:5.99931in;height:2.62014in" alt="Macintosh HD:Users:bh:Desktop:samples.png" / --> 
+![image827.png](assets/image827.png) <!--  style="width:5.99931in;height:2.62014in" alt="Macintosh HD:Users:bh:Desktop:samples.png" / -->
 
 In this graph, the *x* axis represents the time at which each sample was
 measured; the *y* axis measures the value of the sample at that time.
@@ -667,7 +667,7 @@ shrill-sounding note. But remember that a complex waveform is the sum of
 multiple sine waves at different frequency. Here’s a different
 up-and-down regularity:
 
-![image828.png](assets/image828.png) <!--  style="width:2.79514in;height:1.22222in" alt="Macintosh HD:Users:bh:Desktop:red-sine.png" / --> 
+![image828.png](assets/image828.png) <!--  style="width:2.79514in;height:1.22222in" alt="Macintosh HD:Users:bh:Desktop:red-sine.png" / -->
 
 It’s not obvious, but in
 the left part of the graph, the signal is more above the *x* axis than
@@ -686,7 +686,7 @@ but is best known for working out the nature of periodic functions as a
 sum of sine waves.) Luckily we don’t have to do the math; the microphone
 block will do it for us, if we ask for microphone spectrum:
 
-![image830.png](assets/image830.png) <!--  style="width:2.79514in;height:1.22222in" alt="Macintosh HD:Users:bh:Desktop:red-sine.png" / --> 
+![image830.png](assets/image830.png) <!--  style="width:2.79514in;height:1.22222in" alt="Macintosh HD:Users:bh:Desktop:red-sine.png" / -->
 
 These are frequency spectra from (samples of) three different songs. The
 most obvious thing about these graphs is that their overall slope is
@@ -718,7 +718,6 @@ sound. But the microphone block has other, simpler options also:
 of the array in which data are collected (typically 512, must be a power
 of 2).
 
-The block for sounds that corresponds to new picture for pictures is ![image258.png](assets/image258.png) <!--  style="width:2.91667in;height:0.28125in" alt="Macintosh HD:Users:bh:Desktop:new-sound.png" / --> 
+The block for sounds that corresponds to new picture for pictures is ![image258.png](assets/image258.png) <!--  style="width:2.91667in;height:0.28125in" alt="Macintosh HD:Users:bh:Desktop:new-sound.png" / -->
 \index{new sound block}. Its first input is a list of samples, and its second input specifies how
 many samples occupy one second.
-

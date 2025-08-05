@@ -5,31 +5,31 @@ created by the program itself.
 
 ## Reading a block
 
-![image375.png](assets/image375.png) <!--  style="width:1.15in;height:0.19in" alt="A picture containing text, hitting Description automatically generated" / --> 
+![image375.png](assets/image375.png) <!--  style="width:1.15in;height:0.19in" alt="A picture containing text, hitting Description automatically generated" / -->
 
-The definition of block \index{definition of block} takes a custom block
+The definition of block\index{definition of block} takes a custom block
 (in a ring, since it’s the block itself that’s the input, not the result
 of calling the block) as input and reports the block’s definition, i.e.,
 its inputs and body, in the form of a ring with named inputs
 corresponding to the block’s input names, so that those input names are
 bound in the body.
 
-The split by blocks block \index{split by blocks block} takes any
+The split by blocks block\index{split by blocks block} takes any
 expression or script as input (ringed) and reports a list representing a
 *syntax tree* for the script or expression, in which the first item is a
 block with no inputs and the remaining items are the input values, which
 may themselves be syntax trees.
 
-![image377.png](assets/image377.png) <!--  style="width:1.15in;height:0.19in" alt="A picture containing text, hitting Description automatically generated" / --> 
+![image377.png](assets/image377.png) <!--  style="width:1.15in;height:0.19in" alt="A picture containing text, hitting Description automatically generated" / -->
 
 Using split by blocks to select custom blocks whose definitions contain
 another block gives us this debugging aid:
 
-![image378.png](assets/image378.png) <!--  style="width:1.15in;height:0.19in" alt="A picture containing text, hitting Description automatically generated" / --> 
+![image378.png](assets/image378.png) <!--  style="width:1.15in;height:0.19in" alt="A picture containing text, hitting Description automatically generated" / -->
 
-Note in passing the my blocks block \index{my blocks block}, which
+Note in passing the my blocks block\index{my blocks block}, which
 reports a list of all visible blocks, primitive and custom. (There’s
-also a my categories block \index{my categories block}, which reports a
+also a my categories block\index{my categories block}, which reports a
 list of the names of the palette categories.) Also note custom? of block
 \index{custom? of block block}, which reports True if its input is a
 custom block.
@@ -40,7 +40,7 @@ The inverse function to split by blocks is provided by the join block
 \index{join block}, which when given a syntax tree as input reports the
 corresponding expression or script.
 
-![image379.png](assets/image379.png) <!--  style="width:1.15in;height:0.19in" alt="A picture containing text, hitting Description automatically generated" / --> 
+![image379.png](assets/image379.png) <!--  style="width:1.15in;height:0.19in" alt="A picture containing text, hitting Description automatically generated" / -->
 
 Here we are taking the definition of square, modifying the repetition
 count (to 6), modifying the turning angle (to 60), using join to turn
@@ -54,7 +54,7 @@ case, the value of block is the new block itself (the hexagon block, in
 this example). The second slot is where you give the *label* for the new
 block. In this example, the label is “hexagon \_” in which the
 underscore represents an input slot. So, here are a few examples of
-block label \index{block label} s:
+block label\index{block label} s:
 
 set pen \_ to \_
 
@@ -69,15 +69,15 @@ Note in the case of the for block’s label that the upvar (the i) and the
 C-slot both count as inputs. Note also that the label is not meant to be
 a unique symbol that represents only this block. For example,
 ![image628.png](assets/image628.png) <!--  style="width:0.86111in;height:0.19444in" / -->  and
-![image376.png](assets/image376.png) <!--  style="width:1.15in;height:0.19in" alt="A picture containing text, hitting Description automatically generated" / --> 
+![image376.png](assets/image376.png) <!--  style="width:1.15in;height:0.19in" alt="A picture containing text, hitting Description automatically generated" / -->
 both have the label
 
 \_ of \_. The label does not give the input slots names (that’s done in
 the body, coming next) or types (that’s done in the set \_ of block \_
-to \_ block \index{set \_ of block \_ to \_ block}, coming in two
+to \_ block\index{set \_ of block \_ to \_ block}, coming in two
 paragraphs).
 
-The third slot is for the *definition* \index{definition (of block)} of
+The third slot is for the *definition*\index{definition (of block)} of
 the new block. This is a (ringed) script whose input names (formal
 parameters) will become the formal parameters of the new block. And the
 script is its script.
@@ -106,12 +106,12 @@ very important that these set blocks appear in the same script as the
 define that creates the block, because the block upvar is local to that
 script. You can’t later say, for example,
 
-![image952.png](assets/image952.png) <!--  style="width:4.31in;height:0.83in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --> 
+![image952.png](assets/image952.png) <!--  style="width:4.31in;height:0.83in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / -->
 
 because the copy of the hexagon block in this instruction counts as
 “using” it.
 
-![image953.png](assets/image953.png) <!--  style="width:2.6in;height:0.32in" / --> 
+![image953.png](assets/image953.png) <!--  style="width:2.6in;height:0.32in" / -->
 
 The of
 block reporter is useful to copy attributes from one block to another,
@@ -137,17 +137,17 @@ The
 list input is just like the one for set slots except for default values
 instead of types. Now for a block with a menu input:
 
-![image961.png](assets/image961.png) <!--  style="width:3.29097in;height:0.60972in" / --> 
+![image961.png](assets/image961.png) <!--  style="width:3.29097in;height:0.60972in" / -->
 
-![image962.png](assets/image962.png) <!--  style="width:2.35in;height:2.56in" alt="Graphical user interface, application Description automatically generated" / --> 
+![image962.png](assets/image962.png) <!--  style="width:2.35in;height:2.56in" alt="Graphical user interface, application Description automatically generated" / -->
 
-![image965.png](assets/image965.png) <!--  style="width:1.66944in;height:0.25in" alt="Graphical user interface, text, application Description automatically generated" / --> 
+![image965.png](assets/image965.png) <!--  style="width:1.66944in;height:0.25in" alt="Graphical user interface, text, application Description automatically generated" / -->
 
 Prefer a read-only menu?
 
-![image956.png](assets/image956.png) <!--  style="width:3.51944in;height:0.61944in" alt="Graphical user interface, text, website Description automatically generated" / --> 
+![image956.png](assets/image956.png) <!--  style="width:3.51944in;height:0.61944in" alt="Graphical user interface, text, website Description automatically generated" / -->
 
-![image963.png](assets/image963.png) <!--  style="width:1.66944in;height:0.25in" alt="Graphical user interface, text, application Description automatically generated" / --> 
+![image963.png](assets/image963.png) <!--  style="width:1.66944in;height:0.25in" alt="Graphical user interface, text, application Description automatically generated" / -->
 
 We
 passed too quickly over how the script turned the square block into a
@@ -164,7 +164,7 @@ situation can be improved with a little programming:
 Exercise for the reader: Implement
 this:
 
-![image971.png](assets/image971.png) <!--  style="width:3.11in;height:0.57in" alt="Graphical user interface Description automatically generated" / --> 
+![image971.png](assets/image971.png) <!--  style="width:3.11in;height:0.57in" alt="Graphical user interface Description automatically generated" / -->
 
 Returning to the define block, there’s another reason for the block
 upvar: It’s helpful in defining a recursive procedure using define
@@ -173,16 +173,16 @@ itself, it needs a name for itself. But in the definition input to the
 define block, define itself hasn’t been called yet, so the new block
 isn’t in the palette yet. So you do this:
 
-![image972.png](assets/image972.png) <!--  style="width:3.11in;height:0.57in" alt="Graphical user interface Description automatically generated" / --> 
+![image972.png](assets/image972.png) <!--  style="width:3.11in;height:0.57in" alt="Graphical user interface Description automatically generated" / -->
 
 Yes, you put block in the define, but it gets changed into this script
-in the resulting definition. 
+in the resulting definition.
 
-![image973.png](assets/image973.png) <!--  style="width:3.11in;height:0.57in" alt="Graphical user interface Description automatically generated" / --> 
+![image973.png](assets/image973.png) <!--  style="width:3.11in;height:0.57in" alt="Graphical user interface Description automatically generated" / -->
 
-![image974.png](assets/image974.png) <!--  style="width:3.11in;height:0.57in" alt="Graphical user interface Description automatically generated" / --> 
+![image974.png](assets/image974.png) <!--  style="width:3.11in;height:0.57in" alt="Graphical user interface Description automatically generated" / -->
 
-![image975.png](assets/image975.png) <!--  style="width:3.11in;height:0.57in" alt="Graphical user interface Description automatically generated" / --> 
+![image975.png](assets/image975.png) <!--  style="width:3.11in;height:0.57in" alt="Graphical user interface Description automatically generated" / -->
 
 You could use this script directly in a
 simple case like this, but in a complicated case with a recursive call
@@ -205,7 +205,7 @@ use only its own input variables, but for access to other variables, use
 
 ## Macros
 
-![image976.png](assets/image976.png) <!--  style="width:3.11in;height:0.57in" alt="Graphical user interface Description automatically generated" / --> 
+![image976.png](assets/image976.png) <!--  style="width:3.11in;height:0.57in" alt="Graphical user interface Description automatically generated" / -->
 
 Users of languages in the C family have learned to think of macros as
 entirely about text strings, with no relation to the syntax of the
@@ -217,7 +217,7 @@ with the result that you can only use the foo macro after an open
 parenthesis.
 
 In the Lisp family of languages we have a different tradition, in which
-macros \index{macros} are syntactically just like procedure calls,
+macros\index{macros} are syntactically just like procedure calls,
 except that the “procedure” is a macro, with different evaluation rules
 from ordinary procedures. Two things make a macro different: its input
 expressions are not evaluated, so a macro can establish its own syntax
@@ -229,7 +229,7 @@ the caller’s variables and, implicitly, its continuation.
 Snap*!* has long had the first part of this, the ability to make inputs
 unevaluated. In version 8.0 we add the ability to run code in the
 context of another procedure, just as we can run code in the context of
-another sprite, using the same mechanism: the of block \index{of block
+another sprite, using the same mechanism: the of block\index{of block
 (sensing)} . In the example on the previous page, the if \_ report \_
 caller \_ block runs a report block, but not in its own context; it
 causes *the fizzbuzz block* to report “fizz” or “buzz” as appropriate.
@@ -249,4 +249,3 @@ the variables of the macro and the variables of its caller. (What if the
 macro wanted to refer to a variable value in its caller?) The one
 substantial feature of Scheme that we don’t yet implement is *hygienic
 macros,* which make it possible to keep the two namespaces separate.
-

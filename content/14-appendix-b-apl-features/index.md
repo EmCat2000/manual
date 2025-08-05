@@ -1,32 +1,32 @@
 #  Appendix B. APL features
 
-The book *A Programming Language* \index{A Programming Language} was
-published by mathematician Kenneth E. Iverson \index{Iverson, Kenneth
+The book *A Programming Language*\index{A Programming Language} was
+published by mathematician Kenneth E. Iverson\index{Iverson, Kenneth
 E.} in 1962. He wanted a formal language that would look like what
 mathematicians write on chalkboards. The then-unnamed language would
 later take its name from the first letters of the words in the book’s
 title. It was little-known until 1964, when a formal description of the
-just-announced IBM System/360 \index{IBM System/360} in the *IBM Systems
-Journal* used APL \index{APL} notation. (Around the same time, Iverson’s
-associate Adin Falkoff \index{Falkoff, Adin} gave a talk on APL to a New
+just-announced IBM System/360\index{IBM System/360} in the *IBM Systems
+Journal* used APL\index{APL} notation. (Around the same time, Iverson’s
+associate Adin Falkoff\index{Falkoff, Adin} gave a talk on APL to a New
 York Association for Computing Machinery chapter, with an excited
 14-year-old Brian Harvey in the audience.) But it wasn’t until 1966 that
 the first public implementation of the language for the System/360 was
-published by IBM. (It was called “APL\360 \index{APL\\360} ” because the
+published by IBM. (It was called “APL\360\index{APL\\360} ” because the
 normal slash character / represents the “reduce” operator in APL, while
 backslash is “expand.”)
 
 The crucial idea behind APL is that mathematicians
 \index{mathematicians} think about collections of numbers,
-one-dimensional *vectors* \index{vectors} and two-dimensional *matrices*
+one-dimensional *vectors*\index{vectors} and two-dimensional *matrices*
 \index{matrices} *,* as valid objects in themselves, what computer
-scientists later learned to call “first class data \index{first class
+scientists later learned to call “first class data\index{first class
 data} .” A mathematician who wants to add two vectors writes
 ***v*<sub>1</sub>** + ***v*<sub>2</sub>**, not “for i = 1 to length(v1),
 result\[i\]=v1\[i\]+v2\[i\].” Same for a programmer using APL.
 
-There are three kinds of function in APL: scalar functions \index{scalar
-function} , mixed functions \index{mixed function}, and operators
+There are three kinds of function in APL: scalar functions\index{scalar
+function} , mixed functions\index{mixed function}, and operators
 \index{operator (APL)}. A *scalar function* is one whose natural domain
 is individual numbers or text characters. A *mixed function* is one
 whose domain includes arrays (vectors, matrices, or higher-dimensional
@@ -34,10 +34,10 @@ collections). In Snap*!*, scalar functions are generally found in the
 green Operators palette, while mixed functions are in the red Lists
 palette. The third category, confusingly for Snap*!* users, is called
 *operators* in APL, but corresponds to what we call higher order
-functions \index{function, higher order} : functions whose domain
+functions\index{function, higher order} : functions whose domain
 includes functions.
 
-Snap*!* hyperblocks \index{hyperblocks} are scalar functions that behave
+Snap*!* hyperblocks\index{hyperblocks} are scalar functions that behave
 like APL scalar functions: they can be called with arrays as inputs, and
 the underlying function is applied to each number in the arrays. (If the
 function is *monadic,* meaning that it takes one input, then there’s no
@@ -53,12 +53,12 @@ are ignored. An exception in both languages is that if one of the two
 inputs is a scalar, then it is matched with every number in the other
 array input.)
 
-As explained in Section IV.F, this termwise extension \index{termwise
+As explained in Section IV.F, this termwise extension\index{termwise
 extension} of scalar functions is the main APL-like feature built into
 Snap*!* itself. We also include an extension of the item block
 \index{item block} to address multiple dimensions, an extension to the
-length block \index{length block} with five list functions from APL, and
-a new primitive reshape block \index{reshape block}. The APL library
+length block\index{length block} with five list functions from APL, and
+a new primitive reshape block\index{reshape block}. The APL library
 \index{APL library} extends the implementation of APL features to
 include a few missing scalar functions and several missing mixed
 functions and operators.
@@ -80,9 +80,9 @@ lower case in APL) as loose type declarations, and symbols not part of
 anyone’s alphabet, such as ⌊ for floor and ⌈ for ceiling. To use the
 original APL, you needed expensive special computer terminals. (This was
 before you could download fonts in software. Today the more unusual APL
-characters \index{APL character set} are in Unicode \index{Unicode} at
+characters\index{APL character set} are in Unicode\index{Unicode} at
 U+2336 to U+2395.) The character set was probably the main reason APL
-didn’t take over the world. APL2 \index{APL2} has a lot to recommend it
+didn’t take over the world. APL2\index{APL2} has a lot to recommend it
 for Snap*!* users, mainly because it moves from the original APL idea
 that all arrays must be uniform in dimension, and the elements of arrays
 must be numbers or single text characters, to our idea that a list can
@@ -99,7 +99,7 @@ Here are some of the guiding ideas in the design of the APL library:
 **Snap*!*** users to learn the feel and style of APL programming. It’s
 really worth the effort. For example, we didn’t hyperize the = block
 because Snap*!* users expect it to give a single yes-or-no answer about
-the equality of two complete structures \index{equality of complete
+the equality of two complete structures\index{equality of complete
 structures} , whatever their types and shapes. In APL, = is a scalar
 function; it compares two numbers or two characters. How could APL users
 live without the ability to ask if two *structures* are equal? Because
@@ -113,7 +113,7 @@ that if you wanted to know *how many* corresponding elements of the two
 arrays are equal, you’d just use +/ instead of **∧**/. Note also that
 our APLish blocks are a little verbose, because they include up to three
 notations for the function: the usual Snap*!* name (e.g., flatten), the
-name APL programmers use when talking about it (ravel \index{ravel
+name APL programmers use when talking about it (ravel\index{ravel
 block} ), and, in yellow type, the symbol used in actual APL code (,).
 We’re not consistent about it; ![image1264.png](assets/image1264.png) <!--  style="width:0.99306in;height:0.20833in" / -->  seems self-documenting. And LCM (and) is
 different even though it has two names; it turns out that if you
@@ -126,7 +126,7 @@ ones who are reading an APL tutorial while building programs in Snap*!*
 will find the block that matches the APL they’re reading.
 
 - Goal:  Bring the best and most general APL ideas into “mainstream”
-**Snap*!*** programming style. Media computation \index{media
+**Snap*!*** programming style. Media computation\index{media
 computation} , in particular, becomes much simpler when scalar functions
 can be applied to an entire picture or sound. Yes, map provides
 essentially the same capability, but the notation gets complicated if
@@ -146,7 +146,7 @@ treat a text string as scalar, and that isn’t going to change. Because
 APL programmers rarely use conditionals, instead computing functions
 involving arrays of Boolean values to achieve the same effect, the
 notation they do have for conditionals is primitive (in the sense of
-Paleolithic \index{Paleolithic}, not in the sense of built in). We’re
+Paleolithic\index{Paleolithic}, not in the sense of built in). We’re
 not changing ours.
 
 - Non-goal:  Emulate the terse APL syntax. It’s too bad, in a way; as
@@ -192,15 +192,15 @@ predicate functions.
 ![image1265.png](assets/image1265.png) <!--  style="width:5.73333in;height:1.10667in" / -->
 
 These are the
-scalar functions \index{scalar function} in the APL library. Most of
-them are straightforward to figure out. The scalar = block \index{scalar
+scalar functions\index{scalar function} in the APL library. Most of
+them are straightforward to figure out. The scalar = block\index{scalar
 = block} provides an APL-style version of = (and other exceptions) as a
 hyperblock that extends termwise to arrays. Join, the only non-predicate
-non-hyper scalar primitive, has its own scalar join block \index{scalar
-join block} . 7 deal \index{deal block} 52 reports a random vector of
+non-hyper scalar primitive, has its own scalar join block\index{scalar
+join block} . 7 deal\index{deal block} 52 reports a random vector of
 seven numbers from 1 to 52 with no repetitions, as in dealing a hand of
-cards. Signum \index{signum block} of a number reports 1 if the number
-is positive, 0 if it’s zero, or -1 if it’s negative. Roll \index{roll
+cards. Signum\index{signum block} of a number reports 1 if the number
+is positive, 0 if it’s zero, or -1 if it’s negative. Roll\index{roll
 block} 6 reports a random roll of a six-sided die. To roll 8 dice, use ![image1266.png](assets/image1266.png) <!--  style="width:2.56667in;height:0.21667in" alt="Macintosh HD:Users:bh:Desktop:roll-8-dice.png" / --> ,
 which would look much more pleasant as ?8⍴6. But perhaps our version is
 more instantly readable by someone who didn’t grow up with APL. All the
@@ -261,7 +261,7 @@ are sometimes useful too:
 
 ![image1273.png](assets/image1273.png) <!--  style="width:6.575in;height:1.04167in" alt="Macintosh HD:Users:bh:Desktop:identity-matrix.png" / -->
 
-![image1275.png](assets/image1275.png) <!--  style="width:1.43333in;height:0.18333in" alt="Macintosh HD:Users:bh:Desktop:ravel.png" / --> Flatten \index{flatten
+![image1275.png](assets/image1275.png) <!--  style="width:1.43333in;height:0.18333in" alt="Macintosh HD:Users:bh:Desktop:ravel.png" / --> Flatten\index{flatten
 block} takes an arbitrary structure as input and reports a vector of its
 atomic elements in row-major order. Lispians call this flattening the
 structure, but APLers call it “ravel” because of the metaphor of pulling
@@ -299,7 +299,7 @@ hyperblock, applying itself to each item of its input list:
 
 ![image1282.png](assets/image1282.png) <!--  style="width:6.34167in;height:1.04167in" alt="Macintosh HD:Users:bh:Desktop:numbers-ex.png" / -->
 
- Iota \index{iota
+ Iota\index{iota
 block} has a special meaning for list inputs: The input must be a shape
 vector; the result is an array with that shape in which each item is a
 list of the indices of the cell along each dimension. A picture is worth
@@ -310,7 +310,7 @@ to a string:
 ![image1283.png](assets/image1283.png) <!--  style="width:6.025in;height:0.83333in" alt="Macintosh HD:Users:bh:Desktop:iota-list-ex.png" / -->
 
 ![image1284.png](assets/image1284.png) <!--  style="width:1.475in;height:0.25in" alt="Macintosh HD:Users:bh:Desktop:dyadic-iota.png" / -->  Dyadic iota is like
-the index of \index{index of block (APL)} primitive except for its
+the index of\index{index of block (APL)} primitive except for its
 handling of multi-dimensional arrays. It looks only for atomic elements,
 so a vector in the second input doesn’t mean to search for that vector
 as a row of a matrix, which is what it means to index of, but rather to
@@ -360,14 +360,14 @@ found.
 ![image1292.png](assets/image1292.png) <!--  style="width:2.175in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:contained.png" / -->
 
 The contained in
-block \index{contained in block} is like a hyperized contains with the
+block\index{contained in block} is like a hyperized contains with the
 input order reversed. It reports an array of Booleans the same shape as
 the left input. The shape of the right input doesn’t matter; the block
 looks only for atomic elements.
 
 ![image1293.png](assets/image1293.png) <!--  style="width:7.48542in;height:0.65972in" alt="Macintosh HD:Users:bh:Desktop:contained-ex.png" / -->
 
-![image1294.png](assets/image1294.png) <!--  style="width:7.48542in;height:0.65972in" alt="Macintosh HD:Users:bh:Desktop:contained-ex.png" / -->The blocks grade up \index{grade up block} and grade down \index{grade
+![image1294.png](assets/image1294.png) <!--  style="width:7.48542in;height:0.65972in" alt="Macintosh HD:Users:bh:Desktop:contained-ex.png" / -->The blocks grade up\index{grade up block} and grade down\index{grade
 down block} are used for sorting data. Given an array as input, it
 reports a vector of the indices in which the items (the rows, if a
 matrix) should be rearranged in order to be sorted. This will be clearer
@@ -424,7 +424,7 @@ to select by columns rather than by rows.
 
  ![image1311.png](assets/image1311.png) <!--  style="width:2.91667in;height:0.325in" alt="Macintosh HD:Users:bh:Desktop:column-select.png" / -->
 
-Select (if take \index{take block} ) or select all but (if drop
+Select (if take\index{take block} ) or select all but (if drop
 \index{drop block} ) the first (if *n*\>0) or last (if *n*\<0) |*n*|
 items from a vector, or rows from a matrix. Alternatively, if the left
 input is a two-item vector, select rows with the first item and columns
@@ -432,7 +432,7 @@ with the second.
 
  ![image1312.png](assets/image1312.png) <!--  style="width:2.91667in;height:0.325in" alt="Macintosh HD:Users:bh:Desktop:column-select.png" / -->
 
-The compress block \index{compress block} selects a subset of its right
+The compress block\index{compress block} selects a subset of its right
 input based on the Boolean values in its left input, which must be a
 vector of Booleans whose length equals the length of the array (the
 number of rows, for a matrix) in the right input. The block reports an
@@ -457,7 +457,7 @@ long block names so it won’t take you a month!
 ![image1320.png](assets/image1320.png) <!--  style="width:2.99444in;height:0.23333in" / -->
 ![image1319.png](assets/image1319.png) <!--  style="width:3.175in;height:0.18333in" / -->
 ![image1321.png](assets/image1321.png) <!--  style="width:1.11181in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:transpose.png" / --> Don’t confuse this
-block with the reduce block \index{reduce block}, whose APL symbol is
+block with the reduce block\index{reduce block}, whose APL symbol is
 also a slash. In that block, what comes to the left of the slash is a
 dyadic combining function; it’s the APL equivalent of combine. This
 block is more nearly equivalent to keep. But keep takes a predicate
@@ -471,8 +471,8 @@ applied to a list instead of to a scalar. The reason both blocks use the
 / character is that both of them reduce the size of the input array,
 although in different ways.
 
-The reverse row order \index{reverse block}, reverse column order
-\index{reverse columns block}, and transpose blocks \index{transpose
+The reverse row order\index{reverse block}, reverse column order
+\index{reverse columns block}, and transpose blocks\index{transpose
 block} form a group: the group of reflections of a matrix. The APL
 symbols are all a circle with a line through it; the lines are the
 different axes of reflection. So the reverse row order block reverses
@@ -490,8 +490,8 @@ full, so it’s even more restrictive.)
 
 ### Higher order functions
 
-The final category of function is operators \index{operator (APL)} —APL
-higher order functions \index{higher order function}. APL has no
+The final category of function is operators\index{operator (APL)} —APL
+higher order functions\index{higher order function}. APL has no
 explicit map function, because the hyperblock capability serves much the
 same need. But APL2 did add an explicit map, which we might get around
 to adding to the library next time around. Its symbol is **¨**
@@ -530,7 +530,7 @@ mapping over the *rows* of the matrix, applying combine to each row.
 Combining rows, reducing column vectors.
 
 
-![image1336.png](assets/image1336.png) <!--  style="width:2.16667in;height:0.24167in" alt="Macintosh HD:Users:bh:Desktop:outer.png" / --> The outer product block \index{outer product block} takes two arrays
+![image1336.png](assets/image1336.png) <!--  style="width:2.16667in;height:0.24167in" alt="Macintosh HD:Users:bh:Desktop:outer.png" / --> The outer product block\index{outer product block} takes two arrays
 (vectors, typically) and a dyadic scalar function as inputs. It reports
 an array whose rank is the sum of the ranks of the inputs (so, typically
 a matrix), in which each item is the result of applying the function to
@@ -538,15 +538,15 @@ an atomic element of each array. The third element of the second row of
 the result is the value reported by the function with the second element
 of the left input and the third element of the right input. (The APL
 symbol ◦. is pronounced “jot dot.”) The way to think about this block is
-“multiplication table \index{table} ” from elementary school:
+“multiplication table\index{table} ” from elementary school:
 
 ![image1335.png](assets/image1335.png) <!--  style="width:7.24in;height:1.52in" alt="Macintosh HD:Users:bh:Desktop:outer-ex.png" / -->
 
 ![image1337.png](assets/image1337.png) <!--  style="width:2.61667in;height:0.24167in" alt="Macintosh HD:Users:bh:Desktop:inner.png" / --> The inner product
-block \index{inner product block} takes two matrices and two operations
+block\index{inner product block} takes two matrices and two operations
 as input. The number of columns in the left matrix must equal the number
 of rows in the right matrix. When the two operations are + and ×, this
-is the matrix multiplication \index{multiplication, matrix} familiar to
+is the matrix multiplication\index{multiplication, matrix} familiar to
 mathematicians:
 
 ![image1338.png](assets/image1338.png) <!--  style="width:7.33861in;height:1.00694in" alt="Macintosh HD:Users:bh:Desktop:inner-ex.png" / -->
@@ -564,19 +564,19 @@ still makes the structure clear:
 
 Experts will recognize this as the Lisp representation of list structure,
 
-[1] One of the hat blocks, the generic \index{hat block:generic} “when
+[1] One of the hat blocks, the generic\index{hat block:generic} “when
 anything” block , is subtly different from the others. When the stop
 sign is clicked, or when a project or sprite is loaded, this block
 doesn’t test whether the condition in its hexagonal input slot is true,
 so the script beneath it will not run, until some *other* script in the
 project runs (because, for example, you click the green flag). When
-generic when \index{generic when} blocks are disabled, the stop sign
-\index{stop sign, square} will be square \index{square stop sign}
+generic when\index{generic when} blocks are disabled, the stop sign
+\index{stop sign, square} will be square\index{square stop sign}
 instead of octagonal.
 
-[2] The hide variable and \index{hide variable block} show variable
-block \index{show variable block} s can also be used to hide and show
-primitives \index{hide and show primitives} in the palette. The pulldown
+[2] The hide variable and\index{hide variable block} show variable
+block\index{show variable block} s can also be used to hide and show
+primitives\index{hide and show primitives} in the palette. The pulldown
 menu doesn’t include primitive blocks, but there’s a generally useful
 technique to give a block input values it wasn’t expecting using run or
 call:![image120.png](assets/image120.png) <!--  style="width:3.9375in;height:0.38889in" / -->
@@ -629,8 +629,8 @@ JavaScript, claim to use prototyping, but their object system is much
 more complicated than what we are describing (we’re guessing it’s
 because they were designed by people too familiar with class/instance
 programming); that has, in some circles, given prototyping a bad name.
-Our prototyping design comes from Object Logo \index{Object Logo}, and
-before that, from Henry Lieberman \index{Lieberman, Henry}.
+Our prototyping design comes from Object Logo\index{Object Logo}, and
+before that, from Henry Lieberman\index{Lieberman, Henry}.
 \[Lieberman, H., Using Prototypical Objects to Implement Shared Behavior
 in Object-Oriented Systems, First Conference on Object-Oriented
 Programming Languages, Systems, and Applications \[OOPSLA-86\], ACM

@@ -1,4 +1,4 @@
-# The Snap_!_ Reference Manual
+# The Snap*!* Reference Manual
 > by Brian Harvey, Jens Mönig
 
 ![Snap! Logo](./images/snap-logo.png)
@@ -10,7 +10,7 @@
 
 [webiste]: https://snap-cloud.github.io/manual/
 [pdf]: https://snap-cloud.github.io/manual/snap-manual.pdf
-[orginal_pdf]: https://snap.berkeley.edu/snap/help/SnapManual.pdf
+[orginal_pdf]: ./SnapManual.pdf
 
 The reference manual for the [Snap<em>!</em> programming language][sbe]. ([GitHub][snap_gh])
 
