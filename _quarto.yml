@@ -145,7 +145,11 @@ book:
     - content/10-continuations/index.md
     - content/11-metaprogramming/index.md
     - content/12-user-interface-elements/index.md
-    - content/13-community-site/index.md
+    - part: The Snap! Community Site
+      chapters:
+        - content/13-community-site/index.md
+        - content/13-community-site/students.md
+        - content/13-community-site/teachers.md
   appendices:
     - content/13-appendix-a-snap-color-library/index.md
     - content/14-appendix-b-apl-features/index.md
