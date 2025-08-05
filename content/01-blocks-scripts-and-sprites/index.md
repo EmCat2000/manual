@@ -27,7 +27,8 @@ A Snap*!* program\index{ Snap! program} consists of one or more
 
 ![image6.png](assets/image6.png) <!--  style="width:1.47917in;height:1.35417in" / -->
 
-The five block\index{block} s that make up this script have three different
+The
+five blocks \index{block} that make up this script have three different
 colors, corresponding to three of the eight *palettes* in which blocks
 can be found. The palette\index{palette} area at the left edge of the
 window shows one palette at a time, chosen with the eight buttons just
@@ -59,8 +60,9 @@ block, and the hat block can be used only at the top of the script; its
 distinctive shape is meant to remind you of
 that.[1]<span id="generic_when" class="anchor"></span>
 
-The other blocks in our example script are *command* block
-\index{block:command}s. Each command block\index{command block}
+The
+other blocks in our example script are *command* blocks
+\index{block:command}. Each command block \index{command block}
 corresponds to an action that Snap*!* already knows how to carry out.
 For example, the block ![image9.png](assets/image9.png) <!--  style="width:1.16667in;height:0.25in" / --> tells the sprite\index{sprite} (the arrowhead
 shape on the *stage*\index{stage} at the right end of the window) to
@@ -68,28 +70,28 @@ move ten steps (a step is a very small unit of distance) in the
 direction in which the arrowhead is pointing. We’ll see shortly that
 there can be more than one sprite, and that each sprite has its own
 scripts. Also, a sprite doesn’t have to look like an arrowhead, but can
-have any picture as a *costume*\index{costume} *.* The shape of the
-move block is meant to remind you of a Lego™ brick; a script is a stack
-of blocks\index{stack of blocks}. (The word “block” denotes both the
-graphical shape on the screen and the procedure, the action, that the
+have any picture as a *costume.* \index{costume} The shape of the
+move block is meant to remind you of a Lego™ brick; a script \index{script} is a stack
+of blocks \index{stack of blocks}. (The word “block” denotes both the
+graphical shape on the screen and the procedure \index{procedure}, the action, that the
 block carries out.)
 
 
-The number 10 in the move block above is called an *input* to the block. By
+The number 10 in the <code>move</code> block above is called an *input* to the block. By
 clicking on the white oval, you can type any number in place of the 10.
 The sample script on the previous page uses 100 as the input
 \index{input} value. We’ll see later that inputs can have non-oval
 shapes that accept values other than numbers. We’ll also see that you
 can compute input values, instead of typing a particular value into the
-oval. A block can have more than one input slot. For example, the glide
+oval. A block can have more than one input slot. For example, the <code>glide</code>
 block located about halfway down the Motion palette has three inputs.
 
-One of the hat blocks, the generic “when anything” block ![image10.png](assets/image10.png) <!--  style="width:1.09722in;height:0.35417in" / -->, is subtly different from the others.  When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some other script in the project runs (because, for example, you click the green flag).  When generic when blocks are disabled, the stop sign will be square instead of octagonal.
+One of the hat blocks, the generic <code>when</code> (“when anything”) block ![image10.png](assets/image10.png) <!--  style="width:1.09722in;height:0.35417in" / -->, is subtly different from the others.  When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some other script in the project runs (because, for example, you click the green flag).  When generic when blocks are disabled, the stop sign will be square instead of octagonal.
 
-Most command blocks have that brick shape, but some, like the repeat
-block\index{repeat block} in the sample script, are *C‑shaped.* Most
-C-shaped block\index{block:C-shaped} s\index{C-shaped block} are found
-in the Control palette\index{Control palette}. The slot inside the C
+Most command blocks have that brick shape, but some, like the <code>repeat</code>
+block \index{repeat block} in the sample script, are *C‑shaped.* Most
+C-shaped blocks \index{block:C-shaped} \index{C-shaped block} are found
+in the Control palette \index{Control palette}. The slot inside the C
 shape is a special kind of input slot that accepts a *script* as the
 input.
 
@@ -97,7 +99,7 @@ input.
 
 In the sample script
 
-![image6.png](assets/image6.png) <!--  style="width:1.47917in;height:1.35417in" / --> ![image11.png](assets/image11.png) <!--  style="width:1.40625in;height:0.48958in" / --> the repeat block has two inputs: the number 4 and the script
+![image6.png](assets/image6.png) <!--  style="width:1.47917in;height:1.35417in" / --> ![image11.png](assets/image11.png) <!--  style="width:1.40625in;height:0.48958in" / --> the <code>repeat</code> block has two inputs: the number 4 and the script
 
 C-shaped blocks can be put in a script in two ways. If you see a white
 line and let go, the block will be inserted into the script like any
@@ -113,7 +115,7 @@ the haloed blocks:
 The halo will always extend from the cursor position to the bottom of
 the script:
 
-![image16.png](assets/image16.png) <!--  style="width:1.47917in;height:1.35417in" / --> ![image16.png](assets/image16.png) <!--  style="width:1.40625in;height:0.48958in" / -->
+![image16.png](assets/image16.png) <!--  style="width:1.47917in;height:1.35417in" / --> !
 
 If you want only some of those blocks, after wrapping you can grab the
 first block you don’t want wrapped, pull it down, and snap it under the
@@ -128,9 +130,8 @@ blocks into the desired slot.)
 
 ## Sprites and Parallelism
 
-Just below the stage is the “new sprite\index{new sprite button}”
-button ![image25.png](assets/image25.png) <!--  style="width:0.34028in;height:0.24306in" / -->. Click the button to add a new sprite to the stage.
- The new sprite will appear in a random position on the stage, with a random
+Just below the stage is the “new sprite button \index{new sprite button}” ![image25.png](assets/image25.png) <!--  style="width:0.34028in;height:0.24306in" / -->. Click the button to add a new sprite to the stage. The new
+sprite will appear in a random position on the stage, with a random
 color, but always facing to the right.
 
 Each sprite has its own scripts. To see the scripts for a particular
@@ -162,8 +163,8 @@ To change the appearance of a sprite, paint or import a new *costume*\index{cost
 scripting area, and click the paint button ![image32.png](assets/image32.png) <!--  style="width:0.29167in;height:0.16667in" alt="Macintosh HD:Users:bh:Desktop:paintbutton.png" / -->. The *Paint Editor* that
 appears is explained on page [128](#the-paint-editor). There are three
 ways to import a costume. First select the desired sprite in the sprite
-corral. Then, one way is to click on the file icon in the tool bar ,
-then choose ![image30.png](assets/image30.png) <!--  style="width:0.31944in;height:0.21528in" / --> the “Costumes…”menu item. You will see a list of costumes
+corral. Then, one way is to click on the file icon in the tool bar,
+then choose ![image30.png](assets/image30.png) <!--  style="width:0.31944in;height:0.21528in" / --> the “Costumes…” menu item. You will see a list of costumes
 from the public media library, and can choose one. The second way, for a
 costume stored on your own computer, is to click on the file icon and
 choose the “Import…” menu item. You can then select a file in any
@@ -172,35 +173,35 @@ way is quicker if the file you want is visible on the desktop: Just drag
 the file onto the Snap*!* window. In any of these cases, the scripting
 area will be replaced by something like this:
 
- ![image31.png](assets/image31.png) <!--  style="width:1.76667in;height:1.875in" / -->
+![image31.png](assets/image31.png) <!--  style="width:1.76667in;height:1.875in" / --> 
 
 Just above this part of the window is a set of three tabs: Scripts,
-Costumes, and Sounds. You’ll see that the Costumes tab\index{Costumes
-tab} is now selected. In this view, the sprite’s *wardrobe*
-\index{wardrobe} *,* you can choose whether the sprite should wear its
-Turtle costume or its Alonzo\index{Alonzo} costume. (Alonzo, the
-Snap*!* mascot, is named after Alonzo Church\index{Church, Alonzo}, a
+Costumes, and Sounds. You’ll see that the Costumes tab \index{Costumes
+tab} is now selected. In this view, the sprite’s *wardrobe,*
+\index{wardrobe} you can choose whether the sprite should wear its
+Turtle costume or its Alonzo \index{Alonzo} costume. (Alonzo, the
+Snap*!* mascot, is named after Alonzo Church \index{Church, Alonzo}, a
 mathematician who invented the idea of procedures as data
 \index{procedures as data}, the most important way in which Snap*!* is
 different from Scratch\index{Scratch}.) You can give a sprite as many
 costumes as you like, and then choose which it will wear either by
-clicking in its wardrobe or by using the ![image35.png](assets/image35.png) <!--  style="width:1.80556in;height:0.27778in" / --> or ![image34.png](assets/image34.png) <!--  style="width:1.80556in;height:0.27778in" / --> block in a script. (Every
-costume has a number as well as a name. The next costume block selects
+clicking in its wardrobe or by using the ![image35.png](assets/image35.png) <a id="switch to costume"></a> <!--  style="width:1.80556in;height:0.27778in" / --> or ![image34.png](assets/image34.png) <a id="next costume"></a> <!--  style="width:1.80556in;height:0.27778in" / --> block in a script. (Every
+costume has a number as well as a name. The <code>next</code> costume block selects
 the next costume by number; after the highest-numbered costume it
 switches to costume 1. The Turtle, costume 0, is never chosen by next
-costume.) The Turtle costume\index{Turtle costume} is the only one that
-changes color to match a change in the sprite’s pen color. Protip: ![image33.png](assets/image33.png) <!--  style="width:1.80556in;height:0.27778in" / -->
-switches to the *previous* costume, wrapping like next costume.
+costume.) The Turtle costume \index{Turtle costume} is the only one that
+changes color to match a change in the sprite’s pen color. Protip: ![image33.png](assets/image33.png) <a id="switch to costume"></a> <!--  style="width:1.80556in;height:0.27778in" / -->
+switches to the *previous* costume, wrapping like <code>next costume</code>.
 
 In
 addition to its costumes, a sprite can have *sounds;* the equivalent for
-sounds of the sprite’s wardrobe is called its *jukebox*\index{jukebox}
-*.* Sound files\index{play sound block} can be imported in any format
+sounds of the sprite’s wardrobe is called its *jukebox.* \index{jukebox} 
+Sound files \index{play sound block} can be imported in any format
 (WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish
-the task of playing sounds\index{playing sounds}. If you would like a
-script to continue running while the sound is playing, use the block ![image39.png](assets/image39.png) <!--  style="width:1.23958in;height:0.26042in" / -->.
-In contrast, you can use the block ![image38.png](assets/image38.png) <!--  style="width:1.89583in;height:0.26042in" / --> to wait for the sound's completion
-before continuing the rest of the script*.*
+the task of playing sounds \index{playing sounds}. If you would like a
+script to continue running while the sound is playing, use the block ![image39.png](assets/image39.png) <a id="play sound"></a> <!--  style="width:1.23958in;height:0.26042in" / -->.
+In contrast, you can use the block ![image38.png](assets/image38.png) <a id="play sound until done"></a> <!--  style="width:1.89583in;height:0.26042in" / --> to wait for the sound's completion
+before continuing the rest of the script. 
 
 ### Inter-Sprite Communication with Broadcast
 
@@ -222,7 +223,7 @@ message is sent to *every* sprite, which is why the block is called
 the block becomes ![image45.png](assets/image45.png) <!--  style="width:1.78958in;height:0.2in" / --> , and you can change it to ![image46.png](assets/image46.png) <!--  style="width:1.8in;height:0.19167in" / --> to send the message just
 to one sprite.) In this program, though, only one sprite has a script to
 run when that broadcast is sent, namely the dog. Because the boy’s
-script uses broadcast and wait\index{broadcast and wait block} rather
+script uses <code>broadcast and wait</code> \index{broadcast and wait block} rather
 than just broadcast, the boy doesn’t go on to his next say block until
 the dog’s script finishes. That’s why the two sprites take turns
 talking, instead of both talking at once. In Chapter VII,
@@ -240,7 +241,7 @@ dots are *not* shown on the stage if the text is displayed.
 
 The stage has its own scripting area. It can be selected by clicking on
 the Stage icon at the left of the sprite corral. Unlike a sprite,
-though, the stage can’t move. Instead of costumes, it has *backgrounds:*
+though, the stage can’t move. Instead of costumes, it has *backgrounds:* \index{backgrounds}
 pictures that fill the entire stage area. The sprites appear in front of
 the current background. In a complicated project, it’s often convenient
 to use a script in the stage’s scripting area as the overall director of
@@ -252,8 +253,9 @@ Sometimes it’s desirable to make a sort of “super-sprite” composed of
 pieces that can move together but can also be separately articulated.
 The classic example is a person’s body made up of a torso, limbs, and a
 head. Snap*!* allows one sprite to be designated as the *anchor*
-\index{anchor} of the combined shape, with other sprites as its *parts*
-\index{parts (of nested sprite)} *.* To set up sprite nesting
+\index{anchor} of the combined shape, with other sprites as its *parts.*
+\index{parts (of nested sprite)} 
+To set up sprite nesting
 \index{sprite nesting}, drag the sprite corral icon of a *part* sprite
 onto the stage display (not the sprite corral icon!) of the desired
 *anchor* sprite. The precise place where you let go of the mouse button
@@ -270,7 +272,7 @@ probably.) Sprite, representing Alonzo’s body, is the anchor; Sprite(2)
 is the arm. The icon for the anchor shows small images of up to three
 attached parts at the bottom. The icon for each part shows a small image
 of the anchor in its top left corner, and a *synchronous*
-\index{synchronous rotation} */dangling rotation*\index{dangling
+\index{synchronous rotation} *dangling rotation* \index{dangling
 rotation} *flag* in the top right corner. In its initial, synchronous
 setting, as shown above, it means that the when the anchor sprite
 rotates, the part sprite also rotates as well as revolving around the
@@ -291,9 +293,9 @@ the arm synchronous (left) and dangling (right).*
 ## Reporter Blocks and Expressions
 
 So
-far, we’ve used two kinds of block\index{block:reporter} s: hat blocks
-and command blocks. Another kind is the *reporter* block\index{Reporter
-block} , which has an oval shape: ![image66.png](assets/image66.png) <!--  style="width:0.72917in;height:0.15625in" / --> . It’s called a “reporter” because
+far, we’ve used two kinds of blocks \index{block:reporter}: hat blocks
+and command blocks. Another kind is the *reporter* block, \index{Reporter
+block} which has an oval shape: ![image66.png](assets/image66.png) <!--  style="width:0.72917in;height:0.15625in" / --> . It’s called a “reporter” because
 when it’s run, instead of carrying out an action, it reports a value
 that can be used as an input to another block. If you drag a ![image65.png](assets/image65.png) <!--  style="width:1.47in;height:0.52in" / --> reporter
 into the scripting area by itself and click on it, the value it reports
@@ -315,8 +317,8 @@ Here’s a simple script that uses a reporter block:
 
 ![image72.png](assets/image72.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / -->
 
-Here the x position reporter provides the first input to the say block.
-(The sprite’s X position\index{X position} is its horizontal position,
+Here the <code>x position</code> reporter provides the first input to the say block.
+(The sprite’s X position \index{X position} is its horizontal position,
 how far left (negative values) or right (positive values) it is compared
 to the center of the stage. Similarly, the Y position\index{Y position}
 is measured vertically, in steps above (positive) or below (negative)
@@ -327,8 +329,8 @@ Operators palette:
 
 ![image73.png](assets/image73.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / -->
 
-The round block rounds 35.3905… to 35, and the + block adds 100 to that.
-(By the way, the round block is in the Operators palette, just like +,
+The <code>round</code> block rounds 35.3905… to 35, and the <code>+</code> block adds 100 to that.
+(By the way, the <code>round</code> block is in the Operators palette, just like <code>+</code>,
 but in this script it’s a lighter color with black lettering because
 Snap*!* alternates light and dark versions of the palette colors when a
 block is nested inside another block from the same palette:
@@ -336,9 +338,9 @@ block is nested inside another block from the same palette:
 ![image80.png](assets/image80.png) <!--  style="width:4.85417in;height:1.90625in" / -->
 
 This
-aid to readability is called *zebra coloring*\index{zebra coloring}
-*.*) A reporter block with its inputs, maybe including other reporter
-blocks, such as ![image81.png](assets/image81.png) <!--  style="width:1.91667in;height:0.23958in" / -->, is called an *expression*\index{expression} *.*
+aid to readability is called *zebra coloring.* \index{zebra coloring}
+A reporter block with its inputs, maybe including other reporter
+blocks, such as ![image81.png](assets/image81.png) <!--  style="width:1.91667in;height:0.23958in" / -->, is called an *expression.* \index{expression}
 
 ##  Predicates and Conditional Evaluation
 
@@ -346,8 +348,8 @@ Most
 reporters report\index{block:predicate} either a number, like ![image82.png](assets/image82.png) <!--  style="width:0.66667in;height:0.1875in" / -->, or a
 text string, like
 ![image83.png](assets/image83.png) <!--  style="width:1.20833in;height:0.1875in" / --> . A *predicate* is a special kind of reporter that
-always reports true or false. Predicate\index{Predicate block} s have a
-hexagonal shape\index{hexagonal shape} :
+always reports true or false. Predicates \index{Predicate block} have a
+hexagonal shape \index{hexagonal shape} :
 
 ![image85.png](assets/image85.png) <!--  style="width:1.07292in;height:0.15625in" / -->
 
@@ -364,8 +366,8 @@ C-shaped if block\index{if block} runs its input script if (and only
 if) the expression in its hexagonal input reports true.
 ![image87.png](assets/image87.png) <!--  style="width:1.59375in;height:0.61458in" / -->
 
-A really useful block\index{repeat until block} in animation
-\index{animation} s runs its input script *repeatedly* until a predicate
+A really useful block \index{repeat until block} in animations
+\index{animation} runs its input script *repeatedly* until a predicate
 is satisfied:
 ![image89.png](assets/image89.png) <!--  style="width:2.29167in;height:0.84375in" / -->
 
@@ -376,18 +378,18 @@ in a script, but you don’t want to forget where they belong, you can say
 
 Sometimes you want to take the same action whether some condition is
 true or false, but with a different input value. For this purpose you
-can use the *reporter* if block\index{reporter if block} :
+can use the *reporter* <code>if</code> block \index{reporter if block} :
 
 ![image90.png](assets/image90.png) <!--  style="width:4.20833in;height:0.38542in" / -->
 
-Thetechnical term for a true or false value is a “Boolean\index{Boolean} ”
+The technical term for a true or false value is a “Boolean \index{Boolean} ”
 value; it has a capital B because it’s named after a person, George
 Boole\index{Boole, George}, who developed the mathematical theory of
 Boolean values. Don’t get confused; a hexagonal block is a *predicate,*
 but the value it reports is a *Boolean.*
 
 Another quibble about vocabulary: Many programming languages reserve the
-name “procedure\index{procedure} ” for Commands (that carry out an
+name “procedure \index{procedure}” for Commands (that carry out an
 action) and use the name “function” for Reporters and Predicates. In
 this manual, a *procedure* is any computational capability, including
 those that report values and those that don’t. Commands, Reporters, and
@@ -407,34 +409,35 @@ this script:
 
 The
 input to the move block is an orange oval. To get it there, drag the
-orange oval that’s part of the for block\index{for block} :
-![image94.png](assets/image94.png) <!--  style="width:1.88542in;height:1.4375in" / -->
+orange oval that’s part of the <code>for</code> block \index{for block} :
+![image94.png](assets/image94.png) <!--  style="width:1.88542in;height:1.4375in" / --> 
 
 The orange oval\index{orange oval} is a *variable:* a symbol that
 represents a value. (I took this screenshot before changing the second
-number input to the for block from the default 10 to 200, and before
-dragging in a turn block.) For runs its script input repeatedly, just
-like repeat, but before each repetition it sets the variable
-\index{variable} i to a number starting with its first numeric input,
+number input to the <code>for</code> block from the default 10 to 200, and before
+dragging in a <code>turn</code> block.) 
+<code>For</code> runs its script input repeatedly, just
+like <code>repeat</code>, but before each repetition it sets the variable
+\index{variable} <var>i</var> to a number starting with its first numeric input,
 adding 1 for each repetition, until it reaches the second numeric input.
-In this case, there will be 200 repetitions, first with i=1, then with
-i=2, then 3, and so on until i=200 for the final repetition. The result
+In this case, there will be 200 repetitions, first with <var>i</var>=1, then with
+<var>i</var>=2, then <var>i</var>=3, and so on until <var>i</var>=200 for the final repetition. The result
 is that each move draws a longer and longer line segment, and that’s why
 the picture you see is a kind of spiral. (If you try again with a turn
 of 90 degrees instead of 92, you’ll see why this picture is called a
 “squiral\index{squiral}.”)
 
 The
-variable i is created by the for block, and it can only be used in the
+variable <var>i</var> is created by the <code>for</code> block, and it can only be used in the
 script inside the block’s C-slot. (By the way, if you don’t like the
-name i, you can change it by clicking on the orange oval without
+name <var>i</var>, you can change it by clicking on the orange oval without
 dragging it, which will pop up a dialog window in which you can enter a
 different name:
 ![image95.png](assets/image95.png) <!--  style="width:3.1875in;height:1.5in" / -->
 
-“I” isn’t a very descriptive name; you might prefer “length” to indicate
-its purpose in the script. “I” is traditional because mathematicians
-tend to use letters between i and n to represent integer values, but in
+“<var>I</var>” isn’t a very descriptive name; you might prefer “length” to indicate
+its purpose in the script. “<var>I</var>” is traditional because mathematicians
+tend to use letters between <var>i</var> and <var>n</var> to represent integer values, but in
 programming languages we don’t have to restrict ourselves to
 single-letter variable names.)
 
@@ -442,7 +445,7 @@ single-letter variable names.)
 
 You can create variables “by hand” that aren’t limited to being used
 within a single block. At the top of the Variables palette, click the
-“Make a variable\index{Make a variable}” button:
+“Make a variable \index{Make a variable}” button:
 
 ![image97.png](assets/image97.png) <!--  style="width:2.05208in;height:2.27083in" / -->
 
@@ -468,7 +471,7 @@ look like this:
 ![image98.png](assets/image98.png) <!--  style="width:1.65833in;height:2.29167in" / -->
 
 There’s
-now a “Delete a variable\index{Delete a variable} ” button, and there’s
+now a “Delete a variable \index{Delete a variable}” button, and there’s
 an orange oval with the variable name in it, just like the orange oval
 in the for block. You can drag the variable into any script in the
 scripting area. Next to the oval is a checkbox, initially checked. When
@@ -479,10 +482,10 @@ When you give the variable a value, the orange box in its watcher
 \index{watcher} will display the value.
 
 How *do* you give it a value?
-You use the set block\index{set block} :
-![image100.png](assets/image100.png) <!--  style="width:1.92708in;height:0.47917in" / -->
+You use the <code>set</code> block \index{set block} :
+![image100.png](assets/image100.png) <!--  style="width:1.92708in;height:0.47917in" / --> 
 
-Note that you *don’t* drag the variable’s oval into the set block! You
+Note that you *don’t* drag the variable’s oval into the <code>set</code> block! You
 click on the downarrow in the first input slot, and you get a menu of
 all the available variable names.
 
@@ -508,7 +511,7 @@ variable:
 
 ![image105.png](assets/image105.png) <!--  style="width:2.08333in;height:0.30208in" / -->
 
-As in the for block, you can click on an orange oval in the script
+As in the <code>for</code> block, you can click on an orange oval in the script
 variables block without dragging to change its name. You can also make
 more than one temporary variable by clicking on the right arrow at the
 end of the block to add another variable oval:
@@ -520,8 +523,8 @@ end of the block to add another variable oval:
 There are several reasons why you might want to change the name of a
 variable:
 
-1.  It has a default name, such as the “a” in script variables or the
-    “i” in for.
+1.  It has a default name, such as the <var>a</var> in script variables or the
+    <var>i</var> in the <code>for</code> block.
 
 2.  It conflicts with another name, such as a global variable, that you
     want to use in the same script.
@@ -573,7 +576,7 @@ When you use these
 capabilities, your project may take up a lot of memory\index{memory} in
 the computer. If you get close to the amount of memory available to
 Snap*!*, then it may become impossible to save your project. (Extra
-space is needed temporarily to convert from Snap*!* ’s internal
+space is needed temporarily to convert from Snap*!*’s internal
 representation to the form in which projects are exported or saved.) If
 your program reads a lot of data from the outside world that will still
 be available when you use it next, you might want to have values
@@ -581,7 +584,7 @@ containing a lot of data removed from memory before saving the project.
 To do this, right-click or control-click on the orange oval in the
 Variables palette, to see this menu: ![image114.png](assets/image114.png) <!--  style="width:1.29167in;height:1.05556in" / -->
 
-You already know about the rename options, and help… displays a help
+You already know about the rename options, and "help…" \index{help} displays a help
 screen about variables in general. Here we’re interested in the check
 box next to transient. If you check it, this variable’s value will not
 be saved when you save your project. Of course, you’ll have to ensure
@@ -601,12 +604,12 @@ program is manually, by clicking the pause button ![image116.png](assets/image11
 in the top right corner of the window. While the program is paused, you
 can run other scripts by clicking on them, show variables on stage with
 the checkbox next to the variable in the Variables palette or with the
-show variable block\index{hide variable block}, and do all the other
+<code>show variable</code>block \index{hide variable block}, and do all the other
 things you can generally do, including modifying the paused scripts by
-adding or removing blocks. The ![image115.png](assets/image115.png) <!--  style="width:0.29167in;height:0.16667in" / -->  button changes shape to and clicking it
+adding or removing blocks. The ![image115.png](assets/image115.png) <!--  style="width:0.29167in;height:0.16667in" / -->  button changes shape too and clicking it
 again resumes the paused scripts.
 
-### Breakpoints\index{breakpoint} : the pause all block\index{pause all block}
+### Breakpoints \index{breakpoint} : the <code>pause all</code> block \index{pause all block}
 
 <span id="pause_all" class="anchor"></span>The pause button is great if
 your program seems to be in an infinite loop, but more often you’ll want
@@ -614,10 +617,10 @@ to set a *breakpoint,* a particular point in a script at which you want
 to pause. The ![image117.png](assets/image117.png) <!--  style="width:0.81944in;height:0.21528in" / -->  block, near the bottom of the Control palette, can be
 inserted in a script to pause when it is run. So, for example, if your
 program is getting an error message in a particular block, you could use
-pause all just before that block to look at the values of variables just
+<code>pause all</code> just before that block to look at the values of variables just
 before the error happens.
 
-The pause all block turns
+The <code>pause all</code> block turns
 bright cyan while paused. Also, during the pause, you can right-click on
 a running script and the menu that appears will give you the option to
 show watchers for temporary variables of the script:
@@ -625,34 +628,33 @@ show watchers for temporary variables of the script:
 ![image118.png](assets/image118.png) <!--  style="width:1.88333in;height:0.91111in" / -->
 
 But what if the block with the error is run many times in a loop, and it
-only errors when a particular condition is true—say, the value of some
+only errors when a particular condition is true — for example, when the value of some
 variable is negative, which shouldn’t ever happen. In the iteration
 library (see page [25](#libraries-1) for more about how to use
 libraries) is a breakpoint block that lets you set a *conditional*
-breakpoint, and automatically display the relevant variables before
+breakpoint \index{conditional breakpoint}, and automatically display the relevant variables before
 pausing. Here’s a sample use of it:
 
 ![image119.png](assets/image119.png) <!--  style="width:1.19444in;height:1.33333in" / -->
 
 (In this contrived example,
-variable zot comes from outside the script but is relevant to its
+variable <var>zot</var> comes from outside the script but is relevant to its
 behavior.) When you continue (with the pause button), the temporary
 variable watchers are removed by this breakpoint block before resuming
 the script. The breakpoint block isn’t magic; you could alternatively
-just put a pause all inside an if.[2]
+just put a <code>pause all</code> inside an <code>if</code>.[2]
 
-The hide variable and show variable blocks can also be used to hide and show primitives in the palette.  The pulldown menu doesn’t include primitive blocks, but there’s a generally useful technique to give a block input values it wasn’t expecting using run or call: ![image120.png](assets/image120.png) <!--  style="width:1.19444in;height:1.33333in" / -->
-In order to use a block as an input this way, you must explicitly put a ring around it, by right-clicking on it and choosing ringify.  More about rings in Chapter VI.
+The <code>hide variable</code> and <code>show variable</code> blocks can also be used to hide and show primitives in the palette.  The pulldown menu doesn’t include primitive blocks, but there’s a generally useful technique to give a block input values it wasn’t expecting using <code>run</code> \index{run block} or <code>call</code>: /index{call block} ![image120.png](assets/image120.png) <!--  style="width:1.19444in;height:1.33333in" / --> 
+In order to use a block as an input this way, you must explicitly put a ring \index{ring} around it, by right-clicking on it and choosing ringify. More about rings in Chapter: Typed Inputs.  
 
 
-### Visible stepping
+### Visible stepping \index{visible stepping}
 
 Sometimes you’re not exactly
 sure where the error is, or you don’t understand how the program got
 there. To understand better, you’d like to watch the program as it runs,
 at human speed rather than at computer speed. You can do this by
-clicking the *visible stepping bu*\index{button:visible stepping}
-*tton*\index{visible stepping button} (![image121.png](assets/image121.png) <!--  style="width:0.29167in;height:0.16667in" / --> ), before running a script or
+clicking the *visible stepping* \index{button:visible stepping} button \index{visible stepping button} (![image121.png](assets/image121.png) <!--  style="width:0.29167in;height:0.16667in" / --> ), before running a script or
 while the script is paused. The button will light up ( ![image123.png](assets/image123.png) <!--  style="width:0.29167in;height:0.16667in" / --> ) and a speed
 control slider ![image122.png](assets/image122.png) <!--  style="width:0.54563in;height:0.15278in" / --> will appear in the toolbar. When you start or continue
 the script, its blocks and input slots will light up cyan one at a time:
@@ -665,14 +667,12 @@ reporter blocks, each of those would light up as they are called. Note
 that the input to a block is evaluated before the block itself is
 called, so, for example, the 100 lights up before the move.
 
-**. . .**
-
 The speed of stepping is
 controlled by the slider\index{slider:stepping speed}. If you move the
 slider all the way to the left, the speed is zero, the pause button
 turns into a step button ![image134.png](assets/image134.png) <!--  style="width:0.29167in;height:0.16667in" / --> , and the script takes a single step each time
-you push it. The name for this is *single stepping*\index{single
-stepping} *.*
+you push it. The name for this is *single stepping.* \index{single
+stepping}
 
 If several scripts that are visible in the scripting area are running at
 the same time, all of them are stepped in parallel. However, consider
@@ -690,7 +690,7 @@ about visible stepping as it affects those blocks.
 
 This manual doesn’t explain every block in detail. There are many more
 motion blocks, sound blocks, costume and graphics effects blocks, and so
-on. You can learn what they all do by experimentation, and also by
+on. If you would like to find information on specific blocks, go to the Chapter: All Snap*!* blocks under Appendix. You can also learn what they all do by experimentation, and by
 reading the “help screens” that you can get by right-clicking or
 control-clicking a block and selecting “help…” from the menu that
 appears. If you forget what palette (color) a block is, but you remember
@@ -698,8 +698,8 @@ at least part of its name, type control-F and enter the name in the text
 block that appears in the palette area.
 
 Here are the primitive blocks that don’t exist in Scratch:
-![image136.png](assets/image136.png) <!--  style="width:1.05208in;height:0.22917in" / -->  reports\index{pen trails
-block} a\index{pen vectors block} new costume consisting of everything
+![image136.png](assets/image136.png) <!--  style="width:1.05208in;height:0.22917in" / -->  reports \index{pen trails
+block} \index{pen vectors block}, a new costume consisting of everything
 that’s drawn on the stage by any sprite. Right-clicking the block in the
 scripting area gives the option to change it to ![image135.png](assets/image135.png) <!--  style="width:1.25in;height:0.22917in" / --> if vector logging is
 enabled. See page [116](#logpenvectors).
@@ -721,46 +721,44 @@ input. Erases from that sprite’s costume the area that overlaps with the
 current sprite’s costume. (Does not affect the costume in the chosen
 sprite’s wardrobe, only the copy currently visible.)
 
-Runs\index{warp block} only this script
+![image142.png](assets/image142.png) <!--  style="width:1.32986in;height:0.42986in" alt="Icon Description automatically generated" / -->  See page
+[6](#generic_when). 
 
-until finished. In the Control palette even though it’s gray.
-
- ![image142.png](assets/image142.png) <!--  style="width:1.32986in;height:0.42986in" alt="Icon Description automatically generated" / -->  See page
-[6](#generic_when). ![image141.png](assets/image141.png) <!--  style="width:0.98958in;height:0.25972in" / --> See page [17](#pause_all).
+![image141.png](assets/image141.png) <!--  style="width:0.98958in;height:0.25972in" / --> See page [17](#pause_all).
 
 ![image140.png](assets/image140.png) <!--  style="width:0.52986in;height:0.5in" / -->  Runs only this script
 until finished.  In the Control palette even though it’s gray.
 
 
 ![image143.png](assets/image143.png) <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> Reporter
-version of the if/else primitive command block\index{if else reporter
+version of the <code>if/else</code> primitive command block \index{if else reporter
 block} . Only one of the two branches is evaluated, depending on the
 value of the first input.
 
 ![image144.png](assets/image144.png) <!--  style="width:1.83in;height:0.61in" alt="Macintosh HD:Users:bh:Desktop:pix:for.png" / --> Looping block like
-repeat but\index{for block} with an index variable\index{index
+<code>repeat</code> but \index{for block} with an index variable \index{index
 variable} .
 
 ![image145.png](assets/image145.png) <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare
 local variables\index{local variables} in a script.\index{script
 variables block}
 
- ![image148.png](assets/image148.png) <!--  style="width:1.17in;height:0.18in" / -->
+![image148.png](assets/image148.png) <!--  style="width:1.17in;height:0.18in" / -->
 See page [91](#url).
 
 ![image146.png](assets/image146.png) <!--  style="width:0.86in;height:0.19in" alt="Macintosh HD:Users:bh:Desktop:report-effect.png" / --> reports the value of a graphics effect\index{graphics effect}.
 
- ![image147.png](assets/image147.png) <!--  style="width:0.72in;height:0.2in" / --> Constant true\index{true block} or false\index{false block} value. See
+![image147.png](assets/image147.png) <!--  style="width:0.72in;height:0.2in" / --> Constant true \index{true block} or false \index{false block} value. See
 page [12](#predicates-and-conditional-evaluation).
 
- ![image149.png](assets/image149.png) <!--  style="width:0.72in;height:0.2in" / -->
+![image149.png](assets/image149.png) <!--  style="width:0.72in;height:0.2in" / -->
 
 ![image153.png](assets/image153.png) <!--  style="width:2.13in;height:0.18in" / -->
 Create a primitive using JavaScript\index{JavaScript}. (This block is
 disabled by default; the user must check “Javascript extensions” in the
 setting menu *each time* a project is loaded.)\index{pen down? block}
 
- ![image150.png](assets/image150.png) <!--  style="width:0.72in;height:0.2in" / --> The at block\index{at block} lets you examine the screen pixel
+![image150.png](assets/image150.png) <!--  style="width:0.72in;height:0.2in" / --> The <code>at</code> block \index{at block} lets you examine the screen pixel
 \index{screen pixel} directly behind the rotation center of a sprite,
 the mouse, or an arbitrary (x,y) coordinate pair dropped onto the second
 menu slot. The first five items of the left menu let you examine the
@@ -770,12 +768,13 @@ including this one, any point of which overlaps this sprite’s rotation
 center (behind or in front). This is a hyperblock with respect to its
 second input.
 
- ![image154.png](assets/image154.png) <!--  style="width:0.72in;height:0.2in" / -->  Checks the\index{is
-\_ a \_ ? block} data\index{stage blocks} type\index{type} of a value.
+![image154.png](assets/image154.png) <!--  style="width:0.72in;height:0.2in" / -->  Checks the \index{is
+\_ a \_ ? block} data \index{stage blocks} type \index{type} of a value.
 
- ![image151.png](assets/image151.png) <!--  style="width:0.72in;height:0.2in" / -->   ![image152.png](assets/image152.png) <!--  style="width:0.72in;height:0.2in" / -->
+![image151.png](assets/image151.png) <!--  style="width:0.72in;height:0.2in" / -->   
+![image152.png](assets/image152.png) <!--  style="width:0.72in;height:0.2in" / -->
 
- ![image155.png](assets/image155.png) <!--  style="width:0.72in;height:0.2in" / --> \index{set flag block} Turn the\index{split block} text into a list,
+![image155.png](assets/image155.png) <!--  style="width:0.72in;height:0.2in" / -->  \index{set flag block} Turn the \index{split block} text into a list,
 using the second input as the delimiter between items. The default
 delimiter, indicated by the brown dot in the input slot, is a single
 space character. “Letter” puts each character of the text in its own
@@ -792,15 +791,15 @@ representing the structure of the script. See Chapter XI.
 ![image170.png](assets/image170.png) <!--  style="width:1.47986in;height:0.18958in" alt="Macintosh HD:Users:bh:Desktop:identical.png" / --> For lists,
 \index{identical to} reports true only if its two input values are the
 very same list, so changing an item in one of them is visible in the
-other. (For =, lists that look the same are the same.) For text strings,
-uses case-sensitive comparison, unlike =, which is case-independent.
+other. (For <code>=</code>, lists that look the same are the same.) For text strings,
+uses case-sensitive comparison, unlike <code>=</code>, which is case-independent.
 
- ![image171.png](assets/image171.png) <!--  style="width:0.72in;height:0.2in" / --> These *hidden* blocks can be found with the relabel option
+![image171.png](assets/image171.png) <!--  style="width:0.72in;height:0.2in" / --> These *hidden* blocks can be found with the relabel option
 \index{relabel option} of any dyadic arithmetic block. They’re hidden
 partly because writing them in Snap*!* is a good, pretty easy
-programming exercise. Note: the two inputs to atan2\index{max block}
+programming exercise. Note: the two inputs to <code>atan2</code> \index{atan2 block}
 are Δ*x* and Δ*y* in that order, because we measure angles clockwise
-from north. Max and min are *variadic;* by clicking the arrowhead, you
+from north. <code>max</code> /index{max block} and <code>min</code> /index{min block} are *variadic;* by clicking the arrowhead, you
 can provide additional inputs.
 
 ![image177.png](assets/image177.png) <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated with medium confidence" / -->
@@ -824,7 +823,7 @@ capability is new in version 8.0.
 
  ![image173.png](assets/image173.png) <!--  style="width:0.72in;height:0.2in" / -->
 
-Numbers from\index{numbers from block}\index{for each block} will
+<code>Numbers from</code> \index{numbers from block} will
 count up or down.
 
 ![image224.png](assets/image224.png) <!--  style="width:0.83in;height:0.21in" / -->
@@ -847,7 +846,7 @@ vector (x,y).
 **Scenes:**
 
 ![image280.png](assets/image280.png) <!--  style="width:2.38in;height:1.32in" / --> The
-major new feature of version 7.0 is *scenes:* A project can include
+major new feature of version 7.0 is *scenes:* \index{scenes} A project can include
 within it sub-projects, called scenes, each with its own stage, sprites,
 scripts, and so on. This block makes another scene active, replacing the
 current one.
@@ -866,10 +865,8 @@ particular, you can say
 
 if the new scene expects to be started with a green flag signal.
 
-**
-These aren’t new blocks but they have a new feature:**
-
-These accept two-item (x,y)\index{points as inputs} lists
+***These aren’t new blocks but they have a new feature:***
+These accept two-item (x,y) \index{points as inputs} lists
 \index{two-item (x,y) lists} as input, and have extended menus (also
 including other sprites):\index{to block}
 
@@ -882,21 +879,20 @@ the mouse, or the center. “Ray length” is the distance from the center
 of this sprite to the nearest point on the other sprite, in the current
 direction.
 
-![image284.png](assets/image284.png) <!--  style="width:0.72in;height:0.2in" / --> The stop block\index{stop block} has two extra menu choices. Stop this
-block is used inside the definition of a custom block to stop just this
+![image284.png](assets/image284.png) <!--  style="width:0.72in;height:0.2in" / --> The <code>stop</code> block \index{stop block} has two extra menu choices. <code>Stop this block</code> is used inside the definition of a custom block to stop just this
 invocation of this custom block and continue the script that called it.
-Stop all but this script is good at the end of a game to stop all the
+<code>Stop all</code> but this script is good at the end of a game to stop all the
 game pieces from moving around, but keep running this script to provide
 the user’s final score. The last two menu choices add a tab at the
 bottom of the block because the current script can continue after it.
 
 ![image285.png](assets/image285.png) <!--  style="width:0.72in;height:0.2in" / --> The new “pen trails” option is true if the sprite is touching any drawn
-or stamped ink on the stage. Also, touching\index{touching block} will
+or stamped ink on the stage. Also, <code>touching</code> \index{touching block} will
 not detect hidden sprites, but a hidden sprite can use it to detect
 visible sprites.
 
-![image305.png](assets/image305.png) <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> The video block
-\index{video block} has a snap option\index{snap option} that takes a
+![image305.png](assets/image305.png) <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> The <code>video on</code> block
+\index{video block} has a snap option \index{snap option} that takes a
 snapshot and reports it as a costume. It is hyperized with respect to its second input.
 
 ![image304.png](assets/image304.png) <!--  style="width:1.05972in;height:0.27986in" alt="Icon Description automatically generated" / -->  The “neg” option\index{neg option} is a monadic\index{of block
@@ -914,8 +910,7 @@ for positive input, 0 for zero input, or -1 for negative input.
 ![image309.png](assets/image309.png) <!--  style="width:1.05208in;height:0.28125in" / -->  Extended\index{when I am block} mouse interaction events, sensing
 clicking, dragging, hovering, etc. The “stopped” option triggers when
 all scripts are stopped, as with the stop button; it is useful for
-robots whose hardware interface must be told to turn off motors. A when
-I am stopped script\index{when I am stopped script} can run only for a
+robots whose hardware interface must be told to turn off motors. A <code>when I am stopped</code> script \index{when I am stopped script} can run only for a
 limited time.
 
 ![image310.png](assets/image310.png) <!--  style="width:1.05208in;height:0.28125in" / -->  <span id="broadcast" class="anchor"></span>Extended broadcast
@@ -923,7 +918,7 @@ limited time.
 message to a single sprite or the stage. Click again to add any value as
 a payload to the message.
 
-![image311.png](assets/image311.png) <!--  style="width:1.05208in;height:0.28125in" / --> Extended when I receive\index{when I receive block} : Click the right
+![image311.png](assets/image311.png) <!--  style="width:1.05208in;height:0.28125in" / --> Extended <code>when I receive</code> \index{when I receive block} : Click the right
 arrowhead to expose a script variable (click on it to change its name,
 like any script variable) that will be set to the data of a matching
 broadcast. If the first input is set to “any message,” then the data
@@ -964,7 +959,7 @@ library.
 
 ![image362.png](assets/image362.png) <!--  style="width:1.05208in;height:0.28125in" / -->
 
-The of block\index{of block (sensing)} has an extended menu of
+The <code>of</code> block \index{of block (sensing)} has an extended menu of
 attributes of a sprite. Position reports an (x,y) vector. Size reports
 the percentage of normal size, as controlled by the set size block in
 the Looks category. Left, right, etc. report the stage coordinates of
@@ -1020,31 +1015,30 @@ list library\index{list library} has these blocks:
 (The lightning bolt
 \index{lightning bolt symbol} before the name in several of these blocks
 means that they use compiled HOFs or JavaScript primitives to achieve
-optimal speed. They are officially considered experimental.) Remove
-duplicates from\index{remove duplicates from block} reports a list in
-which no two items are equal. The sort\index{sort block} block takes a
-list and a two-input comparison predicate, such as \<, and reports a
-list with the items sorted according to that comparison. The assoc block
+optimal speed. They are officially considered experimental.) <code>Remove duplicates from</code> \index{remove duplicates from block} reports a list in
+which no two items are equal. The <code>sort</code> \index{sort block} block takes a
+list and a two-input comparison predicate, such as <code><</code>, and reports a
+list with the items sorted according to that comparison. The <code>assoc</code> block
 \index{assoc block} is for looking up a key in an *association list:* a
 list of two-item lists. In each two-item list, the first is a *key* and
-the second is a *value.* The inputs are a key and an association list;
+the second is a *value.* The inputs are a key and an association list \index{dictionary} \index{association list};
 the block reports the first key-value pair whose key is equal to the
 input key.
 
-For each item\index{for each item block} is a variant of the primitive
-version that provides a \# variable\index{\# variable} containing the
-position in the input list of the currently considered item. Multimap
-\index{multimap block} is a version of map that allows multiple list
+<code>For each item</code> \index{for each item block} is a variant of the primitive
+version that provides a \# variable \index{# variable} containing the
+position in the input list of the currently considered item. <code>Multimap</code>
+\index{multimap block} is a version of <code>map</code> that allows multiple list
 inputs, in which case the mapping function must take as many inputs as
 there are lists; it will be called with all the first items, all the
-second items, and so on. Zip takes any number of lists as inputs; it
+second items, and so on. <code>Zip</code> takes any number of lists as inputs; it
 reports a list of lists: all the first items, all the second items, and
-so on. The no-name identity function reports its input.
+so on. The <code>no-name</code> identity function reports its input.
 
-Sentence\index{sentence block} and sentence➔list\index{sentence➔list
+<code>Sentence</code> \index{sentence block} and <code>sentence➔list</code> \index{sentence➔list
 block} are borrowed from the word and sentence library (page
 [27](#wordsent)) to serve as a variant of append that accepts non-lists
-as inputs. Printable takes a list structure of any depth as input and
+as inputs. <code>Printable</code> takes a list structure of any depth as input and
 reports a compact representation of the list as a text string.
 
 The iteration, composition library\index{iteration library} has these
@@ -1053,42 +1047,43 @@ blocks:
 ![image388.png](assets/image388.png) <!--  style="width:1.68889in;height:4.75in" / -->
 ![image389.png](assets/image389.png) <!--  style="width:1.04444in;height:0.16111in" / -->
 
-Catch
-\index{catch block} and throw\index{throw block} provide a nonlocal
-exit facility. You can drag the tag from a catch block to a throw inside
+<code>Catch</code>
+\index{catch block} and <code>throw</code> \index{throw block} provide a nonlocal
+exit facility. You can drag the tag from a <code>catch</code> block to a <code>throw</code> inside
 its C-slot, and the throw will then jump directly out to the matching
 catch without doing anything in between.
 
-If do and pause all\index{if do and pause all block} is for setting a
+<code>If do and pause all</code> \index{if do and pause all block} is for setting a
 breakpoint while debugging code. The idea is to put show variable blocks
 for local variables in the C-slot; the watchers will be deleted when the
 user continues from the pause.
 
-Ignore\index{ignore block} is used when you need to call a reporter but
+<code>Ignore</code> \index{ignore block} is used when you need to call a reporter but
 you don’t care about the value it reports. (For example, you are writing
 a script to time how long the reporter takes.)
 
-The cascade\index{cascade blocks} blocks take an initial value and call
+The <code>cascade</code> \index{cascade blocks} blocks take an initial value and call
 a function repeatedly on that value, *f*(*f*(*f*(*f*…(*x*)))).
 
-The compose\index{compose block} block takes two functions and reports
+The <code>compose</code> \index{compose block} block takes two functions and reports
 the function *f*(*g*(*x*)).
 
 The first three repeat blocks
-\index{repeat blocks} are variants of the primitive repeat until block,
+\index{repeat blocks} are variants of the primitive <code>repeat until</code> block,
 giving all four combinations of whether the first test happens before or
 after the first repetition, and whether the condition must be true or
-false to continue repeating. The last repeat block is like the repeat
+false to continue repeating. The last repeat block is like the <code>repeat</code>
 primitive, but makes the number of repetitions so far available to the
-repeated script. The next two blocks are variations on for\index{for
+repeated script. The next two blocks are variations on <code>for</code> \index{for
 block} : the first allows an explicit step instead of using ±1, and the
 second allows any values, not just numbers; inside the script you say
 
 ![image390.png](assets/image390.png) <!--  style="width:3.15278in;height:0.29861in" / -->
-
- replacing
+replacing
 the grey block in the picture with an expression to give the next
-desired value for the loop index. Pipe allows reordering a nested
+desired value for the loop index. 
+
+<code>Pipe</code> allows reordering a nested
 composition with a left-to-right one:
 
 ![image392.png](assets/image392.png) <!--  style="width:3.70972in;height:1.17153in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (1).png" / --> ![image391.png](assets/image391.png) <!--  style="width:3.44097in;height:1.36111in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (2).png" / -->
@@ -1097,20 +1092,21 @@ The stream library\index{stream library} has these blocks:
 
 ![image393.png](assets/image393.png) <!--  style="width:3.16111in;height:2.15347in" / -->
 
-*Streams* are a special kind
+*Streams* \index{stream list} are a special kind
 of list whose items are not computed until they are needed. This makes
 certain computations more efficient, and also allows the creation of
 lists with infinitely many items, such as a list of all the positive
-integers. The first five blocks are stream versions of the list blocks
-in front of\index{in front of stream block}, item 1 of\index{item 1
-of stream block} , all but first of\index{all but first of stream
-block} , map\index{map over stream block}, and keep. Show stream
+integers. The first five blocks are stream versions of the list blocks.
+
+<code>in front of</code> \index{in front of stream block}, <code>item 1 of</code> \index{item 1
+of stream block}, <code>all but first of</code> \index{all but first of stream
+block}, <code>map</code> \index{map over stream block}, and <code>keep</code>. <code>Show stream</code>
 \index{show stream block} takes a stream and a number as inputs, and
-reports an ordinary list of the first *n* items of the stream. Stream
+reports an ordinary list of the first *n* items of the stream. <code>Stream</code>
 \index{Stream block} is like the primitive list; it makes a finite
-stream from explicit items. Sieve\index{sieve block} is an example
+stream from explicit items. <code>Sieve</code> \index{sieve block} is an example
 block that takes as input the stream of integers starting with 2 and
-reports the stream of all the prime numbers. Stream with numbers from is
+reports the stream of all the prime numbers. <code>Stream with numbers from</code> is
 \index{Stream with numbers from block} like the numbers from block for
 lists, except that there is no endpoint; it reports an infinite stream
 of numbers.
@@ -1150,7 +1146,7 @@ means that the program must continually re-parse the text on every
 operation, looking for spaces, treating multiple consecutive spaces as
 one, and so on. Also, it’s more convenient to treat a sentence as a list
 of words rather than a string of words because in the former case you
-can use the higher order functions map, keep, and combine on them. This
+can use the higher order functions <code>map</code>, <code>keep</code>, and <code>combine</code> on them. This
 library attempts to be agnostic as to the internal representation of
 sentences. The sentence selectors accept any combination of lists and
 strings; there are two sentence constructors, one to make a string (join
@@ -1160,18 +1156,18 @@ The selector names come from Logo, and should be self-explanatory.
 However, because in a block language you don’t have to type the block
 name, instead of the terse butfirst or the cryptic bf we spell out “all
 but first of” and include “word” or “sentence” to indicate the intended
-domain. There’s no first letter of block because letter 1 of serves that
-need. Join words (the sentence-as-string constructor) is like the
-primitive join except that it puts a space in the reported value between
-each of the inputs. Sentence (the List-colored sentence-as-list
+domain. There’s no first letter of block because <code>letter 1 of</code> serves that
+need. <code>Join words</code> (the sentence-as-string constructor) is like the
+primitive <code>join</code> except that it puts a space in the reported value between
+each of the inputs. <code>Sentence</code> (the List-colored sentence-as-list
 constructor) accepts any number of inputs, which can be words,
 sentences-as-lists, or sentences-as-strings. (If inputs are lists of
-lists, only one level of flattening is done.) Sentence reports a list of
+lists, only one level of flattening is done.) <code>Sentence</code> reports a list of
 words; there will be no empty words or words containing spaces. The four
 blocks with right-arrows in their names\index{list ➔ sentence block}
 convert back and forth between text strings (words or sentences) and
 lists. (Splitting a word into a list of letters is unusual unless you’re
-a linguist investigating orthography.) Printable\index{printable block}
+a linguist investigating orthography.) <code>Printable</code> \index{printable block}
 takes a list (including a deep list) of words as input and reports a
 text string in which parentheses are used to show the structure, as in
 Lisp/Scheme.
@@ -1191,7 +1187,7 @@ The bar charts library\index{bar charts library} has these blocks:
 
 ![image396.png](assets/image396.png) <!--  style="width:3.43056in;height:1.91667in" / -->
 
-Bar chart\index{bar chart
+<code>Bar chart of table</code> \index{bar chart
 block} takes a table (typically from a CSV data set) as input and
 reports a summary of the table grouped by the field in the specified
 column number. The remaining three inputs are used only if the field
@@ -1202,12 +1198,12 @@ largest values of interest and, most importantly, the width of a bucket
 these three inputs empty or set them to zero. Each string value of the
 field is its own bucket, and they appear sorted alphabetically.
 
-Bar chart reports a new table with three columns. The first column
+<code>Bar chart of table</code> reports a new table with three columns. The first column
 contains the bucket name or smallest number. The second column contains
 a nonnegative integer that says how many records in the input table fall
 into this bucket. The third column is a subtable containing the actual
-records from the original table that fall into the bucket. Plot bar
-chart\index{plot bar chart block} takes the table reported by bar chart
+records from the original table that fall into the bucket. <code>Plot bar chart</code>
+ \index{plot bar chart block} takes the table reported by bar chart
 and graphs it on the stage, with axes labelled appropriately. The
 remaining blocks are helpers for those.
 
@@ -1221,17 +1217,17 @@ library:multiple-branch} has these blocks:
 ![image397.png](assets/image397.png) <!--  style="width:1.85in;height:2.47986in" / -->
 
 The
-catch and throw blocks duplicate ones in the iteration library, and are
-included because they are used to implement the others. The cases block
+<code>catch</code> and <code>throw</code> blocks duplicate ones in the iteration library, and are
+included because they are used to implement the others. The <code>cases: if/then</code> block
 \index{cases block} sets up a multi-branch conditional, similar to cond
 in Lisp\index{cond in Lisp} or switch in C\index{switch in C} -family
 languages. The first branch is built into the cases block; it consists
 of a Boolean test in the first hexagonal slot and an action script, in
 the C-slot, to be run if the test reports true. The remaining branches
 go in the variadic hexagonal input at the end; each branch consists of
-an else if block\index{else if block}, which includes the Boolean test
+an <code>else if</code> block \index{else if block}, which includes the Boolean test
 and the corresponding action script, except possibly for the last
-branch, which can use the unconditional else block\index{else block}.
+branch, which can use the unconditional <code>else</code> block \index{else block}.
 As in other languages, once a branch succeeds, no other branches are
 tested.
 
@@ -1241,35 +1237,34 @@ The variadic library\index{variadic library} has these blocks:
 
 ![image398.png](assets/image398.png) <!--  style="width:1.19653in;height:0.41667in" / -->
 
-These are\index{sum block}
-versions\index{all of block}\index{any of block} of the associative
-operators and, and or that take any number of inputs instead of exactly
+These are \index{sum block}
+versions \index{all of block} \index{any of block} of the associative
+operators <code>and</code>, and <code>or</code> that take any number of inputs instead of exactly
 two inputs. As with any variadic input, you can also drop a list of
 values onto the arrowheads instead of providing the inputs one at a time
 As of version 8.0, the arithmetic operators sum, product, minimum, and
-maximum are no longer included, because the primitive operators +. ×,
-min, and max are themselves variadic.
+maximum are no longer included, because the primitive operators <code>+</code> <code>x</code>,
+<code>min</code>, and <code>max</code> are themselves variadic.
 
 The colors and crayons library\index{colors library} has these blocks:
 
-It is intended as a more powerful replacement for the primitive set pen
-block\index{set pen block}, including *first class color* support; HSL
-color\index{HSL color} specification as a better alternative to the HSV
-that Snap*!* inherits from JavaScript; a “fair hue\index{fair hue} ”
+It is intended as a more powerful replacement for the primitive <code>set pen</code>
+block \index{set pen block}, including *first class color* support; <code>HSL color</code> \index{HSL color} specification as a better alternative to the HSV
+that Snap*!* inherits from JavaScript; a “fair hue \index{fair hue} ”
 scale that compensates for the eye’s grouping a wide range of light
 frequencies as green while labelling mere slivers as orange or yellow;
-the X11/W3C standard color names\index{X11/W3C color names}; RGB in
-hexadecimal; a linear color scale (as in the old days, but better) based
+the <code>X11/W3C standard color names</code> \index{X11/W3C color names}; <code>RGB in
+hexadecimal</code>; a linear color scale (as in the old days, but better) based
 on fair hues and including shades (darker colors) and grayscale. Another
 linear scale is a curated set of 100 “crayons,” explained further on the
 next page.
 
 ![image412.png](assets/image412.png) <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / -->
 
- Colors are
-created by the ![image414.png](assets/image414.png) <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / --> block (for direct user selection), the color from block
+Colors are
+created by the ![image414.png](assets/image414.png) <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / --> block (for direct user selection), the <code>color from</code>
 \index{color from block} to specify a color numerically,  or by ![image413.png](assets/image413.png) <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / --> , which
-reports the color currently in use by the pen. The from color block
+reports the color currently in use by the pen. The <code>from color</code> block
 \index{from color block} reports names or numbers associated with a
 color:
 
@@ -1281,13 +1276,13 @@ other colors:\index{mix colors block}
 ![image415.png](assets/image415.png) <!--  style="width:4.83333in;height:0.43056in" / -->
 
 The three blocks with pen in their names are improved versions of
-primitive Pen blocks. In principle set pen\index{set pen block}, for
-example, could be implemented using a (hypothetical) set pen to color
-composed with the color from block, but in fact set pen benefits from
+primitive Pen blocks. In principle <code>set pen</code> \index{set pen block}, for
+example, could be implemented using a (hypothetical) <code>set pen</code> to color
+composed with the <code>color from</code> block, but in fact <code>set pen</code> benefits from
 knowing how the pen color was set in its previous invocation, so it’s
-implemented separately from color from. Details in Appendix A.
+implemented separately from <code>color from</code>. Details in Appendix A.
 
- The
+The
 recommended way to choose a color is from one of two linear scales: the
 continuous *color numbers* and the discrete *crayons:*
 
@@ -1303,12 +1298,12 @@ Here is the normal hue scale, for reference:
 
 ![image418.png](assets/image418.png) <!--  style="width:4in;height:0.20833in" / -->
 
- Here
+Here
 is the fair hue scale:
 
 ![image419.png](assets/image419.png) <!--  style="width:4in;height:0.20833in" / -->
 
- Here
+Here
 is the color number scale:
 
 ![image416.png](assets/image416.png) <!--  style="width:5in;height:0.20833in" / -->
@@ -1321,7 +1316,7 @@ here are the 100 crayons\index{crayons} :
 
 ![image417.png](assets/image417.png) <!--  style="width:5in;height:0.20833in" / -->
 
-The color from block, for example, provides different pulldown menus
+The <code>color from</code> block, for example, provides different pulldown menus
 depending on which scale you choose:
 
 ![image410.png](assets/image410.png) <!--  style="width:2.41667in;height:0.34444in" alt="Macintosh HD:Users:bh:Desktop:color-by-name.png" / -->
@@ -1352,17 +1347,17 @@ equivalent:
 
 ![image430.png](assets/image430.png) <!--  style="width:4.29167in;height:1.90972in" / -->
 
-Set pen crayon to provides the equivalent of a box of 100 crayons. They
+<code>Set pen crayon to</code> provides the equivalent of a box of 100 crayons. They
 are divided into color groups, so the menu in the set pen crayon to
 input\index{set pen to crayon block} slot has submenus. The colors are
 chosen so that starting
- from crayon 0,
-change pen crayon by 10 rotates through an interesting, basic set of ten
+from crayon 0,
+<code>change pen crayon by</code> 10 rotates through an interesting, basic set of ten
 colors:
 
 ![image440.png](assets/image440.png) <!--  style="width:4.36528in;height:0.51528in" alt="Macintosh HD:Users:bh:Desktop:pix:10-crayons.png" / -->
 
-Using change pen crayon by 5
+Using <code>change pen crayon by</code> 5
 instead gives ten more colors, for a total of 20:
 
 ![image441.png](assets/image441.png) <!--  style="width:4.35556in;height:0.28194in" / -->
@@ -1371,7 +1366,7 @@ instead gives ten more colors, for a total of 20:
 reasons, one of which is that some Crayola colors aren’t representable
 on RGB screens. Some year when you have nothing else to do, look up
 “color space” on Wikipedia. Also “crayon.” Oh, it’s deliberate that
-change pen crayon by 5 doesn’t include white, since that’s the usual
+<code>change pen crayon by</code> 5 doesn’t include white, since that’s the usual
 stage background color. White is crayon 14.) Note that crayon 43 is
 “Variables”; all the standard block colors are included.
 
@@ -1388,7 +1383,7 @@ The catch errors library\index{catch errors library} has these blocks:
 
 ![image444.png](assets/image444.png) <!--  style="width:3.04167in;height:1.39583in" / -->
 
-The safely try block
+The <code>safely try</code> block
 \index{safely try block} allows you to handle errors that happen when
 your program is run within the program, instead of stopping the script
 with a red halo and an obscure error message. The block runs the script
@@ -1396,10 +1391,9 @@ in its first C-slot. If it finishes without an error, nothing else
 happens. But if an error happens, the code in the second C-slot is run.
 While that second script is running, the variable ![image443.png](assets/image443.png) <!--  style="width:0.43056in;height:0.15278in" / -->  contains the text of
 the error message that would have been displayed if you weren’t catching
-the error. The error block\index{error block} is sort of the opposite:
+the error. The <code>error</code> block \index{error block} is sort of the opposite:
 it lets your program *generate* an error message, which will be
-displayed with a red halo unless it is caught by safely try. Safely try
-reporting is the reporter version of safely try.
+displayed with a red halo unless it is caught by <code>safely try</code>. <code>Safely try reporting</code> is the reporter version of <code>safely try</code>.
 
 The text costumes library\index{text costume library} has only two
 blocks:
@@ -1407,16 +1401,16 @@ blocks:
  ![image446.png](assets/image446.png) <!--  style="width:1.92in;height:0.45078in" alt="Macintosh HD:Users:bh:Desktop:textcostume.png" / -->
  ![image447.png](assets/image447.png) <!--  style="width:3.25972in;height:0.18958in" / -->
 
-Costume from text
-reports a costume\index{costume from text block} that can be used with
-the switch to costume block to make a
+<code>Costume from text</code>
+reports a costume \index{costume from text block} that can be used with
+the <code>switch to costume</code> block to make a
 button:
 
 ![image445.png](assets/image445.png) <!--  style="width:0.53472in;height:0.20833in" alt="Macintosh HD:Users:bh:Desktop:Snaplabel.png" / -->
 
-Costume with background\index{costume with background block} reports a
+<code>Costume with background</code> \index{costume with background block} reports a
 costume made from another costume by coloring its background, taking a
-color input like the set pen color to RGB(A) block and a number of
+color input like the <code>set pen color to RGB(A)</code> block and a number of
 turtle steps of padding around the original costume. These two blocks
 work together to make even better buttons:
 
@@ -1437,10 +1431,10 @@ these blocks:
 
 ![image450.png](assets/image450.png) <!--  style="width:1.17986in;height:1.25972in" / -->
 
-The two do in parallel block
-\index{do in parallel block} s take any number of scripts as inputs.
+The two <code>do in parallel</code>blocks
+\index{do in parallel block} take any number of scripts as inputs.
 Those scripts will be run in parallel, like ordinary independent scripts
-in the scripting area. The and wait version waits until all of those
+in the scripting area. <code>The do in parallel and wait</code> version waits until all of those
 scripts have finished before continuing the script below the block.
 
 The create variables library
@@ -1461,10 +1455,10 @@ blocks:
 
 The purpose of this library
 is to allow program access to the settings controlled by user interface
-elements, such as the settings menu ![image453.png](assets/image453.png) <!--  style="width:0.29167in;height:0.16667in" / -->. The setting block\index{setting
-block} reports a setting; the set flag block\index{set flag block} sets
+elements, such as the settings menu ![image453.png](assets/image453.png) <!--  style="width:0.29167in;height:0.16667in" / -->. The <code>setting</code> block \index{setting
+block} reports a setting; the <code>set flag</code> block \index{set flag block} sets
 yes-or-no options that have checkboxes in the user interface, while the
-set value block\index{set value block} controls settings with numeric
+<code>set value</code> block \index{set value block} controls settings with numeric
 or text values, such as project name.
 
 Certain settings are ordinarily remembered on a per-user basis, such as
@@ -1480,17 +1474,17 @@ integer library} has these blocks:
 ![image454.png](assets/image454.png) <!--  style="width:1.875in;height:1.55in" / -->
 
 The
-USE BIGNUMS block\index{BIGNUMS block} takes a Boolean input, to turn
+<code>USE BIGNUMS</code> block \index{BIGNUMS block} takes a Boolean input, to turn
 the infinite precision feature on or off. When on, all of the arithmetic
 operators are redefined to accept and report integers of any number of
 digits (limited only by the memory of your computer) and, in fact, the
 entire Scheme numeric tower, with exact rationals and with complex
-numbers. The Scheme number block\index{Scheme number block} has a list
+numbers. The <code>Scheme number</code> block \index{Scheme number block} has a list
 of functions applicable to Scheme numbers, including subtype predicates
 such as rational? and infinite?, and selectors such as numerator and
 real-part.
 
-The ! block\index{\! block} computes the factorial function
+The <code>!</code> block \index{! block} computes the factorial function
 \index{factorial }, useful to test whether bignums are turned on.
 Without bignums:
 
@@ -1519,7 +1513,7 @@ of these could be written in Snap*!* itself, but these are implemented
 using the corresponding JavaScript library functions directly, so they
 run fast. They can be used, for example, in scraping data from a web
 site. The command use case-independent comparisons applies only to this
-library. The multiline block\index{multiline block} accepts and reports
+library. The <code>multiline</code> block \index{multiline block} accepts and reports
 a text input that can include newline characters.
 
 The animation library\index{animation library} has these blocks:
@@ -1546,10 +1540,10 @@ slowly and accelerating. (Note that, since it’s a requirement that
 some of the common easing functions.
 
  The two
-Motion blocks in this library animate a sprite. Glide always animates
-the sprite’s motion. Animate’s first pulldown menu input allows you to
+Motion blocks in this library animate a sprite. <code>Glide</code> always animates
+the sprite’s motion. <code>Animate's</code> first pulldown menu input allows you to
 animate horizontal or vertical motion, but will also animate the
-sprite’s direction or size. The animate block\index{animate block} in
+sprite’s direction or size. The <code>animate setter</code> block \index{animate block} in
 Control lets you animate any numeric quantity with any easing function.
 The getter and setter inputs are best explained by example:
 
@@ -1594,9 +1588,8 @@ This library takes a sound,
 one that you record or one from our collection of sounds, and
 manipulates it by systematically changing the intensity of the samples
 in the sound and by changing the sampling rate at which the sound is
-reproduced. Many of the blocks are helpers for the plot sound block,
-used to plot the waveform of a sound\index{plot sound block}. The play
-sound (primitive) block\index{play block} plays a sound. \_\_ Hz for
+reproduced. Many of the blocks are helpers for the <code>plot sound</code> block,
+used to plot the waveform of a sound \index{plot sound block}. The <code>play sound</code> (primitive) block \index{play block} plays a sound. \_\_ <code>Hz for</code>
 \index{Hz for block} reports a sine wave as a list of samples.
 
 The web services library\index{web services library} has these blocks:
@@ -1604,15 +1597,15 @@ The web services library\index{web services library} has these blocks:
 ![image471.png](assets/image471.png) <!--  style="width:3.40972in;height:1.10417in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / -->
 
 The
-first block is a generalization of the primitive url block\index{url
+first block is a generalization of the primitive <code>url</code> block \index{url
 block} , allowing more control over the various options in web requests:
 GET, POST, PUT, and DELETE, and fine control over the content of the
-message sent to the server. Current location\index{current location
-block} reports your latitude and longitude. Listify\index{listify
+message sent to the server. <code>Current location</code> \index{current location
+block} reports your latitude and longitude. <code>Listify</code> \index{listify
 block} takes some text in JSON format (see page
 [54](#multi-dimensional-lists-and-json)) and converts it to a structured
-list. Value at key\index{value at key block} looks up a key-value pair
-in a (listified) JSON dictionary. The key:value: block
+list. <code>Value at key</code> \index{value at key block} looks up a key-value pair
+in a (listified) JSON dictionary. The <code>key:value:</code> block
 \index{key\\value\\ block} is just a constructor for an abstract data
 type used with the other blocks
 
@@ -1645,7 +1638,7 @@ shifts the map relative to the stage. The distance to block measures the
 map distance (in meters) between two sprites. The three reporters with
 current in their names find *your* actual location, again supposing that
 geolocation is enabled on your device. Update redraws the map; as
-costume reports the visible section of the map as a costume. Set style
+costume reports the visible section of the map as a costume. <code>Set style</code>
 allows things like satellite pictures.
 
 The APL primitives library contains\index{APL library} these blocks:
@@ -1657,7 +1650,7 @@ The APL primitives library contains\index{APL library} these blocks:
 For more information about APL, see Appendix B (page
 [148](#appendix-b.-apl-features)).
 
-The  **list comprehension library**\index{list comprehension library} has one block, zip:
+The  **list comprehension library** \index{list comprehension library} has one block, <code>zip</code>: 
 
 ![image476.png](assets/image476.png) <!--  style="width:1.2in;height:0.48958in" alt="Logo Description automatically generated" / -->
 
@@ -1666,7 +1659,7 @@ first input is a function of two inputs. The two Any-type inputs are
 deep lists (lists of lists of…) interpreted as trees, and the function
 is called with every possible combination of a leaf node of the first
 tree and a leaf node of the second tree. But instead of taking atoms
-(non-lists) as the leaves, zip allows the leaves of each tree to be
+(non-lists) as the leaves, <code>zip</code> allows the leaves of each tree to be
 vectors (one-dimensional lists), matrices (two-dimensional lists), etc.
 The Number-type inputs specify the leaf dimension for each tree, so the
 function input might be called with a vector from the first tree and an
@@ -1678,10 +1671,10 @@ The **bitwise library**
 \index{bitwise library} provides bitwise logic functions; each bit of
 the reported value is the result of applying the corresponding Boolean
 function to the corresponding bits of the input(s). The Boolean
-functions are not for ¬, and for ∧, or for ∨, and xor (exclusive or) for
-⊻. The remaining functions shift their first input left or right by the
-number of bits given by the second input. \<\< is left shift, \>\> is
-arithmetic right shift (shifting in one bits from the left), and \>\>\>
+functions are  <code>not for ¬</code>, <code> and for ∧</code>, <code> or for ∨</code>, and <code>xor (exclusive or) for
+⊻</code> . The remaining functions shift their first input left or right by the
+number of bits given by the second input. <code>\<\<</code> is left shift, <code>\>\></code> is
+arithmetic right shift (shifting in one bits from the left), and <code>\>\>\></code> 
 is logical right shift (shifting in zero bits from the left). If you
 don’t already know what these mean, find a tutorial online.
 
