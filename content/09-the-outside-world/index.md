@@ -5,7 +5,7 @@ facilities discussed so far are fine for projects that take place
 entirely on your computer’s screen. But you may want to write programs
 that interact with physical devices\index{devices} (sensors
 \index{sensors} or robots\index{robots} ) or with the World Wide Web
-\index{World Wide Web}. For these purposes Snap*!* provides a
+\index{World Wide Web}. For these purposes [Snap]{.snap} provides a
 <span id="url" class="anchor"></span>single primitive block:
 
 ![image148.png](assets/image148.png) <!--  style="width:1.62014in;height:0.25in" / -->
@@ -38,7 +38,7 @@ through only 100 items at a time. The downarrow near the bottom right
 corner of the speech balloon in the picture presents a menu of
 hundred-item ranges. (This may seem unnecessary, since the scroll bar
 should allow for any number of items, but doing it this way makes
-Snap*!* much faster.) In table view, the entire list is included.
+[Snap]{.snap} much faster.) In table view, the entire list is included.
 
 If you include a protocol name in the input to the url block (such as
 http:// or https://), that protocol will be used. If not, the block
@@ -56,16 +56,16 @@ JavaScript and that forward your requests.
 
 ## Hardware Devices
 
-Another JavaScript security restriction prevents Snap*!* from having
+Another JavaScript security restriction prevents [Snap]{.snap} from having
 direct access to devices\index{devices} connected to your computer,
 such as sensors and robots\index{robots}. (Mobile devices such as
 smartphones may also have useful devices built in, such as
 accelerometers and GPS receivers.) The url block is also used to
-interface Snap*!* with these external capabilities.
+interface [Snap]{.snap} with these external capabilities.
 
 The idea is that you run a separate program that both interfaces with
-the device and provides a local HTTP server that Snap*!* can use to make
-requests to the device. *Unlike* Snap*!* *itself, these programs have
+the device and provides a local HTTP server that [Snap]{.snap} can use to make
+requests to the device. *Unlike* [Snap]{.snap} *itself, these programs have
 access to anything on your computer, so you have to trust the author of
 the software!* Our web site, snap.berkeley.edu, provides links to
 drivers for several devices, including, at this writing, the Lego NXT

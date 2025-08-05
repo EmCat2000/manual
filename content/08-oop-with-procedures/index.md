@@ -73,7 +73,7 @@ do both procedure calls in one:
 ![image854.png](assets/image854.png) <!--  style="width:4.01042in;height:0.70772in" / -->
 
 The ask block\index{ask block} has two required inputs: an object and a
-message. It also accepts optional additional inputs, which Snap*!* puts
+message. It also accepts optional additional inputs, which [Snap]{.snap} puts
 in a list; that list is named args inside the block. Ask has two nested
 call blocks. The inner one calls the object, i.e., the dispatch
 procedure. The dispatch procedure always takes exactly one input, namely
@@ -128,7 +128,7 @@ gets a private copy. (If a child wants to change something for its
 entire family, it must ask the parent to do it.)
 
 Because we want to be able to create and delete properties dynamically,
-we won’t use Snap*!* variables to hold an object’s variables or methods.
+we won’t use [Snap]{.snap} variables to hold an object’s variables or methods.
 Instead, each object has two *tables,* called methods and data, each of
 which is an\index{association list} *association list:* a list of
 two-item lists, in which each of the latter contains a *key* and a

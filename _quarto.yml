@@ -17,7 +17,7 @@ project:
 
 bibliography: references.bib
 # Don't number subsections as chapters.
-number-depth: 1
+# number-depth: 1
 # Setting toc-depth to 1 disables displaying the pre-page toc
 # toc-depth: 1
 # appendix-style: none
@@ -49,9 +49,9 @@ format:
     navbar:
       logo: images/snap-logo.png
       logo-alt: Snap! Logo
-    # include-in-header:
-    #   - text: |
-    #       <script src="https://examples.org/demo.js"></script>
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://use.typekit.net/brw3qiw.css">
     #   - file: analytics.html
     #   - comments.html
     include-after-body:
@@ -99,7 +99,7 @@ book:
   title: Snap<em>!</em> Reference Manual
   output-file: snap-manual
   author: Brian Harvey, Jens Mönig, Michael Ball, Jadga Hügle, Victoria Phelps, Bernat Romagosa
-  date: May 8, 2025
+  date: September 1, 2025
   description: A manual for Snap!
   references: references.bib
   cover-image: images/cover-image.png
@@ -145,14 +145,15 @@ book:
     - content/10-continuations/index.md
     - content/11-metaprogramming/index.md
     - content/12-user-interface-elements/index.md
+  appendices:
+    - content/13-appendix-a-snap-color-library/index.md
+    - content/14-appendix-b-apl-features/index.md
+    # TODO: SciSnap! and TuneScope libraries
     - part: The Snap! Community Site
       chapters:
         - content/13-community-site/index.md
         - content/13-community-site/students.md
         - content/13-community-site/teachers.md
-  appendices:
-    - content/13-appendix-a-snap-color-library/index.md
-    - content/14-appendix-b-apl-features/index.md
     - blocks/index.md
     - part: Motion Blocks
       chapters:

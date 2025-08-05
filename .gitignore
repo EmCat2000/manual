@@ -12,7 +12,7 @@ _build
 
 # Quarto
 /env/
-.quarto
+.quarto/*
 _book
 
 # Custom Index Rendering Files.
@@ -20,23 +20,21 @@ _index_entries.txt
 content/**/*.pdf
 content/**/*.tex
 content/**/*.html
+blocks/**/*.pdf
+blocks/**/*.tex
+blocks/**/*.html
+
 site_libs/
 
 
 # LaTex Complication Messes
 *.aux
 *.log
-content/*.tex
 *.toc
 *.idx
 *.ilg
 *.ind
 *.out
-# Ignore all intermediate tex files
-# TODO: this may be too broad
-*.tex
-content/*.pdf
-content/*_files/**
 
 # Conversion
 conversion/chapters/*
@@ -47,5 +45,7 @@ conversion/chapters/*
 # Utils while building...
 _index_entries.txt
 index-list.quarto_ipynb
+
+.quarto/
 
 /.quarto/

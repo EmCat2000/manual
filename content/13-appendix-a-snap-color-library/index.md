@@ -1,4 +1,4 @@
-#  Appendix A. Snap*!* color library
+#  Appendix A. [Snap]{.snap} color library
 
 The Colors and Crayons library\index{Colors and Crayons library}
 provides several tools for manipulating color. Although its main purpose
@@ -105,7 +105,7 @@ has to be rounded to integer RGB values for display.)
 
 Both of these scales include the range of shades of gray\index{gray},
 from black to white. Since black is the initial pen color, and black
-isn’t a hue, Scratch and Snap*!* users would traditionally try to use
+isn’t a hue, Scratch and [Snap]{.snap} users would traditionally try to use
 set color to escape from black, and it wouldn’t work. By including black
 in the same scale as other colors, we eliminate the Black Hole problem
 \index{Black Hole problem} if people use only the recommended color
@@ -420,7 +420,7 @@ more coherent than jumping around Wikipedia if you’re interested.
 ![image1204.png](assets/image1204.png) <!--  style="width:1.64375in;height:0.84167in" / -->
 
 Although traditional Scratch
-and Snap*!* use HSV in programs, they use HSL in the color picker
+and [Snap]{.snap} use HSV in programs, they use HSL in the color picker
 \index{color picker}. The horizontal axis is hue (fair hue\index{fair
 hue} , in this version) and the vertical axis is *lightness,* the scale
 with black at one end and white at the other end. It would make no sense
@@ -554,7 +554,7 @@ mistakes are bh’s.)
 
 ### tl;dr
 
-For normal people\index{normal people}, Snap*!* provides three simple,
+For normal people\index{normal people}, [Snap]{.snap} provides three simple,
 one-dimensional scales: *<u>crayons</u>* for specific interesting
 colors, *<u>color numbers</u>* for a continuum of high-contrast colors
 with a range of hues and shading, and *<u>fair hues</u>* for a continuum
@@ -713,4 +713,4 @@ five, except for item 4, which is used for color 14, not color 15:
 The very pale three-input list blocks are for color numbers that are odd
 multiples of five, generally the “darkest” members of each color family.
 (The block colors were adjusted in Photoshop; don’t ask how to get
-blocks this color in Snap*!*.)
+blocks this color in [Snap]{.snap}.)
