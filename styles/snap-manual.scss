@@ -1,3 +1,8 @@
+// Adobe Fonts -- Michael's UC Berkeley Adobe Account
+// Loaded brw3qiw.css in the _quarto.yml file
+// TODO: Move to Adobe Fonts
+@import url('https://fonts.googleapis.com/css2?family=Freight+Text+Pro:wght@400;700&display=swap');
+
 /*-- scss:defaults --*/
 // $h2-font-size:          1.6rem !default;
 // $headings-font-weight:  500 !default;
@@ -86,9 +91,6 @@ $bs-navbar-brand-hover-color: #FFF;
   top: -14px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Freight+Text+Pro:wght@400;700&display=swap');
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Freight Text Pro', serif;
 }
@@ -97,7 +99,6 @@ h1, h2, h3, h4, h5, h6 {
 // So we will override Quarto's CSS where these titles appear.
 .title code,
 .menu-text code {
-  font-family: 'Source Code Pro', 'Monaco', 'Menlo', monospace;
   color: #000;
   background-color: unset;
 }
@@ -118,21 +119,42 @@ h1, h2, h3, h4, h5, h6 {
   width: 20%
 }
 
-.ui-text-label {
-  color: black;
-  // THIS IS TEMPORARY
-  text-transform: uppercase;
-  font-family: monospace;
-  text-decoration: underline;
+// Less padding than bootstrap default.
+kbd {
+  line-height: 1.6;
+  padding: 2px;
 }
 
+code,
+// A Bootstrap definition we need to override
+p code:not(.sourceCode) {
+  color: black;
+  background-color: unset;
+  font-family: "tekton-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.1em;
+  // Should we reuse the same font from the word doc?
+  // font-family: monospace;
+}
+
+.mono {
+  font-family: 'source-code-pro', 'Monaco', courier, monospace;
+}
+
+// TODO: load Candara font.
 .snap {
   font-size: 1.1em;
-  font-weight: bold;
-  font-family: monospace;
+  font-family: "candara", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .snap::after {
   content: '!';
   font-style: italic;
 }
+
+// TODO: Style paragraph indents?
+// hX + p ? p+p

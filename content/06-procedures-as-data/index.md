@@ -5,7 +5,7 @@
  In the for block\index{for
 block} example above, the input named action has been declared as type
 “Command (C-shaped)”; that’s why the finished block is C-shaped. But how
-does the block actually tell Snap*!* to carry out the commands inside
+does the block actually tell [Snap]{.snap} to carry out the commands inside
 the C-slot? Here is a simple version of the block script:
 
 ![image692.png](assets/image692.png) <!--  style="width:3.67292in;height:1.58333in" / -->
@@ -17,13 +17,13 @@ the variable by −1 for each repetition instead of by 1.
 
  The
 important part of this script is the run block\index{run block} near
-the end. This is a Snap*!* built-in command block that takes a
+the end. This is a [Snap]{.snap} built-in command block that takes a
 Command-type value (a script) as its input, and carries out its
 instructions. (In this example, the value of the input ![image693.png](assets/image693.png) <!--  style="width:0.5in;height:0.15625in" / --> is the script
 that the user puts in the C-slot of the my for block.) There is a
 similar call reporter block for invoking a Reporter or Predicate block.
 The call\index{call block } and run blocks are at the heart of
-Snap*!*’s ﬁrst class procedure\index{ﬁrst class procedures} feature;
+[Snap]{.snap}’s ﬁrst class procedure\index{ﬁrst class procedures} feature;
 they allow scripts and blocks to be used as data—in this example, as an
 input to a block—and eventually carried out under control of the user’s
 program.
@@ -105,7 +105,7 @@ definition of the my for block (page [65](#call-and-run)) doesn’t have a
 ring around its input variable action. When you drag a variable into a
 ringed input slot, you generally *do* want to use *the value of* the
 variable, which will be the block or script you’re trying to run or
-call, rather than the orange variable reporter itself. So Snap*!*
+call, rather than the orange variable reporter itself. So [Snap]{.snap}
 automatically removes the ring in this case. If you ever do want to use
 the variable *block itself,* rather than the value of the variable, as a
 Procedure-type input, you can drag the variable into the input slot,
@@ -113,7 +113,7 @@ then control-click or right-click it and choose “ringify” from the menu
 that appears. (Similarly, if you ever want to call a function that will
 report a block to use as the input, such as item 1 of applied to a list
 *of blocks,* you can choose “unringify” from the menu. Almost all the
-time, though, Snap*!* does what you mean without help.)
+time, though, [Snap]{.snap} does what you mean without help.)
 
 ## Writing Higher Order Procedures
 
@@ -136,7 +136,7 @@ would you want a block to take a procedure as input? This is actually
 not an obscure thing to do; the primitive conditional and looping blocks
 (the C-shaped ones in the Control palette) take a script as input. Users
 just don’t usually think about it in those terms! We could write the
-repeat block\index{repeat block} as a custom block this way, if Snap*!*
+repeat block\index{repeat block} as a custom block this way, if [Snap]{.snap}
 didn’t already have one:
 
 ![image708.png](assets/image708.png) <!--  style="width:2.375in;height:1.35417in" / -->
@@ -187,24 +187,24 @@ use a specific, literal script as the input. Instead, the input will
 generally be a variable whose *value* is a script.
 
 The run and call blocks have arrowheads at the end that can be used to
-open slots for inputs to the called procedures. How does Snap*!* know
+open slots for inputs to the called procedures. How does [Snap]{.snap} know
 where to use those inputs? If the called procedure (block or script) has
-empty input slots, Snap*!* “does the right thing.” This has several
+empty input slots, [Snap]{.snap} “does the right thing.” This has several
 possible meanings:
 
 1. If the number of empty
 slots\index{empty input slots, filling} is exactly equal to the number
-of inputs provided, then Snap*!* fills the empty slots from left to
+of inputs provided, then [Snap]{.snap} fills the empty slots from left to
 right:
 
 ![image711.png](assets/image711.png) <!--  style="width:3.44792in;height:0.34406in" / -->
 
-2. If exactly one input is provided, Snap*!* will fill any number of
+2. If exactly one input is provided, [Snap]{.snap} will fill any number of
 empty slots with it:
 
 ![image712.png](assets/image712.png) <!--  style="width:2.80208in;height:0.30694in" / -->
 
-3. Otherwise, Snap*!* won’t fill any slots, because the user’s
+3. Otherwise, [Snap]{.snap} won’t fill any slots, because the user’s
 intention is unclear.
 
 If the user wants to override these rules, the solution is to use a ring
@@ -279,7 +279,7 @@ the ring:
 ![image731.png](assets/image731.png) <!--  style="width:4.32292in;height:0.45417in" / -->
 
 Here we just want to put one of the inputs into two different slots. If
-we left all three slots empty, Snap*!* would not fill any of them,
+we left all three slots empty, [Snap]{.snap} would not fill any of them,
 because the number of inputs provided (2) would not match the number of
 empty slots (3).
 
@@ -302,11 +302,11 @@ must give an explicit name, newitem, to the value that the outer map is
 giving to the inner one, then drag that variable into the in front of
 block.
 
-By the way, once the called block provides names for its inputs, Snap*!*
+By the way, once the called block provides names for its inputs, [Snap]{.snap}
 will not automatically fill empty slots\index{empty input slots,
 filling} , on the theory that the user has taken control. In fact,
 that’s another reason you might want to name the inputs explicitly: to
-stop Snap*!* from filling a slot that should really remain empty.
+stop [Snap]{.snap} from filling a slot that should really remain empty.
 
 ## Procedures as Data
 
@@ -337,7 +337,7 @@ reports a procedure):
 \index{if else block } block has two C-shaped command slots and chooses
 one or the other depending on a Boolean test. Because Scratch doesn’t
 emphasize functional programming, it lacks a corresponding reporter
-block to choose between two expressions. Snap*!* has one, but we could
+block to choose between two expressions. [Snap]{.snap} has one, but we could
 write our own:
 
 ![image736.png](assets/image736.png) <!--  style="width:2.49931in;height:0.27847in" / --> ![image737.png](assets/image737.png) <!--  style="width:2.40208in;height:1.42708in" / --> ![image739.png](assets/image739.png) <!--  style="width:3.81899in;height:0.27433in" / -->
@@ -403,7 +403,7 @@ it works internally.
 
 ### Special Forms in Scratch
 
-Special forms are actually not a new invention in Snap*!*. Many of
+Special forms are actually not a new invention in [Snap]{.snap}. Many of
 Scratch’s conditional and looping blocks are really special forms. The
 hexagonal input slot in the if block is a straightforward Boolean value,
 because the value can be computed once, before the if block makes its
@@ -413,7 +413,7 @@ have to be of type “Boolean (unevaluated)\index{Boolean (unevaluated)
 type} ,” so that Scratch can evaluate them over and over again. Since
 Scratch doesn’t have custom C‑shaped blocks, it can afford to handwave
 away the distinction between evaluated and unevaluated Booleans, but
-Snap*!* can’t. The pedagogic value of special forms is proven by the
+[Snap]{.snap} can’t. The pedagogic value of special forms is proven by the
 fact that no Scratcher ever notices that there’s anything strange about
 the way in which the hexagonal inputs in the Control blocks are
 evaluated.

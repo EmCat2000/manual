@@ -1,6 +1,6 @@
 #  Building a Block
 
-The first version of Snap*!* was called BYOB, for “Build Your Own Blocks\index{Build Your Own Blocks}.” This was the first and is still the
+The first version of [Snap]{.snap} was called BYOB, for “Build Your Own Blocks\index{Build Your Own Blocks}.” This was the first and is still the
 most important capability we added to Scratch\index{Scratch}. (The
 name was changed because a few teachers have no sense of humor. ☹ You
 pick your battles.) Scratch 2.0 and later also has a partial custom
@@ -211,9 +211,9 @@ you check or uncheck all the boxes at once.) Then press "OK." An XML file
 containing the blocks will appear in your Downloads location.
 
 To import a block library, use the “Import…” command in the File menu,
-or just drag the XML file into the Snap*!* window.
+or just drag the XML file into the [Snap]{.snap} window.
 
-Several block libraries are included with Snap*!*; for details about
+Several block libraries are included with [Snap]{.snap}; for details about
 them, see page [25](#libraries-1). <!--Fix page numbers. --MF -->
 
 ## Custom blocks and Visible Stepping

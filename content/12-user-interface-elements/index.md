@@ -25,19 +25,17 @@ is clickable. It shows a menu of options about [Snap]{.snap} itself:
 
 ![Snap! logo menu showing options: About, Reference Manual, Snap! Website and Download Source](assets/image994.png) <!--  style="width:2.32922in;height:1.02in" / -->
 
-The ["About"]{.ui-text-label} option\index{About option} displays information about [Snap]{.snap}
+The "`About`" option\index{About option} displays information about [Snap]{.snap}
 itself, including version numbers for the source modules, the
 implementors, and the license\index{license} (AGPL\index{AGPL} : you
 can do anything with it except create proprietary versions, basically).
 
-**`This is a temporary example of different styles.`**
-
 The "`Reference manual`" option\index{Reference manual option} is a link to latest revision of this manual as a web page.
 
-The ["[Snap]{.snap} website"]{ .ui-text-label } option\index{Snap! website option} opens a browser
+The "`Snap! website`" option\index{Snap! website option} opens a browser
 window pointing to [https://snap.berkeley.edu](https://snap.berkeley.edu)\index{snap.berkeley.edu}, the community site for [Snap]{.snap}.
 
-The ["Download source"]{ .ui-text-label } option\index{Download source option} opens a
+The "`Download source`" option\index{Download source option} opens a
 browser window displaying the [Github repository][github] of the source files for [Snap]{.snap}.\index{source files for Snap!} At the bottom of the page
 are links to download the latest official release. Or you can navigate
 around the site to find the current development version. You can read
@@ -55,13 +53,13 @@ shows a menu mostly about saving and loading projects. You
 may not see all these options, if you don’t have multiple sprites,
 scenes, custom blocks, and custom categories.
 
-The ["Notes"]{ .ui-text-label } option\index{Project notes option} opens a window in which
+The "`Notes`" option\index{Project notes option} opens a window in which
 you can type notes about the project: How to use it, what it does, whose
 project you modified to create it, if any, what other sources of ideas
 you used, or any other information about the project. This text is saved
 with the project, and is useful if you share it with other users.
 
-The ["New"]{ .ui-text-label } option\index{New option} starts a new, empty project. Any
+The "`New`" option\index{New option} starts a new, empty project. Any
 project you were working on before disappears, so you are asked to
 confirm that this is really what you want. (It disappears only from the
 current working [Snap]{.snap} window; you should save the current project, if
@@ -75,23 +73,22 @@ You’ll have to experiment. In general, the keyboard shortcuts
 \index{shortcuts:keyboard} in f{.snap} are the standard ones you expect
 in other software.
 
-The ["Open…"]{ .ui-text-label } option\index{Open… option} shows a project open dialog box in
+The "`Open…`" option\index{Open… option} shows a project open dialog box in
 which you can choose a project to open:
 
 ![The Open Project Dialog in Snap!](assets/image995.png) <!--  style="width:2.88958in;height:2.09792in" / -->
 
 In this dialog, the three large buttons at the left select a source of
-projects: ["Cloud"]{ .ui-text-label }\index{Cloud button} means your [Snap]{.snap} account’s cloud
-storage. ["Examples"]{ .ui-text-label }\index{Examples button} means a collection of sample
-projects we provide. ["Computer"]{ .ui-text-label } is for projects saved on your own
+projects: "`Cloud`"\index{Cloud button} means your [Snap]{.snap} account’s cloud
+storage. "`Examples`"\index{Examples button} means a collection of sample
+projects we provide. "`Computer`" is for projects saved on your own
 computer; when you click it, this dialog is replaced with your
 computer’s system dialog for opening files. The text box to the right of
 those buttons is an alphabetical listing of projects from that source;
 selecting a project by clicking shows its thumbnail (a picture of the
 stage when it was saved) and its project notes at the right.
 
-The search bar\index{search
-bar} at the top can be used to find a project by name or text in the
+The search bar\index{search bar} at the top can be used to find a project by name or text in the
 project notes. So in this example:
 
 ![The open dialog showing a search filter for the text "cre"](assets/image996.png) <!--  style="width:2.72431in;height:1.97778in" / -->
@@ -105,22 +102,22 @@ My search matched the word “re*crea*te” in the project notes.
 
 <!-- TODO: Mention the community site somewhere -->
 The six buttons at the bottom select an action to perform on the
-selected project. In the top row, ["Recover"]{ .ui-text-label } looks in your cloud account
+selected project. In the top row, "`Recover`" looks in your cloud account
 for older versions of the chosen project. **_If your project is damaged,
-don’t keep saving broken versions! Use ["Recover"]{ .ui-text-label } first thing._** You will
+don’t keep saving broken versions! Use "`Recover`" first thing._** You will
 see a list of saved versions; choose one to open it. Typically, you’ll
 see the most recent version before the last save, and the newest version
-saved before today. Then come buttons ["Share"]{ .ui-text-label }/["Unshare"]{ .ui-text-label } and
-["Publish"]{ .ui-text-label }/["Unpublish"]{ .ui-text-label }. The labelling of the buttons depends on your
+saved before today. Then come buttons "`Share`"/"`Unshare`" and
+"`Publish`"/"`Unpublish`". The labelling of the buttons depends on your
 project’s publication status. If a project is neither shared nor
 published (the ones in lightface type in the project list), it is
 private and nobody can see it except you, its owner. If it is shared
 (**boldface** in the project list), then when you open it you’ll see a URL
 like this one:
 
-[`https://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change`](ttps://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change)
+[`https://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change`](ttps://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change){.mono}
 
-but with your username and project name. (“`%20`” in the project name
+but with your username and project name. (“[`%20`]{.mono}” in the project name
 represents a space, which can’t be part of a URL.) Anyone who knows this
 URL can see your project. Finally, if your project is published (**_bold
 italic_** in the list), then your project is shown on the [Snap]{.snap} web
@@ -130,41 +127,41 @@ separate copy will be saved in that user’s account. Projects remember
 the history of who created the original version and any other “remix”
 versions along the way.
 
-In the second row, the first button, ["Open"]{ .ui-text-label }, loads the project into
-[Snap]{.snap} and closes the dialog box. The next button (if ["Cloud"]{ .ui-text-label } is the
-source) is ["Delete"]{ .ui-text-label }, and if clicked it deletes the selected project.
-Finally, the ["Cancel"]{ .ui-text-label } button closes the dialog box without opening a
+In the second row, the first button, "`Open`", loads the project into
+[Snap]{.snap} and closes the dialog box. The next button (if "`Cloud`" is the
+source) is "`Delete`", and if clicked it deletes the selected project.
+Finally, the "`Cancel`" button closes the dialog box without opening a
 project. (It does not undo any sharing, unsharing, or deletion you’ve
 done.)
 
-Back to the File menu, the ["Save"]{ .ui-text-label } menu option\index{Save option} saves
+Back to the File menu, the "`Save`" menu option\index{Save option} saves
 the project to the same source and same name that was used when opening
 the project. (If you opened another user’s shared project or an example
 project, the project will be saved to your own cloud account. You must
 be logged in to save to the cloud.)
 
-The ["Save as…"]{ .ui-text-label } menu option\index{Save as… option} opens a dialog box in
+The "`Save as…`" menu option\index{Save as… option} opens a dialog box in
 which you can specify where to save the project:
 
 ![The "Save as…" dialog in Snap!](assets/image998.png) <!--  style="width:3.23611in;height:2.34931in" / -->
 
-This is much like the ["Open"]{ .ui-text-label } dialog, except for the horizontal text box at
+This is much like the "`Open`" dialog, except for the horizontal text box at
 the top, into which you type a name for the project. You can also
 publish, unpublish, share, unshare, and delete projects from here. There
-is no ["Recover"]{ .ui-text-label } button.
+is no "`Recover`" button.
 
-The ["Import…"]{ .ui-text-label } menu option\index{Import… option} is for bringing some
+The "`Import…`" menu option\index{Import… option} is for bringing some
 external resource into the current project, or it can load an entirely
 separate project, from your local disk. You can import costumes (any
 picture format that your browser supports), sounds (again, any format
 supported by your browser), and block libraries or sprites (XML format,
 previously exported from [Snap]{.snap} itself). Imported costumes and sounds
 will belong to the currently selected sprite; imported blocks are global
-(for all sprites). Using the ["Import"]{ .ui-text-label } option is equivalent to dragging the
+(for all sprites). Using the "`Import`" option is equivalent to dragging the
 file from your desktop onto the [Snap]{.snap} window.
 
 <!-- TODO: Update to default to downloading an XML file. -->
-Depending on your browser, the ["Export project…"]{ .ui-text-label } option either directly
+Depending on your browser, the "`Export project…`" option either directly
 saves to your disk or\index{Export project… option} opens a new browser
 tab containing your complete project in XML notation (a plain text
 format). You can then use the browser’s Save feature to save the project
@@ -172,9 +169,9 @@ as an XML file, which should be named _`something`_`.xml` so that [Snap]{.snap}
 will recognize it as a project when you later drag it onto a [Snap]{.snap}
 window. This is an alternative to saving the project to your cloud
 account: keeping it on your own computer. It is equivalent to choosing
-["Computer"]{ .ui-text-label } from the Save dialog described earlier.
+"`Computer`" from the Save dialog described earlier.
 
-The ["Export summary…"]{ .ui-text-label } option\index{Export summary… option} creates a web
+The "`Export summary…`" option\index{Export summary… option} creates a web
 page, in HTML, with all of the information about your project: its name,
 its project notes, a picture of what’s on its stage, definitions of
 global blocks, and then per-sprite information: name, wardrobe (list of
@@ -184,22 +181,22 @@ requirements of the Advanced Placement Computer Science Principles
 \index{Computer Science Principles} create task.
 
 <!-- TODO: Update to default to downloading an XML file. -->
-The ["Export blocks…"]{ .ui-text-label } option\index{Export blocks… option} is used to
+The "`Export blocks…`" option\index{Export blocks… option} is used to
 create a block library\index{block library}. It presents a list of all
 the global (for all sprites) blocks in your project, and lets you select
 which to export. It then opens a browser tab with those blocks in XML
-format, or stores directly to your local disk, as with the ["Export
-project"]{ .ui-text-label } option. Block libraries can be imported with the ["Import"]{ .ui-text-label } option
+format, or stores directly to your local disk, as with the "`Export
+project`" option. Block libraries can be imported with the "`Import`" option
 or by dragging the file onto the [Snap]{.snap} window. This option is shown
 only if you have defined custom blocks.
 
-The ["Unused blocks…"]{ .ui-text-label } option\index{Unused blocks… option} presents a
+The "`Unused blocks…`" option\index{Unused blocks… option} presents a
 listing of all the global custom blocks in your project that aren’t used
-anywhere, and offers to delete them. As with ["Export blocks"]{ .ui-text-label }, you can
+anywhere, and offers to delete them. As with "`Export blocks`", you can
 choose a subset to delete with checkboxes. This option is shown only if
 you have defined custom blocks.
 
-The ["Hide blocks…"]{ .ui-text-label } option\index{Hide blocks… option} shows *all* blocks,
+The "`Hide blocks…`" option\index{Hide blocks… option} shows *all* blocks,
 including primitives, with checkboxes. This option does not remove any
 blocks from your project, but it does hide selected block in your
 palette. The purpose of the option is to allow teachers to present
@@ -210,12 +207,12 @@ users can always unhide blocks by choosing this option and unclicking
 all the checkboxes. (Right-click in the background of the dialog box to
 get a menu from which you can check all boxes or uncheck all boxes.)
 
-The ["New category…"]{ .ui-text-label } option\index{New category… option} allows you to add
+The "`New category…`" option\index{New category… option} allows you to add
 your own categories to the palette. It opens a dialog box in which you
 specify a name *and a color* for the category. (A lighter version of the
 same color will be used for the zebra coloring feature.)
 
-The ["Remove a category…"]{ .ui-text-label } option\index{Remove a category… option} appears
+The "`Remove a category…`" option\index{Remove a category… option} appears
 only if you’ve created custom categories. It opens a very small,
 easy-to-miss menu of category names just under the file icon in the menu
 bar. If you remove a category that has blocks in it, all those blocks
@@ -225,18 +222,18 @@ are also removed.
 The next group of options concern the *scenes*\index{scenes} feature. A scene
 is a complete project, with its own stage, sprites, and code, but
 several can be merged into one project, using the ![switch to scene block](assets/image999.png){ .image-2x .image-inline } <!--  style="width:1.16667in;height:0.19792in" / -->  block to bring another
-scene onscreen. The ["Scenes…"]{ .ui-text-label } option\index{Scenes… option} presents a
+scene onscreen. The "`Scenes…`" option\index{Scenes… option} presents a
 menu of all the scenes in your project, where the File menu was before
-you clicked it. The ["New scene"]{ .ui-text-label } option\index{New scene option} creates a
+you clicked it. The "`New scene`" option\index{New scene option} creates a
 new, empty scene, which you can rename as you like from its context
 menu.
 
-["Add scene…"]{ .ui-text-label }\index{Add scene… option} is like ["Import…"]{ .ui-text-label } but for
+"`Add scene…`"\index{Add scene… option} is like "`Import…`" but for
 scenes. (A complete project can be imported as a scene into another
 project, so you have to specify that you’re importing the project *as a
 scene* rather than replacing the current project.)
 
-The ["Libraries…"]{ .ui-text-label } option\index{Libraries… option} presents a menu of
+The "`Libraries…`" option\index{Libraries… option} presents a menu of
 useful, optional block libraries:
 
 <!-- TODO: Need screenshot. -->
@@ -272,7 +269,7 @@ purpose. You can browse the libraries to find one that will satisfy your
 needs. The libraries are described in detail in Section I.H, page
 [25](#libraries).
 
- The ["Costumes…"]{ .ui-text-label } option \index{Costumes… option} opens a browser into the costume library:
+ The "`Costumes…`" option \index{Costumes… option} opens a browser into the costume library:
 
 ![image1000.png](assets/image1000.png) <!--  style="width:4.28125in;height:3.23958in" / -->
 

@@ -4,16 +4,16 @@ toc: true
 
 # Blocks, Scripts, and Sprites
 
-This chapter describes the Snap*!* features inherited from Scratch
+This chapter describes the [Snap]{.snap} features inherited from Scratch
 \index{Scratch}; experienced Scratch users can skip to Section B.
 
-Snap*!* is a programming language—a notation in which you can tell a
+[Snap]{.snap} is a programming language—a notation in which you can tell a
 computer what you want it to do. Unlike most programming languages,
-though, Snap*!* is a *visual* language; instead of writing a program
-using the keyboard, the Snap*!* programmer uses the same drag-and-drop
+though, [Snap]{.snap} is a *visual* language; instead of writing a program
+using the keyboard, the [Snap]{.snap} programmer uses the same drag-and-drop
 interface familiar to computer users.
 
-Start Snap*!*. You should see the following
+Start [Snap]{.snap}. You should see the following
 arrangement of regions\index{layout, window} in the window:
 
 ![image5.png](assets/image5.png) <!--  style="width:4.32639in;height:2.68958in" / -->
@@ -21,7 +21,7 @@ arrangement of regions\index{layout, window} in the window:
 (The proportions of these areas may be different, depending on the size
 and shape of your browser window.)
 
-A Snap*!* program\index{ Snap! program} consists of one or more
+A [Snap]{.snap} program\index{ Snap! program} consists of one or more
 *scripts,* each of which is made of *blocks.* Here’s a typical script
 \index{script} :
 
@@ -37,7 +37,7 @@ Control palette; the green block is from the Pen palette; and the blue
 blocks are from the Motion palette. A script is assembled by dragging
 blocks from a palette into the *scripting area*\index{scripting area}
 in the middle part of the window. Blocks snap together (hence the name
-Snap*!* for the language) when you drag a block so that its indentation
+[Snap]{.snap} for the language) when you drag a block so that its indentation
 is near the tab of the one above it:
 
 ![image7.png](assets/image7.png) <!--  style="width:2.24653in;height:1.46944in" / --> ![image8.png](assets/image8.png) <!--  style="width:2.20833in;height:1.13889in" / -->
@@ -51,8 +51,8 @@ At the top of the script is a *hat* block, which indicates when the
 script should be carried out. Hat block names typically start with the
 word “when”; in the square-drawing example on page 5, the script should
 be run when the green flag\index{flag, green} near the right end of the
-Snap*!* tool bar\index{tool bar} is clicked. (The Snap*!* tool bar is
-part of the Snap*!* window, not the same as the browser’s or operating
+[Snap]{.snap} tool bar\index{tool bar} is clicked. (The [Snap]{.snap} tool bar is
+part of the [Snap]{.snap} window, not the same as the browser’s or operating
 system’s menu bar.) A script isn’t required to have a hat block
 \index{block:hat}, but if not, then the script will be run only if the
 user clicks on the script itself. A script can’t have more than one hat
@@ -63,7 +63,7 @@ that.[1]<span id="generic_when" class="anchor"></span>
 The
 other blocks in our example script are *command* blocks
 \index{block:command}. Each command block \index{command block}
-corresponds to an action that Snap*!* already knows how to carry out.
+corresponds to an action that [Snap]{.snap} already knows how to carry out.
 For example, the block ![image9.png](assets/image9.png) <!--  style="width:1.16667in;height:0.25in" / --> tells the sprite\index{sprite} (the arrowhead
 shape on the *stage*\index{stage} at the right end of the window) to
 move ten steps (a step is a very small unit of distance) in the
@@ -170,19 +170,19 @@ costume stored on your own computer, is to click on the file icon and
 choose the “Import…” menu item. You can then select a file in any
 picture format (PNG, JPEG, etc.) supported by your browser. The third
 way is quicker if the file you want is visible on the desktop: Just drag
-the file onto the Snap*!* window. In any of these cases, the scripting
+the file onto the [Snap]{.snap} window. In any of these cases, the scripting
 area will be replaced by something like this:
 
-![image31.png](assets/image31.png) <!--  style="width:1.76667in;height:1.875in" / --> 
+![image31.png](assets/image31.png) <!--  style="width:1.76667in;height:1.875in" / -->
 
 Just above this part of the window is a set of three tabs: Scripts,
 Costumes, and Sounds. You’ll see that the Costumes tab \index{Costumes
 tab} is now selected. In this view, the sprite’s *wardrobe,*
 \index{wardrobe} you can choose whether the sprite should wear its
 Turtle costume or its Alonzo \index{Alonzo} costume. (Alonzo, the
-Snap*!* mascot, is named after Alonzo Church \index{Church, Alonzo}, a
+[Snap]{.snap} mascot, is named after Alonzo Church \index{Church, Alonzo}, a
 mathematician who invented the idea of procedures as data
-\index{procedures as data}, the most important way in which Snap*!* is
+\index{procedures as data}, the most important way in which [Snap]{.snap} is
 different from Scratch\index{Scratch}.) You can give a sprite as many
 costumes as you like, and then choose which it will wear either by
 clicking in its wardrobe or by using the ![image35.png](assets/image35.png) <a id="switch to costume"></a> <!--  style="width:1.80556in;height:0.27778in" / --> or ![image34.png](assets/image34.png) <a id="next costume"></a> <!--  style="width:1.80556in;height:0.27778in" / --> block in a script. (Every
@@ -195,13 +195,13 @@ switches to the *previous* costume, wrapping like <code>next costume</code>.
 
 In
 addition to its costumes, a sprite can have *sounds;* the equivalent for
-sounds of the sprite’s wardrobe is called its *jukebox.* \index{jukebox} 
+sounds of the sprite’s wardrobe is called its *jukebox.* \index{jukebox}
 Sound files \index{play sound block} can be imported in any format
 (WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish
 the task of playing sounds \index{playing sounds}. If you would like a
 script to continue running while the sound is playing, use the block ![image39.png](assets/image39.png) <a id="play sound"></a> <!--  style="width:1.23958in;height:0.26042in" / -->.
 In contrast, you can use the block ![image38.png](assets/image38.png) <a id="play sound until done"></a> <!--  style="width:1.89583in;height:0.26042in" / --> to wait for the sound's completion
-before continuing the rest of the script. 
+before continuing the rest of the script.
 
 ### Inter-Sprite Communication with Broadcast
 
@@ -252,9 +252,9 @@ the action.
 Sometimes it’s desirable to make a sort of “super-sprite” composed of
 pieces that can move together but can also be separately articulated.
 The classic example is a person’s body made up of a torso, limbs, and a
-head. Snap*!* allows one sprite to be designated as the *anchor*
+head. [Snap]{.snap} allows one sprite to be designated as the *anchor*
 \index{anchor} of the combined shape, with other sprites as its *parts.*
-\index{parts (of nested sprite)} 
+\index{parts (of nested sprite)}
 To set up sprite nesting
 \index{sprite nesting}, drag the sprite corral icon of a *part* sprite
 onto the stage display (not the sprite corral icon!) of the desired
@@ -332,7 +332,7 @@ Operators palette:
 The <code>round</code> block rounds 35.3905… to 35, and the <code>+</code> block adds 100 to that.
 (By the way, the <code>round</code> block is in the Operators palette, just like <code>+</code>,
 but in this script it’s a lighter color with black lettering because
-Snap*!* alternates light and dark versions of the palette colors when a
+[Snap]{.snap} alternates light and dark versions of the palette colors when a
 block is nested inside another block from the same palette:
 
 ![image80.png](assets/image80.png) <!--  style="width:4.85417in;height:1.90625in" / -->
@@ -356,7 +356,7 @@ hexagonal shape \index{hexagonal shape} :
 The
 special shape is a reminder that predicates don’t generally make sense
 in an input slot of blocks that are expecting a number or text. You
-wouldn’t say ![image84.png](assets/image84.png) <!--  style="width:1.94792in;height:0.26042in" / --> , although (as you can see from the picture) Snap*!* lets
+wouldn’t say ![image84.png](assets/image84.png) <!--  style="width:1.94792in;height:0.26042in" / --> , although (as you can see from the picture) [Snap]{.snap} lets
 you do it if you really want. Instead, you normally use predicates in
 special hexagonal input slots like this one:
 ![image86.png](assets/image86.png) <!--  style="width:0.66667in;height:0.56944in" / -->
@@ -410,12 +410,12 @@ this script:
 The
 input to the move block is an orange oval. To get it there, drag the
 orange oval that’s part of the <code>for</code> block \index{for block} :
-![image94.png](assets/image94.png) <!--  style="width:1.88542in;height:1.4375in" / --> 
+![image94.png](assets/image94.png) <!--  style="width:1.88542in;height:1.4375in" / -->
 
 The orange oval\index{orange oval} is a *variable:* a symbol that
 represents a value. (I took this screenshot before changing the second
 number input to the <code>for</code> block from the default 10 to 200, and before
-dragging in a <code>turn</code> block.) 
+dragging in a <code>turn</code> block.)
 <code>For</code> runs its script input repeatedly, just
 like <code>repeat</code>, but before each repetition it sets the variable
 \index{variable} <var>i</var> to a number starting with its first numeric input,
@@ -483,7 +483,7 @@ When you give the variable a value, the orange box in its watcher
 
 How *do* you give it a value?
 You use the <code>set</code> block \index{set block} :
-![image100.png](assets/image100.png) <!--  style="width:1.92708in;height:0.47917in" / --> 
+![image100.png](assets/image100.png) <!--  style="width:1.92708in;height:0.47917in" / -->
 
 Note that you *don’t* drag the variable’s oval into the <code>set</code> block! You
 click on the downarrow in the first input slot, and you get a menu of
@@ -575,8 +575,8 @@ see how to read information from web sites.
 When you use these
 capabilities, your project may take up a lot of memory\index{memory} in
 the computer. If you get close to the amount of memory available to
-Snap*!*, then it may become impossible to save your project. (Extra
-space is needed temporarily to convert from Snap*!*’s internal
+[Snap]{.snap}, then it may become impossible to save your project. (Extra
+space is needed temporarily to convert from [Snap]{.snap}’s internal
 representation to the form in which projects are exported or saved.) If
 your program reads a lot of data from the outside world that will still
 be available when you use it next, you might want to have values
@@ -593,7 +593,7 @@ the variable to it.
 
 ## Debugging\index{Debugging}
 
-Snap*!* provides several tools to help you debug a program. They center
+[Snap]{.snap} provides several tools to help you debug a program. They center
 around the idea of *pausing* the running of a script partway through, so
 that you can examine the values of variables.
 
@@ -644,8 +644,8 @@ variable watchers are removed by this breakpoint block before resuming
 the script. The breakpoint block isn’t magic; you could alternatively
 just put a <code>pause all</code> inside an <code>if</code>.[2]
 
-The <code>hide variable</code> and <code>show variable</code> blocks can also be used to hide and show primitives in the palette.  The pulldown menu doesn’t include primitive blocks, but there’s a generally useful technique to give a block input values it wasn’t expecting using <code>run</code> \index{run block} or <code>call</code>: /index{call block} ![image120.png](assets/image120.png) <!--  style="width:1.19444in;height:1.33333in" / --> 
-In order to use a block as an input this way, you must explicitly put a ring \index{ring} around it, by right-clicking on it and choosing ringify. More about rings in Chapter: Typed Inputs.  
+The <code>hide variable</code> and <code>show variable</code> blocks can also be used to hide and show primitives in the palette.  The pulldown menu doesn’t include primitive blocks, but there’s a generally useful technique to give a block input values it wasn’t expecting using <code>run</code> \index{run block} or <code>call</code>: /index{call block} ![image120.png](assets/image120.png) <!--  style="width:1.19444in;height:1.33333in" / -->
+In order to use a block as an input this way, you must explicitly put a ring \index{ring} around it, by right-clicking on it and choosing ringify. More about rings in Chapter: Typed Inputs.
 
 
 ### Visible stepping \index{visible stepping}
@@ -690,7 +690,7 @@ about visible stepping as it affects those blocks.
 
 This manual doesn’t explain every block in detail. There are many more
 motion blocks, sound blocks, costume and graphics effects blocks, and so
-on. If you would like to find information on specific blocks, go to the Chapter: All Snap*!* blocks under Appendix. You can also learn what they all do by experimentation, and by
+on. If you would like to find information on specific blocks, go to the Chapter: All [Snap]{.snap} blocks under Appendix. You can also learn what they all do by experimentation, and by
 reading the “help screens” that you can get by right-clicking or
 control-clicking a block and selecting “help…” from the menu that
 appears. If you forget what palette (color) a block is, but you remember
@@ -722,7 +722,7 @@ current sprite’s costume. (Does not affect the costume in the chosen
 sprite’s wardrobe, only the copy currently visible.)
 
 ![image142.png](assets/image142.png) <!--  style="width:1.32986in;height:0.42986in" alt="Icon Description automatically generated" / -->  See page
-[6](#generic_when). 
+[6](#generic_when).
 
 ![image141.png](assets/image141.png) <!--  style="width:0.98958in;height:0.25972in" / --> See page [17](#pause_all).
 
@@ -771,7 +771,7 @@ second input.
 ![image154.png](assets/image154.png) <!--  style="width:0.72in;height:0.2in" / -->  Checks the \index{is
 \_ a \_ ? block} data \index{stage blocks} type \index{type} of a value.
 
-![image151.png](assets/image151.png) <!--  style="width:0.72in;height:0.2in" / -->   
+![image151.png](assets/image151.png) <!--  style="width:0.72in;height:0.2in" / -->
 ![image152.png](assets/image152.png) <!--  style="width:0.72in;height:0.2in" / -->
 
 ![image155.png](assets/image155.png) <!--  style="width:0.72in;height:0.2in" / -->  \index{set flag block} Turn the \index{split block} text into a list,
@@ -796,7 +796,7 @@ uses case-sensitive comparison, unlike <code>=</code>, which is case-independent
 
 ![image171.png](assets/image171.png) <!--  style="width:0.72in;height:0.2in" / --> These *hidden* blocks can be found with the relabel option
 \index{relabel option} of any dyadic arithmetic block. They’re hidden
-partly because writing them in Snap*!* is a good, pretty easy
+partly because writing them in [Snap]{.snap} is a good, pretty easy
 programming exercise. Note: the two inputs to <code>atan2</code> \index{atan2 block}
 are Δ*x* and Δ*y* in that order, because we measure angles clockwise
 from north. <code>max</code> /index{max block} and <code>min</code> /index{min block} are *variadic;* by clicking the arrowhead, you
@@ -946,6 +946,7 @@ The RGB(A)\index{set pen block} option accepts a single number, which
 is a grayscale value 0-255; a two-number list, grayscale plus opacity
 0-255; a three-item RGB list, or a four-item RGBA list.
 
+<!-- TODO: Images like this should have index entries defined after this image. -->
 ![image358.png](assets/image358.png) <!--  style="width:2.25in;height:0.41944in"   alt="Website Description automatically generated with medium confidence"  -->
 
 These ask features\index{ask and wait block} and more in the Menus
@@ -974,7 +975,7 @@ script variables if the right input is a script.)
 ##  Libraries
 
 <span id="libraries-1" class="anchor"></span>There
-are several collections of useful procedures that aren’t Snap*!*
+are several collections of useful procedures that aren’t [Snap]{.snap}
 primitives, but are provided as libraries. To include a library in your
 project, choose the Libraries… option\index{Libraries… option} in the
 file (![image384.png](assets/image384.png) <!--  style="width:0.31944in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:real-desktop:Everything Snap:manual:filebutton.png" / --> ) menu.
@@ -1081,7 +1082,7 @@ second allows any values, not just numbers; inside the script you say
 ![image390.png](assets/image390.png) <!--  style="width:3.15278in;height:0.29861in" / -->
 replacing
 the grey block in the picture with an expression to give the next
-desired value for the loop index. 
+desired value for the loop index.
 
 <code>Pipe</code> allows reordering a nested
 composition with a left-to-right one:
@@ -1134,13 +1135,13 @@ Inexplicably, the designers of Scratch chose to abandon that tradition,
 and to focus on the representation of text as a string of characters.
 The one vestige of the Logo tradition\index{Logo tradition} from which
 Scratch developed is the block named letter (1) of (world)\index{letter
-(1) of (world) block} , rather than character (1) of (world). Snap*!*
+(1) of (world) block} , rather than character (1) of (world). [Snap]{.snap}
 inherits its text handling from Scratch.
 
 In Logo, the visual representation of a sentence\index{visual
 representation of a sentence} (a list of words) looks like a natural
 language sentence: a string of words with spaces between them. In
-Snap*!*, the visual representation of a list looks nothing at all like
+[Snap]{.snap}, the visual representation of a list looks nothing at all like
 natural language. On the other hand, representing a sentence as a string
 means that the program must continually re-parse the text on every
 operation, looking for spaces, treating multiple consecutive spaces as
@@ -1177,7 +1178,7 @@ The pixels library\index{pixels library} has one block:
 ![image395.png](assets/image395.png) <!--  style="width:0.77917in;height:0.62986in" / -->
 
 Costumes are first class data
-in Snap*!*. Most of the processing of costume data is done by primitive
+in [Snap]{.snap}. Most of the processing of costume data is done by primitive
 blocks in the Looks category. (See page
 [79](#media-computation-with-costumes).) This library provides snap
 \index{snap block}, which takes a picture using your computer’s camera
@@ -1250,7 +1251,7 @@ The colors and crayons library\index{colors library} has these blocks:
 
 It is intended as a more powerful replacement for the primitive <code>set pen</code>
 block \index{set pen block}, including *first class color* support; <code>HSL color</code> \index{HSL color} specification as a better alternative to the HSV
-that Snap*!* inherits from JavaScript; a “fair hue \index{fair hue} ”
+that [Snap]{.snap} inherits from JavaScript; a “fair hue \index{fair hue} ”
 scale that compensates for the eye’s grouping a wide range of light
 frequencies as green while labelling mere slivers as orange or yellow;
 the <code>X11/W3C standard color names</code> \index{X11/W3C color names}; <code>RGB in
@@ -1509,7 +1510,7 @@ provides these blocks:\index{case-independent comparisons block}
 ![image463.png](assets/image463.png) <!--  style="width:3.9375in;height:2.04167in" / -->
 
 All
-of these could be written in Snap*!* itself, but these are implemented
+of these could be written in [Snap]{.snap} itself, but these are implemented
 using the corresponding JavaScript library functions directly, so they
 run fast. They can be used, for example, in scraping data from a web
 site. The command use case-independent comparisons applies only to this
@@ -1614,7 +1615,7 @@ The database library\index{database library} contains these blocks:
 ![image472.png](assets/image472.png) <!--  style="width:2.26389in;height:1.22222in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / -->
 
 It
-is used to keep data that persist from one Snap*!* session to the next,
+is used to keep data that persist from one [Snap]{.snap} session to the next,
 if you use the same browser and the same login.
 
 The world map library\index{map library} has these blocks:
@@ -1650,7 +1651,7 @@ The APL primitives library contains\index{APL library} these blocks:
 For more information about APL, see Appendix B (page
 [148](#appendix-b.-apl-features)).
 
-The  **list comprehension library** \index{list comprehension library} has one block, <code>zip</code>: 
+The  **list comprehension library** \index{list comprehension library} has one block, <code>zip</code>:
 
 ![image476.png](assets/image476.png) <!--  style="width:1.2in;height:0.48958in" alt="Logo Description automatically generated" / -->
 
@@ -1674,7 +1675,7 @@ function to the corresponding bits of the input(s). The Boolean
 functions are  <code>not for ¬</code>, <code> and for ∧</code>, <code> or for ∨</code>, and <code>xor (exclusive or) for
 ⊻</code> . The remaining functions shift their first input left or right by the
 number of bits given by the second input. <code>\<\<</code> is left shift, <code>\>\></code> is
-arithmetic right shift (shifting in one bits from the left), and <code>\>\>\></code> 
+arithmetic right shift (shifting in one bits from the left), and <code>\>\>\></code>
 is logical right shift (shifting in zero bits from the left). If you
 don’t already know what these mean, find a tutorial online.
 
@@ -1698,7 +1699,7 @@ to take lists as inputs. See page [24](#ask_lists).
 
 ![image486.png](assets/image486.png) <!--  style="width:3.39in;height:1.9in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / -->
 
-The **SciSnap*!* library**\index{SciSnap! library} and the **TuneScope
+The **Sci[Snap]{.snap} library**\index{SciSnap! library} and the **TuneScope
 library**\index{TuneScope library} are too big to discuss here and are
 documented separately at
 <http://emu-online.de/ProgrammingWithSciSnap.pdf> and
