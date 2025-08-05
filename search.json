@@ -666,6 +666,7 @@
     "section": "",
     "text": "User Accounts\nThe Snap! community website is what you see when you visit https://snap.berkeley.edu.",
     "crumbs": [
+      "The Snap! Community Site",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>The Snap<em>!</em> Community Site</span>"
     ]
   },
@@ -676,6 +677,7 @@
     "section": "Saving and Loading Projects",
     "text": "Saving and Loading Projects",
     "crumbs": [
+      "The Snap! Community Site",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>The Snap<em>!</em> Community Site</span>"
     ]
   },
@@ -686,6 +688,7 @@
     "section": "Sharing and Publishing Projects",
     "text": "Sharing and Publishing Projects",
     "crumbs": [
+      "The Snap! Community Site",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>The Snap<em>!</em> Community Site</span>"
     ]
   },
@@ -696,7 +699,74 @@
     "section": "Creating Project Collections",
     "text": "Creating Project Collections\n\nSharing and Publishing Collections\n\n\nCollaborating on Collections\n\n\n“Free for All” Collections",
     "crumbs": [
+      "The Snap! Community Site",
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>The Snap<em>!</em> Community Site</span>"
+    ]
+  },
+  {
+    "objectID": "content/13-community-site/students.html",
+    "href": "content/13-community-site/students.html",
+    "title": "14  Student Accounts",
+    "section": "",
+    "text": "Differences from Standard accounts\nWhen teachers bulk create accounts, the new accounts are automatically designed as a student account. Student accounts work very similarly to standard accounts, but have a few different permissions.",
+    "crumbs": [
+      "The Snap! Community Site",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Student Accounts</span>"
+    ]
+  },
+  {
+    "objectID": "content/13-community-site/students.html#differences-from-standard-accounts",
+    "href": "content/13-community-site/students.html#differences-from-standard-accounts",
+    "title": "14  Student Accounts",
+    "section": "",
+    "text": "Student accounts cannot access the forum.\nA student’s teacher has the ability to reset their password.",
+    "crumbs": [
+      "The Snap! Community Site",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Student Accounts</span>"
+    ]
+  },
+  {
+    "objectID": "content/13-community-site/students.html#who-controls-a-student-account",
+    "href": "content/13-community-site/students.html#who-controls-a-student-account",
+    "title": "14  Student Accounts",
+    "section": "Who controls a student account?",
+    "text": "Who controls a student account?",
+    "crumbs": [
+      "The Snap! Community Site",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Student Accounts</span>"
+    ]
+  },
+  {
+    "objectID": "content/13-community-site/teachers.html",
+    "href": "content/13-community-site/teachers.html",
+    "title": "15  Teacher Accounts",
+    "section": "",
+    "text": "Bulk Account Creation\nSnap! supports basic teacher account functionality.",
+    "crumbs": [
+      "The Snap! Community Site",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Teacher Accounts</span>"
+    ]
+  },
+  {
+    "objectID": "content/13-community-site/teachers.html#bulk-account-creation",
+    "href": "content/13-community-site/teachers.html#bulk-account-creation",
+    "title": "15  Teacher Accounts",
+    "section": "",
+    "text": "Adding Users to a Collection",
+    "crumbs": [
+      "The Snap! Community Site",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Teacher Accounts</span>"
+    ]
+  },
+  {
+    "objectID": "content/13-community-site/teachers.html#account-management",
+    "href": "content/13-community-site/teachers.html#account-management",
+    "title": "15  Teacher Accounts",
+    "section": "Account Management",
+    "text": "Account Management",
+    "crumbs": [
+      "The Snap! Community Site",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Teacher Accounts</span>"
     ]
   },
   {
