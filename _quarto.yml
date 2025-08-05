@@ -4,13 +4,14 @@ project:
   preview:
     port: 8081
     browser: true
-    watch-inputs: false
+    watch-inputs: true
     navigate: false
   # These files are included in the published website.
   resources:
     - CNAME
     - LICENSE
     - README.md
+    - SnapManual.pdf
   # pre-render:
   #   - blocks/render-block-files.py
   # post-render:
@@ -26,18 +27,14 @@ format:
   html:
     aria: true # requires quarto-dev / v1.8+
     toc: true
-    roman-numerals: true
-    section-numbering:
-      style: roman
-      roman-numerals: true
     filters:
-      - scripts/collect-index.lua
+      - _support/scripts/collect-index.lua
     link-external-icon: true
     link-external-newwindow: true
     smooth-scroll: true
     theme:
       - default
-      - styles/snap-manual.scss
+      - _support/styles/snap-manual.scss
     fontsize: 16px
     # mainfont:
     # monofont:
@@ -62,7 +59,7 @@ format:
           </script>
     # TODO: Customize footer. Add berkeley + SAP links.
   # epub:
-  #   css: styles/epub.css
+  #   css: _support/styles/epub.css
   #   cover-image: cover.png
   pdf:
     lang: en
@@ -75,7 +72,7 @@ format:
     # pdf-engine-opt:
     keep-tex: false
     # This are necessary to make an index.
-    include-in-header: styles/latex-preamble.tex
+    include-in-header: _support/styles/latex-preamble.tex
     include-after-body:
       text: |
         \printindex
