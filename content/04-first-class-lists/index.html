@@ -1589,7 +1589,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-list-block" id="toc-the-list-block" class="nav-link active" data-scroll-target="#the-list-block">The list Block</a></li>
+  <li><a href="#the-list-block" id="toc-the-list-block" class="nav-link active" data-scroll-target="#the-list-block">The <code>list</code> Block</a></li>
   <li><a href="#lists-of-lists" id="toc-lists-of-lists" class="nav-link" data-scroll-target="#lists-of-lists">Lists of Lists</a></li>
   <li><a href="#functional-and-imperative-list-programming" id="toc-functional-and-imperative-list-programming" class="nav-link" data-scroll-target="#functional-and-imperative-list-programming">Functional and Imperative List Programming</a></li>
   <li><a href="#higher-order-list-operations-and-rings" id="toc-higher-order-list-operations-and-rings" class="nav-link" data-scroll-target="#higher-order-list-operations-and-rings">Higher Order List Operations and Rings</a></li>
@@ -1637,7 +1637,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Note that it’s a data <em>type</em> that’s ﬁrst class, not an individual value. Don’t think, for example, that some lists are ﬁrst class, while others aren’t. In Snap<em>!</em>, lists are ﬁrst class, period.</p>
 <p><img src="assets/image523.png" class="img-fluid" alt="image523.png"> <!--  style="width:2.83958in;height:0.41597in" / --></p>
 <section id="the-list-block" class="level2">
-<h2 class="anchored" data-anchor-id="the-list-block">The list Block</h2>
+<h2 class="anchored" data-anchor-id="the-list-block">The <code>list</code> Block</h2>
 <p>At the heart of providing first class lists is the ability to make an “anonymous” list<span></span>—to make a list without simultaneously giving it a name. The <code>list</code> reporter block <span></span> does that.</p>
 <p><img src="assets/image628.png" class="img-fluid" alt="image628.png"> <!--  style="width:2.83958in;height:0.41597in" / --></p>
 <p>At the right end of the block are two left-and-right arrowheads <span></span>. Clicking on these changes the number of inputs to list, i.e., the number of elements in the list you are building. Shift-clicking changes by three at a time.</p>
@@ -1664,7 +1664,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="assets/image633.png" class="img-fluid" alt="image633.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
 <p>In a functional program, we often use recursion to construct a list, one item at a time. The <code>in front of</code> block <span></span> makes a list that has one item added to the front of an existing list, <em>without changing the value of the original list.</em> A nonempty list is processed by dividing it into its first item (<code>item 1 of</code><span></span>) and all the rest of the items (<code>all but first of</code><span></span>), which are handled through a recursive call:</p>
 <p><img src="assets/image555.png" class="img-fluid" alt="image555.png"> <!--  style="width:4.75in;height:2.24097in" / --></p>
-<p>Snap<em>!</em> uses two different internal representations of lists, one (dynamic <span></span> array<span></span>) for imperative programming and the other (linked<span></span> list <span></span>) for functional programming. Each representation makes the corresponding built-in list blocks (commands or reporters, respectively) most efficient. It’s possible to mix styles in the same program, but if <em>the same list</em> is used both ways, the program will run more slowly because it converts from one representation to the other repeatedly. (The <code>item ( ) of \[ \]</code> block doesn’t change the representation.) You don’t have to know the details of the internal representations, but it’s worthwhile to use each list in a consistent way.</p>
+<p>Snap<em>!</em> uses two different internal representations of lists, one (dynamic <span></span> array<span></span>) for imperative programming and the other (linked<span></span> list <span></span>) for functional programming. Each representation makes the corresponding built-in list blocks (commands or reporters, respectively) most efficient. It’s possible to mix styles in the same program, but if <em>the same list</em> is used both ways, the program will run more slowly because it converts from one representation to the other repeatedly. (The <code>item ( ) of [ ]</code> block doesn’t change the representation.) You don’t have to know the details of the internal representations, but it’s worthwhile to use each list in a consistent way.</p>
 </section>
 <section id="higher-order-list-operations-and-rings" class="level2">
 <h2 class="anchored" data-anchor-id="higher-order-list-operations-and-rings">Higher Order List Operations and Rings</h2>
