@@ -117,3 +117,22 @@ h1, h2, h3, h4, h5, h6 {
 .image-2x.image-inline {
   width: 20%
 }
+
+.ui-text-label {
+  color: black;
+  // THIS IS TEMPORARY
+  text-transform: uppercase;
+  font-family: monospace;
+  text-decoration: underline;
+}
+
+.snap {
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+.snap::after {
+  content: '!';
+  font-style: italic;
+}

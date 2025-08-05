@@ -1,86 +1,89 @@
 # User Interface Elements\index{user interface elements}
 
 In this chapter we describe in detail the various buttons, menus, and
-other clickable elements of the Snap*!* user interface. Here again is
-the map of the Snap*!* window:
+other clickable elements of the [Snap]{.snap} user interface. Here again is
+the map of the [Snap]{.snap} window:
 
-![image993.png](assets/image993.png) <!--  style="width:7.49442in;height:4.66319in" / -->
+<!-- TODO: Rename with proper contrast. -->
+![An annotated screenshot of blank Snap! editor](assets/image993.png) <!--  style="width:7.49442in;height:4.66319in" / -->
 
 ## Tool Bar Features
 
-Holding down the Shift key\index{tool bar features} while clicking
-\index{shift-clicking} on any of the menu buttons gives access to an
+<!-- TODO: Describe where the toolbar is. -->
+
+Holding down the <kdd>Shift<kdd> key\index{tool bar features} (<kbd>⇧</kbd>)
+ while clicking \index{shift-clicking} on any of the menu buttons gives access to an
 extended menu with options, shown in red, that are experimental or for
 use by the developers. We’re not listing those extra options here
 because they change frequently and you shouldn’t rely on them. But
 they’re not secrets\index{secrets}.
 
-### The Snap*!* Logo Menu
+### The [Snap]{.snap} Logo Menu
 
-The Snap*!* logo\index{Snap! logo menu} at the left end of the tool bar
-is clickable. It shows a menu of options about Snap*!* itself:
+The [Snap]{.snap} logo\index{Snap! logo menu} at the left end of the tool bar
+is clickable. It shows a menu of options about [Snap]{.snap} itself:
 
-![image994.png](assets/image994.png) <!--  style="width:2.32922in;height:1.02in" / -->
+![Snap! logo menu showing options: About, Reference Manual, Snap! Website and Download Source](assets/image994.png) <!--  style="width:2.32922in;height:1.02in" / -->
 
-The About option\index{About option} displays information about Snap*!*
+The ["About"]{.ui-text-label} option\index{About option} displays information about [Snap]{.snap}
 itself, including version numbers for the source modules, the
 implementors, and the license\index{license} (AGPL\index{AGPL} : you
 can do anything with it except create proprietary versions, basically).
 
-The Reference manual option\index{Reference manual option} downloads a
-copy of the latest revision of this manual in PDF format.
+**`This is a temporary example of different styles.`**
 
-The Snap! website option\index{Snap! website option} opens a browser
-window pointing to snap.berkeley.edu\index{snap.berkeley.edu}, the web
-site for Snap*!*.
+The "`Reference manual`" option\index{Reference manual option} is a link to latest revision of this manual as a web page.
 
-The Download source option\index{Download source option} opens a
-browser window displaying the Github repository of the source files for
-Snap*!*.\index{source files for Snap!} At the bottom of the page are
-links to download the latest official release. Or you can navigate
+The ["[Snap]{.snap} website"]{ .ui-text-label } option\index{Snap! website option} opens a browser
+window pointing to [https://snap.berkeley.edu](https://snap.berkeley.edu)\index{snap.berkeley.edu}, the community site for [Snap]{.snap}.
+
+The ["Download source"]{ .ui-text-label } option\index{Download source option} opens a
+browser window displaying the [Github repository][github] of the source files for [Snap]{.snap}.\index{source files for Snap!} At the bottom of the page
+are links to download the latest official release. Or you can navigate
 around the site to find the current development version. You can read
-the code to learn how Snap*!* is implemented, host a copy on your own
+the code to learn how [Snap]{.snap} is implemented, host a copy on your own
 computer (this is one way to keep working while on an airplane), or make
 a modified version with customized features. (However, access to cloud
 accounts is limited to the official version hosted at Berkeley.)
 
+[github]: https://github.com/jmoenig/Snap
+
 ### The File Menu
 
-The ![image384.png](assets/image384.png) <!--  style="width:0.31944in;height:0.18056in" / -->  file icon\index{file
-icon menu} shows a menu mostly about saving and loading projects. You
+The file icon\index{file icon menu} (![the file icon](assets/image384.png))
+shows a menu mostly about saving and loading projects. You
 may not see all these options, if you don’t have multiple sprites,
 scenes, custom blocks, and custom categories.
 
-The Notes option\index{Project notes option} opens a window in which
+The ["Notes"]{ .ui-text-label } option\index{Project notes option} opens a window in which
 you can type notes about the project: How to use it, what it does, whose
 project you modified to create it, if any, what other sources of ideas
 you used, or any other information about the project. This text is saved
 with the project, and is useful if you share it with other users.
 
-The New option\index{New option} starts a new, empty project. Any
+The ["New"]{ .ui-text-label } option\index{New option} starts a new, empty project. Any
 project you were working on before disappears, so you are asked to
 confirm that this is really what you want. (It disappears only from the
-current working Snap*!* window; you should save the current project, if
+current working [Snap]{.snap} window; you should save the current project, if
 you want to keep it, before using New.)
 
-Note the ^N at the end of the line. This indicates that you can type
+Note the <kbd>^N</kbd> at the end of the line. This indicates that you can type
 control-N as a shortcut for this menu item. Alas, this is not the case
-in every browser. Some Mac browsers require command-N (⌘N) instead,
-while others open a new browser window instead of a new project. You’ll
-have to experiment. In general, the keyboard shortcuts
-\index{shortcuts:keyboard} in Snap*!* are the standard ones you expect
+in every browser. Some Mac browsers require command-N (<kbd>⌘N</kbd>)
+instead, while others open a new browser window instead of a new project.
+You’ll have to experiment. In general, the keyboard shortcuts
+\index{shortcuts:keyboard} in f{.snap} are the standard ones you expect
 in other software.
 
-The Open… option\index{Open…
-option} shows a project open dialog box in which you can choose a
-project to open:
+The ["Open…"]{ .ui-text-label } option\index{Open… option} shows a project open dialog box in
+which you can choose a project to open:
 
-![image995.png](assets/image995.png) <!--  style="width:2.88958in;height:2.09792in" / -->
+![The Open Project Dialog in Snap!](assets/image995.png) <!--  style="width:2.88958in;height:2.09792in" / -->
 
 In this dialog, the three large buttons at the left select a source of
-projects: Cloud\index{Cloud button} means your Snap*!* account’s cloud
-storage. Examples\index{Examples button} means a collection of sample
-projects we provide. Computer is for projects saved on your own
+projects: ["Cloud"]{ .ui-text-label }\index{Cloud button} means your [Snap]{.snap} account’s cloud
+storage. ["Examples"]{ .ui-text-label }\index{Examples button} means a collection of sample
+projects we provide. ["Computer"]{ .ui-text-label } is for projects saved on your own
 computer; when you click it, this dialog is replaced with your
 computer’s system dialog for opening files. The text box to the right of
 those buttons is an alphabetical listing of projects from that source;
@@ -91,88 +94,87 @@ The search bar\index{search
 bar} at the top can be used to find a project by name or text in the
 project notes. So in this example:
 
-![image996.png](assets/image996.png) <!--  style="width:2.72431in;height:1.97778in" / -->
+![The open dialog showing a search filter for the text "cre"](assets/image996.png) <!--  style="width:2.72431in;height:1.97778in" / -->
 
-I was looking for my ice
-cream\index{ice cream} projects and typed “crea” in the search bar,
-then wondered why “ferris” matched. But then when I clicked on ferris I
-saw this:
+I was looking for my ice cream\index{ice cream} projects and typed “crea” in
+the search bar, then wondered why “ferris” matched. But then when I clicked on ferris I saw this:
 
-![image997.png](assets/image997.png) <!--  style="width:2.72361in;height:1.97778in" / -->
+![Open dialog showing a project called "ferris" selected](assets/image997.png) <!--  style="width:2.72361in;height:1.97778in" / -->
 
 My search matched the word “re*crea*te” in the project notes.
 
+<!-- TODO: Mention the community site somewhere -->
 The six buttons at the bottom select an action to perform on the
-selected project. In the top row, Recover looks in your cloud account
-for older versions of the chosen project. ***If your project is damaged,
-don’t keep saving broken versions! Use Recover first thing.*** You will
+selected project. In the top row, ["Recover"]{ .ui-text-label } looks in your cloud account
+for older versions of the chosen project. **_If your project is damaged,
+don’t keep saving broken versions! Use ["Recover"]{ .ui-text-label } first thing._** You will
 see a list of saved versions; choose one to open it. Typically, you’ll
 see the most recent version before the last save, and the newest version
-saved before today. Then come buttons Share/Unshare and
-Publish/Unpublish. The labelling of the buttons depends on your
+saved before today. Then come buttons ["Share"]{ .ui-text-label }/["Unshare"]{ .ui-text-label } and
+["Publish"]{ .ui-text-label }/["Unpublish"]{ .ui-text-label }. The labelling of the buttons depends on your
 project’s publication status. If a project is neither shared nor
 published (the ones in lightface type in the project list), it is
 private and nobody can see it except you, its owner. If it is shared
-(boldface in the project list), then when you open it you’ll see a URL
+(**boldface** in the project list), then when you open it you’ll see a URL
 like this one:
 
-https://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change
+[`https://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change`](ttps://snap.berkeley.edu/snapsource/snap.html#present:Username=bh&ProjectName=count%20change)
 
-but with your username and project name. (“%20” in the project name
+but with your username and project name. (“`%20`” in the project name
 represents a space, which can’t be part of a URL.) Anyone who knows this
-URL can see your project. Finally, if your project is published (***bold
-italic*** in the list), then your project is shown on the Snap*!* web
+URL can see your project. Finally, if your project is published (**_bold
+italic_** in the list), then your project is shown on the [Snap]{.snap} web
 site for all the world to see. (In all of these cases, you are the only
 one who can *write* to (save) your project.) If another user saves it, a
 separate copy will be saved in that user’s account. Projects remember
 the history of who created the original version and any other “remix”
 versions along the way.
 
-In the second row, the first button, Open, loads the project into
-Snap*!* and closes the dialog box. The next button (if Cloud is the
-source) is Delete, and if clicked it deletes the selected project.
-Finally, the Cancel button closes the dialog box without opening a
+In the second row, the first button, ["Open"]{ .ui-text-label }, loads the project into
+[Snap]{.snap} and closes the dialog box. The next button (if ["Cloud"]{ .ui-text-label } is the
+source) is ["Delete"]{ .ui-text-label }, and if clicked it deletes the selected project.
+Finally, the ["Cancel"]{ .ui-text-label } button closes the dialog box without opening a
 project. (It does not undo any sharing, unsharing, or deletion you’ve
 done.)
 
-Back to the File menu, the Save menu option\index{Save option} saves
+Back to the File menu, the ["Save"]{ .ui-text-label } menu option\index{Save option} saves
 the project to the same source and same name that was used when opening
 the project. (If you opened another user’s shared project or an example
 project, the project will be saved to your own cloud account. You must
 be logged in to save to the cloud.)
 
- The Save as… menu option
-\index{Save as… option} opens a dialog box in which you can specify
-where to save the project:
+The ["Save as…"]{ .ui-text-label } menu option\index{Save as… option} opens a dialog box in
+which you can specify where to save the project:
 
-![image998.png](assets/image998.png) <!--  style="width:3.23611in;height:2.34931in" / -->
+![The "Save as…" dialog in Snap!](assets/image998.png) <!--  style="width:3.23611in;height:2.34931in" / -->
 
-This is much like the Open dialog, except for the horizontal text box at
+This is much like the ["Open"]{ .ui-text-label } dialog, except for the horizontal text box at
 the top, into which you type a name for the project. You can also
 publish, unpublish, share, unshare, and delete projects from here. There
-is no Recover button.
+is no ["Recover"]{ .ui-text-label } button.
 
-The Import… menu option\index{Import… option} is for bringing some
+The ["Import…"]{ .ui-text-label } menu option\index{Import… option} is for bringing some
 external resource into the current project, or it can load an entirely
 separate project, from your local disk. You can import costumes (any
 picture format that your browser supports), sounds (again, any format
 supported by your browser), and block libraries or sprites (XML format,
-previously exported from Snap*!* itself). Imported costumes and sounds
+previously exported from [Snap]{.snap} itself). Imported costumes and sounds
 will belong to the currently selected sprite; imported blocks are global
-(for all sprites). Using the Import option is equivalent to dragging the
-file from your desktop onto the Snap*!* window.
+(for all sprites). Using the ["Import"]{ .ui-text-label } option is equivalent to dragging the
+file from your desktop onto the [Snap]{.snap} window.
 
-Depending on your browser, the Export project… option either directly
+<!-- TODO: Update to default to downloading an XML file. -->
+Depending on your browser, the ["Export project…"]{ .ui-text-label } option either directly
 saves to your disk or\index{Export project… option} opens a new browser
 tab containing your complete project in XML notation (a plain text
 format). You can then use the browser’s Save feature to save the project
-as an XML file, which should be named *something*.xml so that Snap*!*
-will recognize it as a project when you later drag it onto a Snap*!*
+as an XML file, which should be named _`something`_`.xml` so that [Snap]{.snap}
+will recognize it as a project when you later drag it onto a [Snap]{.snap}
 window. This is an alternative to saving the project to your cloud
 account: keeping it on your own computer. It is equivalent to choosing
-Computer from the Save dialog described earlier.
+["Computer"]{ .ui-text-label } from the Save dialog described earlier.
 
-The Export summary… option\index{Export project… option} creates a web
+The ["Export summary…"]{ .ui-text-label } option\index{Export summary… option} creates a web
 page, in HTML, with all of the information about your project: its name,
 its project notes, a picture of what’s on its stage, definitions of
 global blocks, and then per-sprite information: name, wardrobe (list of
@@ -181,61 +183,68 @@ converted to PDF by the browser; it’s intended to meet the documentation
 requirements of the Advanced Placement Computer Science Principles
 \index{Computer Science Principles} create task.
 
-The Export blocks… option\index{Export blocks… option} is used to
+<!-- TODO: Update to default to downloading an XML file. -->
+The ["Export blocks…"]{ .ui-text-label } option\index{Export blocks… option} is used to
 create a block library\index{block library}. It presents a list of all
 the global (for all sprites) blocks in your project, and lets you select
 which to export. It then opens a browser tab with those blocks in XML
-format, or stores directly to your local disk, as with the Export
-project option. Block libraries can be imported with the Import option
-or by dragging the file onto the Snap*!* window. This option is shown
+format, or stores directly to your local disk, as with the ["Export
+project"]{ .ui-text-label } option. Block libraries can be imported with the ["Import"]{ .ui-text-label } option
+or by dragging the file onto the [Snap]{.snap} window. This option is shown
 only if you have defined custom blocks.
 
-The Unused blocks… option\index{Unused blocks… option} presents a
+The ["Unused blocks…"]{ .ui-text-label } option\index{Unused blocks… option} presents a
 listing of all the global custom blocks in your project that aren’t used
-anywhere, and offers to delete them. As with Export blocks, you can
+anywhere, and offers to delete them. As with ["Export blocks"]{ .ui-text-label }, you can
 choose a subset to delete with checkboxes. This option is shown only if
 you have defined custom blocks.
 
-The Hide blocks… option\index{Hide blocks… option} shows *all* blocks,
+The ["Hide blocks…"]{ .ui-text-label } option\index{Hide blocks… option} shows *all* blocks,
 including primitives, with checkboxes. This option does not remove any
 blocks from your project, but it does hide selected block in your
 palette. The purpose of the option is to allow teachers to present
-students with a simplified Snap*!* with some features effectively
+students with a simplified [Snap]{.snap} with some features effectively
 removed. The hiddenness of primitives is saved with each project, so
 students can load a shared project and see just the desired blocks. But
 users can always unhide blocks by choosing this option and unclicking
 all the checkboxes. (Right-click in the background of the dialog box to
 get a menu from which you can check all boxes or uncheck all boxes.)
 
-The New category… option\index{New category… option} allows you to add
+The ["New category…"]{ .ui-text-label } option\index{New category… option} allows you to add
 your own categories to the palette. It opens a dialog box in which you
 specify a name *and a color* for the category. (A lighter version of the
 same color will be used for the zebra coloring feature.)
 
-The Remove a category… option\index{Remove a category… option} appears
+The ["Remove a category…"]{ .ui-text-label } option\index{Remove a category… option} appears
 only if you’ve created custom categories. It opens a very small,
 easy-to-miss menu of category names just under the file icon in the menu
 bar. If you remove a category that has blocks in it, all those blocks
 are also removed.
 
-The next group of options
-concern the *scenes*\index{scenes} feature, new in Snap*!* 7.0. A scene
+<!-- cut: , new in [Snap]{.snap} 7.0 -->
+The next group of options concern the *scenes*\index{scenes} feature. A scene
 is a complete project, with its own stage, sprites, and code, but
-several can be merged into one project, using the ![image999.png](assets/image999.png){ .image-2x .image-inline } <!--  style="width:1.16667in;height:0.19792in" / -->  block to bring another
-scene onscreen. The Scenes… option\index{Scenes… option} presents a
+several can be merged into one project, using the ![switch to scene block](assets/image999.png){ .image-2x .image-inline } <!--  style="width:1.16667in;height:0.19792in" / -->  block to bring another
+scene onscreen. The ["Scenes…"]{ .ui-text-label } option\index{Scenes… option} presents a
 menu of all the scenes in your project, where the File menu was before
-you clicked it. The New scene option\index{New scene option} creates a
+you clicked it. The ["New scene"]{ .ui-text-label } option\index{New scene option} creates a
 new, empty scene, which you can rename as you like from its context
-menu. Add scene…\index{Add scene… option} is like Import… but for
+menu.
+
+["Add scene…"]{ .ui-text-label }\index{Add scene… option} is like ["Import…"]{ .ui-text-label } but for
 scenes. (A complete project can be imported as a scene into another
 project, so you have to specify that you’re importing the project *as a
 scene* rather than replacing the current project.)
 
-The Libraries… option\index{Libraries… option} presents a menu of
+The ["Libraries…"]{ .ui-text-label } option\index{Libraries… option} presents a menu of
 useful, optional block libraries:
 
-![image992.png](assets/image992.png) <!--  style="width:1.16667in;height:0.19792in" / -->
+<!-- TODO: Need screenshot. -->
+![The libraries import dialog](assets/image992.png) <!--  style="width:1.16667in;height:0.19792in" / -->
 
+**The following sections of the libraries dialog are out of date. (8/1/2025)**
+
+<!-- TODO: Michael stopped reviewing here. Note search and translations. -->
 - The library menu is divided into five broad categories. The first is,
 broadly, utilities: blocks that might well be primitives. They might be
 useful in all kinds of projects.
@@ -263,8 +272,7 @@ purpose. You can browse the libraries to find one that will satisfy your
 needs. The libraries are described in detail in Section I.H, page
 [25](#libraries).
 
- The Costumes… option
-\index{Costumes… option} opens a browser into the costume library:
+ The ["Costumes…"]{ .ui-text-label } option \index{Costumes… option} opens a browser into the costume library:
 
 ![image1000.png](assets/image1000.png) <!--  style="width:4.28125in;height:3.23958in" / -->
 
@@ -272,7 +280,7 @@ You can import a single costume by clicking it and then clicking the
 Import button. Alternatively, you can import more than one costume by
 double-clicking each one, and then clicking Cancel when done. Notice
 that some costumes are tagged with “svg” in this picture; those are
-vector-format costumes that are not (yet) editable within Snap*!*.
+vector-format costumes that are not (yet) editable within [Snap]{.snap}.
 
 If you have the stage selected in the sprite corral, rather than a
 sprite, the Costumes… option changes to a Backgrounds… option
@@ -302,19 +310,19 @@ costume).
 ### The Cloud Menu
 
  The cloud icon\index{cloud
-icon}  ![image1008.png](assets/image1008.png) <!--  style="width:0.29167in;height:0.16667in" / --> ![image1004.png](assets/image1004.png) <!--  style="width:0.29167in;height:0.16667in" / --> shows a menu of options relating to your Snap*!* cloud account. If
+icon}  ![image1008.png](assets/image1008.png) <!--  style="width:0.29167in;height:0.16667in" / --> ![image1004.png](assets/image1004.png) <!--  style="width:0.29167in;height:0.16667in" / --> shows a menu of options relating to your [Snap]{.snap} cloud account. If
 you are not logged in, you see the outline icon  ![image1004.png](assets/image1004.png) <!--  style="width:0.29167in;height:0.16667in" / --> and get this menu:
 
 ![image1003.png](assets/image1003.png) <!--  style="width:1.43681in;height:0.75972in" / -->
 
-Choose Login…\index{Login… option} if you have a Snap*!* account and
+Choose Login…\index{Login… option} if you have a [Snap]{.snap} account and
 remember your password. Choose Signup…\index{Signup… option} if you
 don’t have an account. Choose Reset Password…\index{Reset Password…
 option} if you’ve forgotten your password or just want to change it. You
 will then get an email, at the address you gave when you created your
 account, with a new temporary password. Use that password to log in,
 then you can choose your own password, as shown below. Choose Resend
-Verification Email… if you have just created a Snap*!* account but can’t
+Verification Email… if you have just created a [Snap]{.snap} account but can’t
 find the email we sent you with the link to verify that it’s really your
 email. (If you still can’t find it, check your spam folder. If you are
 using a school email address, your school may block incoming email from
@@ -336,14 +344,14 @@ because it doesn’t echo. Open in Community Site is the same as above.
 ###  The Settings Menu
 
 The settings icon ![image1010.png](assets/image1010.png) <!--  style="width:0.29167in;height:0.16667in" / -->
-\index{settings icon} shows a menu of Snap*!* options, either for the
+\index{settings icon} shows a menu of [Snap]{.snap} options, either for the
 current project or for you permanently, depending on the option:
 
 ![image1009.png](assets/image1009.png) <!--  style="width:1.24792in;height:2.58333in" / -->
 
-The Language… option\index{Language… option} lets you see the Snap*!*
+The Language… option\index{Language… option} lets you see the [Snap]{.snap}
 user interface (blocks and messages) in a language other than English.
-(Note: Translations\index{translation} have been provided by Snap*!*
+(Note: Translations\index{translation} have been provided by [Snap]{.snap}
 users. If your native language is missing, send us an email!)
 
 The Zoom blocks... option\index{Zoom blocks... option} lets you change
@@ -431,7 +439,7 @@ affects the picture by moving a slider.
 
 Turbo mode\index{Turbo mode option} makes many projects run much
 faster, at the cost of not keeping the stage display up to date.
-(Snap*!* ordinarily spends most of its time drawing sprites and updating
+([Snap]{.snap} ordinarily spends most of its time drawing sprites and updating
 variable watchers, rather than actually carrying out the instructions in
 your scripts.) So turbo mode isn’t a good idea for a project with glide
 block\index{glide block} s or one in which the user interacts with
@@ -449,7 +457,7 @@ You don’t want this on except when you’re actively debugging, because
 even the fastest setting of the slider is still slowed a lot.
 
 Log pen vectors<span id="logpenvectors" class="anchor"></span> tells
-Snap*!* to remember lines drawn by sprites as exact vectors, rather than
+[Snap]{.snap} to remember lines drawn by sprites as exact vectors, rather than
 remember only the pixels that the drawing leaves on the stage. This
 remembered vector picture can be used in two ways: First, right-clicking
 on a pen trails block gives an option to relabel it into a pen vectors
@@ -466,7 +474,7 @@ created or edited, you immediately see the version of the input name
 dialog that includes the type options, default value setting, etc.,
 instead of the short form with just the name and the choice between
 input name and title text. The default (unchecked) setting is definitely
-best for beginners, but more experienced Snap*!* programmers may find it
+best for beginners, but more experienced [Snap]{.snap} programmers may find it
 more convenient always to see the long form.
 
 Plain prototype labels\index{Plain prototype labels option} eliminates
@@ -482,23 +490,23 @@ sound effect whenever one block snaps next to another in a script.
 Certain very young children, and our colleague Dan Garcia, like this,
 but if you are such a child you should bear in mind that driving your
 parents or teachers crazy will result in you not being allowed to use
-Snap*!*. It might, however, be useful for visually impaired users.
+[Snap]{.snap}. It might, however, be useful for visually impaired users.
 
-Flat design\index{Flat design option} changes the “skin” of the Snap*!*
+Flat design\index{Flat design option} changes the “skin” of the [Snap]{.snap}
 window to a really hideous design with white and pale-grey background,
 rectangular rather than rounded buttons, and monochrome blocks (rather
 than the shaded, somewhat 3D-looking normal blocks). The monochrome
 blocks are the reason for the “flat” in the name of this option. The
 only thing to be said for this option is that, because of the white
 background, it may blend in better with the rest of a web page when a
-Snap*!* project is run in a frame in a larger page. (I confess I used it
+[Snap]{.snap} project is run in a frame in a larger page. (I confess I used it
 to make the picture of blocks faded all the way to just text two pages
 ago, though.)
 
-The final group of settings change the way Snap*!* interprets your
+The final group of settings change the way [Snap]{.snap} interprets your
 program; they are saved with the project, so anyone who runs your
 project will experience the same behavior. Thread safe scripts
-\index{Thread safe scripts option} changes the way Snap*!* responds when
+\index{Thread safe scripts option} changes the way [Snap]{.snap} responds when
 an event (clicking the green flag, say) starts a script, and then, while
 the script is still running, the same event happens again. Ordinarily,
 the running process stops where it is, ignoring the remaining commands
@@ -523,7 +531,7 @@ best when turning corners. With this option selected, the ends are flat.
 It’s useful for drawing a brick wall or a filled rectangle.
 
 Codification support\index{codification support option} enables a
-feature that can translate a Snap*!* project to a text-based
+feature that can translate a [Snap]{.snap} project to a text-based
 \index{text-based language} (rather than block-based) programming
 language. The feature doesn’t know about any particular other language;
 instead, you can provide a translation for each primitive block using
@@ -568,7 +576,7 @@ saturation, and brightness (a/k/a value). Note: the name “saturation”
 means something different in HSL from in HSV! See Appendix A for all the
 information you need about colors.\index{pen block}
 
-The Disable click-to-run option tells Snap*!* to ignore user mouse
+The Disable click-to-run option tells [Snap]{.snap} to ignore user mouse
 clicks on blocks and scripts if it would ordinarily run the block or
 script. (Right-clicking and dragging still work, and so does clicking in
 an input slot to edit it.) This is another Parsons problem feature; the
@@ -676,7 +684,7 @@ palette (color) preselected.
 ### Context Menus for Palette Blocks
 
  Most elements\index{context
-menus for palette blocks} of the Snap*!* display can be
+menus for palette blocks} of the [Snap]{.snap} display can be
 control-clicked/right-clicked to show a *context menu*\index{context
 menu} *,* with items relevant to that element. If you
 control-click/right-click a *primitive* block in the palette, you see
@@ -762,7 +770,7 @@ built-in categories in the category selector:
 ![image1060.png](assets/image1060.png) <!--  style="width:1.42986in;height:2.90972in" alt="Graphical user interface, application Description automatically generated" / -->
 
 This
-example comes from Eckart\index{Modrow, Eckart} Modrow’s SciSnap*!*
+example comes from Eckart\index{Modrow, Eckart} Modrow’s Sci[Snap]{.snap}
 \index{SciSnap!} library. Note that the custom category list has its own
 scroll bar, which appears if you have more than six custom categories.
 Note also that the buttons to select a custom category occupy the full
@@ -793,7 +801,7 @@ of the palette below its standard value.
 ## The Scripting Area
 
 The scripting area\index{scripting area} is the middle vertical region
-of the Snap*!* window, containing scripts and also some controls for the
+of the [Snap]{.snap} window, containing scripts and also some controls for the
 appearance and behavior of a sprite. There is always a *current sprite*
 \index{current sprite} *,* whose scripts are shown in the scripting
 area. A dark grey rounded rectangle in the sprite corral shows which
@@ -858,7 +866,7 @@ it’s running. If the script is shared with clones, then while it has the
 green halo it will also have a count of how many instances of the script
 are running. Clicking a script with such a halo\index{halo} *stops* the
 script. (If the script includes a warp block\index{warp block}, which
-might be inside a custom block used in the script, then Snap*!* may not
+might be inside a custom block used in the script, then [Snap]{.snap} may not
 respond immediately to clicks.)
 
 If a script is shown with a
@@ -909,7 +917,7 @@ feature to access them.
 Not every reporter has a compile option\index{compile menu option}; it
 exists only for the higher order functions. When selected, a lightning
 bolt\index{lightning bolt symbol} appears before the block name:
-![image1072.png](assets/image1072.png) <!--  style="width:1.40278in;height:0.20139in" alt="Macintosh HD:Users:bh:Desktop:lightning.png" / -->  and Snap*!* tries
+![image1072.png](assets/image1072.png) <!--  style="width:1.40278in;height:0.20139in" alt="Macintosh HD:Users:bh:Desktop:lightning.png" / -->  and [Snap]{.snap} tries
 to compile the function inside the ring to JavaScript, so it runs at
 primitive speed. This works only for simple functions (but the higher
 order function still works even if the compilation doesn’t). The
@@ -954,7 +962,7 @@ entire script\index{picture of script}, not just from the selected
 block to the end, into your download folder; or, in some browsers, opens
 a new browser tab containing the picture. In the latter case, you can
 use the browser’s Save feature to put the picture in a file. This is a
-super useful feature if you happen to be writing a Snap*!* manual
+super useful feature if you happen to be writing a [Snap]{.snap} manual
 \index{Snap! manual} ! (If you have a Retina display, consider turning
 off Retina support before making script pictures; if not, they end up
 huge.) For reporters not inside a script, there is an additional result
@@ -1085,7 +1093,7 @@ something like this:
 
 The Turtle costume
 \index{turtle costume} is always present in every sprite; it is costume
-number 0. Other costumes can be painted within Snap*!* or imported from
+number 0. Other costumes can be painted within [Snap]{.snap} or imported from
 files or other browser tabs if your browser supports that. Clicking on a
 costume selects it; that is, the sprite will look like the selected
 costume. Clicking on the paint brush icon ![image1084.png](assets/image1084.png) <!--  style="width:0.29167in;height:0.16667in" / -->\index{paint brush icon}
@@ -1094,8 +1102,8 @@ create a new costume. Clicking on the camera icon ![image1083.png](assets/image1
 opens a window in which you see what your computer’s camera is seeing,
 and you can take a picture (which will be the full size of the stage
 unless you shrink it in the Paint Editor). This works only if you give
-Snap*!* permission to use the camera, and maybe only if you opened
-Snap*!* in secure (HTTPS\index{HTTPS} ) mode, and then only if your
+[Snap]{.snap} permission to use the camera, and maybe only if you opened
+[Snap]{.snap} in secure (HTTPS\index{HTTPS} ) mode, and then only if your
 browser loves you.
 
 ![image1085.png](assets/image1085.png) <!--  style="width:3.56944in;height:3.18056in" alt="Macintosh HD:Users:bh:Desktop:pix:camera-dialog.png" / -->
@@ -1206,7 +1214,7 @@ Note that the ellipse tool\index{ellipse tool} s work more intuitively
 than ones in other software you may have used. Instead of dragging
 between opposite corners of the rectangle circumscribing the ellipse you
 want, so that the endpoints of your dragging have no obvious connection
-to the actual shape, in Snap*!* you start at the center of the ellipse
+to the actual shape, in [Snap]{.snap} you start at the center of the ellipse
 you want and drag out to the edge. When you let go of the button, the
 mouse cursor will be on the curve. If you drag out from the center at 45
 degrees to the axes, the resulting curve will be a circle; if you drag
@@ -1217,7 +1225,7 @@ expect: You start at one corner of the desired rectangle and drag to the
 opposite corner.
 
 Using the eyedropper tool\index{eyedropper tool}, you can click
-anywhere in the Snap*!* window, even outside the Paint Editor, and the
+anywhere in the [Snap]{.snap} window, even outside the Paint Editor, and the
 tool will select the color at the mouse cursor for use in the Paint
 Editor. You can only do this once, because the Paint Editor
 automatically selects the paintbrush when you choose a color. (Of course
@@ -1252,7 +1260,7 @@ shapes within that area.
 ### Controls in the Sounds Tab
 
 There is no
-Sound Editor\index{controls in the Sounds tab} in Snap*!*, and also no
+Sound Editor\index{controls in the Sounds tab} in [Snap]{.snap}, and also no
 current sound the way there’s a current costume for each sprite. (The
 sprite always has an appearance unless hidden, but it doesn’t sing
 unless explicitly asked.) So the context menu for sounds has only
@@ -1416,7 +1424,7 @@ to run the script with the editor focus, like clicking the script.
 
 ## Controls on the Stage\index{controls on the stage}
 
-The stage is the area in the top right of the Snap*!* window in which
+The stage is the area in the top right of the [Snap]{.snap} window in which
 sprites move.
 
 ### Sprites
@@ -1528,7 +1536,7 @@ and/or text; lists of blocks, sprites, costumes, etc. cannot be
 exported.)
 
 An alternative to using the import… option is simply to drag the file
-onto the Snap*!* window, in which case a variable will be created if
+onto the [Snap]{.snap} window, in which case a variable will be created if
 necessary with the same name as the file (but without the extension).
 
 If the value of the variable is a list, then the menu will include an
@@ -1574,7 +1582,7 @@ lines are logged, not color regions made with the fill block.
 ## The Sprite Corral\index{sprite corral}  and Sprite Creation Buttons\index{sprite creation buttons}
 
 Between the stage and the
-sprite corral at the bottom right of the Snap*!* window is a dark grey
+sprite corral at the bottom right of the [Snap]{.snap} window is a dark grey
 bar containing three buttons at the left and one at the right. The first
 three are used to create a new sprite. The first button  ![image1124.png](assets/image1124.png) <!--  style="width:0.29167in;height:0.16667in" / -->  makes a sprite
 with just the turtle costume, with a randomly chosen position and pen
@@ -1634,12 +1642,12 @@ Clicking on a
 scene will select it; right-clicking will present a menu in which you
 can rename, delete, or export the scene.
 
-## Preloading a Project\index{preloading a project}  when Starting Snap*!*
+## Preloading a Project\index{preloading a project}  when Starting [Snap]{.snap}
 
 There are several ways to include a pointer to a project in the URL when
-starting Snap*!*\index{starting Snap!} in order to load a project
+starting [Snap]{.snap}\index{starting Snap!} in order to load a project
 automatically. You can think of such a URL as just running the project
-rather than as running Snap*!*, especially if the URL says to start in
+rather than as running [Snap]{.snap}, especially if the URL says to start in
 presentation mode and click the green flag. The general form is
 
 https://snap.berkeley.edu/run#***verb***:***project***&***flag***&***flag***…
@@ -1647,16 +1655,16 @@ https://snap.berkeley.edu/run#***verb***:***project***&***flag***&***flag***…
 The “verb” above can be any of open\index{open (startup option)}, run
 \index{run (startup option)}, cloud\index{cloud (startup option)},
 present\index{present (startup option)}, or dl\index{dl (startup
-option)} . The last three are for shared projects in the Snap*!* cloud;
+option)} . The last three are for shared projects in the [Snap]{.snap} cloud;
 the first two are for projects that have been exported and made
 available anywhere on the Internet.
 
-Here’s an example that loads a project stored at the Snap*!* web site
-(not the Snap*!* cloud!):
+Here’s an example that loads a project stored at the [Snap]{.snap} web site
+(not the [Snap]{.snap} cloud!):
 
 https://snap.berkeley.edu/run#open:https://snap.berkeley.edu/snapsource/Examples/vee.xml
 
-The project file will be opened, and Snap*!* will start in edit mode
+The project file will be opened, and [Snap]{.snap} will start in edit mode
 (with the program visible). Using \#run: instead of \#open: will start
 in presentation mode (with only the stage visible) and will “start” the
 project by clicking the green flag. (“Start” is in quotation marks
@@ -1687,9 +1695,9 @@ window or loading a different URL, don’t show the browser “are you sure you 
 - &blocksZoom=n : Like the Zoom blocks option in the Settings menu.
 
 The last of these flags is intended for use on a web page in which a
-Snap*!* window is embedded.
+[Snap]{.snap} window is embedded.
 
-Here’s an example that loads a shared (public) project from the Snap*!*
+Here’s an example that loads a shared (public) project from the [Snap]{.snap}
 cloud:
 
 https://snap.berkeley.edu/run#present:Username=jens&ProjectName=tree%20animation
@@ -1700,16 +1708,16 @@ project name must be represented in Unicode as %20.) The verb present
 behaves like run: it ordinarily starts the project in presentation mode,
 but its behavior can be modified with the same four flags as for run.
 The verb cloud (yes, we know it’s not a verb in its ordinary use)
-behaves like open except that it loads from the Snap*!* cloud rather
+behaves like open except that it loads from the [Snap]{.snap} cloud rather
 than from the Internet in general. The verb dl (short for “download”)
-does not start Snap*!* but just downloads a cloud-saved project to your
+does not start [Snap]{.snap} but just downloads a cloud-saved project to your
 computer as an .xml file. This is useful for debugging; sometimes a
-defective project that Snap*!* won’t run can be downloaded, edited, and
+defective project that [Snap]{.snap} won’t run can be downloaded, edited, and
 then re-saved to the cloud.
 
 ## Mirror Sites
 
-If the site snap.berkeley.edu is ever unavailable, you can load Snap*!*
+If the site snap.berkeley.edu is ever unavailable, you can load [Snap]{.snap}
 at the following mirror sites\index{mirror sites} :
 
 - https://bjc.edc.org\index{bjc.edc.org} /snapsource/snap.html
