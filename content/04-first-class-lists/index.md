@@ -38,7 +38,7 @@ are ﬁrst class, period.
 
 ![image523.png](assets/image523.png) <!--  style="width:2.83958in;height:0.41597in" / -->
 
-##  The list Block
+##  The `list` Block
 
 At the heart of providing first class lists is the ability to make an
 “anonymous” list\index{anonymous list}—to make a list without
@@ -141,7 +141,7 @@ makes the corresponding built-in list blocks (commands or reporters,
 respectively) most efficient. It’s possible to mix styles in the same
 program, but if *the same list* is used both ways, the program will run
 more slowly because it converts from one representation to the other
-repeatedly. (The `item ( ) of \[ \]` block doesn’t change the
+repeatedly. (The `item ( ) of [ ]` block doesn’t change the
 representation.) You don’t have to know the details of the internal
 representations, but it’s worthwhile to use each list in a consistent
 way.
