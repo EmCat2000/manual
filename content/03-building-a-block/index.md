@@ -1,7 +1,6 @@
 #  Building a Block
 
-The first version of Snap*!* was called BYOB, for “Build Your Own Blocks
-\index{Build Your Own Blocks}.” This was the first and is still the
+The first version of Snap*!* was called BYOB, for “Build Your Own Blocks\index{Build Your Own Blocks}.” This was the first and is still the
 most important capability we added to Scratch\index{Scratch}. (The
 name was changed because a few teachers have no sense of humor. ☹ You
 pick your battles.) Scratch 2.0 and later also has a partial custom
@@ -11,7 +10,7 @@ block capability.
 
 In every palette, at or near the bottom, is a button labeled “Make a
 block\index{Make a block}.” Also, floating near the top of the palette
-is a plus sign. Also, the menu you get by right-clicking on the
+is a plus sign (+). Also, the menu you get by right-clicking on the
 background of the scripting area has a “make a block” option.
 
 ![image523.png](assets/image523.png) <!--  style="width:2.27083in;height:2.34722in" / -->
@@ -49,7 +48,7 @@ except that the “hat” block at the top, instead of saying something like
 “when I am clicked,” has a picture of the block you’re building. This
 hat block\index{hat block} is called the *prototype*\index{prototype}
 of your custom block.[3] You drag blocks under the hat to program your
-custom block, then click OK:
+custom block, then click OK: <!-- What is this "[3]"? --MF -->
 
 ![image502.png](assets/image502.png) <!--  style="width:4.21094in;height:1.3364in" / -->
 
@@ -72,14 +71,14 @@ over one, it lights up:
 
 Click on the plus on the
 right. You will then see the “input name” dialog\index{input name
-dialog} :
+dialog}:
 
 ![image509.png](assets/image509.png) <!--  style="width:2.58333in;height:1.60417in" / -->
 
 Type in the name “size” and click OK. There are other options in this
 dialog; you can choose “title text\index{title text} ” if you want to
 add words to the block name, so it can have text after an input slot,
-like the “move ( ) steps” block. Or you can select a more extensive
+like the <code>move ( ) steps</code> block. Or you can select a more extensive
 dialog with a lot of options about your input name. But we’ll leave that
 for later. When you click OK, the new input appears in the block
 prototype:
@@ -114,8 +113,7 @@ If you right-click/control-click the hat block, you get this menu:
 ![image513.png](assets/image513.png) <!--  style="width:0.99931in;height:0.76042in" / -->
 
 Script pic\index{script pic} exports a picture of the script. (Many of
-the illustrations in this manual were made that way.) Translations
-\index{translations option} opens a window in which you can specify how
+the illustrations in this manual were made that way.) Translations\index{translations option} opens a window in which you can specify how
 your block should be translated if the user chooses a language other
 than the one in which you are programming. Block variables lets you
 create a variant of script variables for this block: A script variable
@@ -136,14 +134,13 @@ same thing as regular clicking, as described earlier.
 
 ## Recursion
 
-Since the new custom
-\index{recursion} block appears in its palette as soon as you *start*
+Since the new custom\index{recursion} block appears in its palette as soon as you *start*
 editing it, you can write recursive blocks (blocks that call themselves)
 by dragging the block into its own definition:
 
 ![image514.png](assets/image514.png) <!--  style="width:2.96528in;height:2.36319in" / --> ![image515.png](assets/image515.png) <!--  style="width:1.95833in;height:2.35417in" / --> ![image516.png](assets/image516.png) <!--  style="width:1.42361in;height:0.91181in" / -->
 
-(If you added inputs to the block since opening the editor, click Apply
+(If you added inputs to the block since opening the editor, click "Apply"
 before finding the block in the palette, or drag the\index{drag from
 prototype} block from the top of the block editor rather than from the
 palette.)
@@ -151,8 +148,8 @@ palette.)
 If recursion is new to you, here are a few brief hints: It’s crucial
 that the recursion have a *base case*\index{base case} *,* that is,
 some small(est) case that the block can handle without using recursion.
-In this example, it’s the case depth=0, for which the block does nothing
-at all, because of the enclosing if. Without a base case, the recursion
+In this example, it’s the case <code>depth=0</code>, for which the block does nothing
+at all, because of the enclosing <code>if</code>. Without a base case, the recursion
 would run forever, calling itself over and over.
 
 Don’t try to trace the exact sequence of steps that the computer follows
@@ -172,25 +169,25 @@ like this block to compute the factorial\index{factorial} function:
 Note the use of the report block\index{report block}. When a reporter
 block uses this block, the reporter finishes its work and reports the
 value given; any further blocks in the script are not evaluated. Thus,
-the if else block in the script above could have been just an if, with
+the <code>if else</code> block in the script above could have been just an <code>if</code>, with
 the second report block below it instead of inside it, and the result
-would be the same, because when the ﬁrst report is seen in the base
-case, that finishes the block invocation, and the second report is
-ignored. There is also a stop this block block\index{stop block block}
+would be the same, because when the first <code>report</code> is seen in the base
+case, that finishes the block invocation, and the second <code>report</code> is
+ignored. There is also a <code>stop this block</code> block\index{stop block block}
 that has a similar purpose, ending the block invocation early, for
 command blocks. (By contrast, the stop this script block\index{stop
 script block} stops not only the current block invocation, but also the
 entire toplevel script that called it.)
 
 Here’s a slightly more
-compact way to write the factorial function:
+compact way to write the <code>factorial</code> function:
 
 ![image521.png](assets/image521.png) <!--  style="width:4.29167in;height:0.86458in" / -->
 
 For more on recursion, see *Thinking Recursively*\index{Thinking
 Recursively} by Eric Roberts\index{Roberts, Eric}. (The original
 edition is ISBN 978‑0471816522; a more recent *Thinking Recursively in
-Java* is ISBN 978-0471701460.)
+Java* is ISBN 978-0471701460.) <!-- Do we want to link to something like https://books.google.com/books/about/Thinking_Recursively.html?id=oH9QAAAAMAAJ&source=kp_book_description --MF -->
 
 ## Block Libraries
 
@@ -201,7 +198,7 @@ your blocks implement a particular data structure (a stack, or a
 dictionary, etc.), or they’re the framework for building a multilevel
 game. Such a collection of blocks is called a *block library.*
 
-*To create a block library,\index{library:block} choose “Export
+To create a block library,\index{library:block} choose “Export
 blocks…” from the File menu. You then see a window like this:
 
 ![image522.png](assets/image522.png) <!--  style="width:2.02153in;height:2.72222in" / -->
@@ -210,14 +207,14 @@ The window shows all of your
 global custom blocks. You can uncheck some of the checkboxes to select
 exactly which blocks you want to include in your library. (You can
 right-click or control-click on the export window for a menu that lets
-you check or uncheck all the boxes at once.) Then press OK. An XML file
+you check or uncheck all the boxes at once.) Then press "OK." An XML file
 containing the blocks will appear in your Downloads location.
 
 To import a block library, use the “Import…” command in the File menu,
 or just drag the XML file into the Snap*!* window.
 
 Several block libraries are included with Snap*!*; for details about
-them, see page [25](#libraries-1).
+them, see page [25](#libraries-1). <!--Fix page numbers. --MF -->
 
 ## Custom blocks and Visible Stepping
 
@@ -226,7 +223,7 @@ custom block as a single step. If you want to see stepping inside a
 custom block you must take these steps *in order:*
 
 1.  Turn on
-    Visible Stepping. ![image123.png](assets/image123.png) <!--  style="width:0.29167in;height:0.16667in"     alt="Macintosh HD:Users:bh:Desktop:pix:footprint-lit.png" / -->
+    Visible Stepping by pressing the footprints button: ![image123.png](assets/image123.png) <!--  style="width:0.29167in;height:0.16667in"     alt="Macintosh HD:Users:bh:Desktop:pix:footprint-lit.png" / -->
 
 2.  Select “Edit” in the context menu(s) of the block(s) you want to
     examine.
