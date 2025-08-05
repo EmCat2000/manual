@@ -1,20 +1,18 @@
-# The Snap*!* Reference Manual
-> by Brian Harvey, Jens Mönig
-
 ![Snap! Logo](./images/snap-logo.png)
 
-## [Read the Manual][webiste] ([PDF - coming soon][pdf]) (Original PDF)[orginal_pdf]
+# The [Snap<em>!</em>][snap] Reference Manual
+## [Read at https://docs.snap.berkeley.edu][webiste] (Original PDF)[orginal_pdf]
 
-[![GitHub Pages](https://img.shields.io/badge/website-GitHub%20Pages-blue.svg)](https://snap-cloud.github.io/manual/)
+[![GitHub Pages](https://img.shields.io/badge/website-GitHub%20Pages-blue.svg)](https://docs.snap.berkeley.edu/)
 
-
-[webiste]: https://snap-cloud.github.io/manual/
-[pdf]: https://snap-cloud.github.io/manual/snap-manual.pdf
+([PDF - coming soon][pdf])
+[webiste]: https://docs.snap.berkeley.edu
+[pdf]: https://docs.snap.berkeley.edu/snap-manual.pdf
 [orginal_pdf]: ./SnapManual.pdf
 
-The reference manual for the [Snap<em>!</em> programming language][sbe]. ([GitHub][snap_gh])
+The reference manual for the [Snap<em>!</em> programming language][snap]. ([GitHub][snap_gh])
 
-[sbe]: https://snap.berkeley.edu
+[snap]: https://snap.berkeley.edu
 [snap_gh]: https://github.com/jmoenig/snap/
 
 ## Authors
@@ -61,10 +59,7 @@ quarto render
 
 ## Writing Style
 
-* The `content/` folder contains the markdown files, organized by chapter.
-    * Images sho
-* The `blockly/` folder contains 1 markdown file per block, organized by palette.
-  * `blocks/images/` one image per block.
+Please read [`STYLEGUIDE.md`](./STYLEGUIDE.md)
 
 ## VSCode and Editing
 
@@ -90,3 +85,5 @@ The website is hosted on GitHub pages, compiled by the `quarto.yml` workflow.
 ## Credits
 
 ## License
+
+AGPL, CC-BY-NC-SA
