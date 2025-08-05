@@ -1,16 +1,46 @@
-# Snap*!* Manual Conventions
+# Snap_!_ Manual Style Guide
 
-## Technical Notes
+* Write UI elements inside quoted code blocks. e.g. `"\\`Open\\`"`
+* Monospaced text should use the CSS class `.mono` e.g. `[text here]{.mono}`
+* Do not put spaces around index entries. `text\index{text},`
+* To write Snap! as stylized text write: `[Snap]{.snap}`
 
-* To add an index entry use `text...\index{entry name}`
-* There should be no space after the index definition.
-* Write "Snap!" as `Snap<em>!</em>` in markdown.
+## Editing Section References
 
-## Writing Code
-* Variables in Snap! should be written as `<var>my variable</var>`, e.g. <var>counter</var>
-* Write short code snippets inside `<code></code>` elements.
+* Replace original text with a markdown link (e.g. `[text](url)`) with the section name but no page number
+* Links should be formatted like the URL, e.g. `../chapter-name`
 
-## Textifying Blocks
+## Images
 
-* Use `( )` to denote an empty input slot in a block.
-* Place `()` around filled arguments, but do not leave spaces around the value. e.g. `move (10) steps`.
+Some images do not need custom CSS classes, but images used as inline examples and those expeorted from Retina displays should have CSS classes applied.
+
+* We have two classes: `.image-2x`, and `.image-inline`
+* The `-2x` class should be used for most retina-sized images.
+* The `-inline` class should be used when you want to place an example within the rest of a paragraph.
+
+Write markdown like this:
+```md
+![alt text](filename.png){.image-2x}
+![alt text](filename.png){.image-inline}
+![alt text](filename.png){.image-2x .image-inline}
+```
+
+### Making new CSS classes
+
+Add all CSS to the file `snap-manual.scss`. All "image" related CSS should be prefixed with `image-`
+* If you need to make a generic generic class, call it something like what it used for
+* If you need to make classes for a specific chapter include that, e.g. `image-ch3-...`
+* Otherwise you can use `{style="..."}` to manually set the style of a single image
+
+## Callouts
+https://quarto.org/docs/authoring/callouts.html
+
+You may want to replace images on text with a callout block.
+
+```md
+::: {.callout-tip}
+## Tip with Title
+
+This is an example of a callout with a title.
+:::
+```
