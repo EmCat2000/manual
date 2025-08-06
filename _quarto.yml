@@ -87,8 +87,7 @@ format:
     # sansfont: Helvetica
     resource-path:
       - ./
-      - assets/
-      - assets/images/
+      - images/
       - blocks/images/
       - blocks/help/
 
