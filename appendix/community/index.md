@@ -1,4 +1,4 @@
-# The Snap<em>!</em> Community Site
+# The Snap<em>!</em> Community Site {.unnumbered}
 
 The Snap! community website is what you see when you visit [https://snap.berkeley.edu]().
 

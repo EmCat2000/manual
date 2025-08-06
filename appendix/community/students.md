@@ -1,4 +1,4 @@
-# Student Accounts
+# Student Accounts {.unnumbered}
 
 When teachers bulk create accounts, the new accounts are automatically designed as a _student_ account. Student accounts work very similarly to standard accounts, but have a few different permissions.
 

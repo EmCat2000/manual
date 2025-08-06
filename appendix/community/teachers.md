@@ -1,4 +1,4 @@
-# Teacher Accounts
+# Teacher Accounts {.unnumbered}
 
 Snap<em>!</em> supports basic teacher account functionality.
 
