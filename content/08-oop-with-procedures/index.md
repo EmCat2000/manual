@@ -3,7 +3,7 @@
 The idea of object oriented programming\index{object oriented
 programming} is often taught in a way that makes it seem as if a special
 object oriented programming language is necessary. In fact, any language
-with ﬁrst class procedures and lexical scope\index{scope:lexical}
+with first class procedures and lexical scope\index{scope:lexical}
 allows objects to be implemented explicitly; this is a useful exercise
 to help demystify objects.
 

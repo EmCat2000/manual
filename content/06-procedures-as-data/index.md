@@ -23,7 +23,7 @@ instructions. (In this example, the value of the input ![image693.png](assets/im
 that the user puts in the C-slot of the my for block.) There is a
 similar call reporter block for invoking a Reporter or Predicate block.
 The call\index{call block } and run blocks are at the heart of
-[Snap]{.snap}’s ﬁrst class procedure\index{ﬁrst class procedures} feature;
+[Snap]{.snap}’s ﬁrst class procedure\index{first class procedures} feature;
 they allow scripts and blocks to be used as data—in this example, as an
 input to a block—and eventually carried out under control of the user’s
 program.

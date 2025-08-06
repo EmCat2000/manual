@@ -729,21 +729,19 @@ option} writes a file in your browser’s downloads directory containing
 the definition of this block and any other custom blocks that this block
 invokes, directly or indirectly. So the resulting file can be loaded
 later without the risk of red Undefined! blocks because of missing
-dependencies.\index{Undefined\! blocks}
+dependencies.\index{Undefined! blocks}
 
-The edit… option\index{edit… option} opens a Block Editor with the
+The `edit…` option\index{edit… option} opens a Block Editor with the
 definition of the custom block.
 
 ### Context Menu for the Palette Background
 
-Right-click/control-click on
-\index{context menu for the palette background} the grey *background* of
-the palette area shows this menu:
+Right-click/control-click on \index{context menu for the palette background} the grey
+*background* of the palette area shows this menu:
 
 ![image1058.png](assets/image1058.png) <!--  style="width:0.98958in;height:0.58958in" / -->
 
- The
-find blocks… option\index{find blocks… option} does the same thing as
+The `find blocks…` option\index{`find blocks…` option} does the same thing as
 the magnifying-glass button. The hide blocks… option\index{hide blocks
 option} opens a dialog box in which you can choose which blocks (custom
 as well as primitive) should be hidden. (Within that dialog box, the

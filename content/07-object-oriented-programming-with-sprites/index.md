@@ -48,18 +48,16 @@ paradigm objects are *data;* they can be the value of a variable, an
 element of a list, and so on, but that’s not the case for Scratch
 sprites.
 
-[Snap]{.snap} sprites are ﬁrst class\index{ﬁrst class sprites} data. They can
+[Snap]{.snap} sprites are first class\index{first class sprites} data. They can
 be created and deleted by a script, stored in a variable or list, and
 sent messages individually. The children of a sprite can inherit
 sprite-local variables, methods (sprite-local procedures), and other
 attributes (e.g., x position).
 
-
-
-The fundamental means by
-which programs get access to sprites is the my reporter block\index{my} reporter
-block. It has a dropdown-menu input slot that, when clicked, gives
-access to all the sprites, plus the stage\index{stage}. ![image745.png](assets/image745.png) <!--  style="width:0.66667in;height:0.19444in" / --> reports a
+The fundamental means by which programs get access to sprites is the my reporter
+block\index{my} reporter block. It has a dropdown-menu input slot that, when clicked,
+gives access to all the sprites, plus the stage\index{stage}.
+![my self](assets/image745.png){.image-inline} reports a
 single sprite, the one asking the question. ![image744.png](assets/image744.png) <!--  style="width:1.08333in;height:0.19444in" / -->   reports a list of all
 sprites other than the one asking the question. ![image743.png](assets/image743.png) <!--  style="width:0.96528in;height:0.19444in" / -->  reports a list of all
 sprites that are *near* the one asking—the ones that are candidates for

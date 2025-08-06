@@ -1,8 +1,8 @@
 
 # Acknowledgements {.unnumbered}
 
-We have been extremely lucky in our
-mentors. Jens cut his teeth in the company of the Smalltalk pioneers:
+We have been extremely lucky in our mentors.
+Jens cut his teeth in the company of the Smalltalk pioneers:
 Alan Kay\index{Kay, Alan}, Dan Ingalls\index{Ingalls, Dan}, and the
 rest of the gang who invented personal computing and object oriented
 programming in the great days of Xerox PARC\index{Xerox PARC}. He
@@ -13,14 +13,14 @@ graphics framework that’s still at the heart of [Snap]{.snap}.
 
 ***The brilliant design of Scratch, from the Lifelong Kindergarten
 Group***\index{Lifelong Kindergarten Group} ***at the MIT Media Lab***
-\index{Media Lab} ***, is crucial to* Snap*!. Our earlier version, BYOB,
+\index{Media Lab}\index{MIT Media Lab} ***, is crucial to* Snap*!. Our earlier version, BYOB,
 was a direct modification of the Scratch source code.* Snap*! is a
 complete rewrite, but its code structure and its user interface remain
 deeply indebted to Scratch. And the Scratch Team, who could have seen us
 as rivals, have been entirely supportive and welcoming to us.***
 
 Brian grew up at the MIT and Stanford Artificial Intelligence Labs
-\index{MIT Artificial Intelligence Lab}, learning from Lisp inventor
+\index{MIT Artificial Intelligence Lab}\index{Stanford Artificial Intelligence Lab}, learning from Lisp inventor
 John McCarthy\index{ McCarthy, John}, Scheme\index{Scheme} inventors
 Gerald J. Sussman\index{Sussman, Gerald J.} and Guy Steele
 \index{Steele, Guy}, and the authors of the world’s best computer
@@ -77,7 +77,7 @@ Foundation or other funders.
 
 [Snap]{.snap} (formerly BYOB) is an extended reimplementation of Scratch
 (<u>https://scratch.mit.edu</u>) that allows you to Build Your Own
-Blocks. It also features ﬁrst class lists, ﬁrst class procedures, first
+Blocks. It also features ﬁrst class lists, first class procedures, first
 class sprites, first class costumes, first class sounds, and first class
 continuations. These added capabilities make it suitable for a serious
 introduction to computer science for high school or college students.

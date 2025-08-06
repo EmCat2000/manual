@@ -548,8 +548,7 @@ weighted:
 
 (Thanks to [Scott Burns\index{Burns, Scott}
 ](http://scottburns.us/subtractive-color-mixture/) for his help in
-understanding paint mixing, along with [David Briggs\index{ Briggs,
-David} ](http://www.huevaluechroma.com/061.php)’s tutorial. Remaining
+understanding paint mixing, along with [David Briggs\index{Briggs, David}](http://www.huevaluechroma.com/061.php)’s tutorial. Remaining
 mistakes are bh’s.)
 
 ### tl;dr
@@ -567,7 +566,7 @@ the latter two. <span id="spirals" class="anchor"></span>We recommend
 
 ![image1242.png](assets/image1242.png) <!--  style="width:4.34028in;height:0.65278in" alt="Macintosh HD:Users:bh:Desktop:5R-3G-paint.png" / -->
 
-###  Subappendix: Geeky details on fair hue
+### Subappendix: Geeky details on fair hue
 
 ![image1243.png](assets/image1243.png) <!--  style="width:4.34028in;height:0.65278in" alt="Macintosh HD:Users:bh:Desktop:5R-3G-paint.png" / -->
 

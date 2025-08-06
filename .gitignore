@@ -46,3 +46,5 @@ conversion/chapters/*
 # Utils while building...
 _index_entries.txt
 index-list.quarto_ipynb
+
+/.quarto/
