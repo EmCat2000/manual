@@ -20,6 +20,8 @@ _book
 _index_entries.txt
 # Temporary rendering files.
 # This seems like a giant hack... investigate later.
+index.pdf
+index.tex
 0*/**/*.pdf
 0*/**/*.tex
 0*/**/*.html

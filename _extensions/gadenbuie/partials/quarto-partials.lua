@@ -60,6 +60,11 @@ end
 
 local function render_partial(file, data, context)
   local f = io.open(file, "r")
+  if not f then
+    local msg = "Could not find partial file: " .. file
+    quarto.log.error(msg)
+    return pandoc.Str("[ERROR] " .. msg)
+  end
   local template = f:read("a")
   f:close()
 
@@ -86,14 +91,14 @@ rendered = pandoc.read(rendered)
     end
     return rendered.blocks
 
-    
+
   elseif string.match(file, "%.tex")  then
     -- Limit `.tex` to LaTeX documents
     if context == "inline" then
       return pandoc.RawBlock('tex', rendered)
     end
     return pandoc.RawBlock('tex', rendered)
-  
+
   elseif string.match(file, "%.html") then
     -- And `.html` for HTML documents
     if context == "inline" then
@@ -101,7 +106,7 @@ rendered = pandoc.read(rendered)
     end
     return pandoc.RawBlock('html', rendered)
   end
-  
+
   return rendered
 end
 
@@ -115,7 +120,7 @@ local function quarto_partial(args, kwargs, meta, raw_args, context)
     partial_data = copy(meta)
     partial_key = args[2]
     local partial_keys = string.split(partial_key, "%.")
-  
+
     for _, key in ipairs(partial_keys) do
       if partial_data[key] then
         partial_data = copy(partial_data[key])
@@ -145,7 +150,7 @@ local function quarto_partial(args, kwargs, meta, raw_args, context)
     if pandoc.utils.type(v) == "string" then
       v_is_json_string = string.match(v, "^%[") or string.match(v, "^{")
     end
-    
+
     if v_is_json_string then
       data[k] = quarto.json.decode(v)
     else
