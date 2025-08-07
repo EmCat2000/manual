@@ -1,7 +1,7 @@
 #! /usr/bin/env ruby
 
 INDEX_FILE = '_support/conversion/text-indext.txt'
-CONTENT = 'content/**/*.md'
+CONTENT = '**/*.md'
 ALL_CONTENT = Dir.glob(CONTENT).freeze
 
 def parse_text_index_entries(file)
@@ -56,6 +56,15 @@ def compare_entries(original, new, aggressive_name_correction: false)
   puts "#{missing_in_new.size} Keys in original not found in new index:"
   puts missing_in_new.any? ? missing_in_new.map { |k| "|#{k}| -> (#{original[k].join(", ")})" }.join("\n") : "(none)"
   puts
+
+  # Group missing keys by their original pages
+  missing_in_new_grouped = missing_in_new.group_by { |k| original[k].first }
+  missing_in_new_grouped = missing_in_new_grouped.sort.to_h
+  puts "Page | Missing Terms"
+  puts "-----|----------------"
+  missing_in_new_grouped.each do |page, terms|
+    puts "#{page.to_s.rjust(5)} | #{terms.join(", ")}"
+  end
 
   puts "Keys with >1 entries in original and different count in new:"
   original.each do |key, orig_pages|
