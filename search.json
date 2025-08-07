@@ -254,7 +254,7 @@
     "href": "04-first-class-lists/index.html#functional-and-imperative-list-programming",
     "title": "4  First class lists",
     "section": "4.3 Functional and Imperative List Programming",
-    "text": "4.3 Functional and Imperative List Programming\nThere are two ways to create a list inside a program. Scratch  users will be familiar with the imperative programming style, which is based on a set of command blocks that modify a list:\n \nAs an example, here are two blocks that take a list of numbers as input, and report a new list containing only the even numbers from the original list:\n \nIn these scripts, we first create a temporary variable, then put an empty list in it, then go through the items of the input list using the add ... to (result) block to modify the result list, adding one item at a time, and finally report the result.\nFunctional programming is a different approach that is becoming important in “real world” programming because of parallelism , i.e., the fact that different processors can be manipulating the same data at the same time. This makes the use of mutation (changing the value associated with a variable, or the items of a list) problematic because with parallelism it’s impossible to know the exact sequence of events, so the result of mutation may not be what the programmer expected. Even without parallelism, though, functional programming is sometimes a simpler and more effective technique, especially when dealing with recursively defined data structures. It uses reporter blocks, not command blocks, to build up a list value:\n \nIn a functional program, we often use recursion to construct a list, one item at a time. The in front of block  makes a list that has one item added to the front of an existing list, without changing the value of the original list. A nonempty list is processed by dividing it into its first item (item 1 of) and all the rest of the items (all but first of), which are handled through a recursive call:\n \nSnap uses two different internal representations of lists, one (dynamic  array) for imperative programming and the other (linked list ) for functional programming. Each representation makes the corresponding built-in list blocks (commands or reporters, respectively) most efficient. It’s possible to mix styles in the same program, but if the same list is used both ways, the program will run more slowly because it converts from one representation to the other repeatedly. (The item ( ) of [ ] block doesn’t change the representation.) You don’t have to know the details of the internal representations, but it’s worthwhile to use each list in a consistent way.",
+    "text": "4.3 Functional and Imperative List Programming\nThere are two ways to create a list inside a program. Scratch  users will be familiar with the imperative programming style, which is based on a set of command blocks that modify a list:\n \nAs an example, here are two blocks that take a list of numbers as input, and report a new list containing only the even numbers from the original list: 1\n \nIn these scripts, we first create a temporary variable, then put an empty list in it, then go through the items of the input list using the add ... to (result) block to modify the result list, adding one item at a time, and finally report the result.\nFunctional programming is a different approach that is becoming important in “real world” programming because of parallelism , i.e., the fact that different processors can be manipulating the same data at the same time. This makes the use of mutation (changing the value associated with a variable, or the items of a list) problematic because with parallelism it’s impossible to know the exact sequence of events, so the result of mutation may not be what the programmer expected. Even without parallelism, though, functional programming is sometimes a simpler and more effective technique, especially when dealing with recursively defined data structures. It uses reporter blocks, not command blocks, to build up a list value:\n \nIn a functional program, we often use recursion to construct a list, one item at a time. The in front of block  makes a list that has one item added to the front of an existing list, without changing the value of the original list. A nonempty list is processed by dividing it into its first item (item 1 of) and all the rest of the items (all but first of), which are handled through a recursive call:\n \nSnap uses two different internal representations of lists, one (dynamic  array) for imperative programming and the other (linked list ) for functional programming. Each representation makes the corresponding built-in list blocks (commands or reporters, respectively) most efficient. It’s possible to mix styles in the same program, but if the same list is used both ways, the program will run more slowly because it converts from one representation to the other repeatedly. (The item ( ) of [ ] block doesn’t change the representation.) You don’t have to know the details of the internal representations, but it’s worthwhile to use each list in a consistent way.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>First class lists</span>"
     ]
@@ -285,6 +285,16 @@
     "title": "4  First class lists",
     "section": "4.6 Hyperblocks",
     "text": "4.6 Hyperblocks\nA scalar is anything other than a list. The name comes from mathematics, where it means a magnitude without direction, as opposed to a vector, which points toward somewhere. A scalar function is one whose domain and range are scalars, so all the arithmetic operations are scalar functions, but so are the text ones such as letter and the Boolean ones such as not.\nThe major new feature in Snap 6.0 is that the domain and range of most scalar function blocks is extended to multi-dimensional  lists, with the underlying scalar function applied termwise:\n     \nMathematicians, note in the last example above that the result is just a termwise application of the underlying function (7×3, 8×5, etc.), not matrix multiplication. See Appendix B for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each dimension) is the length of the shorter input:\n \nHowever, if the number of dimensions differs in the two inputs, then the number of dimensions in the result agrees with the higher-dimensional input; the lower-dimensional one is used repeatedly in the missing dimension(s):\n \n(7×6, 8×10, 1×20, 40×6, 20×10, etc.). In particular, a scalar input is paired with every scalar in the other input:\n \nOne important motivation for this feature is how it simplifies and speeds up media computation, as in this shifting of the Alonzo costume to be bluer:\n \nEach pixel of the result has ¾ of its original red and green, and three times its original blue (with its transparency unchanged). By putting some sliders on the stage, you can play with colors dynamically:\n  \nThere are a few naturally scalar functions that have already had specific meanings when applied to lists and therefore are not hyperblocks: = and identical to (because they compare entire structures, not just scalars, always reporting a single Boolean result), and and or (because they don’t evaluate their second input at all if the first input determines the result), join (because it converts non-scalar (and other non-text) inputs to text string form), and is a (type) (because it applies to its input as a whole). Blocks whose inputs are “natively” lists, such as   and   , are never hyperblocks.\n  The reshape block takes a list (of any depth) as its first input, and then takes zero or more sizes along the dimensions of an array. In the example it will report a table (a matrix) of four rows and three columns. If no sizes are given, the result is an empty list. Otherwise, the cells of the specified shape are filled with the atomic values from the input list. If more values are needed than provided, the block starts again at the head of the list, using values more than once. If more values are provided than needed, the extras are ignored; this isn’t an error.\n  The combinations block takes any number of lists as input; it reports a list in which each item is a list whose length is the number of inputs; item i of a sublist is an item of input i. Every possible combination of items of the inputs is included, so the length of the reported list is the product of the lengths of the inputs.\n \n  The item of block  has a special set of rules, designed to preserve its pre-hyperblock meaning and also provide a useful behavior when given a list as its first (index) input:\n\nIf the index is a number, then item of reports the indicated top-level item of the list input; that item may be a sublist, in which case the entire sublist is reported (the original meaning of item of):\n \nIf the index is a list of numbers (no sublists), then item of reports a list of the indicated top-level items (rows, in a matrix; a straightforward hyperization):  \nIf the index is a list of lists of numbers, then item of reports an array of only those scalars whose position in the list input matches the index input in all dimensions (as of Snap 6.6):\n \nIf a list of list of numbers includes an empty sublist, then all items are chosen along that dimension:\n \n\nTo get a column or columns of a spreadsheet, use an empty list in the row selector (as of Snap 6.6):\n \nThe length of block  is extended to provide various ways of looking at the shape and contents of a list. The options other than length are mainly useful for lists of lists, to any depth. These new options work well with hyperblocks and the APL library. \n\nlength: reports the number of (toplevel) items in the list, as always.\nrank : reports the number of dimensions of the list, i.e., the maximum depth of lists of lists of lists of lists. (That example would be rank 4.)\ndimensions : reports a list of numbers, each of which is the maximum length in one dimension, so a spreadsheet of 1000 records, each with 4 fields, would report the list [1000 4].\nflatten : reports a flat, one-dimensional list containing the atomic (non-list) items anywhere in the input list.\ncolumns : reports a list in which the rows and columns of the input list are interchanged, so the shape of the transpose of a shape [1000 4] list would be [4 1000]. This option works only for lists whose rank is at most 2. The name reflects the fact that the toplevel items of the reported table are the columns of the original table.\nreverse: reports a list in which the (toplevel) items of the input list are in reverse order.\n\nThe remaining three options report a (generally multi-line) text string. The input list may not include any atomic (non-list) data  other than text or numbers. The lines  option is intended for use with rank-one lists of text strings; it reports a string in which each list item becomes a line of text. You can think of it as the opposite of the split by line block  . The csv  option (comma-separated values) is intended for rank-two lists that represent a spreadsheet or other tabular data. Each item of the input list should be a list of atoms; the block reports a text string in which each item of the big list becomes a line of text in which the items of that sublist are separated by commas. The json  option is for lists of any rank; it reports a text string in which the list structure is explicitly represented using square brackets. These are the opposites of split by csv and split by json.\n \nThe idea of extending the domain and range of scalar functions to include arrays comes from the language APL. (All the great programming languages are based on mathematical ideas. Our primary ancestors are Smalltalk, based on models, and Lisp , based on lambda calculus. Prolog, a great language not (so far) influencing Snap, is based on logic. And APL, now joining our family, is based on linear algebra, which studies vectors and matrices. Those other programming languages are based on the weaknesses of computer hardware.) Hyperblocks are not the whole story about APL, which also has mixed-domain functions and higher order functions. Some of what’s missing is provided in the APL library. (See Appendix B.)",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>First class lists</span>"
+    ]
+  },
+  {
+    "objectID": "04-first-class-lists/index.html#footnotes",
+    "href": "04-first-class-lists/index.html#footnotes",
+    "title": "4  First class lists",
+    "section": "",
+    "text": "Note to users of earlier versions: From the beginning, there has been a tension in our work between the desire to provide tools such as for (used in this example) and the higher order functions introduced on the next page as primitives, to be used as easily as other primitives, and the desire to show how readily such tools can be implemented in Snap! itself. This is one instance of our general pedagogic understanding that learners should both use abstractions and be permitted to see beneath the abstraction barrier. Until version 5.0, we used the uneasy compromise of a library of tools written in Snap! and easily, but not easily enough, loaded into a project. By not loading the tools, users or teachers could explore how to program them. In 5.0 we made them true primitives, partly because that’s what some of us wanted all along and partly because of the increasing importance of fast performance as we explore “big data” and media computation. In version 10.0 we introduced “hybrid” primitives, implemented in high speed Javascript but with an “Edit” option that will open, not the primitive implementation, but the version written in Snap. This gives us editable primitives without dramatically slowing users’ projects.↩︎",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>First class lists</span>"
     ]
@@ -829,7 +839,7 @@
     "href": "blocks/motion/forward.html#example-projects",
     "title": "move steps",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -853,7 +863,7 @@
     "href": "blocks/motion/turn.html#example-projects",
     "title": "turn ↻  degrees",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -877,7 +887,7 @@
     "href": "blocks/motion/turnLeft.html#example-projects",
     "title": "turn ↺  degrees",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -901,7 +911,7 @@
     "href": "blocks/motion/setHeading.html#example-projects",
     "title": "point in direction",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -925,7 +935,7 @@
     "href": "blocks/motion/doFaceTowards.html#example-projects",
     "title": "point towards",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -949,7 +959,7 @@
     "href": "blocks/motion/gotoXY.html#example-projects",
     "title": "go to x:  y:",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -973,7 +983,7 @@
     "href": "blocks/motion/doGotoObject.html#example-projects",
     "title": "go to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -997,7 +1007,7 @@
     "href": "blocks/motion/doGlide.html#example-projects",
     "title": "Glide Secs to Position",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -1021,7 +1031,7 @@
     "href": "blocks/motion/changeXPosition.html#example-projects",
     "title": "change x by",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -1045,7 +1055,7 @@
     "href": "blocks/motion/setXPosition.html#example-projects",
     "title": "set x to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -1069,7 +1079,7 @@
     "href": "blocks/motion/changeYPosition.html#example-projects",
     "title": "change y by",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -1093,7 +1103,7 @@
     "href": "blocks/motion/setYPosition.html#example-projects",
     "title": "set y to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -1117,7 +1127,7 @@
     "href": "blocks/motion/bounceOffEdge.html#example-projects",
     "title": "if on edge, bounce",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -1141,7 +1151,7 @@
     "href": "blocks/motion/getPosition.html#example-projects",
     "title": "position",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -1165,7 +1175,7 @@
     "href": "blocks/motion/xPosition.html#example-projects",
     "title": "x position",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -1189,7 +1199,7 @@
     "href": "blocks/motion/yPosition.html#example-projects",
     "title": "y position",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -1213,7 +1223,7 @@
     "href": "blocks/motion/direction.html#example-projects",
     "title": "direction",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Motion Blocks",
@@ -1237,7 +1247,7 @@
     "href": "blocks/looks/doSwitchToCostume.html#example-projects",
     "title": "switch to costume",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1261,7 +1271,7 @@
     "href": "blocks/looks/doWearNextCostume.html#example-projects",
     "title": "next costume",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1285,7 +1295,7 @@
     "href": "blocks/looks/getCostumeIdx.html#example-projects",
     "title": "costume number",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1309,7 +1319,7 @@
     "href": "blocks/looks/doSayFor.html#example-projects",
     "title": "say  for  secs",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1333,7 +1343,7 @@
     "href": "blocks/looks/bubble.html#example-projects",
     "title": "say",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1357,7 +1367,7 @@
     "href": "blocks/looks/doThinkFor.html#example-projects",
     "title": "think  for  secs",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1381,7 +1391,7 @@
     "href": "blocks/looks/doThink.html#example-projects",
     "title": "think",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1405,7 +1415,7 @@
     "href": "blocks/looks/reportGetImageAttribute.html#example-projects",
     "title": "Attribute of Costume",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1429,7 +1439,7 @@
     "href": "blocks/looks/reportNewCostumeStretched.html#example-projects",
     "title": "Stretch Costume",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1453,7 +1463,7 @@
     "href": "blocks/looks/reportNewCostumeSkewed.html#example-projects",
     "title": "Skew Costume by Degrees",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1477,7 +1487,7 @@
     "href": "blocks/looks/reportNewCostume.html#example-projects",
     "title": "New Costume",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1501,7 +1511,7 @@
     "href": "blocks/looks/changeEffect.html#example-projects",
     "title": "change  effect by",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1525,7 +1535,7 @@
     "href": "blocks/looks/setEffect.html#example-projects",
     "title": "set  effect to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1549,7 +1559,7 @@
     "href": "blocks/looks/clearEffects.html#example-projects",
     "title": "clear graphic effects",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1573,7 +1583,7 @@
     "href": "blocks/looks/getEffect.html#example-projects",
     "title": "_ effect",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1597,7 +1607,7 @@
     "href": "blocks/looks/changeScale.html#example-projects",
     "title": "change size by",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1621,7 +1631,7 @@
     "href": "blocks/looks/setScale.html#example-projects",
     "title": "Set Sprite Size",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1645,7 +1655,7 @@
     "href": "blocks/looks/getScale.html#example-projects",
     "title": "size",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1669,7 +1679,7 @@
     "href": "blocks/looks/show.html#example-projects",
     "title": "show",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1693,7 +1703,7 @@
     "href": "blocks/looks/hide.html#example-projects",
     "title": "hide",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1717,7 +1727,7 @@
     "href": "blocks/looks/reportShown.html#example-projects",
     "title": "shown?",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1741,7 +1751,7 @@
     "href": "blocks/looks/goToLayer.html#example-projects",
     "title": "go to  layer",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1765,7 +1775,7 @@
     "href": "blocks/looks/goBack.html#example-projects",
     "title": "go back  layers",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Looks Blocks",
@@ -1789,7 +1799,7 @@
     "href": "blocks/sound/playSound.html#example-projects",
     "title": "Play Sound",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -1813,7 +1823,7 @@
     "href": "blocks/sound/doPlaySoundUntilDone.html#example-projects",
     "title": "Play Sound Until Done",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -1837,7 +1847,7 @@
     "href": "blocks/sound/doStopAllSounds.html#example-projects",
     "title": "Stop All Sounds",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -1861,7 +1871,7 @@
     "href": "blocks/sound/doPlaySoundAtRate.html#example-projects",
     "title": "Play Sound Hz",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -1885,7 +1895,7 @@
     "href": "blocks/sound/reportGetSoundAttribute.html#example-projects",
     "title": "Attribute Of Sound",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -1909,7 +1919,7 @@
     "href": "blocks/sound/reportNewSoundFromSamples.html#example-projects",
     "title": "New Sound Rate Hz",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -1933,7 +1943,7 @@
     "href": "blocks/sound/doRest.html#example-projects",
     "title": "Rest For Beats",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -1957,7 +1967,7 @@
     "href": "blocks/sound/doPlayNote.html#example-projects",
     "title": "Play Note For Beats",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -1981,7 +1991,7 @@
     "href": "blocks/sound/doSetInstrument.html#example-projects",
     "title": "Set Instrument",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -2005,7 +2015,7 @@
     "href": "blocks/sound/doChangeTempo.html#example-projects",
     "title": "Change Tempo",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -2029,7 +2039,7 @@
     "href": "blocks/sound/doSetTempo.html#example-projects",
     "title": "Set Tempo",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -2053,7 +2063,7 @@
     "href": "blocks/sound/getTempo.html#example-projects",
     "title": "Tempo",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -2077,7 +2087,7 @@
     "href": "blocks/sound/changeVolume.html#example-projects",
     "title": "Change Volume",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -2101,7 +2111,7 @@
     "href": "blocks/sound/setVolume.html#example-projects",
     "title": "Set Volume",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -2125,7 +2135,7 @@
     "href": "blocks/sound/getVolume.html#example-projects",
     "title": "Volume",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -2149,7 +2159,7 @@
     "href": "blocks/sound/changePan.html#example-projects",
     "title": "Change Balance",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -2173,7 +2183,7 @@
     "href": "blocks/sound/setPan.html#example-projects",
     "title": "Set Balance To",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -2197,7 +2207,7 @@
     "href": "blocks/sound/getPan.html#example-projects",
     "title": "Report Balance",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -2221,7 +2231,7 @@
     "href": "blocks/sound/playFreq.html#example-projects",
     "title": "Play Frequency Hz",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -2245,7 +2255,7 @@
     "href": "blocks/sound/stopFreq.html#example-projects",
     "title": "Stop Frequency",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sound Blocks",
@@ -2269,7 +2279,7 @@
     "href": "blocks/pen/clear.html#example-projects",
     "title": "clear",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2293,7 +2303,7 @@
     "href": "blocks/pen/down.html#example-projects",
     "title": "pen down",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2317,7 +2327,7 @@
     "href": "blocks/pen/up.html#example-projects",
     "title": "pen up",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2341,7 +2351,7 @@
     "href": "blocks/pen/getPenDown.html#example-projects",
     "title": "pen down?",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2365,7 +2375,7 @@
     "href": "blocks/pen/setColor.html#example-projects",
     "title": "set pen color to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2389,7 +2399,7 @@
     "href": "blocks/pen/changePenColorDimension.html#example-projects",
     "title": "change pen  by",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2413,7 +2423,7 @@
     "href": "blocks/pen/setPenColorDimension.html#example-projects",
     "title": "set pen  to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2437,7 +2447,7 @@
     "href": "blocks/pen/getPenAttribute.html#example-projects",
     "title": "pen",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2461,7 +2471,7 @@
     "href": "blocks/pen/changeSize.html#example-projects",
     "title": "change pen size by",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2485,7 +2495,7 @@
     "href": "blocks/pen/setSize.html#example-projects",
     "title": "set pen size to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2509,7 +2519,7 @@
     "href": "blocks/pen/doStamp.html#example-projects",
     "title": "stamp",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2533,7 +2543,7 @@
     "href": "blocks/pen/floodFill.html#example-projects",
     "title": "fill",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2557,7 +2567,7 @@
     "href": "blocks/pen/write.html#example-projects",
     "title": "write  size",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2581,7 +2591,7 @@
     "href": "blocks/pen/reportPenTrailsAsCostume.html#example-projects",
     "title": "pen trails",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2605,7 +2615,7 @@
     "href": "blocks/pen/doPasteOn.html#example-projects",
     "title": "paste on",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2629,7 +2639,7 @@
     "href": "blocks/pen/doCutFrom.html#example-projects",
     "title": "cut from",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2653,7 +2663,7 @@
     "href": "blocks/pen/reportColor.html#example-projects",
     "title": "Color",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2677,7 +2687,7 @@
     "href": "blocks/pen/reportColorAttribute.html#example-projects",
     "title": "Color Attribute",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2701,7 +2711,7 @@
     "href": "blocks/pen/reportNewColor.html#example-projects",
     "title": "new color",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Pen Blocks",
@@ -2725,7 +2735,7 @@
     "href": "blocks/control/receiveGo.html#example-projects",
     "title": "When Green Flag Clicked",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -2749,7 +2759,7 @@
     "href": "blocks/control/receiveUserEdit.html#example-projects",
     "title": "when  is edited",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -2773,7 +2783,7 @@
     "href": "blocks/control/receiveOnClone.html#example-projects",
     "title": "when I start as a clone",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -2797,7 +2807,7 @@
     "href": "blocks/control/receiveMessage.html#example-projects",
     "title": "when I receive",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -2821,7 +2831,7 @@
     "href": "blocks/control/receiveKey.html#example-projects",
     "title": "when  key pressed",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -2845,7 +2855,7 @@
     "href": "blocks/control/receiveConditionEvent.html#example-projects",
     "title": "when",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -2869,7 +2879,7 @@
     "href": "blocks/control/receiveInteraction.html#example-projects",
     "title": "when I am",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -2893,7 +2903,7 @@
     "href": "blocks/control/doBroadcast.html#example-projects",
     "title": "broadcast",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -2917,7 +2927,7 @@
     "href": "blocks/control/doBroadcastAndWait.html#example-projects",
     "title": "broadcast   and wait",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -2941,7 +2951,7 @@
     "href": "blocks/other/doWarp.html#example-projects",
     "title": "Warp",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -2965,7 +2975,7 @@
     "href": "blocks/control/doWait.html#example-projects",
     "title": "wait  secs",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -2989,7 +2999,7 @@
     "href": "blocks/control/doWaitUntil.html#example-projects",
     "title": "wait until",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3013,7 +3023,7 @@
     "href": "blocks/control/doForever.html#example-projects",
     "title": "forever",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3037,7 +3047,7 @@
     "href": "blocks/control/doRepeat.html#example-projects",
     "title": "repeat",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3061,7 +3071,7 @@
     "href": "blocks/control/doUntil.html#example-projects",
     "title": "repeat until",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3081,23 +3091,11 @@
     ]
   },
   {
-    "objectID": "blocks/control/doFor.html#example-images",
-    "href": "blocks/control/doFor.html#example-images",
-    "title": "for _ = to",
-    "section": "",
-    "text": "Move forward by 10 steps\n\n\n\nMove forward by 10 steps",
-    "crumbs": [
-      "Appendices",
-      "Control Blocks",
-      "`for _ = to`"
-    ]
-  },
-  {
     "objectID": "blocks/control/doFor.html#example-projects",
     "href": "blocks/control/doFor.html#example-projects",
     "title": "for _ = to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3121,7 +3119,7 @@
     "href": "blocks/control/doIf.html#example-projects",
     "title": "if",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3145,7 +3143,7 @@
     "href": "blocks/control/doIfElse.html#example-projects",
     "title": "if   else",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3169,7 +3167,7 @@
     "href": "blocks/control/reportIfElse.html#example-projects",
     "title": "if  then  else",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3193,7 +3191,7 @@
     "href": "blocks/control/doReport.html#example-projects",
     "title": "report",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3217,7 +3215,7 @@
     "href": "blocks/control/doStopThis.html#example-projects",
     "title": "stop",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3241,7 +3239,7 @@
     "href": "blocks/control/doRun.html#example-projects",
     "title": "run",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3265,7 +3263,7 @@
     "href": "blocks/control/fork.html#example-projects",
     "title": "launch",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3289,7 +3287,7 @@
     "href": "blocks/control/evaluate.html#example-projects",
     "title": "call",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3313,7 +3311,7 @@
     "href": "blocks/control/reportPipe.html#example-projects",
     "title": "pipe  →",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3337,7 +3335,7 @@
     "href": "blocks/control/doTellTo.html#example-projects",
     "title": "tell  to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3361,7 +3359,7 @@
     "href": "blocks/control/reportAskFor.html#example-projects",
     "title": "ask  for",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3373,19 +3371,7 @@
     "href": "blocks/control/createClone.html",
     "title": "create a clone of",
     "section": "",
-    "text": "Example Images\nComplete Me\nNo examples yet.",
-    "crumbs": [
-      "Appendices",
-      "Control Blocks",
-      "`create a clone of`"
-    ]
-  },
-  {
-    "objectID": "blocks/control/createClone.html#example-projects",
-    "href": "blocks/control/createClone.html#example-projects",
-    "title": "create a clone of",
-    "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "[ERROR] Could not find partial file: blocks/_block.qmd",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3409,7 +3395,7 @@
     "href": "blocks/control/newClone.html#example-projects",
     "title": "a new clone of",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3433,7 +3419,7 @@
     "href": "blocks/control/removeClone.html#example-projects",
     "title": "delete this clone",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3457,7 +3443,7 @@
     "href": "blocks/control/doPauseAll.html#example-projects",
     "title": "pause all ⏸",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3481,7 +3467,7 @@
     "href": "blocks/control/doSwitchToScene.html#example-projects",
     "title": "switch to scene",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3505,7 +3491,7 @@
     "href": "blocks/control/doDefineBlock.html#example-projects",
     "title": "define",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3529,7 +3515,7 @@
     "href": "blocks/control/doDeleteBlock.html#example-projects",
     "title": "delete block",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3553,7 +3539,7 @@
     "href": "blocks/control/doSetBlockAttribute.html#example-projects",
     "title": "set  of block  to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3577,7 +3563,7 @@
     "href": "blocks/control/reportBlockAttribute.html#example-projects",
     "title": "Attribute Of Block",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3601,7 +3587,7 @@
     "href": "blocks/control/reportEnvironment.html#example-projects",
     "title": "this",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3625,7 +3611,7 @@
     "href": "blocks/control/doSetSlot.html#example-projects",
     "title": "set slot  to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Control Blocks",
@@ -3649,7 +3635,7 @@
     "href": "blocks/sensing/reportTouchingObject.html#example-projects",
     "title": "touching  ?",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3673,7 +3659,7 @@
     "href": "blocks/sensing/reportTouchingColor.html#example-projects",
     "title": "touching  ?",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3697,7 +3683,7 @@
     "href": "blocks/sensing/reportColorIsTouchingColor.html#example-projects",
     "title": "color  is touching  ?",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3721,7 +3707,7 @@
     "href": "blocks/sensing/doAsk.html#example-projects",
     "title": "ask  and wait",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3745,7 +3731,7 @@
     "href": "blocks/sensing/getLastAnswer.html#example-projects",
     "title": "answer",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3769,7 +3755,7 @@
     "href": "blocks/sensing/reportMousePosition.html#example-projects",
     "title": "mouse position",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3793,7 +3779,7 @@
     "href": "blocks/sensing/reportMouseX.html#example-projects",
     "title": "mouse x",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3817,7 +3803,7 @@
     "href": "blocks/sensing/reportMouseY.html#example-projects",
     "title": "mouse y",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3841,7 +3827,7 @@
     "href": "blocks/sensing/reportMouseDown.html#example-projects",
     "title": "mouse down?",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3865,7 +3851,7 @@
     "href": "blocks/sensing/reportKeyPressed.html#example-projects",
     "title": "key  pressed?",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3889,7 +3875,7 @@
     "href": "blocks/sensing/reportRelationTo.html#example-projects",
     "title": "Distance To",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3913,7 +3899,7 @@
     "href": "blocks/sensing/reportAspect.html#example-projects",
     "title": "Color at Location",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3937,7 +3923,7 @@
     "href": "blocks/sensing/doResetTimer.html#example-projects",
     "title": "reset timer",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3961,7 +3947,7 @@
     "href": "blocks/sensing/getTimer.html#example-projects",
     "title": "timer",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -3985,7 +3971,7 @@
     "href": "blocks/sensing/reportDate.html#example-projects",
     "title": "current",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -4009,7 +3995,7 @@
     "href": "blocks/sensing/reportAttributeOf.html#example-projects",
     "title": "Attribute Of",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -4033,7 +4019,7 @@
     "href": "blocks/sensing/reportGet.html#example-projects",
     "title": "my",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -4057,7 +4043,7 @@
     "href": "blocks/sensing/reportObject.html#example-projects",
     "title": "object",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -4081,7 +4067,7 @@
     "href": "blocks/sensing/reportURL.html#example-projects",
     "title": "url",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -4105,7 +4091,7 @@
     "href": "blocks/sensing/reportAudio.html#example-projects",
     "title": "microphone",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -4129,7 +4115,7 @@
     "href": "blocks/sensing/reportVideo.html#example-projects",
     "title": "video  on",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -4153,7 +4139,7 @@
     "href": "blocks/sensing/doSetVideoTransparency.html#example-projects",
     "title": "set video transparency to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -4177,7 +4163,7 @@
     "href": "blocks/sensing/reportGlobalFlag.html#example-projects",
     "title": "is  on?",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -4201,7 +4187,7 @@
     "href": "blocks/sensing/doSetGlobalFlag.html#example-projects",
     "title": "set  to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Sensing Blocks",
@@ -4225,7 +4211,7 @@
     "href": "blocks/other/reifyScript.html#example-projects",
     "title": "Command Ring",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4249,7 +4235,7 @@
     "href": "blocks/other/reifyReporter.html#example-projects",
     "title": "Reporter Ring",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4273,7 +4259,7 @@
     "href": "blocks/other/reifyPredicate.html#example-projects",
     "title": "Predicate Ring",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4297,7 +4283,7 @@
     "href": "blocks/operators/reportVariadicSum.html#example-projects",
     "title": "_",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4321,7 +4307,7 @@
     "href": "blocks/operators/reportDifference.html#example-projects",
     "title": "Subtract",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4345,7 +4331,7 @@
     "href": "blocks/operators/reportVariadicProduct.html#example-projects",
     "title": "_",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4369,7 +4355,7 @@
     "href": "blocks/operators/reportQuotient.html#example-projects",
     "title": "Division",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4393,7 +4379,7 @@
     "href": "blocks/operators/reportPower.html#example-projects",
     "title": "Power of Number",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4417,7 +4403,7 @@
     "href": "blocks/operators/reportModulus.html#example-projects",
     "title": "Mod",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4441,7 +4427,7 @@
     "href": "blocks/operators/reportVariadicMin.html#example-projects",
     "title": "_",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4465,7 +4451,7 @@
     "href": "blocks/operators/reportVariadicMax.html#example-projects",
     "title": "_",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4489,7 +4475,7 @@
     "href": "blocks/operators/reportRound.html#example-projects",
     "title": "round",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4513,7 +4499,7 @@
     "href": "blocks/operators/reportMonadic.html#example-projects",
     "title": "Math Functions",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4537,7 +4523,7 @@
     "href": "blocks/operators/reportAtan2.html#example-projects",
     "title": "atan2  ÷",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4561,7 +4547,7 @@
     "href": "blocks/operators/reportRandom.html#example-projects",
     "title": "pick random  to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4585,7 +4571,7 @@
     "href": "blocks/operators/reportVariadicLessThan.html#example-projects",
     "title": "_",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4609,7 +4595,7 @@
     "href": "blocks/operators/reportVariadicEquals.html#example-projects",
     "title": "_",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4633,7 +4619,7 @@
     "href": "blocks/operators/reportVariadicGreaterThan.html#example-projects",
     "title": "_",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4657,7 +4643,7 @@
     "href": "blocks/operators/reportVariadicAnd.html#example-projects",
     "title": "_",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4681,7 +4667,7 @@
     "href": "blocks/operators/reportVariadicOr.html#example-projects",
     "title": "_",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4705,7 +4691,7 @@
     "href": "blocks/operators/reportNot.html#example-projects",
     "title": "not",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4729,7 +4715,7 @@
     "href": "blocks/operators/reportBoolean.html#example-projects",
     "title": "_",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4753,7 +4739,7 @@
     "href": "blocks/operators/reportJoinWords.html#example-projects",
     "title": "join",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4777,7 +4763,7 @@
     "href": "blocks/operators/reportTextSplit.html#example-projects",
     "title": "split  by",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4801,7 +4787,7 @@
     "href": "blocks/operators/reportLetter.html#example-projects",
     "title": "letter of",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4825,7 +4811,7 @@
     "href": "blocks/operators/reportTextAttribute.html#example-projects",
     "title": "Attribute of Text",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4849,7 +4835,7 @@
     "href": "blocks/operators/reportUnicode.html#example-projects",
     "title": "unicode of",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4873,7 +4859,7 @@
     "href": "blocks/operators/reportUnicodeAsLetter.html#example-projects",
     "title": "unicode  as letter",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4897,7 +4883,7 @@
     "href": "blocks/operators/reportIsA.html#example-projects",
     "title": "is  a  ?",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4921,7 +4907,7 @@
     "href": "blocks/operators/reportVariadicIsIdentical.html#example-projects",
     "title": "is  ?",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Operators Blocks",
@@ -4945,7 +4931,7 @@
     "href": "blocks/variables/doSetVar.html#example-projects",
     "title": "set  to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -4969,7 +4955,7 @@
     "href": "blocks/variables/doChangeVar.html#example-projects",
     "title": "change  by",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -4993,7 +4979,7 @@
     "href": "blocks/variables/doShowVar.html#example-projects",
     "title": "show variable",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5017,7 +5003,7 @@
     "href": "blocks/variables/doHideVar.html#example-projects",
     "title": "hide variable",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5041,7 +5027,7 @@
     "href": "blocks/other/doDeclareVariables.html#example-projects",
     "title": "Script variables",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5065,7 +5051,7 @@
     "href": "blocks/variables/doDeleteAttr.html#example-projects",
     "title": "inherit",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5089,7 +5075,7 @@
     "href": "blocks/lists/reportNewList.html#example-projects",
     "title": "list",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5113,7 +5099,7 @@
     "href": "blocks/lists/reportNumbers.html#example-projects",
     "title": "numbers from  to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5137,7 +5123,7 @@
     "href": "blocks/lists/reportCONS.html#example-projects",
     "title": "In Front Of",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5161,7 +5147,7 @@
     "href": "blocks/lists/reportListItem.html#example-projects",
     "title": "item of",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5185,7 +5171,7 @@
     "href": "blocks/lists/reportCDR.html#example-projects",
     "title": "all but first of",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5209,7 +5195,7 @@
     "href": "blocks/lists/reportListAttribute.html#example-projects",
     "title": "Report List Attribute",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5233,7 +5219,7 @@
     "href": "blocks/lists/reportListIndex.html#example-projects",
     "title": "index of in",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5257,7 +5243,7 @@
     "href": "blocks/lists/reportListContainsItem.html#example-projects",
     "title": "List Contains",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5281,7 +5267,7 @@
     "href": "blocks/lists/reportListIsEmpty.html#example-projects",
     "title": "is  empty?",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5305,7 +5291,7 @@
     "href": "blocks/lists/reportMap.html#example-projects",
     "title": "map  over",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5329,7 +5315,7 @@
     "href": "blocks/lists/reportKeep.html#example-projects",
     "title": "keep items  from",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5353,7 +5339,7 @@
     "href": "blocks/lists/reportFindFirst.html#example-projects",
     "title": "find first item in",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5377,7 +5363,7 @@
     "href": "blocks/lists/reportCombine.html#example-projects",
     "title": "combine  using",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5401,7 +5387,7 @@
     "href": "blocks/lists/doForEach.html#example-projects",
     "title": "for each in",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5425,7 +5411,7 @@
     "href": "blocks/lists/doAddToList.html#example-projects",
     "title": "add  to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5449,7 +5435,7 @@
     "href": "blocks/lists/doDeleteFromList.html#example-projects",
     "title": "delete of",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5473,7 +5459,7 @@
     "href": "blocks/lists/doInsertInList.html#example-projects",
     "title": "insert  at of",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5497,7 +5483,7 @@
     "href": "blocks/lists/doReplaceInList.html#example-projects",
     "title": "replace item of with",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5521,7 +5507,7 @@
     "href": "blocks/lists/reportConcatenatedLists.html#example-projects",
     "title": "append",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5545,7 +5531,7 @@
     "href": "blocks/lists/reportReshape.html#example-projects",
     "title": "reshape  to",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5569,7 +5555,7 @@
     "href": "blocks/lists/reportCrossproduct.html#example-projects",
     "title": "combinations",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Variables Blocks",
@@ -5593,7 +5579,7 @@
     "href": "blocks/operators/reportJSFunction.html#example-projects",
     "title": "JavaScript Function",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Advanced and Hidden Blocks",
@@ -5617,7 +5603,7 @@
     "href": "blocks/other/doPrimitive.html#example-projects",
     "title": "enable primitive",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Advanced and Hidden Blocks",
@@ -5641,7 +5627,7 @@
     "href": "blocks/other/doApplyExtension.html#example-projects",
     "title": "apply xtension",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Advanced and Hidden Blocks",
@@ -5665,7 +5651,7 @@
     "href": "blocks/other/reportApplyExtension.html#example-projects",
     "title": "report extension",
     "section": "Example Projects",
-    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\n\nExample Project 1\nExample Project 1\n\n\nIndividual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.",
+    "text": "Example Projects\nThese example projects show the block in the context of a larger project. They will contain other blcoks, too.\nNo examples yet.\n\nIndividual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap forum.",
     "crumbs": [
       "Appendices",
       "Advanced and Hidden Blocks",

@@ -1608,11 +1608,34 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<!-- Dev Notes:
+This partial is used to render all blocks.
+We don't currently expost most of the 'metadata' about blocks, because not
+a lot of it is written...
+
+  block_description: Complete Me
+  label: "create a clone of _"
+  block_spec: "create a clone of %cln"
+  help_screen: "createClone.png"
+  selector: "createClone"
+  type: command
+  category: control
+  arguments:
+    - name: distance
+      type: number
+      default: 10
+      description: The distance to move forward
+  returns: None
+-->
 <p>Complete Me</p>
-<p><img src="../../blocks/images/block_reportBlockAttribute.png" class="img-fluid" alt="The “” block"><br>
-</p>
-<p><img src="../help/reportBlockAttribute.png" class="img-fluid" alt="help screen for the block “”"><br>
-</p>
+<figure class="figure">
+<img src="../../blocks/images/block_reportBlockAttribute.png" class="img-fluid figure-img" alt="The “_ of block _” block">
+<figcaption aria-hidden="true">The “_ of block _” block</figcaption>
+</figure>
+<figure class="figure">
+<img src="../help/reportBlockAttribute.png" class="img-fluid figure-img" alt="help screen for the block “_ of block _”">
+<figcaption aria-hidden="true">help screen for the block “_ of block _”</figcaption>
+</figure>
 <section id="example-images" class="level2">
 <h2 class="anchored" data-anchor-id="example-images">Example Images</h2>
 <p>No examples yet.</p>
@@ -1620,12 +1643,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="example-projects" class="level2">
 <h2 class="anchored" data-anchor-id="example-projects">Example Projects</h2>
 <p>These example projects show the block in the context of a larger project. They will contain other blcoks, too.</p>
-<ul>
-<li><p><a href="https://example.com/project1">Example Project 1</a></p></li>
-<li><p><a href="https://example.com/project1">Example Project 1</a></p></li>
-</ul>
+<p>No examples yet.</p>
 <hr>
-<p><em>Individual pages for each block a new. Most blocks don’t yet additional links and images. If you have any questions, please post in the Snap! forum.</em></p>
+<p><em>Individual pages for each block are new. Most blocks don’t yet additional links and images. If you have any questions, please post in the <span class="snap">Snap</span> <a href="https://forum.snap.berkeley.edu/c/help/snap-help/49">forum</a>.</em></p>
 
 
 </section>
