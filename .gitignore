@@ -12,14 +12,47 @@ _build
 
 # Quarto
 /env/
-.quarto/*
 _book
+.quarto/
+.quarto
 
 # Custom Index Rendering Files.
 _index_entries.txt
-content/**/*.pdf
-content/**/*.tex
-content/**/*.html
+# Temporary rendering files.
+# This seems like a giant hack... investigate later.
+0*/**/*.pdf
+0*/**/*.tex
+0*/**/*.html
+1*/**/*.pdf
+1*/**/*.tex
+1*/**/*.html
+2*/**/*.pdf
+2*/**/*.tex
+2*/**/*.html
+3*/**/*.pdf
+3*/**/*.tex
+3*/**/*.html
+4*/**/*.pdf
+4*/**/*.tex
+4*/**/*.html
+5*/**/*.pdf
+5*/**/*.tex
+5*/**/*.html
+6*/**/*.pdf
+6*/**/*.tex
+6*/**/*.html
+7*/**/*.pdf
+7*/**/*.tex
+7*/**/*.html
+8*/**/*.pdf
+8*/**/*.tex
+8*/**/*.html
+9*/**/*.pdf
+9*/**/*.tex
+9*/**/*.html
+appendix/**/*.pdf
+appendix/**/*.tex
+appendix/**/*.html
 blocks/**/*.pdf
 blocks/**/*.tex
 blocks/**/*.html
@@ -45,7 +78,5 @@ conversion/chapters/*
 # Utils while building...
 _index_entries.txt
 index-list.quarto_ipynb
-
-.quarto/
 
 /.quarto/

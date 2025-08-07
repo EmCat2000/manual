@@ -4,13 +4,14 @@ project:
   preview:
     port: 8081
     browser: true
-    watch-inputs: false
+    watch-inputs: true
     navigate: false
   # These files are included in the published website.
   resources:
     - CNAME
     - LICENSE
     - README.md
+    - SnapManual.pdf
   # pre-render:
   #   - blocks/render-block-files.py
   # post-render:
@@ -26,18 +27,14 @@ format:
   html:
     aria: true # requires quarto-dev / v1.8+
     toc: true
-    roman-numerals: true
-    section-numbering:
-      style: roman
-      roman-numerals: true
     filters:
-      - scripts/collect-index.lua
+      - _support/scripts/collect-index.lua
     link-external-icon: true
     link-external-newwindow: true
     smooth-scroll: true
     theme:
       - default
-      - styles/snap-manual.scss
+      - _support/styles/snap-manual.scss
     fontsize: 16px
     # mainfont:
     # monofont:
@@ -62,7 +59,7 @@ format:
           </script>
     # TODO: Customize footer. Add berkeley + SAP links.
   # epub:
-  #   css: styles/epub.css
+  #   css: _support/styles/epub.css
   #   cover-image: cover.png
   pdf:
     lang: en
@@ -75,7 +72,7 @@ format:
     # pdf-engine-opt:
     keep-tex: false
     # This are necessary to make an index.
-    include-in-header: styles/latex-preamble.tex
+    include-in-header: _support/styles/latex-preamble.tex
     include-after-body:
       text: |
         \printindex
@@ -90,8 +87,7 @@ format:
     # sansfont: Helvetica
     resource-path:
       - ./
-      - content/assets/
-      - content/assets/images/
+      - images/
       - blocks/images/
       - blocks/help/
 
@@ -132,28 +128,28 @@ book:
   repo-actions: none # [edit]
   chapters:
     - index.qmd
-    - content/00-acknowledgements/index.md
-    - content/01-blocks-scripts-and-sprites/index.md
-    - content/02-saving-and-loading-projects-and/index.md
-    - content/03-building-a-block/index.md
-    - content/04-first-class-lists/index.md
-    - content/05-typed-inputs/index.md
-    - content/06-procedures-as-data/index.md
-    - content/07-object-oriented-programming-with-sprites/index.md
-    - content/08-oop-with-procedures/index.md
-    - content/09-the-outside-world/index.md
-    - content/10-continuations/index.md
-    - content/11-metaprogramming/index.md
-    - content/12-user-interface-elements/index.md
+    - 00-acknowledgements/index.md
+    - 01-blocks-scripts-and-sprites/index.md
+    - 02-saving-and-loading-projects-and/index.md
+    - 03-building-a-block/index.md
+    - 04-first-class-lists/index.md
+    - 05-typed-inputs/index.md
+    - 06-procedures-as-data/index.md
+    - 07-object-oriented-programming-with-sprites/index.md
+    - 08-oop-with-procedures/index.md
+    - 09-the-outside-world/index.md
+    - 10-continuations/index.md
+    - 11-metaprogramming/index.md
+    - 12-user-interface-elements/index.md
   appendices:
-    - content/13-appendix-a-snap-color-library/index.md
-    - content/14-appendix-b-apl-features/index.md
+    - appendix/a-snap-color-library/index.md
+    - appendix/b-apl-features/index.md
     # TODO: SciSnap! and TuneScope libraries
     - part: The Snap! Community Site
       chapters:
-        - content/13-community-site/index.md
-        - content/13-community-site/students.md
-        - content/13-community-site/teachers.md
+        - appendix/community/index.md
+        - appendix/community/students.md
+        - appendix/community/teachers.md
     - blocks/index.md
     - part: Motion Blocks
       chapters:

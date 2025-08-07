@@ -1,7 +1,8 @@
 ---
-title: All Snap<em>!</em> Blocks Reference
 page-layout: full
 ---
+
+# All Snap<em>!</em> Blocks Reference {.unnumbered}
 
 <!--
 The table below is currently generated from
