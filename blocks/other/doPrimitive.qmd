@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "_ primitive _"
   block_spec: "%bool primitive %prim"
-  help_screen: "doPrimitive.png"
+  # help_screen: "doPrimitive.png"
+  help_screen: BLANK.png
   selector: "doPrimitive"
   type: command
   category: other

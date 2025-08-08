@@ -4,8 +4,9 @@ partial-data:
   block_description: Complete Me
   label: "skew _ to _ degrees _ %"
   block_spec: "skew %cst to %dir degrees %n %"
-  help_screen: "reportNewCostumeSkewed.png"
-  selector: "reportNewCostumeSkewed"
+  # help_screen: "reportNewCostumeSkewed.png"
+  help_screen: BLANK.png
+  selector: reportNewCostumeSkewed
   type: reporter
   category: looks
   arguments:

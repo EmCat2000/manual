@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "_"
   block_spec: "%min"
-  help_screen: "reportVariadicMin.png"
+  # help_screen: "reportVariadicMin.png"
+  help_screen: BLANK.png
   selector: "reportVariadicMin"
   type: reporter
   category: operators

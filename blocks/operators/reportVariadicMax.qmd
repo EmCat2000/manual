@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "_"
   block_spec: "%max"
-  help_screen: "reportVariadicMax.png"
+  # help_screen: "reportVariadicMax.png"
+  help_screen: BLANK.png
   selector: "reportVariadicMax"
   type: reporter
   category: operators

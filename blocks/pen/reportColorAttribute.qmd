@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "_ of color _"
   block_spec: "%color of color %clr"
-  help_screen: "reportColorAttribute.png"
+  # help_screen: "reportColorAttribute.png"
+  help_screen: BLANK.png
   selector: "reportColorAttribute"
   type: reporter
   category: pen

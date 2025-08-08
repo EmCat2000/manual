@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "mouse position"
   block_spec: "mouse position"
-  help_screen: "reportMousePosition.png"
+  # help_screen: "reportMousePosition.png"
+  help_screen: BLANK.png
   selector: "reportMousePosition"
   type: reporter
   category: sensing

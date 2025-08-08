@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "new sound _ rate _ Hz"
   block_spec: "new sound %l rate %rate Hz"
-  help_screen: "reportNewSoundFromSamples.png"
+  # help_screen: "reportNewSoundFromSamples.png"
+  help_screen: BLANK.png
   selector: "reportNewSoundFromSamples"
   type: reporter
   category: sound

@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "new color _"
   block_spec: "new color %hsbt"
-  help_screen: "reportNewColor.png"
+  # help_screen: "reportNewColor.png"
+  help_screen: BLANK.png
   selector: "reportNewColor"
   type: reporter
   category: pen

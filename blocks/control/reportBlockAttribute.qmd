@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "_ of block _"
   block_spec: "%block of block %repRing"
-  help_screen: "reportBlockAttribute.png"
+  # help_screen: "reportBlockAttribute.png"
+  help_screen: BLANK.png
   selector: "reportBlockAttribute"
   type: reporter
   category: control

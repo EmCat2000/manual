@@ -4,7 +4,7 @@ partial-data:
   block_description: Complete Me
   label: "pipe _ $arrowRight _"
   block_spec: "pipe %s $arrowRight %mult%repRing"
-  help_screen: "reportPipe.png"
+  help_screen: BLANK.png
   selector: "reportPipe"
   type: reporter
   category: control
@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `pipe  →` { .unnumbered }
+# `pipe →` { .unnumbered }
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

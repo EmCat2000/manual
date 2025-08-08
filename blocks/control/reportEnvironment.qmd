@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "this _"
   block_spec: "this %env"
-  help_screen: "reportEnvironment.png"
+  # help_screen: "reportEnvironment.png"
+  help_screen: BLANK.png
   selector: "reportEnvironment"
   type: reporter
   category: control

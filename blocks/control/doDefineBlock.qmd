@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "define _ _ _"
   block_spec: "define %upvar %s %repRing"
-  help_screen: "doDefineBlock.png"
+  # help_screen: "doDefineBlock.png"
+  help_screen: BLANK.png
   selector: "doDefineBlock"
   type: command
   category: control

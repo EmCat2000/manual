@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "extension _ _"
   block_spec: "extension %ext %mult%s"
-  help_screen: "doApplyExtension.png"
+  # help_screen: "doApplyExtension.png"
+  help_screen: BLANK.png
   selector: "doApplyExtension"
   type: command
   category: other

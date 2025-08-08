@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "when _ is edited _"
   block_spec: "when %edit is edited %message"
-  help_screen: "receiveUserEdit.png"
+  # help_screen: "receiveUserEdit.png"
+  help_screen: BLANK.png
   selector: "receiveUserEdit"
   type: hat
   category: control

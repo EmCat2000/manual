@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "set _ of block _ to _"
   block_spec: "set %byob of block %repRing to %s"
-  help_screen: "doSetBlockAttribute.png"
+  # help_screen: "doSetBlockAttribute.png"
+  help_screen: BLANK.png
   selector: "doSetBlockAttribute"
   type: command
   category: control

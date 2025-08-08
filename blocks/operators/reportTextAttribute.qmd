@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "_ of text _"
   block_spec: "%ta of text %s"
-  help_screen: "reportTextAttribute.png"
+  # help_screen: "reportTextAttribute.png"
+  help_screen: BLANK.png
   selector: "reportTextAttribute"
   type: reporter
   category: operators

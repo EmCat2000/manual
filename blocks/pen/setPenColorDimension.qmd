@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "set pen _ to _"
   block_spec: "set pen %clrdim to %n"
-  help_screen: "setPenColorDimension.png"
+  # help_screen: "setPenColorDimension.png"
+  help_screen: BLANK.png
   selector: "setPenColorDimension"
   type: command
   category: pen

@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "set slot _ to _"
   block_spec: "set slot %inputSlot to %s"
-  help_screen: "doSetSlot.png"
+  # help_screen: "doSetSlot.png"
+  help_screen: BLANK.png
   selector: "doSetSlot"
   type: command
   category: control
