@@ -29,7 +29,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `Attribute of Text`
+# `Attribute of Text` {.unnumbered}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

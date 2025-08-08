@@ -86,13 +86,14 @@ format:
     toc: true
     number-sections: true
     number-depth: 2
+    # https://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/koma-script/doc/scrguide-en.pdf
+    documentclass: scrbook
     # documentclass: scrreport
     classoption:
       - 11pt
       # These should be disabled for the final version.
       # - draft=true
       - overfullrule=true
-    documentclass: scrbook
     papersize: letter
     # TODO: In order to enable fonts, they need to be added to the GitHub Workflow.
     mainfont: Times New Roman
