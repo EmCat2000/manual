@@ -110,6 +110,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .image-inline {
   padding: 0;
+  width: auto;
+  max-width: auto;
+  max-height: 1.6em;
   line-height: 1.8;
   vertical-align: middle;
 }

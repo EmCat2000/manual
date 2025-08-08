@@ -16,7 +16,8 @@ _book
 .quarto/
 .quarto
 .jupyter_cache
-.quarto_ipynb
+*.quarto_ipynb
+*_files/
 
 # Custom Index Rendering Files.
 _index_entries.txt
