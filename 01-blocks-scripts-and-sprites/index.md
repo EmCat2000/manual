@@ -21,7 +21,7 @@ arrangement of regions\index{layout, window} in the window:
 (The proportions of these areas may be different, depending on the size
 and shape of your browser window.)
 
-A [Snap]{.snap} program\index{ Snap! program} consists of one or more
+A [Snap]{.snap} program\index{"Snap! program"} consists of one or more
 *scripts,* each of which is made of *blocks.* Here’s a typical script
 \index{script} :
 
@@ -54,15 +54,24 @@ be run when the green flag\index{flag, green} near the right end of the
 [Snap]{.snap} tool bar\index{tool bar} is clicked. (The [Snap]{.snap} tool bar is
 part of the [Snap]{.snap} window, not the same as the browser’s or operating
 system’s menu bar.) A script isn’t required to have a hat block
-\index{block:hat}, but if not, then the script will be run only if the
+\index{block!hat}, but if not, then the script will be run only if the
 user clicks on the script itself. A script can’t have more than one hat
 block, and the hat block can be used only at the top of the script; its
 distinctive shape is meant to remind you of
-that.[1]<span id="generic_when" class="anchor"></span>
+that.[^1]
 
-The
-other blocks in our example script are *command* blocks
-\index{block:command}. Each command block \index{command block}
+[^1]: One of the hat blocks, the generic\index{hat block!generic} “when
+anything” block , is subtly different from the others. When the stop
+sign is clicked, or when a project or sprite is loaded, this block
+doesn’t test whether the condition in its hexagonal input slot is true,
+so the script beneath it will not run, until some *other* script in the
+project runs (because, for example, you click the green flag). When
+generic when\index{generic when} blocks are disabled, the stop sign
+\index{stop sign, square} will be square\index{square stop sign}
+instead of octagonal.
+
+The other blocks in our example script are *command* blocks
+\index{block!command}. Each command block \index{command block}
 corresponds to an action that [Snap]{.snap} already knows how to carry out.
 For example, the block ![image9.png](assets/image9.png) <!--  style="width:1.16667in;height:0.25in" / --> tells the sprite\index{sprite} (the arrowhead
 shape on the *stage*\index{stage} at the right end of the window) to
@@ -71,11 +80,9 @@ direction in which the arrowhead is pointing. We’ll see shortly that
 there can be more than one sprite, and that each sprite has its own
 scripts. Also, a sprite doesn’t have to look like an arrowhead, but can
 have any picture as a *costume.* \index{costume} The shape of the
-move block is meant to remind you of a Lego™ brick; a script \index{script} is a stack
-of blocks \index{stack of blocks}. (The word “block” denotes both the
-graphical shape on the screen and the procedure \index{procedure}, the action, that the
-block carries out.)
-
+move block is meant to remind you of a Lego™ brick; a script \index{script} is a stack of blocks \index{stack of blocks}. (The word “block” denotes both the
+graphical shape on the screen and the procedure \index{procedure},
+the action, that the block carries out.)
 
 The number 10 in the `move` block above is called an *input* to the block. By
 clicking on the white oval, you can type any number in place of the 10.
@@ -90,7 +97,7 @@ One of the hat blocks, the generic `when` (“when anything”) block ![image10.
 
 Most command blocks have that brick shape, but some, like the `repeat`
 block \index{repeat block} in the sample script, are *C‑shaped.* Most
-C-shaped blocks \index{block:C-shaped} \index{C-shaped block} are found
+C-shaped blocks \index{block!C-shaped} \index{C-shaped block} are found
 in the Control palette \index{Control palette}. The slot inside the C
 shape is a special kind of input slot that accepts a *script* as the
 input.
@@ -293,7 +300,7 @@ the arm synchronous (left) and dangling (right).*
 ## Reporter Blocks and Expressions
 
 So
-far, we’ve used two kinds of blocks \index{block:reporter}: hat blocks
+far, we’ve used two kinds of blocks \index{block!reporter}: hat blocks
 and command blocks. Another kind is the *reporter* block, \index{Reporter
 block} which has an oval shape: ![image66.png](assets/image66.png) <!--  style="width:0.72917in;height:0.15625in" / --> . It’s called a “reporter” because
 when it’s run, instead of carrying out an action, it reports a value
@@ -345,7 +352,7 @@ blocks, such as ![image81.png](assets/image81.png) <!--  style="width:1.91667in;
 ##  Predicates and Conditional Evaluation
 
 Most
-reporters report\index{block:predicate} either a number, like ![image82.png](assets/image82.png) <!--  style="width:0.66667in;height:0.1875in" / -->, or a
+reporters report\index{block!predicate} either a number, like ![image82.png](assets/image82.png) <!--  style="width:0.66667in;height:0.1875in" / -->, or a
 text string, like
 ![image83.png](assets/image83.png) <!--  style="width:1.20833in;height:0.1875in" / --> . A *predicate* is a special kind of reporter that
 always reports true or false. Predicates \index{Predicate block} have a
@@ -441,7 +448,7 @@ tend to use letters between <var>i</var> and <var>n</var> to represent integer v
 programming languages we don’t have to restrict ourselves to
 single-letter variable names.)
 
-### Global Variable\index{variable:global}s\index{global variable}
+### Global Variable\index{variable!global}s\index{global variable}
 
 You can create variables “by hand” that aren’t limited to being used
 within a single block. At the top of the Variables palette, click the
@@ -494,7 +501,7 @@ when creating a variable, its block in the palette looks like this:![image101.pn
 
 The *location*-pin
 \index{location-pin} icon is a bit of a pun on a sprite-*local* variable
-\index{variable:sprite-local}. It’s shown only in the palette.
+\index{variable!sprite-local}. It’s shown only in the palette.
 
 ### Script Variables
 
@@ -504,7 +511,7 @@ their name throughout the project. That’s a good example of a situation
 in which a *global* variable\index{global variable} (the kind you make
 with the “Make a variable” button) is appropriate. Another common
 example is a variable called “score” in a game project. But sometimes
-you only need a variable\index{variable:script-local} temporarily,
+you only need a variable\index{variable!script-local} temporarily,
 during the running of a particular script. In that case you can use the
 script variables block\index{script variables block} to make the
 variable:
@@ -561,7 +568,7 @@ all,” then the name will be changed throughout the scope of the variable
 
 
 
-### Transient variables\index{variable:transient}
+### Transient variables\index{variable!transient}
 
 So far we’ve talked about
 variables with numeric values, or with short text strings such as
@@ -600,7 +607,7 @@ that you can examine the values of variables.
 ### The pause button
 
 The simplest way to pause a
-program is manually, by clicking the pause button ![image116.png](assets/image116.png) <!--  style="width:0.29167in;height:0.16667in" / -->\index{button:pause}
+program is manually, by clicking the pause button ![image116.png](assets/image116.png) <!--  style="width:0.29167in;height:0.16667in" / -->\index{button!pause}
 in the top right corner of the window. While the program is paused, you
 can run other scripts by clicking on them, show variables on stage with
 the checkbox next to the variable in the Variables palette or with the
@@ -642,19 +649,25 @@ variable <var>zot</var> comes from outside the script but is relevant to its
 behavior.) When you continue (with the pause button), the temporary
 variable watchers are removed by this breakpoint block before resuming
 the script. The breakpoint block isn’t magic; you could alternatively
-just put a `pause all` inside an `if`.[2]
+just put a `pause all` inside an `if`.[^2]
 
-The `hide variable` and `show variable` blocks can also be used to hide and show primitives in the palette.  The pulldown menu doesn’t include primitive blocks, but there’s a generally useful technique to give a block input values it wasn’t expecting using `run` \index{run block} or `call`: /index{call block} ![image120.png](assets/image120.png) <!--  style="width:1.19444in;height:1.33333in" / -->
-In order to use a block as an input this way, you must explicitly put a ring \index{ring} around it, by right-clicking on it and choosing ringify. More about rings in Chapter: Typed Inputs.
-
+[^2]: The hide variable and\index{hide variable block} show variable
+block\index{show variable block} s can also be used to hide and show
+primitives\index{hide and show primitives} in the palette. The pulldown
+menu doesn’t include primitive blocks, but there’s a generally useful
+technique to give a block input values it wasn’t expecting using run or
+call:![image120.png](assets/image120.png) <!--  style="width:3.9375in;height:0.38889in" / --> <br>
+In order to use a block as an input this way, you must explicitly put a
+ring around it, by right-clicking on it and choosing ringify. More about
+rings in Chapter VI.
 
 ### Visible stepping \index{visible stepping}
 
-Sometimes you’re not exactly
-sure where the error is, or you don’t understand how the program got
-there. To understand better, you’d like to watch the program as it runs,
-at human speed rather than at computer speed. You can do this by
-clicking the *visible stepping* \index{button:visible stepping} button \index{visible stepping button} (![image121.png](assets/image121.png) <!--  style="width:0.29167in;height:0.16667in" / --> ), before running a script or
+Sometimes you’re not exactly sure where the error is, or you don’t
+understand how the program got there. To understand better, you’d
+like to watch the program as it runs, at human speed rather than
+at computer speed. You can do this by
+clicking the *visible stepping* \index{button!visible stepping} button \index{visible stepping button} (![image121.png](assets/image121.png) <!--  style="width:0.29167in;height:0.16667in" / --> ), before running a script or
 while the script is paused. The button will light up ( ![image123.png](assets/image123.png) <!--  style="width:0.29167in;height:0.16667in" / --> ) and a speed
 control slider ![image122.png](assets/image122.png) <!--  style="width:0.54563in;height:0.15278in" / --> will appear in the toolbar. When you start or continue
 the script, its blocks and input slots will light up cyan one at a time:
@@ -668,7 +681,7 @@ that the input to a block is evaluated before the block itself is
 called, so, for example, the 100 lights up before the move.
 
 The speed of stepping is
-controlled by the slider\index{slider:stepping speed}. If you move the
+controlled by the slider\index{slider!stepping speed}. If you move the
 slider all the way to the left, the speed is zero, the pause button
 turns into a step button ![image134.png](assets/image134.png) <!--  style="width:0.29167in;height:0.16667in" / --> , and the script takes a single step each time
 you push it. The name for this is *single stepping.* \index{single
@@ -805,7 +818,7 @@ can provide additional inputs.
 ![image177.png](assets/image177.png) <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated with medium confidence" / -->
 ![image178.png](assets/image178.png) <!--  style="width:0.63in;height:0.19in" alt="A picture containing text, monitor, screenshot Description automatically generated" / -->
 ![image179.png](assets/image179.png) <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated" / -->  Similarly, these
-\index{≤ block} hidden predicates can be found by relabeling the
+\index{*less-than-or-equal@\texttt{≤} block} hidden predicates can be found by relabeling the
 relational predicates.
 
 **Metaprogramming (see Chapter XI.** **, page [101](#metaprogramming))**
@@ -1013,7 +1026,7 @@ list library\index{list library} has these blocks:
 
 ![image387.png](assets/image387.png) <!--  style="width:1.84861in;height:2.49236in" / -->
 
-(The lightning bolt (⚡️) \index{⚡️ (lightning bolt)} before the name in several of these
+(The lightning bolt (⚡️) \index{*lightning-bolt@⚡️ (lightning bolt)} before the name in several of these
 blocks means that they use compiled HOFs or JavaScript primitives to achieve
 optimal speed. They are officially considered experimental.) `Remove duplicates from` \index{remove duplicates from block} reports a list in
 which no two items are equal. The `sort` \index{sort block} block takes a
@@ -1026,7 +1039,7 @@ the block reports the first key-value pair whose key is equal to the
 input key.
 
 `For each item` \index{for each item block} is a variant of the primitive
-version that provides a \# variable \index{# variable} containing the
+version that provides a \# variable \index{$\#$ variable} containing the
 position in the input list of the currently considered item. `Multimap`
 \index{multimap block} is a version of `map` that allows multiple list
 inputs, in which case the mapping function must take as many inputs as
@@ -1035,8 +1048,8 @@ second items, and so on. `Zip` takes any number of lists as inputs; it
 reports a list of lists: all the first items, all the second items, and
 so on. The `no-name` identity function reports its input.
 
-`Sentence`\index{`sentence` block} and `sentence ➔ list`
-\index{`sentence ➔ list` block} are borrowed from the [word and sentence library](#word-and-sentence-library) to serve as a variant of append that accepts non-lists
+`Sentence`\index{sentence block@$sentence$ block} and `sentence ➔ list`
+\index{sentence ➔ list@\texttt{sentence ➔ list} block} are borrowed from the [word and sentence library](#word-and-sentence-library) to serve as a variant of append that accepts non-lists
 as inputs. `Printable` takes a list structure of any depth as input and
 reports a compact representation of the list as a text string.
 
@@ -1046,24 +1059,24 @@ blocks:
 ![image388.png](assets/image388.png) <!--  style="width:1.68889in;height:4.75in" / -->
 ![image389.png](assets/image389.png) <!--  style="width:1.04444in;height:0.16111in" / -->
 
-`Catch`\index{`catch` block} and `throw` \index{`throw` block} provide a nonlocal
+`Catch`\index{$catch$ block} and `throw` \index{$throw$ block} provide a nonlocal
 exit facility. You can drag the tag from a `catch` block to a `throw` inside
 its C-slot, and the throw will then jump directly out to the matching
 catch without doing anything in between.
 
-`If do and pause all` \index{if do and pause all block} is for setting a
+`If do and pause all` \index{$if do and pause all$ block} is for setting a
 breakpoint while debugging code. The idea is to put show variable blocks
 for local variables in the C-slot; the watchers will be deleted when the
 user continues from the pause.
 
-`Ignore` \index{ignore block} is used when you need to call a reporter but
+`Ignore` \index{$ignore$ block} is used when you need to call a reporter but
 you don’t care about the value it reports. (For example, you are writing
 a script to time how long the reporter takes.)
 
 The `cascade` \index{cascade blocks} blocks take an initial value and call
 a function repeatedly on that value, *f*(*f*(*f*(*f*…(*x*)))).
 
-The `compose` \index{compose block} block takes two functions and reports
+The `compose` \index{$compose$ block} block takes two functions and reports
 the function *f*(*g*(*x*)).
 
 The first three repeat blocks
@@ -1072,7 +1085,7 @@ giving all four combinations of whether the first test happens before or
 after the first repetition, and whether the condition must be true or
 false to continue repeating. The last repeat block is like the `repeat`
 primitive, but makes the number of repetitions so far available to the
-repeated script. The next two blocks are variations on `for` \index{for
+repeated script. The next two blocks are variations on `for` \index{$for$
 block} : the first allows an explicit step instead of using ±1, and the
 second allows any values, not just numbers; inside the script you say
 
@@ -1114,7 +1127,7 @@ The **word and sentence library** \index{sentence library} has these blocks:
 
 <!-- TODO: Index Entries for all these blocks -->
 ![image394.png](assets/image394.png)
-\index{`word ➔ list` block}
+\index{$word ➔ list$ block}
 
 This library has the goal of recreating the Logo approach to handling text:
 A text isn’t best viewed as a string of characters, but rather as a *sentence*, made of *words,*
@@ -1483,9 +1496,8 @@ of functions applicable to Scheme numbers, including subtype predicates
 such as rational? and infinite?, and selectors such as numerator and
 real-part.
 
-The `!` block \index{! block} computes the factorial function
-\index{factorial }, useful to test whether bignums are turned on.
-Without bignums:
+<!-- I cannot figure out an index format that compiles this... \index{"\! block"@\texttt{\!} block}  -->
+The `!` block computes the factorial function\index{factorial}, useful to test whether bignums are turned on. Without bignums:
 
 ![image455.png](assets/image455.png) <!--  style="width:0.29167in;height:0.16667in" / -->
 
@@ -1605,7 +1617,7 @@ block} takes some text in JSON format (see page
 [54](#multi-dimensional-lists-and-json)) and converts it to a structured
 list. `Value at key` \index{value at key block} looks up a key-value pair
 in a (listified) JSON dictionary. The `key:value:` block
-\index{key:value: block} is just a constructor for an abstract data
+\index{$key:value:$ block} is just a constructor for an abstract data
 type used with the other blocks
 
 The database library\index{database library} contains these blocks:
@@ -1653,8 +1665,7 @@ The  **list comprehension library** \index{list comprehension library} has one b
 
 ![image476.png](assets/image476.png) <!--  style="width:1.2in;height:0.48958in" alt="Logo Description automatically generated" / -->
 
-Its
-first input is a function of two inputs. The two Any-type inputs are
+Its first input is a function of two inputs. The two Any-type inputs are
 deep lists (lists of lists of…) interpreted as trees, and the function
 is called with every possible combination of a leaf node of the first
 tree and a leaf node of the second tree. But instead of taking atoms
@@ -1664,13 +1675,11 @@ The Number-type inputs specify the leaf dimension for each tree, so the
 function input might be called with a vector from the first tree and an
 atom from the second tree.
 
-
-
-The **bitwise library**
-\index{bitwise library} provides bitwise logic functions; each bit of
+The **bitwise library**\index{bitwise library} provides bitwise
+logic functions; each bit of
 the reported value is the result of applying the corresponding Boolean
 function to the corresponding bits of the input(s). The Boolean
-functions are  `not for ¬`, ` and for ∧`, ` or for ∨`, and `xor (exclusive or) for
+functions are `not for ¬`, ` and for ∧`, ` or for ∨`, and `xor (exclusive or) for
 ⊻` . The remaining functions shift their first input left or right by the
 number of bits given by the second input. `\<\<` is left shift, `\>\>` is
 arithmetic right shift (shifting in one bits from the left), and `\>\>\>`
@@ -1697,8 +1706,8 @@ to take lists as inputs. See page [24](#ask_lists).
 
 ![image486.png](assets/image486.png) <!--  style="width:3.39in;height:1.9in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / -->
 
-The **Sci[Snap]{.snap} library**\index{SciSnap! library} and the **TuneScope
-library**\index{TuneScope library} are too big to discuss here and are
+The **Sci[Snap]{.snap} library**\index{SciSnap@"SciSnap! library"} and the **TuneScope
+library**\index{TuneScope@"TuneScope library"} are too big to discuss here and are
 documented separately at
 <http://emu-online.de/ProgrammingWithSciSnap.pdf> and
 <https://maketolearn.org/creating-art-animations-and-music/>

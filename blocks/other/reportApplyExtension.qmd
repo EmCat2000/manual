@@ -28,4 +28,11 @@ partial-data:
 
 # `report extension` { .unnumbered }
 
-{{< partial ../_block.qmd >}}
+<!-- {{< partial blocks/_block.qmd >}} -->
+```{python}
+#| echo: false
+#| output: asis
+import sys; sys.path.append('_support')
+from block_renderer import render_block
+render_block()
+```

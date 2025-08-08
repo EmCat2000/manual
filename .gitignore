@@ -61,7 +61,6 @@ blocks/**/*.html
 
 site_libs/
 
-
 # LaTex Complication Messes
 *.aux
 *.log
@@ -70,6 +69,10 @@ site_libs/
 *.ilg
 *.ind
 *.out
+*.xdv
+*.fdb_latexmk
+*.fls
+*.synctex.gz
 
 # Conversion
 conversion/chapters/*

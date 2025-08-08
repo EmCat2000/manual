@@ -1,0 +1,21 @@
+% This file is loaded at the beginning of the Snap! manual PDF.
+
+% TODO: Image and font customizations.
+% \documentclass[11pt]{report}
+% \usepackage[fontsize=11bp]{scrextend}
+\usepackage{fontspec}
+\usepackage[paperheight=11in,
+   paperwidth=8.5in,
+   top=1cm,
+   bottom=1.5cm,
+   left=1cm,
+   right=1cm]{geometry}
+
+% https://www.overleaf.com/learn/latex/Indices
+\usepackage{imakeidx}
+\usepackage{tocbibind}
+
+% \fontsize{12}{13.5}\selectfont
+
+\makeindex[intoc=true, columns=2, options=-s _support/tex/index-style.ist]
+% \makeindex[intoc=true, columns=2, options=-s ./index-style.ist]

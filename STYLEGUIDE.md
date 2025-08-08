@@ -7,10 +7,13 @@
 * Monospaced text should use the CSS class `.mono` e.g. `[text here]{.mono}`
 * Do not put spaces around index entries. `text\index{text},`
 * To write Snap! as stylized text write: `[Snap]{.snap}`
-* The `content/` folder contains the markdown files, organized by chapter.
-    * Images sho
+* Chapters are included at the top level of the repo, named 'NN-chapter'
+  * Each contains an `index.md` file, which is the chapter's main content.
+  * The `assets/` folder contains images used in the chapter.
+* The `appendix/` folder contains additional chapters, which are subfolders within the `appendix/` folder.
 * The `blocks/` folder contains 1 markdown file per block, organized by palette.
-  * `blocks/images/` one image per block.
+  * `blocks/images/` one image per block, named `block_x.png` where `x` is the block *selector*.
+  * `blocks/help/` is the help screen for each block, named `selector.png`.
 
 
 ## Editing Section References
@@ -38,7 +41,21 @@ Write markdown like this:
 * If you are refercing an individual block image, try to reference `/blocks/images/block_x.png` to indicate it is a "standard" block used as a default.
 * If an image is the exact same in multiple chapters, try to save it in the _chapter where it is first used_. Then reference that image as `[...](/01-.../assets/myimage.png)`
 
-### Making new CSS classes
+## Indexing and Index Entries
+
+https://en.wikibooks.org/wiki/LaTeX/Indexing
+
+* Write an index entry by writing `text\index{text},` at the end of a term.
+* Do not put spaces around the `\index` command.
+* Use *LaTeX* inside the `\index` command.
+* `!` denotes sub-terms in the index.
+* Use `""` to escape special characters in the index.
+* Use `$$` for verabatim text in the index, mostly for block names.
+* The format is `\index{sortkey@entrytext}`
+  * You will need to use this when you are trying to index a block name.
+  * e.g. `\index{block name@\texttt{Block Name} block}`
+
+## Making new CSS classes
 
 Add all CSS to the file `snap-manual.scss`. All "image" related CSS should be prefixed with `image-`
 * If you need to make a generic generic class, call it something like what it used for

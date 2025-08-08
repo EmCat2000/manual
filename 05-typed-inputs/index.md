@@ -1,9 +1,8 @@
-#  Typed Inputs
+# Typed Inputs
 
-##  Scratch’s Type Notation
+## Scratch’s Type Notation
 
- Prior
-to version 3, Scratch\index{Scratch} block inputs came in two types
+Prior to version 3, Scratch\index{Scratch} block inputs came in two types
 \index{data type} : Text-or-number type and Number type. The former is
 indicated by a rectangular box, the latter by a rounded box: ![image654.png](assets/image654.png) <!--  style="width:1.375in;height:0.2125in" / -->. A third
 Scratch type, Boolean (true/false), can be used in certain Control
@@ -61,7 +60,18 @@ The Object type\index{Object type} is for sprites, costumes, sounds,
 and similar data types.
 
 The Text type\index{Text type} is really just a variant form of the Any
-type, using a shape that suggests a text input.[5]
+type, using a shape that suggests a text input.[^5]
+
+[^5]: In Scratch, every block that takes a Text-type input has a default
+value that makes the rectangles for text wider than tall. The blocks
+that aren’t specifically about text either are of Number type
+\index{Number type} or have no default value, so those rectangles are
+taller than wide. At ﬁrst some of us (bh) thought that Text was a
+separate type that always had a wide input slot; it turns out that this
+isn’t true in Scratch (delete the default text and the rectangle
+narrows), but we thought it a good idea anyway, so we allow Text-shaped
+boxes even for empty input slots. (This is why Text comes just above Any
+in the input type selection box.)
 
 ### Procedure Types
 
@@ -90,18 +100,13 @@ later that it’s true in spirit.)
 
 ### Pulldown inputs
 
-
-Certain primitive blocks have
-*pulldown* inputs\index{pulldown input}, either *read-only*
-\index{read-only pulldown input} *,* like the input to the touching
-block:
+Certain primitive blocks have *pulldown* inputs\index{pulldown input},
+either *read-only*\index{read-only pulldown input} *,* like the input
+to the touching block:
 
 ![image661.png](assets/image661.png) <!--  style="width:1.68056in;height:0.94097in" / -->
 
-(indicated by the input slot
-being the same (cyan, in this case) color as the body of the block), or
-*writeable*\index{writeable pulldown inputs} *,* like the input to the
-point in direction block:
+(indicated by the input slot being the same (cyan, in this case) color as the body of the block), or *writeable*\index{writeable pulldown inputs} *,* like the input to the point in direction block:
 
 ![image662.png](assets/image662.png) <!--  style="width:1.90208in;height:1.32292in" / -->
 
@@ -132,7 +137,7 @@ appears in the input slot if that entry is chosen, and is also the value
 of the input as seen by the procedure.
 
 If the line consists of a tilde ~, then it represents a separator
-\index{separator:menu} (a horizontal line) in the menu, used to divide
+\index{separator!menu} (a horizontal line) in the menu, used to divide
 long menus into visible categories. There should be nothing else on the
 line. This separator is not choosable, so there is no input value
 corresponding to it.

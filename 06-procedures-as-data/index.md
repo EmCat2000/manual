@@ -230,7 +230,7 @@ input slot:
 ![image715.png](assets/image715.png) <!--  style="width:2.27569in;height:1.59722in" / -->
 
 
-Note that the halo\index{halo:red} you see while dragging onto the
+Note that the halo\index{halo!red} you see while dragging onto the
 arrowheads\index{arrowheads} is red\index{red halo} instead of white,
 and covers the input slot as well as the arrowheads. And when you drop
 the expression onto the arrowheads, the words “input list\index{input
@@ -370,10 +370,14 @@ as the Scratch command-if. You have to know about procedures as data,
 about rings, and about a trick to get a constant value in a ringed slot
 \index{constant functions}. (The id block\index{id block} implements
 the identity function\index{identity function}, which reports its
-input.[6] We need it because rings take only reporters as input, not
+input.[^6] We need it because rings take only reporters as input, not
 numbers.) What we’d like is a reporter-if that *behaves* like this one,
 delaying the evaluation of its inputs, but *looks* like our ﬁrst
 version, which was easy to use except that it didn’t work.
+
+[^6]: There is a primitive id function in the menu of the sqrt of block,
+but we think seeing its (very simple) implementation will make this
+example easier to understand.
 
 Such blocks are indeed possible. A block that seems to take a simple
 expression as input, but delays the evaluation of that input by wrapping

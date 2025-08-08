@@ -52,6 +52,7 @@ function Span(el)
       end
 
       -- Return empty span to hide the markup
+      -- TODO: Return an a name to link to the index entry
       return pandoc.Span("")
     end
   end
@@ -285,6 +286,7 @@ function RawInline(el)
       end
 
       -- For HTML output, remove the index markup
+      -- TODO: Return an anchor link to the index entry
       if FORMAT:match("html") then
         return pandoc.Span("")
       end

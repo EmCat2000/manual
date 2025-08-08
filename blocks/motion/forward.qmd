@@ -1,5 +1,4 @@
 ---
-toc: false
 partial-data:
   block_description: Moves a sprite a set number of steps (one coordinate) in whichever direction the sprite is facing
   label: "move _ steps"
@@ -28,4 +27,12 @@ partial-data:
 
 # `move steps` { .unnumbered }
 
-{{< partial ../_block.qmd >}}
+<!-- X -->
+<!-- {{< partial blocks/_block.qmd >}} -->
+```{python}
+#| echo: false
+#| output: asis
+import sys; sys.path.append('_support')
+from block_renderer import render_block
+render_block()
+```

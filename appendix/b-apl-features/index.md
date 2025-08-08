@@ -12,7 +12,7 @@ associate Adin Falkoff\index{Falkoff, Adin} gave a talk on APL to a New
 York Association for Computing Machinery chapter, with an excited
 14-year-old Brian Harvey in the audience.) But it wasn’t until 1966 that
 the first public implementation of the language for the System/360 was
-published by IBM. (It was called “APL\360”\index{APL\360} because the
+published by IBM. (It was called “APL\360”\index{APL\textbackslash 360} because the
 normal slash character / represents the “reduce” operator in APL, while
 backslash is “expand.”)
 
@@ -177,7 +177,7 @@ argument to select a trig function. 1**○**x is sin(x), 2**○**x is
 cos(x), and so on. **‾**1**○**x is arcsin(x). What’s 0**○**x? Glad you
 asked; it’s$\\\sqrt{1 - x^{2}}$.
 
-### Boolean values
+## Boolean values
 
 [Snap]{.snap} uses distinct Boolean values true and false that are different
 from other data types. APL uses 1 and 0, respectively. The APL style of
@@ -562,80 +562,4 @@ still makes the structure clear:
 
 ![image1340.png](assets/image1340.png) <!--  style="width:5.99792in;height:0.33333in" alt="Macintosh HD:Users:bh:Desktop:printable-ex.png" / -->
 
-Experts will recognize this as the Lisp representation of list structure,
-
-[1] One of the hat blocks, the generic\index{hat block:generic} “when
-anything” block , is subtly different from the others. When the stop
-sign is clicked, or when a project or sprite is loaded, this block
-doesn’t test whether the condition in its hexagonal input slot is true,
-so the script beneath it will not run, until some *other* script in the
-project runs (because, for example, you click the green flag). When
-generic when\index{generic when} blocks are disabled, the stop sign
-\index{stop sign, square} will be square\index{square stop sign}
-instead of octagonal.
-
-[2] The hide variable and\index{hide variable block} show variable
-block\index{show variable block} s can also be used to hide and show
-primitives\index{hide and show primitives} in the palette. The pulldown
-menu doesn’t include primitive blocks, but there’s a generally useful
-technique to give a block input values it wasn’t expecting using run or
-call:![image120.png](assets/image120.png) <!--  style="width:3.9375in;height:0.38889in" / -->
-
-In order to use a block as an input this way, you must explicitly put a
-ring around it, by right-clicking on it and choosing ringify. More about
-rings in Chapter VI.
-
-[3] This use of the word “prototype” is unrelated to the *prototyping
-object oriented programming* discussed later.
-
-[4] Note to users of earlier versions: From the beginning, there has
-been a tension in our work between the desire to provide tools such as
-for (used in this example) and the higher order functions introduced on
-the next page as primitives, to be used as easily as other primitives,
-and the desire to show how readily such tools can be implemented in
-[Snap]{.snap} itself. This is one instance of our general pedagogic
-understanding that learners should both use abstractions and be
-permitted to see beneath the abstraction barrier. Until version 5.0, we
-used the uneasy compromise of a library of tools written in [Snap]{.snap} and
-easily, but not easily enough, loaded into a project. By *not* loading
-the tools, users or teachers could explore how to program them. In 5.0
-we made them true primitives, partly because that’s what some of us
-wanted all along and partly because of the increasing importance of fast
-performance as we explore “big data” and media computation. But this is
-not the end of the story for us. In a later version, after we get the
-design firmed up, we intend to introduce “hybrid” primitives,
-implemented in high speed Javascript but with an “Edit” option that will
-open, not the primitive implementation, but the version written in
-[Snap]{.snap}. The trick is to ensure that this can be done without
-dramatically slowing users’ projects.
-
-[5] In Scratch, every block that takes a Text-type input has a default
-value that makes the rectangles for text wider than tall. The blocks
-that aren’t specifically about text either are of Number type
-\index{Number type} or have no default value, so those rectangles are
-taller than wide. At ﬁrst some of us (bh) thought that Text was a
-separate type that always had a wide input slot; it turns out that this
-isn’t true in Scratch (delete the default text and the rectangle
-narrows), but we thought it a good idea anyway, so we allow Text-shaped
-boxes even for empty input slots. (This is why Text comes just above Any
-in the input type selection box.)
-
-[6] There is a primitive id function in the menu of the sqrt of block,
-but we think seeing its (very simple) implementation will make this
-example easier to understand.
-
-[7] Some languages popular in the “real world” today, such as
-JavaScript, claim to use prototyping, but their object system is much
-more complicated than what we are describing (we’re guessing it’s
-because they were designed by people too familiar with class/instance
-programming); that has, in some circles, given prototyping a bad name.
-Our prototyping design comes from Object Logo\index{Object Logo}, and
-before that, from Henry Lieberman\index{Lieberman, Henry}.
-\[Lieberman, H., Using Prototypical Objects to Implement Shared Behavior
-in Object-Oriented Systems, First Conference on Object-Oriented
-Programming Languages, Systems, and Applications \[OOPSLA-86\], ACM
-SigCHI, Portland, OR, September, 1986. Also in *Object-Oriented
-Computing,* Gerald Peterson, Ed., IEEE Computer Society Press, 1987.\]
-
-[8] *Neighbors* are all other sprites whose bounding boxes intersect the
-doubled dimensions of the requesting sprite's bounds.
+Experts will recognize this as the Lisp representation of list structure.

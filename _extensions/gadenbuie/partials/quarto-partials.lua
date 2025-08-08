@@ -62,7 +62,7 @@ local function render_partial(file, data, context)
   local f = io.open(file, "r")
   if not f then
     local msg = "Could not find partial file: " .. file
-    quarto.log.error(msg)
+    quarto.log.info(msg)
     return pandoc.Str("[ERROR] " .. msg)
   end
   local template = f:read("a")

@@ -90,7 +90,7 @@ parent and the children *share* a lot of properties. That’s why we use
 the word “clones” to describe the children rather than “copies.”) These
 are *temporary* clones\index{temporary clone}. They are automatically
 deleted when the user presses either the green flag or the red stop
-sign. In Scratch 2.0 and later, all clones\index{clone:temporary} are
+sign. In Scratch 2.0 and later, all clones\index{clone!emporary} are
 temporary.
 
 The other kind of situation is what happens when you want
@@ -108,7 +108,7 @@ Rottweiler. Maybe you hide the Dog sprite after all this, since it’s no
 breed in particular. Each dog has its own position, special behaviors,
 and so on. You want to save all of these dogs in the project. These are
 *permanent* clones\index{permanent clone}. In BYOB 3.1, the
-predecessor to Snap*!,* all clones\index{clone:permanent} are
+predecessor to Snap*!,* all clones\index{clone!permanent} are
 permanent.
 
  One advantage
@@ -182,7 +182,7 @@ it, and now we have the more straightforward primitives.
 Suppose you have a Dog sprite
 with two clones CockerSpaniel and PitBull. In the Dog sprite you define
 this method\index{method} (“For this sprite only” block
-\index{block:sprite-local} ):
+\index{block!sprite-local} ):
 
 ![image763.png](assets/image763.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
@@ -276,7 +276,20 @@ fit with the Scratch design principle\index{design principle} that
 everything in a project should be concrete and visible on the stage; in
 class/instance OOP the programming process begins with an abstract,
 invisible entity, the class, that must be designed before any concrete
-objects can be made.[7]
+objects can be made.[^7]
+
+[^7]: Some languages popular in the “real world” today, such as
+JavaScript, claim to use prototyping, but their object system is much
+more complicated than what we are describing (we’re guessing it’s
+because they were designed by people too familiar with class/instance
+programming); that has, in some circles, given prototyping a bad name.
+Our prototyping design comes from Object Logo\index{Object Logo}, and
+before that, from Henry Lieberman\index{Lieberman, Henry}.
+\[Lieberman, H., Using Prototypical Objects to Implement Shared Behavior
+in Object-Oriented Systems, First Conference on Object-Oriented
+Programming Languages, Systems, and Applications \[OOPSLA-86\], ACM
+SigCHI, Portland, OR, September, 1986. Also in *Object-Oriented
+Computing,* Gerald Peterson, Ed., IEEE Computer Society Press, 1987.\]
 
 There are three ways to make a child sprite. If you control-click or
 right-click on a sprite in the “sprite corral” at the bottom right
@@ -289,7 +302,7 @@ sprite.
 
 ![image766.png](assets/image766.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
-##  Inheritance by Delegation
+## Inheritance by Delegation
 
 A clone *inherits* properties of its parent. “Properties” include
 scripts, custom blocks, variables, named lists, system attributes,
@@ -350,8 +363,7 @@ the message was delegated.
 
 <!-- ![image781.png](assets/image781.png) ![image782.png](assets/image782.png)  -->
 
-At the right is a picture of
-the dropdown menu of attributes\index{attributes, list of} in the my
+At the right is a picture of the dropdown menu of attributes\index{attributes, list of} in the my
 block.
 
 ![image770.png](assets/image770.png) <!--  style="width:5.07292in;height:0.58333in" / -->
@@ -362,7 +374,7 @@ attributes:
 - self\index{self (in my block)} : this sprite
 
 - neighbors\index{neighbors (in my block)} : a list of *nearby*
-  sprites[8]
+  sprites[^8]
 
 - other sprites\index{other sprites (in my block)} : a list of all
   sprites except myself
@@ -420,7 +432,10 @@ The others are individual attributes:
 - center x\index{center x (in my block)}, center y\index{center y (in
   my block)} : the x and y position of the center of my
 
-> bounding box, rounded oﬀ–the geometric center of the costume.
+> bounding box, rounded off–the geometric center of the costume.
+
+[^8]: *Neighbors* are all other sprites whose bounding boxes intersect the
+doubled dimensions of the requesting sprite's bounds.
 
 ## First Class Costumes and Sounds
 

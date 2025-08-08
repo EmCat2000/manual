@@ -47,8 +47,8 @@ This works just like making a script in the sprite’s scripting area,
 except that the “hat” block at the top, instead of saying something like
 “when I am clicked,” has a picture of the block you’re building. This
 hat block\index{hat block} is called the *prototype*\index{prototype}
-of your custom block.[3] You drag blocks under the hat to program your
-custom block, then click OK: <!-- What is this "[3]"? --MF -->
+of your custom block.[^3] You drag blocks under the hat to program your
+custom block, then click OK:
 
 ![image502.png](assets/image502.png) <!--  style="width:4.21094in;height:1.3364in" / -->
 
@@ -59,7 +59,10 @@ and the result of using it:
 
 ![image524.png](assets/image524.png) <!--  style="width:2.27083in;height:2.34722in" / -->
 
-###  Custom Blocks with Inputs
+[^3]: This use of the word “prototype” is unrelated to the *prototyping
+object oriented programming* discussed later.
+
+### Custom Blocks with Inputs
 
 But suppose you want to be able to draw squares of different sizes.
 Control-click or right-click on the block, choose “edit,” and the Block
@@ -198,7 +201,7 @@ your blocks implement a particular data structure (a stack, or a
 dictionary, etc.), or they’re the framework for building a multilevel
 game. Such a collection of blocks is called a *block library.*
 
-To create a block library,\index{library:block} choose “Export
+To create a block library,\index{library!block} choose “Export
 blocks…” from the File menu. You then see a window like this:
 
 ![image522.png](assets/image522.png) <!--  style="width:2.02153in;height:2.72222in" / -->

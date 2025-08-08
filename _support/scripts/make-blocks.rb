@@ -35,7 +35,7 @@ partial-data:
 
 # {{ title }} {.unnumbered}
 
-{{< include ../_block.qmd >}}
+{{< include blocks/_block.qmd >}}
 TEMPLATE
 
 SYMBOL_MAP = {

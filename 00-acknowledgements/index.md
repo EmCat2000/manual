@@ -8,7 +8,7 @@ rest of the gang who invented personal computing and object oriented
 programming in the great days of Xerox PARC\index{Xerox PARC}. He
 worked with John Maloney\index{Maloney, John}, of the MIT
 \index{Massachusetts Institute of Technology} Scratch Team
-\index{Scratch Team}, who developed the Morphic\index{Morphic}
+\index{Scratch!Team@Scratch Team}, who developed the Morphic\index{Morphic}
 graphics framework that’s still at the heart of [Snap]{.snap}.
 
 ***The brilliant design of Scratch, from the Lifelong Kindergarten
@@ -21,7 +21,7 @@ as rivals, have been entirely supportive and welcoming to us.***
 
 Brian grew up at the MIT and Stanford Artificial Intelligence Labs
 \index{MIT Artificial Intelligence Lab}\index{Stanford Artificial Intelligence Lab}, learning from Lisp inventor
-John McCarthy\index{ McCarthy, John}, Scheme\index{Scheme} inventors
+John McCarthy\index{McCarthy, John}, Scheme\index{Scheme} inventors
 Gerald J. Sussman\index{Sussman, Gerald J.} and Guy Steele
 \index{Steele, Guy}, and the authors of the world’s best computer
 science book, *Structure and Interpretation of Computer Programs*

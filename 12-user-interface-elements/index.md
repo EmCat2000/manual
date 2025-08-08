@@ -32,11 +32,11 @@ can do anything with it except create proprietary versions, basically).
 
 The "`Reference manual`" option\index{Reference manual option} is a link to latest revision of this manual as a web page.
 
-The "`Snap! website`" option\index{Snap! website option} opens a browser
+The "`Snap! website`" option\index{"Snap! website option"} opens a browser
 window pointing to [https://snap.berkeley.edu](https://snap.berkeley.edu)\index{snap.berkeley.edu}, the community site for [Snap]{.snap}.
 
 The "`Download source`" option\index{Download source option} opens a
-browser window displaying the [Github repository][github] of the source files for [Snap]{.snap}.\index{source files for Snap!} At the bottom of the page
+browser window displaying the [Github repository][github] of the source files for [Snap]{.snap}.\index{"source files for Snap!"} At the bottom of the page
 are links to download the latest official release. Or you can navigate
 around the site to find the current development version. You can read
 the code to learn how [Snap]{.snap} is implemented, host a copy on your own
@@ -70,10 +70,10 @@ control-N as a shortcut for this menu item. Alas, this is not the case
 in every browser. Some Mac browsers require command-N (<kbd>⌘N</kbd>)
 instead, while others open a new browser window instead of a new project.
 You’ll have to experiment. In general, the keyboard shortcuts
-\index{shortcuts:keyboard} in f{.snap} are the standard ones you expect
+\index{shortcuts!keyboard} in [Snap]{.snap} are the standard ones you expect
 in other software.
 
-The "`Open…`" option\index{Open… option} shows a project open dialog box in
+The "`Open…`" option\index{$Open…$ option} shows a project open dialog box in
 which you can choose a project to open:
 
 ![The Open Project Dialog in Snap!](assets/image995.png) <!--  style="width:2.88958in;height:2.09792in" / -->
@@ -741,7 +741,7 @@ Right-click/control-click on \index{context menu for the palette background} the
 
 ![image1058.png](assets/image1058.png) <!--  style="width:0.98958in;height:0.58958in" / -->
 
-The `find blocks…` option\index{`find blocks…` option} does the same thing as
+The `find blocks…` option\index{$find blocks… $  option} does the same thing as
 the magnifying-glass button. The hide blocks… option\index{hide blocks
 option} opens a dialog box in which you can choose which blocks (custom
 as well as primitive) should be hidden. (Within that dialog box, the
@@ -766,7 +766,7 @@ built-in categories in the category selector:
 
 This
 example comes from Eckart\index{Modrow, Eckart} Modrow’s Sci[Snap]{.snap}
-\index{SciSnap!} library. Note that the custom category list has its own
+\index{"SciSnap!"} library. Note that the custom category list has its own
 scroll bar, which appears if you have more than six custom categories.
 Note also that the buttons to select a custom category occupy the full
 width of the palette area, unlike the built-in categories, which occupy
@@ -1640,7 +1640,7 @@ can rename, delete, or export the scene.
 ## Preloading a Project\index{preloading a project}  when Starting [Snap]{.snap}
 
 There are several ways to include a pointer to a project in the URL when
-starting [Snap]{.snap}\index{starting Snap!} in order to load a project
+starting [Snap]{.snap}\index{"starting Snap!"} in order to load a project
 automatically. You can think of such a URL as just running the project
 rather than as running [Snap]{.snap}, especially if the URL says to start in
 presentation mode and click the green flag. The general form is

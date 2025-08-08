@@ -18,7 +18,7 @@ You can put a number in a variable, use one as the input to a block,
 call a reporter that reports a number, or put a number into a list.
 
 But Scratch’s lists are not ﬁrst class. You create one using the “`Make a
-list`\index{`Make a list`}” button, which requires that you give the list
+list`\index{$Make a list$}” button, which requires that you give the list
 a name. You can’t put the list into a variable, into an input slot of a
 block, or into a list item—you can’t have lists of lists. None of the
 Scratch reporters reports a list value. (You can use a reduction of the
@@ -52,8 +52,7 @@ At the right end of the block are two left-and-right arrowheads
 list, i.e., the number of elements in the list you are building.
 Shift-clicking changes by three at a time.
 
-You can use this block as
-input to many other blocks:
+You can use this block as input to many other blocks:
 
 ![image629.png](assets/image629.png) <!--  style="width:2.83958in;height:0.41597in" / -->
 
@@ -100,9 +99,10 @@ As an example, here are two blocks that take a list of numbers as input,
 and report a new list containing only the even numbers from the original
 list: [^footnote-1]
 
+<!-- TODO: This should be 2 pics, side-by-side. -->
 ![image632.png](assets/image632.png) <!--  style="width:5.88889in;height:1.04861in" / -->
 
-[^footnote-1]: Note to users of earlier versions: From the beginning, there has been a tension in our work between the desire to provide tools such as `for` (used in this example) and the higher order functions introduced on the next page as primitives, to be used as easily as other primitives, and the desire to show how readily such tools can be implemented in Snap! itself. This is one instance of our general pedagogic understanding that learners should both use abstractions and be permitted to see beneath the abstraction barrier. Until version 5.0, we used the uneasy compromise of a library of tools written in Snap! and easily, but not easily enough, loaded into a project. By not loading the tools, users or teachers could explore how to program them. In 5.0 we made them true primitives, partly because that’s what some of us wanted all along and partly because of the increasing importance of fast performance as we explore “big data” and media computation. In version 10.0 we introduced “hybrid” primitives, implemented in high speed Javascript but with an “Edit” option that will open, not the primitive implementation, but the version written in [Snap]{.snap}. This gives us editable primitives without dramatically slowing users’ projects.
+[^footnote-1]: Note to users of earlier versions: From the beginning, there has been a tension in our work between the desire to provide tools such as `for` (used in this example) and the higher order functions introduced on the next page as primitives, to be used as easily as other primitives, and the desire to show how readily such tools can be implemented in [Snap]{.snap} itself. This is one instance of our general pedagogic understanding that learners should both use abstractions and be permitted to see beneath the abstraction barrier. Until version 5.0, we used the uneasy compromise of a library of tools written in [Snap]{.snap} and easily, but not easily enough, loaded into a project. By not loading the tools, users or teachers could explore how to program them. In 5.0 we made them true primitives, partly because that’s what some of us wanted all along and partly because of the increasing importance of fast performance as we explore “big data” and media computation. In version 10.0 we introduced “hybrid” primitives, implemented in high speed Javascript but with an “Edit” option that will open, not the primitive implementation, but the version written in [Snap]{.snap}. This gives us editable primitives without dramatically slowing users’ projects.
 
 In these scripts, we first create a temporary variable, then put an empty
 list in it, then go through the items of the input list using the `add
@@ -125,18 +125,17 @@ uses reporter blocks, not command blocks, to build up a list value:
 ![image633.png](assets/image633.png) <!--  style="width:5.88889in;height:1.04861in" / -->
 
 In a functional program, we often use recursion to construct a list, one
-item at a time. The `in front of` block \index{`in front of` block} makes a
+item at a time. The `in front of` block \index{$in front of$ block} makes a
 list that has one item added to the front of an existing list, *without
 changing the value of the original list.* A nonempty list is processed
-by dividing it into its first item (`item 1 of`\index{`item 1 of` block})
-and all the rest of the items (`all but first of`\index{`all but first of`
-block}), which are handled through a recursive call:
+by dividing it into its first item (`item 1 of`\index{$item 1 of$ block})
+and all the rest of the items (`all but first of`\index{$all but first of$ block}),
+which are handled through a recursive call:
 
 ![image555.png](assets/image555.png) <!--  style="width:4.75in;height:2.24097in" / -->
 
-[Snap]{.snap}
-uses two different internal representations of lists, one (dynamic
-\index{array, dynamic} array\index{dynamic array}) for imperative
+[Snap]{.snap} uses two different internal representations of lists, one
+(dynamic \index{array, dynamic} array\index{dynamic array}) for imperative
 programming and the other (linked\index{list, linked} list
 \index{linked list}) for functional programming. Each representation
 makes the corresponding built-in list blocks (commands or reporters,
@@ -189,13 +188,13 @@ lists:
 ![image636.png](assets/image636.png) <!--  style="width:2.375in;height:0.27778in" / -->
 
 <span id="map"class="anchor"></span>You’ve already seen `keep`. `Find first` is
-\index{`find first` block} similar, but it reports just the first item that
+\index{$find first$ block} similar, but it reports just the first item that
 satisfies the predicate, not a list of all the matching items. It’s
 equivalent to ![image562.png](assets/image562.png) <!--  style="width:2.39in;height:0.22in" / -->  but faster because it
 stops looking as soon as it finds a match. If there are no matching
 items, it returns an empty string.
 
-`Map` \index{`map` block} takes a Reporter block and a list as inputs. It
+`Map` \index{$map$ block} takes a Reporter block and a list as inputs. It
 reports a new list in which each item is the value reported by the
 Reporter block as applied to one item from the input list. That’s a
 mouthful, but an example will make its meaning clear:
@@ -220,10 +219,10 @@ lists, the result is a new toplevel list whose items are the same
 \index{shallow copy of a list}. To make a deep copy of a list
 \index{deep copy of a list} (that is, one in which all the sublists,
 sublists of sublists, etc. are copied), use the list as input to the
-![image576.png](assets/image576.png) <!--  style="width:0.74306in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:id.png" / -->  block (one of the variants
-of the `sqrt of` block). This works because `id of`\index{`id of` block} is a [hyperblock](#hyperblocks).
+![id of block](assets/image576.png) <!--  style="width:0.74306in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:id.png" / -->  block (one of the variants
+of the `sqrt of` block). This works because `id of`\index{$id of$ block} is a [hyperblock](#hyperblocks).
 
-The third higher order block, `combine`\index{`combine` block}, computes a
+The third higher order block, `combine`\index{$combine$ block}, computes a
 single result from *all* the items of a list, using a *two-input*
 reporter as its second input. In practice, there are only a few blocks
 you’ll ever use with `combine`:
@@ -525,7 +524,7 @@ input as a whole). Blocks whose inputs are “natively” lists, such as ![image
 ![image621.png](assets/image621.png) <!--  style="width:1.02986in;height:0.18958in" --> , are never hyperblocks.
 
 ![image205.png](assets/image205.png) <!--  style="width:2.09917in;height:0.2475in" alt="Application Description automatically generated with low confidence" / --> The
-`reshape` block\index{`reshape` block} takes a list (of any depth) as its
+`reshape` block\index{$reshape$ block} takes a list (of any depth) as its
 first input, and then takes zero or more sizes along the dimensions of
 an array. In the example it will report a table (a matrix) of four rows
 and three columns. If no sizes are given, the result is an empty list.
@@ -545,7 +544,7 @@ the product of the lengths of the inputs.
 ![image622.png](assets/image622.png) <!--  style="width:5.23958in;height:1.67986in" alt="Graphical user interface, text, application Description automatically generated" / -->
 
 ![image204.png](assets/image204.png) <!--  style="width:1.34in;height:0.25in" alt="Icon Description automatically generated" / -->  The `item of` block
-\index{`item of` block} has a special set of rules, designed to preserve
+\index{$item of$ block} has a special set of rules, designed to preserve
 its pre-hyperblock meaning and also provide a useful behavior when given
 a list as its first (index) input:
 
@@ -580,7 +579,7 @@ selector (as of [Snap]{.snap} 6.6):
 
 ![image627.png](assets/image627.png) <!--  style="width:6.60417in;height:1.04861in" alt="Graphical user interface, application, website Description automatically generated" / -->
 
-The `length of` block \index{`length of` block} is extended to provide
+The `length of` block \index{$length of$ block} is extended to provide
 various ways of looking at the shape and contents of a list. The options
 other than `length` are mainly useful for *lists of lists,* to any depth.
 These new options work well with hyperblocks and the APL library.
@@ -590,18 +589,18 @@ These new options work well with hyperblocks and the APL library.
 
 - `length`: reports the number of (toplevel) items in the list, as always.
 
-- `rank` \index{`rank of` block}: reports the number of *dimensions* of the
+- `rank` \index{$rank of$ block}: reports the number of *dimensions* of the
 list, i.e., the maximum depth of lists of lists of lists of lists. (That
 example would be rank 4.)
 
-- `dimensions` \index{`dimensions of` block}: reports a list of numbers, each
+- `dimensions` \index{$dimensions of$ block}: reports a list of numbers, each
 of which is the maximum length in one dimension, so a spreadsheet of
 1000 records, each with 4 fields, would report the list \[1000 4\].
 
-- `flatten` \index{`flatten of` block}: reports a flat, one-dimensional list
+- `flatten` \index{$flatten of$ block}: reports a flat, one-dimensional list
 containing the *atomic* (non-list) items anywhere in the input list.
 
-- `columns` \index{`columns of` block}: reports a list in which the rows and
+- `columns` \index{$columns of$ block}: reports a list in which the rows and
 columns of the input list are interchanged, so the shape of the
 transpose of a shape \[1000 4\] list would be \[4 1000\]. This option
 works only for lists whose rank is at most 2. The name reflects the fact
@@ -613,16 +612,16 @@ are in reverse order.
 
 The remaining three options report a (generally multi-line) text string.
 The input list may not include any atomic (non-list) data \index{atomic
-data} other than text or numbers. The `lines` \index{`lines of` block}
+data} other than text or numbers. The `lines` \index{$lines of$ block}
 option is intended for use with rank-one lists of text strings; it
 reports a string in which each list item becomes a line of text. You can
 think of it as the opposite of the `split by line` block \index{`split by
-line` block} . The `csv` \index{`csv of` block} option (comma-separated
+line` block} . The `csv` \index{$csv of$ block} option (comma-separated
 values) is intended for rank-two lists that represent a spreadsheet or
 other tabular data. Each item of the input list should be a list of
 atoms; the block reports a text string in which each item of the big
 list becomes a line of text in which the items of that sublist are
-separated by commas. The `json` \index{`json of` block} option is for lists
+separated by commas. The `json` \index{$json of$ block} option is for lists
 of any rank; it reports a text string in which the list structure is
 explicitly represented using square brackets. These are the opposites of
 `split by csv` and `split by json`.
