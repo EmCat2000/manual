@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `move steps` { .unnumbered }
+# `move steps`
 
 <!-- s2 -->
 <!-- {{< partial blocks/_block.qmd >}} -->

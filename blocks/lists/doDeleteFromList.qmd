@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `delete of` { .unnumbered }
+# `delete of`
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

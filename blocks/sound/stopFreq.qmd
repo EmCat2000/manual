@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `Stop Frequency` { .unnumbered }
+# `Stop Frequency`
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

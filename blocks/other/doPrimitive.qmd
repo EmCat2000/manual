@@ -27,7 +27,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `enable primitive` { .unnumbered }
+# `enable primitive`
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

@@ -27,7 +27,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `change pen  by` { .unnumbered }
+# `change pen  by`
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

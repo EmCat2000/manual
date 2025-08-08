@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `Set Balance To` { .unnumbered }
+# `Set Balance To`
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

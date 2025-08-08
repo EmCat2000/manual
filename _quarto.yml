@@ -72,7 +72,8 @@ format:
     output-file: snap-manual.pdf
     cover-image: images/cover-image.png
     # Do not use pdflatex since we have unicode chars
-    pdf-engine: lualatex # xelatex #  or HTML based: wkhtmltopdf
+    # pdf-engine: lualatex # xelatex #  or HTML based: wkhtmltopdf
+    pdf-engine: xelatex
     # pdf-engine-opt:
     keep-tex: false
     filters:
@@ -85,8 +86,13 @@ format:
     toc: true
     number-sections: true
     number-depth: 2
-    documentclass: scrreport
-    # documentclass: scrbook
+    # documentclass: scrreport
+    classoption:
+      - 11pt
+      # These should be disabled for the final version.
+      # - draft=true
+      - overfullrule=true
+    documentclass: scrbook
     papersize: letter
     # TODO: In order to enable fonts, they need to be added to the GitHub Workflow.
     mainfont: Times New Roman

@@ -82,8 +82,8 @@ These example projects show the block in the context of a larger project. These 
     no_index = '{.unnumbered .unlisted}'
     _html_visible = '{.content-visible when-format="html"}'
     _pdf_visible = '{.content-visible when-format="pdf"}'
-    small_image = '{width="50%"}'
-    max_width = '{width="85%"}'
+    small_image = '{height=15pt}'
+    max_width = '{width=85% max-height=50vh}'
     return f'''
 {description}
 

@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `when I start as a clone` { .unnumbered }
+# `when I start as a clone`
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}
