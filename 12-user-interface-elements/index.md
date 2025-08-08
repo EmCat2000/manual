@@ -34,8 +34,8 @@ The "`Reference manual`" option\index{Reference manual option} is a link to late
 The "`Snap! website`" option\index{"Snap! website option"} opens a browser
 window pointing to [https://snap.berkeley.edu](https://snap.berkeley.edu)\index{snap.berkeley.edu}, the community site for [Snap]{.snap}.
 
-The "`Download source`" option\index{Download source option} opens a
-browser window displaying the [Github repository][github] of the source files for [Snap]{.snap}.\index{"source files for Snap!"} At the bottom of the page
+The "`Download source`" option\index{Download source option@\texttt{Download source} option} opens a
+browser window displaying the [GitHub repository][github] of the source files for [Snap]{.snap}.\index{"source files for Snap\!"} At the bottom of the page
 are links to download the latest official release. Or you can navigate
 around the site to find the current development version. You can read
 the code to learn how [Snap]{.snap} is implemented, host a copy on your own
@@ -177,7 +177,7 @@ global blocks, and then per-sprite information: name, wardrobe (list of
 costumes), and local variables and block definitions. The page can be
 converted to PDF by the browser; it’s intended to meet the documentation
 requirements of the Advanced Placement Computer Science Principles
-\index{Computer Science Principles} create task.
+\index{Advanced Placement Computer Science Principles}\index{AP CSP} create task.
 
 <!-- TODO: Update to default to downloading an XML file. -->
 The "`Export blocks…`" option\index{Export blocks… option} is used to
