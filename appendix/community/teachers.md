@@ -1,9 +1,9 @@
-# Teacher Accounts {.unnumbered}
+# Teacher Accounts {.unnumbered .unlisted}
 
 Snap<em>!</em> supports basic teacher account functionality.
 
-## Bulk Account Creation
+## Bulk Account Creation {.unnumbered .unlisted}
 
-### Adding Users to a Collection
+### Adding Users to a Collection {.unnumbered .unlisted}
 
-## Account Management
+## Account Management {.unnumbered .unlisted}

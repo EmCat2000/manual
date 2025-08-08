@@ -16,7 +16,7 @@ interface familiar to computer users.
 Start [Snap]{.snap}. You should see the following
 arrangement of regions\index{layout, window} in the window:
 
-![image5.png](assets/image5.png) <!--  style="width:4.32639in;height:2.68958in" / -->
+![An annotated screenshot of blank Snap! editor](../12-user-interface-elements/assets/snap-ide-annotated.png)
 
 (The proportions of these areas may be different, depending on the size
 and shape of your browser window.)
@@ -27,8 +27,7 @@ A [Snap]{.snap} program\index{"Snap! program"} consists of one or more
 
 ![image6.png](assets/image6.png) <!--  style="width:1.47917in;height:1.35417in" / -->
 
-The
-five blocks \index{block} that make up this script have three different
+The five blocks \index{block} that make up this script have three different
 colors, corresponding to three of the eight *palettes* in which blocks
 can be found. The palette\index{palette} area at the left edge of the
 window shows one palette at a time, chosen with the eight buttons just

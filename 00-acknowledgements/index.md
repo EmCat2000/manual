@@ -1,4 +1,3 @@
-
 # Acknowledgements {.unnumbered}
 
 We have been extremely lucky in our mentors.

@@ -2,16 +2,16 @@
 
 The Snap! community website is what you see when you visit [https://snap.berkeley.edu]().
 
-## User Accounts
+## User Accounts {.unnumbered .unlisted}
 
-## Saving and Loading Projects
+## Saving and Loading Projects {.unnumbered .unlisted}
 
-## Sharing and Publishing Projects
+## Sharing and Publishing Projects {.unnumbered .unlisted}
 
-## Creating Project Collections
+## Creating Project Collections {.unnumbered .unlisted}
 
-### Sharing and Publishing Collections
+### Sharing and Publishing Collections {.unnumbered .unlisted}
 
-### Collaborating on Collections
+### Collaborating on Collections {.unnumbered .unlisted}
 
-### "Free for All" Collections
+### "Free for All" Collections {.unnumbered .unlisted}

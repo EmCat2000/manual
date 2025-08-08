@@ -1,6 +1,7 @@
 ---
 partial-data:
-  block_description: Moves a sprite a set number of steps (one coordinate) in whichever direction the sprite is facing
+  block_description: |
+    Moves a sprite a set number of steps (one coordinate) in whichever direction the sprite is facing.
   label: "move _ steps"
   block_spec: "move %n steps"
   help_screen: "forward.png"
@@ -27,7 +28,7 @@ partial-data:
 
 # `move steps` { .unnumbered }
 
-<!-- X -->
+<!-- s2 -->
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}
 #| echo: false

@@ -15,6 +15,7 @@ _build
 _book
 .quarto/
 .quarto
+.jupyter_cache
 
 # Custom Index Rendering Files.
 _index_entries.txt

@@ -4,8 +4,7 @@ In this chapter we describe in detail the various buttons, menus, and
 other clickable elements of the [Snap]{.snap} user interface. Here again is
 the map of the [Snap]{.snap} window:
 
-<!-- TODO: Rename with proper contrast. -->
-![An annotated screenshot of blank Snap! editor](assets/image993.png) <!--  style="width:7.49442in;height:4.66319in" / -->
+![An annotated screenshot of blank Snap! editor](assets/snap-ide-annotated.png)
 
 ## Tool Bar Features
 
@@ -73,7 +72,7 @@ You’ll have to experiment. In general, the keyboard shortcuts
 \index{shortcuts!keyboard} in [Snap]{.snap} are the standard ones you expect
 in other software.
 
-The "`Open…`" option\index{$Open…$ option} shows a project open dialog box in
+The "`Open…`" option\index{Open…@\texttt{Open…} option} shows a project open dialog box in
 which you can choose a project to open:
 
 ![The Open Project Dialog in Snap!](assets/image995.png) <!--  style="width:2.88958in;height:2.09792in" / -->

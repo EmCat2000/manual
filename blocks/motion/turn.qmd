@@ -26,8 +26,9 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `turn ↻  degrees` { .unnumbered }
+# `turn ↻ degrees` { .unnumbered }
 
+<!-- s -->
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}
 #| echo: false
