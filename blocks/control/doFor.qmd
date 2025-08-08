@@ -20,11 +20,11 @@ partial-data:
   #     url: https://example.com/project1
   #   - title: Example Project 1
   #     url: https://example.com/project1
-  example_images:
-    - image: examples/control/for-example.png
-      description: Move forward by 10 steps
-    - image: move_forward.png
-      description: Move forward by 10 steps
+  # example_images:
+  #   - image: examples/control/for-example.png
+  #     description: Move forward by 10 steps
+  #   - image: move_forward.png
+  #     description: Move forward by 10 steps
 ---
 
 # `for _ = to` { .unnumbered }

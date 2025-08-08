@@ -5,7 +5,9 @@ partial-data:
   label: "_ of text _"
   block_spec: "%ta of text %s"
   # help_screen: "reportTextAttribute.png"
-  help_screen: BLANK.png
+  # keep the next line here until we have a good image so it shows when searching for missing screens.
+  # help_screen: BLANK.png
+  help_screen: reportStringSize.png
   selector: "reportTextAttribute"
   type: reporter
   category: operators

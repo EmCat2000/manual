@@ -4,7 +4,8 @@ partial-data:
   block_description: Complete Me
   label: "atan2 _ ÷ _"
   block_spec: "atan2 %n ÷ %n"
-  help_screen: "reportAtan2.png"
+  # help_screen: "reportAtan2.png"
+  help_screen: BLANK.png
   selector: "reportAtan2"
   type: reporter
   category: operators
