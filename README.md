@@ -84,7 +84,7 @@ cd conversion
 ruby convert-word-doc.rb
 ```
 
-This conversion script dumps content into `conversion/chapters/` and then copies it into the `content/` folder.
+This conversion script dumps content into `conversion/chapters/` and then copies it into the `content/` folder. These have been moved to the top of the repo so the URLs in the compiled site are nicer.
 
 ## Published Book
 
