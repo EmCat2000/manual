@@ -27,7 +27,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `atan2  ÷` {.unnumbered}
+# `atan2  ÷` {.x-unnumbered}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

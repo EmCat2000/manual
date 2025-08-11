@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `find first item in` {.unnumbered}
+# `find first item in` {.x-unnumbered}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

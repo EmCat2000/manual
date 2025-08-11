@@ -27,7 +27,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `this` {.unnumbered}
+# `this` {.x-unnumbered}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

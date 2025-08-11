@@ -27,7 +27,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `set slot  to` {.unnumbered}
+# `set slot  to` {.x-unnumbered}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}
