@@ -330,7 +330,7 @@ Operators palette:
 ![image73.png](assets/image73.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / -->
 
 The <code>round</code> block rounds 35.3905… to 35, and the <code>+</code> block adds 100 to that.
-(By the way, the <code>round</code> block is in the Operators palette, just like <code>+</code>,
+By the way, the <code>round</code> block is in the Operators palette, just like <code>+</code>,
 but in this script it’s a lighter color with black lettering because
 Snap*!* alternates light and dark versions of the palette colors when a
 block is nested inside another block from the same palette:
