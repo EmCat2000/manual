@@ -1,19 +1,20 @@
-# Typed Inputs
+#  Typed Inputs
 
-## Scratch’s Type Notation
+##  Scratch’s Type Notation
 
-Prior to version 3, Scratch\index{Scratch} block inputs came in two types
+ Prior
+to version 3, Scratch\index{Scratch} block inputs came in two types
 \index{data type} : Text-or-number type and Number type. The former is
 indicated by a rectangular box, the latter by a rounded box: ![image654.png](assets/image654.png) <!--  style="width:1.375in;height:0.2125in" / -->. A third
 Scratch type, Boolean (true/false), can be used in certain Control
 blocks with hexagonal slots.
 
-The [Snap]{.snap} types are an expanded collection including Procedure, List,
+The Snap*!* types are an expanded collection including Procedure, List,
 and Object types. Note that, with the exception of Procedure types, all
 of the input type shapes are just reminders to the user of what the
 block expects; they are not enforced by the language.
 
-## The [Snap]{.snap} Input Type Dialog
+## The Snap*!* Input Type Dialog
 
 In the Block Editor\index{Block Editor} input name dialog\index{input
 name dialog} , there is a right-facing arrowhead after the “Input name”
@@ -47,41 +48,30 @@ The second row of input types
 contains the ones found in Scratch: Number, Any, and Boolean. (The
 reason these are in the second row rather than the ﬁrst will become
 clear when we look at the column arrangement.) The ﬁrst row contains the
-new [Snap]{.snap} types other than procedures: Object, Text, and List. The
+new Snap*!* types other than procedures: Object, Text, and List. The
 last two rows are the types related to procedures, discussed more fully
 below.
 
 The List type\index{List type} is used for ﬁrst class lists, discussed
 in Chapter IV above. The red rectangles inside the input slot are meant
-to resemble the appearance of lists as [Snap]{.snap} displays them on the
+to resemble the appearance of lists as Snap*!* displays them on the
 stage: each element in a red rectangle.
 
 The Object type\index{Object type} is for sprites, costumes, sounds,
 and similar data types.
 
 The Text type\index{Text type} is really just a variant form of the Any
-type, using a shape that suggests a text input.[^5]
-
-[^5]: In Scratch, every block that takes a Text-type input has a default
-value that makes the rectangles for text wider than tall. The blocks
-that aren’t specifically about text either are of Number type
-\index{Number type} or have no default value, so those rectangles are
-taller than wide. At ﬁrst some of us (bh) thought that Text was a
-separate type that always had a wide input slot; it turns out that this
-isn’t true in Scratch (delete the default text and the rectangle
-narrows), but we thought it a good idea anyway, so we allow Text-shaped
-boxes even for empty input slots. (This is why Text comes just above Any
-in the input type selection box.)
+type, using a shape that suggests a text input.[5]
 
 ### Procedure Types
 
 Although the procedure types are discussed more fully later, they are
 the key to understanding the column arrangement in the input types. Like
-Scratch, [Snap]{.snap} has three block shapes\index{block shapes} :
+Scratch, Snap*!* has three block shapes\index{block shapes} :
 jigsaw-piece\index{jigsaw-piece blocks} for command blocks, oval
 \index{oval blocks} for reporters, and hexagonal\index{hexagonal
 blocks} for predicates. (A *predicate* is a reporter that always reports
-true or false.) In [Snap]{.snap} these blocks are ﬁrst class data; an input to
+true or false.) In Snap*!* these blocks are ﬁrst class data; an input to
 a block can be of Command type, Reporter type, or Predicate type. Each
 of these types is directly below the type of value that that kind of
 block reports, except for Commands, which don’t report a value at all.
@@ -100,13 +90,18 @@ later that it’s true in spirit.)
 
 ### Pulldown inputs
 
-Certain primitive blocks have *pulldown* inputs\index{pulldown input},
-either *read-only*\index{read-only pulldown input} *,* like the input
-to the touching block:
+
+Certain primitive blocks have
+*pulldown* inputs\index{pulldown input}, either *read-only*
+\index{read-only pulldown input} *,* like the input to the touching
+block:
 
 ![image661.png](assets/image661.png) <!--  style="width:1.68056in;height:0.94097in" / -->
 
-(indicated by the input slot being the same (cyan, in this case) color as the body of the block), or *writeable*\index{writeable pulldown inputs} *,* like the input to the point in direction block:
+(indicated by the input slot
+being the same (cyan, in this case) color as the body of the block), or
+*writeable*\index{writeable pulldown inputs} *,* like the input to the
+point in direction block:
 
 ![image662.png](assets/image662.png) <!--  style="width:1.90208in;height:1.32292in" / -->
 
@@ -137,7 +132,7 @@ appears in the input slot if that entry is chosen, and is also the value
 of the input as seen by the procedure.
 
 If the line consists of a tilde ~, then it represents a separator
-\index{separator!menu} (a horizontal line) in the menu, used to divide
+\index{separator:menu} (a horizontal line) in the menu, used to divide
 long menus into visible categories. There should be nothing else on the
 line. This separator is not choosable, so there is no input value
 corresponding to it.
@@ -200,10 +195,10 @@ name “size” and default value 10 looks like this:
 
 The “Multiple inputs” option:
 The list block introduced earlier accepts any number of inputs to
-specify the items of the new list. To allow this, [Snap]{.snap} introduces the
+specify the items of the new list. To allow this, Snap*!* introduces the
 arrowhead notation (⏴⏵) that expands and contracts the block, adding and
 removing input slots. (Shift-clicking on an arrowhead adds or removes
-three input slots at once.) Custom blocks made by the [Snap]{.snap} user have
+three input slots at once.) Custom blocks made by the Snap*!* user have
 that capability, too. If you choose the “Multiple inputs” button, then
 arrowheads\index{arrowheads} will appear after the input slot in the
 block. More or fewer slots (as few as zero) may be used. When the block
@@ -234,7 +229,7 @@ an *upvar*\index{upvar} for short, because it is passed *upward* from
 the custom block to the script that uses it.
 
 Note about the example: for is a primitive block, but it doesn’t need to
-be. You’re about to see (next chapter) how it can be written in [Snap]{.snap}.
+be. You’re about to see (next chapter) how it can be written in Snap*!*.
 Just give it a different name to avoid confusion, such as my for as
 above.
 
@@ -272,7 +267,7 @@ is the arrowhead that has appeared at the right end of the text box.
 Click it to see the menu shown here at the left.
 
 Choose one of the symbols. The result will have the symbol you want: ![image688.png](assets/image688.png) <!--  style="width:1.24444in;height:0.26667in" / --> The
-available symbols are, pretty much, the ones that are used in [Snap]{.snap}
+available symbols are, pretty much, the ones that are used in Snap*!*
 icons.
 
  But I’d like the arrow symbol
@@ -292,5 +287,5 @@ will make a huge orange “foo.”
 
 Note the last entry in the symbol menu: “new line\index{new line
 character} .” This can be used in a block with many inputs to control
-where the text continues on another line, instead of letting [Snap]{.snap}
+where the text continues on another line, instead of letting Snap*!*
 choose the line break itself.
