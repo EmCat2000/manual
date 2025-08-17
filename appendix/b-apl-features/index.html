@@ -1235,25 +1235,25 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../blocks/operators/reportVariadicSum.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>+</code></span></a>
+ <span class="menu-text">Sum <code>+</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../blocks/operators/reportDifference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>Subtract</code></span></a>
+ <span class="menu-text">Subtract <code>−</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../blocks/operators/reportVariadicProduct.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>✖️</code></span></a>
+ <span class="menu-text">Product <code>×</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../blocks/operators/reportQuotient.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>Division</code></span></a>
+ <span class="menu-text">Divide <code>÷</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1612,7 +1612,7 @@ window.Quarto = {
 </header>
 
 
-<p>The book <em>A Programming Language</em><span></span> was published by mathematician Kenneth E. Iverson<span></span> in 1962. He wanted a formal language that would look like what mathematicians write on chalkboards. The then-unnamed language would later take its name from the first letters of the words in the book’s title. It was little-known until 1964, when a formal description of the just-announced IBM System/360<span></span> in the <em>IBM Systems Journal</em> used APL<span></span> notation. (Around the same time, Iverson’s associate Adin Falkoff<span></span> gave a talk on APL to a New York Association for Computing Machinery chapter, with an excited 14-year-old Brian Harvey in the audience.) But it wasn’t until 1966 that the first public implementation of the language for the System/360 was published by IBM. (It was called “APL\360”<span></span> because the normal slash character / represents the “reduce” operator in APL, while backslash is “expand.”)</p>
+<p>The book <em>A Programming Language</em><span></span> was published by mathematician Kenneth E. Iverson<span></span> in 1962. He wanted a formal language that would look like what mathematicians write on chalkboards. The then-unnamed language would later take its name from the first letters of the words in the book’s title. It was little-known until 1964, when a formal description of the just-announced IBM System/360<span></span> in the <em>IBM Systems Journal</em> used APL<span></span> notation. (Around the same time, Iverson’s associate Adin Falkoff<span></span> gave a talk on APL to a New York Association for Computing Machinery chapter, with an excited 14-year-old Brian Harvey in the audience.) But it wasn’t until 1966 that the first public implementation of the language for the System/360 was published by IBM. (It was called “APL\360”<span></span> because the normal slash character <code>/</code> represents the “reduce” operator in APL, while backslash is “expand.”)</p>
 <p>The crucial idea behind APL is that mathematicians <span></span> think about collections of numbers, one-dimensional <em>vectors</em><span></span> and two-dimensional <em>matrices</em> <span></span> <em>,</em> as valid objects in themselves, what computer scientists later learned to call “first class data<span></span> .” A mathematician who wants to add two vectors writes <strong><em>v</em><sub>1</sub></strong> + <strong><em>v</em><sub>2</sub></strong>, not “for i = 1 to length(v1), result[i]=v1[i]+v2[i].” Same for a programmer using APL.</p>
 <p>There are three kinds of function in APL: scalar functions<span></span> , mixed functions<span></span>, and operators <span></span>. A <em>scalar function</em> is one whose natural domain is individual numbers or text characters. A <em>mixed function</em> is one whose domain includes arrays (vectors, matrices, or higher-dimensional collections). In <span class="snap">Snap</span>, scalar functions are generally found in the green Operators palette, while mixed functions are in the red Lists palette. The third category, confusingly for <span class="snap">Snap</span> users, is called <em>operators</em> in APL, but corresponds to what we call higher order functions<span></span> : functions whose domain includes functions.</p>
 <p><span class="snap">Snap</span> hyperblocks<span></span> are scalar functions that behave like APL scalar functions: they can be called with arrays as inputs, and the underlying function is applied to each number in the arrays. (If the function is <em>monadic,</em> meaning that it takes one input, then there’s no complexity to this idea. Take the square root of an array, and you are taking the square root of each number in the array. If the function is <em>dyadic,</em> taking two inputs, then the two arrays must have the same shape. <span class="snap">Snap</span> is more forgiving than APL; if the arrays don’t agree in number of dimensions, called the <em>rank</em> of the array, the lower-rank <span></span> array is matched repeatedly with subsets of the higher-rank one; if they don’t agree in length along one dimension, the result has the shorter length and some of the numbers in the longer-length array are ignored. An exception in both languages is that if one of the two inputs is a scalar, then it is matched with every number in the other array input.)</p>
