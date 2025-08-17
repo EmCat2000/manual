@@ -7,7 +7,7 @@ just more data) that you interact with by sending it a\index{message}
 *message* (just a name, maybe in the form of a text string, and perhaps
 additional inputs). The object responds to the message by carrying out a
 method, which may or may not report a value back to the asker. Some
-people emphasize the\index{data hiding} *data hiding* aspect of OOP
+people emphasize the\index{data hiding} *data hiding* aspect of [OOP]{.mono}
 (because each object has local variables that other objects can access
 only by sending request messages to the owning object) while others
 emphasize the *simulation* aspect (in which each object abstractly
@@ -16,17 +16,22 @@ the program model real interactions of real people or things). Data
 hiding is important for large multi-programmer industrial projects, but
 for [Snap]{.snap} users it’s the simulation\index{simulation} aspect that’s
 important. Our approach is therefore less restrictive than that of some
-other OOP languages; we give objects easy access to each others’ data
+other [OOP]{.mono} languages; we give objects easy access to each others’ data
 and methods.
 
-Technically, object oriented programming rests on three legs: (1)
-\index{message passing} *Message passing:* There is a notation by which
-any object can send a message to another object. (2)\index{local state}
+Technically, object oriented programming rests on three legs:
+
+1. \index{message passing} *Message passing:* There is a notation by which
+any object can send a message to another object.
+
+2. \index{local state}
+
 *Local state:* Each object can remember the important past history of
 the computation it has performed. (“Important” means that it need not
 remember every message it has handled, but only the lasting effects of
-those messages that will affect later computation.) (3)
-\index{inheritance} *Inheritance:* It would be impractical if each
+those messages that will affect later computation.)
+
+3. \index{inheritance} *Inheritance:* It would be impractical if each
 individual object had to contain methods, many of them identical to
 those of other objects, for all of the messages it can accept. Instead,
 we need a way to say that this new object is just like that old object
@@ -40,10 +45,10 @@ sprites\index{sprite}. Each sprite can own local variables; each
 sprite has its own scripts (methods). A Scratch animation is plainly a
 simulation of the interaction of characters in a play. There are two
 ways in which Scratch sprites are less versatile than the objects of an
-OOP language. First, Scratch message passing is weak in three respects:
-Messages can only be broadcast\index{broadcast block}, not addressed
+[OOP]{.mono}language. First, Scratch message passing is weak in three respects:
+Messages can only be <code>broadcast</code>\index{broadcast block}, not addressed
 to an individual sprite; messages can’t take inputs; and methods can’t
-return values to their caller. Second, and more basic, in the OOP
+return values to their caller. Second, and more basic, in the [OOP]{.mono}
 paradigm objects are *data;* they can be the value of a variable, an
 element of a list, and so on, but that’s not the case for Scratch
 sprites.
@@ -52,25 +57,25 @@ sprites.
 be created and deleted by a script, stored in a variable or list, and
 sent messages individually. The children of a sprite can inherit
 sprite-local variables, methods (sprite-local procedures), and other
-attributes (e.g., x position).
+attributes (e.g., <code>x position</code>).
 
-The fundamental means by which programs get access to sprites is the my reporter
-block\index{my} reporter block. It has a dropdown-menu input slot that, when clicked,
+The fundamental means by which programs get access to sprites is the <code>my ( )</code> reporter
+block\index{my}. It has a dropdown-menu input slot that, when clicked,
 gives access to all the sprites, plus the stage\index{stage}.
 ![my self](assets/image745.png){.image-inline} reports a
 single sprite, the one asking the question. ![image744.png](assets/image744.png) <!--  style="width:1.08333in;height:0.19444in" / -->   reports a list of all
 sprites other than the one asking the question. ![image743.png](assets/image743.png) <!--  style="width:0.96528in;height:0.19444in" / -->  reports a list of all
 sprites that are *near* the one asking—the ones that are candidates for
-having collided with this one, for example. The my block\index{my
+having collided with this one, for example. The <code>my ( )</code> block\index{my
 block} has many other options, discussed below. If you know the name of
 a particular sprite, the object reporter will report the sprite itself.
 
 <!-- ![image746.png](assets/image746.png) style="width:3.55208in;height:0.51042in" / ![image747.png](assets/image747.png)   style="width:2.69143in;height:1.25in" alt="C:\Documents and Settings\bh\Desktop\Scratch002.png" / -->
 
 An object or
-list of objects reported by my or object can be used as input to any
-block that accepts any input type, such as set’s second input. If you
-say an object, the resulting speech balloon will contain a smaller image
+list of objects reported by <code>my ( )</code> or <code>object ( )</code> can be used as input to any
+block that accepts any input type, such as set’s (<code>set ( ) to ( )</code>) second input. If you
+<code>say ( )</code> an object, the resulting speech balloon will contain a smaller image
 of the object’s costume or (for the stage) background.
 
 ![image742.png](assets/image742.png) <!--  style="width:3.54514in;height:0.82639in" / -->
@@ -88,27 +93,26 @@ number of essentially identical sprites that behave like the example.
 copies any more. (As we’ll see, “copies” is the wrong word because the
 parent and the children *share* a lot of properties. That’s why we use
 the word “clones” to describe the children rather than “copies.”) These
-are *temporary* clones\index{temporary clone}. They are automatically
-deleted when the user presses either the green flag or the red stop
-sign. In Scratch 2.0 and later, all clones\index{clone!emporary} are
+are *[temporary]{.mono}* clones\index{temporary clone}. They are automatically
+deleted when the user presses either the "`green flag`" or the "`red stop sign`". In Scratch 2.0 and later, all clones\index{clone temporary} are
 temporary.
 
 The other kind of situation is what happens when you want
 specializations of sprites. For example, let’s say you have a sprite
-named Dog. It has certain behaviors, such as running up to a person who
+named <var>Dog</var>. It has certain behaviors, such as running up to a person who
 comes near it. Now you decide that the family in your story really likes
 dogs, so they adopt a lot of them. Some are cocker spaniels, who wag
 their tails when they see you. Others are rottweilers, who growl at you
-when they see you. So you make a clone of Dog, perhaps rename it Cocker
+when they see you. So you make a clone of <var>Dog</var>, perhaps rename it Cocker
 Spaniel, and give it a new costume and a script for what to do when
-someone gets near. You make another clone of Dog, perhaps rename it
+someone gets near. You make another clone of <var>Dog</var>, perhaps rename it
 Rottweiler, and give it a new costume, etc. Then you make three clones
-of Cocker Spaniel (so there are four altogether) and two clones of
-Rottweiler. Maybe you hide the Dog sprite after all this, since it’s no
+of <var>Cocker Spaniel</var> (so there are four altogether) and two clones of
+<var>Rottweiler</var>. Maybe you hide the <var>Dog</var> sprite after all this, since it’s no
 breed in particular. Each dog has its own position, special behaviors,
 and so on. You want to save all of these dogs in the project. These are
-*permanent* clones\index{permanent clone}. In BYOB 3.1, the
-predecessor to Snap*!,* all clones\index{clone!permanent} are
+*[permanent]{.mono}* clones\index{permanent clone}. In [BYOB 3.1]{.mono}, the
+predecessor to [Snap]{.snap}, all clones\index{clone!permanent} are
 permanent.
 
  One advantage
@@ -119,30 +123,30 @@ updated to reflect the clone’s current costume, direction, and so on.)
 We have tried to anticipate your needs, as follows: When you make a
 clone in a script, using the ![image748.png](assets/image748.png) <!--  style="width:1.51389in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:pix:clone-block.png" / --> block, it is “born” temporary. But when you
 make a clone from the user interface, for example by right-clicking on a
-sprite and choosing “clone,” it is born permanent. The reason this makes
+sprite and choosing "`cline`", it is born permanent. The reason this makes
 sense is that you don’t create 100 *kinds* of dogs automatically. Each
 kind has many different characteristics, programmed by hand. But when
 your project is running, it might create 100 rottweilers, and those will
 be identical unless you change them in the program.
 
 You can change a
-temporary sprite to permanent by right-clicking it and choosing “edit.”
-(It’s called “edit” rather than, say, “permanent” because it also shifts
+temporary sprite to permanent by right-clicking it and choosing "`edit.`"
+(It’s called "`edit`" rather than, say, “permanent” because it also shifts
 the scripting area to reflect that sprite, as if you’d pressed its
 button in the sprite corral.) You can change a permanent sprite to
-temporary by right-clicking it and choosing “release.” You can also
+temporary by right-clicking it and choosing "`release.`" You can also
 change the status of a clone in your program with ![image749.png](assets/image749.png) <!--  style="width:1.51389in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:set-my-temp.png" / --> with true or false as
 the second input.
 
 ##  Sending Messages to Sprites
 
 The messages that a sprite accepts are the blocks in its palettes,
-including both all-sprites and this-sprite-only blocks. (For custom
+including both "`all sprites`" and "`this sprite only`" blocks. (For custom
 blocks, the corresponding methods are the scripts as seen in the Block
 Editor.)
 
-The way to send a message to a sprite (or the stage) is with the tell
-block (for command messages) or the ask block (for reporter messages).
+The way to send a message to a sprite (or the stage) is with the <code>tell ( ) to ( )</code>
+block (for command messages) or the <code>say ( )</code> block (for reporter messages).
 
 ![image749.png](assets/image749.png) <!--  style="width:3.54514in;height:0.82639in" / -->
 
@@ -150,48 +154,48 @@ block (for command messages) or the ask block (for reporter messages).
 
 A small point to note in the examples above: all dropdown menus include
 an empty entry at the top, which can be selected for use in higher order
-procedures like the for each and map examples. Each of the sprites in my
-neighbors or my other sprites is used to fill the blank space in turn.
+procedures like the <code>for each</code> and <code>map</code> examples. Each of the sprites in <code>my
+(neighbors)</code> or <code>my (other sprites)</code> is used to fill the blank space in turn.
 
 By the way, if you want a list of *all* the sprites, including this
 sprite, you can use either of these:
 
 ![image751.png](assets/image751.png) <!--  style="width:3.54514in;height:0.82639in" / -->
 
-Tell and ask wait until the
+<code>Tell ( )</code> and <code>ask ( ) and wait</code> wait until the
 other sprite has carried out its method before this sprite’s script
-continues. (That has to be the case for ask, since we want to do
-something with the value it reports.) So tell is analogous to broadcast
-and wait. Sometimes the other sprite’s method may take a long time, or
+continues. (That has to be the case for <code>ask ( ) and wait</code>, since we want to do
+something with the value it reports.) So <code>tell ( )</code> is analogous to <code>broadcast ( )
+and wait</code>. Sometimes the other sprite’s method may take a long time, or
 may even be a forever loop, so you want the originating script to
-continue without waiting. For this purpose we have the launch block:
+continue without waiting. For this purpose we have the <code>launch ( )</code> block:
 
 ![image762.png](assets/image762.png) <!--  style="width:3.54514in;height:0.82639in" / -->
 
-Launch is analogous to broadcast without the “wait.”
+<code>Launch ( )</code> is analogous to <code>broadcast</code> without the “wait.”
 
-[Snap]{.snap} 4.1, following BYOB 3.1, used an extension of the of block to
+[Snap]{.snap} [4.1]{.mono}, following [BYOB 3.1]{.mono}, used an extension of the of block to
 provide access to other sprites’ methods. That interface was designed
 back when we were trying hard to avoid adding new primitive blocks; it
-allowed us to write ask and tell as tool procedures in [Snap]{.snap} itself.
+allowed us to write <code>ask ( ) and wait</code> and <code>tell ( )</code> as tool procedures in [Snap]{.snap} itself.
 That technique still works, but is deprecated, because nobody understood
 it, and now we have the more straightforward primitives.
 
 ### Polymorphism\index{polymorphism}
 
-Suppose you have a Dog sprite
-with two clones CockerSpaniel and PitBull. In the Dog sprite you define
-this method\index{method} (“For this sprite only” block
+Suppose you have a [Dog]{.mono} sprite
+with two clones CockerSpaniel and PitBull. In the [Dog]{.mono} sprite you define
+this method\index{method} ("`For this sprite only` block
 \index{block!sprite-local} ):
 
 ![image763.png](assets/image763.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
-Note the *loca*tion (map-pin) symbol\index{map-pin symbol} before the
+Note the *loca*tion ([map-pin]{.mono}) symbol\index{map-pin symbol} before the
 block’s name. The symbol is not part of the block title; it’s a visual
 reminder that this is a sprite-*loca*l block. Sprite-local variables are
 similarly marked.
 
-But you don’t define greet as friend or greet as enemy in Dog. Each kind
+But you don’t define <code>greet ( ) as friend</code> or <code>greet ( ) as enemy</code> in Dog. Each kind
 of dog has a different behavior. Here’s what a CockerSpaniel does:
 
 ![image764.png](assets/image764.png) <!--  style="width:1.67361in;height:1.40208in" / -->
@@ -200,35 +204,35 @@ And here’s what a PitBull does:
 
 ![image765.png](assets/image765.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
-Greet is defined in the Dog sprite. If Fido is a particular cocker
-spaniel, and you ask Fido to greet someone, Fido inherits the greet
-method from Dog, but Dog itself couldn’t actually run that method,
-because Dog doesn’t have greet as friend or greet as enemy. And perhaps
-only individual dogs such as Fido have friend? methods. Even though the
-greet method is defined in the Dog sprite, when it’s running it
-remembers what specific dog sprite called it, so it knows which greet as
-friend to use. Dog’s greet block is called a *polymorphic* method,
+<code>Greet ( )</code> is defined in the [Dog]{.mono} sprite.
+If Fido is a particular cocker
+spaniel, and you ask Fido to <code>greet</code> someone, Fido inherits the <code>greet ( )</code>
+method from [Dog]{.mono}, but [Dog]{.mono} itself couldn’t actually run that method,
+because [Dog]{.mono} doesn’t have <code>greet ( ) as friend</code> or <code>greet ( ) as enemy</code>. And perhaps
+only individual dogs such as Fido have <code>friend? ( )</code> methods. Even though the
+<code>greet ( )</code> method is defined in the [Dog]{.mono} sprite, when it’s running it
+remembers what specific dog sprite called it, so it knows which <code>greet ( ) as
+friend</code> to use. [Dog]{.mono}’s <code>greet ( )</code> block is called a *polymorphic* method,
 because it means different things to different dogs, even though they
 all share the same script.
 
 ##  Local State in Sprites: Variables and Attributes
 
 A sprite’s memory of its own past history takes two main forms. It has
-*variables,* created explicitly by the user with the “Make a variable
-\index{variable} ” button; it also has *attributes,* the qualities every
-sprite has automatically, such as position, direction, and pen color.
+*variables,* created explicitly by the user with the "`Make a variable`"
+\index{variable} button; it also has *attributes,* the qualities every
+sprite has automatically, such as <code>position</code>, <code>direction</code>, and <code>pen color</code>.
 Each variable can be examined using its own orange oval block; there is
-one set block to modify all variables. Attributes, however, have a less
+one <code>set ( ) to ( )</code> block to modify all variables. Attributes, however, have a less
 uniform programming interface in Scratch:
 
-- A sprite’s *direction* can be examined with the direction block, and
-  modified with the point in direction block. It can also be modified
-  less directly using the blocks turn, point towards, and if on edge,
-  bounce.
+- A sprite’s *direction* can be examined with the <code>direction</code> block, and
+  modified with the <code>point in direction ( )</code> block. It can also be modified
+  less directly using the blocks <code>turn ( )</code>, <code>point towards ( )</code>, and <code>if on edge, bounce</code>.
 
 - There is no way for a script to examine a sprite’s *pen color,* but
-  there are blocks set pen color to \<color\>, set pen color to
-  \<number\>, and change pen color to modify it.
+  there are blocks <code>set pen color to (\<color\>)</code>, <code>set pen color to
+  (\<number\>)</code>, and <code>change pen color to ( )</code> modify it.
 
 - A sprite’s *name* can be neither examined nor modified by scripts; it
   can be modified by typing a new name directly into the box that
@@ -241,19 +245,19 @@ variable or attribute is called a\index{setter} *setter.*
 
 In [Snap]{.snap} we allow virtually all attributes to be examined. But instead
 of adding dozens of reporters, we use a more uniform interface for
-attributes: The my block\index{my block} ’s menu (in Sensing; see page
+attributes: The my block\index{my block}’s menu (in [Sensing]{.mono}; see page
 [78](#attrib.pnglist-of-attributes)) includes many of the attributes of
-a sprite. It serves as a general getter for those attributes, e.g., my
-\[anchor\] to find the sprite, if any, to which this sprite is attached
+a sprite. It serves as a general getter for those attributes, e.g., <code>my
+(\[anchor\])</code> to find the sprite, if any, to which this sprite is attached
 in a nesting arrangement (see page
-[10](#nesting-sprites-anchors-and-parts)). Similarly, the same set block
+[10](#nesting-sprites-anchors-and-parts)). Similarly, the same <code>set ( ) to ( )</code> block
 used to set variable values allows setting some sprite attributes.
 
 ![image766.png](assets/image766.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
 ##  Prototyping: Parents and Children
 
-Most current OOP languages use a *class/instance* approach to creating
+Most current [OOP]{.mono} languages use a *class/instance* approach to creating
 objects. A class is a particular *kind of object,* and an instance is an
 *actual object* of that type. For example, there might be a Dog class,
 and several instances Fido, Spot, and Runt. The class typically
@@ -274,7 +278,7 @@ expressive system, because you can easily simulate a class/instance
 hierarchy by hiding the prototype sprite! Prototyping is also a better
 fit with the Scratch design principle\index{design principle} that
 everything in a project should be concrete and visible on the stage; in
-class/instance OOP the programming process begins with an abstract,
+class/instance [OOP]{.mono} the programming process begins with an abstract,
 invisible entity, the class, that must be designed before any concrete
 objects can be made.[^7]
 
@@ -291,11 +295,11 @@ Programming Languages, Systems, and Applications \[OOPSLA-86\], ACM
 SigCHI, Portland, OR, September, 1986. Also in *Object-Oriented
 Computing,* Gerald Peterson, Ed., IEEE Computer Society Press, 1987.\]
 
-There are three ways to make a child sprite. If you control-click or
-right-click on a sprite in the “sprite corral” at the bottom right
-corner of the window, you get a menu that includes “clone” as one of the
-choices. There is an a new clone of block\index{a new clone of block}
-in the Control palette that creates and reports a child sprite. And
+There are three ways to make a child sprite. If you [control-click]{.mono} or
+[right-click]{.mono} on a sprite in the “sprite corral” at the bottom right
+corner of the window, you get a menu that includes "`clone`" as one of the
+choices. There is an <code>a new clone of ( )</code> block\index{a new clone of block}
+in the [Control]{.mono} palette that creates and reports a child sprite. And
 sprites have a “parent” attribute\index{parent attribute} that can be
 set, like any attribute, thereby *changing* the parent of an existing
 sprite.
@@ -312,30 +316,18 @@ getter block for a shared property, in the child’s palette, is displayed
 in a lighter color; separate properties of the child are displayed in
 the traditional colors.
 
-> When a new clone is created, by default it shares only its methods,
-> wardrobe, and jukebox with its parent. All other properties are copied
-> to the clone, but not shared. (One exception is that a new *permanent*
-> clone is given a random position. Another is that *temporary* clones
-> share the scripts in their parent’s scripting area. A third is that
-> sprite-local variables that the parent creates *after* cloning are
-> shared with its children.) If the value of a shared property is
-> changed in the parent, then the children see the new value. If the
-> value of a shared property is changed in the *child*, then the sharing
-> link is broken, and a new private version is created in that child.
-> (This is the mechanism by which a child chooses not to share a
-> property with its parent.) “Changed” in this context means using the
-> set or change block for a variable, editing a block in the Block
-> Editor, editing a costume or sound, or inserting, deleting, or
-> reordering costumes or sounds. To change a property from unshared to
-> shared, the child uses the inherit command block. The pulldown menu in
-> the block lists all the things this sprite can inherit from its parent
-> (which might be nothing, if this sprite has no parent) and is not
-> already inheriting. But that would prevent telling a child to inherit,
-> so if the inherit block\index{inherit block} is inside a ring, its
-> pulldown menu includes all the things a child could inherit from this
-> sprite. Right-clicking on the scripting area of a permanent clone
-> gives a menu option to share the entire collection of scripts from its
-> parent, as a temporary clone does.
+When a new clone is created, by default it shares only its methods,
+wardrobe, and jukebox with its parent. All other properties are copied
+to the clone, but not shared. (One exception is that a new *permanent*
+clone is given a random position. Another is that *temporary* clones
+share the scripts in their parent’s scripting area. A third is that
+sprite-local variables that the parent creates *after* cloning are
+shared with its children.) If the value of a shared property is
+changed in the parent, then the children see the new value. If the
+value of a shared property is changed in the *child*, then the sharing
+link is broken, and a new private version is created in that child.
+(This is the mechanism by which a child chooses not to share a property with its parent.) “Changed” in this context means using the
+<code>set ( ) to ( )</code> or <code>change ( ) by ( )</code> block for a variable, editing a block in the Block Editor, editing a costume or sound, or inserting, deleting, or reordering costumes or sounds. To change a property from unshared to shared, the child uses the <code>inherit</code> command block. The pulldown menu in the block lists all the things this sprite can inherit from its parent (which might be nothing, if this sprite has no parent) and is not already inheriting. But that would prevent <code>tell</code>ing a child to inherit, so if the <code>inherit</code> block\index{inherit block} is inside a <code>ring</code>, its pulldown menu includes all the things a child could inherit from this sprite. [Right-clicking]{.mono} on the scripting area of a permanent clone gives a menu option to share the entire collection of scripts from its parent, as a temporary clone does.
 
 The rules are full of details, but the basic idea is simple: Parents can
 change their children, but children can’t directly change their parents.
@@ -344,7 +336,7 @@ goes in one direction. When a child changes some property, it’s
 declaring independence from its parent (with respect to that one
 property). What if you really want the child to be able to make a change
 in the parent (and therefore in itself and all its siblings)? Remember
-that in this system any object can tell any other object to do
+that in this system any object can <code>tell</code> any other object to do
 something:
 
 ![image779.png](assets/image779.png) <!--  style="width:5.07292in;height:0.58333in" / -->
@@ -353,7 +345,7 @@ When a sprite gets a message
 for which it doesn’t have a corresponding block, the message is
 *delegated* to that sprite’s parent. When a sprite does have the
 corresponding block, then the message is not delegated. If the script
-that implements a delegated message refers to my (self), it means the
+that implements a delegated message refers to <code>my (self)</code>, it means the
 child to which the message was originally sent, not the parent to which
 the message was delegated.
 
@@ -363,78 +355,75 @@ the message was delegated.
 
 <!-- ![image781.png](assets/image781.png) ![image782.png](assets/image782.png)  -->
 
-At the right is a picture of the dropdown menu of attributes\index{attributes, list of} in the my
-block.
+At the right is a picture of the dropdown menu of attributes\index{attributes, list of} in the <code>my ( )</code> block.
 
 ![image770.png](assets/image770.png) <!--  style="width:5.07292in;height:0.58333in" / -->
 
 Several of these are not real attributes, but things related to
 attributes:
 
-- self\index{self (in my block)} : this sprite
+- <code>self</code>\index{self (in my block)} : this sprite
 
-- neighbors\index{neighbors (in my block)} : a list of *nearby*
+- <code>neighbors</code>\index{neighbors (in my block)} : a list of *nearby*
   sprites[^8]
 
-- other sprites\index{other sprites (in my block)} : a list of all
+- <code>other sprites</code>\index{other sprites (in my block)} : a list of all
   sprites except myself
 
-- stage\index{stage (in my block)} : the stage, which is first-class,
+- <code>stage</code>\index{stage (in my block)} : the stage, which is first-class,
   like a sprite
 
-- clones\index{clones (in my block)} : a list of my *temporary* clones
+- <code>clones</code>\index{clones (in my block)} : a list of my *temporary* clones
 
-- other clones\index{other clones (in my block)} : a list of my
+- <code>other clones</code>\index{other clones (in my block)} : a list of my
   *temporary* siblings
 
-- parts\index{parts (in my block)} : a list of sprites whose anchor
+- <code>parts</code>\index{parts (in my block)} : a list of sprites whose anchor
   attribute is this sprite
 
-- children\index{children (in my block)} : a list of all my clones,
+- <code>children</code>\index{children (in my block)} : a list of all my clones,
   temporary and permanent
 
 The others are individual attributes:
 
-- anchor\index{anchor (in my block)} : the sprite of which I am a
+- <code>anchor</code>\index{anchor (in my block)} : the sprite of which I am a
   (nested) part
 
-- parent\index{parent (in my block)} : the sprite of which I am a clone
+- <code>parent</code>\index{parent (in my block)} : the sprite of which I am a clone
 
-- temporary?: am I a temporary clone?
+- <code>temporary?</code>: am I a temporary clone?
 
-- name\index{name (in my block)} : my name (same as parent’s name if
+- <code>name</code>\index{name (in my block)} : my name (same as parent’s name if
   I’m temporary)
 
-- costumes\index{costumes (in my block)} : a list of the sprite’s
+- <code>costumes</code>\index{costumes (in my block)} : a list of the sprite’s
   costumes
 
-- sounds\index{sounds (in my block)} : a list of the sprite’s sounds
+- <code>sounds</code>\index{sounds (in my block)} : a list of the sprite’s sounds
 
-- blocks: a list of the blocks visible in this sprite
+- <code>blocks</code>: a list of the blocks visible in this sprite
 
-- categories: a list of all the block category names
+- <code>categories</code>: a list of all the block category names
 
-- dangling?\index{dangling? (in my block)} : True if I am a part and
+- <code>dangling?</code>\index{dangling? (in my block)} : True if I am a part and
   not in synchronous orbit
 
-- draggable?: True if the user can move me with the mouse
+- <code>draggable?</code>: True if the user can move me with the mouse
 
-- width, height, left, right, top, bottom: The width or height of my
+- <code>width, height, left, right, top, bottom</code>: The width or height of my
   costume *as seen right now,* or the left, etc., edge of my bounding
   box, taking rotation into account.
 
-- rotation x\index{rotation x (in my block)}, rotation y
- \index{rotation y (in my block)} : when reading with my, the same as x
-  position, y position. When set, changes the sprite’s rotation center
+- <code>rotation x\index{rotation x (in my block)}, rotation y
+ \index{rotation y</code> (in my block)} : when reading with <code>my ( )</code>, the same as <code>x
+  position, y position</code>. When <code>set ( ) to ( )</code>, changes the sprite’s rotation center
   *without moving the sprite,* like dragging the rotation center in the
   paint editor.
 
-- center x\index{center x (in my block)}, center y\index{center y (in
-  my block)} : the x and y position of the center of my
+- <code>center x\index{center x (in my block)}, center y\index{center y (in
+  my block)}</code>: the x and y position of the center of my bounding box, rounded off–the geometric center of the costume.
 
-> bounding box, rounded off–the geometric center of the costume.
-
-[^8]: *Neighbors* are all other sprites whose bounding boxes intersect the
+[^8]: *<code>Neighbors</code>* are all other sprites whose bounding boxes intersect the
 doubled dimensions of the requesting sprite's bounds.
 
 ## First Class Costumes and Sounds
@@ -442,7 +431,7 @@ doubled dimensions of the requesting sprite's bounds.
 Costumes and sounds don’t have methods, as sprites do; you can’t ask
 them to do things. But they *are* first class:\index{costumes, first
 class} you can make a list of them, put them in variables, use them as
-input to a procedure, and so on. My \[costumes\] and my \[sounds\]
+input to a procedure, and so on. <code>My (costumes)</code> and <code>my (sounds)</code>
 report lists of them.
 
 ### Media Computation with Costumes
@@ -458,7 +447,7 @@ you can select Turtle in the right menu, the block reports 0 for its
 width and height, and an empty string for the other components.) The
 costume’s width and height are in its standard orientation, regardless
 of the sprite’s current direction. (This is different from the
-*sprite’s* width and height, reported by the my block.)
+*sprite’s* width and height, reported by the <code>my ( )</code> block.)
 
 But the really interesting part of a costume is its bitmap
 \index{bitmap}, a list of *pixels*. (A pixel\index{pixel}, short for
@@ -477,7 +466,7 @@ inside the costume, where they are used to reduce “jaggies
 \index{jaggies} ”: the stairstep-like shape of a diagonal line displayed
 on an array of discrete rectangular screen coordinates. Note that the
 opacity of a *sprite* pixel is determined by combining the costume’s
-opacity with the sprite’s ghost effect. (The latter really is a measure
+opacity with the sprite’s <code>ghost effect</code>. (The latter really is a measure
 of transparency: 0 means opaque and 100 means invisible.)
 
 The bitmap is a one-dimensional list of pixels, not an array of *height*
@@ -485,7 +474,7 @@ rows of *width* pixels each. That’s why the pixel list has to be
 combined with the dimensions to produce a costume. This choice partly
 reflects the way bitmaps are stored in the computer’s hardware and
 operating system, but also makes it easy to produce transformations of a
-costume with map:
+costume with <code>map</code>:
 
 ![image784.png](assets/image784.png) <!--  style="width:1.63194in;height:0.1875in" alt="Macintosh HD:Users:bh:Desktop:ofcostume.png" / -->
 
@@ -497,19 +486,19 @@ become purple (blue plus red); perhaps counterintuitively, the white
 t-shirt, which has the maximum value for all three color components,
 loses some of its red and becomes cyan, the color opposite red on the
 color wheel. In reading the code, note that the function that is the
-first input to map is applied to a single pixel, whose first item is its
+first input to <code>map</code> is applied to a single pixel, whose first item is its
 red component. Also note that this process works only on bitmap
-costumes; if you call pixels of on a vector costume (one with “svg” in
+costumes; if you call <code>(pixels) of a costume ( )</code> on a vector costume (one with “svg” in
 the corner of its picture), it will be converted to pixels first.
 
 One important
 point to see here is that a bitmap (list of pixels) is not, by itself, a
-costume. The new costume block\index{new costume block} creates a
+costume. The <code>new costume ( ) width ( ) height ( )</code> block\index{new costume block} creates a
 costume by combining a bitmap, a width, and a height. But, as in the
-example above, switch to costume will accept a bitmap as input and will
+example above, <code>switch to costume ( )</code> will accept a bitmap as input and will
 automatically use the width and height of the current costume. Note that
-there’s no name input; costumes computed in this way are all named
-costume. Note also that the use of switch to costume does *not* add the
+there’s no <var>name</var> input; costumes computed in this way are all named
+<var>costume</var>. Note also that the use of switch to costume does *not* add the
 computed costume to the sprite’s wardrobe; to do that, say
 
 ![image790.png](assets/image790.png) <!--  style="width:2.25694in;height:0.28472in" alt="Macintosh HD:Users:bh:Desktop:add-to-wardrobe.png" / -->
@@ -531,7 +520,7 @@ Here’s one way to exchange red and green values:
 
 It’s the ![image804.png](assets/image804.png) <!--  style="width:0.95833in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:2-1-3-4.png" / --> list that
 determines the rearrangement of colors: green➔red, red➔green, and the
-other two unchanged. That list is inside another list because otherwise
+other two unchanged. That <code>list</code> is inside another <code>list</code> because otherwise
 it would be selecting *rows* of the pixel array, and we want to select
 columns. We use pixels of costume current rather than costume apple
 because the latter is always a red apple, so this little program would

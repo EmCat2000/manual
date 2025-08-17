@@ -11,7 +11,7 @@ while on an airplane or otherwise not on the net. Also, cloud projects
 are limited in size, but you can have all the costumes and sounds you
 like if you save locally. This is why we have multiple ways to save.
 
-In either case, if you choose “Save as…” from the File menu. You’ll see something like this:
+<span id="saveas" class="anchor"></span>In either case, if you choose "`Save as…`" from the File menu. You’ll see something like this:
 
 ![image487.png](assets/image487.png){#fig-saveas} <!--  style="width:3.54861in;height:2.57639in" / -->
 
@@ -26,20 +26,21 @@ Click on Computer and [Snap]{.snap}’s Save Project dialog window will be
 replaced by your operating system’s standard save window. If your
 project has a name, that name will be the default filename if you don’t
 give a different name. Another, equivalent way to save to disk is to
-choose “Export project” from the File menu.
+choose "`Export project`" from the File menu.
 
 ## Creating a Cloud Account\index{cloud storage}
 
-The other possibility is to save your project “in the cloud,”\index{save your project in the cloud}
+The other possibility is to
+save your project "`in the cloud`",\index{save your project in the cloud}
 at the [Snap]{.snap} web site. In order to do this, you need an account with
 us. Click on the Cloud button\index{Cloud button} (![image489.png](assets/image489.png) <!--  style="width:0.29167in;height:0.16667in" / --> ) in the Tool Bar.
-Choose the “Signup…” option. This will show you a window that looks like
+Choose the “`Signup…`” option. This will show you a window that looks like
 the picture below:
 
 ![image488.png](assets/image488.png) <!--  style="width:1.23403in;height:2.32986in" / -->
 
 You must choose a user name\index{user name} that will identify you on
-the web site, such as Jens or bh. If you’re a Scratch user, you can use
+the web site, such as `Jens`. If you’re a Scratch user, you can use
 your Scratch name for [Snap]{.snap} too. If you’re a kid, don’t pick a user
 name that includes your family name, but first names or initials are
 okay. Don’t pick something you’d be embarrassed to have other users (or
@@ -55,7 +56,7 @@ computer only during this initial signup. We do not ask for your *exact*
 birthdate, even for this one-time purpose, because that’s an important
 piece of personally identifiable information.
 
-When you click OK, an email will be sent to the email address you gave,
+When you click "`OK`", an email will be sent to the email address you gave,
 asking you to verify (by clicking a link) that it’s really your email
 address. We keep your email address on file so that, if you forget your
 password, we can send you a password-reset link. We will also email you
@@ -76,20 +77,21 @@ us say this.)
 
 ## Saving to the Cloud
 
-Once you’ve created your account, you can log into it using the “Login…”
+Once you’ve created your account, you can log into it using the "`Login…`"
 option from the Cloud menu:
 
 ![image490.png](assets/image490.png) <!--  style="width:1.6875in;height:2.02778in" / -->
 
-Use the user name and password that you set up earlier. If you check the
-“Stay signed in” box, then you will be logged in automatically the next
+Use
+the user name and password that you set up earlier. If you check the
+"`Stay signed in`" box, then you will be logged in automatically the next
 time you run [Snap]{.snap} from the same browser on the same computer. Check
 the box if you’re using your own computer and you don’t share it with
 siblings. *Don’t* check the box if you’re using a public computer at the
 library, at school, etc.
 
-Once logged in, you can choose the “Cloud” option in the “Save Project”
-dialog shown in @fig-saveas. You enter a project name, and
+Once logged in, you can choose the "`Cloud`" option in the "`Save Project`"
+dialog shown on @sec-saveas. You enter a project name, and
 optionally project notes; your project will be saved online and can be
 loaded from anywhere with net access. The project notes will be visible
 to other users if you publish your project.
@@ -100,21 +102,21 @@ Once you’ve saved a project, you want to be able to load it back into
 [Snap]{.snap}. There are two ways to do this:
 
 1. If you saved the project in your online [Snap]{.snap} account, choose the
-“Open…” option from the File menu. Choose the “Cloud” button, then
-select your project from the list in the big text box and click OK, or
-choose the “Computer” button to open an operating system open dialog. (A
-third button, “Examples,” lets you choose from example projects that we
+"`Open…`" option from the File menu. Choose the "`Cloud`" button, then
+select your project from the list in the big text box and click "`OK`", or
+choose the "`Computer`" button to open an operating system open dialog. (A
+third button, "`Examples`" lets you choose from example projects that we
 provide. You can see what each of these projects is about by clicking on
 it and reading its project notes.)
 
 2. If you saved the project as an XML file on your computer, choose
-“Import…” from the File menu. This will give you an ordinary browser
+"`Import…`" from the File menu. This will give you an ordinary browser
 file-open window, in which you can navigate to the file as you would in
 other software. Alternatively, find the XML file on your desktop, and
 just drag it onto the [Snap]{.snap} window.
 
 The second technique above also allows you to import media (costumes and
-sounds) into a project. Just choose “Import…” and then select a picture
+sounds) into a project. Just choose "`Import…`" and then select a picture
 or sound file instead of an XML file.
 
 [Snap]{.snap} can also import projects created in BYOB 3.0 or 3.1, or (with
@@ -123,7 +125,7 @@ such projects work correctly in [Snap]{.snap}, apart from a small number of
 incompatible blocks.
 
 If you saved projects in an earlier version of [Snap]{.snap} using the
-“Browser” option, then a Browser button will be shown in the Open dialog
+"`Browser`" option, then a Browser button will be shown in the Open dialog
 to allow you to retrieve those projects. But you can save them only with
 the Computer and Cloud options.
 
@@ -131,7 +133,8 @@ the Computer and Cloud options.
 
 If you are still in **[Snap]{.snap}** and realize that you’ve loaded another
 project without saving the one you were working on: ***Don’t edit the
-new project.*** From the File menu ![file icon](assets/image384.png) <!--  style="width:0.31944in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:Dropbox:manual (1):filebutton.png" / --> choose the Restore unsaved project option\index{Restore unsaved project option}.
+new project.*** From the File menu ![image384.png](assets/image384.png) <!--  style="width:0.31944in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:Dropbox:manual (1):filebutton.png" / --> choose the "`Restore unsaved project`"
+option\index{Restore unsaved project option}.
 
 Restore unsaved project will also work if you log out of [Snap]{.snap} and
 later log back in, as long as you don’t edit another project meanwhile.
@@ -140,7 +143,7 @@ just opened, but actually changed in the project editor).
 
 If your project on the cloud is missing, empty, or otherwise broken and
 isn’t the one you edited most recently, or if Restore unsaved project
-fails: ***Don’t edit the broken project.*** In the Open… box, enter your
+fails: ***Don’t edit the broken project.*** In the "`Open…`" box, enter your
 project name, then push the Recover button\index{recover button}. *Do
 this right away,* because we save only the version before the most
 recent, and the latest before today. So don’t keep saving bad versions;
