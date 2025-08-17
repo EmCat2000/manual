@@ -96,7 +96,7 @@ format:
       - overfullrule=true
     papersize: letter
     # TODO: In order to enable fonts, they need to be added to the GitHub Workflow.
-    # 'Times New Roman' does not work...
+    # 'Times New Roman', 'Times' do not work...
     # mainfont: Times
     # monofont: Source Code Pro
     # sansfont: Helvetica
