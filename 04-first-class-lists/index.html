@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-187d1dfe88a333e6e2ed720b92ad121b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-604a3b4d9daa6e2a8ab2afbe2d9bd67f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -222,14 +222,20 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../appendix/libraries/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Libraries in <span class="snap">Snap</span></span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../appendix/a-snap-color-library/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Appendix A. <span class="snap">Snap</span> color library</span></span></a>
+ <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix A. <span class="snap">Snap</span> color library</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../appendix/b-apl-features/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Appendix B. APL features</span></span></a>
+ <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Appendix B. APL features</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -240,20 +246,8 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../appendix/community/students.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Student Accounts</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../appendix/community/teachers.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Teacher Accounts</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../blocks/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">All Snap<em>!</em> Blocks Reference</span></a>
+ <span class="menu-text">All Snap<em>!</em> Blocks</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
@@ -1377,7 +1371,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../blocks/variables/doChangeVar.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><code>change  by</code></span></a>
+ <span class="menu-text"><code>change by</code></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1561,7 +1555,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">First class lists</span></h1>
+<h1 class="title"><span id="sec-ch04" class="quarto-section-identifier"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">First class lists</span></span></h1>
 </div>
 
 
@@ -1588,8 +1582,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>In Scratch<span></span>, numbers and text strings are ﬁrst class. You can put a number in a variable, use one as the input to a block, call a reporter that reports a number, or put a number into a list.</p>
 <p>But Scratch’s lists are not ﬁrst class. You create one using the “<code>Make a list</code><span></span>” button, which requires that you give the list a name. You can’t put the list into a variable, into an input slot of a block, or into a list item—you can’t have lists of lists. None of the Scratch reporters reports a list value. (You can use a reduction of the list into a text string as input to other blocks, but this loses the list structure; the input is just a text string, not a data aggregate.)</p>
-<p>A fundamental design principle<span></span> in <span class="snap">Snap</span> is that <em><strong><u>all data should be ﬁrst class</u></strong>.</em> If it’s in the language, then we should be able to use it fully and freely. We believe that this principle avoids the need for many special-case tools, which can instead be written by <span class="snap">Snap</span> users themselves.</p>
-<p>Note that it’s a data <em>type</em> that’s ﬁrst class, not an individual value. Don’t think, for example, that some lists are ﬁrst class, while others aren’t. In <span class="snap">Snap</span>, lists are ﬁrst class, period.</p>
+<p>A fundamental design principle<span></span> in Snap<em>!</em> is that <em><strong><u>all data should be ﬁrst class</u></strong>.</em> If it’s in the language, then we should be able to use it fully and freely. We believe that this principle avoids the need for many special-case tools, which can instead be written by Snap<em>!</em> users themselves.</p>
+<p>Note that it’s a data <em>type</em> that’s ﬁrst class, not an individual value. Don’t think, for example, that some lists are ﬁrst class, while others aren’t. In Snap<em>!</em>, lists are ﬁrst class, period.</p>
 <p><img src="assets/image523.png" class="img-fluid" alt="image523.png"> <!--  style="width:2.83958in;height:0.41597in" / --></p>
 <section id="the-list-block" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="the-list-block"><span class="header-section-number">4.1</span> The <code>list</code> Block</h2>
@@ -1598,7 +1592,7 @@ ul.task-list li input[type="checkbox"] {
 <p>At the right end of the block are two left-and-right arrowheads <span></span>. Clicking on these changes the number of inputs to list, i.e., the number of elements in the list you are building. Shift-clicking changes by three at a time.</p>
 <p>You can use this block as input to many other blocks:</p>
 <p><img src="assets/image629.png" class="img-fluid" alt="image629.png"> <!--  style="width:2.83958in;height:0.41597in" / --></p>
-<p><span class="snap">Snap</span> does not have a “<code>Make a list</code>” button like the one in Scratch <span></span>. If you want a global “named list,” make a global variable and use the <code>set</code> block to put a list into the variable.</p>
+<p>Snap<em>!</em> does not have a “<code>Make a list</code>” button like the one in Scratch <span></span>. If you want a global “named list,” make a global variable and use the <code>set</code> block to put a list into the variable.</p>
 </section>
 <section id="lists-of-lists" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="lists-of-lists"><span class="header-section-number">4.2</span> Lists of Lists</h2>
@@ -1612,15 +1606,14 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="4.3" class="anchored" data-anchor-id="functional-and-imperative-list-programming"><span class="header-section-number">4.3</span> Functional and Imperative List Programming</h2>
 <p>There are two ways to create a list inside a program. Scratch <span></span> users will be familiar with the <em>imperative</em> programming style<span></span>, which is based on a set of command blocks that modify a list:</p>
 <p><img src="assets/image631.png" class="img-fluid" alt="image631.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
-<p>As an example, here are two blocks that take a list of numbers as input, and report a new list containing only the even numbers from the original list: <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<!-- TODO: This should be 2 pics, side-by-side. -->
+<p>As an example, here are two blocks that take a list of numbers as input, and report a new list containing only the even numbers from the original list:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p><img src="assets/image632.png" class="img-fluid" alt="image632.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
 <p>In these scripts, we first create a temporary variable, then put an empty list in it, then go through the items of the input list using the <code>add ... to (result)</code> block to modify the result list, adding one item at a time, and finally report the result.</p>
 <p><em>Functional</em> programming is a different approach that is becoming important in “real world” programming because of parallelism <span></span>, i.e., the fact that different processors can be manipulating the same data at the same time. This makes the use of mutation<span></span> (changing the value associated with a variable, or the items of a list) problematic because with parallelism it’s impossible to know the exact sequence of events, so the result of mutation may not be what the programmer expected. Even without parallelism, though, functional programming<span></span> is sometimes a simpler and more effective technique, especially when dealing with recursively defined data structures. It uses reporter blocks, not command blocks, to build up a list value:</p>
 <p><img src="assets/image633.png" class="img-fluid" alt="image633.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
 <p>In a functional program, we often use recursion to construct a list, one item at a time. The <code>in front of</code> block <span></span> makes a list that has one item added to the front of an existing list, <em>without changing the value of the original list.</em> A nonempty list is processed by dividing it into its first item (<code>item 1 of</code><span></span>) and all the rest of the items (<code>all but first of</code><span></span>), which are handled through a recursive call:</p>
 <p><img src="assets/image555.png" class="img-fluid" alt="image555.png"> <!--  style="width:4.75in;height:2.24097in" / --></p>
-<p><span class="snap">Snap</span> uses two different internal representations of lists, one (dynamic <span></span> array<span></span>) for imperative programming and the other (linked<span></span> list <span></span>) for functional programming. Each representation makes the corresponding built-in list blocks (commands or reporters, respectively) most efficient. It’s possible to mix styles in the same program, but if <em>the same list</em> is used both ways, the program will run more slowly because it converts from one representation to the other repeatedly. (The <code>item ( ) of [ ]</code> block doesn’t change the representation.) You don’t have to know the details of the internal representations, but it’s worthwhile to use each list in a consistent way.</p>
+<p>Snap<em>!</em> uses two different internal representations of lists, one (dynamic <span></span> array<span></span>) for imperative programming and the other (linked<span></span> list <span></span>) for functional programming. Each representation makes the corresponding built-in list blocks (commands or reporters, respectively) most efficient. It’s possible to mix styles in the same program, but if <em>the same list</em> is used both ways, the program will run more slowly because it converts from one representation to the other repeatedly. (The <code>item ( ) of [ ]</code> block doesn’t change the representation.) You don’t have to know the details of the internal representations, but it’s worthwhile to use each list in a consistent way.</p>
 </section>
 <section id="higher-order-list-operations-and-rings" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="higher-order-list-operations-and-rings"><span class="header-section-number">4.4</span> Higher Order List Operations and Rings</h2>
@@ -1632,7 +1625,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="assets/image634.png" class="img-fluid" alt="image634.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
 <p>Evaluating the <code>=</code> block without a ring reports <code>true</code> or <code>false</code>; evaluating the block <em>with</em> a ring reports the block itself. This allows <code>keep</code> to evaluate the <code>=</code> predicate repeatedly, once for each list item. A block that takes another block as input is called a <em>higher order</em> block (or higher order procedure, or higher order function<span></span>).</p>
 <p><img src="assets/image635.png" class="img-fluid" alt="image635.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
-<p><span class="snap">Snap</span> provides four higher order function blocks for operating on lists:</p>
+<p>Snap<em>!</em> provides four higher order function blocks for operating on lists:</p>
 <p><img src="assets/image636.png" class="img-fluid" alt="image636.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
 <p><span id="map" class="anchor"></span>You’ve already seen <code>keep</code>. <code>Find first</code> is <span></span> similar, but it reports just the first item that satisfies the predicate, not a list of all the matching items. It’s equivalent to <img src="assets/image562.png" class="img-fluid" alt="image562.png"> <!--  style="width:2.39in;height:0.22in" / --> but faster because it stops looking as soon as it finds a match. If there are no matching items, it returns an empty string.</p>
 <p><code>Map</code> <span></span> takes a Reporter block and a list as inputs. It reports a new list in which each item is the value reported by the Reporter block as applied to one item from the input list. That’s a mouthful, but an example will make its meaning clear:</p>
@@ -1640,7 +1633,7 @@ ul.task-list li input[type="checkbox"] {
 <p>By the way, we’ve been using arithmetic examples, but the list items can be of any type, and any reporter can be used. We’ll make the plurals of some words:</p>
 <p><img src="assets/image638.png" class="img-fluid" alt="image638.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
 <p>These examples use small lists, to fit the page, but the higher order blocks work for any size list.</p>
-<p>An <em>empty</em> gray ring represents the <em>identity function,</em> which just reports its input. Leaving the ring in <code>map</code> empty is the most concise way to make a shallow copy of a list (that is, in the case of a list of lists, the result is a new toplevel list whose items are the same (uncopied) lists that are items of the toplevel input list) <span></span>. To make a deep copy of a list <span></span> (that is, one in which all the sublists, sublists of sublists, etc. are copied), use the list as input to the <img src="assets/image576.png" class="img-fluid" alt="id of block"> <!--  style="width:0.74306in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:id.png" / --> block (one of the variants of the <code>sqrt of</code> block). This works because <code>id of</code><span></span> is a <a href="#hyperblocks">hyperblock</a>.</p>
+<p>An <em>empty</em> gray ring represents the <em>identity function,</em> which just reports its input. Leaving the ring in <code>map</code> empty is the most concise way to make a shallow copy of a list (that is, in the case of a list of lists, the result is a new toplevel list whose items are the same (uncopied) lists that are items of the toplevel input list) <span></span>. To make a deep copy of a list <span></span> (that is, one in which all the sublists, sublists of sublists, etc. are copied), use the list as input to the <img src="assets/image576.png" class="img-fluid" alt="image576.png"> <!--  style="width:0.74306in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:id.png" / --> block (one of the variants of the <code>sqrt of</code> block). This works because <code>id of</code><span></span> is a <a href="#hyperblocks">hyperblock</a>.</p>
 <p>The third higher order block, <code>combine</code><span></span>, computes a single result from <em>all</em> the items of a list, using a <em>two-input</em> reporter as its second input. In practice, there are only a few blocks you’ll ever use with <code>combine</code>:</p>
 <p><img src="assets/image639.png" class="img-fluid" alt="image639.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
 <p>These blocks take the sum of the list items, take their product, string them into one word, combine them into a sentence (with spaces between items), see if all items of a list of Booleans are true, see if any of the items is true, find the smallest, or find the largest.</p>
@@ -1660,8 +1653,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Table view is the default if the list has more than 100 items, or if any of the first ten items of the list are lists, in which case it makes a very different-looking two-dimensional picture:</p>
 <p><img src="assets/image538.png" class="img-fluid" alt="image538.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
 <p>In this format, the column of red items has been replaced by a spreadsheet-looking display. For short, wide lists, this display makes the content of the list very clear. A vertical display, with much of the space taken up by the “machinery” at the bottom of each sublist, would make it hard to show all the text at once. (The pedagogic cost is that the structure is no longer explicit; we can’t tell just by looking that this is a list of row-lists, rather than a list of column-lists or a primitive two-dimensional array type. But you can choose list view to see the structure.)</p>
-<p>Beyond such simple cases, in which every item of the main list is a list of the same length, it’s important to keep in mind that the design of table view has to satisfy two goals, not always in agreement: (1) a visually compelling display of two-dimensional arrays, and (2) highly efficient display generation, so that <span class="snap">Snap</span> can handle very large lists, since “big data” is an important topic of study. To meet the first goal perfectly in the case of “ragged right” arrays in which sublists can have different lengths, <span class="snap">Snap</span> would scan the entire list to find the maximum width before displaying anything, but that would violate the second goal.</p>
-<p><span class="snap">Snap</span> uses the simplest possible compromise between the two goals: It examines only the first ten items of the list to decide on the format. If none of those are lists, or they’re all lists of one item, and the overall length is no more than 100, list view is used. If the any of first ten items is a list, then table view is used, and the number of columns in the table is equal to the largest number of items among the first ten items (sublists) of the main list.</p>
+<p>Beyond such simple cases, in which every item of the main list is a list of the same length, it’s important to keep in mind that the design of table view has to satisfy two goals, not always in agreement: (1) a visually compelling display of two-dimensional arrays, and (2) highly efficient display generation, so that Snap<em>!</em> can handle very large lists, since “big data” is an important topic of study. To meet the first goal perfectly in the case of “ragged right” arrays in which sublists can have different lengths, Snap<em>!</em> would scan the entire list to find the maximum width before displaying anything, but that would violate the second goal.</p>
+<p>Snap<em>!</em> uses the simplest possible compromise between the two goals: It examines only the first ten items of the list to decide on the format. If none of those are lists, or they’re all lists of one item, and the overall length is no more than 100, list view is used. If the any of first ten items is a list, then table view is used, and the number of columns in the table is equal to the largest number of items among the first ten items (sublists) of the main list.</p>
 <p>Table views open with standard values for the width and height of a cell, regardless of the actual data. You can change these values by dragging the column letters or row numbers. Each column has its own width, but changing the height of a row changes the height for all rows. (This distinction is based not on the semantics of rows vs.&nbsp;columns, but on the fact that a constant row height makes scrolling through a large list more efficient.) Shift-dragging a column label will change the width of that column.</p>
 <p>If you tried out the adjustments in the previous paragraph, you may have noticed that a column letter turns into a number when you hover over it. Labeling rows and columns differently makes cell references such as “cell 4B” unambiguous; you don’t have to have a convention about whether to say the row first or the column first. (“Cell B4” is the same as “cell 4B.”) On the other hand, to extract a value from column B in your program, you have to say <code>item 2 of</code>, not <code>item B of</code>. So it’s useful to be able to find out a column number by hovering over its letter.</p>
 <p>Any value that can appear in a program can be displayed in a table cell:</p>
@@ -1670,19 +1663,19 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="assets/image642.png" class="img-fluid" alt="image642.png"> <!--  style="width:3.34097in;height:0.57708in" / --></p>
 <p>But we make an exception for cases in which the value in a cell is a list (so that the entire table is three-dimensional). Because lists are visually very big, we don’t try to fit the entire value in a cell:</p>
 <p><img src="assets/image601.png" class="img-fluid" alt="image601.png"> <!--  style="width:3.34097in;height:0.57708in" / --></p>
-<p>Even if you expand the size of the cells, <span class="snap">Snap</span> will not display sublists of sublists in table view. There are two ways to see these inner sublists: You can switch to list view, or you can double-click on a list icon in the table to open a dialog box showing just that sub-sub-list in table view.</p>
+<p>Even if you expand the size of the cells, Snap<em>!</em> will not display sublists of sublists in table view. There are two ways to see these inner sublists: You can switch to list view, or you can double-click on a list icon in the table to open a dialog box showing just that sub-sub-list in table view.</p>
 <p>One last detail: If the first item of a list is a list (so table view is used), but a later item <em>isn’t</em> a list, that later item will be displayed on a red background, like an item of a single-column list:</p>
 <p><img src="assets/image602.png" class="img-fluid" alt="image602.png"> <!--  style="width:3.35417in;height:0.69444in" / --></p>
 <p>So, in particular, if only the first item is a list, the display will look almost like a one-column display.</p>
 <section id="comma-separated-values" class="level3" data-number="4.5.1">
 <h3 data-number="4.5.1" class="anchored" data-anchor-id="comma-separated-values"><span class="header-section-number">4.5.1</span> Comma-Separated Values</h3>
-<p>Spreadsheet and database programs generally offer the option to export their data as CSV (comma-separated values)<span></span> lists. You can import these files into <span class="snap">Snap</span> and turn them into tables (lists of lists), and you can export tables in CSV format. <span class="snap">Snap</span> recognizes a CSV file by the extension .csv in its filename.</p>
+<p>Spreadsheet and database programs generally offer the option to export their data as CSV (comma-separated values)<span></span> lists. You can import these files into Snap<em>!</em> and turn them into tables (lists of lists), and you can export tables in CSV format. Snap<em>!</em> recognizes a CSV file by the extension .csv in its filename.</p>
 <p>A CSV file has one line per table row, with the fields separated by commas within a row:</p>
 <p><code>John,Lennon,rhythm guitar Paul,McCartney,bass guitar George,Harrison,lead guitar Ringo,Starr,drums</code></p>
 <p>Here’s what the corresponding table looks like:</p>
 <!-- This image needs work.  It shouldn't include the csv in text form, and the two views of the list should be captioned.  Ideally this would be two separate captioned pictures on the same line. bh -->
 <p><img src="assets/image643.png" class="img-fluid" alt="image643.png"> <!--  style="width:3.35417in;height:0.69444in" / --></p>
-<p>Here’s how to read a spreadsheet into <span class="snap">Snap</span>:</p>
+<p>Here’s how to read a spreadsheet into Snap<em>!</em>:</p>
 <ol type="1">
 <li>Make a variable with a watcher on stage: <img src="assets/image607.png" class="img-fluid" alt="image607.png"> <!--  style="width:1.20833in;height:0.27083in" alt="Macintosh HD:Users:bh:Desktop:pix:watcher.png" / --></li>
 </ol>
@@ -1693,12 +1686,12 @@ variable’s value is already a list, be sure to click on the outside
 border of the watcher; there is a different menu if you click on the
 list itself.) Select the file with your csv data.
 
-3. There is no 3; that’s it! [Snap]{.snap} will notice that the name of the
+3. There is no 3; that’s it! Snap*!* will notice that the name of the
 file you’re importing is something`.csv` and will turn the text into a
 list of lists automatically.
 
 Or, even easier, just drag and drop the file from your desktop onto the
-[Snap]{.snap} window, and [Snap]{.snap} will automatically create a variable named
+Snap*!* window, and Snap*!* will automatically create a variable named
 after the file and import the data into it.
 
 If you actually want to import the raw CSV data into a variable, either
@@ -1712,7 +1705,7 @@ right-click an item instead of the border; that gives a different menu.)
 ### Multi-dimensional lists and JSON
 
 CSV format is easy to read, but works only for one- or two-dimensional
-lists. If you have a list of lists of lists, [Snap]{.snap} will instead export
+lists. If you have a list of lists of lists, Snap*!* will instead export
 your list as a JSON (JavaScript Object Notation) file\index{JSON
 (JavaScript Object Notation) file} . I modified my list:
 
@@ -1725,7 +1718,7 @@ your list as a JSON (JavaScript Object Notation) file\index{JSON
 <section id="hyperblocks" class="level2" data-number="4.6">
 <h2 data-number="4.6" class="anchored" data-anchor-id="hyperblocks"><span class="header-section-number">4.6</span> Hyperblocks<span></span></h2>
 <p>A <em>scalar</em> is anything other than a list. The name comes from mathematics, where it means a magnitude without direction, as opposed to a vector, which points toward somewhere. A scalar function<span></span> is one whose domain and range are scalars, so all the arithmetic operations are scalar functions, but so are the text ones such as <code>letter</code> and the Boolean ones such as <code>not</code>.</p>
-<p>The major new feature in <span class="snap">Snap</span> 6.0 is that the domain and range of most scalar function blocks is extended to multi-dimensional <span></span> lists, with the underlying scalar function applied termwise:</p>
+<p>The major new feature in Snap<em>!</em> 6.0 is that the domain and range of most scalar function blocks is extended to multi-dimensional <span></span> lists, with the underlying scalar function applied termwise:</p>
 <p><img src="assets/image610.png" class="img-fluid" alt="image610.png"> <!--  style="width:3.34028in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-vector.png" / --> <img src="assets/image609.png" class="img-fluid" alt="image609.png"> <!--  style="width:2.5625in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-monadic.png" / --> <img src="assets/image611.png" class="img-fluid" alt="image611.png"> <!--  style="width:4.94444in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-matrix.png" / --></p>
 <p>Mathematicians, note in the last example above that the result is just a termwise application of the underlying function (7×3, 8×5, etc.), <em>not</em> matrix multiplication. See <a href="../14-appendix-b-apl-features">Appendix B</a> for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each dimension) is the length of the shorter input:</p>
 <p><img src="assets/image612.png" class="img-fluid" alt="image612.png"> <!--  style="width:5.74306in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-ragged.png" / --></p>
@@ -1746,12 +1739,12 @@ your list as a JSON (JavaScript Object Notation) file\index{JSON
 <li><p>If the index is a number, then <code>item of</code> reports the indicated top-level item of the list input; that item may be a sublist, in which case the entire sublist is reported (the original meaning of <code>item of</code>):</p>
 <p><img src="assets/image623.png" class="img-fluid" alt="image623.png"> <!--  style="width:5.50694in;height:0.91667in"     alt="Macintosh HD:Users:bh:Desktop:item-scalar.png" / --></p></li>
 <li><p>If the index is a list of numbers (no sublists), then <code>item of</code> reports a list of the indicated top-level items (rows, in a matrix; a straightforward hyperization): <img src="assets/image624.png" class="img-fluid" alt="image624.png"> <!--  style="width:6.00694in;height:0.86806in"     alt="Macintosh HD:Users:bh:Desktop:item-vector.png" / --></p></li>
-<li><p>If the index is a list of lists of numbers, then <code>item of</code> reports an array of only those scalars whose position in the list input matches the index input in all dimensions (as of <span class="snap">Snap</span> 6.6):</p>
+<li><p>If the index is a list of lists of numbers, then <code>item of</code> reports an array of only those scalars whose position in the list input matches the index input in all dimensions (as of Snap<em>!</em> 6.6):</p>
 <p><img src="assets/image625.png" class="img-fluid" alt="image625.png"> <!--  style="width:6.00694in;height:0.6875in" / --></p></li>
 <li><p>If a list of list of numbers includes an empty sublist, then all items are chosen along that dimension:</p>
 <p><img src="assets/image626.png" class="img-fluid" alt="image626.png"> <!--  style="width:6.00694in;height:0.6875in" / --></p></li>
 </ol>
-<p>To get a column or columns of a spreadsheet, use an empty list in the row selector (as of <span class="snap">Snap</span> 6.6):</p>
+<p>To get a column or columns of a spreadsheet, use an empty list in the row selector (as of Snap<em>!</em> 6.6):</p>
 <p><img src="assets/image627.png" class="img-fluid" alt="image627.png"> <!--  style="width:6.60417in;height:1.04861in" alt="Graphical user interface, application, website Description automatically generated" / --></p>
 <p>The <code>length of</code> block <span></span> is extended to provide various ways of looking at the shape and contents of a list. The options other than <code>length</code> are mainly useful for <em>lists of lists,</em> to any depth. These new options work well with hyperblocks and the APL library. <!-- (Examples are on the next page.) -➞
 
@@ -1766,14 +1759,14 @@ your list as a JSON (JavaScript Object Notation) file\index{JSON
 </ul>
 <p>The remaining three options report a (generally multi-line) text string. The input list may not include any atomic (non-list) data <span></span> other than text or numbers. The <code>lines</code> <span></span> option is intended for use with rank-one lists of text strings; it reports a string in which each list item becomes a line of text. You can think of it as the opposite of the <code>split by line</code> block <span></span> . The <code>csv</code> <span></span> option (comma-separated values) is intended for rank-two lists that represent a spreadsheet or other tabular data. Each item of the input list should be a list of atoms; the block reports a text string in which each item of the big list becomes a line of text in which the items of that sublist are separated by commas. The <code>json</code> <span></span> option is for lists of any rank; it reports a text string in which the list structure is explicitly represented using square brackets. These are the opposites of <code>split by csv</code> and <code>split by json</code>.</p>
 <p><img src="assets/image646.png" class="img-fluid" alt="image646.png"> <!--  style="width:6.60417in;height:1.04861in" / --></p>
-<p>The idea of extending the domain and range of scalar functions to include arrays comes from the language APL<span></span>. (All the great programming languages are based on mathematical ideas. Our primary ancestors are Smalltalk<span></span>, based on models, and Lisp <span></span>, based on lambda calculus. Prolog<span></span>, a great language not (so far) influencing <span class="snap">Snap</span>, is based on logic. And APL, now joining our family, is based on linear algebra, which studies vectors and matrices. Those <em>other</em> programming languages are based on the weaknesses of computer hardware.) Hyperblocks are not the whole story about APL, which also has mixed-domain functions and higher order functions. Some of what’s missing is provided in the APL library. (See <a href="../14-appendix-b-apl-features">Appendix B</a>.)</p>
+<p>The idea of extending the domain and range of scalar functions to include arrays comes from the language APL<span></span>. (All the great programming languages are based on mathematical ideas. Our primary ancestors are Smalltalk<span></span>, based on models, and Lisp <span></span>, based on lambda calculus. Prolog<span></span>, a great language not (so far) influencing Snap<em>!</em>, is based on logic. And APL, now joining our family, is based on linear algebra, which studies vectors and matrices. Those <em>other</em> programming languages are based on the weaknesses of computer hardware.) Hyperblocks are not the whole story about APL, which also has mixed-domain functions and higher order functions. Some of what’s missing is provided in the APL library. (See <a href="../14-appendix-b-apl-features">Appendix B</a>.)</p>
 
 
 </section>
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>Note to users of earlier versions: From the beginning, there has been a tension in our work between the desire to provide tools such as <code>for</code> (used in this example) and the higher order functions introduced on the next page as primitives, to be used as easily as other primitives, and the desire to show how readily such tools can be implemented in <span class="snap">Snap</span> itself. This is one instance of our general pedagogic understanding that learners should both use abstractions and be permitted to see beneath the abstraction barrier. Until version 5.0, we used the uneasy compromise of a library of tools written in <span class="snap">Snap</span> and easily, but not easily enough, loaded into a project. By not loading the tools, users or teachers could explore how to program them. In 5.0 we made them true primitives, partly because that’s what some of us wanted all along and partly because of the increasing importance of fast performance as we explore “big data” and media computation. In version 10.0 we introduced “hybrid” primitives, implemented in high speed Javascript but with an “Edit” option that will open, not the primitive implementation, but the version written in <span class="snap">Snap</span>. This gives us editable primitives without dramatically slowing users’ projects.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Note to users of earlier versions: From the beginning, there has been a tension in our work between the desire to provide tools such as <code>for</code> (used in this example) and the higher order functions introduced on the next page as primitives, to be used as easily as other primitives, and the desire to show how readily such tools can be implemented in Snap! itself. This is one instance of our general pedagogic understanding that learners should both use abstractions and be permitted to see beneath the abstraction barrier. Until version 5.0, we used the uneasy compromise of a library of tools written in Snap! and easily, but not easily enough, loaded into a project. By not loading the tools, users or teachers could explore how to program them. In 5.0 we made them true primitives, partly because that’s what some of us wanted all along and partly because of the increasing importance of fast performance as we explore “big data” and media computation. In version 10.0 we introduced “hybrid” primitives, implemented in high speed Javascript but with an “Edit” option that will open, not the primitive implementation, but the version written in Snap<em>!</em>. This gives us editable primitives without dramatically slowing users’ projects.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 
