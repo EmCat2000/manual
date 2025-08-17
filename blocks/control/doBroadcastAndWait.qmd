@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `broadcast   and wait` {.x-unnumbered}
+# `broadcast   and wait` {.unnumbered-x-fixme}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

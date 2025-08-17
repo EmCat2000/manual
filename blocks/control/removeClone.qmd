@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `delete this clone` {.x-unnumbered}
+# `delete this clone` {.unnumbered-x-fixme}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

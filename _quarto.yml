@@ -72,8 +72,8 @@ format:
     output-file: snap-manual.pdf
     cover-image: images/cover-image.png
     # Do not use pdflatex since we have unicode chars
-    # pdf-engine: lualatex # xelatex #  or HTML based: wkhtmltopdf
-    pdf-engine: xelatex
+    # pdf-engine: lualatex # xelatex # or HTML based: wkhtmltopdf
+    pdf-engine: lualatex
     # pdf-engine-opt:
     keep-tex: false
     filters:
@@ -116,6 +116,13 @@ format:
     # abstract: Abstract test
     # Ads an * after the title.
     # thanks: thanks test
+# TODO: Investigate mapping CSS to latex envs
+# https://github.com/quarto-ext/latex-environment
+# https://github.com/quarto-ext/latex-environment?tab=readme-ov-file#example
+# filters:
+#    - latex-environment
+# environments:
+#   center: center-env
 
 book:
   title: Snap<em>!</em> Reference Manual
