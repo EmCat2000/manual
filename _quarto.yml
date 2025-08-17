@@ -177,12 +177,13 @@ book:
     - 11-metaprogramming/index.md
     - 12-user-interface-elements/index.md
   appendices:
+    - appendix/libraries/index.md
     - appendix/a-snap-color-library/index.md
     - appendix/b-apl-features/index.md
     # TODO: SciSnap! and TuneScope libraries
     - appendix/community/index.md
-    - appendix/community/students.md
-    - appendix/community/teachers.md
+    # - appendix/community/students.md
+    # - appendix/community/teachers.md
     - blocks/index.md
     # This leads to a weird "part" in the PDF TOC.
     # Maybe that's OK?

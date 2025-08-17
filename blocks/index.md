@@ -2,7 +2,9 @@
 page-layout: full
 ---
 
-# All Snap<em>!</em> Blocks Reference {.unnumbered}
+# All Snap<em>!</em> Blocks {.unnumbered}
+
+{#sec-all-blocks}
 
 <!--
 The table below is currently generated from

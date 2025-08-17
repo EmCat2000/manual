@@ -38,14 +38,16 @@ in the middle part of the window. Blocks snap together (hence the name
 [Snap]{.snap} for the language) when you drag a block so that its indentation
 is near the tab of the one above it:
 
-::: {#fig-snapping-blocka layout-ncol=2}
+::: {#fig-snapping-blocks .evenly-spaced-images layout-ncol=2}
 
-![image7.png](assets/image7.png) <!-- {width=2.24653in height=1.46944in} --> ![image8.png](assets/image8.png) <!-- {width=2.20833in height=1.13889in} -->
+![image7.png](assets/image7.png) <!-- {width=2.24653in height=1.46944in} -->
 
-<!-- TODO: Keep only this fig caption OR the sentence after.  -->
+![image8.png](assets/image8.png) <!-- {width=2.20833in height=1.13889in} -->
+
 The white horizontal line is a signal that if you let go of the green
 block it will snap into the tab of the gold one.
 :::
+<!-- TODO: Keep only this fig caption OR the sentence after.  -->
 
 The white horizontal line is a signal that if you let go of the green
 block it will snap into the tab of the gold one.
@@ -66,8 +68,8 @@ distinctive shape is meant to remind you of
 that.[^1]
 
 <!-- TODO: Different CSS for an inline hat block? -->
-[^1]: One of the hat blocks, the generic\index{hat block!generic} “when
-anything” block ![generic when hat block](assets/image10.png){.image-inline}, is subtly different from the others. When the stop
+[^1]: One of the hat blocks, the generic\index{hat block!generic}
+“when anything” block ![generic when hat block](assets/image10.png){.image-inline}, is subtly different from the others. When the stop
 sign is clicked, or when a project or sprite is loaded, this block
 doesn’t test whether the condition in its hexagonal input slot is true,
 so the script beneath it will not run, until some *other* script in the
@@ -105,25 +107,49 @@ in the Control palette\index{Control palette}. The slot inside the C
 shape is a special kind of input slot that accepts a *script* as the
 input.
 
+::: {.evenly-spaced-images layout-ncol=4}
 In the sample script
 
-![image6.png](assets/image6.png) <!-- {width=1.47917in height=1.35417in} --> ![image11.png](assets/image11.png) <!-- {width=1.40625in height=0.48958in} --> the `repeat` block has two inputs: the number 4 and the script
+![image6.png](assets/image6.png) <!-- {width=1.47917in height=1.35417in} -->
+
+the `repeat` block has two inputs: the number 4 and the script
+
+![image11.png](assets/image11.png) <!-- {width=1.40625in height=0.48958in} -->
+:::
 
 C-shaped blocks can be put in a script in two ways. If you see a white
 line and let go, the block will be inserted into the script like any
 command block:
 
-![image12.png](assets/image12.png) <!-- {width=1.47917in height=1.35417in} --> ![image13.png](assets/image13.png) <!-- {width=1.40625in height=0.48958in} -->
+::: {.evenly-spaced-images layout-ncol=2}
+![image12.png](assets/image12.png) <!-- {width=1.47917in height=1.35417in} -->
+
+![image13.png](assets/image13.png) <!-- {width=1.40625in height=0.48958in} -->
+:::
+
+<!-- Note until images are cleaned up 12 and 14 were identical, 13 and 15 were identical. -->
 
 But if you see an orange halo and let go, the block will *wrap* around
 the haloed blocks:
 
-![image14.png](assets/image14.png) <!-- {width=1.47917in height=1.35417in} --> ![image15.png](assets/image15.png) <!-- {width=1.40625in height=0.48958in} -->
+::: {.evenly-spaced-images layout-ncol=2}
+
+![image16.png](assets/image16.png) <!-- {width=1.47917in height=1.35417in} -->
+
+![image17.png](assets/image17.png) <!-- {width=1.40625in height=0.48958in} -->
+
+:::
 
 The halo will always extend from the cursor position to the bottom of
 the script:
 
-![image16.png](assets/image16.png) <!-- {width=1.47917in height=1.35417in} --> !
+::: {.evenly-spaced-images layout-ncol=2}
+
+![image18.png](assets/image18.png) <!-- {width=1.47917in height=1.35417in}-->
+
+![image19.png](assets/image19.png) <!-- {width=1.40625in height=0.48958in} -->
+
+:::
 
 If you want only some of those blocks, after wrapping you can grab the
 first block you don’t want wrapped, pull it down, and snap it under the
@@ -149,8 +175,13 @@ sprite in the scripting area, click on the picture of that sprite in the
 window. Try putting one of the following scripts in each sprite’s
 scripting area:
 
-> ![image26.png](assets/image26.png) <!-- {width=1.55069in height=0.99375in} -->
-> ![image27.png](assets/image27.png) <!-- {width=1.54167in height=1.16667in} -->
+::: {.evenly-spaced-images layout-ncol=2}
+
+![image26.png](assets/image26.png) <!-- {width=1.55069in height=0.99375in} -->
+
+![image27.png](assets/image27.png) <!-- {width=1.54167in height=1.16667in} -->
+
+:::
 
 When you click the green flag, you should see one sprite rotate while
 the other moves back and forth. This experiment illustrates the way
@@ -158,8 +189,12 @@ different scripts can run in parallel. The turning and the moving happen
 together. Parallelism\index{parallelism} can be seen with multiple
 scripts of a single sprite also. Try this example:
 
-> ![image28.png](assets/image28.png) <!-- {width=1.72917in height=0.875in} -->
-> ![image29.png](assets/image29.png) <!-- {width=1.72917in height=0.89583in} -->
+::: {.evenly-spaced-images layout-ncol=2}
+
+![image28.png](assets/image28.png) <!-- {width=1.72917in height=0.875in} -->
+
+![image29.png](assets/image29.png) <!-- {width=1.72917in height=0.89583in} -->
+:::
 
 When you press the space key, the sprite should move forever in a
 circle, because the move and turn blocks are run in parallel. (To stop
@@ -169,11 +204,11 @@ of the tool bar.)
 ### Costumes and Sounds
 
 To change the appearance of a sprite, paint or import a new *costume*\index{costume} for it. To paint a costume, click on the Costumes tab above the
-scripting area, and click the paint button ![image32.png](assets/image32.png) <!--  style="width:0.29167in;height:0.16667in" alt="Macintosh HD:Users:bh:Desktop:paintbutton.png" / -->. The *Paint Editor* that
+scripting area, and click the paint button ![image32.png](assets/image32.png). The *Paint Editor* that
 appears is explained on page [128](#the-paint-editor). There are three
 ways to import a costume. First select the desired sprite in the sprite
 corral. Then, one way is to click on the file icon in the tool bar,
-then choose ![image30.png](assets/image30.png) <!-- {width=0.31944in height=0.21528in} --> the “Costumes…” menu item. You will see a list of costumes
+then choose ![image30.png](assets/image30.png) the “`Costumes…`” menu item. You will see a list of costumes
 from the public media library, and can choose one. The second way, for a
 costume stored on your own computer, is to click on the file icon and
 choose the “Import…” menu item. You can then select a file in any
@@ -182,8 +217,7 @@ way is quicker if the file you want is visible on the desktop: Just drag
 the file onto the [Snap]{.snap} window. In any of these cases, the scripting
 area will be replaced by something like this:
 
-![image31.png](assets/image31.png) <!-- {width=1.76667in height=1.875in} -->
-
+![image31.png](assets/image31.png)
 Just above this part of the window is a set of three tabs: Scripts,
 Costumes, and Sounds. You’ll see that the Costumes tab\index{Costumes
 tab} is now selected. In this view, the sprite’s *wardrobe,*
@@ -194,22 +228,24 @@ mathematician who invented the idea of procedures as data
 \index{procedures as data}, the most important way in which [Snap]{.snap} is
 different from Scratch\index{Scratch}.) You can give a sprite as many
 costumes as you like, and then choose which it will wear either by
-clicking in its wardrobe or by using the ![image35.png](assets/image35.png) <a id="switch to costume"></a> <!--  style="width:1.80556in;height:0.27778in" / --> or ![image34.png](assets/image34.png) <a id="next costume"></a> <!--  style="width:1.80556in;height:0.27778in" / --> block in a script. (Every
-costume has a number as well as a name. The `next` costume block selects
-the next costume by number; after the highest-numbered costume it
+clicking in its wardrobe or by using the ![image35.png](assets/image35.png) or ![image34.png](assets/image34.png) block in a script.
+(Every costume has a number as well as a name. The `next` costume block
+selects the next costume by number; after the highest-numbered costume it
 switches to costume 1. The Turtle, costume 0, is never chosen by next
 costume.) The Turtle costume\index{Turtle costume} is the only one that
-changes color to match a change in the sprite’s pen color. Protip: ![image33.png](assets/image33.png) <a id="switch to costume"></a> <!--  style="width:1.80556in;height:0.27778in" / -->
-switches to the *previous* costume, wrapping like `next costume`.
+changes color to match a change in the sprite’s pen color.
 
-In
-addition to its costumes, a sprite can have *sounds;* the equivalent for
+::: {.callout-tip}
+Protip: ![image33.png](assets/image33.png) switches to the *previous* costume, wrapping like `next costume`.
+:::
+
+In addition to its costumes, a sprite can have *sounds;* the equivalent for
 sounds of the sprite’s wardrobe is called its *jukebox.*\index{jukebox}
 Sound files\index{play sound block} can be imported in any format
 (WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish
 the task of playing sounds\index{playing sounds}. If you would like a
-script to continue running while the sound is playing, use the block ![image39.png](assets/image39.png) <a id="play sound"></a> <!--  style="width:1.23958in;height:0.26042in" / -->.
-In contrast, you can use the block ![image38.png](assets/image38.png) <a id="play sound until done"></a> <!--  style="width:1.89583in;height:0.26042in" / --> to wait for the sound's completion
+script to continue running while the sound is playing, use the block ![image39.png](assets/image39.png).
+In contrast, you can use the block ![image38.png](assets/image38.png) to wait for the sound's completion
 before continuing the rest of the script.
 
 ### Inter-Sprite Communication with Broadcast
@@ -219,24 +255,31 @@ more interesting program, though, the sprites on stage will *interact*
 to tell a story, play a game, etc. Often one sprite will have to tell
 another sprite to run a script. Here’s a simple example:
 
-![image41.png](assets/image41.png) <!-- {width=0.56944in height=1.11111in} --> ![image42.png](assets/image42.png) <!-- {width=2.78418in height=1.51042in} -->
-![image43.png](assets/image43.png) <!-- {width=1.24306in height=0.86111in} --> ![image44.png](assets/image44.png) <!-- {width=1.52083in height=0.60417in} -->
+::: {#fig-broadcast-dog .evenly-spaced-images layout-ncol=4}
+
+![image41.png](assets/image41.png)
+
+![image42.png](assets/image42.png){.image-2x}
+
+![image43.png](assets/image43.png)
+
+![image44.png](assets/image44.png)
+:::
 
 
-In the block ![image40.png](assets/image40.png) <!-- {width=1.71875in height=0.24939in} -->, the word “bark” is just an arbitrary name I made up. When you
+In the block ![image40.png](assets/image40.png){.image-inline}, the word “bark” is just an arbitrary name I made up. When you
 click on the downward arrowhead in that input slot, one of the choices
 (the only choice, the first time) is “new,” which then prompts you to
 enter a name for the new broadcast. When this block is run, the chosen
 message is sent to *every* sprite, which is why the block is called
 “broadcast.” (But if you click the right arrow after the message name,
-the block becomes ![image45.png](assets/image45.png) <!-- {width=1.78958in height=0.2in} --> , and you can change it to ![image46.png](assets/image46.png) <!-- {width=1.8in height=0.19167in} --> to send the message just
+the block becomes ![image45.png](assets/image45.png){.image-inline}, and you can change it to ![image46.png](assets/image46.png){.image-inline} to send the message just
 to one sprite.) In this program, though, only one sprite has a script to
 run when that broadcast is sent, namely the dog. Because the boy’s
 script uses `broadcast and wait`\index{broadcast and wait block} rather
 than just broadcast, the boy doesn’t go on to his next say block until
 the dog’s script finishes. That’s why the two sprites take turns
-talking, instead of both talking at once. In Chapter VII,
-“Object-Oriented Programming with Sprites,” you’ll see a more flexible
+talking, instead of both talking at once. In @sec-ch07 you’ll see a more flexible
 way to send a message to a specific sprite using the tell and ask
 blocks.
 
@@ -256,7 +299,7 @@ the current background. In a complicated project, it’s often convenient
 to use a script in the stage’s scripting area as the overall director of
 the action.
 
-## Nesting Sprites\index{Nesting Sprites} : Anchors and Parts
+## Nesting Sprites\index{Nesting Sprites}: Anchors and Parts
 
 Sometimes it’s desirable to make a sort of “super-sprite” composed of
 pieces that can move together but can also be separately articulated.
@@ -264,8 +307,8 @@ The classic example is a person’s body made up of a torso, limbs, and a
 head. [Snap]{.snap} allows one sprite to be designated as the *anchor*
 \index{anchor} of the combined shape, with other sprites as its *parts.*
 \index{parts (of nested sprite)}
-To set up sprite nesting
-\index{sprite nesting}, drag the sprite corral icon of a *part* sprite
+
+To set up sprite nesting \index{sprite nesting}, drag the sprite corral icon of a *part* sprite
 onto the stage display (not the sprite corral icon!) of the desired
 *anchor* sprite. The precise place where you let go of the mouse button
 will be the attachment point of the part on the anchor.
@@ -698,28 +741,29 @@ to ensure that the visible result of a program on the stage is the same
 when stepped as when not stepped, the shorter script will wait at the
 bottom of its loop for the longer script to catch up.
 
-When we talk about custom blocks in Chapter III, we’ll have more to say
+When we talk about custom blocks in @sec-ch03, we’ll have more to say
 about visible stepping as it affects those blocks.
 
 ## Etcetera
 
-This manual doesn’t explain every block in detail. There are many more
+This manual doesn’t (yet)explain every block in detail. There are many more
 motion blocks, sound blocks, costume and graphics effects blocks, and so
-on. If you would like to find information on specific blocks, go to the Chapter: All [Snap]{.snap} blocks under Appendix. You can also learn what they all do by experimentation, and by
+on. If you would like to find information on specific blocks, go to @sec-all-blocks. You can also learn what they all do by experimentation, and by
 reading the “help screens” that you can get by right-clicking or
-control-clicking a block and selecting “help…” from the menu that
+control-clicking a block and selecting “`help…`” from the menu that
 appears. If you forget what palette (color) a block is, but you remember
-at least part of its name, type control-F and enter the name in the text
-block that appears in the palette area.
+at least part of its name, type <kbd>control-F</kbd> and enter the name in the text block that appears in the palette area.
 
-Here are the primitive blocks that don’t exist in Scratch:
-![image136.png](assets/image136.png) <!-- {width=1.05208in height=0.22917in} -->  reports\index{pen trails
+Here are some of the primitive blocks that don’t exist in Scratch:
+
+![image136.png](assets/image136.png)
+reports\index{pen trails
 block}\index{pen vectors block}, a new costume consisting of everything
 that’s drawn on the stage by any sprite. Right-clicking the block in the
 scripting area gives the option to change it to ![image135.png](assets/image135.png) <!-- {width=1.25in height=0.22917in} --> if vector logging is
 enabled. See page [116](#logpenvectors).
 
-![image137.png](assets/image137.png) <!-- {width=2.08333in height=0.375in} --> Print
+![image137.png](assets/image137.png){.image-inline} Print
 characters\index{write block} in the given point size on the stage, at
 the sprite’s position and in its direction. The sprite moves to the end
 of the text. (That’s not always what you want, but you can save the
@@ -727,23 +771,17 @@ sprite’s position before using it, and sometimes you need to know how
 big the text turned out to be, in turtle steps.) If the pen is down, the
 text will be underlined.
 
-![image138.png](assets/image138.png) <!--  style="width:1.20069in;height:0.51389in" alt="Macintosh HD:Users:bh:Desktop:paste-on.png" / -->
+![image138.png](assets/image138.png)
 Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)
 
-![image139.png](assets/image139.png) <!--  style="width:1.19167in;height:0.33889in" alt="Macintosh HD:Users:bh:Desktop:cut-from.png" / -->
-Takes a sprite as
-input. Erases from that sprite’s costume the area that overlaps with the
-current sprite’s costume. (Does not affect the costume in the chosen
-sprite’s wardrobe, only the copy currently visible.)
+![image139.png](assets/image139.png)
+Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.)
 
-![image142.png](assets/image142.png) <!--  style="width:1.32986in;height:0.42986in" alt="Icon Description automatically generated" / -->  See page
-[6](#generic_when).
+![image142.png](assets/image142.png) See @sec-generic-wh.
 
 ![image141.png](assets/image141.png) <!-- {width=0.98958in height=0.25972in} --> See page [17](#pause_all).
 
-![image140.png](assets/image140.png) <!-- {width=0.52986in height=0.5in} -->  Runs only this script
-until finished.  In the Control palette even though it’s gray.
-
+![image140.png](assets/image140.png) Runs only this script until finished. In the Control palette even though it’s gray.
 
 ![image143.png](assets/image143.png) <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> Reporter
 version of the `if/else` primitive command block\index{if else reporter
@@ -758,22 +796,24 @@ variable} .
 local variables\index{local variables} in a script.\index{script
 variables block}
 
-![image148.png](assets/image148.png) <!-- {width=1.17in height=0.18in} -->
-See page [91](#url).
+![image148.png](assets/image148.png) See page [91](#url).
 
-![image146.png](assets/image146.png) <!--  style="width:0.86in;height:0.19in" alt="Macintosh HD:Users:bh:Desktop:report-effect.png" / --> reports the value of a graphics effect\index{graphics effect}.
+![image146.png](assets/image146.png) reports the value of a graphics effect\index{graphics effect}.
 
-![image147.png](assets/image147.png) <!-- {width=0.72in height=0.2in} --> Constant true\index{true block} or false\index{false block} value. See
+![image147.png](assets/image147.png) Constant true\index{true block} or false\index{false block} value. See
 page [12](#predicates-and-conditional-evaluation).
 
-![image149.png](assets/image149.png) <!-- {width=0.72in height=0.2in} -->
+![image149.png](assets/image149.png)
 
-![image153.png](assets/image153.png) <!-- {width=2.13in height=0.18in} -->
+![image153.png](assets/image153.png)
 Create a primitive using JavaScript\index{JavaScript}. (This block is
 disabled by default; the user must check “Javascript extensions” in the
 setting menu *each time* a project is loaded.)\index{pen down? block}
 
-![image150.png](assets/image150.png) <!-- {width=0.72in height=0.2in} --> The `at` block\index{at block} lets you examine the screen pixel
+<!-- This needs 2 columns -->
+![image150.png](assets/image150.png)
+
+The `at` block\index{at block} lets you examine the screen pixel
 \index{screen pixel} directly behind the rotation center of a sprite,
 the mouse, or an arbitrary (x,y) coordinate pair dropped onto the second
 menu slot. The first five items of the left menu let you examine the
@@ -783,13 +823,19 @@ including this one, any point of which overlaps this sprite’s rotation
 center (behind or in front). This is a hyperblock with respect to its
 second input.
 
-![image154.png](assets/image154.png) <!-- {width=0.72in height=0.2in} -->  Checks the\index{is
+<!-- This needs 2 columns ??? -->
+![image154.png](assets/image154.png)  Checks the\index{is
 \_ a \_ ? block} data\index{stage blocks} type\index{type} of a value.
 
-![image151.png](assets/image151.png) <!-- {width=0.72in height=0.2in} -->
-![image152.png](assets/image152.png) <!-- {width=0.72in height=0.2in} -->
+<!-- These two need to be remade as text -->
+![image151.png](assets/image151.png)
+![image152.png](assets/image152.png)
 
-![image155.png](assets/image155.png) <!-- {width=0.72in height=0.2in} --> \index{set flag block} Turn the\index{split block} text into a list,
+<!-- This needs 2 columns -->
+::: {style="columns: 2; column-gap: 0.5em;"}
+![image155.png](assets/image155.png)\index{set flag block}
+
+Turn the\index{split block} text into a list,
 using the second input as the delimiter between items. The default
 delimiter, indicated by the brown dot in the input slot, is a single
 space character. “Letter” puts each character of the text in its own
@@ -802,14 +848,15 @@ character} (0xa); “tab” is a tab character\index{tab character} (0x9);
 into lists of lists; see page [54](#comma-separated-values). “Blocks”
 takes a script as the first input, reporting a list structure
 representing the structure of the script. See Chapter XI.
+:::
 
-![image170.png](assets/image170.png) <!--  style="width:1.47986in;height:0.18958in" alt="Macintosh HD:Users:bh:Desktop:identical.png" / --> For lists,
+![image170.png](assets/image170.png) For lists,
 \index{identical to} reports true only if its two input values are the
 very same list, so changing an item in one of them is visible in the
 other. (For `=`, lists that look the same are the same.) For text strings,
 uses case-sensitive comparison, unlike `=`, which is case-independent.
 
-![image171.png](assets/image171.png) <!-- {width=0.72in height=0.2in} --> These *hidden* blocks can be found with the relabel option
+![image171.png](assets/image171.png) These *hidden* blocks can be found with the relabel option
 \index{relabel option} of any dyadic arithmetic block. They’re hidden
 partly because writing them in [Snap]{.snap} is a good, pretty easy
 programming exercise. Note: the two inputs to `atan2`\index{atan2 block}
@@ -823,9 +870,9 @@ can provide additional inputs.
 \index{*less-than-or-equal@\texttt{≤} block} hidden predicates can be found by relabeling the
 relational predicates.
 
-**Metaprogramming (see Chapter XI.** **, page [101](#metaprogramming))**
+### **Metaprogramming (see @sec-ch11)**
 
- ![image172.png](assets/image172.png) <!-- {width=0.72in height=0.2in} -->
+![image172.png](assets/image172.png)
 
 These blocks support *metaprogramming,* which means manipulating blocks
 and scripts as data. This is not the same as manipulating procedures
@@ -834,20 +881,21 @@ the actual blocks, what you see on the screen, are the data. This
 capability is new in version 8.0.
 
 
-**First class list blocks (see Chapter IV, page[46](#first-class-lists)):**
+### **First class list blocks (see Chapter IV, page[46](#first-class-lists)):**
 
- ![image173.png](assets/image173.png) <!-- {width=0.72in height=0.2in} -->
+<!-- welp. this needs to be rena -->
+ ![image173.png](assets/image173.png)
 
 `Numbers from`\index{numbers from block} will
 count up or down.
 
-![image224.png](assets/image224.png) <!-- {width=0.83in height=0.21in} -->
-![image225.png](assets/image225.png) <!-- {width=1.43in height=0.21in} -->
+![image224.png](assets/image224.png)
+![image225.png](assets/image225.png)
 report\index{position block} the sprite or mouse position as a two-item
 vector (x,y).
 
 **First class procedure blocks (see Chapter VI, page[65](#procedures-as-data)):**
- ![image226.png](assets/image226.png) <!-- {width=0.72in height=0.2in} -->
+ ![image226.png](assets/image226.png)
 
 **First class continuation blocks (see Chapter X, page[93](#continuations)):**
  ![image227.png](assets/image227.png) <!-- {width=0.72in height=0.2in} -->
@@ -873,8 +921,7 @@ block} (page [23](#broadcast)).
 
 ![image282.png](assets/image282.png) <!-- {width=0.72in height=0.2in} -->
 
-In
-particular, you can say
+In particular, you can say
 
 ![image281.png](assets/image281.png) <!-- {width=2.54in height=0.31in} -->
 
@@ -1561,8 +1608,7 @@ The getter and setter inputs are best explained by example:
 
 ![image466.png](assets/image466.png) <!--  style="width:4.63194in;height:0.63194in" alt="Macintosh HD:Users:bh:Desktop:pix:animate-control.png" / -->
 
-is
-equivalent to
+is equivalent to
 
 ![image467.png](assets/image467.png) <!--  style="width:3.40972in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:pix:animate-motion.png" / -->
 

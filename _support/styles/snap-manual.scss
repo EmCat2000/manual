@@ -103,11 +103,13 @@ h1, h2, h3, h4, h5, h6 {
   background-color: unset;
 }
 
+// TODO: make latex env
 .image-2x {
   width: 25%;
   height: auto;
 }
 
+// TODO: make latex command
 .image-inline {
   padding: 0;
   width: auto;
@@ -117,11 +119,20 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: middle;
 }
 
+// TODO: make latex env
+.evenly-spaced-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+// TODO: Not sure if we want to combine these two classes
 // Slightly smaller than 100% for inline blocks.
 .image-2x.image-inline {
   width: 20%
 }
 
+// TODO: make latex command
 // Less padding than bootstrap default.
 kbd {
   line-height: 1.6;
@@ -146,6 +157,8 @@ p code:not(.sourceCode) {
   font-family: 'source-code-pro', 'Monaco', courier, monospace;
 }
 
+// TODO: make latex command
+// This is the font used in the Word document.`
 // TODO: load Candara font.
 .snap {
   font-size: 1.1em;
