@@ -4,8 +4,6 @@ page-layout: full
 
 # All Snap<em>!</em> Blocks {.unnumbered}
 
-{#sec-all-blocks}
-
 <!--
 The table below is currently generated from
 the following Snap! project:
@@ -48,7 +46,7 @@ reportCrossproduct
 
 <!-- This file should contain noting but markdown. -->
 {{< include _raw_blocks_table.qmd >}}
-: All Snap! Blocks {.blocks-table .table-striped .table-bordered .table-hover .table-responsive-sm .dataTable}
+: All Snap! Blocks {.blocks-table .table-striped .table-bordered .table-hover .table-responsive-sm .dataTable #sec-all-blocks}
 
 <!--
 Consider loaing the DataTables script and stylesheets from a CDN.

@@ -12,9 +12,7 @@ associate Adin Falkoff\index{Falkoff, Adin} gave a talk on APL to a New
 York Association for Computing Machinery chapter, with an excited
 14-year-old Brian Harvey in the audience.) But it wasn’t until 1966 that
 the first public implementation of the language for the System/360 was
-published by IBM. (It was called “APL\360”\index{APL\textbackslash 360} because the
-normal slash character / represents the “reduce” operator in APL, while
-backslash is “expand.”)
+published by IBM. (It was called “APL\360”\index{APL\textbackslash 360} because the normal slash character `/` represents the “reduce” operator in APL, while backslash is “expand.”)
 
 The crucial idea behind APL is that mathematicians
 \index{mathematicians} think about collections of numbers,

@@ -1,4 +1,4 @@
-#  Appendix A. [Snap]{.snap} color library
+# Appendix A. [Snap]{.snap} color library {#sec-appendix-a-colors}
 
 The Colors and Crayons library\index{Colors and Crayons library}
 provides several tools for manipulating color. Although its main purpose

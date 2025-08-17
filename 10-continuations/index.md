@@ -1,4 +1,4 @@
-#  Continuations {#sec-ch10}
+# Continuations {#sec-ch10}
 
 Blocks are usually used within a script. The *continuation* of a block
 within a particular script is the part of the computation that remains

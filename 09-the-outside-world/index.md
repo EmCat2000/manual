@@ -47,11 +47,13 @@ first tries HTTPS\index{HTTPS} and then, if that fails, HTTP
 A security restriction in JavaScript limits the ability of one web site
 to initiate communication with another site. There is an official
 workaround for this limitation called the CORS\index{CORS} protocol
-(Cross-Origin Resource Sharing\index{Cross-Origin Resource Sharing} ),
-but the target site has to allow snap.berkeley.edu explicitly, and of
+(Cross-Origin Resource Sharing\index{Cross-Origin Resource Sharing}),
+but the *target* site has to allow snap.berkeley.edu explicitly, and of
 course most don’t. To get around this problem, you can use third-party
-sites (“cors proxies\index{cors proxies} ”) that are not limited by
+sites (“cors proxies\index{cors proxies}”) that are not limited by
 JavaScript and that forward your requests.
+
+<!-- TODO: Note that you must trust the CORS proxy that you use not to steal your data or modify the responses. -->
 
 ## Hardware Devices
 
@@ -81,8 +83,7 @@ to source code repositories. This situation will improve with time.
 
 ## Date and Time
 
- The current
-\index{current block} block in the Sensing palette can be used to find
+The current \index{current block} block in the Sensing palette can be used to find
 out the current date or time\index{current date or time}. Each call to
 this block reports one component of the date\index{date} or time
 \index{time}, so you will probably combine several calls, like this:

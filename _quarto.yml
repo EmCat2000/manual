@@ -18,7 +18,10 @@ project:
   # post-render:
 
 execute:
-  daemon: false
+  daemon: true
+  freeze: true
+  # We can't use the cache since all code cells (in blocks/) are indentical.
+  cache: false
 
 bibliography: references.bib
 brand: _brand.yml
@@ -84,6 +87,7 @@ format:
       text: |
         \printindex
     toc: true
+    toc-depth: 1
     number-sections: true
     number-depth: 2
     # https://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/koma-script/doc/scrguide-en.pdf

@@ -68,7 +68,7 @@ distinctive shape is meant to remind you of
 that.[^1]
 
 <!-- TODO: Different CSS for an inline hat block? -->
-[^1]: One of the hat blocks, the generic\index{hat block!generic}
+[^1]: {#sec-generic-when} One of the hat blocks, the generic\index{hat block!generic}
 “when anything” block ![generic when hat block](assets/image10.png){.image-inline}, is subtly different from the others. When the stop
 sign is clicked, or when a project or sprite is loaded, this block
 doesn’t test whether the condition in its hexagonal input slot is true,
@@ -777,7 +777,7 @@ Takes a sprite as input. Like stamp except that the costume is stamped onto the 
 ![image139.png](assets/image139.png)
 Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.)
 
-![image142.png](assets/image142.png) See @sec-generic-wh.
+![image142.png](assets/image142.png) See @sec-generic-when.
 
 ![image141.png](assets/image141.png) <!-- {width=0.98958in height=0.25972in} --> See page [17](#pause_all).
 
