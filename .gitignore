@@ -6,9 +6,11 @@ Thumbs.db
 env/
 
 # JupyterBook
-_build/
-# MyST build outputs
 _build
+
+# Compiled Python Output
+# Mostly used for block pages, but we want to always re-run them in our case.
+_freeze
 
 # Quarto
 /env/
