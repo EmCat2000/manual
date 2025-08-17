@@ -1,4 +1,4 @@
-#  Object Oriented Programming with Sprites
+#  Object Oriented Programming with Sprites {#sec-ch07}
 
 Object oriented programming\index{object oriented programming} is a
 style based around the abstraction *object:* a collection of *data* and
@@ -21,13 +21,11 @@ and methods.
 
 Technically, object oriented programming rests on three legs:
 
-1. \index{message passing} *Message passing:* There is a notation by which
+1. *Message passing:*\index{message passing} There is a notation by which
 any object can send a message to another object.
 
-2. \index{local state}
-
-*Local state:* Each object can remember the important past history of
-the computation it has performed. (“Important” means that it need not
+2. *Local state:*\index{local state} Each object can remember the important
+past history of the computation it has performed. (“Important” means that it need not
 remember every message it has handled, but only the lasting effects of
 those messages that will affect later computation.)
 
@@ -38,7 +36,7 @@ we need a way to say that this new object is just like that old object
 except for a few differences, so that only those differences need be
 programmed explicitly.
 
-##  First Class Sprites
+## First Class Sprites
 
 Like Scratch, [Snap]{.snap} comes with things that are natural objects: its
 sprites\index{sprite}. Each sprite can own local variables; each

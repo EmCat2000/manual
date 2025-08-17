@@ -1,4 +1,4 @@
-# First class lists
+# First class lists {#sec-ch04}
 
 A data type is *ﬁrst class*\index{first class data type} in a
 programming language if data of that type can be

@@ -1,4 +1,4 @@
-#  OOP with Procedures
+# OOP with Procedures {#sec-ch08}
 
 The idea of object oriented programming\index{object oriented
 programming} is often taught in a way that makes it seem as if a special

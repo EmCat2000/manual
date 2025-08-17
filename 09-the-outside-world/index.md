@@ -1,7 +1,6 @@
-#  The Outside World
+# The Outside World {#sec-ch09}
 
- The
-facilities discussed so far are fine for projects that take place
+The facilities discussed so far are fine for projects that take place
 entirely on your computer’s screen. But you may want to write programs
 that interact with physical devices\index{devices} (sensors
 \index{sensors} or robots\index{robots} ) or with the World Wide Web
@@ -15,11 +14,11 @@ desired capabilities.
 
 ## The World Wide Web
 
-The input to the url block\index{url block} is the URL (Uniform
-Resource Locator\index{Uniform Resource Locator} ) of a web page. The
+The input to the url block\index{url block} is the URL\index{URL} (Uniform
+Resource Locator\index{Uniform Resource Locator}) of a web page. The
 block reports the body of the Web server’s response (minus HTTP header),
 *without interpretation.* This means that in most cases the response is
-a description of the page in HTML (HyperText Markup Language)
+a description of the page in HTML\index{HTML} (HyperText Markup Language)
 \index{HTML (HyperText Markup Language)} notation. Often, especially for
 commercial web sites, the actual information you’re trying to find on
 the page is actually at another URL included in the reported HTML. The
@@ -41,7 +40,7 @@ should allow for any number of items, but doing it this way makes
 [Snap]{.snap} much faster.) In table view, the entire list is included.
 
 If you include a protocol name in the input to the url block (such as
-http:// or https://), that protocol will be used. If not, the block
+`http://` or `https://`), that protocol will be used. If not, the block
 first tries HTTPS\index{HTTPS} and then, if that fails, HTTP
 \index{HTTP}.
 

@@ -1,4 +1,4 @@
-# Typed Inputs
+# Typed Inputs {#sec-ch05}
 
 ## Scratch’s Type Notation
 

@@ -11,9 +11,10 @@ while on an airplane or otherwise not on the net. Also, cloud projects
 are limited in size, but you can have all the costumes and sounds you
 like if you save locally. This is why we have multiple ways to save.
 
-<span id="saveas" class="anchor"></span>In either case, if you choose "`Save as…`" from the File menu. You’ll see something like this:
+In either case, if you choose "`Save as…`" from the File menu. You’ll see something like this:
 
-![image487.png](assets/image487.png){#fig-saveas} <!--  style="width:3.54861in;height:2.57639in" / -->
+![image487.png](assets/image487.png){#fig-saveas}
+<!--  style="width:3.54861in;height:2.57639in" / -->
 
 (If you are not logged in to your [Snap]{.snap} cloud account, Computer will
 be the only usable option.) The text box at the bottom right of the Save
@@ -67,7 +68,7 @@ third parties. If, nevertheless, you are worried about providing this
 information, do a web search for “temporary email.”
 
 Finally, you must read and agree to the Terms of Service\index{Terms of
-Service} . A quick summary: Don’t interfere with anyone else’s use of
+Service}. A quick summary: Don’t interfere with anyone else’s use of
 the web site, and don’t put copyrighted media or personally identifiable
 information in projects that you share with other users. And we’re not
 responsible if something goes wrong. (Not that we *expect* anything to
@@ -82,8 +83,7 @@ option from the Cloud menu:
 
 ![image490.png](assets/image490.png) <!--  style="width:1.6875in;height:2.02778in" / -->
 
-Use
-the user name and password that you set up earlier. If you check the
+Use the user name and password that you set up earlier. If you check the
 "`Stay signed in`" box, then you will be logged in automatically the next
 time you run [Snap]{.snap} from the same browser on the same computer. Check
 the box if you’re using your own computer and you don’t share it with
@@ -91,7 +91,7 @@ siblings. *Don’t* check the box if you’re using a public computer at the
 library, at school, etc.
 
 Once logged in, you can choose the "`Cloud`" option in the "`Save Project`"
-dialog shown on @sec-saveas. You enter a project name, and
+dialog shown on @fig-saveas . You enter a project name, and
 optionally project notes; your project will be saved online and can be
 loaded from anywhere with net access. The project notes will be visible
 to other users if you publish your project.

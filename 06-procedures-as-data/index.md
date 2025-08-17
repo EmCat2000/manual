@@ -1,4 +1,4 @@
-# Procedures as Data
+# Procedures as Data {#sec-ch06}
 
 ## Call and Run
 

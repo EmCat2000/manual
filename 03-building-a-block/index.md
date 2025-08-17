@@ -1,4 +1,4 @@
-#  Building a Block
+# Building a Block {#sec-ch03}
 
 The first version of [Snap]{.snap} was called BYOB, for “Build Your Own Blocks\index{Build Your Own Blocks}.” This was the first and is still the
 most important capability we added to Scratch\index{Scratch}. (The

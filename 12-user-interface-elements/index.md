@@ -1,4 +1,4 @@
-# User Interface Elements\index{user interface elements}
+# User Interface Elements\index{user interface elements} {#sec-ch12}
 
 In this chapter we describe in detail the various buttons, menus, and
 other clickable elements of the [Snap]{.snap} user interface. Here again is
