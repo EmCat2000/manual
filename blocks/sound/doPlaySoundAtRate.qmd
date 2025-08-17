@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `Play Sound Hz` {.unnumbered-x-fixme}
+# `Play Sound Hz` {.unnumbered}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

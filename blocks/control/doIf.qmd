@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `if` {.unnumbered-x-fixme}
+# `if` {.unnumbered}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

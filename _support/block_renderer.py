@@ -79,6 +79,8 @@ These example projects show the block in the context of a larger project. These 
     else:
         example_projects_md.append("No examples yet.")
 
+    example_images_md = '\n'.join(example_images_md)
+    example_projects_md = '\n'.join(example_projects_md)
     no_index = '{.unnumbered .unlisted}'
     _html_visible = '{.content-visible when-format="html"}'
     _pdf_visible = '{.content-visible when-format="pdf"}'
@@ -104,10 +106,10 @@ These example projects show the block in the context of a larger project. These 
 :::
 
 ## Example Images{no_index}
-{'\n'.join(example_images_md)}
+{example_images_md}
 
 ## Example Projects{no_index}
-{'\n'.join(example_projects_md)}
+{example_projects_md}
     '''
 
 def render_block():
