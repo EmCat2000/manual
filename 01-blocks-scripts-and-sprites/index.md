@@ -2,10 +2,9 @@
 toc: true
 ---
 
-# Blocks, Scripts, and Sprites
+# Blocks, Scripts, and Sprites {#sec-ch01}
 
-This chapter describes the [Snap]{.snap} features inherited from Scratch
-\index{Scratch}; experienced Scratch users can skip to Section B.
+This chapter describes the [Snap]{.snap} features inherited from Scratch\index{Scratch}; experienced Scratch users can skip to @sec-sprites-paralleism.
 
 [Snap]{.snap} is a programming language—a notation in which you can tell a
 computer what you want it to do. Unlike most programming languages,
@@ -92,7 +91,7 @@ can compute input values, instead of typing a particular value into the
 oval. A block can have more than one input slot. For example, the `glide`
 block located about halfway down the Motion palette has three inputs.
 
-One of the hat blocks, the generic `when` (“when anything”) block ![image10.png](assets/image10.png) <!-- {width=1.09722in height=0.35417in} -->, is subtly different from the others.  When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some other script in the project runs (because, for example, you click the green flag).  When generic when blocks are disabled, the stop sign will be square instead of octagonal.
+One of the hat blocks, the generic `when` (“when anything”) block ![image10.png](assets/image10.png) <!-- {width=1.09722in height=0.35417in} -->, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some other script in the project runs (because, for example, you click the green flag). When generic when blocks are disabled, the stop sign will be square instead of octagonal.
 
 Most command blocks have that brick shape, but some, like the `repeat`
 block \index{repeat block} in the sample script, are *C‑shaped.* Most
@@ -100,8 +99,6 @@ C-shaped blocks \index{block!C-shaped} \index{C-shaped block} are found
 in the Control palette \index{Control palette}. The slot inside the C
 shape is a special kind of input slot that accepts a *script* as the
 input.
-
-
 
 In the sample script
 
@@ -134,7 +131,7 @@ blocks into the desired slot.)
 
 ![image24.png](assets/image24.png) <!-- {width=2.31111in height=1.36667in} -->
 
-## Sprites and Parallelism
+## Sprites and Parallelism {#sec-sprites-parallelism}
 
 Just below the stage is the “new sprite button \index{new sprite button}” ![image25.png](assets/image25.png) <!-- {width=0.34028in height=0.24306in} -->. Click the button to add a new sprite to the stage. The new
 sprite will appear in a random position on the stage, with a random

@@ -1,5 +1,7 @@
 # Acknowledgements {.unnumbered}
 
+[]{#sec-acknowledgements}
+
 We have been extremely lucky in our mentors.
 Jens cut his teeth in the company of the Smalltalk pioneers:
 Alan Kay\index{Kay, Alan}, Dan Ingalls\index{Ingalls, Dan}, and the
@@ -10,13 +12,9 @@ worked with John Maloney\index{Maloney, John}, of the MIT
 \index{Scratch!Team@Scratch Team}, who developed the Morphic\index{Morphic}
 graphics framework that’s still at the heart of [Snap]{.snap}.
 
-***The brilliant design of Scratch, from the Lifelong Kindergarten
-Group***\index{Lifelong Kindergarten Group} ***at the MIT Media Lab***
-\index{Media Lab}\index{MIT Media Lab} ***, is crucial to* Snap*!. Our earlier version, BYOB,
-was a direct modification of the Scratch source code.* Snap*! is a
-complete rewrite, but its code structure and its user interface remain
-deeply indebted to Scratch. And the Scratch Team, who could have seen us
-as rivals, have been entirely supportive and welcoming to us.***
+<strong><em>The brilliant design of Scratch, from the Lifelong Kindergarten
+Group\index{Lifelong Kindergarten Group} at the MIT Media Lab
+\index{Media Lab}\index{MIT Media Lab}, is crucial to [Snap]{.snap}. Our earlier version, BYOB, was a direct modification of the Scratch source code. [Snap]{.snap} is a complete rewrite, but its code structure and its user interface remain deeply indebted to Scratch. And the Scratch Team, who could have seen us as rivals, have been entirely supportive and welcoming to us.</em></strong>
 
 Brian grew up at the MIT and Stanford Artificial Intelligence Labs
 \index{MIT Artificial Intelligence Lab}\index{Stanford Artificial Intelligence Lab}, learning from Lisp inventor
@@ -68,24 +66,3 @@ and YC Research. Any opinions, findings, and conclusions or
 recommendations expressed in this material are those of the author(s)
 and do not necessarily reflect the views of the National Science
 Foundation or other funders.
-
-<span class="smallcaps">
-</span>**<u>[Snap]{.snap} Reference Manual</u>**
-
-**Version 8.0**
-
-[Snap]{.snap} (formerly BYOB) is an extended reimplementation of Scratch
-(<u>https://scratch.mit.edu</u>) that allows you to Build Your Own
-Blocks. It also features ﬁrst class lists, first class procedures, first
-class sprites, first class costumes, first class sounds, and first class
-continuations. These added capabilities make it suitable for a serious
-introduction to computer science for high school or college students.
-
-In this manual we sometimes make reference to Scratch, e.g., to explain
-how some [Snap]{.snap} feature extends something familiar in Scratch. It’s
-very helpful to have some experience with Scratch before reading this
-manual, but not essential.
-
-To run [Snap]{.snap}, open a browser window and
-connect to https://snap.berkeley.edu/run. The [Snap]{.snap} community web site
-at https://snap.berkeley.edu is not part of this manual’s scope.

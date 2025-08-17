@@ -9,10 +9,26 @@
 Welcome to the Snap*!* manual. This manual is a newly updated version. However, there are still many images and pages that need proper formatting.
 
 You may wish to [download a pdf][pdf] of the manual.
-
 [pdf]: https://snap.berkeley.edu/snap/help/SnapManual.pdf
 
-\index{home}
+**Version 8.0**
+
+[Snap]{.snap} (formerly BYOB) is an extended reimplementation of Scratch
+(<u>https://scratch.mit.edu</u>) that allows you to Build Your Own
+Blocks. It also features ﬁrst class lists, first class procedures, first
+class sprites, first class costumes, first class sounds, and first class
+continuations. These added capabilities make it suitable for a serious
+introduction to computer science for high school or college students.
+
+In this manual we sometimes make reference to Scratch, e.g., to explain
+how some [Snap]{.snap} feature extends something familiar in Scratch. It’s
+very helpful to have some experience with Scratch before reading this
+manual, but not essential.
+
+To run [Snap]{.snap}, open a browser window and
+visit https://snap.berkeley.edu/snap. The [Snap]{.snap} community web site
+at https://snap.berkeley.edu is covered briefly in [@sec-appendix-community].
+
 
 The manual is roughly organized into a few sections.
 

@@ -1,4 +1,4 @@
-# Saving and Loading Projects and Media
+# Saving and Loading Projects and Media {#sec-ch02}
 
 After you’ve created a project, you’ll want to save it, so that you can
 have access to it the next time you use [Snap]{.snap}. There are two ways to
@@ -11,10 +11,9 @@ while on an airplane or otherwise not on the net. Also, cloud projects
 are limited in size, but you can have all the costumes and sounds you
 like if you save locally. This is why we have multiple ways to save.
 
-<span id="saveas" class="anchor"></span>In either case, if you choose
-“Save as…” from the File menu. You’ll see something like this:
+In either case, if you choose “Save as…” from the File menu. You’ll see something like this:
 
-![image487.png](assets/image487.png) <!--  style="width:3.54861in;height:2.57639in" / -->
+![image487.png](assets/image487.png){#fig-saveas} <!--  style="width:3.54861in;height:2.57639in" / -->
 
 (If you are not logged in to your [Snap]{.snap} cloud account, Computer will
 be the only usable option.) The text box at the bottom right of the Save
@@ -31,8 +30,7 @@ choose “Export project” from the File menu.
 
 ## Creating a Cloud Account\index{cloud storage}
 
-The other possibility is to
-save your project “in the cloud,”\index{save your project in the cloud}
+The other possibility is to save your project “in the cloud,”\index{save your project in the cloud}
 at the [Snap]{.snap} web site. In order to do this, you need an account with
 us. Click on the Cloud button\index{Cloud button} (![image489.png](assets/image489.png) <!--  style="width:0.29167in;height:0.16667in" / --> ) in the Tool Bar.
 Choose the “Signup…” option. This will show you a window that looks like
@@ -83,8 +81,7 @@ option from the Cloud menu:
 
 ![image490.png](assets/image490.png) <!--  style="width:1.6875in;height:2.02778in" / -->
 
-Use
-the user name and password that you set up earlier. If you check the
+Use the user name and password that you set up earlier. If you check the
 “Stay signed in” box, then you will be logged in automatically the next
 time you run [Snap]{.snap} from the same browser on the same computer. Check
 the box if you’re using your own computer and you don’t share it with
@@ -92,7 +89,7 @@ siblings. *Don’t* check the box if you’re using a public computer at the
 library, at school, etc.
 
 Once logged in, you can choose the “Cloud” option in the “Save Project”
-dialog shown on page [37](#saveas). You enter a project name, and
+dialog shown in @fig-saveas. You enter a project name, and
 optionally project notes; your project will be saved online and can be
 loaded from anywhere with net access. The project notes will be visible
 to other users if you publish your project.
@@ -102,7 +99,7 @@ to other users if you publish your project.
 Once you’ve saved a project, you want to be able to load it back into
 [Snap]{.snap}. There are two ways to do this:
 
-1\. If you saved the project in your online [Snap]{.snap} account, choose the
+1. If you saved the project in your online [Snap]{.snap} account, choose the
 “Open…” option from the File menu. Choose the “Cloud” button, then
 select your project from the list in the big text box and click OK, or
 choose the “Computer” button to open an operating system open dialog. (A
@@ -110,7 +107,7 @@ third button, “Examples,” lets you choose from example projects that we
 provide. You can see what each of these projects is about by clicking on
 it and reading its project notes.)
 
-2\. If you saved the project as an XML file on your computer, choose
+2. If you saved the project as an XML file on your computer, choose
 “Import…” from the File menu. This will give you an ordinary browser
 file-open window, in which you can navigate to the file as you would in
 other software. Alternatively, find the XML file on your desktop, and
@@ -132,11 +129,9 @@ the Computer and Cloud options.
 
 ## If you lose your project, do this first!
 
-If
-you are still in **[Snap]{.snap}** and realize that you’ve loaded another
+If you are still in **[Snap]{.snap}** and realize that you’ve loaded another
 project without saving the one you were working on: ***Don’t edit the
-new project.*** From the File menu ![image384.png](assets/image384.png) <!--  style="width:0.31944in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:Dropbox:manual (1):filebutton.png" / --> choose the Restore unsaved project
-option\index{Restore unsaved project option}.
+new project.*** From the File menu ![file icon](assets/image384.png) <!--  style="width:0.31944in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:Dropbox:manual (1):filebutton.png" / --> choose the Restore unsaved project option\index{Restore unsaved project option}.
 
 Restore unsaved project will also work if you log out of [Snap]{.snap} and
 later log back in, as long as you don’t edit another project meanwhile.
