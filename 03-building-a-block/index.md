@@ -216,7 +216,7 @@ To import a block library, use the "`Import…`" command in the "`File`" menu,
 or just drag the [XML]{.mono} file into the [Snap]{.snap} window.
 
 Several block libraries are included with [Snap]{.snap}; for details about
-them, see page [25](#libraries-1). <!--Fix page numbers. --MF -->
+them, see @sec-libraries-intro.
 
 ## Custom blocks and Visible Stepping
 
@@ -225,7 +225,7 @@ custom block as a single step. If you want to see stepping inside a
 custom block you must take these steps *in order:*
 
 1.  Turn on
-    "`Visible Stepping`" by pressing the footprints button: ![image123.png](assets/image123.png) <!--  style="width:0.29167in;height:0.16667in"     alt="Macintosh HD:Users:bh:Desktop:pix:footprint-lit.png" / -->
+    "`Visible Stepping`" by pressing the footprints button: ![image123.png](assets/image123.png)
 
 2.  Select "`Edit`" in the context menu(s) of the block(s) you want to
     examine.

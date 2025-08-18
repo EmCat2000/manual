@@ -152,10 +152,9 @@ way.
 
 There’s an even easier way to select the even numbers from a list:
 
-![image556.png](assets/image556.png) <!--  style="width:5.86458in;height:1.07153in" / -->
+![image556.png](assets/image556.png)
 
-The
-`keep` block takes a Predicate expression as its first input, and a list
+The `keep` block takes a Predicate expression as its first input, and a list
 as its second input. It reports a list containing those elements of the
 input list for which the predicate returns `true`. Notice two things about
 the predicate input: First, it has a grey ring \index{ring, gray} around
@@ -171,7 +170,8 @@ What the ring means is that this input is a block (a predicate block, in
 this case, because the interior of the ring is a hexagon), rather than
 the value reported by that block. Here’s the difference:
 
-![image634.png](assets/image634.png) <!--  style="width:2.375in;height:0.27778in" / -->
+<!-- TODO: this image is squished in its origianl form. -->
+![image634.png](assets/image634.png)
 
 Evaluating the `=` block without a ring reports `true` or `false`; evaluating
 the block *with* a ring reports the block itself. This allows `keep` to
@@ -186,12 +186,14 @@ function}).
 Snap*!* provides four higher order function blocks for operating on
 lists:
 
-![image636.png](assets/image636.png) <!--  style="width:2.375in;height:0.27778in" / -->
+![image636.png](assets/image636.png)
 
-<span id="map"class="anchor"></span>You’ve already seen `keep`. `Find first` is
+### The `map` block {#sec-map}
+
+You’ve already seen `keep`. `Find first` is
 \index{`find first` block} similar, but it reports just the first item that
 satisfies the predicate, not a list of all the matching items. It’s
-equivalent to ![image562.png](assets/image562.png) <!--  style="width:2.39in;height:0.22in" / -->  but faster because it
+equivalent to ![image562.png](assets/image562.png) but faster because it
 stops looking as soon as it finds a match. If there are no matching
 items, it returns an empty string.
 
@@ -200,8 +202,7 @@ reports a new list in which each item is the value reported by the
 Reporter block as applied to one item from the input list. That’s a
 mouthful, but an example will make its meaning clear:
 
-![image637.png](assets/image637.png) <!--  style="width:2.375in;height:0.27778in" / -->
-
+![image637.png](assets/image637.png)
 
 By the way, we’ve been using arithmetic examples, but the list items can
 be of any type, and any reporter can be used. We’ll make the plurals of
@@ -385,27 +386,27 @@ like an item of a single-column list:
 So, in particular, if only the first item is a list, the display will
 look almost like a one-column display.
 
-### Comma-Separated Values
+### Comma-Separated Values {#sec-csv}
 
 Spreadsheet and database programs generally offer the option to export
 their data as CSV (comma-separated values)\index{CSV (comma-separated
 values)} lists. You can import these files into Snap*!* and turn them
 into tables (lists of lists), and you can export tables in CSV format.
-Snap*!* recognizes a CSV file by the extension .csv in its filename.
+[Snap]{.snap} recognizes a CSV file by the extension .csv in its filename.
 
 A CSV file has one line per table row, with the fields separated by
 commas within a row:
 
-``
+```csv
 John,Lennon,rhythm guitar
 Paul,McCartney,bass guitar
 George,Harrison,lead guitar
 Ringo,Starr,drums
-``
+```
 
 Here’s what the corresponding table looks like:
 
-<!-- This image needs work.  It shouldn't include the csv in text form, and the two views of the list should be captioned.  Ideally this would be two separate captioned pictures on the same line. bh -->
+<!-- This image needs work. It shouldn't include the csv in text form, and the two views of the list should be captioned. Ideally this would be two separate captioned pictures on the same line. bh -->
 
 ![image643.png](assets/image643.png) <!--  style="width:3.35417in;height:0.69444in" / -->
 
@@ -474,11 +475,9 @@ function applied termwise:
 
 ![image610.png](assets/image610.png) <!--  style="width:3.34028in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-vector.png" / -->  ![image609.png](assets/image609.png) <!--  style="width:2.5625in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-monadic.png" / -->  ![image611.png](assets/image611.png) <!--  style="width:4.94444in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-matrix.png" / -->
 
-Mathematicians,
-note in the last example above that the result is just a termwise
+Mathematicians, note in the last example above that the result is just a termwise
 application of the underlying function (7×3, 8×5, etc.), *not* matrix
-multiplication. See [Appendix B](../14-appendix-b-apl-features) for that. For a dyadic (two-input)
-function, if the lengths don’t agree, the length of the result (in each
+multiplication. See @sec-appendix-b-apl for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each
 dimension) is the length of the shorter input:
 
 ![image612.png](assets/image612.png) <!--  style="width:5.74306in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-ragged.png" / -->

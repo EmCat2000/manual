@@ -5,9 +5,9 @@ entirely on your computer’s screen. But you may want to write programs
 that interact with physical devices\index{devices} (sensors
 \index{sensors} or robots\index{robots} ) or with the World Wide Web
 \index{World Wide Web}. For these purposes [Snap]{.snap} provides a
-<span id="url" class="anchor"></span>single primitive block:
+single primitive block:
 
-![image148.png](assets/image148.png) <!--  style="width:1.62014in;height:0.25in" / -->
+![image148.png](../blocks/images/block_reportURL.png)
 
 This might not seem like enough, but in fact it can be used to build the
 desired capabilities.

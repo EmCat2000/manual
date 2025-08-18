@@ -58,6 +58,7 @@ format:
     theme:
       - default
       - _support/styles/snap-manual.scss
+      - _support/styles/quarto-overrides.scss
     fontsize: 16px
     # mainfont:
     # monofont:

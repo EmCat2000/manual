@@ -8,5 +8,5 @@ format:
     # pdf-engine-opt:
     classoption:
       - 11pt
-    mainfont: ''
+    mainfont: Lato
     # mainfont: baskerville

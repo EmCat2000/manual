@@ -452,16 +452,15 @@ equivalent to clicking the footprint button above the scripting area.
 You don’t want this on except when you’re actively debugging, because
 even the fastest setting of the slider is still slowed a lot.
 
-Log pen vectors<span id="logpenvectors" class="anchor"></span> tells
-[Snap]{.snap} to remember lines drawn by sprites as exact vectors, rather than
-remember only the pixels that the drawing leaves on the stage. This
+`Log pen vectors` tells [Snap]{.snap} to remember lines drawn by sprites as
+exact vectors, rather than remember only the pixels that the drawing leaves on the stage. This
 remembered vector picture can be used in two ways: First, right-clicking
-on a pen trails block gives an option to relabel it into a pen vectors
+on a `pen trails` block gives an option to relabel it into a pen vectors
 block which, when run, reports the logged lines as a vector (svg)
 costume. Second, right-clicking on the stage when there are logged
-vectors shows an extra option, svg…, that exports a picture of the stage
+vectors shows an extra option, `svg…`, that exports a picture of the stage
 in vector format. Only lines are logged, not color regions made with the
-fill block.
+fill block. {#para-log-pen-vectors}
 
 The next group of four are user preference options, preserved when you
 load a new project. Long form input dialog\index{Long form input dialog
@@ -543,27 +542,23 @@ map to Smalltalk, map to JavaScript, etc., to see examples of how to
 provide translations for blocks.
 
 ![image1028.png](assets/image1028.png){ .image-2x } <!--  style="width:1.38in;height:4.79in" alt="Graphical user interface, application, Teams Description automatically generated" / -->
-![image1027.png](assets/image1027.png){.image-2x } <!--  style="width:2.20972in;height:4.96944in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / -->
+![image1027.png](assets/image1027.png){.image-2x } <!--  style="width:2.20972in;height:4.96944in" -->
 
-The
-Single palette option\index{Single palette option} puts all blocks,
+The Single palette option\index{Single palette option} puts all blocks,
 regardless of category, into a single palette. It’s intended mainly for
 use by curriculum developers building *Parsons problems*\index{Parsons
 problems} *:* projects in which only a small set of blocks are provided,
 and the task is to arrange those blocks to achieve a set goal. In that
 application, this option is combined with the hiding of almost all
-primitive blocks. (See page [119](#context-menus-for-palette-blocks).)
-When Single palette is turned on, two additional options (initially on)
+primitive blocks. (See @sec-context-menus-for-palette-blocks.) When
+Single palette is turned on, two additional options (initially on)
 appear in the settings menu; the Show categories option\index{Show
 categories option} controls the appearance of the palette category names
-such as
-![image1029.png](assets/image1029.png) <!--  style="width:0.36in;height:0.16in" / -->  and
-![image1030.png](assets/image1030.png) <!--  style="width:0.33in;height:0.18in" alt="A picture containing logo Description automatically generated" / --> ,
+such as ![image1029.png](assets/image1029.png){.image-inline} and
+![image1030.png](assets/image1030.png){.image-inline},
 while the Show buttons option\index{Show buttons option} controls the
-appearance of the
-![image1031.png](assets/image1031.png) <!--  style="width:0.61in;height:0.16in" / -->  and
-![image1032.png](assets/image1032.png) <!--  style="width:0.53in;height:0.16in" / -->
-buttons in the palette.
+appearance of the ![image1031.png](assets/image1031.png){.image-inline} and
+![image1032.png](assets/image1032.png){.image-inline} buttons in the palette.
 
 The HSL pen color model option\index{HSL pen color model option}
 changes the set pen, change pen, and pen blocks to provide menu options
@@ -677,7 +672,7 @@ button ![image1050.png](assets/image1050.png) <!--  style="width:0.26042in;heigh
 button} , except that the dialog window that it opens has the current
 palette (color) preselected.
 
-### Context Menus for Palette Blocks
+### Context Menus for Palette Blocks {#sec-context-menus-for-palette-blocks}
 
  Most elements\index{context
 menus for palette blocks} of the [Snap]{.snap} display can be
@@ -747,7 +742,7 @@ as well as primitive) should be hidden. (Within that dialog box, the
 context menu of the background allows you to check or uncheck all the
 boxes at once.)
 
-![image1059.png](assets/image1059.png) <!--  style="width:1.6in;height:2.15972in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / -->
+![image1059.png](assets/image1059.png) <!--  style="width:1.6in;height:2.15972in" -->
 
 The make a category… option\index{show primitives option}, which is
 intended mainly for authors of snap extensions, lets you add custom
@@ -776,7 +771,7 @@ number, so that he could control their order.
 If there are no blocks visible in a category, the category name is
 dimmed in the category selector:
 
-![image1062.png](assets/image1062.png) <!--  style="width:1.35in;height:1.83958in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / -->
+![image1062.png](assets/image1062.png) <!--  style="width:1.35in;height:1.83958in" -->
 
 Here we see that category foo has blocks in it, but categories bar and
 garply are empty. The built-in categories are also subject to dimming,
@@ -877,8 +872,8 @@ undo or redo block and script drops. When you undo a drop into an input
 slot, whatever used to be in the slot is restored. The redo button
 appears once you’ve used undo.
 
-The third button ![image1067.png](assets/image1067.png) <!--  style="width:0.3125in;height:0.23958in" alt="Macintosh HD:Users:bh:Desktop:pix:keyboard-button.png" / -->  starts keyboard editing\index{keyboard editing button}
-mode (Section D, page [130](#keyboard-editing)).
+The third button ![image1067.png](assets/image1067.png){.image-inline} starts keyboard editing\index{keyboard editing button}
+mode (See @sec-keyboard-editing).
 
 Control-click/right-clicking a primitive block within a script
 \index{primitive block within a script} shows a menu like this one:
@@ -1159,12 +1154,11 @@ Its right-click menu will have an extra get blocks option\index{get
 blocks option} that switches to the Scripts tab with the script ready to
 be dropped there.
 
-### The Paint Editor
+### The Paint Editor {#sec-the-paint-editor}
 
-Here is a picture of a Paint
-Editor window\index{Paint Editor window} :
+Here is a picture of a Paint Editor window\index{Paint Editor window}:
 
-![image1094.png](assets/image1094.png) <!--  style="width:3.93889in;height:2.57778in" / -->
+![The Paint Editor showing an Alonzo costume](assets/image1094.png)
 
 If you’ve used any painting program, most of this will be familiar to
 you. Currently, costumes you import can be edited only if they are in a
@@ -1272,7 +1266,7 @@ When you’re satisfied, push the Save button. If you need a sound editor,
 consider the free (both senses)
 [https://audacity.sourceforge.net](http://audacity.sourceforge.net).
 
-## Keyboard Editing
+## Keyboard Editing {#sec-keyboard-editing}
 
 An ongoing area of research is how to make visual programming languages
 usable by people with visual or motoric disabilities. As a first step in

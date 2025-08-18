@@ -29,9 +29,9 @@ input to a block—and eventually carried out under control of the user’s
 program.
 
 Here’s another example, this time using a Reporter-type input in a <code>map</code>
-block (see page [50](#map)):\index{map block}
+block (see @sec-map):\index{map block}
 
-![image743.png](assets/image743.png) <!--  style="width:0.5in;height:0.15625in" / -->
+![image743.png](assets/image743.png)
 
 Here we are calling the Reporter <code>multiply by (10)<code> three times, once with
 each item of the given list as its input, and collecting the results as
@@ -100,7 +100,7 @@ reporter definition.
 ### Variables in Ring Slots
 
 Note that the <code>run</code> block\index{variables in ring slots} in the
-definition of the <code>my for</code> block (page [65](#call-and-run)) doesn’t have a
+definition of the <code>my for</code> block (see @sec-call-and-run) doesn’t have a
 <code>ring</code> around its input variable <var>action</var>. When you drag a variable into a
 ringed input slot, you generally *do* want to use *the value of* the
 variable, which will be the block or script you’re trying to run or
@@ -211,7 +211,7 @@ If the user wants to override these rules, the solution is to use a <code>ring</
 given block or script to indicate how inputs are to be used. This will
 be discussed more fully below.
 
-### Recursive Calls to Multiple-Input Blocks
+### Recursive Calls to Multiple-Input Blocks {#sec-recursive-calls-to-multiple-input-blocks}
 
 A relatively rare situation not yet considered here is the case of a
 recursive block that has a variable number of inputs. Let’s say the user

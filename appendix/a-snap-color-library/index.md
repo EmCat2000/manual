@@ -5,35 +5,29 @@ provides several tools for manipulating color. Although its main purpose
 is controlling a sprite’s pen color, it also establishes colors as a
 first class data type:
 
-![image401.png](assets/image401.png) <!--  style="width:3.13333in;height:0.51667in" alt="Macintosh HD:Users:bh:Desktop:crayon-Pen.png" / -->
+![image401.png](assets/image401.png)
 
-
-
-For people who just
-want colors in their projects without having to be color experts, we
+For people who just want colors in their projects without having to be color experts, we
 provide two simple mechanisms: a *color number*\index{color numbers}
 scale with a broad range of continuous color variation and a set of 100
 *crayons* organized by color family (ten reds, ten oranges, etc.) The
 crayons\index{crayons} include the block colors:
 
-![image1135.png](assets/image1135.png) <!--  style="width:3.13333in;height:0.51667in" alt="Macintosh HD:Users:bh:Desktop:crayon-Pen.png" / -->
+![image1135.png](assets/image1135.png)
 
 
-For experts, we
-provide color selection by RGB, HSL, HSV, X11/W3C names, and variants on
-those scales.
+For experts, we provide color selection by RGB, HSL, HSV, X11/W3C names, and variants on those scales.
 
 ![image1136.png](assets/image1136.png) <!--  style="width:7.16667in;height:1.1in" alt="Macintosh HD:Users:bh:Desktop:hsl-from-x11.png" / -->
 
-### Introduction to Color
+## Introduction to Color
 
-Your computer
-monitor can display millions of colors, but you probably can’t
-distinguish that many. For example, here’s red 57, green 180, blue 200: ![image1137.png](assets/image1137.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome002.png" / -->
+Your computer monitor can display millions of colors, but you probably can’t
+distinguish that many. For example, here’s red 57, green 180, blue 200: ![a teal color swatch](assets/image1137.png){.image-inline}
 And here’s red 57, green *182,* blue 200:  ![image1138.png](assets/image1138.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --> You might be able to tell them
 apart if you see them side by side: ![image1137.png](assets/image1137.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome002.png" / --> ![image1138.png](assets/image1138.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --> but maybe not even then.
 
-Color space\index{color space} —the collection of all possible
+Color space\index{color space}—the collection of all possible
 colors—is three-dimensional, but there are many ways to choose the
 dimensions. RGB\index{RGB} (red-green-blue), the one most commonly used
 in computers, matches the way TVs and displays produce color. Behind
@@ -56,23 +50,23 @@ see but your computer display can’t generate. If that intrigues you,
 look up [color theory](https://en.wikipedia.org/wiki/Color_theory)
 \index{color theory} in Wikipedia.
 
-### Crayons and Color Numbers
+### Crayons and Color Numbers {#sec-crayons-and-color-numbers}
 
 But if you just want some colors in your project, we provide a simple,
 one-dimensional subset of the available colors. Two subsets, actually:
 *crayons* and *color numbers.* Here’s the difference:
 
-![image1139.png](assets/image1139.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome002.png" / -->
+![image1139.png](assets/image1139.png)
 
- The first row
-shows 100 distinct colors. They have names; this is pumpkin  ![image1145.png](assets/image1145.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome003.png" / -->
-\index{pumpkin}, and this is denim ![image1146.png](assets/image1146.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome004.png" / -->\index{denim}. You’re supposed to
-think of them as a big box of 100 crayons\index{crayons}. They’re
+The first row shows 100 distinct colors. They have names; this is pumpkin
+![image1145.png](assets/image1145.png)\index{pumpkin},
+and this is denim ![image1146.png](assets/image1146.png)\index{denim}.
+You’re supposed to think of them as a big box of 100 crayons\index{crayons}. They’re
 arranged in families: grays, pinks, reds, browns, oranges, etc. But
 they’re not consistently ordered within a family; you’d be unlikely to
 say “next crayon” in a project. (But look at the crayon spiral on page
 [145](#spirals).) Instead, you’d think “I want this to look like a
-really old-fashioned photo” and so you’d find sepia ![image1144.png](assets/image1144.png) <!--  style="width:0.23611in;height:0.23611in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome005.png" / -->\index{sepia} as
+really old-fashioned photo” and so you’d find sepia ![image1144.png](assets/image1144.png){.image-inline}\index{sepia} as
 crayon number 33. You don’t have to memorize the numbers! You can find
 them in a menu with a submenu for each family.\index{set pen block}
 
@@ -184,8 +178,7 @@ We’ll have more to say about these after a detour through color theory.
 That’s all you have to know about colors! *Crayons* for specific
 interesting ones, *color numbers* for gradual transformation from one
 color to the next. But there’s a bit more to say, if you’re interested.
-If not, stop here. (But look at the samples of the different scales on
-page [145](#spirals).)
+If not, stop here. (But look at the samples of the different scales in @sec-tldr-spirals.)
 
 **More about Colors: Fair Hues and Shades**
 
@@ -279,23 +272,20 @@ grays at the left. Since there are eight color families, the pure, named
 fair hues are at multiples of 100/8=12.5, starting with red=0.)
 
 
-White
-is crayon 14 and color number 14. This value was deliberately chosen
+White is crayon 14 and color number 14. This value was deliberately chosen
 *not* to be a multiple of 5 so that the every-fifth-crayon and
 every-tenth-crayon selections don’t include it, so that all of the
 crayons in those smaller boxes are visible against a white\index{white}
 stage background.
 
-![image1198.png](assets/image1198.png) <!--  style="width:1.85in;height:1.07986in" alt="Macintosh HD:Users:bh:Desktop:Prism_compare_rainbow_01.png" / -->
+::: {.evenly-spaced-images layout-ncol="2"}
+![(attribution: Wikipedia user Andys. CC BY-SA.)](assets/image1198.png "(attribution: Wikipedia user Andys. CC BY-SA.)"){#fig-rainbow}
 
 Among purples\index{purple}, the official spectral violet
 \index{violet} (crayon 90) is the end of the spectrum. Magenta
 \index{magenta}, brighter than violet, isn’t a spectral color at all.
-<span id="rainbow" class="anchor"></span>(In the picture at the left,
-the top part is the spectrum of white light spread out through a prism;
-the middle part is a photograph of a rainbow, and the bottom part is a
-digital simulation of a rainbow.) Magenta is a mixture of red and blue.
-(attribution: Wikipedia user Andys. CC BY-SA.)
+(In the picture at the left, the top part is the spectrum of white light spread out through a prism; the middle part is a photograph of a rainbow, and the bottom part is a digital simulation of a rainbow.) Magenta is a mixture of red and blue.
+:::
 
 The light gray at color number 10 is slightly different from crayon 10
 just because of roundoff in computing crayon values. Color number 90 is
@@ -551,7 +541,7 @@ weighted:
 understanding paint mixing, along with [David Briggs\index{Briggs, David}](http://www.huevaluechroma.com/061.php)’s tutorial. Remaining
 mistakes are bh’s.)
 
-### tl;dr
+### tl;dr {#sec-tldr-spirals}
 
 For normal people\index{normal people}, [Snap]{.snap} provides three simple,
 one-dimensional scales: *<u>crayons</u>* for specific interesting
@@ -559,16 +549,16 @@ colors, *<u>color numbers</u>* for a continuum of high-contrast colors
 with a range of hues and shading, and *<u>fair hues</u>* for a continuum
 without shading. For color nerds\index{color nerds}, it provides
 three-dimensional color spaces RGB, HSL, HSV, and fair-hue variants of
-the latter two. <span id="spirals" class="anchor"></span>We recommend
-“fair HSL\index{fair HSL} ” for zeroing in on a desired color.
+the latter two. We recommend “fair HSL\index{fair HSL} ” for zeroing in on a desired color.
 
-<!-- ![image1241.png](assets/image1241.png)  style="width:1.53472in;height:1.84722in" alt="Macintosh HD:Users:bh:Desktop:squiral-script.png" / -->
+<!-- Image hidden because it is included as part of the next image. -->
+<!-- ![image1241.png](assets/image1241.png) -->
 
-![image1242.png](assets/image1242.png) <!--  style="width:4.34028in;height:0.65278in" alt="Macintosh HD:Users:bh:Desktop:5R-3G-paint.png" / -->
+![image1242.png](assets/image1242.png)
 
 ### Subappendix: Geeky details on fair hue
 
-![image1243.png](assets/image1243.png) <!--  style="width:4.34028in;height:0.65278in" alt="Macintosh HD:Users:bh:Desktop:5R-3G-paint.png" / -->
+![image1243.png](assets/image1243.png)
 
 The left graph shows that, unsurprisingly, all of the brown fair hue
 \index{fair hue} s make essentially no progress in real hue, with the
@@ -691,7 +681,7 @@ left as an exercise for the reader.
 The purple family is different from the others, because it has to
 include both spectral violet and extraspectral RGB magenta. Violet is
 usually given as RGB \[128, 0, 255\], but that’s much brighter than the
-violet in an actual spectrum (see page [142](#rainbow)). We use \[80, 0,
+violet in an actual spectrum (see @fig-rainbow). We use \[80, 0,
 90\], a value hand-tweaked to look as much as possible like the violet
 in rainbow photos, as color number 90. (*Crayon* 90 is \[128, 0, 255\].)
 Magenta, \[255, 0, 255\], is color number 95. This means that the colors

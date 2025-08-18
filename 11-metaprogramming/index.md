@@ -106,7 +106,7 @@ very important that these set blocks appear in the same script as the
 define that creates the block, because the block upvar is local to that
 script. You can’t later say, for example,
 
-![image952.png](assets/image952.png) <!--  style="width:4.31in;height:0.83in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / -->
+![image952.png](assets/image952.png) <!--  style="width:4.31in;height:0.83in" -->
 
 because the copy of the hexagon block in this instruction counts as
 “using” it.
