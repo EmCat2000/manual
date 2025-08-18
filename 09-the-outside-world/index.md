@@ -26,11 +26,12 @@ Web page is typically a very long text string, and so the primitive
 split block\index{split block} is useful to get the text in a
 manageable form, namely, as a list of lines:
 
-![image871.png](assets/image871.png) <!--  style="width:6.52083in;height:4.27778in" / -->
+<!-- TODO: Shrink an image like this in the PDF so more stuff fits on the previous page... -->
+![image871.png](assets/image871.png)
 
 The second input to split is the character to be used to separate the
 text string into a list of lines, or one of a set of common cases (such
-as line, which separates on carriage return and/or newline characters.
+as line, which separates on carriage return and/or newline characters).
 
 This might be a good place for a reminder that list-view watchers scroll
 through only 100 items at a time. The downarrow near the bottom right
