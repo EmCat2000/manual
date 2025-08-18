@@ -30,6 +30,8 @@ jobs:
       - run: pip install jupyter
       - name: Render Book project
         uses: quarto-dev/quarto-actions/render@v2
+        env:
+          QUARTO_PROFILE: 'github'
         # with:
         #   to: html pdf
       - name: Publish HTML book

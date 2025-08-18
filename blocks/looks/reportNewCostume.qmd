@@ -27,7 +27,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `New Costume` {.unnumbered .pdf-only-unlisted}
+# `New Costume` {.unnumbered .unlisted .pdf-only-unlisted}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

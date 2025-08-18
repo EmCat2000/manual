@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `tell  to` {.unnumbered .pdf-only-unlisted}
+# `tell  to` {.unnumbered .unlisted .pdf-only-unlisted}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

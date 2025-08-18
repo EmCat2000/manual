@@ -9,8 +9,9 @@ env/
 _build
 
 # Compiled Python Output
-# Mostly used for block pages, but we want to always re-run them in our case.
-_freeze
+# Mostly used for block pages, which use Jupyter envs.
+# Commited for now, just to speed up publishing time.
+# _freeze
 
 # Quarto
 /env/
@@ -28,6 +29,7 @@ snap-manual.tex
 _index_entries.txt
 # Temporary rendering files.
 # This seems like a giant hack... investigate later.
+*.synctex*
 index.pdf
 index.tex
 index.html

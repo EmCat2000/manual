@@ -7,13 +7,14 @@ function Header(elem)
 
     -- Check if header has pdf-only-unlisted class
     for _, class in ipairs(elem.classes) do
-      if class == "pdf-only-unlisted" then
+      if class == "pdf-only-unlisted" and not FORMAT:match("latex") then
         io.stderr:write("Found pdf-only-unlisted class, removing from TOC: " .. header_text .. "\n")
-        elem.attributes["-"] = ""
-        -- Remove the pdf-only-unlisted class so it doesn't appear in output
+        -- elem.attributes["-"] = ""
+
+        -- Remove the original unlisted class so it doesn't appear in output
         local new_classes = {}
         for _, c in ipairs(elem.classes) do
-          if c ~= "pdf-only-unlisted" then
+          if c ~= "unlisted" then
             table.insert(new_classes, c)
           end
         end
