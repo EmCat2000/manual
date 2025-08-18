@@ -1577,8 +1577,14 @@ ul.task-list li input[type="checkbox"] {
 <section id="the-world-wide-web" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="the-world-wide-web"><span class="header-section-number">9.1</span> The World Wide Web</h2>
 <p>The input to the url block<span></span> is the URL<span></span> (Uniform Resource Locator<span></span>) of a web page. The block reports the body of the Web server’s response (minus HTTP header), <em>without interpretation.</em> This means that in most cases the response is a description of the page in HTML<span></span> (HyperText Markup Language) <span></span> notation. Often, especially for commercial web sites, the actual information you’re trying to find on the page is actually at another URL included in the reported HTML. The Web page is typically a very long text string, and so the primitive split block<span></span> is useful to get the text in a manageable form, namely, as a list of lines:</p>
-<p><img src="assets/image871.png" class="img-fluid" alt="image871.png"> <!--  style="width:6.52083in;height:4.27778in" / --></p>
-<p>The second input to split is the character to be used to separate the text string into a list of lines, or one of a set of common cases (such as line, which separates on carriage return and/or newline characters.</p>
+<!-- TODO: Shrink an image like this in the PDF so more stuff fits on the previous page... -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image871.png" class="img-fluid figure-img"></p>
+<figcaption>image871.png</figcaption>
+</figure>
+</div>
+<p>The second input to split is the character to be used to separate the text string into a list of lines, or one of a set of common cases (such as line, which separates on carriage return and/or newline characters).</p>
 <p>This might be a good place for a reminder that list-view watchers scroll through only 100 items at a time. The downarrow near the bottom right corner of the speech balloon in the picture presents a menu of hundred-item ranges. (This may seem unnecessary, since the scroll bar should allow for any number of items, but doing it this way makes <span class="snap">Snap</span> much faster.) In table view, the entire list is included.</p>
 <p>If you include a protocol name in the input to the url block (such as <code>http://</code> or <code>https://</code>), that protocol will be used. If not, the block first tries HTTPS<span></span> and then, if that fails, HTTP <span></span>.</p>
 <p>A security restriction in JavaScript limits the ability of one web site to initiate communication with another site. There is an official workaround for this limitation called the CORS<span></span> protocol (Cross-Origin Resource Sharing<span></span>), but the <em>target</em> site has to allow snap.berkeley.edu explicitly, and of course most don’t. To get around this problem, you can use third-party sites (“cors proxies<span></span>”) that are not limited by JavaScript and that forward your requests.</p>
