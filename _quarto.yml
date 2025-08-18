@@ -89,6 +89,7 @@ format:
     # cover-image: images/cover-image.png
     pdf-engine: lualatex
     # pdf-engine-opt:
+    # latex-makeindex-opts:
     keep-tex: true
     filters:
       - _support/scripts/replace-snap.lua
