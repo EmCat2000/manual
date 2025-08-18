@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-604a3b4d9daa6e2a8ab2afbe2d9bd67f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c69b0a5d86bcb328615c875fc8cef84c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -1546,7 +1546,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#nesting-sprites-anchors-and-parts" id="toc-nesting-sprites-anchors-and-parts" class="nav-link" data-scroll-target="#nesting-sprites-anchors-and-parts"><span class="header-section-number">1.3</span> Nesting Sprites<span></span>: Anchors and Parts</a></li>
   <li><a href="#reporter-blocks-and-expressions" id="toc-reporter-blocks-and-expressions" class="nav-link" data-scroll-target="#reporter-blocks-and-expressions"><span class="header-section-number">1.4</span> Reporter Blocks and Expressions</a></li>
-  <li><a href="#predicates-and-conditional-evaluation" id="toc-predicates-and-conditional-evaluation" class="nav-link" data-scroll-target="#predicates-and-conditional-evaluation"><span class="header-section-number">1.5</span> Predicates and Conditional Evaluation</a></li>
+  <li><a href="#sec-sec-predicates-and-conditional-evaluation" id="toc-sec-sec-predicates-and-conditional-evaluation" class="nav-link" data-scroll-target="#sec-sec-predicates-and-conditional-evaluation"><span class="header-section-number">1.5</span> Predicates and Conditional Evaluation</a></li>
   <li><a href="#variables" id="toc-variables" class="nav-link" data-scroll-target="#variables"><span class="header-section-number">1.6</span> Variables</a>
   <ul class="collapse">
   <li><a href="#global-variables" id="toc-global-variables" class="nav-link" data-scroll-target="#global-variables"><span class="header-section-number">1.6.1</span> Global Variable<span></span>s<span></span></a></li>
@@ -1557,15 +1557,16 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#debugging" id="toc-debugging" class="nav-link" data-scroll-target="#debugging"><span class="header-section-number">1.7</span> Debugging<span></span></a>
   <ul class="collapse">
   <li><a href="#the-pause-button" id="toc-the-pause-button" class="nav-link" data-scroll-target="#the-pause-button"><span class="header-section-number">1.7.1</span> The pause button</a></li>
-  <li><a href="#breakpoints-the-pause-all-block" id="toc-breakpoints-the-pause-all-block" class="nav-link" data-scroll-target="#breakpoints-the-pause-all-block"><span class="header-section-number">1.7.2</span> Breakpoints<span></span> : the <code>pause all</code> block<span></span></a></li>
+  <li><a href="#sec-pause-all" id="toc-sec-pause-all" class="nav-link" data-scroll-target="#sec-pause-all"><span class="header-section-number">1.7.2</span> Breakpoints<span></span> : the <code>pause all</code> block<span></span></a></li>
   <li><a href="#visible-stepping" id="toc-visible-stepping" class="nav-link" data-scroll-target="#visible-stepping"><span class="header-section-number">1.7.3</span> Visible stepping<span></span></a></li>
   </ul></li>
   <li><a href="#etcetera" id="toc-etcetera" class="nav-link" data-scroll-target="#etcetera"><span class="header-section-number">1.8</span> Etcetera</a>
   <ul class="collapse">
-  <li><a href="#metaprogramming-see-sec-ch11" id="toc-metaprogramming-see-sec-ch11" class="nav-link" data-scroll-target="#metaprogramming-see-sec-ch11"><span class="header-section-number">1.8.1</span> <strong>Metaprogramming (see <span>Chapter 11</span>)</strong></a></li>
-  <li><a href="#first-class-list-blocks-see-chapter-iv-page46" id="toc-first-class-list-blocks-see-chapter-iv-page46" class="nav-link" data-scroll-target="#first-class-list-blocks-see-chapter-iv-page46"><span class="header-section-number">1.8.2</span> <strong>First class list blocks (see Chapter IV, page46):</strong></a></li>
+  <li><a href="#metaprogramming-see-sec-ch11" id="toc-metaprogramming-see-sec-ch11" class="nav-link" data-scroll-target="#metaprogramming-see-sec-ch11"><span class="header-section-number">1.8.1</span> Metaprogramming (see <span>Chapter 11</span>)</a></li>
+  <li><a href="#first-class-list-blocks-see-chapter-iv-page46" id="toc-first-class-list-blocks-see-chapter-iv-page46" class="nav-link" data-scroll-target="#first-class-list-blocks-see-chapter-iv-page46"><span class="header-section-number">1.8.2</span> First class list blocks (see Chapter IV, page46):</a></li>
+  <li><a href="#sec-ask-lists" id="toc-sec-ask-lists" class="nav-link" data-scroll-target="#sec-ask-lists"><span class="header-section-number">1.8.3</span> Using Lists with the Ask Block</a></li>
   </ul></li>
-  <li><a href="#libraries" id="toc-libraries" class="nav-link" data-scroll-target="#libraries"><span class="header-section-number">1.9</span> Libraries</a>
+  <li><a href="#sec-libraries-intro" id="toc-sec-libraries-intro" class="nav-link" data-scroll-target="#sec-libraries-intro"><span class="header-section-number">1.9</span> Libraries</a>
   <ul class="collapse">
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><span class="header-section-number">1.9.1</span> </a></li>
   </ul></li>
@@ -1605,32 +1606,41 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p>(The proportions of these areas may be different, depending on the size and shape of your browser window.)</p>
 <p>A <span class="snap">Snap</span> program<span></span> consists of one or more <em>scripts,</em> each of which is made of <em>blocks.</em> Here’s a typical script <span></span> :</p>
-<p><img src="assets/image6.png" class="img-fluid" alt="image6.png"> <!-- {width=1.47917in height=1.35417in} --></p>
+<p><img src="assets/image6.png" id="fig-draw-square" class="img-fluid" alt="image6.png"> <!-- {width=1.47917in height=1.35417in} --></p>
 <p>The five blocks<span></span> that make up this script have three different colors, corresponding to three of the eight <em>palettes</em> in which blocks can be found. The palette<span></span> area at the left edge of the window shows one palette at a time, chosen with the eight buttons just above the palette area. In this script, the gold blocks are from the Control palette; the green block is from the Pen palette; and the blue blocks are from the Motion palette. A script is assembled by dragging blocks from a palette into the <em>scripting area</em><span></span> in the middle part of the window. Blocks snap together (hence the name <span class="snap">Snap</span> for the language) when you drag a block so that its indentation is near the tab of the one above it:</p>
 <div id="fig-snapping-blocks" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-snapping-blocks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="assets/image7.png" class="img-fluid figure-img"> <!-- {width=2.24653in height=1.46944in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image7.png" class="img-fluid figure-img"></p>
+<figcaption>image7.png</figcaption>
+</figure>
+</div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="assets/image8.png" class="img-fluid figure-img"> <!-- {width=2.20833in height=1.13889in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image8.png" class="img-fluid figure-img"></p>
+<figcaption>image8.png</figcaption>
+</figure>
 </div>
 </div>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-snapping-blocks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1: The white horizontal line is a signal that if you let go of the green block it will snap into the tab of the gold one.
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-snapping-blocks-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1.1
 </figcaption>
 </figure>
 </div>
-<!-- TODO: Keep only this fig caption OR the sentence after.  -->
 <p>The white horizontal line is a signal that if you let go of the green block it will snap into the tab of the gold one.</p>
 <section id="hat-blocks-and-command-blocks" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="hat-blocks-and-command-blocks"><span class="header-section-number">1.1</span> Hat Blocks and Command Blocks</h2>
-<p>At the top of the script is a <em>hat</em> block, which indicates when the script should be carried out. Hat block names typically start with the word “when”; in the square-drawing example on page 5, the script should be run when the green flag<span></span> near the right end of the <span class="snap">Snap</span> tool bar<span></span> is clicked. (The <span class="snap">Snap</span> tool bar is part of the <span class="snap">Snap</span> window, not the same as the browser’s or operating system’s menu bar.) A script isn’t required to have a hat block <span></span>, but if not, then the script will be run only if the user clicks on the script itself. A script can’t have more than one hat block, and the hat block can be used only at the top of the script; its distinctive shape is meant to remind you of that.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>At the top of the script is a <em>hat</em> block, which indicates when the script should be carried out. Hat block names typically start with the word “when”; in the square-drawing example in <span class="quarto-unresolved-ref">?fig-draw-square</span>, the script should be run when the green flag<span></span> near the right end of the <span class="snap">Snap</span> tool bar<span></span> is clicked. (The <span class="snap">Snap</span> tool bar is part of the <span class="snap">Snap</span> window, not the same as the browser’s or operating system’s menu bar.) A script isn’t required to have a hat block <span></span>, but if not, then the script will be run only if the user clicks on the script itself. A script can’t have more than one hat block, and the hat block can be used only at the top of the script; its distinctive shape is meant to remind you of that.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <!-- TODO: Different CSS for an inline hat block? -->
-<p>The other blocks in our example script are <em>command</em> blocks <span></span>. Each command block<span></span> corresponds to an action that <span class="snap">Snap</span> already knows how to carry out. For example, the block <img src="assets/image9.png" class="img-fluid" alt="image9.png"> <!-- {width=1.16667in height=0.25in} --> tells the sprite<span></span> (the arrowhead shape on the <em>stage</em><span></span> at the right end of the window) to move ten steps (a step is a very small unit of distance) in the direction in which the arrowhead is pointing. We’ll see shortly that there can be more than one sprite, and that each sprite has its own scripts. Also, a sprite doesn’t have to look like an arrowhead, but can have any picture as a <em>costume.</em><span></span> The shape of the move block is meant to remind you of a Lego™ brick; a script<span></span> is a stack of blocks<span></span>. (The word “block” denotes both the graphical shape on the screen and the procedure<span></span>, the action, that the block carries out.)</p>
+<p>The other blocks in our example script are <em>command</em> blocks <span></span>. Each command block<span></span> corresponds to an action that <span class="snap">Snap</span> already knows how to carry out. For example, the block <img src="../blocks/images/block_forward.png" class="image-inline img-fluid" alt="image9.png"> tells the sprite<span></span> (the arrowhead shape on the <em>stage</em><span></span> at the right end of the window) to move ten steps (a step is a very small unit of distance) in the direction in which the arrowhead is pointing. We’ll see shortly that there can be more than one sprite, and that each sprite has its own scripts. Also, a sprite doesn’t have to look like an arrowhead, but can have any picture as a <em>costume.</em><span></span> The shape of the move block is meant to remind you of a Lego™ brick; a script<span></span> is a stack of blocks<span></span>. (The word “block” denotes both the graphical shape on the screen and the procedure<span></span>, the action, that the block carries out.)</p>
 <p>The number 10 in the <code>move</code> block above is called an <em>input</em> to the block. By clicking on the white oval, you can type any number in place of the 10. The sample script on the previous page uses 100 as the input <span></span> value. We’ll see later that inputs can have non-oval shapes that accept values other than numbers. We’ll also see that you can compute input values, instead of typing a particular value into the oval. A block can have more than one input slot. For example, the <code>glide</code> block located about halfway down the Motion palette has three inputs.</p>
 <p>Most command blocks have that brick shape, but some, like the <code>repeat</code> block<span></span> in the sample script, are <em>C‑shaped.</em> Most C-shaped blocks<span></span><span></span> are found in the Control palette<span></span>. The slot inside the C shape is a special kind of input slot that accepts a <em>script</em> as the input.</p>
 <div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="4">
@@ -1639,13 +1649,23 @@ Figure&nbsp;1.1: The white horizontal line is a signal that if you let go of the
 <p>In the sample script</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
-<p><img src="assets/image6.png" class="img-fluid" alt="image6.png"> <!-- {width=1.47917in height=1.35417in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image6.png" class="img-fluid figure-img"></p>
+<figcaption>image6.png</figcaption>
+</figure>
+</div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <p>the <code>repeat</code> block has two inputs: the number&nbsp;4 and the script</p>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
-<p><img src="assets/image11.png" class="img-fluid" alt="image11.png"> <!-- {width=1.40625in height=0.48958in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image11.png" class="img-fluid figure-img"></p>
+<figcaption>image11.png</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1653,10 +1673,20 @@ Figure&nbsp;1.1: The white horizontal line is a signal that if you let go of the
 <div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="assets/image12.png" class="img-fluid" alt="image12.png"> <!-- {width=1.47917in height=1.35417in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image12.png" class="img-fluid figure-img"></p>
+<figcaption>image12.png</figcaption>
+</figure>
+</div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="assets/image13.png" class="img-fluid" alt="image13.png"> <!-- {width=1.40625in height=0.48958in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image13.png" class="img-fluid figure-img"></p>
+<figcaption>image13.png</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1665,10 +1695,20 @@ Figure&nbsp;1.1: The white horizontal line is a signal that if you let go of the
 <div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="assets/image16.png" class="img-fluid" alt="image16.png"> <!-- {width=1.47917in height=1.35417in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image16.png" class="img-fluid figure-img"></p>
+<figcaption>image16.png</figcaption>
+</figure>
+</div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="assets/image17.png" class="img-fluid" alt="image17.png"> <!-- {width=1.40625in height=0.48958in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image17.png" class="img-fluid figure-img"></p>
+<figcaption>image17.png</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1676,28 +1716,53 @@ Figure&nbsp;1.1: The white horizontal line is a signal that if you let go of the
 <div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="assets/image18.png" class="img-fluid" alt="image18.png"> <!-- {width=1.47917in height=1.35417in}--></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image18.png" class="img-fluid figure-img"></p>
+<figcaption>image18.png</figcaption>
+</figure>
+</div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="assets/image19.png" class="img-fluid" alt="image19.png"> <!-- {width=1.40625in height=0.48958in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image19.png" class="img-fluid figure-img"></p>
+<figcaption>image19.png</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
 <p>If you want only some of those blocks, after wrapping you can grab the first block you don’t want wrapped, pull it down, and snap it under the C-shaped block.</p>
 <p>For “E-shaped” blocks with more than one C-shaped slot, only the first slot will wrap around existing blocks in a script, and only if that C-shaped slot is empty before wrapping. (You can fill the other slots by dragging blocks into the desired slot.)</p>
-<p><img src="assets/image24.png" class="img-fluid" alt="image24.png"> <!-- {width=2.31111in height=1.36667in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image24.png" class="img-fluid figure-img"></p>
+<figcaption>image24.png</figcaption>
+</figure>
+</div>
 </section>
 <section id="sec-sprites-parallelism" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="sec-sprites-parallelism"><span class="header-section-number">1.2</span> Sprites and Parallelism</h2>
-<p>Just below the stage is the “new sprite button<span></span>” <img src="assets/image25.png" class="img-fluid" alt="image25.png"> <!-- {width=0.34028in height=0.24306in} -->. Click the button to add a new sprite to the stage. The new sprite will appear in a random position on the stage, with a random color, but always facing to the right.</p>
+<p>Just below the stage is the “new sprite button<span></span>” <img src="assets/image25.png" class="image-inline img-fluid" alt="image25.png">. Click the button to add a new sprite to the stage. The new sprite will appear in a random position on the stage, with a random color, but always facing to the right.</p>
 <p>Each sprite has its own scripts. To see the scripts for a particular sprite in the scripting area, click on the picture of that sprite in the <em>sprite corral</em><span></span> in the bottom right corner of the window. Try putting one of the following scripts in each sprite’s scripting area:</p>
 <div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="assets/image26.png" class="img-fluid" alt="image26.png"> <!-- {width=1.55069in height=0.99375in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image26.png" class="img-fluid figure-img"></p>
+<figcaption>image26.png</figcaption>
+</figure>
+</div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="assets/image27.png" class="img-fluid" alt="image27.png"> <!-- {width=1.54167in height=1.16667in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image27.png" class="img-fluid figure-img"></p>
+<figcaption>image27.png</figcaption>
+</figure>
+</div>
 </div>
 </div>
 </div>
@@ -1705,18 +1770,35 @@ Figure&nbsp;1.1: The white horizontal line is a signal that if you let go of the
 <div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="assets/image28.png" class="img-fluid" alt="image28.png"> <!-- {width=1.72917in height=0.875in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image28.png" class="img-fluid figure-img"></p>
+<figcaption>image28.png</figcaption>
+</figure>
+</div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><img src="assets/image29.png" class="img-fluid" alt="image29.png"> <!-- {width=1.72917in height=0.89583in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image29.png" class="img-fluid figure-img"></p>
+<figcaption>image29.png</figcaption>
+</figure>
 </div>
 </div>
 </div>
+</div>
+<p>When you click the green flag, the sprite should move back and forth</p>
 <p>When you press the space key, the sprite should move forever in a circle, because the move and turn blocks are run in parallel. (To stop the program, click the red stop sign<span></span> at the right end of the tool bar.)</p>
 <section id="costumes-and-sounds" class="level3" data-number="1.2.1">
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="costumes-and-sounds"><span class="header-section-number">1.2.1</span> Costumes and Sounds</h3>
-<p>To change the appearance of a sprite, paint or import a new <em>costume</em><span></span> for it. To paint a costume, click on the Costumes tab above the scripting area, and click the paint button <img src="assets/image32.png" class="img-fluid" alt="image32.png">. The <em>Paint Editor</em> that appears is explained on page <a href="../12-user-interface-elements/index.html#the-paint-editor">128</a>. There are three ways to import a costume. First select the desired sprite in the sprite corral. Then, one way is to click on the file icon in the tool bar, then choose <img src="assets/image30.png" class="img-fluid" alt="image30.png"> the “<code>Costumes…</code>” menu item. You will see a list of costumes from the public media library, and can choose one. The second way, for a costume stored on your own computer, is to click on the file icon and choose the “Import…” menu item. You can then select a file in any picture format (PNG, JPEG, etc.) supported by your browser. The third way is quicker if the file you want is visible on the desktop: Just drag the file onto the <span class="snap">Snap</span> window. In any of these cases, the scripting area will be replaced by something like this:</p>
-<p><img src="assets/image31.png" class="img-fluid" alt="image31.png"> Just above this part of the window is a set of three tabs: Scripts, Costumes, and Sounds. You’ll see that the Costumes tab<span></span> is now selected. In this view, the sprite’s <em>wardrobe,</em> <span></span> you can choose whether the sprite should wear its Turtle costume or its Alonzo<span></span> costume. (Alonzo, the <span class="snap">Snap</span> mascot, is named after Alonzo Church<span></span>, a mathematician who invented the idea of procedures as data <span></span>, the most important way in which <span class="snap">Snap</span> is different from Scratch<span></span>.) You can give a sprite as many costumes as you like, and then choose which it will wear either by clicking in its wardrobe or by using the <img src="assets/image35.png" class="img-fluid" alt="image35.png"> or <img src="assets/image34.png" class="img-fluid" alt="image34.png"> block in a script. (Every costume has a number as well as a name. The <code>next</code> costume block selects the next costume by number; after the highest-numbered costume it switches to costume 1. The Turtle, costume 0, is never chosen by next costume.) The Turtle costume<span></span> is the only one that changes color to match a change in the sprite’s pen color.</p>
+<p>To change the appearance of a sprite, paint or import a new <em>costume</em><span></span> for it. To paint a costume, click on the Costumes tab above the scripting area, and click the paint button <img src="assets/image32.png" class="img-fluid" alt="image32.png">. The <em>Paint Editor</em> that appears is explained in <a href="../12-user-interface-elements/index.html#sec-the-paint-editor" class="quarto-xref"><span>Section 12.3.5</span></a>. There are three ways to import a costume. First select the desired sprite in the sprite corral. Then, one way is to click on the file icon in the tool bar, then choose <img src="assets/image30.png" class="img-fluid" alt="image30.png"> the “<code>Costumes…</code>” menu item. You will see a list of costumes from the public media library, and can choose one. The second way, for a costume stored on your own computer, is to click on the file icon and choose the “Import…” menu item. You can then select a file in any picture format (PNG, JPEG, etc.) supported by your browser. The third way is quicker if the file you want is visible on the desktop: Just drag the file onto the <span class="snap">Snap</span> window. In any of these cases, the scripting area will be replaced by something like this:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image31.png" class="img-fluid figure-img"></p>
+<figcaption>image31.png</figcaption>
+</figure>
+</div>
+<p>Just above this part of the window is a set of three tabs: Scripts, Costumes, and Sounds. You’ll see that the Costumes tab<span></span> is now selected. In this view, the sprite’s <em>wardrobe,</em> <span></span> you can choose whether the sprite should wear its Turtle costume or its Alonzo<span></span> costume. (Alonzo, the <span class="snap">Snap</span> mascot, is named after Alonzo Church<span></span>, a mathematician who invented the idea of procedures as data <span></span>, the most important way in which <span class="snap">Snap</span> is different from Scratch<span></span>.) You can give a sprite as many costumes as you like, and then choose which it will wear either by clicking in its wardrobe or by using the <img src="../blocks/images/block_doSwitchToCostume.png" class="img-fluid" alt="image35.png"> or <img src="../blocks/images/block_doWearNextCostume.png" class="img-fluid" alt="Next Costume"> block in a script. (Every costume has a number as well as a name. The <code>next</code> costume block selects the next costume by number; after the highest-numbered costume it switches to costume 1. The Turtle, costume 0, is never chosen by next costume.) The Turtle costume<span></span> is the only one that changes color to match a change in the sprite’s pen color.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1750,7 +1832,7 @@ Tip
 <div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/image42.png" class="image-2x img-fluid figure-img"></p>
+<p><img src="assets/image42.png" class="img-fluid figure-img"></p>
 <figcaption>image42.png</figcaption>
 </figure>
 </div>
@@ -1798,7 +1880,7 @@ Figure&nbsp;1.2
 <p>When you drag a reporter block over another block’s input slot, a white “halo<span></span>” appears around that input slot, analogous to the white line that appears when snapping command blocks together:</p>
 <p><img src="assets/image67.png" class="img-fluid" alt="image67.png"> <!-- {width=1.47in height=0.52in} --></p>
 <p>Don’t drop the input over a <em>red</em> halo: <img src="assets/image71.png" class="img-fluid" alt="image71.png"> <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --></p>
-<p>That’s used for a purpose explained on page <a href="../06-procedures-as-data/index.html#recursive-calls-to-multiple-input-blocks">68</a>.</p>
+<p>That’s used for a purpose explained in <a href="../06-procedures-as-data/index.html#sec-recursive-calls-to-multiple-input-blocks" class="quarto-xref"><span>Section 6.2.1</span></a>.</p>
 <p>Here’s a simple script that uses a reporter block:</p>
 <p><img src="assets/image72.png" class="img-fluid" alt="image72.png"> <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --></p>
 <p>Here the <code>x position</code> reporter provides the first input to the say block. (The sprite’s X position<span></span> is its horizontal position, how far left (negative values) or right (positive values) it is compared to the center of the stage. Similarly, the Y position<span></span> is measured vertically, in steps above (positive) or below (negative) the center.)</p>
@@ -1808,13 +1890,18 @@ Figure&nbsp;1.2
 <p><img src="assets/image80.png" class="img-fluid" alt="image80.png"> <!-- {width=4.85417in height=1.90625in} --></p>
 <p>This aid to readability is called <em>zebra coloring.</em><span></span> A reporter block with its inputs, maybe including other reporter blocks, such as <img src="assets/image81.png" class="img-fluid" alt="image81.png"> <!-- {width=1.91667in height=0.23958in} -->, is called an <em>expression.</em><span></span></p>
 </section>
-<section id="predicates-and-conditional-evaluation" class="level2" data-number="1.5">
-<h2 data-number="1.5" class="anchored" data-anchor-id="predicates-and-conditional-evaluation"><span class="header-section-number">1.5</span> Predicates and Conditional Evaluation</h2>
-<p>Most reporters report<span></span> either a number, like <img src="assets/image82.png" class="img-fluid" alt="image82.png"> <!-- {width=0.66667in height=0.1875in} -->, or a text string, like <img src="assets/image83.png" class="img-fluid" alt="image83.png"> <!-- {width=1.20833in height=0.1875in} --> . A <em>predicate</em> is a special kind of reporter that always reports true or false. Predicates<span></span> have a hexagonal shape<span></span> :</p>
-<p><img src="assets/image85.png" class="img-fluid" alt="image85.png"> <!-- {width=1.07292in height=0.15625in} --></p>
-<p>The special shape is a reminder that predicates don’t generally make sense in an input slot of blocks that are expecting a number or text. You wouldn’t say <img src="assets/image84.png" class="img-fluid" alt="image84.png"> <!-- {width=1.94792in height=0.26042in} --> , although (as you can see from the picture) <span class="snap">Snap</span> lets you do it if you really want. Instead, you normally use predicates in special hexagonal input slots like this one: <img src="assets/image86.png" class="img-fluid" alt="image86.png"> <!-- {width=0.66667in height=0.56944in} --></p>
-<p>The C-shaped if block<span></span> runs its input script if (and only if) the expression in its hexagonal input reports true. <img src="assets/image87.png" class="img-fluid" alt="image87.png"> <!-- {width=1.59375in height=0.61458in} --></p>
-<p>A really useful block<span></span> in animations <span></span> runs its input script <em>repeatedly</em> until a predicate is satisfied: <img src="assets/image89.png" class="img-fluid" alt="image89.png"> <!-- {width=2.29167in height=0.84375in} --></p>
+<section id="sec-sec-predicates-and-conditional-evaluation" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="sec-sec-predicates-and-conditional-evaluation"><span class="header-section-number">1.5</span> Predicates and Conditional Evaluation</h2>
+<p>Most reporters report<span></span> either a number, like <img src="../blocks/images/block_reportVariadicSum.png" class="image-inline img-fluid" alt="image82.png">, or a text string, like <img src="../blocks/images/block_reportJoinWords.png" class="image-inline img-fluid" alt="image83.png">. A <em>predicate</em> is a special kind of reporter that always reports true or false. Predicates<span></span> have a hexagonal shape<span></span>: <img src="../blocks/images/block_reportMouseDown.png" class="image-inline img-fluid" alt="image85.png"></p>
+<p>The special shape is a reminder that predicates don’t generally make sense in an input slot of blocks that are expecting a number or text. You wouldn’t say <img src="assets/image84.png" class="img-fluid" alt="image84.png">, although (as you can see from the picture) <span class="snap">Snap</span> lets you do it if you really want. Instead, you normally use predicates in special hexagonal input slots like this one:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../blocks/images/block_doIf.png" class="image-2x img-fluid figure-img"></p>
+<figcaption>image86.png</figcaption>
+</figure>
+</div>
+<p>The C-shaped if block<span></span> runs its input script if (and only if) the expression in its hexagonal input reports true. <img src="assets/image87.png" class="img-fluid" alt="image87.png"></p>
+<p>A really useful block<span></span> in animations <span></span> runs its input script <em>repeatedly</em> until a predicate is satisfied: <img src="assets/image89.png" class="img-fluid" alt="image89.png"></p>
 <p>If, while working on a project, you want to omit temporarily some commands in a script, but you don’t want to forget where they belong, you can say</p>
 <p><img src="assets/image88.png" class="img-fluid" alt="image88.png"> <!-- {width=2.28194in height=1.46875in} --></p>
 <p>Sometimes you want to take the same action whether some condition is true or false, but with a different input value. For this purpose you can use the <em>reporter</em> <code>if</code> block<span></span> :</p>
@@ -1883,12 +1970,17 @@ Figure&nbsp;1.2
 <h3 data-number="1.7.1" class="anchored" data-anchor-id="the-pause-button"><span class="header-section-number">1.7.1</span> The pause button</h3>
 <p>The simplest way to pause a program is manually, by clicking the pause button <img src="assets/image116.png" class="img-fluid" alt="image116.png"> <!-- {width=0.29167in height=0.16667in} --><span></span> in the top right corner of the window. While the program is paused, you can run other scripts by clicking on them, show variables on stage with the checkbox next to the variable in the Variables palette or with the <code>show variable</code>block<span></span>, and do all the other things you can generally do, including modifying the paused scripts by adding or removing blocks. The <img src="assets/image115.png" class="img-fluid" alt="image115.png"> <!-- {width=0.29167in height=0.16667in} --> button changes shape too and clicking it again resumes the paused scripts.</p>
 </section>
-<section id="breakpoints-the-pause-all-block" class="level3" data-number="1.7.2">
-<h3 data-number="1.7.2" class="anchored" data-anchor-id="breakpoints-the-pause-all-block"><span class="header-section-number">1.7.2</span> Breakpoints<span></span> : the <code>pause all</code> block<span></span></h3>
-<p><span id="pause_all" class="anchor"></span>The pause button is great if your program seems to be in an infinite loop, but more often you’ll want to set a <em>breakpoint,</em> a particular point in a script at which you want to pause. The <img src="assets/image117.png" class="img-fluid" alt="image117.png"> <!-- {width=0.81944in height=0.21528in} --> block, near the bottom of the Control palette, can be inserted in a script to pause when it is run. So, for example, if your program is getting an error message in a particular block, you could use <code>pause all</code> just before that block to look at the values of variables just before the error happens.</p>
+<section id="sec-pause-all" class="level3" data-number="1.7.2">
+<h3 data-number="1.7.2" class="anchored" data-anchor-id="sec-pause-all"><span class="header-section-number">1.7.2</span> Breakpoints<span></span> : the <code>pause all</code> block<span></span></h3>
+<p>The pause button is great if your program seems to be in an infinite loop, but more often you’ll want to set a <em>breakpoint,</em> a particular point in a script at which you want to pause. The <img src="../blocks/images/block_doPauseAll.png" class="image-inline img-fluid" alt="image117.png"> block, near the bottom of the Control palette, can be inserted in a script to pause when it is run. So, for example, if your program is getting an error message in a particular block, you could use <code>pause all</code> just before that block to look at the values of variables just before the error happens.</p>
 <p>The <code>pause all</code> block turns bright cyan while paused. Also, during the pause, you can right-click on a running script and the menu that appears will give you the option to show watchers for temporary variables of the script:</p>
-<p><img src="assets/image118.png" class="img-fluid" alt="image118.png"> <!-- {width=1.88333in height=0.91111in} --></p>
-<p>But what if the block with the error is run many times in a loop, and it only errors when a particular condition is true — for example, when the value of some variable is negative, which shouldn’t ever happen. In the iteration library (see page <a href="#libraries-1">25</a> for more about how to use libraries) is a breakpoint block that lets you set a <em>conditional</em> breakpoint<span></span>, and automatically display the relevant variables before pausing. Here’s a sample use of it:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image118.png" class="img-fluid figure-img"></p>
+<figcaption>image118.png</figcaption>
+</figure>
+</div>
+<p>But what if the block with the error is run many times in a loop, and it only errors when a particular condition is true — for example, when the value of some variable is negative, which shouldn’t ever happen. In the iteration library (see <a href="#sec-libraries-intro" class="quarto-xref"><span>Section 1.9</span></a> for more about how to use libraries) is a breakpoint block that lets you set a <em>conditional</em> breakpoint<span></span>, and automatically display the relevant variables before pausing. Here’s a sample use of it:</p>
 <p><img src="assets/image119.png" class="img-fluid" alt="image119.png"> <!-- {width=1.19444in height=1.33333in} --></p>
 <p>(In this contrived example, variable <var>zot</var> comes from outside the script but is relevant to its behavior.) When you continue (with the pause button), the temporary variable watchers are removed by this breakpoint block before resuming the script. The breakpoint block isn’t magic; you could alternatively just put a <code>pause all</code> inside an <code>if</code>.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 </section>
@@ -1906,19 +1998,19 @@ Figure&nbsp;1.2
 <h2 data-number="1.8" class="anchored" data-anchor-id="etcetera"><span class="header-section-number">1.8</span> Etcetera</h2>
 <p>This manual doesn’t (yet)explain every block in detail. There are many more motion blocks, sound blocks, costume and graphics effects blocks, and so on. If you would like to find information on specific blocks, go to <span class="quarto-unresolved-ref">?sec-all-blocks</span>. You can also learn what they all do by experimentation, and by reading the “help screens” that you can get by right-clicking or control-clicking a block and selecting “<code>help…</code>” from the menu that appears. If you forget what palette (color) a block is, but you remember at least part of its name, type <kbd>control-F</kbd> and enter the name in the text block that appears in the palette area.</p>
 <p>Here are some of the primitive blocks that don’t exist in Scratch:</p>
-<p><img src="assets/image136.png" class="img-fluid" alt="image136.png"> reports<span></span><span></span>, a new costume consisting of everything that’s drawn on the stage by any sprite. Right-clicking the block in the scripting area gives the option to change it to <img src="assets/image135.png" class="img-fluid" alt="image135.png"> <!-- {width=1.25in height=0.22917in} --> if vector logging is enabled. See page <a href="#logpenvectors">116</a>.</p>
+<p><img src="assets/image136.png" class="img-fluid" alt="image136.png"> reports<span></span><span></span>, a new costume consisting of everything that’s drawn on the stage by any sprite. Right-clicking the block in the scripting area gives the option to change it to <img src="assets/image135.png" class="img-fluid" alt="image135.png"> if vector logging is enabled. See <span class="quarto-unresolved-ref">?para-log-pen-vectors</span>.</p>
 <p><img src="assets/image137.png" class="image-inline img-fluid" alt="image137.png"> Print characters<span></span> in the given point size on the stage, at the sprite’s position and in its direction. The sprite moves to the end of the text. (That’s not always what you want, but you can save the sprite’s position before using it, and sometimes you need to know how big the text turned out to be, in turtle steps.) If the pen is down, the text will be underlined.</p>
 <p><img src="assets/image138.png" class="img-fluid" alt="image138.png"> Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)</p>
 <p><img src="assets/image139.png" class="img-fluid" alt="image139.png"> Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.)</p>
-<p><img src="assets/image142.png" class="img-fluid" alt="image142.png"> See <span class="quarto-unresolved-ref">?sec-generic-when</span>.</p>
-<p><img src="assets/image141.png" class="img-fluid" alt="image141.png"> <!-- {width=0.98958in height=0.25972in} --> See page <a href="#pause_all">17</a>.</p>
+<p><img src="assets/image142.png" class="img-fluid" alt="image142.png"> See <span class="quarto-unresolved-ref">?fig-generic-when</span>.</p>
+<p><img src="assets/image141.png" class="img-fluid" alt="image141.png"> See <a href="#sec-pause-all" class="quarto-xref"><span>Section 1.7.2</span></a>.</p>
 <p><img src="assets/image140.png" class="img-fluid" alt="image140.png"> Runs only this script until finished. In the Control palette even though it’s gray.</p>
 <p><img src="assets/image143.png" class="img-fluid" alt="image143.png"> <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> Reporter version of the <code>if/else</code> primitive command block<span></span> . Only one of the two branches is evaluated, depending on the value of the first input.</p>
 <p><img src="assets/image144.png" class="img-fluid" alt="image144.png"> <!--  style="width:1.83in;height:0.61in" alt="Macintosh HD:Users:bh:Desktop:pix:for.png" / --> Looping block like <code>repeat</code> but<span></span> with an index variable<span></span> .</p>
 <p><img src="assets/image145.png" class="img-fluid" alt="image145.png"> <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare local variables<span></span> in a script.<span></span></p>
-<p><img src="assets/image148.png" class="img-fluid" alt="image148.png"> See page <a href="#url">91</a>.</p>
+<p><img src="assets/image148.png" class="img-fluid" alt="image148.png"> See <a href="../09-the-outside-world/index.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
 <p><img src="assets/image146.png" class="img-fluid" alt="image146.png"> reports the value of a graphics effect<span></span>.</p>
-<p><img src="assets/image147.png" class="img-fluid" alt="image147.png"> Constant true<span></span> or false<span></span> value. See page <a href="#predicates-and-conditional-evaluation">12</a>.</p>
+<p><img src="assets/image147.png" class="img-fluid" alt="image147.png"> Constant true<span></span> or false<span></span> value. See <span class="quarto-unresolved-ref">?sec-predicates-and-conditional-evaluation</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/image149.png" class="img-fluid figure-img"></p>
@@ -1941,13 +2033,13 @@ Figure&nbsp;1.2
 <!-- This needs 2 columns -->
 <div style="columns: 2; column-gap: 0.5em;">
 <p><img src="assets/image155.png" class="img-fluid" alt="image155.png"><span></span></p>
-<p>Turn the<span></span> text into a list, using the second input as the delimiter between items. The default delimiter, indicated by the brown dot in the input slot, is a single space character. “Letter” puts each character of the text in its own list item. “Word” puts each word in an item. (<span></span> Words are separated by any number of consecutive space, tab, carriage return, or newline characters.) “Line” is a newline character<span></span> (0xa); “tab” is a tab character<span></span> (0x9); “cr” is a carriage return<span></span> (0xd). “Csv” <span></span> and “json”<span></span> split formatted text into lists of lists; see page <a href="../04-first-class-lists/index.html#comma-separated-values">54</a>. “Blocks” takes a script as the first input, reporting a list structure representing the structure of the script. See Chapter XI.</p>
+<p>Turn the<span></span> text into a list, using the second input as the delimiter between items. The default delimiter, indicated by the brown dot in the input slot, is a single space character. “Letter” puts each character of the text in its own list item. “Word” puts each word in an item. (<span></span> Words are separated by any number of consecutive space, tab, carriage return, or newline characters.) “Line” is a newline character<span></span> (0xa); “tab” is a tab character<span></span> (0x9); “cr” is a carriage return<span></span> (0xd). “Csv” <span></span> and “json”<span></span> split formatted text into lists of lists; see <a href="../04-first-class-lists/index.html#sec-csv" class="quarto-xref"><span>Section 4.5.1</span></a>. “Blocks” takes a script as the first input, reporting a list structure representing the structure of the script. See Chapter XI.</p>
 </div>
 <p><img src="assets/image170.png" class="img-fluid" alt="image170.png"> For lists, <span></span> reports true only if its two input values are the very same list, so changing an item in one of them is visible in the other. (For <code>=</code>, lists that look the same are the same.) For text strings, uses case-sensitive comparison, unlike <code>=</code>, which is case-independent.</p>
 <p><img src="assets/image171.png" class="img-fluid" alt="image171.png"> These <em>hidden</em> blocks can be found with the relabel option <span></span> of any dyadic arithmetic block. They’re hidden partly because writing them in <span class="snap">Snap</span> is a good, pretty easy programming exercise. Note: the two inputs to <code>atan2</code><span></span> are Δ<em>x</em> and Δ<em>y</em> in that order, because we measure angles clockwise from north. <code>max</code> /index{max block} and <code>min</code> /index{min block} are <em>variadic;</em> by clicking the arrowhead, you can provide additional inputs.</p>
 <p><img src="assets/image177.png" class="img-fluid" alt="image177.png"> <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated with medium confidence" / --> <img src="assets/image178.png" class="img-fluid" alt="image178.png"> <!--  style="width:0.63in;height:0.19in" alt="A picture containing text, monitor, screenshot Description automatically generated" / --> <img src="assets/image179.png" class="img-fluid" alt="image179.png"> <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated" / --> Similarly, these <span></span> hidden predicates can be found by relabeling the relational predicates.</p>
 <section id="metaprogramming-see-sec-ch11" class="level3" data-number="1.8.1">
-<h3 data-number="1.8.1" class="anchored" data-anchor-id="metaprogramming-see-sec-ch11"><span class="header-section-number">1.8.1</span> <strong>Metaprogramming (see <a href="../11-metaprogramming/index.html" class="quarto-xref"><span>Chapter 11</span></a>)</strong></h3>
+<h3 data-number="1.8.1" class="anchored" data-anchor-id="metaprogramming-see-sec-ch11"><span class="header-section-number">1.8.1</span> Metaprogramming (see <a href="../11-metaprogramming/index.html" class="quarto-xref"><span>Chapter 11</span></a>)</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/image172.png" class="img-fluid figure-img"></p>
@@ -1957,8 +2049,8 @@ Figure&nbsp;1.2
 <p>These blocks support <em>metaprogramming,</em> which means manipulating blocks and scripts as data. This is not the same as manipulating procedures (see Chapter VI. ), which are what the blocks <em>mean;</em> in metaprogramming the actual blocks, what you see on the screen, are the data. This capability is new in version 8.0.</p>
 </section>
 <section id="first-class-list-blocks-see-chapter-iv-page46" class="level3" data-number="1.8.2">
-<h3 data-number="1.8.2" class="anchored" data-anchor-id="first-class-list-blocks-see-chapter-iv-page46"><span class="header-section-number">1.8.2</span> <strong>First class list blocks (see Chapter IV, page<a href="#first-class-lists">46</a>):</strong></h3>
-<!-- welp. this needs to be rena -->
+<h3 data-number="1.8.2" class="anchored" data-anchor-id="first-class-list-blocks-see-chapter-iv-page46"><span class="header-section-number">1.8.2</span> First class list blocks (see Chapter IV, page<a href="#first-class-lists">46</a>):</h3>
+<!-- TODO: welp. this needs to be rena -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="assets/image173.png" class="img-fluid figure-img"></p>
@@ -1966,7 +2058,7 @@ Figure&nbsp;1.2
 </figure>
 </div>
 <p><code>Numbers from</code><span></span> will count up or down.</p>
-<p><img src="assets/image224.png" class="img-fluid" alt="image224.png"> <img src="assets/image225.png" class="img-fluid" alt="image225.png"> report<span></span> the sprite or mouse position as a two-item vector (x,y).</p>
+<p><img src="assets/image224.png" class="image-inline img-fluid" alt="image224.png"> <img src="assets/image225.png" class="image-inline img-fluid" alt="image225.png"> report<span></span> the sprite or mouse position as a two-item vector (x,y).</p>
 <p><strong>First class procedure blocks (see Chapter VI, page<a href="../06-procedures-as-data/index.html#procedures-as-data">65</a>):</strong> <img src="assets/image226.png" class="img-fluid" alt="image226.png"></p>
 <p><strong>First class continuation blocks (see Chapter X, page<a href="#continuations">93</a>):</strong> <img src="assets/image227.png" class="img-fluid" alt="image227.png"> <!-- {width=0.72in height=0.2in} --></p>
 <p><strong>First class sprite, costume, and sound blocks (see Chapter VII, page<a href="#object-oriented-programming-with-sprites">73</a>):</strong></p>
@@ -1974,10 +2066,20 @@ Figure&nbsp;1.2
 <p><img src="assets/image229.png" class="img-fluid" alt="image229.png"> <!-- {width=0.72in height=0.2in} --> Object is a hyperblock.</p>
 <p><strong>Scenes:</strong></p>
 <p><img src="assets/image280.png" class="img-fluid" alt="image280.png"> <!-- {width=2.38in height=1.32in} --> The major new feature of version 7.0 is <em>scenes:</em><span></span> A project can include within it sub-projects, called scenes, each with its own stage, sprites, scripts, and so on. This block makes another scene active, replacing the current one.</p>
-<p>Nothing is automatically shared between scenes: no sprites, no blocks, no variables. But the old scene can send a message to the new one, to start it running, with optional payload as in broadcast<span></span> (page <a href="#broadcast">23</a>).</p>
-<p><img src="assets/image282.png" class="img-fluid" alt="image282.png"> <!-- {width=0.72in height=0.2in} --></p>
+<p>Nothing is automatically shared between scenes: no sprites, no blocks, no variables. But the old scene can send a message to the new one, to start it running, with optional payload as in broadcast<span></span> (See <span class="quarto-unresolved-ref">?sec-broadcast</span>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image282.png" class="img-fluid figure-img"></p>
+<figcaption>image282.png</figcaption>
+</figure>
+</div>
 <p>In particular, you can say</p>
-<p><img src="assets/image281.png" class="img-fluid" alt="image281.png"> <!-- {width=2.54in height=0.31in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image281.png" class="img-fluid figure-img"></p>
+<figcaption>image281.png</figcaption>
+</figure>
+</div>
 <p>if the new scene expects to be started with a green flag signal.</p>
 <p><strong><em>These aren’t new blocks but they have a new feature:</em></strong> These accept two-item (x,y)<span></span> lists <span></span> as input, and have extended menus (also including other sprites):<span></span></p>
 <p><img src="assets/image283.png" class="img-fluid" alt="image283.png"> <!-- {width=0.72in height=0.2in} --></p>
@@ -1985,7 +2087,7 @@ Figure&nbsp;1.2
 <p><img src="assets/image284.png" class="img-fluid" alt="image284.png"> <!-- {width=0.72in height=0.2in} --> The <code>stop</code> block<span></span> has two extra menu choices. <code>Stop this block</code> is used inside the definition of a custom block to stop just this invocation of this custom block and continue the script that called it. <code>Stop all</code> but this script is good at the end of a game to stop all the game pieces from moving around, but keep running this script to provide the user’s final score. The last two menu choices add a tab at the bottom of the block because the current script can continue after it.</p>
 <p><img src="assets/image285.png" class="img-fluid" alt="image285.png"> <!-- {width=0.72in height=0.2in} --> The new “pen trails” option is true if the sprite is touching any drawn or stamped ink on the stage. Also, <code>touching</code><span></span> will not detect hidden sprites, but a hidden sprite can use it to detect visible sprites.</p>
 <p><img src="assets/image305.png" class="img-fluid" alt="image305.png"> <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> The <code>video on</code> block <span></span> has a snap option<span></span> that takes a snapshot and reports it as a costume. It is hyperized with respect to its second input.</p>
-<p><img src="assets/image304.png" class="img-fluid" alt="image304.png"> <!--  style="width:1.05972in;height:0.27986in" alt="Icon Description automatically generated" / --> The “neg” option<span></span> is a monadic<span></span><span></span> negation operator <span></span>, equivalent to <img src="assets/image306.png" class="img-fluid" alt="image306.png"> <!-- {width=1.05208in height=0.28125in} -->. “lg” is log<sub>2</sub>. “id” is the identity function, which reports its input. “sign” reports 1 for positive input, 0 for zero input, or -1 for negative input. <span></span></p>
+<p><img src="assets/image304.png" class="img-fluid" alt="image304.png"> <!--  style="width:1.05972in;height:0.27986in" alt="Icon Description automatically generated" / --> The “neg” option<span></span> is a monadic<span></span><span></span> negation operator <span></span>, equivalent to <img src="assets/image306.png" class="img-fluid" alt="image306.png">. “lg” is log<sub>2</sub>. “id” is the identity function, which reports its input. “sign” reports 1 for positive input, 0 for zero input, or -1 for negative input. <span></span></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -2000,30 +2102,121 @@ Two Different Length Of Blocks
 </div>
 </div>
 <p><img src="assets/image308.png" class="img-fluid" alt="image308.png"> <!-- {width=1.05208in height=0.28125in} --></p>
-<p><img src="assets/image309.png" class="img-fluid" alt="image309.png"> <!-- {width=1.05208in height=0.28125in} --> Extended<span></span> mouse interaction events, sensing clicking, dragging, hovering, etc. The “stopped” option triggers when all scripts are stopped, as with the stop button; it is useful for robots whose hardware interface must be told to turn off motors. A <code>when I am stopped</code> script<span></span> can run only for a limited time.</p>
-<p><img src="assets/image310.png" class="img-fluid" alt="image310.png"> <!-- {width=1.05208in height=0.28125in} --></p>
-<p><a name="broadcast"></a> Extended broadcast<span></span> : Click the right arrowhead to direct the message to a single sprite or the stage. Click again to add any value as a payload to the message.</p>
-<p><img src="assets/image311.png" class="img-fluid" alt="image311.png"> <!-- {width=1.05208in height=0.28125in} --> Extended <code>when I receive</code><span></span> : Click the right arrowhead to expose a script variable (click on it to change its name, like any script variable) that will be set to the data of a matching broadcast. If the first input is set to “any message,” then the data variable will be set to the message, if no payload is included with the broadcast, or to a two-item list containing the message and the payload.</p>
-<p><img src="assets/image312.png" class="img-fluid" alt="image312.png"> <!-- {width=1.05208in height=0.28125in} --></p>
-<p><img src="assets/image355.png" class="img-fluid" alt="image355.png"> <!--  style="width:1.68in;height:0.38in" alt="A picture containing text, clipart Description automatically generated" / --></p>
+<div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image309.png" class="img-fluid figure-img"></p>
+<figcaption>image309.png</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>Extended<span></span> mouse interaction events, sensing clicking, dragging, hovering, etc. The “stopped” option triggers when all scripts are stopped, as with the stop button; it is useful for robots whose hardware interface must be told to turn off motors. A <code>when I am stopped</code> script<span></span> can run only for a limited time.</p>
+</div>
+</div>
+</div>
+<div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image310.png" class="img-fluid figure-img"></p>
+<figcaption>image310.png</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>Extended broadcast<span></span> : Click the right arrowhead to direct the message to a single sprite or the stage. Click again to add any value as a payload to the message. {#para-broadcast}</p>
+</div>
+</div>
+</div>
+<div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image311.png" class="img-fluid figure-img"></p>
+<figcaption>image311.png</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>Extended <code>when I receive</code><span></span>: Click the right arrowhead to expose a script variable (click on it to change its name, like any script variable) that will be set to the data of a matching broadcast. If the first input is set to “any message,” then the data variable will be set to the message, if no payload is included with the broadcast, or to a two-item list containing the message and the payload.</p>
+</div>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image312.png" class="img-fluid figure-img"></p>
+<figcaption>image312.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image355.png" class="img-fluid figure-img"></p>
+<figcaption>image355.png</figcaption>
+</figure>
+</div>
 <p>If the input is set to “any key,” then a right arrowhead appears:</p>
-<p><img src="assets/image357.png" class="img-fluid" alt="image357.png"> <!--  style="width:1.81944in;height:0.37986in"   alt="Logo Description automatically generated" --></p>
-<p>and if you click it, a script variable key is created whose value is the key that was pressed. (If the key is one that’ represented in the input menu by a word or phrase, e.g., “enter” or “up arrow,” then the value of key will be that word or phrase, <em>except for</em> the space character, which is represented as itself in key.)</p>
+<p><img src="assets/image357.png" class="image-inline img-fluid" alt="image357.png"> and if you click it, a script variable key is created whose value is the key that was pressed. (If the key is one that’ represented in the input menu by a word or phrase, e.g., “enter” or “up arrow,” then the value of key will be that word or phrase, <em>except for</em> the space character, which is represented as itself in key.)</p>
 <p><img src="assets/image356.png" class="img-fluid" alt="image356.png"> <!--  style="width:2.25in;height:0.41944in"   alt="Website Description automatically generated with medium confidence" --></p>
 <p>The RGB(A)<span></span> option accepts a single number, which is a grayscale value 0-255; a two-number list, grayscale plus opacity 0-255; a three-item RGB list, or a four-item RGBA list.</p>
 <!-- TODO: Images like this should have index entries defined after this image. -->
-<p><img src="assets/image358.png" class="img-fluid" alt="image358.png"> <!--  style="width:2.25in;height:0.41944in"   alt="Website Description automatically generated with medium confidence"  --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image358.png" class="img-fluid figure-img"></p>
+<figcaption>image358.png</figcaption>
+</figure>
+</div>
+</section>
+<section id="sec-ask-lists" class="level3" data-number="1.8.3">
+<h3 data-number="1.8.3" class="anchored" data-anchor-id="sec-ask-lists"><span class="header-section-number">1.8.3</span> Using Lists with the Ask Block</h3>
 <p>These ask features<span></span> and more in the Menus library.</p>
-<p><img src="assets/image359.png" class="img-fluid" alt="image359.png"> <!-- {width=1.05208in height=0.28125in} --></p>
-<p><img src="assets/image360.png" class="img-fluid" alt="image360.png"> <!-- {width=1.05208in height=0.28125in} --></p>
-<p><img src="assets/image361.png" class="img-fluid" alt="image361.png"> <!-- {width=1.05208in height=0.28125in} --></p>
-<p><img src="assets/image362.png" class="img-fluid" alt="image362.png"> <!-- {width=1.05208in height=0.28125in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image359.png" class="img-fluid figure-img"></p>
+<figcaption>image359.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image360.png" class="img-fluid figure-img"></p>
+<figcaption>image360.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image361.png" class="img-fluid figure-img"></p>
+<figcaption>image361.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image362.png" class="img-fluid figure-img"></p>
+<figcaption>image362.png</figcaption>
+</figure>
+</div>
+<div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image363.png" class="img-fluid figure-img"></p>
+<figcaption>image363.png</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <p>The <code>of</code> block<span></span> has an extended menu of attributes of a sprite. Position reports an (x,y) vector. Size reports the percentage of normal size, as controlled by the set size block in the Looks category. Left, right, etc. report the stage coordinates of the corresponding edge of the sprite’s bounding box. Variables reports a list of the names of all variables in scope (global, sprite-local, and script variables if the right input is a script.)</p>
-<p><img src="assets/image363.png" class="img-fluid" alt="image363.png"> <!-- {width=1.05208in height=0.28125in} --></p>
+</div>
+</div>
+</div>
 </section>
 </section>
-<section id="libraries" class="level2" data-number="1.9">
-<h2 data-number="1.9" class="anchored" data-anchor-id="libraries"><span class="header-section-number">1.9</span> Libraries</h2>
+<section id="sec-libraries-intro" class="level2" data-number="1.9">
+<h2 data-number="1.9" class="anchored" data-anchor-id="sec-libraries-intro"><span class="header-section-number">1.9</span> Libraries</h2>
 <p>There are several collections of useful procedures that aren’t <span class="snap">Snap</span> primitives, but are provided as libraries. To include a library in your project, choose the Libraries… option<span></span> in the file (<img src="assets/image384.png" class="image-inline img-fluid" alt="file menu icon">) menu.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2112,17 +2305,42 @@ Two Different Length Of Blocks
 <p>or it can be expanded to enter three or four numbers for a vector directly into the block, so these are equivalent:</p>
 <p><img src="assets/image429.png" class="img-fluid" alt="image429.png"> <!-- {width=4.29167in height=1.90972in} --></p>
 <p>But note that a transparency number in a four-number RGBA vector is on the scale 255=opaque, 0=transparent, so the following are <em>not</em> equivalent:</p>
-<p><img src="assets/image430.png" class="img-fluid" alt="image430.png"> <!-- {width=4.29167in height=1.90972in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image430.png" class="img-fluid figure-img"></p>
+<figcaption>image430.png</figcaption>
+</figure>
+</div>
 <p><code>Set pen crayon to</code> provides the equivalent of a box of 100 crayons. They are divided into color groups, so the menu in the set pen crayon to input<span></span> slot has submenus. The colors are chosen so that starting from crayon 0, <code>change pen crayon by</code> 10 rotates through an interesting, basic set of ten colors:</p>
-<p><img src="assets/image440.png" class="img-fluid" alt="image440.png"> <!--  style="width:4.36528in;height:0.51528in" alt="Macintosh HD:Users:bh:Desktop:pix:10-crayons.png" / --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image440.png" class="img-fluid figure-img"></p>
+<figcaption>image440.png</figcaption>
+</figure>
+</div>
 <p>Using <code>change pen crayon by</code> 5 instead gives ten more colors, for a total of 20:</p>
-<p><img src="assets/image441.png" class="img-fluid" alt="image441.png"> <!-- {width=4.35556in height=0.28194in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image441.png" class="img-fluid figure-img"></p>
+<figcaption>image441.png</figcaption>
+</figure>
+</div>
 <p>(Why didn’t we use the colors of the 100-crayon Crayola™ box? A few reasons, one of which is that some Crayola colors aren’t representable on RGB screens. Some year when you have nothing else to do, look up “color space” on Wikipedia. Also “crayon.” Oh, it’s deliberate that <code>change pen crayon by</code> 5 doesn’t include white, since that’s the usual stage background color. White is crayon 14.) Note that crayon 43 is “Variables”; all the standard block colors are included.</p>
-<p>See Appendix A (page <a href="../appendix/a-snap-color-library/index.html#crayons-and-color-numbers">139</a>) for more information.</p>
+<p>See Appendix A (<a href="../appendix/a-snap-color-library/index.html#sec-crayons-and-color-numbers" class="quarto-xref"><span>Section B.1.1</span></a>) for more information.</p>
 <p>The <strong>crayon library</strong><span></span> has only the crayon features, without the rest of the colors package.</p>
-<p><img src="assets/image442.png" class="img-fluid" alt="image442.png"> <!--  style="width:1.51in;height:0.9in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image442.png" class="img-fluid figure-img"></p>
+<figcaption>image442.png</figcaption>
+</figure>
+</div>
 <p>The catch errors library<span></span> has these blocks:</p>
-<p><img src="assets/image444.png" class="img-fluid" alt="image444.png"> <!-- {width=3.04167in height=1.39583in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image444.png" class="img-fluid figure-img"></p>
+<figcaption>image444.png</figcaption>
+</figure>
+</div>
 <p>The <code>safely try</code> block <span></span> allows you to handle errors that happen when your program is run within the program, instead of stopping the script with a red halo and an obscure error message. The block runs the script in its first C-slot. If it finishes without an error, nothing else happens. But if an error happens, the code in the second C-slot is run. While that second script is running, the variable <img src="assets/image443.png" class="img-fluid" alt="image443.png"> <!-- {width=0.43056in height=0.15278in} --> contains the text of the error message that would have been displayed if you weren’t catching the error. The <code>error</code> block<span></span> is sort of the opposite: it lets your program <em>generate</em> an error message, which will be displayed with a red halo unless it is caught by <code>safely try</code>. <code>Safely try reporting</code> is the reporter version of <code>safely try</code>.</p>
 <p>The text costumes library<span></span> has only two blocks:</p>
 <p><img src="assets/image446.png" class="img-fluid" alt="image446.png"> <!--  style="width:1.92in;height:0.45078in" alt="Macintosh HD:Users:bh:Desktop:textcostume.png" / --> <img src="assets/image447.png" class="img-fluid" alt="image447.png"> <!-- {width=3.25972in height=0.18958in} --></p>
@@ -2141,10 +2359,15 @@ Two Different Length Of Blocks
 <p>These blocks allow a program to perform the same operation as the button, making global, sprite local, or script variables, but allowing the program to compute the variable name(s). It can also set and find the values of these variables, show and hide their stage watchers, delete them, and find out if they already exist.</p>
 <p>The getters and setters library<span></span> has these blocks:</p>
 <p><img src="assets/image452.png" class="img-fluid" alt="image452.png"> <!-- {width=1.875in height=1.05in} --></p>
-<p>The purpose of this library is to allow program access to the settings controlled by user interface elements, such as the settings menu <img src="assets/image453.png" class="img-fluid" alt="image453.png"> <!-- {width=0.29167in height=0.16667in} -->. The <code>setting</code> block<span></span> reports a setting; the <code>set flag</code> block<span></span> sets yes-or-no options that have checkboxes in the user interface, while the <code>set value</code> block<span></span> controls settings with numeric or text values, such as project name.</p>
+<p>The purpose of this library is to allow program access to the settings controlled by user interface elements, such as the settings menu <img src="assets/image453.png" class="img-fluid" alt="image453.png">. The <code>setting</code> block<span></span> reports a setting; the <code>set flag</code> block<span></span> sets yes-or-no options that have checkboxes in the user interface, while the <code>set value</code> block<span></span> controls settings with numeric or text values, such as project name.</p>
 <p>Certain settings are ordinarily remembered on a per-user basis, such as the “zoom blocks” value. But when these settings are changed by this library, the change is in effect only while the project using the library is loaded. No permanent changes are made. Note: this library has not been converted for version 7.0, so you’ll have to enable Javascript extensions to use it.</p>
-<p>The bignums, rationals, complex #s library<span></span> has these blocks:</p>
-<p><img src="assets/image454.png" class="img-fluid" alt="image454.png"> <!-- {width=1.875in height=1.55in} --></p>
+<p>The bignums, rationals, complex #s library<span></span><span></span> has these blocks:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image454.png" class="img-fluid figure-img"></p>
+<figcaption>image454.png</figcaption>
+</figure>
+</div>
 <p>The <code>USE BIGNUMS</code> block<span></span> takes a Boolean input, to turn the infinite precision feature on or off. When on, all of the arithmetic operators are redefined to accept and report integers of any number of digits (limited only by the memory of your computer) and, in fact, the entire Scheme numeric tower, with exact rationals and with complex numbers. The <code>Scheme number</code> block<span></span> has a list of functions applicable to Scheme numbers, including subtype predicates such as rational? and infinite?, and selectors such as numerator and real-part.</p>
 <!-- I cannot figure out an index format that compiles this...\index{"\! block"@\texttt{\!} block}  -->
 <p>The <code>!</code> block computes the factorial function<span></span>, useful to test whether bignums are turned on. Without bignums:</p>
@@ -2158,14 +2381,14 @@ Two Different Length Of Blocks
 <p>The animation library<span></span> has these blocks:</p>
 <p><img src="assets/image464.png" class="img-fluid" alt="image464.png"> <!-- {width=4.0125in height=2.33125in} --></p>
 <p>Despite the name, this isn’t only about graphics; you can animate the values of a variable, or anything else that’s expressed numerically.</p>
-<p>The central idea of this library is an <em>easing function</em><span></span> <em>,</em> a reporter whose domain and range are real numbers between 0 and 1 inclusive. The function represents what fraction of the “distance” (in quotes because it might be any numeric value, such as temperature in a simulation of weather) from here to there should be covered in what fraction of the time. A linear easing<span></span> function means steady progression. A quadratic easing function means starting slowly and accelerating. (Note that, since it’s a requirement that <em>f</em>(0)=0 and <em>f</em>(1)=1, there is only one linear easing function, <em>f</em>(<em>x</em>)=<em>x</em>, and similarly for other categories.) The <img src="assets/image465.png" class="img-fluid" alt="image465.png"> <!--  style="width:0.96528in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:pix:easing.png" / --> block reports some of the common easing functions.</p>
+<p>The central idea of this library is an <em>easing function</em><span></span> <em>,</em> a reporter whose domain and range are real numbers between 0 and 1 inclusive. The function represents what fraction of the “distance” (in quotes because it might be any numeric value, such as temperature in a simulation of weather) from here to there should be covered in what fraction of the time. A linear easing<span></span> function means steady progression. A quadratic easing function means starting slowly and accelerating. (Note that, since it’s a requirement that <em>f</em>(0)=0 and <em>f</em>(1)=1, there is only one linear easing function, <em>f</em>(<em>x</em>)=<em>x</em>, and similarly for other categories.) The <img src="assets/image465.png" class="img-fluid" alt="image465.png"> block reports some of the common easing functions.</p>
 <p>The two Motion blocks in this library animate a sprite. <code>Glide</code> always animates the sprite’s motion. <code>Animate's</code> first pulldown menu input allows you to animate horizontal or vertical motion, but will also animate the sprite’s direction or size. The <code>animate setter</code> block<span></span> in Control lets you animate any numeric quantity with any easing function. The getter and setter inputs are best explained by example:</p>
 <p><img src="assets/image466.png" class="img-fluid" alt="image466.png"> <!--  style="width:4.63194in;height:0.63194in" alt="Macintosh HD:Users:bh:Desktop:pix:animate-control.png" / --></p>
 <p>is equivalent to</p>
 <p><img src="assets/image467.png" class="img-fluid" alt="image467.png"> <!--  style="width:3.40972in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:pix:animate-motion.png" / --></p>
 <p>The other blocks in the library are helpers for these four.</p>
 <p>The serial ports library<span></span> contains these blocks:</p>
-<p><img src="assets/image468.png" class="img-fluid" alt="image468.png"> <!--  style="width:1.73264in;height:1.03472in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --></p>
+<p><img src="assets/image468.png" class="img-fluid" alt="image468.png"> <!--  style="width:1.73264in;height:1.03472in" --></p>
 <p>It is used to allow hardware developers to control devices such as robots that are connected to your computer via a serial port.</p>
 <p>The frequency distribution analysis library<span></span> has these blocks:</p>
 <p><img src="assets/image469.png" class="img-fluid" alt="image469.png"> <!-- {width=4.02708in height=2.39583in} --></p>
@@ -2176,30 +2399,75 @@ Two Different Length Of Blocks
 <p><img src="assets/image470.png" class="img-fluid" alt="image470.png"> <!-- {width=3.54167in height=2.98125in} --></p>
 <p>This library takes a sound, one that you record or one from our collection of sounds, and manipulates it by systematically changing the intensity of the samples in the sound and by changing the sampling rate at which the sound is reproduced. Many of the blocks are helpers for the <code>plot sound</code> block, used to plot the waveform of a sound<span></span>. The <code>play sound</code> (primitive) block<span></span> plays a sound. __ <code>Hz for</code> <span></span> reports a sine wave as a list of samples.</p>
 <p>The web services library<span></span> has these blocks:</p>
-<p><img src="assets/image471.png" class="img-fluid" alt="image471.png"> <!--  style="width:3.40972in;height:1.10417in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --></p>
-<p>The first block is a generalization of the primitive <code>url</code> block<span></span> , allowing more control over the various options in web requests: GET, POST, PUT, and DELETE, and fine control over the content of the message sent to the server. <code>Current location</code><span></span> reports your latitude and longitude. <code>Listify</code><span></span> takes some text in JSON format (see page <a href="#multi-dimensional-lists-and-json">54</a>) and converts it to a structured list. <code>Value at key</code><span></span> looks up a key-value pair in a (listified) JSON dictionary. The <code>key:value:</code> block <span></span> is just a constructor for an abstract data type used with the other blocks</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image471.png" class="img-fluid figure-img"></p>
+<figcaption>image471.png</figcaption>
+</figure>
+</div>
+<p>The first block is a generalization of the primitive <code>url</code> block<span></span> , allowing more control over the various options in web requests: <code>GET</code>, <code>POST</code>, <code>PUT</code>, and <code>DELETE</code>, and fine control over the content of the message sent to the server. <code>Current location</code><span></span> reports your latitude and longitude. <code>Listify</code><span></span> takes some text in JSON format (see page <a href="#multi-dimensional-lists-and-json">54</a>) and converts it to a structured list. <code>Value at key</code><span></span> looks up a key-value pair in a (listified) JSON dictionary. The <code>key:value:</code> block <span></span> is just a constructor for an abstract data type used with the other blocks</p>
 <p>The database library<span></span> contains these blocks:</p>
-<p><img src="assets/image472.png" class="img-fluid" alt="image472.png"> <!--  style="width:2.26389in;height:1.22222in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image472.png" class="img-fluid figure-img"></p>
+<figcaption>image472.png</figcaption>
+</figure>
+</div>
 <p>It is used to keep data that persist from one <span class="snap">Snap</span> session to the next, if you use the same browser and the same login.</p>
 <p>The world map library<span></span> has these blocks:</p>
 <p><img src="assets/image473.png" class="img-fluid" alt="image473.png"> <!-- {width=2.44236in height=3.40278in} --></p>
 <p>Using any of the command blocks puts a map on the screen, in a layer in front of the stage’s background but behind the pen trails layer (which is in turn behind all the sprites). The first block asks your browser for your current physical location, for which you may be asked to give permission. The next two blocks get and set the map’s zoom amount; the default zoom of 10 ﬁts from San Francisco not quite down to Palo Alto on the screen. A zoom of 1 ﬁts almost the entire world. A zoom of 3 fits the United States; a zoom of 5 ﬁts Germany. The zoom can be changed in half steps, i.e., 5.5 is different from 5, but 5.25 isn’t.</p>
 <p>The next five blocks convert between stage coordinates (pixels) and Earth coordinates (latitude and longitude). The change by x: y: block shifts the map relative to the stage. The distance to block measures the map distance (in meters) between two sprites. The three reporters with current in their names find <em>your</em> actual location, again supposing that geolocation is enabled on your device. Update redraws the map; as costume reports the visible section of the map as a costume. <code>Set style</code> allows things like satellite pictures.</p>
 <p>The APL primitives library contains<span></span> these blocks:</p>
-<p><img src="assets/image474.png" class="img-fluid" alt="image474.png"> <!-- {width=5.73333in height=1.11333in} --></p>
-<p><img src="assets/image475.png" class="img-fluid" alt="image475.png"> <!-- {width=6.45333in height=2.04in} --></p>
-<p>For more information about APL, see Appendix B (page <a href="#appendix-b.-apl-features">148</a>).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image474.png" class="img-fluid figure-img"></p>
+<figcaption>image474.png</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image475.png" class="img-fluid figure-img"></p>
+<figcaption>image475.png</figcaption>
+</figure>
+</div>
+<p>For more information about APL, see <a href="../appendix/b-apl-features/index.html" class="quarto-xref"><span>Appendix C</span></a>).</p>
 <p>The <strong>list comprehension library</strong><span></span> has one block, <code>zip</code>:</p>
-<p><img src="assets/image476.png" class="img-fluid" alt="image476.png"> <!--  style="width:1.2in;height:0.48958in" alt="Logo Description automatically generated" / --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image476.png" class="img-fluid figure-img"></p>
+<figcaption>image476.png</figcaption>
+</figure>
+</div>
 <p>Its first input is a function of two inputs. The two Any-type inputs are deep lists (lists of lists of…) interpreted as trees, and the function is called with every possible combination of a leaf node of the first tree and a leaf node of the second tree. But instead of taking atoms (non-lists) as the leaves, <code>zip</code> allows the leaves of each tree to be vectors (one-dimensional lists), matrices (two-dimensional lists), etc. The Number-type inputs specify the leaf dimension for each tree, so the function input might be called with a vector from the first tree and an atom from the second tree.</p>
 <p>The <strong>bitwise library</strong><span></span> provides bitwise logic functions; each bit of the reported value is the result of applying the corresponding Boolean function to the corresponding bits of the input(s). The Boolean functions are <code>not for ¬</code>, <code>and for ∧</code>, <code>or for ∨</code>, and <code>xor (exclusive or) for ⊻</code> . The remaining functions shift their first input left or right by the number of bits given by the second input. <code>\&lt;\&lt;</code> is left shift, <code>\&gt;\&gt;</code> is arithmetic right shift (shifting in one bits from the left), and <code>\&gt;\&gt;\&gt;</code> is logical right shift (shifting in zero bits from the left). If you don’t already know what these mean, find a tutorial online.</p>
-<p><img src="assets/image477.png" class="img-fluid" alt="image477.png"> <!--  style="width:0.89in;height:1.51in" alt="Icon Description automatically generated" / --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image477.png" class="img-fluid figure-img"></p>
+<figcaption>image477.png</figcaption>
+</figure>
+</div>
 <p>The <strong>MQTT library</strong><span></span> supports the Message Queuing Telemetry Transport protocol, for connecting with IOT devices. See <a href="https://mqtt.org/" class="uri">https://mqtt.org/</a> for more information.</p>
-<p><img src="assets/image487.png" class="img-fluid" alt="image487.png"> <!--  style="width:1.2in;height:0.48958in" alt="Logo Description automatically generated" / --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image487.png" class="img-fluid figure-img"></p>
+<figcaption>image487.png</figcaption>
+</figure>
+</div>
 <p>The <strong>Signada library</strong><span></span> allows you to control a microBit or similar device that works with the Signada MicroBlocks project.</p>
-<p><img src="assets/image488.png" class="img-fluid" alt="image488.png"> <!--  style="width:3.39in;height:1.9in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --></p>
-<p>The <strong>menus library</strong><span></span> provides the ability to display hierarchical menus on the stage, using the ask block’s ability to take lists as inputs. See page <a href="#ask_lists">24</a>.</p>
-<p><img src="assets/image486.png" class="img-fluid" alt="image486.png"> <!--  style="width:3.39in;height:1.9in" alt="Graphical user interface, text, application, chat or text message Description automatically generated" / --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image488.png" class="img-fluid figure-img"></p>
+<figcaption>image488.png</figcaption>
+</figure>
+</div>
+<p>The <strong>menus library</strong><span></span> provides the ability to display hierarchical menus on the stage, using the ask block’s ability to take lists as inputs. See <a href="#sec-ask-lists" class="quarto-xref"><span>Section 1.8.3</span></a>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image486.png" class="img-fluid figure-img"></p>
+<figcaption>image486.png</figcaption>
+</figure>
+</div>
 <p>The <strong>Sci<span class="snap">Snap</span> library</strong><span></span> and the <strong>TuneScope library</strong><span></span> are too big to discuss here and are documented separately at <a href="http://emu-online.de/ProgrammingWithSciSnap.pdf" class="uri">http://emu-online.de/ProgrammingWithSciSnap.pdf</a> and <a href="https://maketolearn.org/creating-art-animations-and-music/" class="uri">https://maketolearn.org/creating-art-animations-and-music/</a> respectively.</p>
 
 
@@ -2208,7 +2476,7 @@ Two Different Length Of Blocks
 <section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn1"><p>{#sec-generic-when} One of the hat blocks, the generic<span></span> “when anything” block <img src="assets/image10.png" class="image-inline img-fluid" alt="generic when hat block">, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some <em>other</em> script in the project runs (because, for example, you click the green flag). When generic when<span></span> blocks are disabled, the stop sign <span></span> will be square<span></span> instead of octagonal.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>One of the hat blocks, the generic<span></span> “when anything” block <img src="assets/image10.png" id="fig-generic-when" class="image-inline img-fluid" alt="generic when hat block">, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some <em>other</em> script in the project runs (because, for example, you click the green flag). When generic when<span></span> blocks are disabled, the stop sign <span></span> will be square<span></span> instead of octagonal. {#para-generic-when}<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>The hide variable and<span></span> show variable block<span></span> s can also be used to hide and show primitives<span></span> in the palette. The pulldown menu doesn’t include primitive blocks, but there’s a generally useful technique to give a block input values it wasn’t expecting using run or call:<img src="assets/image120.png" class="img-fluid" alt="image120.png"> <!-- {width=3.9375in height=0.38889in} --> <br> In order to use a block as an input this way, you must explicitly put a ring around it, by right-clicking on it and choosing ringify. More about rings in Chapter VI.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>

@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-604a3b4d9daa6e2a8ab2afbe2d9bd67f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c69b0a5d86bcb328615c875fc8cef84c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -1545,7 +1545,7 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#writing-higher-order-procedures" id="toc-writing-higher-order-procedures" class="nav-link" data-scroll-target="#writing-higher-order-procedures"><span class="header-section-number">6.2</span> Writing Higher Order Procedures</a>
   <ul class="collapse">
-  <li><a href="#recursive-calls-to-multiple-input-blocks" id="toc-recursive-calls-to-multiple-input-blocks" class="nav-link" data-scroll-target="#recursive-calls-to-multiple-input-blocks"><span class="header-section-number">6.2.1</span> Recursive Calls to Multiple-Input Blocks</a></li>
+  <li><a href="#sec-recursive-calls-to-multiple-input-blocks" id="toc-sec-recursive-calls-to-multiple-input-blocks" class="nav-link" data-scroll-target="#sec-recursive-calls-to-multiple-input-blocks"><span class="header-section-number">6.2.1</span> Recursive Calls to Multiple-Input Blocks</a></li>
   </ul></li>
   <li><a href="#formal-parameters" id="toc-formal-parameters" class="nav-link" data-scroll-target="#formal-parameters"><span class="header-section-number">6.3</span> Formal Parameters</a></li>
   <li><a href="#procedures-as-data" id="toc-procedures-as-data" class="nav-link" data-scroll-target="#procedures-as-data"><span class="header-section-number">6.4</span> Procedures as Data</a></li>
@@ -1584,8 +1584,13 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="assets/image692.png" class="img-fluid" alt="image692.png"> <!--  style="width:3.67292in;height:1.58333in" / --></p>
 <p>This is simplified because it assumes, without checking, that the ending value is greater than the starting value; if not, the block should (depending on the designer’s purposes) either not run at all, or change the variable by −1 for each repetition instead of by 1.</p>
 <p>The important part of this script is the <code>run</code> block<span></span> near the end. This is a <span class="snap">Snap</span> built-in command block that takes a Command-type value (a script) as its input, and carries out its instructions. (In this example, the value of the input <img src="assets/image693.png" class="img-fluid" alt="image693.png"> <!--  style="width:0.5in;height:0.15625in" / --> is the script that the user puts in the C-slot of the <code>my for</code> block.) There is a similar <code>call</code> reporter block for invoking a Reporter or Predicate block. The <code>call</code><span></span> and <code>run</code> blocks are at the heart of <span class="snap">Snap</span>’s ﬁrst class procedure<span></span> feature; they allow scripts and blocks to be used as data—in this example, as an input to a block—and eventually carried out under control of the user’s program.</p>
-<p>Here’s another example, this time using a Reporter-type input in a <code>map</code> block (see page <a href="#map">50</a>):<span></span></p>
-<p><img src="assets/image743.png" class="img-fluid" alt="image743.png"> <!--  style="width:0.5in;height:0.15625in" / --></p>
+<p>Here’s another example, this time using a Reporter-type input in a <code>map</code> block (see <a href="../04-first-class-lists/index.html#sec-map" class="quarto-xref"><span>Section 4.4.1</span></a>):<span></span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image743.png" class="img-fluid figure-img"></p>
+<figcaption>image743.png</figcaption>
+</figure>
+</div>
 <p>Here we are calling the Reporter <code>multiply by (10)<code> three times, once with each item of the given list as its input, and collecting the results as a list. (The reported list will always be the same length as the input list.) Note that the <code>multiplication</code> block has two inputs, but here we have specified a particular value for one of them (10), so the <code>call</code> block knows to use the input value given to it just to fill the other (empty) input slot in the <code>multiplication</code> block. In the <code>my map</code> definition, the input <var>function</var> is declared to be type Reporter, and <var>data</var> is of type List.</code></code></p><code><code>
 <section id="callrun-with-inputs" class="level3" data-number="6.1.1">
 <h3 data-number="6.1.1" class="anchored" data-anchor-id="callrun-with-inputs"><span class="header-section-number">6.1.1</span> Call/Run with inputs</h3>
@@ -1602,7 +1607,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="variables-in-ring-slots" class="level3" data-number="6.1.2">
 <h3 data-number="6.1.2" class="anchored" data-anchor-id="variables-in-ring-slots"><span class="header-section-number">6.1.2</span> Variables in Ring Slots</h3>
-<p>Note that the <code>run</code> block<span></span> in the definition of the <code>my for</code> block (page <a href="#call-and-run">65</a>) doesn’t have a <code>ring</code> around its input variable <var>action</var>. When you drag a variable into a ringed input slot, you generally <em>do</em> want to use <em>the value of</em> the variable, which will be the block or script you’re trying to run or call, rather than the orange variable reporter itself. So <span class="snap">Snap</span> automatically removes the ring in this case. If you ever do want to use the variable <em>block itself,</em> rather than the value of the variable, as a Procedure-type input, you can drag the variable into the input slot, then control-click or right-click it and choose “<code>ringify</code>” from the menu that appears. (Similarly, if you ever want to call a function that will report a block to use as the input, such as <code>item (1) of ( ) </code> applied to a list <em>of blocks,</em> you can choose “<code>unringify</code>” from the menu. Almost all the time, though, <span class="snap">Snap</span> does what you mean without help.)</p>
+<p>Note that the <code>run</code> block<span></span> in the definition of the <code>my for</code> block (see <span class="quarto-unresolved-ref">?sec-call-and-run</span>) doesn’t have a <code>ring</code> around its input variable <var>action</var>. When you drag a variable into a ringed input slot, you generally <em>do</em> want to use <em>the value of</em> the variable, which will be the block or script you’re trying to run or call, rather than the orange variable reporter itself. So <span class="snap">Snap</span> automatically removes the ring in this case. If you ever do want to use the variable <em>block itself,</em> rather than the value of the variable, as a Procedure-type input, you can drag the variable into the input slot, then control-click or right-click it and choose “<code>ringify</code>” from the menu that appears. (Similarly, if you ever want to call a function that will report a block to use as the input, such as <code>item (1) of ( ) </code> applied to a list <em>of blocks,</em> you can choose “<code>unringify</code>” from the menu. Almost all the time, though, <span class="snap">Snap</span> does what you mean without help.)</p>
 </section>
 </code></code></section><code><code>
 <section id="writing-higher-order-procedures" class="level2" data-number="6.2">
@@ -1632,8 +1637,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Otherwise, <span class="snap">Snap</span> won’t fill any slots, because the user’s intention is unclear.</li>
 </ol>
 <p>If the user wants to override these rules, the solution is to use a <code>ring</code> <span></span> with explicit input names that can be put into the given block or script to indicate how inputs are to be used. This will be discussed more fully below.</p>
-<section id="recursive-calls-to-multiple-input-blocks" class="level3" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="recursive-calls-to-multiple-input-blocks"><span class="header-section-number">6.2.1</span> Recursive Calls to Multiple-Input Blocks</h3>
+<section id="sec-recursive-calls-to-multiple-input-blocks" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="sec-recursive-calls-to-multiple-input-blocks"><span class="header-section-number">6.2.1</span> Recursive Calls to Multiple-Input Blocks</h3>
 <p>A relatively rare situation not yet considered here is the case of a recursive block that has a variable number of inputs. Let’s say the user of your project calls your block with five inputs one time, and 87 inputs another time. How do you write the recursive call <span></span> to your block when you don’t know how many inputs to give it? The answer is that you collect the inputs in a list <span></span> (recall that, when you declare an input name to represent a variable number of inputs, your block sees those inputs as a list of values in the first place), and then, in the recursive call, you drop that input list <em>onto the arrowheads</em> that indicate a variable-input slot<span></span>, rather than onto the input slot:</p>
 <p><img src="assets/image715.png" class="img-fluid" alt="image715.png"> <!--  style="width:2.27569in;height:1.59722in" / --></p>
 <p>Note that the halo<span></span> you see while dragging onto the arrowheads<span></span> is red<span></span> instead of white, and covers the input slot as well as the arrowheads. And when you drop the expression onto the arrowheads, the words “<code>input list:</code>”<span></span> are added to the block text and the arrowheads disappear (in this invocation only) to remind you that the list represents all of the multiple inputs, not just a single input. The items in the list are taken <em>individually</em> as inputs to the script. Since <var>numbers</var> is a list of numbers, each individual item is a number, just what <code>sizes</code> wants. This block will take any number of numbers as inputs, and will make the sprite grow and shrink accordingly:</p>

@@ -42,7 +42,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-604a3b4d9daa6e2a8ab2afbe2d9bd67f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-c69b0a5d86bcb328615c875fc8cef84c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -1541,10 +1541,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#the-list-block" id="toc-the-list-block" class="nav-link active" data-scroll-target="#the-list-block"><span class="header-section-number">4.1</span> The <code>list</code> Block</a></li>
   <li><a href="#lists-of-lists" id="toc-lists-of-lists" class="nav-link" data-scroll-target="#lists-of-lists"><span class="header-section-number">4.2</span> Lists of Lists</a></li>
   <li><a href="#functional-and-imperative-list-programming" id="toc-functional-and-imperative-list-programming" class="nav-link" data-scroll-target="#functional-and-imperative-list-programming"><span class="header-section-number">4.3</span> Functional and Imperative List Programming</a></li>
-  <li><a href="#higher-order-list-operations-and-rings" id="toc-higher-order-list-operations-and-rings" class="nav-link" data-scroll-target="#higher-order-list-operations-and-rings"><span class="header-section-number">4.4</span> Higher Order List Operations and Rings</a></li>
+  <li><a href="#higher-order-list-operations-and-rings" id="toc-higher-order-list-operations-and-rings" class="nav-link" data-scroll-target="#higher-order-list-operations-and-rings"><span class="header-section-number">4.4</span> Higher Order List Operations and Rings</a>
+  <ul class="collapse">
+  <li><a href="#sec-map" id="toc-sec-map" class="nav-link" data-scroll-target="#sec-map"><span class="header-section-number">4.4.1</span> The <code>map</code> block</a></li>
+  </ul></li>
   <li><a href="#table-view-vs.-list-view" id="toc-table-view-vs.-list-view" class="nav-link" data-scroll-target="#table-view-vs.-list-view"><span class="header-section-number">4.5</span> Table View<span></span> vs.&nbsp;List View<span></span></a>
   <ul class="collapse">
-  <li><a href="#comma-separated-values" id="toc-comma-separated-values" class="nav-link" data-scroll-target="#comma-separated-values"><span class="header-section-number">4.5.1</span> Comma-Separated Values</a></li>
+  <li><a href="#sec-csv" id="toc-sec-csv" class="nav-link" data-scroll-target="#sec-csv"><span class="header-section-number">4.5.1</span> Comma-Separated Values</a></li>
   </ul></li>
   <li><a href="#hyperblocks" id="toc-hyperblocks" class="nav-link" data-scroll-target="#hyperblocks"><span class="header-section-number">4.6</span> Hyperblocks<span></span></a></li>
   </ul>
@@ -1618,18 +1621,41 @@ ul.task-list li input[type="checkbox"] {
 <section id="higher-order-list-operations-and-rings" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="higher-order-list-operations-and-rings"><span class="header-section-number">4.4</span> Higher Order List Operations and Rings</h2>
 <p>There’s an even easier way to select the even numbers from a list:</p>
-<p><img src="assets/image556.png" class="img-fluid" alt="image556.png"> <!--  style="width:5.86458in;height:1.07153in" / --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image556.png" class="img-fluid figure-img"></p>
+<figcaption>image556.png</figcaption>
+</figure>
+</div>
 <p>The <code>keep</code> block takes a Predicate expression as its first input, and a list as its second input. It reports a list containing those elements of the input list for which the predicate returns <code>true</code>. Notice two things about the predicate input: First, it has a grey ring <span></span> around it. Second, the <code>mod</code> block has an empty input. <code>Keep</code> puts each item of its input list, one at a time, into that empty input before evaluating the predicate. (The empty input is supposed to remind you of the “box” notation for variables in elementary school: 🔳+3=7.) The grey ring is part of the <code>keep</code> block as it appears in the palette:</p>
 <p><img src="assets/image557.png" class="img-fluid" alt="image557.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
 <p>What the ring means is that this input is a block (a predicate block, in this case, because the interior of the ring is a hexagon), rather than the value reported by that block. Here’s the difference:</p>
-<p><img src="assets/image634.png" class="img-fluid" alt="image634.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
+<!-- TODO: this image is squished in its origianl form. -->
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image634.png" class="img-fluid figure-img"></p>
+<figcaption>image634.png</figcaption>
+</figure>
+</div>
 <p>Evaluating the <code>=</code> block without a ring reports <code>true</code> or <code>false</code>; evaluating the block <em>with</em> a ring reports the block itself. This allows <code>keep</code> to evaluate the <code>=</code> predicate repeatedly, once for each list item. A block that takes another block as input is called a <em>higher order</em> block (or higher order procedure, or higher order function<span></span>).</p>
 <p><img src="assets/image635.png" class="img-fluid" alt="image635.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
 <p>Snap<em>!</em> provides four higher order function blocks for operating on lists:</p>
-<p><img src="assets/image636.png" class="img-fluid" alt="image636.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
-<p><span id="map" class="anchor"></span>You’ve already seen <code>keep</code>. <code>Find first</code> is <span></span> similar, but it reports just the first item that satisfies the predicate, not a list of all the matching items. It’s equivalent to <img src="assets/image562.png" class="img-fluid" alt="image562.png"> <!--  style="width:2.39in;height:0.22in" / --> but faster because it stops looking as soon as it finds a match. If there are no matching items, it returns an empty string.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image636.png" class="img-fluid figure-img"></p>
+<figcaption>image636.png</figcaption>
+</figure>
+</div>
+<section id="sec-map" class="level3" data-number="4.4.1">
+<h3 data-number="4.4.1" class="anchored" data-anchor-id="sec-map"><span class="header-section-number">4.4.1</span> The <code>map</code> block</h3>
+<p>You’ve already seen <code>keep</code>. <code>Find first</code> is <span></span> similar, but it reports just the first item that satisfies the predicate, not a list of all the matching items. It’s equivalent to <img src="assets/image562.png" class="img-fluid" alt="image562.png"> but faster because it stops looking as soon as it finds a match. If there are no matching items, it returns an empty string.</p>
 <p><code>Map</code> <span></span> takes a Reporter block and a list as inputs. It reports a new list in which each item is the value reported by the Reporter block as applied to one item from the input list. That’s a mouthful, but an example will make its meaning clear:</p>
-<p><img src="assets/image637.png" class="img-fluid" alt="image637.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image637.png" class="img-fluid figure-img"></p>
+<figcaption>image637.png</figcaption>
+</figure>
+</div>
 <p>By the way, we’ve been using arithmetic examples, but the list items can be of any type, and any reporter can be used. We’ll make the plurals of some words:</p>
 <p><img src="assets/image638.png" class="img-fluid" alt="image638.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
 <p>These examples use small lists, to fit the page, but the higher order blocks work for any size list.</p>
@@ -1641,6 +1667,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Why <code>+</code> but not <code>−</code>? It only makes sense to combine list items using an <em>associative</em> <span></span> function<span></span>: one that doesn’t care in what order the items are combined (left to right or right to left). (2+3)+4 = 2+(3+4), but (2−3)−4 ≠ 2−(3−4).</p>
 <p>The functions <code>map</code>, <code>keep</code>, and <code>find first</code> have an advanced mode with rarely-used features: If their function input is given <a href="../06-procedures-as-data/index.html#formal-parameters">explicit input names</a> (by clicking the arrowhead at the right end of the gray ring), then it will be called for each list item with <em>three</em> inputs: the item’s value (as usual), the item’s position in the input list (its index), and the entire input list. No more than three input names can be used in this context.</p>
 <p><img src="assets/image587.png" class="img-fluid" alt="image587.png"> <!--  style="width:5.80833in;height:1.19097in" / --></p>
+</section>
 </section>
 <section id="table-view-vs.-list-view" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="table-view-vs.-list-view"><span class="header-section-number">4.5</span> Table View<span></span> vs.&nbsp;List View<span></span></h2>
@@ -1667,13 +1694,16 @@ ul.task-list li input[type="checkbox"] {
 <p>One last detail: If the first item of a list is a list (so table view is used), but a later item <em>isn’t</em> a list, that later item will be displayed on a red background, like an item of a single-column list:</p>
 <p><img src="assets/image602.png" class="img-fluid" alt="image602.png"> <!--  style="width:3.35417in;height:0.69444in" / --></p>
 <p>So, in particular, if only the first item is a list, the display will look almost like a one-column display.</p>
-<section id="comma-separated-values" class="level3" data-number="4.5.1">
-<h3 data-number="4.5.1" class="anchored" data-anchor-id="comma-separated-values"><span class="header-section-number">4.5.1</span> Comma-Separated Values</h3>
-<p>Spreadsheet and database programs generally offer the option to export their data as CSV (comma-separated values)<span></span> lists. You can import these files into Snap<em>!</em> and turn them into tables (lists of lists), and you can export tables in CSV format. Snap<em>!</em> recognizes a CSV file by the extension .csv in its filename.</p>
+<section id="sec-csv" class="level3" data-number="4.5.1">
+<h3 data-number="4.5.1" class="anchored" data-anchor-id="sec-csv"><span class="header-section-number">4.5.1</span> Comma-Separated Values</h3>
+<p>Spreadsheet and database programs generally offer the option to export their data as CSV (comma-separated values)<span></span> lists. You can import these files into Snap<em>!</em> and turn them into tables (lists of lists), and you can export tables in CSV format. <span class="snap">Snap</span> recognizes a CSV file by the extension .csv in its filename.</p>
 <p>A CSV file has one line per table row, with the fields separated by commas within a row:</p>
-<p><code>John,Lennon,rhythm guitar Paul,McCartney,bass guitar George,Harrison,lead guitar Ringo,Starr,drums</code></p>
+<pre class="csv"><code>John,Lennon,rhythm guitar
+Paul,McCartney,bass guitar
+George,Harrison,lead guitar
+Ringo,Starr,drums</code></pre>
 <p>Here’s what the corresponding table looks like:</p>
-<!-- This image needs work.  It shouldn't include the csv in text form, and the two views of the list should be captioned.  Ideally this would be two separate captioned pictures on the same line. bh -->
+<!-- This image needs work. It shouldn't include the csv in text form, and the two views of the list should be captioned. Ideally this would be two separate captioned pictures on the same line. bh -->
 <p><img src="assets/image643.png" class="img-fluid" alt="image643.png"> <!--  style="width:3.35417in;height:0.69444in" / --></p>
 <p>Here’s how to read a spreadsheet into Snap<em>!</em>:</p>
 <ol type="1">
@@ -1720,7 +1750,7 @@ your list as a JSON (JavaScript Object Notation) file\index{JSON
 <p>A <em>scalar</em> is anything other than a list. The name comes from mathematics, where it means a magnitude without direction, as opposed to a vector, which points toward somewhere. A scalar function<span></span> is one whose domain and range are scalars, so all the arithmetic operations are scalar functions, but so are the text ones such as <code>letter</code> and the Boolean ones such as <code>not</code>.</p>
 <p>The major new feature in Snap<em>!</em> 6.0 is that the domain and range of most scalar function blocks is extended to multi-dimensional <span></span> lists, with the underlying scalar function applied termwise:</p>
 <p><img src="assets/image610.png" class="img-fluid" alt="image610.png"> <!--  style="width:3.34028in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-vector.png" / --> <img src="assets/image609.png" class="img-fluid" alt="image609.png"> <!--  style="width:2.5625in;height:0.91667in" alt="Macintosh HD:Users:bh:Desktop:vector-monadic.png" / --> <img src="assets/image611.png" class="img-fluid" alt="image611.png"> <!--  style="width:4.94444in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-matrix.png" / --></p>
-<p>Mathematicians, note in the last example above that the result is just a termwise application of the underlying function (7×3, 8×5, etc.), <em>not</em> matrix multiplication. See <a href="../14-appendix-b-apl-features">Appendix B</a> for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each dimension) is the length of the shorter input:</p>
+<p>Mathematicians, note in the last example above that the result is just a termwise application of the underlying function (7×3, 8×5, etc.), <em>not</em> matrix multiplication. See <a href="../appendix/b-apl-features/index.html" class="quarto-xref"><span>Appendix C</span></a> for that. For a dyadic (two-input) function, if the lengths don’t agree, the length of the result (in each dimension) is the length of the shorter input:</p>
 <p><img src="assets/image612.png" class="img-fluid" alt="image612.png"> <!--  style="width:5.74306in;height:0.69444in" alt="Macintosh HD:Users:bh:Desktop:matrix-ragged.png" / --></p>
 <p>However, if the <em>number of dimensions</em> differs in the two inputs, then the number of dimensions in the result agrees with the <em>higher-</em>dimensional input; the lower-dimensional one is used repeatedly in the missing dimension(s):</p>
 <p><img src="assets/image613.png" class="img-fluid" alt="image613.png"> <!--  style="width:6.79167in;height:0.86806in" alt="Macintosh HD:Users:bh:Desktop:missing-dimension.png" / --></p>
