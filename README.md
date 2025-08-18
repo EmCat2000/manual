@@ -5,7 +5,6 @@
 
 [![GitHub Pages](https://img.shields.io/badge/website-GitHub%20Pages-blue.svg)](https://docs.snap.berkeley.edu/)
 
-<!-- ([PDF - coming soon][pdf]) -->
 [website]: https://docs.snap.berkeley.edu
 [pdf]: https://docs.snap.berkeley.edu/snap-manual.pdf
 [original_pdf]: ./SnapManual.pdf
@@ -15,7 +14,7 @@ The reference manual for the [Snap<em>!</em> programming language][snap]. ([GitH
 [snap]: https://snap.berkeley.edu
 [snap_gh]: https://github.com/jmoenig/snap/
 
-> [NOTE]
+> [!NOTE]
 > The web manual is a "translation" of the original PDF, which was last largely updated for
 > Snap<em>!</em> 8. We're first working on the making the web version readable, then we'll
 > update the content to match recent Snap<em>!</em> releases.
@@ -46,6 +45,7 @@ brew install mactex-no-gui
 ```
 
 It is also recommended to install the [Quarto VSCode extension][quarto_vscode].
+
 [quarto_vscode]: https://marketplace.visualstudio.com/items?itemName=quarto.quarto
 
 ### Building the book
@@ -62,7 +62,7 @@ Your webpage will automatically refresh as you save changes to files.
 **To compile the PDF and final version:**
 
 ```shell
-quarto render
+quarto render [--to pdf | --to html]
 ```
 
 ## Writing Style
@@ -80,7 +80,7 @@ If you are making large updates to the md structure, it may be worth working on 
 The script assumes you have `pandoc` installed and available in your path.
 
 ```
-cd conversion
+cd _support/conversion
 ruby convert-word-doc.rb
 ```
 

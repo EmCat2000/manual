@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `if on edge, bounce` {.unnumbered}
+# `if on edge, bounce` {.unnumbered .pdf-only-unlisted}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

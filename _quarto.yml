@@ -31,6 +31,18 @@ brand: _brand.yml
 # toc-depth: 1
 appendix-style: none
 
+# Allow other types of content to be cross-referenced in the book.
+# https://quarto.org/docs/authoring/cross-references-custom.html
+crossref:
+  custom:
+    - kind: float
+      reference-prefix: Section
+      key: para
+      latex-env: pararef
+    - kind: float
+      reference-prefix: Project
+      key: proj
+      latex-env: snapproject
 format:
   html:
     aria: true # requires quarto-dev / v1.8+
@@ -73,21 +85,20 @@ format:
     dir: ltr
     # https://quarto.org/docs/reference/formats/pdf.html
     output-file: snap-manual.pdf
-    cover-image: images/cover-image.png
-    # Do not use pdflatex since we have unicode chars
-    # pdf-engine: lualatex # xelatex # or HTML based: wkhtmltopdf
+    # cover-image: images/cover-image.png
     pdf-engine: lualatex
     # pdf-engine-opt:
-    keep-tex: false
+    keep-tex: true
     filters:
       - _support/scripts/replace-snap.lua
+      - _support/scripts/exclude-blocks-toc.lua
     # https://www.overleaf.com/learn/latex/Indices
     include-in-header: _support/tex/latex-preamble.tex
     include-after-body:
       text: |
         \printindex
     toc: true
-    toc-depth: 1
+    toc-depth: 2
     number-sections: true
     number-depth: 2
     # https://ctan.math.utah.edu/ctan/tex-archive/macros/latex/contrib/koma-script/doc/scrguide-en.pdf
@@ -97,13 +108,14 @@ format:
       - 11pt
       # These should be disabled for the final version.
       # - draft=true
-      - overfullrule=true
+      # - overfullrule=true
     papersize: letter
     # font options are passed to fontenc
     # https://ctan.math.illinois.edu/macros/unicodetex/latex/fontspec/fontspec.pdf
     # TODO: In order to enable fonts, they need to be added to the GitHub Workflow.
     # 'Times New Roman', 'Times' do not work...
-    # mainfont: baskervillef
+    # We may need to use a profile to set different options for GitHub.
+    mainfont: baskerville
     # monofont: Source Code Pro
     # sansfont: Helvetica
     resource-path:
@@ -165,6 +177,8 @@ book:
   repo-url: https://github.com/snap-cloud/manual/
   issue-url: https://forum.snap.berkeley.edu/c/manual/77
   repo-actions: none # [edit]
+  # TODO: Consider a _quarto-withblocks.yml which includes all the blocks
+  # which would allow us to have 2 separate compilation paths.
   chapters:
     - index.qmd
     - 00-acknowledgements/index.md
@@ -186,11 +200,7 @@ book:
     - appendix/b-apl-features/index.md
     # TODO: SciSnap! and TuneScope libraries
     - appendix/community/index.md
-    # - appendix/community/students.md
-    # - appendix/community/teachers.md
     - blocks/index.md
-    # This leads to a weird "part" in the PDF TOC.
-    # Maybe that's OK?
     - part: Motion Blocks
       chapters:
         - blocks/motion/forward.qmd

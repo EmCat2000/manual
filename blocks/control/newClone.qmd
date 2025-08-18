@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `a new clone of` {.unnumbered}
+# `a new clone of` {.unnumbered .pdf-only-unlisted}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}

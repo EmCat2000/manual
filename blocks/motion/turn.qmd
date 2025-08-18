@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `turn ↻ degrees` {.unnumbered}
+# `turn ↻ degrees` {.unnumbered .pdf-only-unlisted}
 
 <!-- s -->
 <!-- {{< partial blocks/_block.qmd >}} -->

@@ -21,6 +21,9 @@ _book
 *.quarto_ipynb
 *_files/
 
+# The final Snap! manual compiled.
+snap-manual.tex
+
 # Custom Index Rendering Files.
 _index_entries.txt
 # Temporary rendering files.

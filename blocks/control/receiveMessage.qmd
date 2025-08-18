@@ -26,7 +26,7 @@ partial-data:
   #     description: Move forward by 10 steps
 ---
 
-# `when I receive` {.unnumbered}
+# `when I receive` {.unnumbered .pdf-only-unlisted}
 
 <!-- {{< partial blocks/_block.qmd >}} -->
 ```{python}
