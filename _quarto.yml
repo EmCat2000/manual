@@ -165,7 +165,7 @@ book:
   url: https://docs.snap.berkeley.edu/
   public-url: https://docs.snap.berkeley.edu/
   pdf-url: https://snap.berkeley.edu/snap/help/SnapManual.pdf
-  # doi:
+  doi: https://doi.org/10.5281/zenodo.16892852
   # abstract:
   downloads:
     - pdf
