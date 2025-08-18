@@ -18,13 +18,13 @@ jobs:
       - name: Install necessary APT packages
         run: |
           sudo apt-get update
-          sudo apt install ttf-mscorefonts-installer
+          sudo apt install -y ttf-mscorefonts-installer
           sudo apt-get install -y texlive-latex-extra texlive-luatex
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-        # with:
-        #   # To install LaTeX to build PDF book
-        #   tinytex: true
+        with:
+          # To install LaTeX to build PDF book
+          tinytex: true
       - name: Debugging
         run: |
           echo "Quarto version:"
