@@ -45,6 +45,8 @@ crossref:
       latex-env: snapproject
 format:
   html:
+    pandoc:
+      implicit-figures: false
     aria: true # requires quarto-dev / v1.8+
     toc: true
     filters:
@@ -82,6 +84,8 @@ format:
   #   css: _support/styles/epub.css
   #   cover-image: cover.png
   pdf:
+    pandoc:
+      implicit-figures: false
     lang: en
     dir: ltr
     # https://quarto.org/docs/reference/formats/pdf.html
