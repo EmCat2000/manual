@@ -39,15 +39,10 @@ in the middle part of the window. Blocks snap together (hence the name
 is near the tab of the one above it:
 
 ::: {#fig-snapping-blocks .evenly-spaced-images layout-ncol=2}
+![image7.png](assets/image7.png)\
 
-![image7.png](assets/image7.png) <!-- {width=2.24653in height=1.46944in} -->
-
-![image8.png](assets/image8.png) <!-- {width=2.20833in height=1.13889in} -->
-
-The white horizontal line is a signal that if you let go of the green
-block it will snap into the tab of the gold one.
+![image8.png](assets/image8.png)\
 :::
-<!-- TODO: Keep only this fig caption OR the sentence after.  -->
 
 The white horizontal line is a signal that if you let go of the green
 block it will snap into the tab of the gold one.
@@ -110,21 +105,20 @@ input.
 ::: {.evenly-spaced-images layout-ncol=4}
 In the sample script
 
-![image6.png](assets/image6.png) <!-- {width=1.47917in height=1.35417in} -->
+![image6.png](assets/image6.png)
 
 the `repeat` block has two inputs: the number 4 and the script
 
-![image11.png](assets/image11.png) <!-- {width=1.40625in height=0.48958in} -->
-:::
+![image11.png](assets/image11.png)
 
 C-shaped blocks can be put in a script in two ways. If you see a white
 line and let go, the block will be inserted into the script like any
 command block:
 
 ::: {.evenly-spaced-images layout-ncol=2}
-![image12.png](assets/image12.png) <!-- {width=1.47917in height=1.35417in} -->
+![image12.png](assets/image12.png)
 
-![image13.png](assets/image13.png) <!-- {width=1.40625in height=0.48958in} -->
+![image13.png](assets/image13.png)
 :::
 
 <!-- Note until images are cleaned up 12 and 14 were identical, 13 and 15 were identical. -->
@@ -133,22 +127,18 @@ But if you see an orange halo and let go, the block will *wrap* around
 the haloed blocks:
 
 ::: {.evenly-spaced-images layout-ncol=2}
+![image16.png](assets/image16.png)
 
-![image16.png](assets/image16.png) <!-- {width=1.47917in height=1.35417in} -->
-
-![image17.png](assets/image17.png) <!-- {width=1.40625in height=0.48958in} -->
-
+![image17.png](assets/image17.png)
 :::
 
 The halo will always extend from the cursor position to the bottom of
 the script:
 
 ::: {.evenly-spaced-images layout-ncol=2}
+![image18.png](assets/image18.png)
 
-![image18.png](assets/image18.png) <!-- {width=1.47917in height=1.35417in}-->
-
-![image19.png](assets/image19.png) <!-- {width=1.40625in height=0.48958in} -->
-
+![image19.png](assets/image19.png)
 :::
 
 If you want only some of those blocks, after wrapping you can grab the
@@ -160,12 +150,12 @@ will wrap around existing blocks in a script, and only if that C-shaped
 slot is empty before wrapping. (You can fill the other slots by dragging
 blocks into the desired slot.)
 
-![image24.png](assets/image24.png) <!-- {width=2.31111in height=1.36667in} -->
+![image24.png](assets/image24.png)
 
 ## Sprites and Parallelism {#sec-sprites-parallelism}
 
 Just below the stage is the “new sprite button\index{new sprite button}”
-![image25.png](assets/image25.png) <!-- {width=0.34028in height=0.24306in} -->. Click the button to add a new sprite to the stage. The new
+![image25.png](assets/image25.png){.image-inline}. Click the button to add a new sprite to the stage. The new
 sprite will appear in a random position on the stage, with a random
 color, but always facing to the right.
 
@@ -176,11 +166,9 @@ window. Try putting one of the following scripts in each sprite’s
 scripting area:
 
 ::: {.evenly-spaced-images layout-ncol=2}
+![image26.png](assets/image26.png)
 
-![image26.png](assets/image26.png) <!-- {width=1.55069in height=0.99375in} -->
-
-![image27.png](assets/image27.png) <!-- {width=1.54167in height=1.16667in} -->
-
+![image27.png](assets/image27.png)
 :::
 
 When you click the green flag, you should see one sprite rotate while
@@ -190,11 +178,12 @@ together. Parallelism\index{parallelism} can be seen with multiple
 scripts of a single sprite also. Try this example:
 
 ::: {.evenly-spaced-images layout-ncol=2}
+![image28.png](assets/image28.png)
 
-![image28.png](assets/image28.png) <!-- {width=1.72917in height=0.875in} -->
-
-![image29.png](assets/image29.png) <!-- {width=1.72917in height=0.89583in} -->
+![image29.png](assets/image29.png)
 :::
+
+When you click the green flag, the sprite should move back and forth
 
 When you press the space key, the sprite should move forever in a
 circle, because the move and turn blocks are run in parallel. (To stop

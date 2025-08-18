@@ -8,4 +8,4 @@ format:
     # pdf-engine-opt:
     classoption:
       - 11pt
-    mainfont: baskervillef
+    mainfont: baskerville
