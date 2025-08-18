@@ -20,7 +20,50 @@ The reference manual for the [Snap<em>!</em> programming language][snap]. ([GitH
 > update the content to match recent Snap<em>!</em> releases.
 
 ## Citing Snap! and the Snap! Manual
-Coming soon.
+
+To cite the _manual_ specifically:
+
+DOI: https://doi.org/10.5281/zenodo.16892852
+
+```
+Harvey, B., & Mönig, J. (2022). Snap! Reference Manual. Zenodo. https://doi.org/10.5281/zenodo.16892852
+```
+
+```bibtex
+@book{harvey_2022_16892853,
+  author       = {Harvey, Brian and
+                  Mönig, Jens},
+  title        = {Snap! Reference Manual},
+  publisher    = {Zenodo},
+  year         = 2022,
+  month        = aug,
+  doi          = {10.5281/zenodo.16892852},
+  url          = {https://doi.org/10.5281/zenodo.16892852},
+}
+```
+To cite Snap<em>!</em> in general, please use the following citation:
+
+DOI: https://doi.org/10.5281/zenodo.15460068
+
+```
+Mönig, J., & Harvey, B. (2025). Snap! (latest). Zenodo. https://doi.org/10.5281/zenodo.15460068
+```
+
+```bibtex
+@software{monig_2025_15460069,
+  author       = {Mönig, Jens and
+                  Harvey, Brian},
+  title        = {Snap!},
+  month        = may,
+  year         = 2025,
+  publisher    = {Zenodo},
+  version      = {latest},
+  doi          = {10.5281/zenodo.15460068},
+  url          = {https://doi.org/10.5281/zenodo.15460068},
+}
+```
+
+These DOI's always point to the latest version of the manual and Snap! software, respectively. You can visit Zenodo to cite a specific version if you need to.
 
 ## Authors
 Brian Harvey, Jens Mönig, Michael Ball, Jadge Hügle, Victoria Phelps, Mary Fries
@@ -89,8 +132,6 @@ This conversion script dumps content into `conversion/chapters/` and then copies
 ## Published Book
 
 The website is hosted on GitHub pages, compiled by the `quarto.yml` workflow.
-
-## Credits
 
 ## License
 
