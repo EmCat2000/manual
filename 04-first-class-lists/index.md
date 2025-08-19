@@ -36,7 +36,7 @@ that’s ﬁrst class, not an individual value. Don’t think, for example,
 that some lists are ﬁrst class, while others aren’t. In Snap*!*, lists
 are ﬁrst class, period.
 
-![image523.png](assets/image523.png){.image-2x} <!--  style="width:2.83958in;height:0.41597in" / -->
+![image523.png](assets/image523.png) <!--  style="width:2.83958in;height:0.41597in" / -->
 
 ##  The `list` Block
 
@@ -45,7 +45,7 @@ At the heart of providing first class lists is the ability to make an
 simultaneously giving it a name. The `list` reporter block \index{`list`
 block} does that.
 
-![image628.png](assets/image628.png) <!--  style="width:2.83958in;height:0.41597in" / -->
+![image628.png](assets/image628.png){.image-2x} <!--  style="width:2.83958in;height:0.41597in" / -->
 
 At the right end of the block are two left-and-right arrowheads
 \index{arrowheads}. Clicking on these changes the number of inputs to
@@ -171,7 +171,7 @@ this case, because the interior of the ring is a hexagon), rather than
 the value reported by that block. Here’s the difference:
 
 <!-- TODO: this image is squished in its origianl form. -->
-![image634.png](assets/image634.png){.image-2x}
+![image634.png](assets/image634.png)
 
 Evaluating the `=` block without a ring reports `true` or `false`; evaluating
 the block *with* a ring reports the block itself. This allows `keep` to
@@ -221,7 +221,7 @@ lists, the result is a new toplevel list whose items are the same
 \index{shallow copy of a list}. To make a deep copy of a list
 \index{deep copy of a list} (that is, one in which all the sublists,
 sublists of sublists, etc. are copied), use the list as input to the
-![image576.png](assets/image576.png) <!--  style="width:0.74306in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:id.png" / -->  block (one of the variants
+![image576.png](assets/image576.png){.image-2x} <!--  style="width:0.74306in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:id.png" / -->  block (one of the variants
 of the `sqrt of` block). This works because `id of`\index{`id of` block} is a [hyperblock](#hyperblocks).
 
 The third higher order block, `combine`\index{`combine` block}, computes a
@@ -524,7 +524,7 @@ always reporting a single Boolean result), `and` and `or` (because they
 don’t evaluate their second input at all if the first input determines
 the result), `join` (because it converts non-scalar (and other non-text)
 inputs to text string form), and `is a (type)` (because it applies to its
-input as a whole). Blocks whose inputs are “natively” lists, such as ![image193.png](assets/image193.png){.image-2x} <!--  style="width:0.88958in;height:0.2in" / --> and
+input as a whole). Blocks whose inputs are “natively” lists, such as ![image193.png](assets/image193.png){.image-2x .image-inline} <!--  style="width:0.88958in;height:0.2in" / --> and
 ![image621.png](assets/image621.png) <!--  style="width:1.02986in;height:0.18958in" --> , are never hyperblocks.
 
 ![image205.png](assets/image205.png){.image-inline} <!--  style="width:2.09917in;height:0.2475in" alt="Application Description automatically generated with low confidence" / --> The
@@ -545,7 +545,7 @@ in which each item is a list whose length is the number of inputs; item
 items of the inputs is included, so the length of the reported list is
 the product of the lengths of the inputs.
 
-![image622.png](assets/image622.png){.image-2x} <!--  style="width:5.23958in;height:1.67986in" alt="Graphical user interface, text, application Description automatically generated" / -->
+![image622.png](assets/image622.png) <!--  style="width:5.23958in;height:1.67986in" alt="Graphical user interface, text, application Description automatically generated" / -->
 
 ![image204.png](assets/image204.png){.image-inline} <!--  style="width:1.34in;height:0.25in" alt="Icon Description automatically generated" / -->  The `item of` block
 \index{`item of` block} has a special set of rules, designed to preserve
