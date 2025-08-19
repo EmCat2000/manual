@@ -1809,7 +1809,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Protip: <img src="assets/image33.png" class="img-fluid" alt="image33.png"> switches to the <em>previous</em> costume, wrapping like <code>next costume</code>.</p>
+<p>Protip: <img src="assets/image33.png" class="image-inline img-fluid" alt="Switch to costumer (() - 1)"> switches to the <em>previous</em> costume, wrapping like <code>next costume</code>.</p>
 </div>
 </div>
 <p>In addition to its costumes, a sprite can have <em>sounds;</em> the equivalent for sounds of the sprite’s wardrobe is called its <em>jukebox.</em><span></span> Sound files<span></span> can be imported in any format (WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish the task of playing sounds<span></span>. If you would like a script to continue running while the sound is playing, use the block <img src="assets/image39.png" class="img-fluid" alt="image39.png">. In contrast, you can use the block <img src="assets/image38.png" class="img-fluid" alt="image38.png"> to wait for the sound’s completion before continuing the rest of the script.</p>
@@ -1876,7 +1876,7 @@ Figure&nbsp;1.2
 </section>
 <section id="reporter-blocks-and-expressions" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="reporter-blocks-and-expressions"><span class="header-section-number">1.4</span> Reporter Blocks and Expressions</h2>
-<p>So far, we’ve used two kinds of blocks<span></span>: hat blocks and command blocks. Another kind is the <em>reporter</em> block,<span></span> which has an oval shape: <img src="assets/image66.png" class="img-fluid" alt="image66.png"> <!-- {width=0.72917in height=0.15625in} --> . It’s called a “reporter” because when it’s run, instead of carrying out an action, it reports a value that can be used as an input to another block. If you drag a <img src="assets/image65.png" class="img-fluid" alt="image65.png"> <!-- {width=1.47in height=0.52in} --> reporter into the scripting area by itself and click on it, the value it reports will appear in a speech balloon next to the block:</p>
+<p>So far, we’ve used two kinds of blocks<span></span>: hat blocks and command blocks. Another kind is the <em>reporter</em> block,<span></span> which has an oval shape: <img src="assets/image66.png" class="img-fluid" alt="image66.png"> <!-- {width=0.72917in height=0.15625in} --> . It’s called a “reporter” because when it’s run, instead of carrying out an action, it reports a value that can be used as an input to another block. If you drag a <img src="assets/image65.png" class="image-inline img-fluid" alt="image65.png"> <!-- {width=1.47in height=0.52in} --> reporter into the scripting area by itself and click on it, the value it reports will appear in a speech balloon next to the block:</p>
 <p>When you drag a reporter block over another block’s input slot, a white “halo<span></span>” appears around that input slot, analogous to the white line that appears when snapping command blocks together:</p>
 <p><img src="assets/image67.png" class="img-fluid" alt="image67.png"> <!-- {width=1.47in height=0.52in} --></p>
 <p>Don’t drop the input over a <em>red</em> halo: <img src="assets/image71.png" class="img-fluid" alt="image71.png"> <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / --></p>
@@ -1908,7 +1908,8 @@ Figure&nbsp;1.2
 <p><img src="assets/image90.png" class="img-fluid" alt="image90.png"> <!-- {width=4.20833in height=0.38542in} --></p>
 <p>The technical term for a true or false value is a “Boolean<span></span>” value; it has a capital B because it’s named after a person, George Boole<span></span>, who developed the mathematical theory of Boolean values. Don’t get confused; a hexagonal block is a <em>predicate,</em> but the value it reports is a <em>Boolean.</em></p>
 <p>Another quibble about vocabulary: Many programming languages reserve the name “procedure<span></span>” for Commands (that carry out an action) and use the name “function” for Reporters and Predicates. In this manual, a <em>procedure</em> is any computational capability, including those that report values and those that don’t. Commands, Reporters, and Predicates are all procedures. The words “a Procedure type” are shorthand for “Command type, Reporter type, or Predicate type.”</p>
-<p>If you want to put a <em>constant</em> Boolean<span></span> value in a hexagonal slot instead of a predicate-based expression, hover the mouse over the block and click on the control that appears: <img src="assets/image91.png" class="img-fluid" alt="image91.png"> <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> <img src="assets/image92.png" class="img-fluid" alt="image92.png"> <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / --></p>
+<p>If you want to put a <em>constant</em> Boolean<span></span> value in a hexagonal slot instead of a predicate-based expression, hover the mouse over the block and click on the control that appears:</p>
+<p><img src="assets/image91.png" class="image-inline img-fluid" alt="image91.png"> <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> <img src="assets/image92.png" class="image-inline img-fluid" alt="image92.png"> <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / --></p>
 </section>
 <section id="variables" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="variables"><span class="header-section-number">1.6</span> Variables</h2>
@@ -2000,42 +2001,42 @@ Figure&nbsp;1.2
 <p>Here are some of the primitive blocks that don’t exist in Scratch:</p>
 <p><img src="assets/image136.png" class="img-fluid" alt="image136.png"> reports<span></span><span></span>, a new costume consisting of everything that’s drawn on the stage by any sprite. Right-clicking the block in the scripting area gives the option to change it to <img src="assets/image135.png" class="img-fluid" alt="image135.png"> if vector logging is enabled. See <span class="quarto-unresolved-ref">?para-log-pen-vectors</span>.</p>
 <p><img src="assets/image137.png" class="image-inline img-fluid" alt="image137.png"> Print characters<span></span> in the given point size on the stage, at the sprite’s position and in its direction. The sprite moves to the end of the text. (That’s not always what you want, but you can save the sprite’s position before using it, and sometimes you need to know how big the text turned out to be, in turtle steps.) If the pen is down, the text will be underlined.</p>
-<p><img src="assets/image138.png" class="img-fluid" alt="image138.png"> Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)</p>
-<p><img src="assets/image139.png" class="img-fluid" alt="image139.png"> Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.)</p>
-<p><img src="assets/image142.png" class="img-fluid" alt="image142.png"> See <span class="quarto-unresolved-ref">?fig-generic-when</span>.</p>
-<p><img src="assets/image141.png" class="img-fluid" alt="image141.png"> See <a href="#sec-pause-all" class="quarto-xref"><span>Section 1.7.2</span></a>.</p>
-<p><img src="assets/image140.png" class="img-fluid" alt="image140.png"> Runs only this script until finished. In the Control palette even though it’s gray.</p>
-<p><img src="assets/image143.png" class="img-fluid" alt="image143.png"> <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> Reporter version of the <code>if/else</code> primitive command block<span></span> . Only one of the two branches is evaluated, depending on the value of the first input.</p>
-<p><img src="assets/image144.png" class="img-fluid" alt="image144.png"> <!--  style="width:1.83in;height:0.61in" alt="Macintosh HD:Users:bh:Desktop:pix:for.png" / --> Looping block like <code>repeat</code> but<span></span> with an index variable<span></span> .</p>
-<p><img src="assets/image145.png" class="img-fluid" alt="image145.png"> <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare local variables<span></span> in a script.<span></span></p>
-<p><img src="assets/image148.png" class="img-fluid" alt="image148.png"> See <a href="../09-the-outside-world/index.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
-<p><img src="assets/image146.png" class="img-fluid" alt="image146.png"> reports the value of a graphics effect<span></span>.</p>
-<p><img src="assets/image147.png" class="img-fluid" alt="image147.png"> Constant true<span></span> or false<span></span> value. See <span class="quarto-unresolved-ref">?sec-predicates-and-conditional-evaluation</span>.</p>
+<p><img src="assets/image138.png" class="image-inline img-fluid" alt="image138.png"> Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)</p>
+<p><img src="assets/image139.png" class="image-inline img-fluid" alt="image139.png"> Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.)</p>
+<p><img src="assets/image142.png" class="image-inline img-fluid" alt="image142.png"> See <span class="quarto-unresolved-ref">?fig-generic-when</span>.</p>
+<p><img src="assets/image141.png" class="image-inline img-fluid" alt="image141.png"> See <a href="#sec-pause-all" class="quarto-xref"><span>Section 1.7.2</span></a>.</p>
+<p><img src="assets/image140.png" class="image-inline img-fluid" alt="image140.png"> Runs only this script until finished. In the Control palette even though it’s gray.</p>
+<p><img src="assets/image143.png" class="image-inline img-fluid" alt="image143.png"> <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> Reporter version of the <code>if/else</code> primitive command block<span></span> . Only one of the two branches is evaluated, depending on the value of the first input.</p>
+<p><img src="assets/image144.png" class="image-inline img-fluid" alt="image144.png"> <!--  style="width:1.83in;height:0.61in" alt="Macintosh HD:Users:bh:Desktop:pix:for.png" / --> Looping block like <code>repeat</code> but<span></span> with an index variable<span></span> .</p>
+<p><img src="assets/image145.png" class="image-inline img-fluid" alt="image145.png"> <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare local variables<span></span> in a script.<span></span></p>
+<p><img src="assets/image148.png" class="image-inline img-fluid" alt="image148.png"> See <a href="../09-the-outside-world/index.html" class="quarto-xref"><span>Chapter 9</span></a>.</p>
+<p><img src="assets/image146.png" class="image-inline img-fluid" alt="image146.png"> reports the value of a graphics effect<span></span>.</p>
+<p><img src="assets/image147.png" class="image-inline img-fluid" alt="image147.png"> Constant true<span></span> or false<span></span> value. See <span class="quarto-unresolved-ref">?sec-predicates-and-conditional-evaluation</span>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/image149.png" class="img-fluid figure-img"></p>
+<p><img src="assets/image149.png" class="image-inline img-fluid figure-img"></p>
 <figcaption>image149.png</figcaption>
 </figure>
 </div>
-<p><img src="assets/image153.png" class="img-fluid" alt="image153.png"> Create a primitive using JavaScript<span></span>. (This block is disabled by default; the user must check “Javascript extensions” in the setting menu <em>each time</em> a project is loaded.)<span></span></p>
+<p><img src="assets/image153.png" class="image-inline img-fluid" alt="image153.png"> Create a primitive using JavaScript<span></span>. (This block is disabled by default; the user must check “Javascript extensions” in the setting menu <em>each time</em> a project is loaded.)<span></span></p>
 <!-- This needs 2 columns -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/image150.png" class="img-fluid figure-img"></p>
+<p><img src="assets/image150.png" class="image-inline img-fluid figure-img"></p>
 <figcaption>image150.png</figcaption>
 </figure>
 </div>
 <p>The <code>at</code> block<span></span> lets you examine the screen pixel <span></span> directly behind the rotation center of a sprite, the mouse, or an arbitrary (x,y) coordinate pair dropped onto the second menu slot. The first five items of the left menu let you examine the color visible at the position. (The “RGBA” option<span></span> reports a list.) The “sprites” option reports a list of all sprites, including this one, any point of which overlaps this sprite’s rotation center (behind or in front). This is a hyperblock with respect to its second input.</p>
 <!-- This needs 2 columns ??? -->
-<p><img src="assets/image154.png" class="img-fluid" alt="image154.png"> Checks the<span></span> data<span></span> type<span></span> of a value.</p>
+<p><img src="assets/image154.png" class="image-2x img-fluid" alt="image154.png"> Checks the<span></span> data<span></span> type<span></span> of a value.</p>
 <!-- These two need to be remade as text -->
-<p><img src="assets/image151.png" class="img-fluid" alt="image151.png"> <img src="assets/image152.png" class="img-fluid" alt="image152.png"></p>
+<p><img src="assets/image151.png" class="image-2x img-fluid" alt="image151.png"> <img src="assets/image152.png" class="image-2x img-fluid" alt="image152.png"></p>
 <!-- This needs 2 columns -->
 <div style="columns: 2; column-gap: 0.5em;">
-<p><img src="assets/image155.png" class="img-fluid" alt="image155.png"><span></span></p>
+<p><img src="assets/image155.png" class="image-2x img-fluid" alt="image155.png"><span></span></p>
 <p>Turn the<span></span> text into a list, using the second input as the delimiter between items. The default delimiter, indicated by the brown dot in the input slot, is a single space character. “Letter” puts each character of the text in its own list item. “Word” puts each word in an item. (<span></span> Words are separated by any number of consecutive space, tab, carriage return, or newline characters.) “Line” is a newline character<span></span> (0xa); “tab” is a tab character<span></span> (0x9); “cr” is a carriage return<span></span> (0xd). “Csv” <span></span> and “json”<span></span> split formatted text into lists of lists; see <a href="../04-first-class-lists/index.html#sec-csv" class="quarto-xref"><span>Section 4.5.1</span></a>. “Blocks” takes a script as the first input, reporting a list structure representing the structure of the script. See Chapter XI.</p>
 </div>
-<p><img src="assets/image170.png" class="img-fluid" alt="image170.png"> For lists, <span></span> reports true only if its two input values are the very same list, so changing an item in one of them is visible in the other. (For <code>=</code>, lists that look the same are the same.) For text strings, uses case-sensitive comparison, unlike <code>=</code>, which is case-independent.</p>
+<p><img src="assets/image170.png" class="image-inline img-fluid" alt="image170.png">{.image-2x} For lists, <span></span> reports true only if its two input values are the very same list, so changing an item in one of them is visible in the other. (For <code>=</code>, lists that look the same are the same.) For text strings, uses case-sensitive comparison, unlike <code>=</code>, which is case-independent.</p>
 <p><img src="assets/image171.png" class="img-fluid" alt="image171.png"> These <em>hidden</em> blocks can be found with the relabel option <span></span> of any dyadic arithmetic block. They’re hidden partly because writing them in <span class="snap">Snap</span> is a good, pretty easy programming exercise. Note: the two inputs to <code>atan2</code><span></span> are Δ<em>x</em> and Δ<em>y</em> in that order, because we measure angles clockwise from north. <code>max</code> /index{max block} and <code>min</code> /index{min block} are <em>variadic;</em> by clicking the arrowhead, you can provide additional inputs.</p>
 <p><img src="assets/image177.png" class="img-fluid" alt="image177.png"> <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated with medium confidence" / --> <img src="assets/image178.png" class="img-fluid" alt="image178.png"> <!--  style="width:0.63in;height:0.19in" alt="A picture containing text, monitor, screenshot Description automatically generated" / --> <img src="assets/image179.png" class="img-fluid" alt="image179.png"> <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated" / --> Similarly, these <span></span> hidden predicates can be found by relabeling the relational predicates.</p>
 <section id="metaprogramming-see-sec-ch11" class="level3" data-number="1.8.1">
