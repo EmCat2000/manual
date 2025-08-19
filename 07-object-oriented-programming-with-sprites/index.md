@@ -19,13 +19,15 @@ important. Our approach is therefore less restrictive than that of some
 other [OOP]{.mono} languages; we give objects easy access to each others’ data
 and methods.
 
-Technically, object oriented programming rests on three legs:
+Technically, object oriented programming rests on three legs: 
 
-1. *Message passing:*\index{message passing} There is a notation by which
-any object can send a message to another object.
+1. \index{message passing} *Message passing:* There is a notation by which
+any object can send a message to another object. 
 
-2. *Local state:*\index{local state} Each object can remember the important
-past history of the computation it has performed. (“Important” means that it need not
+2. \index{local state}
+
+*Local state:* Each object can remember the important past history of
+the computation it has performed. (“Important” means that it need not
 remember every message it has handled, but only the lasting effects of
 those messages that will affect later computation.)
 
@@ -36,13 +38,13 @@ we need a way to say that this new object is just like that old object
 except for a few differences, so that only those differences need be
 programmed explicitly.
 
-## First Class Sprites
+##  First Class Sprites
 
 Like Scratch, [Snap]{.snap} comes with things that are natural objects: its
 sprites\index{sprite}. Each sprite can own local variables; each
 sprite has its own scripts (methods). A Scratch animation is plainly a
 simulation of the interaction of characters in a play. There are two
-ways in which Scratch sprites are less versatile than the objects of an
+ways in which Scratch sprites are less versatile than the objects of an 
 [OOP]{.mono}language. First, Scratch message passing is weak in three respects:
 Messages can only be <code>broadcast</code>\index{broadcast block}, not addressed
 to an individual sprite; messages can’t take inputs; and methods can’t
@@ -92,7 +94,7 @@ copies any more. (As we’ll see, “copies” is the wrong word because the
 parent and the children *share* a lot of properties. That’s why we use
 the word “clones” to describe the children rather than “copies.”) These
 are *[temporary]{.mono}* clones\index{temporary clone}. They are automatically
-deleted when the user presses either the "`green flag`" or the "`red stop sign`". In Scratch 2.0 and later, all clones\index{clone temporary} are
+deleted when the user presses either the "\\`green flag\\`" or the "\\`red stop sign\\`". In Scratch 2.0 and later, all clones\index{clone temporary} are
 temporary.
 
 The other kind of situation is what happens when you want
@@ -121,25 +123,25 @@ updated to reflect the clone’s current costume, direction, and so on.)
 We have tried to anticipate your needs, as follows: When you make a
 clone in a script, using the ![image748.png](assets/image748.png) <!--  style="width:1.51389in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:pix:clone-block.png" / --> block, it is “born” temporary. But when you
 make a clone from the user interface, for example by right-clicking on a
-sprite and choosing "`cline`", it is born permanent. The reason this makes
+sprite and choosing "\\`cline\\`", it is born permanent. The reason this makes
 sense is that you don’t create 100 *kinds* of dogs automatically. Each
 kind has many different characteristics, programmed by hand. But when
 your project is running, it might create 100 rottweilers, and those will
 be identical unless you change them in the program.
 
 You can change a
-temporary sprite to permanent by right-clicking it and choosing "`edit.`"
-(It’s called "`edit`" rather than, say, “permanent” because it also shifts
+temporary sprite to permanent by right-clicking it and choosing "\\`edit.\\`"
+(It’s called "\\`edit\\`" rather than, say, “permanent” because it also shifts
 the scripting area to reflect that sprite, as if you’d pressed its
 button in the sprite corral.) You can change a permanent sprite to
-temporary by right-clicking it and choosing "`release.`" You can also
+temporary by right-clicking it and choosing "\\`release.\\`" You can also
 change the status of a clone in your program with ![image749.png](assets/image749.png) <!--  style="width:1.51389in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:set-my-temp.png" / --> with true or false as
 the second input.
 
 ##  Sending Messages to Sprites
 
 The messages that a sprite accepts are the blocks in its palettes,
-including both "`all sprites`" and "`this sprite only`" blocks. (For custom
+including both "\\`all sprites\\`" and "\\`this sprite only\\`" blocks. (For custom
 blocks, the corresponding methods are the scripts as seen in the Block
 Editor.)
 
@@ -183,7 +185,7 @@ it, and now we have the more straightforward primitives.
 
 Suppose you have a [Dog]{.mono} sprite
 with two clones CockerSpaniel and PitBull. In the [Dog]{.mono} sprite you define
-this method\index{method} ("`For this sprite only` block
+this method\index{method} ("\\`For this sprite only\\` block
 \index{block!sprite-local} ):
 
 ![image763.png](assets/image763.png) <!--  style="width:1.67361in;height:1.40208in" / -->
@@ -202,7 +204,7 @@ And here’s what a PitBull does:
 
 ![image765.png](assets/image765.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
-<code>Greet ( )</code> is defined in the [Dog]{.mono} sprite.
+<code>Greet ( )</code> is defined in the [Dog]{.mono} sprite. 
 If Fido is a particular cocker
 spaniel, and you ask Fido to <code>greet</code> someone, Fido inherits the <code>greet ( )</code>
 method from [Dog]{.mono}, but [Dog]{.mono} itself couldn’t actually run that method,
@@ -217,7 +219,7 @@ all share the same script.
 ##  Local State in Sprites: Variables and Attributes
 
 A sprite’s memory of its own past history takes two main forms. It has
-*variables,* created explicitly by the user with the "`Make a variable`"
+*variables,* created explicitly by the user with the "\\`Make a variable\\`"
 \index{variable} button; it also has *attributes,* the qualities every
 sprite has automatically, such as <code>position</code>, <code>direction</code>, and <code>pen color</code>.
 Each variable can be examined using its own orange oval block; there is
@@ -246,7 +248,7 @@ of adding dozens of reporters, we use a more uniform interface for
 attributes: The my block\index{my block}’s menu (in [Sensing]{.mono}; see page
 [78](#attrib.pnglist-of-attributes)) includes many of the attributes of
 a sprite. It serves as a general getter for those attributes, e.g., <code>my
-(\[anchor\])</code> to find the sprite, if any, to which this sprite is attached
+(anchor)</code> to find the sprite, if any, to which this sprite is attached
 in a nesting arrangement (see page
 [10](#nesting-sprites-anchors-and-parts)). Similarly, the same <code>set ( ) to ( )</code> block
 used to set variable values allows setting some sprite attributes.
@@ -295,7 +297,7 @@ Computing,* Gerald Peterson, Ed., IEEE Computer Society Press, 1987.\]
 
 There are three ways to make a child sprite. If you [control-click]{.mono} or
 [right-click]{.mono} on a sprite in the “sprite corral” at the bottom right
-corner of the window, you get a menu that includes "`clone`" as one of the
+corner of the window, you get a menu that includes "\\`clone\\`" as one of the
 choices. There is an <code>a new clone of ( )</code> block\index{a new clone of block}
 in the [Control]{.mono} palette that creates and reports a child sprite. And
 sprites have a “parent” attribute\index{parent attribute} that can be
@@ -314,17 +316,17 @@ getter block for a shared property, in the child’s palette, is displayed
 in a lighter color; separate properties of the child are displayed in
 the traditional colors.
 
-When a new clone is created, by default it shares only its methods,
-wardrobe, and jukebox with its parent. All other properties are copied
-to the clone, but not shared. (One exception is that a new *permanent*
-clone is given a random position. Another is that *temporary* clones
-share the scripts in their parent’s scripting area. A third is that
-sprite-local variables that the parent creates *after* cloning are
-shared with its children.) If the value of a shared property is
-changed in the parent, then the children see the new value. If the
-value of a shared property is changed in the *child*, then the sharing
-link is broken, and a new private version is created in that child.
-(This is the mechanism by which a child chooses not to share a property with its parent.) “Changed” in this context means using the
+When a new clone is created, by default it shares only its methods, 
+wardrobe, and jukebox with its parent. All other properties are copied 
+to the clone, but not shared. (One exception is that a new *permanent* 
+clone is given a random position. Another is that *temporary* clones 
+share the scripts in their parent’s scripting area. A third is that 
+sprite-local variables that the parent creates *after* cloning are 
+shared with its children.) If the value of a shared property is 
+changed in the parent, then the children see the new value. If the 
+value of a shared property is changed in the *child*, then the sharing 
+link is broken, and a new private version is created in that child. 
+(This is the mechanism by which a child chooses not to share a property with its parent.) “Changed” in this context means using the 
 <code>set ( ) to ( )</code> or <code>change ( ) by ( )</code> block for a variable, editing a block in the Block Editor, editing a costume or sound, or inserting, deleting, or reordering costumes or sounds. To change a property from unshared to shared, the child uses the <code>inherit</code> command block. The pulldown menu in the block lists all the things this sprite can inherit from its parent (which might be nothing, if this sprite has no parent) and is not already inheriting. But that would prevent <code>tell</code>ing a child to inherit, so if the <code>inherit</code> block\index{inherit block} is inside a <code>ring</code>, its pulldown menu includes all the things a child could inherit from this sprite. [Right-clicking]{.mono} on the scripting area of a permanent clone gives a menu option to share the entire collection of scripts from its parent, as a temporary clone does.
 
 The rules are full of details, but the basic idea is simple: Parents can
@@ -520,11 +522,11 @@ It’s the ![image804.png](assets/image804.png) <!--  style="width:0.95833in;hei
 determines the rearrangement of colors: green➔red, red➔green, and the
 other two unchanged. That <code>list</code> is inside another <code>list</code> because otherwise
 it would be selecting *rows* of the pixel array, and we want to select
-columns. We use pixels of costume current rather than costume apple
+columns. We use <code>(pixels) of costume (current)</code> rather than costume apple
 because the latter is always a red apple, so this little program would
 get stuck turning it green, instead of alternating colors.
 
-The stretch block
+The <code>stretch</code> block
 \index{stretch block} takes a costume as its first input, either by
 selecting a costume from the menu or by dropping a costume-valued
 expression such as ![image809.png](assets/image809.png) <!--  style="width:1.72222in;height:0.22917in" alt="Macintosh HD:Users:bh:Desktop:a-costume.png" / -->  onto it. The other two inputs are percents of the
@@ -533,7 +535,7 @@ mirror versions of costumes:
 
 ![image805.png](assets/image805.png) <!--  style="width:0.95833in;height:0.18056in" alt="Macintosh HD:Users:bh:Desktop:2-1-3-4.png" / -->
 
-The resulting costumes can be used with switch to costume and so on.
+The resulting costumes can be used with <code>switch to costume ( )</code> and so on.
 
 Finally, you can use pictures from your computer’s camera in your
 projects using these blocks:
@@ -541,28 +543,27 @@ projects using these blocks:
 
 
 Using the
-video on block\index{video on block} turns on the camera and displays
+<code>video (motion) on (myself)</code> block\index{video on block} turns on the camera and displays
 what it sees on the stage, regardless of the inputs given. The camera
 remains on until you click the red stop button, your program runs the
-stop all block, or you turn it off explicitly with the  ![image814.png](assets/image814.png) <!--  style="width:1.40278in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:mirror-video.png" / --> block. The video
-image on the stage is partly ghosted, to an extent determined by the ![image813.png](assets/image813.png) <!--  style="width:1.47222in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:Jump! script pic.png" / --> set
-video transparency block, whose input really is transparency and not
+<code>stop all</code> block, or you turn it off explicitly with the  ![image814.png](assets/image814.png) <!--  style="width:1.40278in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:mirror-video.png" / --> block. The video
+image on the stage is partly ghosted, to an extent determined by the ![image813.png](assets/image813.png) <!--  style="width:1.47222in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:Jump! script pic.png" / --> <code>set
+video transparency to ( )</code> block, whose input really is transparency and not
 opacity. (Small numbers make the video more visible.) By default, the
 video image is mirrored, like the selfie camera on your cell phone: When
 you raise your left hand, your image raises its right hand. You can
-control this
- mirroring with
+control this mirroring with
 the block.
 
 The
-video snap on block then takes a still picture from the camera, and
-trims it to fit on the selected sprite. (Video snap on stage means to
+<code>video snap on</code> block then takes a still picture from the camera, and
+trims it to fit on the selected sprite. (<code>Video snap on</code> stage means to
 use the entire stage-sized rectangle.) For example, here’s a camera
 snapshot trimmed to fit Alonzo:
 
 ![image815.png](assets/image815.png) <!--  style="width:1.20417in;height:1.6125in" / -->
 
- The
+The
 “Video Capture” project in the Examples collection repeatedly takes such
 trimmed snapshots and has the Alonzo sprite use the current snapshot as
 its costume, so it looks like this:
@@ -575,8 +576,8 @@ its costume, so it looks like this:
 actually taken with transparency set to 50, to make the background more
 visible for printing.) Because the sprite is always still in the place
 where the snapshot was taken, its costume exactly fits in with the rest
-of the full-stage video. If you were to add a move 100 steps block after
-the switch to costume, you’d see something like this:
+of the full-stage video. If you were to add a <code>move (100) steps</code> block after
+the <code>switch to costume ( )</code>, you’d see something like this:
 
 ![image817.png](assets/image817.png) <!--  style="width:2.66667in;height:2in" alt="Macintosh HD:Users:bh:Desktop:offset-video.png" / -->
 
@@ -590,13 +591,13 @@ What you *would* want to do is push the sprite around the stage:
 
 (Really these
 should be Jens’s picture; it’s his project. But he’s vacationing. ☺)
-Video motion compares two snapshots a moment apart, looking only at the
-part within the given trim (here myself, meaning the current sprite, not
+<code>Video (motion) on ( )</code> compares two snapshots a moment apart, looking only at the
+part within the given trim (here <code>myself</code>, meaning the current sprite, not
 the person looking into the camera), to detect a difference between
 them. It reports a number, measuring the number of pixels through which
-some part of the picture has moved. Video direction also compares two
+some part of the picture has moved. <code>Video (direction) on ( )</code> also compares two
 snapshots to detect motion, but what it reports is the direction (in the
-point in direction sense) of the motion. So the script above moves the
+<code>point in direction ( )</code> sense) of the motion. So the script above moves the
 sprite in the direction in which it’s being pushed, but only if a
 significant amount of motion is found; otherwise the sprite would jiggle
 around too much. And yes, you can run the second script without the
@@ -605,7 +606,7 @@ first to push a balloon around the stage.
 ### Media Computation with Sounds
 
 The starting point for computation with sound\index{sound} is the
-microphone block\index{microphone block}. It starts by recording a
+<code>microphone ( )</code> block\index{microphone block}. It starts by recording a
 brief burst of sound from your microphone\index{microphone}. (How
 brief? On my computer, 0.010667 seconds, but you’ll see shortly how to
 ﬁnd out or control the sample size on your computer.)
@@ -683,8 +684,8 @@ computer to find all the relevant frequencies? Yes, we can, using a
 mathematical technique called *Fourier analysis.* (Jean-Baptiste Joseph
 Fourier, 1768–1830, made many contributions to mathematics and physics,
 but is best known for working out the nature of periodic functions as a
-sum of sine waves.) Luckily we don’t have to do the math; the microphone
-block will do it for us, if we ask for microphone spectrum:
+sum of sine waves.) Luckily we don’t have to do the math; the <code>microphone ( )</code>
+block will do it for us, if we ask for <code>microphone (spectrum)</code>:
 
 ![image830.png](assets/image830.png) <!--  style="width:2.79514in;height:1.22222in" alt="Macintosh HD:Users:bh:Desktop:red-sine.png" / -->
 
@@ -703,21 +704,21 @@ rising and falling values are real; the frequencies that are multiples
 of the main note being sampled will have higher amplitude than other
 frequencies.
 
-Samples and spectrum are the two most detailed representations of a
-sound. But the microphone block has other, simpler options also:
+<code>Samples</code> and <code>spectrum</code> are the two most detailed representations of a
+sound. But the <code>microphone ( )</code> block has other, simpler options also:
 
-- volume: the instantaneous volume when the block is called
+- <code>volume</code>: the instantaneous volume when the block is called
 
-- note: the MIDI note number (as in play note) of the main note heard
+- <code>note</code>: the MIDI note number (as in play note) of the main note heard
 
-- frequency: the frequency in Hz of the main note heard
+- <code>frequency</code>: the frequency in Hz of the main note heard
 
-- sample rate: the number of samples being collected per second
+- <code>sample rate</code>: the number of samples being collected per second
 
-- resolution: the size
+- <code>resolution</code>: the size
 of the array in which data are collected (typically 512, must be a power
 of 2).
 
-The block for sounds that corresponds to new picture for pictures is ![image258.png](assets/image258.png) <!--  style="width:2.91667in;height:0.28125in" alt="Macintosh HD:Users:bh:Desktop:new-sound.png" / -->
+The block for sounds that corresponds to <code>new picture</code> for pictures is ![image258.png](assets/image258.png) <!--  style="width:2.91667in;height:0.28125in" alt="Macintosh HD:Users:bh:Desktop:new-sound.png" / -->
 \index{new sound block}. Its first input is a list of samples, and its second input specifies how
 many samples occupy one second.
