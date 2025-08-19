@@ -4,7 +4,7 @@
 
 Prior to version 3, Scratch\index{Scratch} block inputs came in two types
 \index{data type} : [Text-or-number]{.mono} type and [Number]{.mono} type. The former is
-indicated by a rectangular box, the latter by a rounded box: ![image654.png](assets/image654.png) <!--  style="width:1.375in;height:0.2125in" / -->. A third
+indicated by a rectangular box, the latter by a rounded box: ![image654.png](assets/image654.png){.image-inline} <!--  style="width:1.375in;height:0.2125in" / -->. A third
 Scratch type, [Boolean]{.mono} (true/false), can be used in certain [Control]{.mono}
 blocks with hexagonal slots.
 
@@ -19,12 +19,12 @@ In the Block Editor\index{Block Editor} input name dialog\index{input
 name dialog}, there is a right-facing arrowhead after the "`Input name`"
 option:
 
-![image692.png](assets/image692.png) <!--  style="width:5.17083in;height:4.13542in" / -->
+![image692.png](assets/image692.png{.image-2x} <!--  style="width:5.17083in;height:4.13542in" / -->
 
 Clicking that arrowhead opens the “long” input name dialog\index{long
 input name dialog} :
 
-![image657.png](assets/image657.png) <!--  style="width:5.17083in;height:4.13542in" / -->
+![image657.png](assets/image657.png){.image-2x} <!--  style="width:5.17083in;height:4.13542in" / -->
 
 There are twelve input type
 shapes\index{input-type shapes}, plus three mutually exclusive
@@ -167,15 +167,15 @@ text or "`code`"
 for monospace-font computer code.
 
  If the
-input type is something other than text, then clicking the ![image670.png](assets/image670.png) <!--  style="width:0.13056in;height:0.1375in" alt="Macintosh HD:Users:bh:Desktop:quarter-gear.png" / --> button will
+input type is something other than text, then clicking the ![image670.png](assets/image670.png){.image-inline} <!--  style="width:0.13056in;height:0.1375in" alt="Macintosh HD:Users:bh:Desktop:quarter-gear.png" / --> button will
 instead show this menu:
 
 ![image669.png](assets/image669.png) <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->
 
-As an example, we want to make this block: ![image671.png](assets/image671.png) <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->  The second input must be a
+As an example, we want to make this block: ![image671.png](assets/image671.png){.image-inline} <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->  The second input must be a
 read-only object menu:
 
-![image694.png](assets/image694.png) <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->
+![image694.png](assets/image694.png){.image-2x} <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->
 
 
 
@@ -259,7 +259,7 @@ complete list of such notations:
 ### Title Text and Symbols
 
 Some primitive blocks have
-symbols\index{icons in title text} as part of the block name: ![image687.png](assets/image687.png) <!--  style="width:1.21875in;height:0.23472in" / -->. Custom
+symbols\index{icons in title text} as part of the block name: ![image687.png](assets/image687.png){.image-inline} <!--  style="width:1.21875in;height:0.23472in" / -->. Custom
 blocks can use symbols too. In the Block Editor, click the plus sign in
 the prototype at the point where you want to insert the symbol. Then
 click the "`title text`" picture below the text box that’s expecting an
@@ -271,7 +271,7 @@ The important part to notice
 is the arrowhead that has appeared at the right end of the text box.
 Click it to see the menu shown here at the left.
 
-Choose one of the symbols. The result will have the symbol you want: ![image688.png](assets/image688.png) <!--  style="width:1.24444in;height:0.26667in" / --> The
+Choose one of the symbols. The result will have the symbol you want: ![image688.png](assets/image688.png){.image-inline} <!--  style="width:1.24444in;height:0.26667in" / --> The
 available symbols are, pretty much, the ones that are used in [Snap]{.snap}
 icons.
 
@@ -294,3 +294,4 @@ Note the last entry in the symbol menu: "`new line`"\index{new line
 character}. This can be used in a block with many inputs to control
 where the text continues on another line, instead of letting [Snap]{.snap}
 choose the line break itself.
+
