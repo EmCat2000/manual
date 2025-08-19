@@ -33,7 +33,7 @@ block (see @sec-map):\index{map block}
 
 ![image743.png](assets/image743.png)
 
-Here we are calling the Reporter <code>multiply by (10)<code> three times, once with
+Here we are calling the Reporter <code>multiply by (10)</code> three times, once with
 each item of the given list as its input, and collecting the results as
 a list. (The reported list will always be the same length as the input
 list.) Note that the <code>multiplication</code> block has two inputs, but here we
@@ -430,3 +430,4 @@ Scratch users, especially because Scratchers don’t think of the contents
 of a C-slot as an input at all.) This is why it makes sense that
 “C‑shaped” is on the fourth row of types in the long form input dialog,
 with other unevaluated types.
+
