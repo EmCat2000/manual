@@ -1643,6 +1643,7 @@ Figure&nbsp;1.1
 <p>The other blocks in our example script are <em>command</em> blocks <span></span>. Each command block<span></span> corresponds to an action that <span class="snap">Snap</span> already knows how to carry out. For example, the block <img src="../blocks/images/block_forward.png" class="image-inline img-fluid" alt="image9.png"> tells the sprite<span></span> (the arrowhead shape on the <em>stage</em><span></span> at the right end of the window) to move ten steps (a step is a very small unit of distance) in the direction in which the arrowhead is pointing. We’ll see shortly that there can be more than one sprite, and that each sprite has its own scripts. Also, a sprite doesn’t have to look like an arrowhead, but can have any picture as a <em>costume.</em><span></span> The shape of the move block is meant to remind you of a Lego™ brick; a script<span></span> is a stack of blocks<span></span>. (The word “block” denotes both the graphical shape on the screen and the procedure<span></span>, the action, that the block carries out.)</p>
 <p>The number 10 in the <code>move</code> block above is called an <em>input</em> to the block. By clicking on the white oval, you can type any number in place of the 10. The sample script on the previous page uses 100 as the input <span></span> value. We’ll see later that inputs can have non-oval shapes that accept values other than numbers. We’ll also see that you can compute input values, instead of typing a particular value into the oval. A block can have more than one input slot. For example, the <code>glide</code> block located about halfway down the Motion palette has three inputs.</p>
 <p>Most command blocks have that brick shape, but some, like the <code>repeat</code> block<span></span> in the sample script, are <em>C‑shaped.</em> Most C-shaped blocks<span></span><span></span> are found in the Control palette<span></span>. The slot inside the C shape is a special kind of input slot that accepts a <em>script</em> as the input.</p>
+<!-- TODO-mb: These images are a bit small on the web. -->
 <div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="4">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 25.0%;justify-content: flex-start;">
@@ -2103,7 +2104,13 @@ Two Different Length Of Blocks
 <p>The <img src="../blocks/images/block_reportTextAttribute.png" class="image-inline img-fluid" alt="length of text block"> name was changed to clarify it is different from <img src="../blocks/images/block_reportListAttribute.png" class="image-inline img-fluid" alt="length of text block"></p>
 </div>
 </div>
-<p><img src="assets/image308.png" class="img-fluid" alt="image308.png"> <!-- {width=1.05208in height=0.28125in} --></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="assets/image308.png" class="img-fluid figure-img"></p>
+<figcaption>image308.png</figcaption>
+</figure>
+</div>
+<p><code>+</code> and <code>×</code> are <em>variadic</em>: they take two or more inputs. If you drop a list on the arrowheads, the block name changes to <code>sum</code> or <code>product</code>.</p>
 <div class="evenly-spaced-images quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
