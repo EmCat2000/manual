@@ -28,7 +28,7 @@ invoked, a counter instance increases and reports its count variable.
 Each counter has its own local count:\index{objects, building
 explicitly}
 
-![image851.png](assets/image851.png) <!--  style="width:2.23958in;height:1.51042in" / -->
+![image851.png](assets/image851.png){.image-2x} <!--  style="width:2.23958in;height:1.51042in" / -->
 
 This example will repay careful study, because it isn’t obvious why each
 instance has a separate count. From the point of view of the <code>make a
@@ -70,7 +70,7 @@ version, calling the instance gives access to a method\index{method},
 which must then be called to finish the job. We can provide a block to
 do both procedure calls in one:
 
-![image854.png](assets/image854.png) <!--  style="width:4.01042in;height:0.70772in" / -->
+![image854.png](assets/image854.png){.image-2x} <!--  style="width:4.01042in;height:0.70772in" / -->
 
 The <code>ask</code> block\index{ask block} has two required inputs: an object and a
 message. It also accepts optional additional inputs, which [Snap]{.snap} puts
@@ -89,7 +89,7 @@ the method.
 ## Inheritance via Delegation
 
 So, our objects now have local state variables and message passing. What
-about inheritance\index{inheritance} ? We can provide that capability
+about inheritance\index{inheritance}? We can provide that capability
 using the technique of *delegation*\index{delegation}. Each instance
 of the child class\index{child class} contains an instance of the
 parent class\index{parent class}, and simply passes on the messages it
@@ -183,7 +183,7 @@ send that object a <var>clone</var> message.
 Every
 object is created with predefined methods for <code>set, method, delete-var,
 delete-method, and clone</code>. It has one predefined variable, <var>parent</var>.
-Objects without a parent are created by calling new object:
+Objects without a parent are created by calling <code>new object</code>:
 
 ![image865.png](assets/image865.png) <!--  style="width:1.57292in;height:0.6875in" / -->
 
@@ -194,19 +194,20 @@ methods and one for Reporter methods:
 
 ![image866.png](assets/image866.png) <!--  style="width:1.57292in;height:0.6875in" / -->
 
-(Remember that the “Input list:” variant of the run and call blocks is
+(Remember that the <code>“Input list:”</code> variant of the <code>run</code> and <code>call</code> blocks is
 made by dragging the input expression over the arrowheads rather than
 over the input slot.)
 
 The script below demonstrates how this prototyping system can be used to
-make counters. We start with one prototype counter, called counter1. We
-count this counter up a few times, then create a child counter2 and give
-it its own count variable, but *not* its own total variable. The next
-method always sets counter1’s total variable, which therefore keeps
-count of the total number of times that *any* counter is incremented.
+make counters. We start with one prototype <var>counter</var>, called <var>counter1</var>. We
+count this counter up a few times, then create a child <var>>counter2</var> and give
+it its own <var>count</var> variable, but *not* its own total variable. The next
+method always sets <var>counter1’s</var> total variable, which therefore keeps
+<var>count</var> of the total number of times that *any* <var>counter</var> is incremented.
 Running this script should \[say\] and (think) the following lists:
 
 \[1 1\] \[2 2\] \[3 3\] \[4 4\] (1 5) (2 6) (3 7) \[5 8\] \[6 9\] \[7 10\] \[8 11\]
 
 ![image870.png](assets/image870.png) <!--  style="width:4.20833in;height:4.39583in" / -->
+
 
