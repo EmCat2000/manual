@@ -229,7 +229,7 @@ costume.) The Turtle costume\index{Turtle costume} is the only one that
 changes color to match a change in the sprite’s pen color.
 
 ::: {.callout-tip}
-Protip: ![image33.png](assets/image33.png) switches to the *previous* costume, wrapping like `next costume`.
+Protip: ![Switch to costumer (() - 1)](assets/image33.png){.image-inline} switches to the *previous* costume, wrapping like `next costume`.
 :::
 
 In addition to its costumes, a sprite can have *sounds;* the equivalent for
@@ -342,7 +342,7 @@ far, we’ve used two kinds of blocks\index{block!reporter}: hat blocks
 and command blocks. Another kind is the *reporter* block,\index{Reporter
 block} which has an oval shape: ![image66.png](assets/image66.png) <!-- {width=0.72917in height=0.15625in} --> . It’s called a “reporter” because
 when it’s run, instead of carrying out an action, it reports a value
-that can be used as an input to another block. If you drag a ![image65.png](assets/image65.png) <!-- {width=1.47in height=0.52in} --> reporter
+that can be used as an input to another block. If you drag a ![image65.png](assets/image65.png){.image-inline} <!-- {width=1.47in height=0.52in} --> reporter
 into the scripting area by itself and click on it, the value it reports
 will appear in a speech balloon next to the block:
 
@@ -439,7 +439,9 @@ shorthand for “Command type, Reporter type, or Predicate type.”
 If you want to put
 a *constant* Boolean\index{Boolean constant} value in a hexagonal slot
 instead of a predicate-based expression, hover the mouse over the block
-and click on the control that appears: ![image91.png](assets/image91.png) <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> ![image92.png](assets/image92.png) <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / -->
+and click on the control that appears: 
+
+![image91.png](assets/image91.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> ![image92.png](assets/image92.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / -->
 
 ## Variables
 
@@ -757,46 +759,46 @@ sprite’s position before using it, and sometimes you need to know how
 big the text turned out to be, in turtle steps.) If the pen is down, the
 text will be underlined.
 
-![image138.png](assets/image138.png)
+![image138.png](assets/image138.png){.image-inline}
 Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)
 
-![image139.png](assets/image139.png)
+![image139.png](assets/image139.png){.image-inline}
 Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.)
 
-![image142.png](assets/image142.png) See @fig-generic-when.
+![image142.png](assets/image142.png){.image-inline} See @fig-generic-when.
 
-![image141.png](assets/image141.png) See @sec-pause-all.
+![image141.png](assets/image141.png){.image-inline} See @sec-pause-all.
 
-![image140.png](assets/image140.png) Runs only this script until finished. In the Control palette even though it’s gray.
+![image140.png](assets/image140.png){.image-inline} Runs only this script until finished. In the Control palette even though it’s gray.
 
-![image143.png](assets/image143.png) <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> Reporter
+![image143.png](assets/image143.png){.image-inline} <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> Reporter
 version of the `if/else` primitive command block\index{if else reporter
 block} . Only one of the two branches is evaluated, depending on the
 value of the first input.
 
-![image144.png](assets/image144.png) <!--  style="width:1.83in;height:0.61in" alt="Macintosh HD:Users:bh:Desktop:pix:for.png" / --> Looping block like
+![image144.png](assets/image144.png){.image-inline} <!--  style="width:1.83in;height:0.61in" alt="Macintosh HD:Users:bh:Desktop:pix:for.png" / --> Looping block like
 `repeat` but\index{for block} with an index variable\index{index
 variable} .
 
-![image145.png](assets/image145.png) <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare
+![image145.png](assets/image145.png){.image-inline} <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare
 local variables\index{local variables} in a script.\index{script
 variables block}
 
-![image148.png](assets/image148.png) See @sec-ch09.
+![image148.png](assets/image148.png){.image-inline} See @sec-ch09.
 
-![image146.png](assets/image146.png) reports the value of a graphics effect\index{graphics effect}.
+![image146.png](assets/image146.png){.image-inline} reports the value of a graphics effect\index{graphics effect}.
 
-![image147.png](assets/image147.png) Constant true\index{true block} or false\index{false block} value. See @sec-predicates-and-conditional-evaluation.
+![image147.png](assets/image147.png){.image-inline} Constant true\index{true block} or false\index{false block} value. See @sec-predicates-and-conditional-evaluation.
 
-![image149.png](assets/image149.png)
+![image149.png](assets/image149.png){.image-inline}
 
-![image153.png](assets/image153.png)
+![image153.png](assets/image153.png){.image-inline}
 Create a primitive using JavaScript\index{JavaScript}. (This block is
 disabled by default; the user must check “Javascript extensions” in the
 setting menu *each time* a project is loaded.)\index{pen down? block}
 
 <!-- This needs 2 columns -->
-![image150.png](assets/image150.png)
+![image150.png](assets/image150.png){.image-inline}
 
 The `at` block\index{at block} lets you examine the screen pixel
 \index{screen pixel} directly behind the rotation center of a sprite,
@@ -809,16 +811,16 @@ center (behind or in front). This is a hyperblock with respect to its
 second input.
 
 <!-- This needs 2 columns ??? -->
-![image154.png](assets/image154.png)  Checks the\index{is
+![image154.png](assets/image154.png){.image-2x}  Checks the\index{is
 \_ a \_ ? block} data\index{stage blocks} type\index{type} of a value.
 
 <!-- These two need to be remade as text -->
-![image151.png](assets/image151.png)
-![image152.png](assets/image152.png)
+![image151.png](assets/image151.png){.image-2x}
+![image152.png](assets/image152.png){.image-2x}
 
 <!-- This needs 2 columns -->
 ::: {style="columns: 2; column-gap: 0.5em;"}
-![image155.png](assets/image155.png)\index{set flag block}
+![image155.png](assets/image155.png){.image-2x}\index{set flag block}
 
 Turn the\index{split block} text into a list,
 using the second input as the delimiter between items. The default
@@ -835,7 +837,7 @@ takes a script as the first input, reporting a list structure
 representing the structure of the script. See Chapter XI.
 :::
 
-![image170.png](assets/image170.png) For lists,
+![image170.png](assets/image170.png){.image-inline}{.image-2x} For lists,
 \index{identical to} reports true only if its two input values are the
 very same list, so changing an item in one of them is visible in the
 other. (For `=`, lists that look the same are the same.) For text strings,
@@ -1737,4 +1739,5 @@ documented separately at
 <http://emu-online.de/ProgrammingWithSciSnap.pdf> and
 <https://maketolearn.org/creating-art-animations-and-music/>
 respectively.
+
 
