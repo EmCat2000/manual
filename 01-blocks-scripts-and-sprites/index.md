@@ -24,7 +24,7 @@ A [Snap]{.snap} program\index{"Snap! program"} consists of one or more
 *scripts,* each of which is made of *blocks.* Here’s a typical script
 \index{script} :
 
-![image6.png](assets/image6.png){#fig-draw-square} <!-- {width=1.47917in height=1.35417in} -->
+![image6.png](assets/image6.png){#fig-draw-square}
 
 The five blocks\index{block} that make up this script have three different
 colors, corresponding to three of the eight *palettes* in which blocks
@@ -402,7 +402,7 @@ wouldn’t say ![image84.png](assets/image84.png), although (as you can see from
 you do it if you really want. Instead, you normally use predicates in
 special hexagonal input slots like this one:
 
-![image86.png](../blocks/images/block_doIf.png){.image-2x}
+![image86.png](../blocks/images/block_doIf.png){.image-4x}
 
 The C-shaped if block\index{if block} runs its input script if (and only
 if) the expression in its hexagonal input reports true.
@@ -798,7 +798,7 @@ Create a primitive using JavaScript\index{JavaScript}. (This block is
 disabled by default; the user must check “Javascript extensions” in the
 setting menu *each time* a project is loaded.)\index{pen down? block}
 
-<!-- This needs 2 columns -->
+::: {.evenly-spaced-images layout-ncol=2}
 ![image150.png](assets/image150.png){.image-inline}
 
 The `at` block\index{at block} lets you examine the screen pixel
@@ -810,18 +810,19 @@ reports a list.) The “sprites” option reports a list of all sprites,
 including this one, any point of which overlaps this sprite’s rotation
 center (behind or in front). This is a hyperblock with respect to its
 second input.
+:::
 
 <!-- This needs 2 columns ??? -->
-![image154.png](assets/image154.png){.image-2x}  Checks the\index{is
-\_ a \_ ? block} data\index{stage blocks} type\index{type} of a value.
+![image154.png](assets/image154.png){.image-4x}
+
+Checks the\index{is-a-block@`is \_ a \_ ?` block} data\index{stage blocks} type\index{type} of a value.
 
 <!-- These two need to be remade as text -->
-![image151.png](assets/image151.png){.image-2x}
-![image152.png](assets/image152.png){.image-2x}
+![image151.png](assets/image151.png){.image-4x}
+![image152.png](assets/image152.png){.image-4x}
 
-<!-- This needs 2 columns -->
-::: {style="columns: 2; column-gap: 0.5em;"}
-![image155.png](assets/image155.png){.image-2x}\index{set flag block}
+::: {layout-ncol=2}
+![image155.png](assets/image155.png){.image-4x}\index{set flag block}
 
 Turn the\index{split block} text into a list,
 using the second input as the delimiter between items. The default
@@ -838,7 +839,7 @@ takes a script as the first input, reporting a list structure
 representing the structure of the script. See Chapter XI.
 :::
 
-![image170.png](assets/image170.png){.image-inline}{.image-2x} For lists,
+![image170.png](assets/image170.png){.image-inline} For lists,
 \index{identical to} reports true only if its two input values are the
 very same list, so changing an item in one of them is visible in the
 other. (For `=`, lists that look the same are the same.) For text strings,
@@ -852,11 +853,9 @@ are Δ*x* and Δ*y* in that order, because we measure angles clockwise
 from north. `max` /index{max block} and `min` /index{min block} are *variadic;* by clicking the arrowhead, you
 can provide additional inputs.
 
-![image177.png](assets/image177.png) <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated with medium confidence" / -->
-![image178.png](assets/image178.png) <!--  style="width:0.63in;height:0.19in" alt="A picture containing text, monitor, screenshot Description automatically generated" / -->
-![image179.png](assets/image179.png) <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated" / -->
+![image177.png](assets/image177.png){.image-inline} ![image178.png](assets/image178.png){.image-inline} ![image179.png](assets/image179.png){.image-inline}
 
-Similarly, these\index{*less-than-or-equal@\texttt{≤} block} hidden predicates can be found by relabeling the relational predicates.
+Similarly, these\index{*less-than-or-equal@`≤` block} hidden predicates can be found by relabeling the relational predicates.
 
 ### Metaprogramming (see @sec-ch11)
 
@@ -864,39 +863,41 @@ Similarly, these\index{*less-than-or-equal@\texttt{≤} block} hidden predicates
 
 These blocks support *metaprogramming,* which means manipulating blocks
 and scripts as data. This is not the same as manipulating procedures
-(see Chapter VI. ), which are what the blocks *mean;* in metaprogramming
+(see @sec-ch06), which are what the blocks *mean;* in metaprogramming
 the actual blocks, what you see on the screen, are the data. This
 capability is new in version 8.0.
 
+### First class list blocks (see @sec-ch04):
 
-### First class list blocks (see Chapter IV, page[46](#first-class-lists)):
-
-<!-- TODO: welp. this needs to be rena -->
+<!-- TODO: welp. this needs to be remade -->
 ![image173.png](assets/image173.png)
 
 `Numbers from`\index{numbers from block} will
 count up or down.
 
-![image224.png](assets/image224.png){.image-inline}  ![image225.png](assets/image225.png){.image-inline}
+![image224.png](assets/image224.png){.image-inline} ![image225.png](assets/image225.png){.image-inline}
 report\index{position block} the sprite or mouse position as a two-item
 vector (x,y).
 
-**First class procedure blocks (see Chapter VI, page[65](#procedures-as-data)):**
+**First class procedure blocks (see @sec-ch06):**
  ![image226.png](assets/image226.png)
 
-**First class continuation blocks (see Chapter X, page[93](#continuations)):**
- ![image227.png](assets/image227.png) <!-- {width=0.72in height=0.2in} -->
+**First class continuation blocks (see @sec-ch10):**
+ ![image227.png](assets/image227.png)
 
-**First class sprite, costume, and sound blocks (see Chapter VII, page[73](#object-oriented-programming-with-sprites)):**
+**First class sprite, costume, and sound blocks (see @sec-ch07):**
 
- ![image228.png](assets/image228.png) <!-- {width=0.72in height=0.2in} -->
+ ![image228.png](assets/image228.png)
 
- ![image229.png](assets/image229.png) <!-- {width=0.72in height=0.2in} --> Object is a hyperblock.
+ ![image229.png](assets/image229.png)
+
+ Object is a hyperblock.
 
 **Scenes:**
 
-![image280.png](assets/image280.png){.image-inline} <!-- {width=2.38in height=1.32in} --> The
-major new feature of version 7.0 is *scenes:*\index{scenes} A project can include
+![image280.png](assets/image280.png){.image-2x}
+
+The major new feature of version 7.0 is *scenes:*\index{scenes} A project can include
 within it sub-projects, called scenes, each with its own stage, sprites,
 scripts, and so on. This block makes another scene active, replacing the
 current one.
@@ -906,11 +907,11 @@ no variables. But the old scene can send a message to the new one, to
 start it running, with optional payload as in broadcast\index{broadcast
 block} (See @sec-broadcast).
 
-![image282.png](assets/image282.png){.image-2x}
+![image282.png](assets/image282.png){.image-4x}
 
 In particular, you can say
 
-![image281.png](assets/image281.png){.image-2x}
+![image281.png](assets/image281.png){.image-4x}
 
 if the new scene expects to be started with a green flag signal.
 
@@ -919,7 +920,7 @@ These accept two-item (x,y)\index{points as inputs} lists
 \index{two-item (x,y) lists} as input, and have extended menus (also
 including other sprites):\index{to block}
 
-![image283.png](assets/image283.png) <!-- {width=0.72in height=0.2in} -->
+![image283.png](assets/image283.png)
 
 “Center” means the center of the stage\index{center of the stage}, the
 point at (0,0). “Direction” is in the point in direction sense, the
@@ -928,14 +929,16 @@ the mouse, or the center. “Ray length” is the distance from the center
 of this sprite to the nearest point on the other sprite, in the current
 direction.
 
-![image284.png](assets/image284.png){.image-2x}{.image-inline} <!-- {width=0.72in height=0.2in} --> The `stop` block\index{stop block} has two extra menu choices. `Stop this block` is used inside the definition of a custom block to stop just this
+![image284.png](assets/image284.png){.image-4x}
+The `stop` block\index{stop block} has two extra menu choices. `Stop this block` is used inside the definition of a custom block to stop just this
 invocation of this custom block and continue the script that called it.
 `Stop all` but this script is good at the end of a game to stop all the
 game pieces from moving around, but keep running this script to provide
 the user’s final score. The last two menu choices add a tab at the
 bottom of the block because the current script can continue after it.
 
-![image285.png](assets/image285.png){.image-inline} <!-- {width=0.72in height=0.2in} --> The new “pen trails” option is true if the sprite is touching any drawn
+![image285.png](assets/image285.png){.image-2x}
+The new “pen trails” option is true if the sprite is touching any drawn
 or stamped ink on the stage. Also, `touching`\index{touching block} will
 not detect hidden sprites, but a hidden sprite can use it to detect
 visible sprites.
@@ -944,18 +947,22 @@ visible sprites.
 \index{video block} has a snap option\index{snap option} that takes a
 snapshot and reports it as a costume. It is hyperized with respect to its second input.
 
-![image304.png](assets/image304.png){.image-inline} <!--  style="width:1.05972in;height:0.27986in" alt="Icon Description automatically generated" / -->  The “neg” option\index{neg option} is a monadic\index{of block
+:::{.evenly-spaced-images layout-ncol=2}
+![image306.png](assets/image306.png){.image-inline}
+
+![image304.png](assets/image304.png){.image-inline} The “neg” option\index{neg option} is a monadic\index{of block
 (operators)}\index{length of text block} negation operator
-\index{negation operator}, equivalent to ![image306.png](assets/image306.png){.image-inline}. “lg” is log<sub>2</sub>.
+\index{negation operator}, equivalent to “lg” is log<sub>2</sub>.
 “id” is the identity function, which reports its input. “sign” reports 1
 for positive input, 0 for zero input, or -1 for negative input.
 \index{set background block}
+:::
 
-::: {.callout-tip}
-## Two Different Length Of Blocks
+<!-- ::: {.callout-tip} -->
+<!-- ## Two Different Length Of Blocks -->
 
 The ![length of text block](../blocks/images/block_reportTextAttribute.png){.image-inline} name was changed to clarify it is different from ![length of text block](../blocks/images/block_reportListAttribute.png){.image-inline}
-:::
+<!-- ::: -->
 
 ![image308.png](assets/image308.png)
 
@@ -980,7 +987,7 @@ Extended broadcast\index{broadcast block} : Click the right arrowhead to direct 
 :::
 
 ::: {.evenly-spaced-images layout-ncol=2}
-![image311.png](assets/image311.png){.image-2x}
+![image311.png](assets/image311.png){.image-4x}
 
 Extended `when I receive`\index{when I receive block}: Click the right
 arrowhead to expose a script variable (click on it to change its name,
@@ -995,14 +1002,14 @@ broadcast, or to a two-item list containing the message and the payload.
 ![image355.png](assets/image355.png){.image-2x}
 
 If the input is set to “any key,” then a right arrowhead appears:
-![image357.png](assets/image357.png){.image-inline} and if you click it,
+![image357.png](assets/image357.png){.image-inline-tall} and if you click it,
 a script variable key is created whose value is the key that was
 pressed. (If the key is one that’ represented in the input menu by a
 word or phrase, e.g., “enter” or “up arrow,” then the value of key
 will be that word or phrase, *except for* the space character, which
 is represented as itself in key.)
 
-![image356.png](assets/image356.png){.image-2x} <!--  style="width:2.25in;height:0.41944in"   alt="Website Description automatically generated with medium confidence" -->
+![image356.png](assets/image356.png){.image-4x} <!--  style="width:2.25in;height:0.41944in"   alt="Website Description automatically generated with medium confidence" -->
 
 The RGB(A)\index{set pen block} option accepts a single number, which
 is a grayscale value 0-255; a two-number list, grayscale plus opacity
@@ -1024,7 +1031,7 @@ library.
 ![image362.png](assets/image362.png)
 
 ::: {.evenly-spaced-images layout-ncol=2}
-![image363.png](assets/image363.png){.image-2x}
+![image363.png](assets/image363.png){.image-4x}
 
 The `of` block\index{of block (sensing)} has an extended menu of
 attributes of a sprite. Position reports an (x,y) vector. Size reports
@@ -1074,7 +1081,7 @@ needs.
 The libraries and their contents may change, but as of this writing the
 list library\index{list library} has these blocks:
 
-![image387.png](assets/image387.png){.image-2x} <!-- {width=1.84861in height=2.49236in} -->
+![image387.png](assets/image387.png){.image-4x} <!-- {width=1.84861in height=2.49236in} -->
 
 (The lightning bolt (⚡️)\index{*lightning-bolt@⚡️ (lightning bolt)} before the name in several of these
 blocks means that they use compiled HOFs or JavaScript primitives to achieve
@@ -1232,7 +1239,7 @@ Lisp/Scheme.
 
 The pixels library\index{pixels library} has one block:
 
-![image395.png](assets/image395.png{.image-2x} <!-- {width=0.77917in height=0.62986in} -->
+![image395.png](assets/image395.png{.image-4x} <!-- {width=0.77917in height=0.62986in} -->
 
 Costumes are first class data
 in [Snap]{.snap}. Most of the processing of costume data is done by primitive
@@ -1325,7 +1332,7 @@ reports the color currently in use by the pen. The `from color` block
 \index{from color block} reports names or numbers associated with a
 color:
 
-![image411.png](assets/image411.png){.image-2x} <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / -->
+![image411.png](assets/image411.png){.image-4x} <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / -->
 
 Colors can be created from
 other colors:\index{mix colors block}
@@ -1448,7 +1455,7 @@ The text costumes library\index{text costume library} has only two
 blocks:
 
  ![image446.png](assets/image446.png) <!--  style="width:1.92in;height:0.45078in" alt="Macintosh HD:Users:bh:Desktop:textcostume.png" / -->
- ![image447.png](assets/image447.png){.image-2x} <!-- {width=3.25972in height=0.18958in} -->
+ ![image447.png](assets/image447.png){.image-4x} <!-- {width=3.25972in height=0.18958in} -->
 
 `Costume from text`
 reports a costume\index{costume from text block} that can be used with

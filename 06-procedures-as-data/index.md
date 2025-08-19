@@ -63,7 +63,7 @@ filling}, then the empty slots are filled from left to right with the
 given input values. If <code>call</code> is given exactly one input, then *every*
 empty input slot of the called block is filled with the same value:
 
-![image699.png](assets/image699.png){.image-2x} <!--  style="width:2.72917in;height:0.31806in" / -->
+![image699.png](assets/image699.png){.image-4x} <!--  style="width:2.72917in;height:0.31806in" / -->
 
 If the number of inputs provided is neither one nor the number of empty
 slots, then there is no automatic filling of empty slots. (Instead you
@@ -430,5 +430,3 @@ Scratch users, especially because Scratchers don’t think of the contents
 of a C-slot as an input at all.) This is why it makes sense that
 “C‑shaped” is on the fourth row of types in the long form input dialog,
 with other unevaluated types.
-
-

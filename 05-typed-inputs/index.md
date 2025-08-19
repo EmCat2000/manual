@@ -19,12 +19,12 @@ In the Block Editor\index{Block Editor} input name dialog\index{input
 name dialog}, there is a right-facing arrowhead after the "`Input name`"
 option:
 
-![image692.png](assets/image692.png{.image-2x} <!--  style="width:5.17083in;height:4.13542in" / -->
+![image692.png](assets/image692.png{.image-4x} <!--  style="width:5.17083in;height:4.13542in" / -->
 
 Clicking that arrowhead opens the “long” input name dialog\index{long
 input name dialog} :
 
-![image657.png](assets/image657.png){.image-2x} <!--  style="width:5.17083in;height:4.13542in" / -->
+![image657.png](assets/image657.png){.image-4x} <!--  style="width:5.17083in;height:4.13542in" / -->
 
 There are twelve input type
 shapes\index{input-type shapes}, plus three mutually exclusive
@@ -175,7 +175,7 @@ instead show this menu:
 As an example, we want to make this block: ![image671.png](assets/image671.png){.image-inline} <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->  The second input must be a
 read-only object menu:
 
-![image694.png](assets/image694.png){.image-2x} <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->
+![image694.png](assets/image694.png){.image-4x} <!--  style="width:0.60417in;height:0.31944in" alt="Macintosh HD:Users:bh:Desktop:little-options.png" / -->
 
 
 
@@ -294,4 +294,3 @@ Note the last entry in the symbol menu: "`new line`"\index{new line
 character}. This can be used in a block with many inputs to control
 where the text continues on another line, instead of letting [Snap]{.snap}
 choose the line break itself.
-

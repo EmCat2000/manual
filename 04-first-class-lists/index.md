@@ -45,7 +45,7 @@ At the heart of providing first class lists is the ability to make an
 simultaneously giving it a name. The `list` reporter block \index{`list`
 block} does that.
 
-![image628.png](assets/image628.png){.image-2x} <!--  style="width:2.83958in;height:0.41597in" / -->
+![image628.png](assets/image628.png){.image-4x} <!--  style="width:2.83958in;height:0.41597in" / -->
 
 At the right end of the block are two left-and-right arrowheads
 \index{arrowheads}. Clicking on these changes the number of inputs to
@@ -94,7 +94,7 @@ There are two ways to create a list inside a program. Scratch
 style\index{imperative programming style}, which is based on a set of
 command blocks that modify a list:
 
-![image631.png](assets/image631.png){.image-2x} <!--  style="width:5.88889in;height:1.04861in" / -->
+![image631.png](assets/image631.png){.image-4x} <!--  style="width:5.88889in;height:1.04861in" / -->
 
 As an example, here are two blocks that take a list of numbers as input,
 and report a new list containing only the even numbers from the original
@@ -122,7 +122,7 @@ programming style} is sometimes a simpler and more effective technique,
 especially when dealing with recursively defined data structures. It
 uses reporter blocks, not command blocks, to build up a list value:
 
-![image633.png](assets/image633.png){.image-2x} <!--  style="width:5.88889in;height:1.04861in" / -->
+![image633.png](assets/image633.png){.image-4x} <!--  style="width:5.88889in;height:1.04861in" / -->
 
 In a functional program, we often use recursion to construct a list, one
 item at a time. The `in front of` block \index{`in front of` block} makes a
@@ -137,7 +137,7 @@ block}), which are handled through a recursive call:
 Snap*!*
 uses two different internal representations of lists, one (dynamic
 \index{array, dynamic} array\index{dynamic array}) for imperative
-programming and the other (linked\index{list, linked} list\index{linked list}) 
+programming and the other (linked\index{list, linked} list\index{linked list})
 for functional programming. Each representation
 makes the corresponding built-in list blocks (commands or reporters,
 respectively) most efficient. It’s possible to mix styles in the same
@@ -186,7 +186,7 @@ function}).
 Snap*!* provides four higher order function blocks for operating on
 lists:
 
-![image636.png](assets/image636.png){.image-2x}
+![image636.png](assets/image636.png){.image-4x}
 
 ### The `map` block {#sec-map}
 
@@ -221,7 +221,7 @@ lists, the result is a new toplevel list whose items are the same
 \index{shallow copy of a list}. To make a deep copy of a list
 \index{deep copy of a list} (that is, one in which all the sublists,
 sublists of sublists, etc. are copied), use the list as input to the
-![image576.png](assets/image576.png){.image-2x} <!--  style="width:0.74306in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:id.png" / -->  block (one of the variants
+![image576.png](assets/image576.png){.image-4x} <!--  style="width:0.74306in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:id.png" / -->  block (one of the variants
 of the `sqrt of` block). This works because `id of`\index{`id of` block} is a [hyperblock](#hyperblocks).
 
 The third higher order block, `combine`\index{`combine` block}, computes a
@@ -264,7 +264,7 @@ We mentioned earlier that there are two ways of representing lists
 visually. For one-dimensional lists (lists whose items are not
 themselves lists) the visual differences are small:
 
-![image640.png](assets/image640.png){.image-2x} <!--  style="width:2.375in;height:0.27778in" / -->
+![image640.png](assets/image640.png){.image-4x} <!--  style="width:2.375in;height:0.27778in" / -->
 
 For one-dimensional lists, it’s not really the appearance that’s
 important. What matters is that the *list view* allows very versatile
@@ -280,7 +280,7 @@ slow. As a partial workaround, the list view can only contain 100 items
 at a time; the downward-pointing arrowhead opens a menu in which you can
 choose which 100 to display.
 
-![image641.png](assets/image641.png){.image-2x} <!--  style="width:2.375in;height:0.27778in" / -->
+![image641.png](assets/image641.png){.image-4x} <!--  style="width:2.375in;height:0.27778in" / -->
 
 By contrast, because it doesn’t allow direct editing, the *table view*
 watcher can hold hundreds of thousands of items and still scroll through
@@ -524,7 +524,7 @@ always reporting a single Boolean result), `and` and `or` (because they
 don’t evaluate their second input at all if the first input determines
 the result), `join` (because it converts non-scalar (and other non-text)
 inputs to text string form), and `is a (type)` (because it applies to its
-input as a whole). Blocks whose inputs are “natively” lists, such as ![image193.png](assets/image193.png){.image-2x .image-inline} <!--  style="width:0.88958in;height:0.2in" / --> and
+input as a whole). Blocks whose inputs are “natively” lists, such as ![image193.png](assets/image193.png){.image-4x .image-inline} <!--  style="width:0.88958in;height:0.2in" / --> and
 ![image621.png](assets/image621.png) <!--  style="width:1.02986in;height:0.18958in" --> , are never hyperblocks.
 
 ![image205.png](assets/image205.png){.image-inline} <!--  style="width:2.09917in;height:0.2475in" alt="Application Description automatically generated with low confidence" / --> The

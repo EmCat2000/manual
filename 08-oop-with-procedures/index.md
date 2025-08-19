@@ -28,7 +28,7 @@ invoked, a counter instance increases and reports its count variable.
 Each counter has its own local count:\index{objects, building
 explicitly}
 
-![image851.png](assets/image851.png){.image-2x} <!--  style="width:2.23958in;height:1.51042in" / -->
+![image851.png](assets/image851.png){.image-4x} <!--  style="width:2.23958in;height:1.51042in" / -->
 
 This example will repay careful study, because it isn’t obvious why each
 instance has a separate count. From the point of view of the <code>make a
@@ -70,7 +70,7 @@ version, calling the instance gives access to a method\index{method},
 which must then be called to finish the job. We can provide a block to
 do both procedure calls in one:
 
-![image854.png](assets/image854.png){.image-2x} <!--  style="width:4.01042in;height:0.70772in" / -->
+![image854.png](assets/image854.png){.image-4x} <!--  style="width:4.01042in;height:0.70772in" / -->
 
 The <code>ask</code> block\index{ask block} has two required inputs: an object and a
 message. It also accepts optional additional inputs, which [Snap]{.snap} puts
@@ -209,6 +209,3 @@ Running this script should <code>say</code> and <code>think</code> the following
 \[1 1\] \[2 2\] \[3 3\] \[4 4\] (1 5) (2 6) (3 7) \[5 8\] \[6 9\] \[7 10\] \[8 11\]
 
 ![image870.png](assets/image870.png) <!--  style="width:4.20833in;height:4.39583in" / -->
-
-
-

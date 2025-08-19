@@ -105,11 +105,22 @@ h1, h2, h3, h4, h5, h6 {
 
 // TODO: make latex env
 .image-2x {
-  width: 25%;
-  height: auto;
+  height: 50%;
+  width: auto;
+}
+
+.image-3x {
+  height: 33.33%;
+  width: auto;
+}
+
+.image-4x {
+  height: 25%;
+  width: auto;
 }
 
 // TODO: make latex command
+// Review the vertical alignment of reporters vs hats/
 .image-inline {
   padding: 0;
   width: auto;
@@ -117,6 +128,15 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 1.6em;
   line-height: 1.8;
   vertical-align: middle;
+}
+
+.image-inline-tall {
+  padding: 0;
+  width: auto;
+  max-width: auto;
+  max-height: 2.4em;
+  line-height: 2.4;
+  vertical-align: bottom;
 }
 
 // TODO: make latex env
@@ -128,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 
 // TODO: Not sure if we want to combine these two classes
 // Slightly smaller than 100% for inline blocks.
-.image-2x.image-inline {
+.image-4x.image-inline {
   width: 20%
 }
 

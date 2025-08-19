@@ -3,7 +3,7 @@
 <!-- Editor Note: This document should be written using GitHub-flavored markdown,
   unlike the rest of the manual. -->
 
-* Write UI elements inside quoted code blocks. e.g. `"\\`Open\\`"`
+* Write UI elements inside quoted code blocks. e.g. ```"`Open`"```
 * Monospaced text should use the CSS class `.mono` e.g. `[text here]{.mono}`
 * Do not put spaces around index entries. `text\index{text},`
 * To write Snap! as stylized text write: `[Snap]{.snap}`
@@ -25,15 +25,16 @@
 
 Some images do not need custom CSS classes, but images used as inline examples and those expeorted from Retina displays should have CSS classes applied.
 
-* We have two classes: `.image-2x`, and `.image-inline`
+* We have a few classes: `.image-4x`, `.image-2x`, `.image-3x`, and `.image-inline`
 * The `-2x` class should be used for most retina-sized images.
 * The `-inline` class should be used when you want to place an example within the rest of a paragraph.
 
 Write markdown like this:
+
 ```md
-![alt text](filename.png){.image-2x}
+![alt text](filename.png){.image-4x}
 ![alt text](filename.png){.image-inline}
-![alt text](filename.png){.image-2x .image-inline}
+![alt text](filename.png){.image-4x .image-inline} <!-- You probably don't need to combine these classes-->
 ```
 ### Linkining to Images
 
@@ -46,14 +47,14 @@ Write markdown like this:
 https://en.wikibooks.org/wiki/LaTeX/Indexing
 
 * Write an index entry by writing `text\index{text},` at the end of a term.
-* Do not put spaces around the `\index` command.
+* Do not put spaces around the `\index{}` command.
 * Use *LaTeX* inside the `\index` command.
 * `!` denotes sub-terms in the index.
 * Use `""` to escape special characters in the index.
 * Use `$$` for verabatim text in the index, mostly for block names.
 * The format is `\index{sortkey@entrytext}`
   * You will need to use this when you are trying to index a block name.
-  * e.g. `\index{block name@\texttt{Block Name} block}`
+  * e.g. `\index{block name@$Block Name$ block}`
 
 ## Making new CSS classes
 

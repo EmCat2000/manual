@@ -220,7 +220,7 @@ are also removed.
 <!-- cut: , new in [Snap]{.snap} 7.0 -->
 The next group of options concern the *scenes*\index{scenes} feature. A scene
 is a complete project, with its own stage, sprites, and code, but
-several can be merged into one project, using the ![switch to scene block](assets/image999.png){ .image-2x .image-inline } <!--  style="width:1.16667in;height:0.19792in" / -->  block to bring another
+several can be merged into one project, using the ![switch to scene block](assets/image999.png){ .image-4x .image-inline } <!--  style="width:1.16667in;height:0.19792in" / -->  block to bring another
 scene onscreen. The "`Scenes…`" option\index{Scenes… option} presents a
 menu of all the scenes in your project, where the File menu was before
 you clicked it. The "`New scene`" option\index{New scene option} creates a
@@ -541,8 +541,8 @@ the project “Codification” in the Examples project list. Edit the blocks
 map to Smalltalk, map to JavaScript, etc., to see examples of how to
 provide translations for blocks.
 
-![image1028.png](assets/image1028.png){ .image-2x } <!--  style="width:1.38in;height:4.79in" alt="Graphical user interface, application, Teams Description automatically generated" / -->
-![image1027.png](assets/image1027.png){.image-2x } <!--  style="width:2.20972in;height:4.96944in" -->
+![image1028.png](assets/image1028.png){ .image-4x } <!--  style="width:1.38in;height:4.79in" alt="Graphical user interface, application, Teams Description automatically generated" / -->
+![image1027.png](assets/image1027.png){.image-4x } <!--  style="width:2.20972in;height:4.96944in" -->
 
 The Single palette option\index{Single palette option} puts all blocks,
 regardless of category, into a single palette. It’s intended mainly for
