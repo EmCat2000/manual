@@ -20,8 +20,8 @@ build up to full implementations of class/instance and prototyping OOP.
 This script implements an
 object *class*, a type of object, namely the counter class
 \index{counter class}. In this ﬁrst simplified version there is only
-one method, so no explicit message passing is necessary. When the make a
-counter block is called, it reports a procedure, the ringed script
+one method, so no explicit message passing is necessary. When the <code>make a
+counter</code> block is called, it reports a procedure, the ringed script
 inside its body. That procedure implements a specific counter object, an
 *instance*\index{instance} of the counter class\index{class}. When
 invoked, a counter instance increases and reports its count variable.
@@ -31,21 +31,21 @@ explicitly}
 ![image851.png](assets/image851.png) <!--  style="width:2.23958in;height:1.51042in" / -->
 
 This example will repay careful study, because it isn’t obvious why each
-instance has a separate count. From the point of view of the make a
-counter procedure, each invocation causes a new count variable to be
+instance has a separate count. From the point of view of the <code>make a
+counter</code> procedure, each invocation causes a new <var>count</var> variable to be
 created. Usually such *script variables* are temporary, going out of
-existence when the script ends. But this one is special, because make a
-counter returns *another script* that makes reference to the count
-variable, so it remains active. (The script variables\index{script
+existence when the script ends. But this one is special, because <code>make a
+counter</code> returns *another script* that makes reference to the <var>count</var>
+variable, so it remains active. (The <code>script variables</code>\index{script
 variables block} block makes variables local to a script. It can be used
 in a sprite’s script area or in the Block Editor. Script variables can
 be “exported” by being used in a reported procedure, as here.)
 
-In this approach to OOP, we are representing both classes and instances
-as procedures. The make a counter block represents the class, while each
-instance is represented by a nameless script created each time make a
-counter is called. The script variables created inside the make a
-counter block but outside the ring are *instance variables,* belonging
+In this approach to [OOP]{.mono}, we are representing both classes and instances
+as procedures. The <code>make a counter</code> block represents the class, while each
+instance is represented by a nameless script created each time <code>make a
+counter</code> is called. The script variables created inside the <code>make a
+counter</code> block but outside the <code>ring</code> are *instance variables,* belonging
 to a particular counter.
 
 ## Messages and Dispatch Procedures
@@ -57,13 +57,13 @@ version that uses message passing\index{message passing} :
 
 ![image853.png](assets/image853.png) <!--  style="width:4.41667in;height:3.16667in" / -->
 
-Again, the make a counter block represents the counter class, and again
-the script creates a local variable count each time it is invoked. The
-large outer ring represents an instance. It is a *dispatch procedure*
+Again, the <code>make a counter</code> block represents the <var>counter</var> class, and again
+the script creates a local variable <var>count</var> each time it is invoked. The
+large outer <code>ring</code> represents an instance. It is a *dispatch procedure*
 \index{dispatch procedure} *:* it takes a message (just a text word) as
-input, and it reports a method. The two smaller rings are the methods.
-The top one is the next method; the bottom one is the reset method. The
-latter requires an input, named value.
+input, and it reports a method. The two smaller <code>rings</code> are the methods.
+The top one is the <code>next</code> method; the bottom one is the <code>reset</code> method. The
+latter requires an input, named <var>value</var>.
 
 In the earlier version, calling the instance did the entire job. In this
 version, calling the instance gives access to a method\index{method},
@@ -72,16 +72,16 @@ do both procedure calls in one:
 
 ![image854.png](assets/image854.png) <!--  style="width:4.01042in;height:0.70772in" / -->
 
-The ask block\index{ask block} has two required inputs: an object and a
+The <code>ask</code> block\index{ask block} has two required inputs: an object and a
 message. It also accepts optional additional inputs, which [Snap]{.snap} puts
-in a list; that list is named args inside the block. Ask has two nested
+in a list; that list is named <var>args</var> inside the block. <code>Ask</code> has two nested
 call blocks. The inner one calls the object, i.e., the dispatch
 procedure. The dispatch procedure always takes exactly one input, namely
 the message. It reports a method, which may take any number of inputs;
 note that this is the situation in which we drop a list of values onto
-the arrowheads of a multiple input (in the outer call block). Note also
+the arrowheads of a multiple input (in the outer <code>call</code> block). Note also
 that this is one of the rare cases in which we must unringify
-\index{unringify} the inner call block, whose *value when called* gives
+\index{unringify} the inner <code>call</code> block, whose *value when called* gives
 the method.
 
 ![image855.png](assets/image855.png) <!--  style="width:4.01042in;height:0.70772in" / -->
@@ -97,18 +97,18 @@ doesn’t want to specialize:
 
 ![image857.png](assets/image857.png) <!--  style="width:3.8125in;height:3.58333in" / -->
 
-This script implements the buzzer class, which is a child of counter.
-Instead of having a count (a number) as a local state variable, each
-buzzer has a counter (an object) as a local state variable. The class
-specializes the next method, reporting what the counter reports unless
+This script implements the <var>buzzer</var> class, which is a child of <var>counter</var>.
+Instead of having a <var>count</var> (a number) as a local state variable, each
+<var>buzzer</var> has a <var>counter</var> (an object) as a local state variable. The class
+specializes the <code>next</code> method, reporting what the <var>counter</var> reports unless
 that result is divisible by 7, in which case it reports “buzz.” (Yeah,
 it should also check for a digit 7 in the number, but this code is
-complicated enough already.) If the message is anything other than next,
-though, such as reset, then the buzzer simply invokes its counter’s
-dispatch procedure. So the counter handles any message that the buzzer
-doesn’t handle explicitly. (Note that in the non-next case we call the
-counter, not ask it something, because we want to report a method, not
-the value that the message reports.) So, if we ask a buzzer to reset to
+complicated enough already.) If the message is anything other than <code>next</code>,
+though, such as <code>reset</code>, then the <var>buzzer</var> simply invokes its <var>counter’s</var>
+dispatch procedure. So the counter handles any message that the <var>buzzer</var>
+doesn’t handle explicitly. (Note that in the non-<code>next</code> case we <code>call</code> the
+<var>counter</var>, not ask it something, because we want to report a method, not
+the value that the message reports.) So, if we ask a <var>buzzer</var> to <code>reset</code> to
 a value divisible by 7, it will end up reporting that number, not
 “buzz.”
 
@@ -129,7 +129,7 @@ entire family, it must ask the parent to do it.)
 
 Because we want to be able to create and delete properties dynamically,
 we won’t use [Snap]{.snap} variables to hold an object’s variables or methods.
-Instead, each object has two *tables,* called methods and data, each of
+Instead, each object has two *tables,* called **methods** and **data**, each of
 which is an\index{association list} *association list:* a list of
 two-item lists, in which each of the latter contains a *key* and a
 corresponding *value.* We provide a lookup procedure to locate the
@@ -142,7 +142,7 @@ given table.
 ![image860.png](assets/image860.png) <!--  style="width:5.60417in;height:1.15625in" / -->
 ![image861.png](assets/image861.png) <!--  style="width:5.60417in;height:1.15625in" / -->
 
-There are also commands to insert and delete entries:
+There are also commands to <code>insert</code> and <code>delete</code> entries:
 
 ![image863.png](assets/image863.png) <!--  style="width:3.22917in;height:2.12831in" / -->
 ![image862.png](assets/image862.png) <!--  style="width:3.71875in;height:1.82639in" / -->
@@ -172,17 +172,17 @@ grandparent, etc.) of the original recipient, and that method refers to
 a variable or method, it will use the child’s variable or method if the
 child has its own version.
 
- The
-clone of block\index{clone of block} below takes an object as its input
+The
+<code>clone of ( )</code> block\index{clone of block} below takes an object as its input
 and makes a child object. It should be considered as an internal part of
 the implementation; the preferred way to make a child of an object is to
-send that object a clone message.
+send that object a <var>clone</var> message.
 
 ![image864.png](assets/image864.png) <!--  style="width:4.375in;height:7.46944in" / -->
 
- Every
-object is created with predefined methods for set, method, delete-var,
-delete-method, and clone. It has one predefined variable, parent.
+Every
+object is created with predefined methods for <code>set, method, delete-var,
+delete-method, and clone</code>. It has one predefined variable, <var>parent</var>.
 Objects without a parent are created by calling new object:
 
 ![image865.png](assets/image865.png) <!--  style="width:1.57292in;height:0.6875in" / -->
@@ -209,3 +209,4 @@ Running this script should \[say\] and (think) the following lists:
 \[1 1\] \[2 2\] \[3 3\] \[4 4\] (1 5) (2 6) (3 7) \[5 8\] \[6 9\] \[7 10\] \[8 11\]
 
 ![image870.png](assets/image870.png) <!--  style="width:4.20833in;height:4.39583in" / -->
+
