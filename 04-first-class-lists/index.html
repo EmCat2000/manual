@@ -1548,6 +1548,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#table-view-vs.-list-view" id="toc-table-view-vs.-list-view" class="nav-link" data-scroll-target="#table-view-vs.-list-view"><span class="header-section-number">4.5</span> Table View<span></span> vs.&nbsp;List View<span></span></a>
   <ul class="collapse">
   <li><a href="#sec-csv" id="toc-sec-csv" class="nav-link" data-scroll-target="#sec-csv"><span class="header-section-number">4.5.1</span> Comma-Separated Values</a></li>
+  <li><a href="#multi-dimensional-lists-and-json" id="toc-multi-dimensional-lists-and-json" class="nav-link" data-scroll-target="#multi-dimensional-lists-and-json"><span class="header-section-number">4.5.2</span> Multi-dimensional lists and JSON</a></li>
   </ul></li>
   <li><a href="#hyperblocks" id="toc-hyperblocks" class="nav-link" data-scroll-target="#hyperblocks"><span class="header-section-number">4.6</span> Hyperblocks<span></span></a></li>
   </ul>
@@ -1587,7 +1588,7 @@ ul.task-list li input[type="checkbox"] {
 <p>But Scratch’s lists are not ﬁrst class. You create one using the “<code>Make a list</code><span></span>” button, which requires that you give the list a name. You can’t put the list into a variable, into an input slot of a block, or into a list item—you can’t have lists of lists. None of the Scratch reporters reports a list value. (You can use a reduction of the list into a text string as input to other blocks, but this loses the list structure; the input is just a text string, not a data aggregate.)</p>
 <p>A fundamental design principle<span></span> in Snap<em>!</em> is that <em><strong><u>all data should be ﬁrst class</u></strong>.</em> If it’s in the language, then we should be able to use it fully and freely. We believe that this principle avoids the need for many special-case tools, which can instead be written by Snap<em>!</em> users themselves.</p>
 <p>Note that it’s a data <em>type</em> that’s ﬁrst class, not an individual value. Don’t think, for example, that some lists are ﬁrst class, while others aren’t. In Snap<em>!</em>, lists are ﬁrst class, period.</p>
-<p><img src="assets/image523.png" class="img-fluid" alt="image523.png"> <!--  style="width:2.83958in;height:0.41597in" / --></p>
+<p><img src="assets/image523.png" class="image-2x img-fluid" alt="image523.png"> <!--  style="width:2.83958in;height:0.41597in" / --></p>
 <section id="the-list-block" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="the-list-block"><span class="header-section-number">4.1</span> The <code>list</code> Block</h2>
 <p>At the heart of providing first class lists is the ability to make an “anonymous” list<span></span>—to make a list without simultaneously giving it a name. The <code>list</code> reporter block <span></span> does that.</p>
@@ -1608,15 +1609,15 @@ ul.task-list li input[type="checkbox"] {
 <section id="functional-and-imperative-list-programming" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="functional-and-imperative-list-programming"><span class="header-section-number">4.3</span> Functional and Imperative List Programming</h2>
 <p>There are two ways to create a list inside a program. Scratch <span></span> users will be familiar with the <em>imperative</em> programming style<span></span>, which is based on a set of command blocks that modify a list:</p>
-<p><img src="assets/image631.png" class="img-fluid" alt="image631.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
+<p><img src="assets/image631.png" class="image-2x img-fluid" alt="image631.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
 <p>As an example, here are two blocks that take a list of numbers as input, and report a new list containing only the even numbers from the original list:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p><img src="assets/image632.png" class="img-fluid" alt="image632.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
 <p>In these scripts, we first create a temporary variable, then put an empty list in it, then go through the items of the input list using the <code>add ... to (result)</code> block to modify the result list, adding one item at a time, and finally report the result.</p>
 <p><em>Functional</em> programming is a different approach that is becoming important in “real world” programming because of parallelism <span></span>, i.e., the fact that different processors can be manipulating the same data at the same time. This makes the use of mutation<span></span> (changing the value associated with a variable, or the items of a list) problematic because with parallelism it’s impossible to know the exact sequence of events, so the result of mutation may not be what the programmer expected. Even without parallelism, though, functional programming<span></span> is sometimes a simpler and more effective technique, especially when dealing with recursively defined data structures. It uses reporter blocks, not command blocks, to build up a list value:</p>
-<p><img src="assets/image633.png" class="img-fluid" alt="image633.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
+<p><img src="assets/image633.png" class="image-2x img-fluid" alt="image633.png"> <!--  style="width:5.88889in;height:1.04861in" / --></p>
 <p>In a functional program, we often use recursion to construct a list, one item at a time. The <code>in front of</code> block <span></span> makes a list that has one item added to the front of an existing list, <em>without changing the value of the original list.</em> A nonempty list is processed by dividing it into its first item (<code>item 1 of</code><span></span>) and all the rest of the items (<code>all but first of</code><span></span>), which are handled through a recursive call:</p>
 <p><img src="assets/image555.png" class="img-fluid" alt="image555.png"> <!--  style="width:4.75in;height:2.24097in" / --></p>
-<p>Snap<em>!</em> uses two different internal representations of lists, one (dynamic <span></span> array<span></span>) for imperative programming and the other (linked<span></span> list <span></span>) for functional programming. Each representation makes the corresponding built-in list blocks (commands or reporters, respectively) most efficient. It’s possible to mix styles in the same program, but if <em>the same list</em> is used both ways, the program will run more slowly because it converts from one representation to the other repeatedly. (The <code>item ( ) of [ ]</code> block doesn’t change the representation.) You don’t have to know the details of the internal representations, but it’s worthwhile to use each list in a consistent way.</p>
+<p>Snap<em>!</em> uses two different internal representations of lists, one (dynamic <span></span> array<span></span>) for imperative programming and the other (linked<span></span> list<span></span>) for functional programming. Each representation makes the corresponding built-in list blocks (commands or reporters, respectively) most efficient. It’s possible to mix styles in the same program, but if <em>the same list</em> is used both ways, the program will run more slowly because it converts from one representation to the other repeatedly. (The <code>item ( ) of [ ]</code> block doesn’t change the representation.) You don’t have to know the details of the internal representations, but it’s worthwhile to use each list in a consistent way.</p>
 </section>
 <section id="higher-order-list-operations-and-rings" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="higher-order-list-operations-and-rings"><span class="header-section-number">4.4</span> Higher Order List Operations and Rings</h2>
@@ -1633,7 +1634,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- TODO: this image is squished in its origianl form. -->
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/image634.png" class="img-fluid figure-img"></p>
+<p><img src="assets/image634.png" class="image-2x img-fluid figure-img"></p>
 <figcaption>image634.png</figcaption>
 </figure>
 </div>
@@ -1642,7 +1643,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Snap<em>!</em> provides four higher order function blocks for operating on lists:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="assets/image636.png" class="img-fluid figure-img"></p>
+<p><img src="assets/image636.png" class="image-2x img-fluid figure-img"></p>
 <figcaption>image636.png</figcaption>
 </figure>
 </div>
@@ -1672,9 +1673,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="table-view-vs.-list-view" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="table-view-vs.-list-view"><span class="header-section-number">4.5</span> Table View<span></span> vs.&nbsp;List View<span></span></h2>
 <p>We mentioned earlier that there are two ways of representing lists visually. For one-dimensional lists (lists whose items are not themselves lists) the visual differences are small:</p>
-<p><img src="assets/image640.png" class="img-fluid" alt="image640.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
+<p><img src="assets/image640.png" class="image-2x img-fluid" alt="image640.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
 <p>For one-dimensional lists, it’s not really the appearance that’s important. What matters is that the <em>list view</em> allows very versatile direct manipulation of the list through the picture: you can edit the individual items, you can delete items by clicking the tiny buttons next to each item, and you can add new items at the end by clicking the tiny plus sign in the lower left corner. (You can just barely see that the item deletion buttons have minus signs in them.) Even if you have several watchers for the same list, all of them will be updated when you change anything. On the other hand, this versatility comes at an efficiency cost; a list view watcher for a long list would be way too slow. As a partial workaround, the list view can only contain 100 items at a time; the downward-pointing arrowhead opens a menu in which you can choose which 100 to display.</p>
-<p><img src="assets/image641.png" class="img-fluid" alt="image641.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
+<p><img src="assets/image641.png" class="image-2x img-fluid" alt="image641.png"> <!--  style="width:2.375in;height:0.27778in" / --></p>
 <p>By contrast, because it doesn’t allow direct editing, the <em>table view</em> watcher can hold hundreds of thousands of items and still scroll through them efficiently. The table view has flatter graphics for the items to remind you that they’re not clickable to edit the values.</p>
 <p>Right-clicking on a list watcher (in either form) gives you the option to switch to the other form. The right-click menu also offers an <code>open in dialog...</code> option that opens an <em>offstage</em> table view watcher, because the watchers can take up a lot of stage space that may make it hard to see what your program is actually doing. Once the offstage dialog box is open, you can close the stage watcher. There’s an OK button on the offstage dialog to close it if you want. Or you can right-click it to make <em>another</em> offstage watcher, which is useful if you want to watch two parts of the list at once by having each watcher scrolled to a different place.</p>
 <p>Table view is the default if the list has more than 100 items, or if any of the first ten items of the list are lists, in which case it makes a very different-looking two-dimensional picture:</p>
@@ -1704,44 +1705,27 @@ George,Harrison,lead guitar
 Ringo,Starr,drums</code></pre>
 <p>Here’s what the corresponding table looks like:</p>
 <!-- This image needs work. It shouldn't include the csv in text form, and the two views of the list should be captioned. Ideally this would be two separate captioned pictures on the same line. bh -->
-<p><img src="assets/image643.png" class="img-fluid" alt="image643.png"> <!--  style="width:3.35417in;height:0.69444in" / --></p>
+<!-- ![image643.png](assets/image643.png)  style="width:3.35417in;height:0.69444in" / -->
+<p><img src="assets/table-view.png" class="img-fluid" alt="table view"> <img src="assets/list-view.png" class="img-fluid" alt="list view"></p>
 <p>Here’s how to read a spreadsheet into Snap<em>!</em>:</p>
 <ol type="1">
-<li>Make a variable with a watcher on stage: <img src="assets/image607.png" class="img-fluid" alt="image607.png"> <!--  style="width:1.20833in;height:0.27083in" alt="Macintosh HD:Users:bh:Desktop:pix:watcher.png" / --></li>
+<li>Make a variable with a watcher on stage: <img src="assets/image607.png" class="img-fluid" alt="image607.png"> <!-- style="width:1.20833in;height:0.27083in" alt="Macintosh HD:Users:bh:Desktop:pix:watcher.png" --></li>
 </ol>
-<!-- The background of this picture should be transparent, not white. bh -➞
-
-2. Right-click on the watcher and choose the “`import`” option. (If the
-variable’s value is already a list, be sure to click on the outside
-border of the watcher; there is a different menu if you click on the
-list itself.) Select the file with your csv data.
-
-3. There is no 3; that’s it! Snap*!* will notice that the name of the
-file you’re importing is something`.csv` and will turn the text into a
-list of lists automatically.
-
-Or, even easier, just drag and drop the file from your desktop onto the
-Snap*!* window, and Snap*!* will automatically create a variable named
-after the file and import the data into it.
-
-If you actually want to import the raw CSV data into a variable, either
-change the file extension to `.txt` before loading it, or choose “`raw
-data`” instead of “`import`” in the watcher menu.
-
-If you want to export a list, put a variable watcher containing the list
-on the stage, right-click its border, and choose “`Export`.” (Don’t
-right-click an item instead of the border; that gives a different menu.)
-
-### Multi-dimensional lists and JSON
-
-CSV format is easy to read, but works only for one- or two-dimensional
-lists. If you have a list of lists of lists, Snap*!* will instead export
-your list as a JSON (JavaScript Object Notation) file\index{JSON
-(JavaScript Object Notation) file} . I modified my list:
-
-![image608.png](assets/image608.png) <!--  style="width:6.33333in;height:0.44792in" / -->
+<!-- The background of this picture should be transparent, not white. bh  -->
+<ol start="2" type="1">
+<li><p>Right-click on the watcher and choose the “<code>import</code>” option. (If the variable’s value is already a list, be sure to click on the outside border of the watcher; there is a different menu if you click on the list itself.) Select the file with your csv data.</p></li>
+<li><p>There is no 3; that’s it! Snap<em>!</em> will notice that the name of the file you’re importing is something<code>.csv</code> and will turn the text into a list of lists automatically.</p></li>
+</ol>
+<p>Or, even easier, just drag and drop the file from your desktop onto the Snap<em>!</em> window, and Snap<em>!</em> will automatically create a variable named after the file and import the data into it.</p>
+<p>If you actually want to import the raw CSV data into a variable, either change the file extension to <code>.txt</code> before loading it, or choose “<code>raw data</code>” instead of “<code>import</code>” in the watcher menu.</p>
+<p>If you want to export a list, put a variable watcher containing the list on the stage, right-click its border, and choose “<code>Export</code>.” (Don’t right-click an item instead of the border; that gives a different menu.)</p>
+</section>
+<section id="multi-dimensional-lists-and-json" class="level3" data-number="4.5.2">
+<h3 data-number="4.5.2" class="anchored" data-anchor-id="multi-dimensional-lists-and-json"><span class="header-section-number">4.5.2</span> Multi-dimensional lists and JSON</h3>
+<p>CSV format is easy to read, but works only for one- or two-dimensional lists. If you have a list of lists of lists, Snap<em>!</em> will instead export your list as a JSON (JavaScript Object Notation) file<span></span> . I modified my list:</p>
+<p><img src="assets/image608.png" class="img-fluid" alt="image608.png"> <!--  style="width:6.33333in;height:0.44792in" / --></p>
 <p>and then exported again, getting this file:</p>
-<p><code>\[\["John","Lennon","rhythm guitar"\],\[\["James","Paul"\],"McCartney","bass guitar"\],\["George","Harrison","lead guitar"\],\["Ringo","Starr","drums"\]\]</code></p>
+<p><code>[["John","Lennon","rhythm guitar"],[["James","Paul"],"McCartney","bass guitar"],["George","Harrison","lead guitar"],["Ringo","Starr","drums"]]</code></p>
 <p>You can also import lists, including tables, from a <code>.json</code> file. (And you can import plain text from a <code>.txt</code> file.) Drag and drop works for these formats also.</p>
 </section>
 </section>
@@ -1760,11 +1744,11 @@ your list as a JSON (JavaScript Object Notation) file\index{JSON
 <p><img src="assets/image614.png" class="img-fluid" alt="image614.png"> <!--  style="width:7.48333in;height:0.63125in" alt="Macintosh HD:Users:bh:Desktop:vector-alonzo.png" / --></p>
 <p>Each pixel of the result has ¾ of its original red and green, and three times its original blue (with its transparency unchanged). By putting some sliders on the stage, you can play with colors dynamically:</p>
 <p><img src="assets/image620.png" class="img-fluid" alt="image620.png"> <!--  style="width:5.19444in;height:1.04861in" alt="Graphical user interface, application Description automatically generated" / --><img src="assets/image619.png" class="img-fluid" alt="image619.png"> <!--  style="width:1.6875in;height:1.04861in" alt="Macintosh HD:Users:bh:Desktop:Screen Shot 2020-06-13 at 9.25.32 PM.png" / --></p>
-<p>There are a few naturally scalar functions that have already had specific meanings when applied to lists and therefore are not hyperblocks: <code>=</code> and <code>identical to</code> (because they compare entire structures, not just scalars, always reporting a single Boolean result), <code>and</code> and <code>or</code> (because they don’t evaluate their second input at all if the first input determines the result), <code>join</code> (because it converts non-scalar (and other non-text) inputs to text string form), and <code>is a (type)</code> (because it applies to its input as a whole). Blocks whose inputs are “natively” lists, such as <img src="assets/image193.png" class="img-fluid" alt="image193.png"> <!--  style="width:0.88958in;height:0.2in" / --> and <img src="assets/image621.png" class="img-fluid" alt="image621.png"> <!--  style="width:1.02986in;height:0.18958in" --> , are never hyperblocks.</p>
-<p><img src="assets/image205.png" class="img-fluid" alt="image205.png"> <!--  style="width:2.09917in;height:0.2475in" alt="Application Description automatically generated with low confidence" / --> The <code>reshape</code> block<span></span> takes a list (of any depth) as its first input, and then takes zero or more sizes along the dimensions of an array. In the example it will report a table (a matrix) of four rows and three columns. If no sizes are given, the result is an empty list. Otherwise, the cells of the specified shape are filled with the atomic values from the input list. If more values are needed than provided, the block starts again at the head of the list, using values more than once. If more values are provided than needed, the extras are ignored; this isn’t an error.</p>
-<p><img src="assets/image203.png" class="img-fluid" alt="image203.png"> <!--  style="width:1.76in;height:0.2in" / --> The <code>combinations</code> block takes any number of lists as input; it reports a list in which each item is a list whose length is the number of inputs; item <em>i</em> of a sublist is an item of input <em>i.</em> Every possible combination of items of the inputs is included, so the length of the reported list is the product of the lengths of the inputs.</p>
-<p><img src="assets/image622.png" class="img-fluid" alt="image622.png"> <!--  style="width:5.23958in;height:1.67986in" alt="Graphical user interface, text, application Description automatically generated" / --></p>
-<p><img src="assets/image204.png" class="img-fluid" alt="image204.png"> <!--  style="width:1.34in;height:0.25in" alt="Icon Description automatically generated" / --> The <code>item of</code> block <span></span> has a special set of rules, designed to preserve its pre-hyperblock meaning and also provide a useful behavior when given a list as its first (index) input:</p>
+<p>There are a few naturally scalar functions that have already had specific meanings when applied to lists and therefore are not hyperblocks: <code>=</code> and <code>identical to</code> (because they compare entire structures, not just scalars, always reporting a single Boolean result), <code>and</code> and <code>or</code> (because they don’t evaluate their second input at all if the first input determines the result), <code>join</code> (because it converts non-scalar (and other non-text) inputs to text string form), and <code>is a (type)</code> (because it applies to its input as a whole). Blocks whose inputs are “natively” lists, such as <img src="assets/image193.png" class="image-2x img-fluid" alt="image193.png"> <!--  style="width:0.88958in;height:0.2in" / --> and <img src="assets/image621.png" class="img-fluid" alt="image621.png"> <!--  style="width:1.02986in;height:0.18958in" --> , are never hyperblocks.</p>
+<p><img src="assets/image205.png" class="image-inline img-fluid" alt="image205.png"> <!--  style="width:2.09917in;height:0.2475in" alt="Application Description automatically generated with low confidence" / --> The <code>reshape</code> block<span></span> takes a list (of any depth) as its first input, and then takes zero or more sizes along the dimensions of an array. In the example it will report a table (a matrix) of four rows and three columns. If no sizes are given, the result is an empty list. Otherwise, the cells of the specified shape are filled with the atomic values from the input list. If more values are needed than provided, the block starts again at the head of the list, using values more than once. If more values are provided than needed, the extras are ignored; this isn’t an error.</p>
+<p><img src="assets/image203.png" class="image-inline img-fluid" alt="image203.png"> <!--  style="width:1.76in;height:0.2in" / --> The <code>combinations</code> block takes any number of lists as input; it reports a list in which each item is a list whose length is the number of inputs; item <em>i</em> of a sublist is an item of input <em>i.</em> Every possible combination of items of the inputs is included, so the length of the reported list is the product of the lengths of the inputs.</p>
+<p><img src="assets/image622.png" class="image-2x img-fluid" alt="image622.png"> <!--  style="width:5.23958in;height:1.67986in" alt="Graphical user interface, text, application Description automatically generated" / --></p>
+<p><img src="assets/image204.png" class="image-inline img-fluid" alt="image204.png"> <!--  style="width:1.34in;height:0.25in" alt="Icon Description automatically generated" / --> The <code>item of</code> block <span></span> has a special set of rules, designed to preserve its pre-hyperblock meaning and also provide a useful behavior when given a list as its first (index) input:</p>
 <ol type="1">
 <li><p>If the index is a number, then <code>item of</code> reports the indicated top-level item of the list input; that item may be a sublist, in which case the entire sublist is reported (the original meaning of <code>item of</code>):</p>
 <p><img src="assets/image623.png" class="img-fluid" alt="image623.png"> <!--  style="width:5.50694in;height:0.91667in"     alt="Macintosh HD:Users:bh:Desktop:item-scalar.png" / --></p></li>
