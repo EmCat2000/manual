@@ -843,7 +843,7 @@ very same list, so changing an item in one of them is visible in the
 other. (For `=`, lists that look the same are the same.) For text strings,
 uses case-sensitive comparison, unlike `=`, which is case-independent.
 
-![image171.png](assets/image171.png) These *hidden* blocks can be found with the relabel option
+![image171.png](assets/image171.png){.image-inline} These *hidden* blocks can be found with the relabel option
 \index{relabel option} of any dyadic arithmetic block. They’re hidden
 partly because writing them in [Snap]{.snap} is a good, pretty easy
 programming exercise. Note: the two inputs to `atan2`\index{atan2 block}
@@ -853,9 +853,9 @@ can provide additional inputs.
 
 ![image177.png](assets/image177.png) <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated with medium confidence" / -->
 ![image178.png](assets/image178.png) <!--  style="width:0.63in;height:0.19in" alt="A picture containing text, monitor, screenshot Description automatically generated" / -->
-![image179.png](assets/image179.png) <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated" / -->  Similarly, these
-\index{*less-than-or-equal@\texttt{≤} block} hidden predicates can be found by relabeling the
-relational predicates.
+![image179.png](assets/image179.png) <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated" / -->  
+
+Similarly, these\index{*less-than-or-equal@\texttt{≤} block} hidden predicates can be found by relabeling the relational predicates.
 
 ### Metaprogramming (see @sec-ch11)
 
@@ -894,7 +894,7 @@ vector (x,y).
 
 **Scenes:**
 
-![image280.png](assets/image280.png) <!-- {width=2.38in height=1.32in} --> The
+![image280.png](assets/image280.png){.image-inline} <!-- {width=2.38in height=1.32in} --> The
 major new feature of version 7.0 is *scenes:*\index{scenes} A project can include
 within it sub-projects, called scenes, each with its own stage, sprites,
 scripts, and so on. This block makes another scene active, replacing the
@@ -905,11 +905,11 @@ no variables. But the old scene can send a message to the new one, to
 start it running, with optional payload as in broadcast\index{broadcast
 block} (See @sec-broadcast).
 
-![image282.png](assets/image282.png)
+![image282.png](assets/image282.png){.image-2x}
 
 In particular, you can say
 
-![image281.png](assets/image281.png)
+![image281.png](assets/image281.png){.image-2x}
 
 if the new scene expects to be started with a green flag signal.
 
@@ -927,25 +927,25 @@ the mouse, or the center. “Ray length” is the distance from the center
 of this sprite to the nearest point on the other sprite, in the current
 direction.
 
-![image284.png](assets/image284.png) <!-- {width=0.72in height=0.2in} --> The `stop` block\index{stop block} has two extra menu choices. `Stop this block` is used inside the definition of a custom block to stop just this
+![image284.png](assets/image284.png){.image-2x}{.image-inline} <!-- {width=0.72in height=0.2in} --> The `stop` block\index{stop block} has two extra menu choices. `Stop this block` is used inside the definition of a custom block to stop just this
 invocation of this custom block and continue the script that called it.
 `Stop all` but this script is good at the end of a game to stop all the
 game pieces from moving around, but keep running this script to provide
 the user’s final score. The last two menu choices add a tab at the
 bottom of the block because the current script can continue after it.
 
-![image285.png](assets/image285.png) <!-- {width=0.72in height=0.2in} --> The new “pen trails” option is true if the sprite is touching any drawn
+![image285.png](assets/image285.png){.image-inline} <!-- {width=0.72in height=0.2in} --> The new “pen trails” option is true if the sprite is touching any drawn
 or stamped ink on the stage. Also, `touching`\index{touching block} will
 not detect hidden sprites, but a hidden sprite can use it to detect
 visible sprites.
 
-![image305.png](assets/image305.png) <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> The `video on` block
+![image305.png](assets/image305.png){.image-inline} <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> The `video on` block
 \index{video block} has a snap option\index{snap option} that takes a
 snapshot and reports it as a costume. It is hyperized with respect to its second input.
 
-![image304.png](assets/image304.png) <!--  style="width:1.05972in;height:0.27986in" alt="Icon Description automatically generated" / -->  The “neg” option\index{neg option} is a monadic\index{of block
+![image304.png](assets/image304.png){.image-inline} <!--  style="width:1.05972in;height:0.27986in" alt="Icon Description automatically generated" / -->  The “neg” option\index{neg option} is a monadic\index{of block
 (operators)}\index{length of text block} negation operator
-\index{negation operator}, equivalent to ![image306.png](assets/image306.png). “lg” is log<sub>2</sub>.
+\index{negation operator}, equivalent to ![image306.png](assets/image306.png){.image-inline}. “lg” is log<sub>2</sub>.
 “id” is the identity function, which reports its input. “sign” reports 1
 for positive input, 0 for zero input, or -1 for negative input.
 \index{set background block}
@@ -975,7 +975,7 @@ Extended broadcast\index{broadcast block} : Click the right arrowhead to direct 
 :::
 
 ::: {.evenly-spaced-images layout-ncol=2}
-![image311.png](assets/image311.png)
+![image311.png](assets/image311.png){.image-2x}
 
 Extended `when I receive`\index{when I receive block}: Click the right
 arrowhead to expose a script variable (click on it to change its name,
@@ -985,12 +985,11 @@ variable will be set to the message, if no payload is included with the
 broadcast, or to a two-item list containing the message and the payload.
 :::
 
-![image312.png](assets/image312.png)
+![image312.png](assets/image312.png){.image-2x}
 
-![image355.png](assets/image355.png)
+![image355.png](assets/image355.png){.image-2x}
 
 If the input is set to “any key,” then a right arrowhead appears:
-
 ![image357.png](assets/image357.png){.image-inline} and if you click it,
 a script variable key is created whose value is the key that was
 pressed. (If the key is one that’ represented in the input menu by a
@@ -998,7 +997,7 @@ word or phrase, e.g., “enter” or “up arrow,” then the value of key
 will be that word or phrase, *except for* the space character, which
 is represented as itself in key.)
 
-![image356.png](assets/image356.png) <!--  style="width:2.25in;height:0.41944in"   alt="Website Description automatically generated with medium confidence" -->
+![image356.png](assets/image356.png){.image-2x} <!--  style="width:2.25in;height:0.41944in"   alt="Website Description automatically generated with medium confidence" -->
 
 The RGB(A)\index{set pen block} option accepts a single number, which
 is a grayscale value 0-255; a two-number list, grayscale plus opacity
@@ -1020,7 +1019,7 @@ library.
 ![image362.png](assets/image362.png)
 
 ::: {.evenly-spaced-images layout-ncol=2}
-![image363.png](assets/image363.png)
+![image363.png](assets/image363.png){.image-2x}
 
 The `of` block\index{of block (sensing)} has an extended menu of
 attributes of a sprite. Position reports an (x,y) vector. Size reports
@@ -1070,7 +1069,7 @@ needs.
 The libraries and their contents may change, but as of this writing the
 list library\index{list library} has these blocks:
 
-![image387.png](assets/image387.png) <!-- {width=1.84861in height=2.49236in} -->
+![image387.png](assets/image387.png){.image-2x} <!-- {width=1.84861in height=2.49236in} -->
 
 (The lightning bolt (⚡️)\index{*lightning-bolt@⚡️ (lightning bolt)} before the name in several of these
 blocks means that they use compiled HOFs or JavaScript primitives to achieve
@@ -1133,9 +1132,7 @@ false to continue repeating. The last repeat block is like the `repeat`
 primitive, but makes the number of repetitions so far available to the
 repeated script. The next two blocks are variations on `for`\index{$for$
 block} : the first allows an explicit step instead of using ±1, and the
-second allows any values, not just numbers; inside the script you say
-
-![image390.png](assets/image390.png) <!-- {width=3.15278in height=0.29861in} -->
+second allows any values, not just numbers; inside the script you say ![image390.png](assets/image390.png){.image-inline} <!-- {width=3.15278in height=0.29861in} -->
 replacing the grey block in the picture with an expression to give the next
 desired value for the loop index.
 
@@ -1230,7 +1227,7 @@ Lisp/Scheme.
 
 The pixels library\index{pixels library} has one block:
 
-![image395.png](assets/image395.png) <!-- {width=0.77917in height=0.62986in} -->
+![image395.png](assets/image395.png{.image-2x} <!-- {width=0.77917in height=0.62986in} -->
 
 Costumes are first class data
 in [Snap]{.snap}. Most of the processing of costume data is done by primitive
@@ -1317,17 +1314,16 @@ next page.
 ![image412.png](assets/image412.png) <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / -->
 
 Colors are
-created by the ![image414.png](assets/image414.png) <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / --> block (for direct user selection), the `color from`
-\index{color from block} to specify a color numerically,  or by ![image413.png](assets/image413.png) <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / --> , which
+created by the ![image414.png](assets/image414.png){.image-inline} <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / --> block (for direct user selection), the `color from`
+\index{color from block} to specify a color numerically,  or by ![image413.png](assets/image413.png){.image-inline} <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / --> , which
 reports the color currently in use by the pen. The `from color` block
 \index{from color block} reports names or numbers associated with a
 color:
 
-![image411.png](assets/image411.png) <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / -->
+![image411.png](assets/image411.png){.image-2x} <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / -->
 
 Colors can be created from
 other colors:\index{mix colors block}
-
 ![image415.png](assets/image415.png) <!-- {width=4.83333in height=0.43056in} -->
 
 The three blocks with pen in their names are improved versions of
@@ -1447,7 +1443,7 @@ The text costumes library\index{text costume library} has only two
 blocks:
 
  ![image446.png](assets/image446.png) <!--  style="width:1.92in;height:0.45078in" alt="Macintosh HD:Users:bh:Desktop:textcostume.png" / -->
- ![image447.png](assets/image447.png) <!-- {width=3.25972in height=0.18958in} -->
+ ![image447.png](assets/image447.png){.image-2x} <!-- {width=3.25972in height=0.18958in} -->
 
 `Costume from text`
 reports a costume\index{costume from text block} that can be used with
@@ -1739,5 +1735,6 @@ documented separately at
 <http://emu-online.de/ProgrammingWithSciSnap.pdf> and
 <https://maketolearn.org/creating-art-animations-and-music/>
 respectively.
+
 
 
