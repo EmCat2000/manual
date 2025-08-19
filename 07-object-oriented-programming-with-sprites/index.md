@@ -19,10 +19,10 @@ important. Our approach is therefore less restrictive than that of some
 other [OOP]{.mono} languages; we give objects easy access to each others’ data
 and methods.
 
-Technically, object oriented programming rests on three legs: 
+Technically, object oriented programming rests on three legs:
 
 1. \index{message passing} *Message passing:* There is a notation by which
-any object can send a message to another object. 
+any object can send a message to another object.
 
 2. \index{local state}
 
@@ -44,7 +44,7 @@ Like Scratch, [Snap]{.snap} comes with things that are natural objects: its
 sprites\index{sprite}. Each sprite can own local variables; each
 sprite has its own scripts (methods). A Scratch animation is plainly a
 simulation of the interaction of characters in a play. There are two
-ways in which Scratch sprites are less versatile than the objects of an 
+ways in which Scratch sprites are less versatile than the objects of an
 [OOP]{.mono}language. First, Scratch message passing is weak in three respects:
 Messages can only be <code>broadcast</code>\index{broadcast block}, not addressed
 to an individual sprite; messages can’t take inputs; and methods can’t
@@ -94,7 +94,7 @@ copies any more. (As we’ll see, “copies” is the wrong word because the
 parent and the children *share* a lot of properties. That’s why we use
 the word “clones” to describe the children rather than “copies.”) These
 are *[temporary]{.mono}* clones\index{temporary clone}. They are automatically
-deleted when the user presses either the "\\`green flag\\`" or the "\\`red stop sign\\`". In Scratch 2.0 and later, all clones\index{clone temporary} are
+deleted when the user presses either the "`green flag`" or the "`red stop sign`". In Scratch 2.0 and later, all clones\index{clone temporary} are
 temporary.
 
 The other kind of situation is what happens when you want
@@ -123,25 +123,25 @@ updated to reflect the clone’s current costume, direction, and so on.)
 We have tried to anticipate your needs, as follows: When you make a
 clone in a script, using the ![image748.png](assets/image748.png) <!--  style="width:1.51389in;height:0.19444in" alt="Macintosh HD:Users:bh:Desktop:pix:clone-block.png" / --> block, it is “born” temporary. But when you
 make a clone from the user interface, for example by right-clicking on a
-sprite and choosing "\\`cline\\`", it is born permanent. The reason this makes
+sprite and choosing "`cline`", it is born permanent. The reason this makes
 sense is that you don’t create 100 *kinds* of dogs automatically. Each
 kind has many different characteristics, programmed by hand. But when
 your project is running, it might create 100 rottweilers, and those will
 be identical unless you change them in the program.
 
 You can change a
-temporary sprite to permanent by right-clicking it and choosing "\\`edit.\\`"
-(It’s called "\\`edit\\`" rather than, say, “permanent” because it also shifts
+temporary sprite to permanent by right-clicking it and choosing "`edit.`"
+(It’s called "`edit`" rather than, say, “permanent” because it also shifts
 the scripting area to reflect that sprite, as if you’d pressed its
 button in the sprite corral.) You can change a permanent sprite to
-temporary by right-clicking it and choosing "\\`release.\\`" You can also
+temporary by right-clicking it and choosing "`release.`" You can also
 change the status of a clone in your program with ![image749.png](assets/image749.png) <!--  style="width:1.51389in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:set-my-temp.png" / --> with true or false as
 the second input.
 
 ##  Sending Messages to Sprites
 
 The messages that a sprite accepts are the blocks in its palettes,
-including both "\\`all sprites\\`" and "\\`this sprite only\\`" blocks. (For custom
+including both "`all sprites`" and "`this sprite only`" blocks. (For custom
 blocks, the corresponding methods are the scripts as seen in the Block
 Editor.)
 
@@ -185,7 +185,7 @@ it, and now we have the more straightforward primitives.
 
 Suppose you have a [Dog]{.mono} sprite
 with two clones CockerSpaniel and PitBull. In the [Dog]{.mono} sprite you define
-this method\index{method} ("\\`For this sprite only\\` block
+this method\index{method} ("`For this sprite only` block
 \index{block!sprite-local} ):
 
 ![image763.png](assets/image763.png) <!--  style="width:1.67361in;height:1.40208in" / -->
@@ -204,7 +204,7 @@ And here’s what a PitBull does:
 
 ![image765.png](assets/image765.png) <!--  style="width:1.67361in;height:1.40208in" / -->
 
-<code>Greet ( )</code> is defined in the [Dog]{.mono} sprite. 
+<code>Greet ( )</code> is defined in the [Dog]{.mono} sprite.
 If Fido is a particular cocker
 spaniel, and you ask Fido to <code>greet</code> someone, Fido inherits the <code>greet ( )</code>
 method from [Dog]{.mono}, but [Dog]{.mono} itself couldn’t actually run that method,
@@ -219,7 +219,7 @@ all share the same script.
 ##  Local State in Sprites: Variables and Attributes
 
 A sprite’s memory of its own past history takes two main forms. It has
-*variables,* created explicitly by the user with the "\\`Make a variable\\`"
+*variables,* created explicitly by the user with the "`Make a variable`"
 \index{variable} button; it also has *attributes,* the qualities every
 sprite has automatically, such as <code>position</code>, <code>direction</code>, and <code>pen color</code>.
 Each variable can be examined using its own orange oval block; there is
@@ -297,7 +297,7 @@ Computing,* Gerald Peterson, Ed., IEEE Computer Society Press, 1987.\]
 
 There are three ways to make a child sprite. If you [control-click]{.mono} or
 [right-click]{.mono} on a sprite in the “sprite corral” at the bottom right
-corner of the window, you get a menu that includes "\\`clone\\`" as one of the
+corner of the window, you get a menu that includes "`clone`" as one of the
 choices. There is an <code>a new clone of ( )</code> block\index{a new clone of block}
 in the [Control]{.mono} palette that creates and reports a child sprite. And
 sprites have a “parent” attribute\index{parent attribute} that can be
@@ -316,17 +316,17 @@ getter block for a shared property, in the child’s palette, is displayed
 in a lighter color; separate properties of the child are displayed in
 the traditional colors.
 
-When a new clone is created, by default it shares only its methods, 
-wardrobe, and jukebox with its parent. All other properties are copied 
-to the clone, but not shared. (One exception is that a new *permanent* 
-clone is given a random position. Another is that *temporary* clones 
-share the scripts in their parent’s scripting area. A third is that 
-sprite-local variables that the parent creates *after* cloning are 
-shared with its children.) If the value of a shared property is 
-changed in the parent, then the children see the new value. If the 
-value of a shared property is changed in the *child*, then the sharing 
-link is broken, and a new private version is created in that child. 
-(This is the mechanism by which a child chooses not to share a property with its parent.) “Changed” in this context means using the 
+When a new clone is created, by default it shares only its methods,
+wardrobe, and jukebox with its parent. All other properties are copied
+to the clone, but not shared. (One exception is that a new *permanent*
+clone is given a random position. Another is that *temporary* clones
+share the scripts in their parent’s scripting area. A third is that
+sprite-local variables that the parent creates *after* cloning are
+shared with its children.) If the value of a shared property is
+changed in the parent, then the children see the new value. If the
+value of a shared property is changed in the *child*, then the sharing
+link is broken, and a new private version is created in that child.
+(This is the mechanism by which a child chooses not to share a property with its parent.) “Changed” in this context means using the
 <code>set ( ) to ( )</code> or <code>change ( ) by ( )</code> block for a variable, editing a block in the Block Editor, editing a costume or sound, or inserting, deleting, or reordering costumes or sounds. To change a property from unshared to shared, the child uses the <code>inherit</code> command block. The pulldown menu in the block lists all the things this sprite can inherit from its parent (which might be nothing, if this sprite has no parent) and is not already inheriting. But that would prevent <code>tell</code>ing a child to inherit, so if the <code>inherit</code> block\index{inherit block} is inside a <code>ring</code>, its pulldown menu includes all the things a child could inherit from this sprite. [Right-clicking]{.mono} on the scripting area of a permanent clone gives a menu option to share the entire collection of scripts from its parent, as a temporary clone does.
 
 The rules are full of details, but the basic idea is simple: Parents can
