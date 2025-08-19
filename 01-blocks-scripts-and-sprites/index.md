@@ -200,7 +200,7 @@ scripting area, and click the paint button ![image32.png](assets/image32.png). T
 appears is explained in @sec-the-paint-editor. There are three
 ways to import a costume. First select the desired sprite in the sprite
 corral. Then, one way is to click on the file icon in the tool bar,
-then choose ![image30.png](assets/image30.png) the “`Costumes…`” menu item. You will see a list of costumes
+then choose ![image30.png](assets/image30.png){.image-inline} the “`Costumes…`” menu item. You will see a list of costumes
 from the public media library, and can choose one. The second way, for a
 costume stored on your own computer, is to click on the file icon and
 choose the “Import…” menu item. You can then select a file in any
@@ -221,7 +221,7 @@ mathematician who invented the idea of procedures as data
 \index{procedures as data}, the most important way in which [Snap]{.snap} is
 different from Scratch\index{Scratch}.) You can give a sprite as many
 costumes as you like, and then choose which it will wear either by
-clicking in its wardrobe or by using the ![image35.png](../blocks/images/block_doSwitchToCostume.png) or ![Next Costume](../blocks/images/block_doWearNextCostume.png) block in a script.
+clicking in its wardrobe or by using the ![image35.png](../blocks/images/block_doSwitchToCostume.png){.image-inline} or ![Next Costume](../blocks/images/block_doWearNextCostume.png){.image-inline} block in a script.
 (Every costume has a number as well as a name. The `next` costume block
 selects the next costume by number; after the highest-numbered costume it
 switches to costume 1. The Turtle, costume 0, is never chosen by next
@@ -1737,3 +1737,4 @@ documented separately at
 <http://emu-online.de/ProgrammingWithSciSnap.pdf> and
 <https://maketolearn.org/creating-art-animations-and-music/>
 respectively.
+
