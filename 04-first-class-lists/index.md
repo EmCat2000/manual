@@ -36,7 +36,7 @@ that’s ﬁrst class, not an individual value. Don’t think, for example,
 that some lists are ﬁrst class, while others aren’t. In Snap*!*, lists
 are ﬁrst class, period.
 
-![image523.png](assets/image523.png) <!--  style="width:2.83958in;height:0.41597in" / -->
+![image523.png](assets/image523.png){.image-2x} <!--  style="width:2.83958in;height:0.41597in" / -->
 
 ##  The `list` Block
 
@@ -94,7 +94,7 @@ There are two ways to create a list inside a program. Scratch
 style\index{imperative programming style}, which is based on a set of
 command blocks that modify a list:
 
-![image631.png](assets/image631.png) <!--  style="width:5.88889in;height:1.04861in" / -->
+![image631.png](assets/image631.png){.image-2x} <!--  style="width:5.88889in;height:1.04861in" / -->
 
 As an example, here are two blocks that take a list of numbers as input,
 and report a new list containing only the even numbers from the original
@@ -122,7 +122,7 @@ programming style} is sometimes a simpler and more effective technique,
 especially when dealing with recursively defined data structures. It
 uses reporter blocks, not command blocks, to build up a list value:
 
-![image633.png](assets/image633.png) <!--  style="width:5.88889in;height:1.04861in" / -->
+![image633.png](assets/image633.png){.image-2x} <!--  style="width:5.88889in;height:1.04861in" / -->
 
 In a functional program, we often use recursion to construct a list, one
 item at a time. The `in front of` block \index{`in front of` block} makes a
@@ -137,8 +137,8 @@ block}), which are handled through a recursive call:
 Snap*!*
 uses two different internal representations of lists, one (dynamic
 \index{array, dynamic} array\index{dynamic array}) for imperative
-programming and the other (linked\index{list, linked} list
-\index{linked list}) for functional programming. Each representation
+programming and the other (linked\index{list, linked} list\index{linked list}) 
+for functional programming. Each representation
 makes the corresponding built-in list blocks (commands or reporters,
 respectively) most efficient. It’s possible to mix styles in the same
 program, but if *the same list* is used both ways, the program will run
@@ -171,7 +171,7 @@ this case, because the interior of the ring is a hexagon), rather than
 the value reported by that block. Here’s the difference:
 
 <!-- TODO: this image is squished in its origianl form. -->
-![image634.png](assets/image634.png)
+![image634.png](assets/image634.png){.image-2x}
 
 Evaluating the `=` block without a ring reports `true` or `false`; evaluating
 the block *with* a ring reports the block itself. This allows `keep` to
@@ -186,7 +186,7 @@ function}).
 Snap*!* provides four higher order function blocks for operating on
 lists:
 
-![image636.png](assets/image636.png)
+![image636.png](assets/image636.png){.image-2x}
 
 ### The `map` block {#sec-map}
 
@@ -264,7 +264,7 @@ We mentioned earlier that there are two ways of representing lists
 visually. For one-dimensional lists (lists whose items are not
 themselves lists) the visual differences are small:
 
-![image640.png](assets/image640.png) <!--  style="width:2.375in;height:0.27778in" / -->
+![image640.png](assets/image640.png){.image-2x} <!--  style="width:2.375in;height:0.27778in" / -->
 
 For one-dimensional lists, it’s not really the appearance that’s
 important. What matters is that the *list view* allows very versatile
@@ -280,7 +280,7 @@ slow. As a partial workaround, the list view can only contain 100 items
 at a time; the downward-pointing arrowhead opens a menu in which you can
 choose which 100 to display.
 
-![image641.png](assets/image641.png) <!--  style="width:2.375in;height:0.27778in" / -->
+![image641.png](assets/image641.png){.image-2x} <!--  style="width:2.375in;height:0.27778in" / -->
 
 By contrast, because it doesn’t allow direct editing, the *table view*
 watcher can hold hundreds of thousands of items and still scroll through
@@ -408,14 +408,18 @@ Here’s what the corresponding table looks like:
 
 <!-- This image needs work. It shouldn't include the csv in text form, and the two views of the list should be captioned. Ideally this would be two separate captioned pictures on the same line. bh -->
 
-![image643.png](assets/image643.png) <!--  style="width:3.35417in;height:0.69444in" / -->
+<!-- ![image643.png](assets/image643.png)  style="width:3.35417in;height:0.69444in" / -->
+
+![table view](assets/table-view.png)
+![list view](assets/list-view.png)
 
 Here’s how to read a spreadsheet into Snap*!*:
 
 1. Make a variable
-with a watcher on stage: ![image607.png](assets/image607.png) <!--  style="width:1.20833in;height:0.27083in" alt="Macintosh HD:Users:bh:Desktop:pix:watcher.png" / -->
+with a watcher on stage: ![image607.png](assets/image607.png) <!-- style="width:1.20833in;height:0.27083in" alt="Macintosh HD:Users:bh:Desktop:pix:watcher.png" -->
 
-<!-- The background of this picture should be transparent, not white. bh -➞
+<!-- The background of this picture should be transparent, not white. bh  -->
+
 
 2. Right-click on the watcher and choose the “`import`” option. (If the
 variable’s value is already a list, be sure to click on the outside
@@ -451,8 +455,8 @@ and then exported again,
 getting this file:
 
 ``
-\[\["John","Lennon","rhythm guitar"\],\[\["James","Paul"\],"McCartney","bass
-guitar"\],\["George","Harrison","lead guitar"\],\["Ringo","Starr","drums"\]\]
+[["John","Lennon","rhythm guitar"],[["James","Paul"],"McCartney","bass
+guitar"],["George","Harrison","lead guitar"],["Ringo","Starr","drums"]]
 ``
 
 You can also import lists, including tables, from a `.json` file. (And you
@@ -520,10 +524,10 @@ always reporting a single Boolean result), `and` and `or` (because they
 don’t evaluate their second input at all if the first input determines
 the result), `join` (because it converts non-scalar (and other non-text)
 inputs to text string form), and `is a (type)` (because it applies to its
-input as a whole). Blocks whose inputs are “natively” lists, such as ![image193.png](assets/image193.png) <!--  style="width:0.88958in;height:0.2in" / --> and
+input as a whole). Blocks whose inputs are “natively” lists, such as ![image193.png](assets/image193.png){.image-2x} <!--  style="width:0.88958in;height:0.2in" / --> and
 ![image621.png](assets/image621.png) <!--  style="width:1.02986in;height:0.18958in" --> , are never hyperblocks.
 
-![image205.png](assets/image205.png) <!--  style="width:2.09917in;height:0.2475in" alt="Application Description automatically generated with low confidence" / --> The
+![image205.png](assets/image205.png){.image-inline} <!--  style="width:2.09917in;height:0.2475in" alt="Application Description automatically generated with low confidence" / --> The
 `reshape` block\index{`reshape` block} takes a list (of any depth) as its
 first input, and then takes zero or more sizes along the dimensions of
 an array. In the example it will report a table (a matrix) of four rows
@@ -534,16 +538,16 @@ block starts again at the head of the list, using values more than once.
 If more values are provided than needed, the extras are ignored; this
 isn’t an error.
 
-![image203.png](assets/image203.png) <!--  style="width:1.76in;height:0.2in" / -->  The
+![image203.png](assets/image203.png){.image-inline} <!--  style="width:1.76in;height:0.2in" / -->  The
 `combinations` block takes any number of lists as input; it reports a list
 in which each item is a list whose length is the number of inputs; item
 *i* of a sublist is an item of input *i.* Every possible combination of
 items of the inputs is included, so the length of the reported list is
 the product of the lengths of the inputs.
 
-![image622.png](assets/image622.png) <!--  style="width:5.23958in;height:1.67986in" alt="Graphical user interface, text, application Description automatically generated" / -->
+![image622.png](assets/image622.png){.image-2x} <!--  style="width:5.23958in;height:1.67986in" alt="Graphical user interface, text, application Description automatically generated" / -->
 
-![image204.png](assets/image204.png) <!--  style="width:1.34in;height:0.25in" alt="Icon Description automatically generated" / -->  The `item of` block
+![image204.png](assets/image204.png){.image-inline} <!--  style="width:1.34in;height:0.25in" alt="Icon Description automatically generated" / -->  The `item of` block
 \index{`item of` block} has a special set of rules, designed to preserve
 its pre-hyperblock meaning and also provide a useful behavior when given
 a list as its first (index) input:

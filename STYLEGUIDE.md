@@ -112,13 +112,17 @@ Pictures in line with text (typically a single block):  Text Wrap > Tight, then 
 Writing style:  Use exclamation points (other than in the name "Snap!") very sparingly; they should indicate danger, not enthusiasm.  Absolutely do not suggest that something is "fun" or "interesting," etc.  (But "more interesting" is okay when it means that you are giving a first, trivial example followed by an example that actually does something useful.)
 
 First person:  Although the manual has two official authors, it's okay to use "I" when describing how you programmed something, e.g.,
+
 >    the word “bark” is just an arbitrary name I made up
+
 on page 9.  But when documenting a disagreement, use "Jens thinks..." and "Brian thinks...," not "I think..."  (We should try to minimize the need to document significant disagreements by resolving them!)  It's also okay to use "we" for uncontroversial choices, both about Snap! itself and about examples in the manual ("we used...").  But /do not/ use "we" for a putative group including yourself and the reader, as in "next we should..."  The reader is "you."
 
 Second person:  Theoretically, "you" belongs in a tutorial, not in a reference manual.  But the distinction is somewhat blurred in this manual, which is more nearly a reference in the early chapters and more nearly a tutorial in the OOP ones.  But as early as page 9 we have
+
 >    In text input slots, a space character is shown as a brown dot, so that
 >    you can count the number of spaces between words, and in particular you
 >    can tell the difference between an empty slot and one containing spaces.
+
 This is all okay, even though the occasional professor user complains about it.
 
 Index:  The hardest and most annoying part of writing the manual (not counting fighting with Microsoft and Adobe) is indexing (as for any nonfiction writing).  Make index entries for *names* (of blocks, of menu options, of dropdown input options) and for *ideas* (both "lexical scope" and "scope, lexical"; every significant word in the idea's name should have an index entry).  People's names are indexed only by family name.  If this is your first time, read the existing index to learn how entries are styled.  Make sure that the index entries have the correct fonts!  You can edit the text of the entry before you click "Mark" in the dialog.  The index should probably be two or three times its current size, given the manual's current contents.  If something isn't indexed, it effectively isn't in the manual.
@@ -130,11 +134,15 @@ Use parentheses instead of dashes, all else being equal, but try not to nest par
 I tend to parenthesize too much, including several-sentence digressions, after which I forget the close paren.  If you find one of those, remove the open paren, probably.  Word changes " into curly quotes, and once in a rare while it gets confused about whether or not it's inside quoted text.  Keep an eye out.
 
 Never (really, never) put a colon between a verb and its object, even if the object is a picture.  That is, you wouldn't say
+
 >X   The higher order functions are: map, keep, and combine.
+
 so you equally can't say "The higher order functions are:" followed by a picture of three blocks.  Instead, rephrase to avoid the need for the colon or to move the verb elsewhere in the sentence.
->    There are three higher order functions:
->    Here are the higher order functions:
->    The next category of blocks is higher order functions.
+
+* There are three higher order functions:
+* Here are the higher order functions:
+* The next category of blocks is higher order functions.
+
 That last alternative doesn't need a colon, although it wouldn't hurt.  (Note in passing that the subject of that last alternative is "category," not "blocks," so its verb is in the singular.)
 
 Widows and orphans:  In this context, a "widow" is the last line of a paragraph, separated from the rest of the paragraph by a page break.  An "orphan" is the first line of a paragraph, or a heading line, separated from the following text by a page break.  Printers have used "widow" since forever; I never heard "orphan" until computer typesetting became a thing, probably because orphans are easy to fix: Insert a page break.  Fixing a widow, though, involves tiny tweaks to spacing, may involve changes to several previous pages, may involve changes to the actual text, and requires a sense of aesthetics.  If you solve either kind of problem with explicit page breaks, remember that the next change to the text of the manual may result in an almost-empty page downstream.  In particular, don't think about widows or orphans until you've finished typing in all of the text you're adding!
@@ -149,6 +157,7 @@ Scratch:  We officially think that the reader of the manual has used Scratch.  T
 ### HOW TO MAKE THE MANUAL:
 
 Yes, this is a 22-step process.  :-(
+
 0.  Change version number on the cover and at the top of page 5.  If there has been a really major change (e.g., hyperblocks), consider updating the picture on the cover.
 1.  Save changes.
 2.  Remake table of contents: Click on "Table of Contents" at the top of page 2, then choose Update, then choose one of the two options depending on whether you have changed, added, or deleted any headings.
