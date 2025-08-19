@@ -1591,7 +1591,7 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>image743.png</figcaption>
 </figure>
 </div>
-<p>Here we are calling the Reporter <code>multiply by (10)<code> three times, once with each item of the given list as its input, and collecting the results as a list. (The reported list will always be the same length as the input list.) Note that the <code>multiplication</code> block has two inputs, but here we have specified a particular value for one of them (10), so the <code>call</code> block knows to use the input value given to it just to fill the other (empty) input slot in the <code>multiplication</code> block. In the <code>my map</code> definition, the input <var>function</var> is declared to be type Reporter, and <var>data</var> is of type List.</code></code></p><code><code>
+<p>Here we are calling the Reporter <code>multiply by (10)</code> three times, once with each item of the given list as its input, and collecting the results as a list. (The reported list will always be the same length as the input list.) Note that the <code>multiplication</code> block has two inputs, but here we have specified a particular value for one of them (10), so the <code>call</code> block knows to use the input value given to it just to fill the other (empty) input slot in the <code>multiplication</code> block. In the <code>my map</code> definition, the input <var>function</var> is declared to be type Reporter, and <var>data</var> is of type List.</p>
 <section id="callrun-with-inputs" class="level3" data-number="6.1.1">
 <h3 data-number="6.1.1" class="anchored" data-anchor-id="callrun-with-inputs"><span class="header-section-number">6.1.1</span> Call/Run with inputs</h3>
 <p>The <code>call</code> block (like the <code>run</code> block) has a right arrowhead at the end; clicking on it adds the phrase “<code>with inputs</code>” and then a slot into which an input can be inserted:</p>
@@ -1609,7 +1609,7 @@ ul.task-list li input[type="checkbox"] {
 <h3 data-number="6.1.2" class="anchored" data-anchor-id="variables-in-ring-slots"><span class="header-section-number">6.1.2</span> Variables in Ring Slots</h3>
 <p>Note that the <code>run</code> block<span></span> in the definition of the <code>my for</code> block (see <span class="quarto-unresolved-ref">?sec-call-and-run</span>) doesn’t have a <code>ring</code> around its input variable <var>action</var>. When you drag a variable into a ringed input slot, you generally <em>do</em> want to use <em>the value of</em> the variable, which will be the block or script you’re trying to run or call, rather than the orange variable reporter itself. So <span class="snap">Snap</span> automatically removes the ring in this case. If you ever do want to use the variable <em>block itself,</em> rather than the value of the variable, as a Procedure-type input, you can drag the variable into the input slot, then control-click or right-click it and choose “<code>ringify</code>” from the menu that appears. (Similarly, if you ever want to call a function that will report a block to use as the input, such as <code>item (1) of ( ) </code> applied to a list <em>of blocks,</em> you can choose “<code>unringify</code>” from the menu. Almost all the time, though, <span class="snap">Snap</span> does what you mean without help.)</p>
 </section>
-</code></code></section><code><code>
+</section>
 <section id="writing-higher-order-procedures" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="writing-higher-order-procedures"><span class="header-section-number">6.2</span> Writing Higher Order Procedures</h2>
 <p>A <em>higher order procedure</em><span></span> is one that takes another procedure as an input, or that reports a procedure. In this document, the word “<code>procedure</code>”<span></span> encompasses scripts, individual blocks, and nested reporters. (Unless specified otherwise, “reporter” includes predicates. When the word is capitalized inside a sentence, it means specifically oval-shaped blocks. So, “nested reporters” includes predicates, but “a Reporter-type input” doesn’t.)</p>
@@ -1696,7 +1696,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 </section>
 
-</code></code></code></code></main><code><code> <!-- /main -->
+</code></code></main><code><code> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
