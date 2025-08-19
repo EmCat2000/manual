@@ -103,6 +103,7 @@ in the Control palette\index{Control palette}. The slot inside the C
 shape is a special kind of input slot that accepts a *script* as the
 input.
 
+<!-- TODO-mb: These images are a bit small on the web. -->
 ::: {.evenly-spaced-images layout-ncol=4}
 In the sample script
 
@@ -439,7 +440,7 @@ shorthand for “Command type, Reporter type, or Predicate type.”
 If you want to put
 a *constant* Boolean\index{Boolean constant} value in a hexagonal slot
 instead of a predicate-based expression, hover the mouse over the block
-and click on the control that appears: 
+and click on the control that appears:
 
 ![image91.png](assets/image91.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> ![image92.png](assets/image92.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / -->
 
@@ -853,7 +854,7 @@ can provide additional inputs.
 
 ![image177.png](assets/image177.png) <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated with medium confidence" / -->
 ![image178.png](assets/image178.png) <!--  style="width:0.63in;height:0.19in" alt="A picture containing text, monitor, screenshot Description automatically generated" / -->
-![image179.png](assets/image179.png) <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated" / -->  
+![image179.png](assets/image179.png) <!--  style="width:0.63in;height:0.19in" alt="Logo Description automatically generated" / -->
 
 Similarly, these\index{*less-than-or-equal@\texttt{≤} block} hidden predicates can be found by relabeling the relational predicates.
 
@@ -956,7 +957,11 @@ for positive input, 0 for zero input, or -1 for negative input.
 The ![length of text block](../blocks/images/block_reportTextAttribute.png){.image-inline} name was changed to clarify it is different from ![length of text block](../blocks/images/block_reportListAttribute.png){.image-inline}
 :::
 
-![image308.png](assets/image308.png) <!-- {width=1.05208in height=0.28125in} -->
+![image308.png](assets/image308.png)
+
+`+` and `×` are *variadic*: they take two or more inputs. If
+you drop a list on the arrowheads, the block name
+changes to `sum` or `product`.
 
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image309.png](assets/image309.png)
@@ -1735,6 +1740,3 @@ documented separately at
 <http://emu-online.de/ProgrammingWithSciSnap.pdf> and
 <https://maketolearn.org/creating-art-animations-and-music/>
 respectively.
-
-
-
