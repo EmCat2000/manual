@@ -130,12 +130,15 @@ input.
 In the sample script
 
 ![image6.png](assets/image6.png)
+```
 
+```
 the `repeat` block has two inputs: the number 4 and the script
 
 ![image11.png](assets/image11.png)
+```
 
-:::
+```
 
 C-shaped blocks can be put in a script in two ways. If you see a white
 line and let go, the block will be inserted into the script like any
@@ -143,9 +146,15 @@ command block:
 
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image12.png](assets/image12.png)
+```
+
+```
 
 ![image13.png](assets/image13.png)
 :::
+```
+
+```
 
 <!-- Note until images are cleaned up 12 and 14 were identical, 13 and 15 were identical. -->
 
@@ -154,18 +163,30 @@ the haloed blocks:
 
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image16.png](assets/image16.png)
+```
+
+```
 
 ![image17.png](assets/image17.png)
 :::
+```
+
+```
 
 The halo will always extend from the cursor position to the bottom of
 the script:
 
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image18.png](assets/image18.png)
+```
+
+```
 
 ![image19.png](assets/image19.png)
 :::
+```
+
+```
 
 If you want only some of those blocks, after wrapping you can grab the
 first block you don’t want wrapped, pull it down, and snap it under the
@@ -177,6 +198,9 @@ slot is empty before wrapping. (You can fill the other slots by dragging
 blocks into the desired slot.)
 
 ![image24.png](assets/image24.png)
+```
+
+```
 
 ## Sprites and Parallelism {#sec-sprites-parallelism}
 
@@ -193,9 +217,14 @@ scripting area:
 
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image26.png](assets/image26.png)
+```
+
+```
 
 ![image27.png](assets/image27.png)
-:::
+```
+
+```
 
 When you click the green flag, you should see one sprite rotate while
 the other moves back and forth. This experiment illustrates the way
@@ -205,9 +234,14 @@ scripts of a single sprite also. Try this example:
 
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image28.png](assets/image28.png)
+```
+
+```
 
 ![image29.png](assets/image29.png)
-:::
+```
+
+```
 
 When you click the green flag, the sprite should move back and forth
 
@@ -251,9 +285,13 @@ switches to costume 1. The Turtle, costume 0, is never chosen by next
 costume.) The Turtle costume\index{Turtle costume} is the only one that
 changes color to match a change in the sprite’s pen color.
 
-::: {.callout-tip}
-Protip: ![Switch to costumer (() - 1)](assets/image33.png){.image-inline} switches to the *previous* costume, wrapping like `next costume`.
-:::
+{.callout-tip}
+Protip: ![Switch to costumer (() - 1)](assets/image33.png){.image-inline} 
+```
+
+```
+switches to the *previous* costume, wrapping like `next costume`.
+
 
 In addition to its costumes, a sprite can have *sounds;* the equivalent for
 sounds of the sprite’s wardrobe is called its *jukebox.*\index{jukebox}
