@@ -26,6 +26,17 @@ A [Snap]{.snap} program\index{"Snap! program"} consists of one or more
 
 ![image6.png](assets/image6.png){#fig-draw-square}
 
+```
+(
+    (receiveGo) 
+    (down) 
+    (repeat 4 (
+        (move 100) 
+        (right 90)
+    ))
+)
+```
+
 The five blocks\index{block} that make up this script have three different
 colors, corresponding to three of the eight *palettes* in which blocks
 can be found. The palette\index{palette} area at the left edge of the
@@ -45,6 +56,9 @@ is near the tab of the one above it:
 ![image8.png](assets/image8.png)
 :::
 
+```
+
+```
 The white horizontal line is a signal that if you let go of the green
 block it will snap into the tab of the gold one.
 
@@ -65,7 +79,11 @@ that.[^1]
 
 <!-- TODO: Different CSS for an inline hat block? -->
 [^1]: One of the hat blocks, the generic\index{hat block!generic}
-“when anything” block ![generic when hat block](assets/image10.png){.image-inline #fig-generic-when}, is subtly different from the others. When the stop
+“when anything” block ![generic when hat block](assets/image10.png){.image-inline #fig-generic-when}
+```
+
+```
+, is subtly different from the others. When the stop
 sign is clicked, or when a project or sprite is loaded, this block
 doesn’t test whether the condition in its hexagonal input slot is true,
 so the script beneath it will not run, until some *other* script in the
@@ -77,7 +95,11 @@ instead of octagonal. {#para-generic-when}
 The other blocks in our example script are *command* blocks
 \index{block!command}. Each command block\index{command block}
 corresponds to an action that [Snap]{.snap} already knows how to carry out.
-For example, the block ![image9.png](../blocks/images/block_forward.png){.image-inline} tells the sprite\index{sprite} (the arrowhead
+For example, the block ![image9.png](../blocks/images/block_forward.png){.image-inline} 
+```
+
+```
+tells the sprite\index{sprite} (the arrowhead
 shape on the *stage*\index{stage} at the right end of the window) to
 move ten steps (a step is a very small unit of distance) in the
 direction in which the arrowhead is pointing. We’ll see shortly that
