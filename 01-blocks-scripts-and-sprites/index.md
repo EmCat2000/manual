@@ -278,7 +278,11 @@ mathematician who invented the idea of procedures as data
 \index{procedures as data}, the most important way in which [Snap]{.snap} is
 different from Scratch\index{Scratch}.) You can give a sprite as many
 costumes as you like, and then choose which it will wear either by
-clicking in its wardrobe or by using the ![image35.png](../blocks/images/block_doSwitchToCostume.png){.image-inline} or ![Next Costume](../blocks/images/block_doWearNextCostume.png){.image-inline} block in a script.
+clicking in its wardrobe or by using the ![image35.png](../blocks/images/block_doSwitchToCostume.png){.image-inline} or ![Next Costume](../blocks/images/block_doWearNextCostume.png){.image-inline} 
+```
+
+```
+block in a script.
 (Every costume has a number as well as a name. The `next` costume block
 selects the next costume by number; after the highest-numbered costume it
 switches to costume 1. The Turtle, costume 0, is never chosen by next
@@ -298,8 +302,16 @@ sounds of the sprite’s wardrobe is called its *jukebox.*\index{jukebox}
 Sound files\index{play sound block} can be imported in any format
 (WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish
 the task of playing sounds\index{playing sounds}. If you would like a
-script to continue running while the sound is playing, use the block ![image39.png](assets/image39.png).
-In contrast, you can use the block ![image38.png](assets/image38.png) to wait for the sound's completion
+script to continue running while the sound is playing, use the block ![image39.png](assets/image39.png)
+```
+
+```
+.
+In contrast, you can use the block ![image38.png](assets/image38.png)
+```
+
+```
+ to wait for the sound's completion
 before continuing the rest of the script.
 
 ### Inter-Sprite Communication with Broadcast
@@ -314,20 +326,36 @@ another sprite to run a script. Here’s a simple example:
 ![image41.png](assets/image41.png)
 
 ![image42.png](assets/image42.png)
+```
+
+```
 
 ![image43.png](assets/image43.png)
 
 ![image44.png](assets/image44.png)
-:::
+```
 
+```
 
-In the block ![image40.png](assets/image40.png){.image-inline}, the word “bark” is just an arbitrary name I made up. When you
+In the block ![image40.png](assets/image40.png){.image-inline}
+```
+
+```
+, the word “bark” is just an arbitrary name I made up. When you
 click on the downward arrowhead in that input slot, one of the choices
 (the only choice, the first time) is “new,” which then prompts you to
 enter a name for the new broadcast. When this block is run, the chosen
 message is sent to *every* sprite, which is why the block is called
 “broadcast.” (But if you click the right arrow after the message name,
-the block becomes ![image45.png](assets/image45.png){.image-inline}, and you can change it to ![image46.png](assets/image46.png){.image-inline} to send the message just
+the block becomes ![image45.png](assets/image45.png){.image-inline}
+```
+
+```
+, and you can change it to ![image46.png](assets/image46.png){.image-inline}
+```
+
+```
+ to send the message just
 to one sprite.) In this program, though, only one sprite has a script to
 run when that broadcast is sent, namely the dog. Because the boy’s
 script uses `broadcast and wait`\index{broadcast and wait block} rather
@@ -390,7 +418,11 @@ blocks.) Any change in the position or size of the anchor is always
 extended to its parts. Also, cloning the anchor (see Section VII. B)
 will also clone all its parts.
 
-![image56.png](assets/image56.png) <!-- {width=1.44444in height=1.5625in} --> ![image48.png](assets/image48.png) <!-- {width=1.63056in height=0.96528in} -->
+![image56.png](assets/image56.png) <!-- {width=1.44444in height=1.5625in} --> 
+```
+
+```
+![image48.png](assets/image48.png) <!-- {width=1.63056in height=0.96528in} -->
 ![image49.png](assets/image49.png) <!-- {width=1.63056in height=0.96528in} -->
 
 *Top: turning the part: the green arm. Bottom: turning the anchor, with
@@ -401,7 +433,11 @@ the arm synchronous (left) and dangling (right).*
 So
 far, we’ve used two kinds of blocks\index{block!reporter}: hat blocks
 and command blocks. Another kind is the *reporter* block,\index{Reporter
-block} which has an oval shape: ![image66.png](assets/image66.png) <!-- {width=0.72917in height=0.15625in} --> . It’s called a “reporter” because
+block} which has an oval shape: ![image66.png](assets/image66.png) <!-- {width=0.72917in height=0.15625in} --> 
+```
+
+```
+. It’s called a “reporter” because
 when it’s run, instead of carrying out an action, it reports a value
 that can be used as an input to another block. If you drag a ![image65.png](assets/image65.png){.image-inline} <!-- {width=1.47in height=0.52in} --> reporter
 into the scripting area by itself and click on it, the value it reports
@@ -412,15 +448,24 @@ When you drag a reporter block over another block’s input slot, a white
 white line that appears when snapping command blocks together:
 
 ![image67.png](assets/image67.png) <!-- {width=1.47in height=0.52in} -->
+```
+
+```
 
 Don’t drop the input over a *red* halo:
 ![image71.png](assets/image71.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / -->
+```
+
+```
 
 That’s used for a purpose explained in @sec-recursive-calls-to-multiple-input-blocks.
 
 Here’s a simple script that uses a reporter block:
 
 ![image72.png](assets/image72.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / -->
+```
+
+```
 
 Here the `x position` reporter provides the first input to the say block.
 (The sprite’s X position\index{X position} is its horizontal position,
@@ -433,6 +478,9 @@ You can do arithmetic\index{arithmetic} using reporters in the
 Operators palette:
 
 ![image73.png](assets/image73.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / -->
+```
+
+```
 
 The `round` block rounds 35.3905… to 35, and the `+` block adds 100 to that.
 (By the way, the `round` block is in the Operators palette, just like `+`,
@@ -441,47 +489,84 @@ but in this script it’s a lighter color with black lettering because
 block is nested inside another block from the same palette:
 
 ![image80.png](assets/image80.png) <!-- {width=4.85417in height=1.90625in} -->
+```
+
+```
 
 This
 aid to readability is called *zebra coloring.*\index{zebra coloring}
 A reporter block with its inputs, maybe including other reporter
-blocks, such as ![image81.png](assets/image81.png) <!-- {width=1.91667in height=0.23958in} -->, is called an *expression.*\index{expression}
+blocks, such as ![image81.png](assets/image81.png) <!-- {width=1.91667in height=0.23958in} -->
+```
+
+```
+, is called an *expression.*\index{expression}
 
 ##  Predicates and Conditional Evaluation {#sec-sec-predicates-and-conditional-evaluation}
 
-Most reporters report\index{block!predicate} either a number, like ![image82.png](../blocks/images/block_reportVariadicSum.png){.image-inline},
+Most reporters report\index{block!predicate} either a number, like ![image82.png](../blocks/images/block_reportVariadicSum.png){.image-inline}
+```
+
+```
+,
 or a text string, like
-![image83.png](../blocks/images/block_reportJoinWords.png){.image-inline}.
+![image83.png](../blocks/images/block_reportJoinWords.png){.image-inline}
+```
+
+```
+.
 A *predicate* is a special kind of reporter that
 always reports true or false. Predicates\index{Predicate block} have a
 hexagonal shape\index{hexagonal shape}: ![image85.png](../blocks/images/block_reportMouseDown.png){.image-inline}
+```
+
+```
 
 The special shape is a reminder that predicates don’t generally make sense
 in an input slot of blocks that are expecting a number or text. You
-wouldn’t say ![image84.png](assets/image84.png), although (as you can see from the picture) [Snap]{.snap} lets
+wouldn’t say ![image84.png](assets/image84.png)
+```
+
+```
+, although (as you can see from the picture) [Snap]{.snap} lets
 you do it if you really want. Instead, you normally use predicates in
 special hexagonal input slots like this one:
 
 ![image86.png](../blocks/images/block_doIf.png){.image-4x}
+```
+
+```
 
 The C-shaped if block\index{if block} runs its input script if (and only
 if) the expression in its hexagonal input reports true.
 ![image87.png](assets/image87.png)
+```
+
+```
 
 A really useful block\index{repeat until block} in animations
 \index{animation} runs its input script *repeatedly* until a predicate
 is satisfied: ![image89.png](assets/image89.png)
+```
+
+```
 
 If, while working on a project, you want to omit temporarily some commands
 in a script, but you don’t want to forget where they belong, you can say
 
 ![image88.png](assets/image88.png) <!-- {width=2.28194in height=1.46875in} -->
+```
+
+```
 
 Sometimes you want to take the same action whether some condition is
 true or false, but with a different input value. For this purpose you
 can use the *reporter* `if` block\index{reporter if block} :
 
 ![image90.png](assets/image90.png) <!-- {width=4.20833in height=0.38542in} -->
+```
+
+```
 
 The technical term for a true or false value is a “Boolean\index{Boolean} ”
 value; it has a capital B because it’s named after a person, George
@@ -502,18 +587,31 @@ a *constant* Boolean\index{Boolean constant} value in a hexagonal slot
 instead of a predicate-based expression, hover the mouse over the block
 and click on the control that appears:
 
-![image91.png](assets/image91.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> ![image92.png](assets/image92.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / -->
+![image91.png](assets/image91.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> 
+```
+
+```
+![image92.png](assets/image92.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / -->
+```
+
+```
 
 ## Variables
 
 Try
 this script:
 ![image93.png](assets/image93.png) <!-- {width=1.58333in height=1.41667in} -->
+```
+
+```
 
 The
 input to the move block is an orange oval. To get it there, drag the
 orange oval that’s part of the `for` block\index{for block} :
 ![image94.png](assets/image94.png) <!-- {width=1.88542in height=1.4375in} -->
+```
+
+```
 
 The orange oval\index{orange oval} is a *variable:* a symbol that
 represents a value. (I took this screenshot before changing the second
@@ -556,6 +654,9 @@ This will bring up a dialog window in which you can give your variable a
 name:
 
 ![image96.png](assets/image96.png) <!-- {width=3.1875in height=1.84375in} -->
+```
+
+```
 
 The dialog also gives you a choice to make the variable available to all
 sprites (which is almost always what you want) or to make it visible
@@ -587,6 +688,9 @@ When you give the variable a value, the orange box in its watcher
 How *do* you give it a value?
 You use the `set` block\index{set block} :
 ![image100.png](assets/image100.png) <!-- {width=1.92708in height=0.47917in} -->
+```
+
+```
 
 Note that you *don’t* drag the variable’s oval into the `set` block! You
 click on the downarrow in the first input slot, and you get a menu of
@@ -594,6 +698,9 @@ all the available variable names.
 
 If you do choose “For this sprite only\index{For this sprite only} ”
 when creating a variable, its block in the palette looks like this:![image101.png](assets/image101.png) <!--  style="width:0.65833in;height:0.14167in" alt="Macintosh HD:Users:bh:Desktop:local-var.png" / -->
+```
+
+```
 
 The *location*-pin
 \index{location-pin} icon is a bit of a pun on a sprite-*local* variable
@@ -613,6 +720,9 @@ script variables block\index{script variables block} to make the
 variable:
 
 ![image105.png](assets/image105.png) <!-- {width=2.08333in height=0.30208in} -->
+```
+
+```
 
 As in the `for` block, you can click on an orange oval in the script
 variables block without dragging to change its name. You can also make
@@ -620,6 +730,9 @@ more than one temporary variable by clicking on the right arrow at the
 end of the block to add another variable oval:
 
 ![image106.png](assets/image106.png) <!-- {width=2.08333in height=0.30208in} -->
+```
+
+```
 
 ### Renaming variables\index{renaming variables}
 
@@ -647,6 +760,9 @@ orange oval in a context in which the variable is *used,* then you are
 able to rename just that one orange oval:
 
 ![image104.png](assets/image104.png) <!-- {width=2.08333in height=0.30208in} -->
+```
+
+```
 
 If you right-click on the
 place where the variable is *defined* (a script variables block, the
@@ -657,6 +773,9 @@ given two renaming options, “rename” and “rename all.” If you choose
 the previous case:
 
 ![image103.png](assets/image103.png) <!-- {width=2.08333in height=0.30208in} -->
+```
+
+```
 
 But if you choose “rename
 all,” then the name will be changed throughout the scope of the variable
@@ -674,6 +793,9 @@ collect many values in one data structure, and in Chapter VIII you’ll
 see how to read information from web sites.
 
 ![image102.png](assets/image102.png) <!-- {width=2.08333in height=0.30208in} -->
+```
+
+```
 
 When you use these
 capabilities, your project may take up a lot of memory\index{memory} in
