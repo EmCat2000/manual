@@ -839,7 +839,11 @@ again resumes the paused scripts.
 The pause button is great if your program seems to be in an infinite loop,
 but more often you’ll want
 to set a *breakpoint,* a particular point in a script at which you want
-to pause. The ![image117.png](../blocks/images/block_doPauseAll.png){.image-inline} block, near the bottom of the Control palette, can be
+to pause. The ![image117.png](../blocks/images/block_doPauseAll.png){.image-inline} block
+```
+
+```
+, near the bottom of the Control palette, can be
 inserted in a script to pause when it is run. So, for example, if your
 program is getting an error message in a particular block, you could use
 `pause all` just before that block to look at the values of variables just
@@ -851,7 +855,9 @@ a running script and the menu that appears will give you the option to
 show watchers for temporary variables of the script:
 
 ![image118.png](assets/image118.png)
+```
 
+```
 But what if the block with the error is run many times in a loop, and it
 only errors when a particular condition is true — for example, when the value of some
 variable is negative, which shouldn’t ever happen. In the iteration
@@ -860,7 +866,9 @@ libraries) is a breakpoint block that lets you set a *conditional*
 breakpoint\index{conditional breakpoint}, and automatically display the relevant variables before pausing. Here’s a sample use of it:
 
 ![image119.png](assets/image119.png) <!-- {width=1.19444in height=1.33333in} -->
+```
 
+```
 (In this contrived example,
 variable <var>zot</var> comes from outside the script but is relevant to its
 behavior.) When you continue (with the pause button), the temporary
@@ -873,7 +881,11 @@ block\index{show variable block} s can also be used to hide and show
 primitives\index{hide and show primitives} in the palette. The pulldown
 menu doesn’t include primitive blocks, but there’s a generally useful
 technique to give a block input values it wasn’t expecting using run or
-call:![image120.png](assets/image120.png) <!-- {width=3.9375in height=0.38889in} --> <br>
+call:![image120.png](assets/image120.png) <!-- {width=3.9375in height=0.38889in} -->
+```
+
+```
+<br>
 In order to use a block as an input this way, you must explicitly put a
 ring around it, by right-clicking on it and choosing ringify. More about
 rings in Chapter VI.
@@ -890,7 +902,9 @@ control slider ![image122.png](assets/image122.png) <!-- {width=0.54563in height
 the script, its blocks and input slots will light up cyan one at a time:
 
 ![image124.png](assets/image124.png) <!-- {width=0.54563in height=0.15278in} -->
+```
 
+```
 In this simple example, the inputs to the blocks are constant values,
 but if an input were a more complicated expression involving several
 reporter blocks, each of those would light up as they are called. Note
@@ -929,13 +943,24 @@ at least part of its name, type <kbd>control-F</kbd> and enter the name in the t
 Here are some of the primitive blocks that don’t exist in Scratch:
 
 ![image136.png](assets/image136.png)
+```
+
+```
 reports\index{pen trails
 block}\index{pen vectors block}, a new costume consisting of everything
 that’s drawn on the stage by any sprite. Right-clicking the block in the
-scripting area gives the option to change it to ![image135.png](assets/image135.png) if vector logging is enabled. See @para-log-pen-vectors.
+scripting area gives the option to change it to ![image135.png](assets/image135.png)
+```
+
+```
+ if vector logging is enabled. See @para-log-pen-vectors.
 
 ![image137.png](assets/image137.png){.image-inline} Print
-characters\index{write block} in the given point size on the stage, at
+characters\index{write block}
+```
+
+```
+ in the given point size on the stage, at
 the sprite’s position and in its direction. The sprite moves to the end
 of the text. (That’s not always what you want, but you can save the
 sprite’s position before using it, and sometimes you need to know how
@@ -943,18 +968,39 @@ big the text turned out to be, in turtle steps.) If the pen is down, the
 text will be underlined.
 
 ![image138.png](assets/image138.png){.image-inline}
+```
+
+```
+
 Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)
 
 ![image139.png](assets/image139.png){.image-inline}
+```
+
+```
+
 Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.)
 
 ![image142.png](assets/image142.png){.image-inline} See @fig-generic-when.
+```
+
+```
 
 ![image141.png](assets/image141.png){.image-inline} See @sec-pause-all.
+```
+
+```
 
 ![image140.png](assets/image140.png){.image-inline} Runs only this script until finished. In the Control palette even though it’s gray.
+```
 
-![image143.png](assets/image143.png){.image-inline} <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> Reporter
+```
+
+![image143.png](assets/image143.png){.image-inline} <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> 
+```
+
+```
+Reporter
 version of the `if/else` primitive command block\index{if else reporter
 block} . Only one of the two branches is evaluated, depending on the
 value of the first input.
@@ -1147,7 +1193,9 @@ The ![length of text block](../blocks/images/block_reportTextAttribute.png){.ima
 <!-- ::: -->
 
 ![image308.png](assets/image308.png)
+```
 
+```
 `+` and `×` are *variadic*: they take two or more inputs. If
 you drop a list on the arrowheads, the block name
 changes to `sum` or `product`.
