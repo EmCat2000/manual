@@ -953,7 +953,7 @@ scripting area gives the option to change it to ![image135.png](assets/image135.
 ```
 
 ```
- if vector logging is enabled. See @para-log-pen-vectors.
+if vector logging is enabled. See @para-log-pen-vectors.
 
 ![image137.png](assets/image137.png){.image-inline} Print
 characters\index{write block}
@@ -1005,21 +1005,41 @@ version of the `if/else` primitive command block\index{if else reporter
 block} . Only one of the two branches is evaluated, depending on the
 value of the first input.
 
-![image144.png](assets/image144.png){.image-inline} <!--  style="width:1.83in;height:0.61in" alt="Macintosh HD:Users:bh:Desktop:pix:for.png" / --> Looping block like
+![image144.png](assets/image144.png){.image-inline} <!--  style="width:1.83in;height:0.61in" alt="Macintosh HD:Users:bh:Desktop:pix:for.png" / -->
+```
+
+```
+Looping block like
 `repeat` but\index{for block} with an index variable\index{index
 variable} .
 
-![image145.png](assets/image145.png){.image-inline} <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> Declare
+![image145.png](assets/image145.png){.image-inline} <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> 
+```
+
+```
+Declare
 local variables\index{local variables} in a script.\index{script
 variables block}
 
 ![image148.png](assets/image148.png){.image-inline} See @sec-ch09.
+```
+
+```
 
 ![image146.png](assets/image146.png){.image-inline} reports the value of a graphics effect\index{graphics effect}.
+```
+
+```
 
 ![image147.png](assets/image147.png){.image-inline} Constant true\index{true block} or false\index{false block} value. See @sec-predicates-and-conditional-evaluation.
+```
+
+```
 
 ![image149.png](assets/image149.png){.image-inline}
+```
+
+```
 
 ![image153.png](assets/image153.png){.image-inline}
 Create a primitive using JavaScript\index{JavaScript}. (This block is
@@ -1375,6 +1395,7 @@ primitive, but makes the number of repetitions so far available to the
 repeated script. The next two blocks are variations on `for`\index{$for$
 block} : the first allows an explicit step instead of using ±1, and the
 second allows any values, not just numbers; inside the script you say ![image390.png](assets/image390.png){.image-inline} <!-- {width=3.15278in height=0.29861in} -->
+
 replacing the grey block in the picture with an expression to give the next
 desired value for the loop index.
 
