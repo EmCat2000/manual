@@ -374,19 +374,29 @@ another sprite to run a script. Here’s a simple example:
 
 ![image42.png](assets/image42.png)
 ```
-
+(
+    (receiveGo) 
+    (sayFor "Hi! What's your name?" 2) 
+    (sendAll bark) 
+    (sayFor "Hi, Woof!  What do you like to do?" 2) 
+    (sendAll bark) 
+    (sayFor "What a coincidence" 2)
+)
 ```
 
 ![image43.png](assets/image43.png)
 
 ![image44.png](assets/image44.png)
 ```
-
+(
+    (receiveMessage bark) 
+    (sayFor Woof! 2)
+)
 ```
 
 In the block ![image40.png](assets/image40.png){.image-inline}
 ```
-
+(sendAll bark)
 ```
 , the word “bark” is just an arbitrary name I made up. When you
 click on the downward arrowhead in that input slot, one of the choices
@@ -396,11 +406,11 @@ message is sent to *every* sprite, which is why the block is called
 “broadcast.” (But if you click the right arrow after the message name,
 the block becomes ![image45.png](assets/image45.png){.image-inline}
 ```
-
+(sendAll bark all)
 ```
 , and you can change it to ![image46.png](assets/image46.png){.image-inline}
 ```
-
+(sendAll bark dog)
 ```
  to send the message just
 to one sprite.) In this program, though, only one sprite has a script to
@@ -467,7 +477,16 @@ will also clone all its parts.
 
 ![image56.png](assets/image56.png) <!-- {width=1.44444in height=1.5625in} --> 
 ```
-
+(
+    (repeat 3 (
+        (right 20) 
+        (wait 0.05)
+    )) 
+    (repeat 3 (
+        (left 20) 
+        (wait 0.05)
+    ))
+)
 ```
 ![image48.png](assets/image48.png) <!-- {width=1.63056in height=0.96528in} -->
 ![image49.png](assets/image49.png) <!-- {width=1.63056in height=0.96528in} -->
@@ -482,7 +501,7 @@ far, we’ve used two kinds of blocks\index{block!reporter}: hat blocks
 and command blocks. Another kind is the *reporter* block,\index{Reporter
 block} which has an oval shape: ![image66.png](assets/image66.png) <!-- {width=0.72917in height=0.15625in} --> 
 ```
-
+(x)
 ```
 . It’s called a “reporter” because
 when it’s run, instead of carrying out an action, it reports a value
@@ -496,13 +515,17 @@ white line that appears when snapping command blocks together:
 
 ![image67.png](assets/image67.png) <!-- {width=1.47in height=0.52in} -->
 ```
-
+(move 
+    (+ 5 2)
+)
 ```
 
 Don’t drop the input over a *red* halo:
 ![image71.png](assets/image71.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / -->
 ```
-
+(join : 
+    (list 7 8 1)
+)
 ```
 
 That’s used for a purpose explained in @sec-recursive-calls-to-multiple-input-blocks.
@@ -511,7 +534,20 @@ Here’s a simple script that uses a reporter block:
 
 ![image72.png](assets/image72.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / -->
 ```
-
+(
+    (receiveGo) 
+    (forever (
+        (move 10) 
+        (right 15) 
+        (sayFor 
+            (+ 
+                (round 
+                    (x)
+                ) 100
+            ) 2
+        )
+    ))
+)
 ```
 
 Here the `x position` reporter provides the first input to the say block.
@@ -526,7 +562,20 @@ Operators palette:
 
 ![image73.png](assets/image73.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / -->
 ```
-
+(
+    (receiveGo) 
+    (forever (
+        (move 10) 
+        (right 15) 
+        (sayFor 
+            (+ 
+                (round 
+                    (x)
+                ) 100
+            ) 2
+        )
+    ))
+)
 ```
 
 The `round` block rounds 35.3905… to 35, and the `+` block adds 100 to that.
@@ -537,7 +586,39 @@ block is nested inside another block from the same palette:
 
 ![image80.png](assets/image80.png) <!-- {width=4.85417in height=1.90625in} -->
 ```
-
+(repeat 10 
+    (if 
+        (and 
+            (< 
+                (x) nil
+            ) 
+            (= 
+                (y) nil
+            )
+        ) 
+        (repeat 4 (
+            (move 
+                (* 
+                    (+ 5 
+                        (+ 2 3)
+                    ) 
+                    (- 
+                        (* 3 
+                            (- 2 
+                                (fn [sqrt] nil)
+                            )
+                        ) 5
+                    )
+                )
+            ) 
+            (right 
+                (join 
+                    (* 3 3) 0
+                )
+            )
+        ))
+    )
+)
 ```
 
 This
@@ -545,7 +626,11 @@ aid to readability is called *zebra coloring.*\index{zebra coloring}
 A reporter block with its inputs, maybe including other reporter
 blocks, such as ![image81.png](assets/image81.png) <!-- {width=1.91667in height=0.23958in} -->
 ```
-
+(+ 
+    (round 
+        (x)
+    ) 100
+)
 ```
 , is called an *expression.*\index{expression}
 
@@ -553,27 +638,29 @@ blocks, such as ![image81.png](assets/image81.png) <!-- {width=1.91667in height=
 
 Most reporters report\index{block!predicate} either a number, like ![image82.png](../blocks/images/block_reportVariadicSum.png){.image-inline}
 ```
-
+(+ nil nil)
 ```
 ,
 or a text string, like
 ![image83.png](../blocks/images/block_reportJoinWords.png){.image-inline}
 ```
-
+(join "hello " world)
 ```
 .
 A *predicate* is a special kind of reporter that
 always reports true or false. Predicates\index{Predicate block} have a
 hexagonal shape\index{hexagonal shape}: ![image85.png](../blocks/images/block_reportMouseDown.png){.image-inline}
 ```
-
+(mouseDown)
 ```
 
 The special shape is a reminder that predicates don’t generally make sense
 in an input slot of blocks that are expecting a number or text. You
 wouldn’t say ![image84.png](assets/image84.png)
 ```
-
+(move 
+    (mouseDown)
+)
 ```
 , although (as you can see from the picture) [Snap]{.snap} lets
 you do it if you really want. Instead, you normally use predicates in
@@ -581,13 +668,18 @@ special hexagonal input slots like this one:
 
 ![image86.png](../blocks/images/block_doIf.png){.image-4x}
 ```
-
+(if nil nil)
 ```
 
 The C-shaped if block\index{if block} runs its input script if (and only
 if) the expression in its hexagonal input reports true.
 ![image87.png](assets/image87.png)
-```
+```(if 
+    (< 
+        (y) 0
+    ) 
+    (say "I'm below the middle!")
+)
 
 ```
 
@@ -595,7 +687,13 @@ A really useful block\index{repeat until block} in animations
 \index{animation} runs its input script *repeatedly* until a predicate
 is satisfied: ![image89.png](assets/image89.png)
 ```
-
+(
+    (face Sprite2) 
+    (until 
+        (touch Sprite2) 
+        (move 3)
+    )
+)
 ```
 
 If, while working on a project, you want to omit temporarily some commands
