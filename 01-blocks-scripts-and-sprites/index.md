@@ -57,7 +57,10 @@ is near the tab of the one above it:
 :::
 
 ```
-
+(
+    (receiveGo) 
+    (down)
+)
 ```
 The white horizontal line is a signal that if you let go of the green
 block it will snap into the tab of the gold one.
@@ -81,7 +84,7 @@ that.[^1]
 [^1]: One of the hat blocks, the generic\index{hat block!generic}
 “when anything” block ![generic when hat block](assets/image10.png){.image-inline #fig-generic-when}
 ```
-
+(receiveConditionEvent nil)
 ```
 , is subtly different from the others. When the stop
 sign is clicked, or when a project or sprite is loaded, this block
@@ -97,7 +100,7 @@ The other blocks in our example script are *command* blocks
 corresponds to an action that [Snap]{.snap} already knows how to carry out.
 For example, the block ![image9.png](../blocks/images/block_forward.png){.image-inline} 
 ```
-
+(move 10)
 ```
 tells the sprite\index{sprite} (the arrowhead
 shape on the *stage*\index{stage} at the right end of the window) to
@@ -131,29 +134,39 @@ In the sample script
 
 ![image6.png](assets/image6.png)
 ```
-
+(
+    (receiveGo) 
+    (down) 
+    (repeat 4 (
+        (move 100) 
+        (right 90)
+    ))
+)
 ```
 the `repeat` block has two inputs: the number 4 and the script
 
 ![image11.png](assets/image11.png)
 ```
-
+(
+    (move 100) 
+    (right 90)
+)
 ```
 
 C-shaped blocks can be put in a script in two ways. If you see a white
 line and let go, the block will be inserted into the script like any
 command block:
 
-::: {.evenly-spaced-images layout-ncol=2}
-![image12.png](assets/image12.png)
-```
-
-```
+::: {.evenly-spaced-images layout-ncol=2}![image12.png](assets/image12.png)
 
 ![image13.png](assets/image13.png)
 :::
 ```
-
+(
+    (move 100) 
+    (repeat 10 nil) 
+    (right 90)
+)
 ```
 
 <!-- Note until images are cleaned up 12 and 14 were identical, 13 and 15 were identical. -->
@@ -161,36 +174,34 @@ command block:
 But if you see an orange halo and let go, the block will *wrap* around
 the haloed blocks:
 
-::: {.evenly-spaced-images layout-ncol=2}
+{.evenly-spaced-images layout-ncol=2}
 ![image16.png](assets/image16.png)
-```
-
-```
 
 ![image17.png](assets/image17.png)
-:::
 ```
-
+(
+    (move 100) 
+    (repeat 10 
+        (right 90)
+    )
+)
 ```
-
 The halo will always extend from the cursor position to the bottom of
 the script:
 
-::: {.evenly-spaced-images layout-ncol=2}
+{.evenly-spaced-images layout-ncol=2}
 ![image18.png](assets/image18.png)
-```
-
-```
 
 ![image19.png](assets/image19.png)
-:::
-```
 
 ```
+(repeat 10 (
+    (move 100) 
+    (right 90)
+))
+```
 
-If you want only some of those blocks, after wrapping you can grab the
-first block you don’t want wrapped, pull it down, and snap it under the
-C-shaped block.
+If you want only some of those blocks, after wrapping you can grab the first block you don’t want wrapped, pull it down, and snap it under the C-shaped block.
 
 For “E-shaped” blocks with more than one C-shaped slot, only the first slot
 will wrap around existing blocks in a script, and only if that C-shaped
@@ -199,7 +210,11 @@ blocks into the desired slot.)
 
 ![image24.png](assets/image24.png)
 ```
-
+(ifElse 
+    (mouseDown) 
+    (sayFor down 2) 
+    (sayFor up 2)
+)
 ```
 
 ## Sprites and Parallelism {#sec-sprites-parallelism}
@@ -218,12 +233,23 @@ scripting area:
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image26.png](assets/image26.png)
 ```
-
+(
+    (receiveGo) 
+    (repeat 50 
+        (right 36)
+    )
+)
 ```
 
 ![image27.png](assets/image27.png)
 ```
-
+(
+    (receiveGo) 
+    (repeat 50 (
+        (move 180) 
+        (right 180)
+    ))
+)
 ```
 
 When you click the green flag, you should see one sprite rotate while
@@ -235,12 +261,22 @@ scripts of a single sprite also. Try this example:
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image28.png](assets/image28.png)
 ```
-
+(
+    (receiveKey [space]) 
+    (forever 
+        (move 10)
+    )
+)
 ```
 
 ![image29.png](assets/image29.png)
 ```
-
+(
+    (receiveKey [space]) 
+    (forever 
+        (right 15)
+    )
+)
 ```
 
 When you click the green flag, the sprite should move back and forth
@@ -276,12 +312,21 @@ Turtle costume or its Alonzo\index{Alonzo} costume. (Alonzo, the
 [Snap]{.snap} mascot, is named after Alonzo Church\index{Church, Alonzo}, a
 mathematician who invented the idea of procedures as data
 \index{procedures as data}, the most important way in which [Snap]{.snap} is
-different from Scratch\index{Scratch}.) You can give a sprite as many
-costumes as you like, and then choose which it will wear either by
-clicking in its wardrobe or by using the ![image35.png](../blocks/images/block_doSwitchToCostume.png){.image-inline} or ![Next Costume](../blocks/images/block_doWearNextCostume.png){.image-inline} 
-```
+different from Scratch\index{Scratch}.) You can give a sprite as many costumes as you like, and then choose which it will wear either by
+clicking in its wardrobe or by using the 
+
+![image35.png](../blocks/images/block_doSwitchToCostume.png){.image-inline}
 
 ```
+(wear [Turtle])
+```
+
+ or ![Next Costume](../blocks/images/block_doWearNextCostume.png){.image-inline} 
+
+```
+(next)
+```
+
 block in a script.
 (Every costume has a number as well as a name. The `next` costume block
 selects the next costume by number; after the highest-numbered costume it
@@ -292,7 +337,9 @@ changes color to match a change in the sprite’s pen color.
 {.callout-tip}
 Protip: ![Switch to costumer (() - 1)](assets/image33.png){.image-inline} 
 ```
-
+(wear 
+    (- nil 1)
+)
 ```
 switches to the *previous* costume, wrapping like `next costume`.
 
@@ -304,12 +351,12 @@ Sound files\index{play sound block} can be imported in any format
 the task of playing sounds\index{playing sounds}. If you would like a
 script to continue running while the sound is playing, use the block ![image39.png](assets/image39.png)
 ```
-
+(play nil)
 ```
 .
 In contrast, you can use the block ![image38.png](assets/image38.png)
 ```
-
+(playAll nil)
 ```
  to wait for the sound's completion
 before continuing the rest of the script.
@@ -1042,12 +1089,19 @@ variables block}
 ```
 
 ![image153.png](assets/image153.png){.image-inline}
+```
+
+```
+
 Create a primitive using JavaScript\index{JavaScript}. (This block is
 disabled by default; the user must check “Javascript extensions” in the
 setting menu *each time* a project is loaded.)\index{pen down? block}
 
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image150.png](assets/image150.png){.image-inline}
+```
+
+```
 
 The `at` block\index{at block} lets you examine the screen pixel
 \index{screen pixel} directly behind the rotation center of a sprite,
@@ -1087,13 +1141,21 @@ takes a script as the first input, reporting a list structure
 representing the structure of the script. See Chapter XI.
 :::
 
-![image170.png](assets/image170.png){.image-inline} For lists,
+![image170.png](assets/image170.png){.image-inline} 
+```
+
+```
+For lists,
 \index{identical to} reports true only if its two input values are the
 very same list, so changing an item in one of them is visible in the
 other. (For `=`, lists that look the same are the same.) For text strings,
 uses case-sensitive comparison, unlike `=`, which is case-independent.
 
-![image171.png](assets/image171.png){.image-inline} These *hidden* blocks can be found with the relabel option
+![image171.png](assets/image171.png){.image-inline}
+```
+
+```
+ These *hidden* blocks can be found with the relabel option
 \index{relabel option} of any dyadic arithmetic block. They’re hidden
 partly because writing them in [Snap]{.snap} is a good, pretty easy
 programming exercise. Note: the two inputs to `atan2`\index{atan2 block}
@@ -1101,13 +1163,27 @@ are Δ*x* and Δ*y* in that order, because we measure angles clockwise
 from north. `max` /index{max block} and `min` /index{min block} are *variadic;* by clicking the arrowhead, you
 can provide additional inputs.
 
-![image177.png](assets/image177.png){.image-inline} ![image178.png](assets/image178.png){.image-inline} ![image179.png](assets/image179.png){.image-inline}
+![image177.png](assets/image177.png){.image-inline} 
+```
+
+```
+![image178.png](assets/image178.png){.image-inline} 
+```
+
+```
+![image179.png](assets/image179.png){.image-inline}
+```
+
+```
 
 Similarly, these\index{*less-than-or-equal@`≤` block} hidden predicates can be found by relabeling the relational predicates.
 
 ### Metaprogramming (see @sec-ch11)
 
 ![image172.png](assets/image172.png)
+```
+
+```
 
 These blocks support *metaprogramming,* which means manipulating blocks
 and scripts as data. This is not the same as manipulating procedures
@@ -1119,31 +1195,53 @@ capability is new in version 8.0.
 
 <!-- TODO: welp. this needs to be remade -->
 ![image173.png](assets/image173.png)
+```
+
+```
 
 `Numbers from`\index{numbers from block} will
 count up or down.
 
 ![image224.png](assets/image224.png){.image-inline} ![image225.png](assets/image225.png){.image-inline}
-report\index{position block} the sprite or mouse position as a two-item
+report\index{position block}
+```
+
+```
+the sprite or mouse position as a two-item
 vector (x,y).
 
 **First class procedure blocks (see @sec-ch06):**
  ![image226.png](assets/image226.png)
+```
+
+```
 
 **First class continuation blocks (see @sec-ch10):**
  ![image227.png](assets/image227.png)
+```
+
+```
 
 **First class sprite, costume, and sound blocks (see @sec-ch07):**
 
  ![image228.png](assets/image228.png)
+```
+
+```
 
  ![image229.png](assets/image229.png)
+```
+
+```
 
  Object is a hyperblock.
 
 **Scenes:**
 
 ![image280.png](assets/image280.png){.image-2x}
+```
+
+```
 
 The major new feature of version 7.0 is *scenes:*\index{scenes} A project can include
 within it sub-projects, called scenes, each with its own stage, sprites,
@@ -1156,10 +1254,16 @@ start it running, with optional payload as in broadcast\index{broadcast
 block} (See @sec-broadcast).
 
 ![image282.png](assets/image282.png){.image-4x}
+```
+
+```
 
 In particular, you can say
 
 ![image281.png](assets/image281.png){.image-4x}
+```
+
+```
 
 if the new scene expects to be started with a green flag signal.
 
@@ -1169,6 +1273,9 @@ These accept two-item (x,y)\index{points as inputs} lists
 including other sprites):\index{to block}
 
 ![image283.png](assets/image283.png)
+```
+
+```
 
 “Center” means the center of the stage\index{center of the stage}, the
 point at (0,0). “Direction” is in the point in direction sense, the
@@ -1178,6 +1285,9 @@ of this sprite to the nearest point on the other sprite, in the current
 direction.
 
 ![image284.png](assets/image284.png){.image-4x}
+```
+
+```
 The `stop` block\index{stop block} has two extra menu choices. `Stop this block` is used inside the definition of a custom block to stop just this
 invocation of this custom block and continue the script that called it.
 `Stop all` but this script is good at the end of a game to stop all the
@@ -1186,19 +1296,34 @@ the user’s final score. The last two menu choices add a tab at the
 bottom of the block because the current script can continue after it.
 
 ![image285.png](assets/image285.png){.image-2x}
+```
+
+```
+
 The new “pen trails” option is true if the sprite is touching any drawn
 or stamped ink on the stage. Also, `touching`\index{touching block} will
 not detect hidden sprites, but a hidden sprite can use it to detect
 visible sprites.
 
-![image305.png](assets/image305.png){.image-inline} <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> The `video on` block
+![image305.png](assets/image305.png){.image-inline} <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> 
+```
+
+```
+The `video on` block
 \index{video block} has a snap option\index{snap option} that takes a
 snapshot and reports it as a costume. It is hyperized with respect to its second input.
 
 :::{.evenly-spaced-images layout-ncol=2}
 ![image306.png](assets/image306.png){.image-inline}
+```
 
-![image304.png](assets/image304.png){.image-inline} The “neg” option\index{neg option} is a monadic\index{of block
+```
+
+![image304.png](assets/image304.png){.image-inline} 
+```
+
+```
+The “neg” option\index{neg option} is a monadic\index{of block
 (operators)}\index{length of text block} negation operator
 \index{negation operator}, equivalent to “lg” is log<sub>2</sub>.
 “id” is the identity function, which reports its input. “sign” reports 1
@@ -1209,8 +1334,15 @@ for positive input, 0 for zero input, or -1 for negative input.
 <!-- ::: {.callout-tip} -->
 <!-- ## Two Different Length Of Blocks -->
 
-The ![length of text block](../blocks/images/block_reportTextAttribute.png){.image-inline} name was changed to clarify it is different from ![length of text block](../blocks/images/block_reportListAttribute.png){.image-inline}
+The ![length of text block](../blocks/images/block_reportTextAttribute.png){.image-inline} 
+```
+
+```
+name was changed to clarify it is different from ![length of text block](../blocks/images/block_reportListAttribute.png){.image-inline}
 <!-- ::: -->
+```
+
+```
 
 ![image308.png](assets/image308.png)
 ```
@@ -1222,6 +1354,9 @@ changes to `sum` or `product`.
 
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image309.png](assets/image309.png)
+```
+
+```
 
 Extended\index{when I am block} mouse interaction events, sensing
 clicking, dragging, hovering, etc. The “stopped” option triggers when
@@ -1232,12 +1367,18 @@ limited time.
 
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image310.png](assets/image310.png)
+```
+
+```
 
 Extended broadcast\index{broadcast block} : Click the right arrowhead to direct the message to a single sprite or the stage. Click again to add any value as a payload to the message. {#para-broadcast}
 :::
 
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image311.png](assets/image311.png){.image-4x}
+```
+
+```
 
 Extended `when I receive`\index{when I receive block}: Click the right
 arrowhead to expose a script variable (click on it to change its name,
@@ -1273,15 +1414,30 @@ These ask features\index{ask and wait block} and more in the Menus
 library.
 
 ![image359.png](assets/image359.png)
+```
+
+```
 
 ![image360.png](assets/image360.png)
+```
+
+```
 
 ![image361.png](assets/image361.png)
+```
+
+```
 
 ![image362.png](assets/image362.png)
+```
+
+```
 
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image363.png](assets/image363.png){.image-4x}
+```
+
+```
 
 The `of` block\index{of block (sensing)} has an extended menu of
 attributes of a sprite. Position reports an (x,y) vector. Size reports
@@ -1395,17 +1551,30 @@ primitive, but makes the number of repetitions so far available to the
 repeated script. The next two blocks are variations on `for`\index{$for$
 block} : the first allows an explicit step instead of using ±1, and the
 second allows any values, not just numbers; inside the script you say ![image390.png](assets/image390.png){.image-inline} <!-- {width=3.15278in height=0.29861in} -->
+```
+
+```
 
 replacing the grey block in the picture with an expression to give the next
 desired value for the loop index.
 
 `Pipe`\index{pipe block@\texttt{pipe} block} allows reordering a nested composition with a left-to-right one:
 
-![image392.png](assets/image392.png) <!--  style="width:3.70972in;height:1.17153in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (1).png" / --> ![image391.png](assets/image391.png) <!--  style="width:3.44097in;height:1.36111in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (2).png" / -->
+![image392.png](assets/image392.png) <!--  style="width:3.70972in;height:1.17153in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (1).png" / --> 
+```
+
+```
+![image391.png](assets/image391.png) <!--  style="width:3.44097in;height:1.36111in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (2).png" / -->
+```
+
+```
 
 The stream library\index{stream library} has these blocks:
 
 ![image393.png](assets/image393.png) <!-- {width=3.16111in height=2.15347in} -->
+```
+
+```
 
 *Streams*\index{stream list} are a special kind
 of list whose items are not computed until they are needed. This makes
@@ -1432,6 +1601,9 @@ The **word and sentence library**\index{sentence library} has these blocks:
 <!-- TODO: Index Entries for all these blocks -->
 ![image394.png](assets/image394.png)
 \index{$word ➔ list$ block}
+```
+
+```
 
 This library has the goal of recreating the Logo approach to handling text:
 A text isn’t best viewed as a string of characters, but rather as a *sentence*, made of *words,*
@@ -1502,6 +1674,9 @@ and reports it as a costume.
 The bar charts library\index{bar charts library} has these blocks:
 
 ![image396.png](assets/image396.png) <!-- {width=3.43056in height=1.91667in} -->
+```
+
+```
 
 `Bar chart of table`\index{bar chart
 block} takes a table (typically from a CSV data set) as input and
