@@ -1392,79 +1392,84 @@ capability is new in version 8.0.
 
 ![image173.png](assets/image173.png)
 ```
-
+(list nil)
 ```
 
 ```
-
+(cons nil nil)
 ```
 
 ```
-
+(cdr nil)
 ```
 
 ```
-
+(cdr nil)
 ```
 
 ```
-
+(empty nil)
 ```
 
 ```
-
+(append nil nil)
 ```
 
 ```
-
+(map nil nil)
 ```
 
 ```
-
+(keep nil nil)
 ```
 
 ```
-
+(# thing nil)
 ```
 
 ```
-
+(data [length] nil)
 ```
 
 ```
-
+(combine nil nil)
 ```
 
 ```
-
+(range 1 10)
 ```
 
 ```
-
+(forEach item nil nil)
 ```
 
 ```
-
+(find nil nil)
 ```
 
 ```
-
+(item 1 nil)
 ```
 
 ```
-
+(contains nil thing)
 ```
 
 ```
+(reshape nil 4 3)
+```
 
 ```
+(combinations nil nil)
+```
+
 `Numbers from` will
 count up or down.
 
 ![image224.png](assets/image224.png)
 report
 ```
-
+(pos)
 ```
 the sprite or mouse position as a two-item
 vector (x,y).
@@ -1475,12 +1480,29 @@ vector (x,y).
 
 ```
 
-**First class continuation blocks (see @sec-ch10):**
- ![image227.png](assets/image227.png)
 ```
 
 ```
 
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
 **First class sprite, costume, and sound blocks (see @sec-ch07):**
 
  ![image228.png](assets/image228.png)
@@ -1488,7 +1510,70 @@ vector (x,y).
 
 ```
 
+```
+
+```
+
+```
+
+```
  ![image229.png](assets/image229.png)
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
 ```
 
 ```
@@ -1513,6 +1598,10 @@ start it running, with optional payload as in broadcast\index{broadcast
 block} (See @sec-broadcast).
 
 ![image282.png](assets/image282.png)
+```
+
+```
+
 ```
 
 ```
@@ -1630,6 +1719,26 @@ limited time.
 
 ```
 
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
 Extended broadcast
 
 
@@ -1639,6 +1748,9 @@ Extended broadcast
 
 ```
 
+```
+
+```
 Extended `when I receive`: Click the right
 arrowhead to expose a script variable (click on it to change its name,
 like any script variable) that will be set to the data of a matching
@@ -1649,10 +1761,29 @@ broadcast, or to a two-item list containing the message and the payload.
 
 ![image312.png](assets/image312.png)
 
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
 ![image355.png](assets/image355.png)
 
+```
+
+```
 If the input is set to “any key,” then a right arrowhead appears:
-![image357.png](assets/image357.png) and if you click it,
+![image357.png](assets/image357.png)
+```
+
+```
+ and if you click it,
 a script variable key is created whose value is the key that was
 pressed. (If the key is one that’ represented in the input menu by a
 word or phrase, e.g., “enter” or “up arrow,” then the value of key
@@ -1661,6 +1792,10 @@ is represented as itself in key.)
 
 ![image356.png](assets/image356.png) 
 
+```
+
+```
+
 The RGB(A) option accepts a single number, which
 is a grayscale value 0-255; a two-number list, grayscale plus opacity
 0-255; a three-item RGB list, or a four-item RGBA list.
@@ -1668,6 +1803,17 @@ is a grayscale value 0-255; a two-number list, grayscale plus opacity
 
 ![image358.png](assets/image358.png)
 
+```
+
+```
+
+```
+
+```
+
+```
+
+```
 ### Using Lists with the Ask Block 
 These ask features and more in the Menus
 library.
