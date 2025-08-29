@@ -701,7 +701,17 @@ in a script, but you don’t want to forget where they belong, you can say
 
 ![image88.png](assets/image88.png) <!-- {width=2.28194in height=1.46875in} -->
 ```
-
+(
+    (move 10) 
+    (right 15) 
+    (if 
+        (bool f) (
+        (sayFor "I'm no going to do this" 2) 
+        (glide 1 0 0)
+    )
+    ) 
+    (head 90)
+)
 ```
 
 Sometimes you want to take the same action whether some condition is
@@ -710,7 +720,15 @@ can use the *reporter* `if` block\index{reporter if block} :
 
 ![image90.png](assets/image90.png) <!-- {width=4.20833in height=0.38542in} -->
 ```
-
+(say 
+    (join "I'm on the " 
+        (ifThen 
+            (< 
+                (x) 0
+            ) left right
+        )
+    )
+)
 ```
 
 The technical term for a true or false value is a “Boolean\index{Boolean} ”
@@ -734,11 +752,11 @@ and click on the control that appears:
 
 ![image91.png](assets/image91.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> 
 ```
-
+(global= "[turbo mode]" f)
 ```
 ![image92.png](assets/image92.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / -->
 ```
-
+(global= "[turbo mode]" t)
 ```
 
 ## Variables
@@ -747,7 +765,16 @@ Try
 this script:
 ![image93.png](assets/image93.png) <!-- {width=1.58333in height=1.41667in} -->
 ```
-
+(
+    (receiveGo) 
+    (down) 
+    (for i 1 200 (
+        (move 
+            (get i)
+        ) 
+        (right 92)
+    ))
+)
 ```
 
 The
@@ -755,7 +782,15 @@ input to the move block is an orange oval. To get it there, drag the
 orange oval that’s part of the `for` block\index{for block} :
 ![image94.png](assets/image94.png) <!-- {width=1.88542in height=1.4375in} -->
 ```
-
+(
+    (receiveGo) 
+    (down) 
+    (for i 1 10 
+        (move 
+            (get i)
+        )
+    )
+)
 ```
 
 The orange oval\index{orange oval} is a *variable:* a symbol that
@@ -799,9 +834,6 @@ This will bring up a dialog window in which you can give your variable a
 name:
 
 ![image96.png](assets/image96.png) <!-- {width=3.1875in height=1.84375in} -->
-```
-
-```
 
 The dialog also gives you a choice to make the variable available to all
 sprites (which is almost always what you want) or to make it visible
@@ -834,7 +866,12 @@ How *do* you give it a value?
 You use the `set` block\index{set block} :
 ![image100.png](assets/image100.png) <!-- {width=1.92708in height=0.47917in} -->
 ```
-
+(
+    (doAsk "what's your name?") 
+    (set name 
+        (answer)
+    )
+)
 ```
 
 Note that you *don’t* drag the variable’s oval into the `set` block! You
@@ -844,7 +881,7 @@ all the available variable names.
 If you do choose “For this sprite only\index{For this sprite only} ”
 when creating a variable, its block in the palette looks like this:![image101.png](assets/image101.png) <!--  style="width:0.65833in;height:0.14167in" alt="Macintosh HD:Users:bh:Desktop:local-var.png" / -->
 ```
-
+(get variable)
 ```
 
 The *location*-pin
@@ -866,7 +903,27 @@ variable:
 
 ![image105.png](assets/image105.png) <!-- {width=2.08333in height=0.30208in} -->
 ```
-
+(
+    (receiveGo) 
+    (var wiggle) 
+    (set wiggle 
+        (rand 1 10)
+    ) 
+    (down) 
+    (move 50) 
+    (left 
+        (* 5 
+            (get wiggle)
+        )
+    ) 
+    (move 50) 
+    (right 
+        (* 5 
+            (get wiggle)
+        )
+    ) 
+    (move 50)
+)
 ```
 
 As in the `for` block, you can click on an orange oval in the script
@@ -876,7 +933,7 @@ end of the block to add another variable oval:
 
 ![image106.png](assets/image106.png) <!-- {width=2.08333in height=0.30208in} -->
 ```
-
+(var a b c)
 ```
 
 ### Renaming variables\index{renaming variables}
@@ -905,9 +962,6 @@ orange oval in a context in which the variable is *used,* then you are
 able to rename just that one orange oval:
 
 ![image104.png](assets/image104.png) <!-- {width=2.08333in height=0.30208in} -->
-```
-
-```
 
 If you right-click on the
 place where the variable is *defined* (a script variables block, the
@@ -918,9 +972,6 @@ given two renaming options, “rename” and “rename all.” If you choose
 the previous case:
 
 ![image103.png](assets/image103.png) <!-- {width=2.08333in height=0.30208in} -->
-```
-
-```
 
 But if you choose “rename
 all,” then the name will be changed throughout the scope of the variable
@@ -938,9 +989,6 @@ collect many values in one data structure, and in Chapter VIII you’ll
 see how to read information from web sites.
 
 ![image102.png](assets/image102.png) <!-- {width=2.08333in height=0.30208in} -->
-```
-
-```
 
 When you use these
 capabilities, your project may take up a lot of memory\index{memory} in
@@ -986,7 +1034,7 @@ but more often you’ll want
 to set a *breakpoint,* a particular point in a script at which you want
 to pause. The ![image117.png](../blocks/images/block_doPauseAll.png){.image-inline} block
 ```
-
+(pause)
 ```
 , near the bottom of the Control palette, can be
 inserted in a script to pause when it is run. So, for example, if your
@@ -1001,7 +1049,14 @@ show watchers for temporary variables of the script:
 
 ![image118.png](assets/image118.png)
 ```
-
+(
+    (var foo bar) 
+    (set foo -5) 
+    (pause) 
+    (move 
+        (get foo)
+    )
+)
 ```
 But what if the block with the error is run many times in a loop, and it
 only errors when a particular condition is true — for example, when the value of some
@@ -1012,7 +1067,22 @@ breakpoint\index{conditional breakpoint}, and automatically display the relevant
 
 ![image119.png](assets/image119.png) <!-- {width=1.19444in height=1.33333in} -->
 ```
-
+(
+    (var foo bar) 
+    (set foo 0) 
+    (if 
+        (< 
+            (get foo) 0
+        ) (
+        (showVar foo) 
+        (showVar bar) 
+        (pause)
+    )
+    ) 
+    (move 
+        (get foo)
+    )
+)
 ```
 (In this contrived example,
 variable <var>zot</var> comes from outside the script but is relevant to its
@@ -1028,7 +1098,14 @@ menu doesn’t include primitive blocks, but there’s a generally useful
 technique to give a block input values it wasn’t expecting using run or
 call:![image120.png](assets/image120.png) <!-- {width=3.9375in height=0.38889in} -->
 ```
-
+(run 
+    (cmd 
+        (hideVar nil)
+    ) 
+    (cmd 
+        (move 10)
+    )
+)
 ```
 <br>
 In order to use a block as an input this way, you must explicitly put a
@@ -1047,9 +1124,7 @@ control slider ![image122.png](assets/image122.png) <!-- {width=0.54563in height
 the script, its blocks and input slots will light up cyan one at a time:
 
 ![image124.png](assets/image124.png) <!-- {width=0.54563in height=0.15278in} -->
-```
 
-```
 In this simple example, the inputs to the blocks are constant values,
 but if an input were a more complicated expression involving several
 reporter blocks, each of those would light up as they are called. Note
@@ -1089,21 +1164,21 @@ Here are some of the primitive blocks that don’t exist in Scratch:
 
 ![image136.png](assets/image136.png)
 ```
-
+(trails)
 ```
 reports\index{pen trails
 block}\index{pen vectors block}, a new costume consisting of everything
 that’s drawn on the stage by any sprite. Right-clicking the block in the
 scripting area gives the option to change it to ![image135.png](assets/image135.png)
 ```
-
+(svgTrails)
 ```
 if vector logging is enabled. See @para-log-pen-vectors.
 
 ![image137.png](assets/image137.png){.image-inline} Print
 characters\index{write block}
 ```
-
+(write Hello! 12)
 ```
  in the given point size on the stage, at
 the sprite’s position and in its direction. The sprite moves to the end
@@ -1114,36 +1189,36 @@ text will be underlined.
 
 ![image138.png](assets/image138.png){.image-inline}
 ```
-
+(paste nil)
 ```
 
 Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)
 
 ![image139.png](assets/image139.png){.image-inline}
 ```
-
+(cut nil)
 ```
 
 Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.)
 
 ![image142.png](assets/image142.png){.image-inline} See @fig-generic-when.
 ```
-
+(receiveConditionEvent nil)
 ```
 
 ![image141.png](assets/image141.png){.image-inline} See @sec-pause-all.
 ```
-
+(pause)
 ```
 
 ![image140.png](assets/image140.png){.image-inline} Runs only this script until finished. In the Control palette even though it’s gray.
 ```
-
+(warp nil)
 ```
 
 ![image143.png](assets/image143.png){.image-inline} <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> 
 ```
-
+(playAll nil)
 ```
 Reporter
 version of the `if/else` primitive command block\index{if else reporter
@@ -1152,7 +1227,7 @@ value of the first input.
 
 ![image144.png](assets/image144.png){.image-inline} <!--  style="width:1.83in;height:0.61in" alt="Macintosh HD:Users:bh:Desktop:pix:for.png" / -->
 ```
-
+(ifThen nil nil nil)
 ```
 Looping block like
 `repeat` but\index{for block} with an index variable\index{index
@@ -1160,7 +1235,7 @@ variable} .
 
 ![image145.png](assets/image145.png){.image-inline} <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> 
 ```
-
+(var a)
 ```
 Declare
 local variables\index{local variables} in a script.\index{script
@@ -1168,27 +1243,31 @@ variables block}
 
 ![image148.png](assets/image148.png){.image-inline} See @sec-ch09.
 ```
-
+(url snap.berkeley.edu)
 ```
 
 ![image146.png](assets/image146.png){.image-inline} reports the value of a graphics effect\index{graphics effect}.
 ```
-
+(effect [ghost])
 ```
 
 ![image147.png](assets/image147.png){.image-inline} Constant true\index{true block} or false\index{false block} value. See @sec-predicates-and-conditional-evaluation.
 ```
-
+(bool t)
 ```
 
 ![image149.png](assets/image149.png){.image-inline}
 ```
+(shown)
+```
 
+```
+(down?)
 ```
 
 ![image153.png](assets/image153.png){.image-inline}
 ```
-
+(js nil nil)
 ```
 
 Create a primitive using JavaScript\index{JavaScript}. (This block is
@@ -1198,18 +1277,11 @@ setting menu *each time* a project is loaded.)\index{pen down? block}
 ::: {.evenly-spaced-images layout-ncol=2}
 ![image150.png](assets/image150.png){.image-inline}
 ```
-
+(aspect [hue] nil)
 ```
 
-The `at` block\index{at block} lets you examine the screen pixel
-\index{screen pixel} directly behind the rotation center of a sprite,
-the mouse, or an arbitrary (x,y) coordinate pair dropped onto the second
-menu slot. The first five items of the left menu let you examine the
-color visible at the position. (The “RGBA” option\index{RGBA option}
-reports a list.) The “sprites” option reports a list of all sprites,
-including this one, any point of which overlaps this sprite’s rotation
-center (behind or in front). This is a hyperblock with respect to its
-second input.
+The `at` block\index{at block} lets you examine the screen pixel \index{screen pixel} directly behind the rotation center of a sprite, the mouse, or an arbitrary (x,y) coordinate pair dropped onto the second menu slot. The first five items of the left menu let you examine the
+color visible at the position. (The “RGBA” option\index{RGBA option} reports a list.) The “sprites” option reports a list of all sprites, including this one, any point of which overlaps this sprite’s rotation center (behind or in front). This is a hyperblock with respect to its second input.
 :::
 
 <!-- This needs 2 columns ??? -->
@@ -1219,24 +1291,27 @@ Checks the\index{is-a-block@`is \_ a \_ ?` block} data\index{stage blocks} type\
 
 <!-- These two need to be remade as text -->
 ![image151.png](assets/image151.png){.image-4x}
+
+```
+```
+
 ![image152.png](assets/image152.png){.image-4x}
+
+```
+
+```
 
 ::: {layout-ncol=2}
 ![image155.png](assets/image155.png){.image-4x}\index{set flag block}
 
-Turn the\index{split block} text into a list,
-using the second input as the delimiter between items. The default
-delimiter, indicated by the brown dot in the input slot, is a single
-space character. “Letter” puts each character of the text in its own
-list item. “Word” puts each word in an item. (\index{whitespace} Words
-are separated by any number of consecutive space, tab, carriage return,
-or newline characters.) “Line” is a newline character\index{newline
-character} (0xa); “tab” is a tab character\index{tab character} (0x9);
-“cr” is a carriage return\index{carriage return character} (0xd). “Csv”
-\index{CSV format} and “json”\index{JSON format} split formatted text
-into lists of lists; see @sec-csv. “Blocks”
-takes a script as the first input, reporting a list structure
-representing the structure of the script. See Chapter XI.
+```
+
+```
+
+Turn the\index{split block} text into a list, using the second input as the delimiter between items. The default
+delimiter, indicated by the brown dot in the input slot, is a single space character. “Letter” puts each character of the text in its own list item. “Word” puts each word in an item. (\index{whitespace} Words are separated by any number of consecutive space, tab, carriage return, or newline characters.) “Line” is a newline character\index{newline character} (0xa); “tab” is a tab character\index{tab character} (0x9); “cr” is a carriage return\index{carriage return character} (0xd). “Csv”
+\index{CSV format} and “json”\index{JSON format} split formatted text into lists of lists; see @sec-csv. “Blocks”
+takes a script as the first input, reporting a list structure  representing the structure of the script. See Chapter XI.
 :::
 
 ![image170.png](assets/image170.png){.image-inline} 
