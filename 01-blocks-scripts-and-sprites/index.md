@@ -2,27 +2,27 @@
 toc: true
 ---
 
-# Blocks, Scripts, and Sprites {#sec-ch01}
+# Blocks, Scripts, and Sprites 
 
-This chapter describes the [Snap]{.snap} features inherited from Scratch; experienced Scratch users can skip to @sec-sprites-parallelism.
+This chapter describes the *Snap!* features inherited from Scratch; experienced Scratch users can skip to @sec-sprites-parallelism.
 
-[Snap]{.snap} is a programming language—a notation in which you can tell a
+*Snap!* is a programming language—a notation in which you can tell a
 computer what you want it to do. Unlike most programming languages,
-though, [Snap]{.snap} is a *visual* language; instead of writing a program
-using the keyboard, the [Snap]{.snap} programmer uses the same drag-and-drop
+though, *Snap!* is a *visual* language; instead of writing a program
+using the keyboard, the *Snap!* programmer uses the same drag-and-drop
 interface familiar to computer users.
 
-Start [Snap]{.snap}. You should see the following
+Start *Snap!*. You should see the following
 arrangement of regions in the window:
 
 ![An annotated screenshot of blank Snap! editor](../12-user-interface-elements/assets/snap-ide-annotated.png)
 
 (The proportions of these areas may be different, depending on the size and shape of your browser window.)
 
-A [Snap]{.snap} program consists of one or more *scripts,* each of which is made of *blocks.* Here’s a typical script
+A *Snap!* program consists of one or more *scripts,* each of which is made of *blocks.* Here’s a typical script
  :
 
-![image6.png](assets/image6.png){#fig-draw-square}
+![image6.png](assets/image6.png)
 
 ```
 (
@@ -44,15 +44,15 @@ Control palette; the green block is from the Pen palette; and the blue
 blocks are from the Motion palette. A script is assembled by dragging
 blocks from a palette into the *scripting area*
 in the middle part of the window. Blocks snap together (hence the name
-[Snap]{.snap} for the language) when you drag a block so that its indentation
+*Snap!* for the language) when you drag a block so that its indentation
 is near the tab of the one above it:
 
-::: {#fig-snapping-blocks .evenly-spaced-images layout-ncol=2}
+ 
 
 ![image7.png](assets/image7.png)
 
 ![image8.png](assets/image8.png)
-:::
+
 
 ```
 (
@@ -69,8 +69,8 @@ At the top of the script is a *hat* block, which indicates when the
 script should be carried out. Hat block names typically start with the
 word “when”; in the square-drawing example in @fig-draw-square, the script should
 be run when the green flag near the right end of the
-[Snap]{.snap} tool bar tool bar is
-part of the [Snap]{.snap} window, not the same as the browser’s or operating
+*Snap!* tool bar tool bar is
+part of the *Snap!* window, not the same as the browser’s or operating
 system’s menu bar.) A script isn’t required to have a hat block
 , but if not, then the script will be run only if the
 user clicks on the script itself. A script can’t have more than one hat
@@ -78,9 +78,9 @@ block, and the hat block can be used only at the top of the script; its
 distinctive shape is meant to remind you of
 that.[^1]
 
-<!-- TODO: Different CSS for an inline hat block? -->
+
 [^1]: One of the hat blocks, the generic
-“when anything” block ![generic when hat block](assets/image10.png){.image-inline #fig-generic-when}
+“when anything” block ![generic when hat block](assets/image10.png)
 ```
 (receiveConditionEvent nil)
 ```
@@ -91,12 +91,12 @@ so the script beneath it will not run, until some *other* script in the
 project runs (because, for example, you click the green flag). When
 generic when blocks are disabled, the stop sign
 
-instead of octagonal. {#para-generic-when}
+instead of octagonal. 
 
 The other blocks in our example script are *command* blocks
 
-corresponds to an action that [Snap]{.snap} already knows how to carry out.
-For example, the block ![image9.png](../blocks/images/block_forward.png){.image-inline} 
+corresponds to an action that *Snap!* already knows how to carry out.
+For example, the block ![image9.png](../blocks/images/block_forward.png) 
 ```
 (move 10)
 ```
@@ -126,8 +126,8 @@ in the Control palette. The slot inside the C
 shape is a special kind of input slot that accepts a *script* as the
 input.
 
-<!-- TODO-mb: These images are a bit small on the web. -->
-::: {.evenly-spaced-images layout-ncol=4}
+
+ 
 In the sample script
 
 ![image6.png](assets/image6.png)
@@ -155,10 +155,10 @@ C-shaped blocks can be put in a script in two ways. If you see a white
 line and let go, the block will be inserted into the script like any
 command block:
 
-::: {.evenly-spaced-images layout-ncol=2}![image12.png](assets/image12.png)
+ ![image12.png](assets/image12.png)
 
 ![image13.png](assets/image13.png)
-:::
+
 ```
 (
     (move 100) 
@@ -167,12 +167,12 @@ command block:
 )
 ```
 
-<!-- Note until images are cleaned up 12 and 14 were identical, 13 and 15 were identical. -->
+
 
 But if you see an orange halo and let go, the block will *wrap* around
 the haloed blocks:
 
-{.evenly-spaced-images layout-ncol=2}
+
 ![image16.png](assets/image16.png)
 
 ![image17.png](assets/image17.png)
@@ -187,7 +187,7 @@ the haloed blocks:
 The halo will always extend from the cursor position to the bottom of
 the script:
 
-{.evenly-spaced-images layout-ncol=2}
+
 ![image18.png](assets/image18.png)
 
 ![image19.png](assets/image19.png)
@@ -215,10 +215,10 @@ blocks into the desired slot.)
 )
 ```
 
-## Sprites and Parallelism {#sec-sprites-parallelism}
+## Sprites and Parallelism 
 
 Just below the stage is the “new sprite button”
-![image25.png](assets/image25.png){.image-inline}. Click the button to add a new sprite to the stage. The new
+![image25.png](assets/image25.png). Click the button to add a new sprite to the stage. The new
 sprite will appear in a random position on the stage, with a random
 color, but always facing to the right.
 
@@ -228,7 +228,7 @@ sprite in the scripting area, click on the picture of that sprite in the
 window. Try putting one of the following scripts in each sprite’s
 scripting area:
 
-::: {.evenly-spaced-images layout-ncol=2}
+ 
 ![image26.png](assets/image26.png)
 ```
 (
@@ -256,7 +256,7 @@ different scripts can run in parallel. The turning and the moving happen
 together. Parallelism can be seen with multiple
 scripts of a single sprite also. Try this example:
 
-::: {.evenly-spaced-images layout-ncol=2}
+ 
 ![image28.png](assets/image28.png)
 ```
 (
@@ -291,13 +291,13 @@ scripting area, and click the paint button ![image32.png](assets/image32.png). T
 appears is explained in @sec-the-paint-editor. There are three
 ways to import a costume. First select the desired sprite in the sprite
 corral. Then, one way is to click on the file icon in the tool bar,
-then choose ![image30.png](assets/image30.png){.image-inline} the “`Costumes…`” menu item. You will see a list of costumes
+then choose ![image30.png](assets/image30.png) the “`Costumes…`” menu item. You will see a list of costumes
 from the public media library, and can choose one. The second way, for a
 costume stored on your own computer, is to click on the file icon and
 choose the “Import…” menu item. You can then select a file in any
 picture format (PNG, JPEG, etc.) supported by your browser. The third
 way is quicker if the file you want is visible on the desktop: Just drag
-the file onto the [Snap]{.snap} window. In any of these cases, the scripting
+the file onto the *Snap!* window. In any of these cases, the scripting
 area will be replaced by something like this:
 
 ![image31.png](assets/image31.png)
@@ -307,19 +307,19 @@ Costumes, and Sounds. You’ll see that the Costumes tab\index{Costumes
 tab} is now selected. In this view, the sprite’s *wardrobe,*
  you can choose whether the sprite should wear its
 Turtle costume or its Alonzo costume. (Alonzo, the
-[Snap]{.snap} mascot, is named after Alonzo Church, a
+*Snap!* mascot, is named after Alonzo Church, a
 mathematician who invented the idea of procedures as data
  is
 different from Scratch.) You can give a sprite as many costumes as you like, and then choose which it will wear either by
 clicking in its wardrobe or by using the 
 
-![image35.png](../blocks/images/block_doSwitchToCostume.png){.image-inline}
+![image35.png](../blocks/images/block_doSwitchToCostume.png)
 
 ```
 (wear [Turtle])
 ```
 
- or ![Next Costume](../blocks/images/block_doWearNextCostume.png){.image-inline} 
+ or ![Next Costume](../blocks/images/block_doWearNextCostume.png) 
 
 ```
 (next)
@@ -332,8 +332,8 @@ switches to costume 1. The Turtle, costume 0, is never chosen by next
 costume.) The Turtle costume is the only one that
 changes color to match a change in the sprite’s pen color.
 
-{.callout-tip}
-Protip: ![Switch to costumer (() - 1)](assets/image33.png){.image-inline} 
+
+Protip: ![Switch to costumer (() - 1)](assets/image33.png) 
 ```
 (wear 
     (- nil 1)
@@ -366,7 +366,7 @@ more interesting program, though, the sprites on stage will *interact*
 to tell a story, play a game, etc. Often one sprite will have to tell
 another sprite to run a script. Here’s a simple example:
 
-::: {#fig-broadcast-dog .evenly-spaced-images layout-ncol=4}
+ 
 
 ![image41.png](assets/image41.png)
 
@@ -392,7 +392,7 @@ another sprite to run a script. Here’s a simple example:
 )
 ```
 
-In the block ![image40.png](assets/image40.png){.image-inline}
+In the block ![image40.png](assets/image40.png)
 ```
 (sendAll bark)
 ```
@@ -402,11 +402,11 @@ click on the downward arrowhead in that input slot, one of the choices
 enter a name for the new broadcast. When this block is run, the chosen
 message is sent to *every* sprite, which is why the block is called
 “broadcast.” (But if you click the right arrow after the message name,
-the block becomes ![image45.png](assets/image45.png){.image-inline}
+the block becomes ![image45.png](assets/image45.png)
 ```
 (sendAll bark all)
 ```
-, and you can change it to ![image46.png](assets/image46.png){.image-inline}
+, and you can change it to ![image46.png](assets/image46.png)
 ```
 (sendAll bark dog)
 ```
@@ -441,7 +441,7 @@ the action.
 Sometimes it’s desirable to make a sort of “super-sprite” composed of
 pieces that can move together but can also be separately articulated.
 The classic example is a person’s body made up of a torso, limbs, and a
-head. [Snap]{.snap} allows one sprite to be designated as the *anchor*
+head. *Snap!* allows one sprite to be designated as the *anchor*
  of the combined shape, with other sprites as its *parts.*
 
 
@@ -451,7 +451,7 @@ onto the stage display (not the sprite corral icon!) of the desired
 will be the attachment point of the part on the anchor.
 
 Sprite nesting is shown in the sprite corral icons of both anchors and parts:
-![image47.png](assets/image47.png) <!-- {width=1.63056in height=0.96528in} -->
+![image47.png](assets/image47.png) 
 
 In
 this illustration, it is desired to animate Alonzo’s arm. (The arm has
@@ -473,7 +473,7 @@ blocks.) Any change in the position or size of the anchor is always
 extended to its parts. Also, cloning the anchor (see Section VII. B)
 will also clone all its parts.
 
-![image56.png](assets/image56.png) <!-- {width=1.44444in height=1.5625in} --> 
+![image56.png](assets/image56.png)  
 ```
 (
     (repeat 3 (
@@ -486,8 +486,8 @@ will also clone all its parts.
     ))
 )
 ```
-![image48.png](assets/image48.png) <!-- {width=1.63056in height=0.96528in} -->
-![image49.png](assets/image49.png) <!-- {width=1.63056in height=0.96528in} -->
+![image48.png](assets/image48.png) 
+![image49.png](assets/image49.png) 
 
 *Top: turning the part: the green arm. Bottom: turning the anchor, with
 the arm synchronous (left) and dangling (right).*
@@ -497,40 +497,29 @@ the arm synchronous (left) and dangling (right).*
 So
 far, we’ve used two kinds of blocks: hat blocks
 and command blocks. Another kind is the *reporter* block,\index{Reporter
-block} which has an oval shape: ![image66.png](assets/image66.png) <!-- {width=0.72917in height=0.15625in} --> 
+block} which has an oval shape: ![image66.png](assets/image66.png)  
 ```
 (x)
 ```
 . It’s called a “reporter” because
 when it’s run, instead of carrying out an action, it reports a value
-that can be used as an input to another block. If you drag a ![image65.png](assets/image65.png){.image-inline} <!-- {width=1.47in height=0.52in} --> reporter
+that can be used as an input to another block. If you drag a ![image65.png](assets/image65.png) --> reporter
 into the scripting area by itself and click on it, the value it reports
 will appear in a speech balloon next to the block:
 
 When you drag a reporter block over another block’s input slot, a white
-“halo ” appears around that input slot, analogous to the
-white line that appears when snapping command blocks together:
+“halo ” appears around that input slot, analogous to the white line that appears when snapping command blocks together:
 
-![image67.png](assets/image67.png) <!-- {width=1.47in height=0.52in} -->
+![image67.png](assets/image67.png) 
 ```
 (move 
     (+ 5 2)
 )
 ```
 
-Don’t drop the input over a *red* halo:
-![image71.png](assets/image71.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / -->
-```
-(join : 
-    (list 7 8 1)
-)
-```
-
-That’s used for a purpose explained in @sec-recursive-calls-to-multiple-input-blocks.
-
 Here’s a simple script that uses a reporter block:
 
-![image72.png](assets/image72.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / -->
+![image72.png](assets/image72.png) 
 ```
 (
     (receiveGo) 
@@ -558,7 +547,7 @@ the center.)
 You can do arithmetic using reporters in the
 Operators palette:
 
-![image73.png](assets/image73.png) <!--  style="width:2.11111in;height:0.61806in" alt="Macintosh HD:Users:bh:Desktop:Google Chrome001.png" / -->
+![image73.png](assets/image73.png) 
 ```
 (
     (receiveGo) 
@@ -579,10 +568,10 @@ Operators palette:
 The `round` block rounds 35.3905… to 35, and the `+` block adds 100 to that.
 (By the way, the `round` block is in the Operators palette, just like `+`,
 but in this script it’s a lighter color with black lettering because
-[Snap]{.snap} alternates light and dark versions of the palette colors when a
+*Snap!* alternates light and dark versions of the palette colors when a
 block is nested inside another block from the same palette:
 
-![image80.png](assets/image80.png) <!-- {width=4.85417in height=1.90625in} -->
+![image80.png](assets/image80.png) 
 ```
 (repeat 10 
     (if 
@@ -622,7 +611,7 @@ block is nested inside another block from the same palette:
 This
 aid to readability is called *zebra coloring.*
 A reporter block with its inputs, maybe including other reporter
-blocks, such as ![image81.png](assets/image81.png) <!-- {width=1.91667in height=0.23958in} -->
+blocks, such as ![image81.png](assets/image81.png) 
 ```
 (+ 
     (round 
@@ -632,7 +621,7 @@ blocks, such as ![image81.png](assets/image81.png) <!-- {width=1.91667in height=
 ```
 , is called an *expression.*
 
-##  Predicates and Conditional Evaluation {#sec-sec-predicates-and-conditional-evaluation}
+##  Predicates and Conditional Evaluation 
 
 Most reporters report
 ```
@@ -640,7 +629,7 @@ Most reporters report
 ```
 ,
 or a text string, like
-![image83.png](../blocks/images/block_reportJoinWords.png){.image-inline}
+![image83.png](../blocks/images/block_reportJoinWords.png)
 ```
 (join "hello " world)
 ```
@@ -660,11 +649,11 @@ wouldn’t say ![image84.png](assets/image84.png)
     (mouseDown)
 )
 ```
-, although (as you can see from the picture) [Snap]{.snap} lets
+, although (as you can see from the picture) *Snap!* lets
 you do it if you really want. Instead, you normally use predicates in
 special hexagonal input slots like this one:
 
-![image86.png](../blocks/images/block_doIf.png){.image-4x}
+![image86.png](../blocks/images/block_doIf.png)
 ```
 (if nil nil)
 ```
@@ -697,7 +686,7 @@ is satisfied: ![image89.png](assets/image89.png)
 If, while working on a project, you want to omit temporarily some commands
 in a script, but you don’t want to forget where they belong, you can say
 
-![image88.png](assets/image88.png) <!-- {width=2.28194in height=1.46875in} -->
+![image88.png](assets/image88.png) 
 ```
 (
     (move 10) 
@@ -716,7 +705,7 @@ Sometimes you want to take the same action whether some condition is
 true or false, but with a different input value. For this purpose you
 can use the *reporter* `if` block :
 
-![image90.png](assets/image90.png) <!-- {width=4.20833in height=0.38542in} -->
+![image90.png](assets/image90.png) 
 ```
 (say 
     (join "I'm on the " 
@@ -748,11 +737,11 @@ a *constant* Boolean value in a hexagonal slot
 instead of a predicate-based expression, hover the mouse over the block
 and click on the control that appears:
 
-![image91.png](assets/image91.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-false.png" / --> 
+![image91.png](assets/image91.png)  
 ```
 (global= "[turbo mode]" f)
 ```
-![image92.png](assets/image92.png){.image-inline} <!--  style="width:1.375in;height:0.24306in" alt="Macintosh HD:Users:bh:Desktop:turbo-true.png" / -->
+![image92.png](assets/image92.png) 
 ```
 (global= "[turbo mode]" t)
 ```
@@ -761,7 +750,7 @@ and click on the control that appears:
 
 Try
 this script:
-![image93.png](assets/image93.png) <!-- {width=1.58333in height=1.41667in} -->
+![image93.png](assets/image93.png) 
 ```
 (
     (receiveGo) 
@@ -778,7 +767,7 @@ this script:
 The
 input to the move block is an orange oval. To get it there, drag the
 orange oval that’s part of the `for` block :
-![image94.png](assets/image94.png) <!-- {width=1.88542in height=1.4375in} -->
+![image94.png](assets/image94.png) 
 ```
 (
     (receiveGo) 
@@ -812,7 +801,7 @@ script inside the block’s C-slot. (By the way, if you don’t like the
 name <var>i</var>, you can change it by clicking on the orange oval without
 dragging it, which will pop up a dialog window in which you can enter a
 different name:
-![image95.png](assets/image95.png) <!-- {width=3.1875in height=1.5in} -->
+![image95.png](assets/image95.png) 
 
 “<var>I</var>” isn’t a very descriptive name; you might prefer “length” to indicate
 its purpose in the script. “<var>I</var>” is traditional because mathematicians
@@ -826,12 +815,12 @@ You can create variables “by hand” that aren’t limited to being used
 within a single block. At the top of the Variables palette, click the
 “Make a variable” button:
 
-![image97.png](assets/image97.png) <!-- {width=2.05208in height=2.27083in} -->
+![image97.png](assets/image97.png) 
 
 This will bring up a dialog window in which you can give your variable a
 name:
 
-![image96.png](assets/image96.png) <!-- {width=3.1875in height=1.84375in} -->
+![image96.png](assets/image96.png) 
 
 The dialog also gives you a choice to make the variable available to all
 sprites (which is almost always what you want) or to make it visible
@@ -847,7 +836,7 @@ If
 you give your variable the name “name” then the Variables palette will
 look like this:
 
-![image98.png](assets/image98.png) <!-- {width=1.65833in height=2.29167in} -->
+![image98.png](assets/image98.png) 
 
 There’s
 now a “Delete a variable” button, and there’s
@@ -855,14 +844,14 @@ an orange oval with the variable name in it, just like the orange oval
 in the for block. You can drag the variable into any script in the
 scripting area. Next to the oval is a checkbox, initially checked. When
 it’s checked, you’ll also see a *variable watcher*\index{variable
-watcher} on the stage: ![image99.png](assets/image99.png) <!-- {width=1.04167in height=0.40625in} -->
+watcher} on the stage: ![image99.png](assets/image99.png) 
 
 When you give the variable a value, the orange box in its watcher
  will display the value.
 
 How *do* you give it a value?
 You use the `set` block :
-![image100.png](assets/image100.png) <!-- {width=1.92708in height=0.47917in} -->
+![image100.png](assets/image100.png) 
 ```
 (
     (doAsk "what's your name?") 
@@ -877,7 +866,7 @@ click on the downarrow in the first input slot, and you get a menu of
 all the available variable names.
 
 If you do choose “For this sprite only ”
-when creating a variable, its block in the palette looks like this:![image101.png](assets/image101.png) <!--  style="width:0.65833in;height:0.14167in" alt="Macintosh HD:Users:bh:Desktop:local-var.png" / -->
+when creating a variable, its block in the palette looks like this:![image101.png](assets/image101.png) 
 ```
 (get variable)
 ```
@@ -899,7 +888,7 @@ during the running of a particular script. In that case you can use the
 script variables block to make the
 variable:
 
-![image105.png](assets/image105.png) <!-- {width=2.08333in height=0.30208in} -->
+![image105.png](assets/image105.png) 
 ```
 (
     (receiveGo) 
@@ -929,7 +918,7 @@ variables block without dragging to change its name. You can also make
 more than one temporary variable by clicking on the right arrow at the
 end of the block to add another variable oval:
 
-![image106.png](assets/image106.png) <!-- {width=2.08333in height=0.30208in} -->
+![image106.png](assets/image106.png) 
 ```
 (var a b c)
 ```
@@ -959,7 +948,7 @@ If you right-click on an
 orange oval in a context in which the variable is *used,* then you are
 able to rename just that one orange oval:
 
-![image104.png](assets/image104.png) <!-- {width=2.08333in height=0.30208in} -->
+![image104.png](assets/image104.png) 
 
 If you right-click on the
 place where the variable is *defined* (a script variables block, the
@@ -969,7 +958,7 @@ given two renaming options, “rename” and “rename all.” If you choose
 “rename,” then the name is changed only in that one orange oval, as in
 the previous case:
 
-![image103.png](assets/image103.png) <!-- {width=2.08333in height=0.30208in} -->
+![image103.png](assets/image103.png) 
 
 But if you choose “rename
 all,” then the name will be changed throughout the scope of the variable
@@ -986,19 +975,19 @@ can put in a variable; in Chapter IV you’ll see how to use *lists* to
 collect many values in one data structure, and in Chapter VIII you’ll
 see how to read information from web sites.
 
-![image102.png](assets/image102.png) <!-- {width=2.08333in height=0.30208in} -->
+![image102.png](assets/image102.png) 
 
 When you use these
 capabilities, your project may take up a lot of memory in
 the computer. If you get close to the amount of memory available to
-[Snap]{.snap}, then it may become impossible to save your project. (Extra
-space is needed temporarily to convert from [Snap]{.snap}’s internal
+*Snap!*, then it may become impossible to save your project. (Extra
+space is needed temporarily to convert from *Snap!*’s internal
 representation to the form in which projects are exported or saved.) If
 your program reads a lot of data from the outside world that will still
 be available when you use it next, you might want to have values
 containing a lot of data removed from memory before saving the project.
 To do this, right-click or control-click on the orange oval in the
-Variables palette, to see this menu: ![image114.png](assets/image114.png) <!-- {width=1.29167in height=1.05556in} -->
+Variables palette, to see this menu: ![image114.png](assets/image114.png) 
 
 You already know about the rename options, and "help…" displays a help
 screen about variables in general. Here we’re interested in the check
@@ -1009,20 +998,20 @@ the variable to it.
 
 ## Debugging
 
-[Snap]{.snap} provides several tools to help you debug a program. They center
+*Snap!* provides several tools to help you debug a program. They center
 around the idea of *pausing* the running of a script partway through, so
 that you can examine the values of variables.
 
 ### The pause button
 
 The simplest way to pause a
-program is manually, by clicking the pause button ![image116.png](assets/image116.png) <!-- {width=0.29167in height=0.16667in} -->
+program is manually, by clicking the pause button ![image116.png](assets/image116.png) 
 in the top right corner of the window. While the program is paused, you
 can run other scripts by clicking on them, show variables on stage with
 the checkbox next to the variable in the Variables palette or with the
 `show variable`block, and do all the other
 things you can generally do, including modifying the paused scripts by
-adding or removing blocks. The ![image115.png](assets/image115.png) <!-- {width=0.29167in height=0.16667in} -->  button changes shape too and clicking it
+adding or removing blocks. The ![image115.png](assets/image115.png)   button changes shape too and clicking it
 again resumes the paused scripts.
 
 ### Breakpoints
@@ -1030,7 +1019,7 @@ again resumes the paused scripts.
 The pause button is great if your program seems to be in an infinite loop,
 but more often you’ll want
 to set a *breakpoint,* a particular point in a script at which you want
-to pause. The ![image117.png](../blocks/images/block_doPauseAll.png){.image-inline} block
+to pause. The ![image117.png](../blocks/images/block_doPauseAll.png) block
 ```
 (pause)
 ```
@@ -1063,7 +1052,7 @@ library (see @sec-libraries-intro for more about how to use
 libraries) is a breakpoint block that lets you set a *conditional*
 breakpoint, and automatically display the relevant variables before pausing. Here’s a sample use of it:
 
-![image119.png](assets/image119.png) <!-- {width=1.19444in height=1.33333in} -->
+![image119.png](assets/image119.png) 
 ```
 (
     (var foo bar) 
@@ -1094,7 +1083,7 @@ block s can also be used to hide and show
 primitives in the palette. The pulldown
 menu doesn’t include primitive blocks, but there’s a generally useful
 technique to give a block input values it wasn’t expecting using run or
-call:![image120.png](assets/image120.png) <!-- {width=3.9375in height=0.38889in} -->
+call:![image120.png](assets/image120.png) 
 ```
 (run 
     (cmd 
@@ -1117,11 +1106,11 @@ understand how the program got there. To understand better, you’d
 like to watch the program as it runs, at human speed rather than
 at computer speed. You can do this by
 clicking the *visible stepping* --> ), before running a script or
-while the script is paused. The button will light up ( ![image123.png](assets/image123.png) <!-- {width=0.29167in height=0.16667in} --> ) and a speed
-control slider ![image122.png](assets/image122.png) <!-- {width=0.54563in height=0.15278in} --> will appear in the toolbar. When you start or continue
+while the script is paused. The button will light up ( ![image123.png](assets/image123.png)  ) and a speed
+control slider ![image122.png](assets/image122.png)  will appear in the toolbar. When you start or continue
 the script, its blocks and input slots will light up cyan one at a time:
 
-![image124.png](assets/image124.png) <!-- {width=0.54563in height=0.15278in} -->
+![image124.png](assets/image124.png) 
 
 In this simple example, the inputs to the blocks are constant values,
 but if an input were a more complicated expression involving several
@@ -1132,7 +1121,7 @@ called, so, for example, the 100 lights up before the move.
 The speed of stepping is
 controlled by the slider. If you move the
 slider all the way to the left, the speed is zero, the pause button
-turns into a step button ![image134.png](assets/image134.png) <!-- {width=0.29167in height=0.16667in} --> , and the script takes a single step each time
+turns into a step button ![image134.png](assets/image134.png)  , and the script takes a single step each time
 you push it. The name for this is *single stepping.*\index{single
 stepping}
 
@@ -1173,7 +1162,7 @@ scripting area gives the option to change it to ![image135.png](assets/image135.
 ```
 if vector logging is enabled. See @para-log-pen-vectors.
 
-![image137.png](assets/image137.png){.image-inline} Print
+![image137.png](assets/image137.png) Print
 characters
 ```
 (write Hello! 12)
@@ -1185,36 +1174,36 @@ sprite’s position before using it, and sometimes you need to know how
 big the text turned out to be, in turtle steps.) If the pen is down, the
 text will be underlined.
 
-![image138.png](assets/image138.png){.image-inline}
+![image138.png](assets/image138.png)
 ```
 (paste nil)
 ```
 
 Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)
 
-![image139.png](assets/image139.png){.image-inline}
+![image139.png](assets/image139.png)
 ```
 (cut nil)
 ```
 
 Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.)
 
-![image142.png](assets/image142.png){.image-inline} See @fig-generic-when.
+![image142.png](assets/image142.png) See @fig-generic-when.
 ```
 (receiveConditionEvent nil)
 ```
 
-![image141.png](assets/image141.png){.image-inline} See @sec-pause-all.
+![image141.png](assets/image141.png) See @sec-pause-all.
 ```
 (pause)
 ```
 
-![image140.png](assets/image140.png){.image-inline} Runs only this script until finished. In the Control palette even though it’s gray.
+![image140.png](assets/image140.png) Runs only this script until finished. In the Control palette even though it’s gray.
 ```
 (warp nil)
 ```
 
-![image143.png](assets/image143.png){.image-inline} <!--  style="width:1.71in;height:0.23in" alt="Macintosh HD:Users:bh:Desktop:pix:reporter-if.png" / --> 
+![image143.png](assets/image143.png)  
 ```
 (playAll nil)
 ```
@@ -1223,7 +1212,7 @@ version of the `if/else` primitive command block\index{if else reporter
 block} . Only one of the two branches is evaluated, depending on the
 value of the first input.
 
-![image144.png](assets/image144.png){.image-inline} <!--  style="width:1.83in;height:0.61in" alt="Macintosh HD:Users:bh:Desktop:pix:for.png" / -->
+![image144.png](assets/image144.png) 
 ```
 (ifThen nil nil nil)
 ```
@@ -1231,7 +1220,7 @@ Looping block like
 `repeat` but with an index variable\index{index
 variable} .
 
-![image145.png](assets/image145.png){.image-inline} <!--  style="width:1.37986in;height:0.28958in" alt="Graphical user interface, application, logo Description automatically generated" / --> 
+![image145.png](assets/image145.png)  
 ```
 (var a)
 ```
@@ -1239,22 +1228,22 @@ Declare
 local variables in a script.\index{script
 variables block}
 
-![image148.png](assets/image148.png){.image-inline} See @sec-ch09.
+![image148.png](assets/image148.png) See @sec-ch09.
 ```
 (url snap.berkeley.edu)
 ```
 
-![image146.png](assets/image146.png){.image-inline} reports the value of a graphics effect.
+![image146.png](assets/image146.png) reports the value of a graphics effect.
 ```
 (effect [ghost])
 ```
 
-![image147.png](assets/image147.png){.image-inline} Constant true value. See @sec-predicates-and-conditional-evaluation.
+![image147.png](assets/image147.png) Constant true value. See @sec-predicates-and-conditional-evaluation.
 ```
 (bool t)
 ```
 
-![image149.png](assets/image149.png){.image-inline}
+![image149.png](assets/image149.png)
 ```
 (shown)
 ```
@@ -1263,7 +1252,7 @@ variables block}
 (down?)
 ```
 
-![image153.png](assets/image153.png){.image-inline}
+![image153.png](assets/image153.png)
 ```
 (js nil nil)
 ```
@@ -1272,49 +1261,60 @@ Create a primitive using JavaScript. (This block is
 disabled by default; the user must check “Javascript extensions” in the
 setting menu *each time* a project is loaded.)
 
-::: {.evenly-spaced-images layout-ncol=2}
-![image150.png](assets/image150.png){.image-inline}
+ 
+![image150.png](assets/image150.png)
 ```
 (aspect [hue] nil)
 ```
 
 The `at` block directly behind the rotation center of a sprite, the mouse, or an arbitrary (x,y) coordinate pair dropped onto the second menu slot. The first five items of the left menu let you examine the
 color visible at the position. (The “RGBA” option reports a list.) The “sprites” option reports a list of all sprites, including this one, any point of which overlaps this sprite’s rotation center (behind or in front). This is a hyperblock with respect to its second input.
-:::
 
-<!-- This needs 2 columns ??? -->
-![image154.png](assets/image154.png){.image-4x}
+
+
+![image154.png](assets/image154.png)
+```
+(is 5 [number])
+```
 
 Checks the of a value.
 
-<!-- These two need to be remade as text -->
-![image151.png](assets/image151.png){.image-4x}
+Blocks only for the stage:
+![image151.png](assets/image151.png)
 
 ```
+(
+    (setBackgroundColor "rgba(145,26,68,1)") 
+    (changeBackgroundColorDimension [hue] 10) 
+    (setBackgroundColorDimension [hue] 50)
+)
 ```
-
-![image152.png](assets/image152.png){.image-4x}
-
-```
-
-```
-
-::: {layout-ncol=2}
-![image155.png](assets/image155.png){.image-4x}
+Get or set selected global flags
+![image152.png](assets/image152.png)
 
 ```
+(global= "[video capture]" nil)
+```
 
+```
+(global "[turbo mode]")
+```
+
+![image155.png](assets/image155.png)
+
+```
+(split "hello world" " ")
 ```
 
 Turn the text into a list, using the second input as the delimiter between items. The default
 delimiter, indicated by the brown dot in the input slot, is a single space character. “Letter” puts each character of the text in its own list item. “Word” puts each word in an item. ( (0xd). “Csv”
  split formatted text into lists of lists; see @sec-csv. “Blocks”
 takes a script as the first input, reporting a list structure  representing the structure of the script. See Chapter XI.
-:::
 
-![image170.png](assets/image170.png){.image-inline} 
+
+![image170.png](assets/image170.png) 
 ```
-
+(same nil nil)
 ```
 For lists,
  reports true only if its two input values are the
@@ -1322,29 +1322,38 @@ very same list, so changing an item in one of them is visible in the
 other. (For `=`, lists that look the same are the same.) For text strings,
 uses case-sensitive comparison, unlike `=`, which is case-independent.
 
-![image171.png](assets/image171.png){.image-inline}
+![image171.png](assets/image171.png)
+```
+(atan2 nil nil)
 ```
 
 ```
+(max nil nil)
+```
+
+```
+(min nil nil)
+```
+
  These *hidden* blocks can be found with the relabel option
  of any dyadic arithmetic block. They’re hidden
-partly because writing them in [Snap]{.snap} is a good, pretty easy
+partly because writing them in *Snap!* is a good, pretty easy
 programming exercise. Note: the two inputs to `atan2`
 are Δ*x* and Δ*y* in that order, because we measure angles clockwise
-from north. `max` /index{max block} and `min` /index{min block} are *variadic;* by clicking the arrowhead, you
+from north. `max` /index are *variadic;* by clicking the arrowhead, you
 can provide additional inputs.
 
-![image177.png](assets/image177.png){.image-inline} 
+![image177.png](assets/image177.png) 
 ```
-
+(<= nil nil)
 ```
-![image178.png](assets/image178.png){.image-inline} 
+![image178.png](assets/image178.png) 
 ```
-
+(!= nil nil)
 ```
-![image179.png](assets/image179.png){.image-inline}
+![image179.png](assets/image179.png)
 ```
-
+(>= nil nil)
 ```
 
 Similarly, these hidden predicates can be found by relabeling the relational predicates.
@@ -1353,7 +1362,23 @@ Similarly, these hidden predicates can be found by relabeling the relational pre
 
 ![image172.png](assets/image172.png)
 ```
+(define block nil nil)
+```
 
+```
+(deleteBlock nil)
+```
+
+```
+(setBlock [label] nil nil)
+```
+
+```
+(block [definition] nil)
+```
+
+```
+(this [script])
 ```
 
 These blocks support *metaprogramming,* which means manipulating blocks
@@ -1364,16 +1389,79 @@ capability is new in version 8.0.
 
 ### First class list blocks (see @sec-ch04):
 
-<!-- TODO: welp. this needs to be remade -->
+
 ![image173.png](assets/image173.png)
 ```
 
 ```
 
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
 `Numbers from` will
 count up or down.
 
-![image224.png](assets/image224.png){.image-inline} ![image225.png](assets/image225.png){.image-inline}
+![image224.png](assets/image224.png)
 report
 ```
 
@@ -1409,7 +1497,7 @@ vector (x,y).
 
 **Scenes:**
 
-![image280.png](assets/image280.png){.image-2x}
+![image280.png](assets/image280.png)
 ```
 
 ```
@@ -1424,14 +1512,14 @@ no variables. But the old scene can send a message to the new one, to
 start it running, with optional payload as in broadcast\index{broadcast
 block} (See @sec-broadcast).
 
-![image282.png](assets/image282.png){.image-4x}
+![image282.png](assets/image282.png)
 ```
 
 ```
 
 In particular, you can say
 
-![image281.png](assets/image281.png){.image-4x}
+![image281.png](assets/image281.png)
 ```
 
 ```
@@ -1455,7 +1543,7 @@ the mouse, or the center. “Ray length” is the distance from the center
 of this sprite to the nearest point on the other sprite, in the current
 direction.
 
-![image284.png](assets/image284.png){.image-4x}
+![image284.png](assets/image284.png)
 ```
 
 ```
@@ -1466,7 +1554,7 @@ game pieces from moving around, but keep running this script to provide
 the user’s final score. The last two menu choices add a tab at the
 bottom of the block because the current script can continue after it.
 
-![image285.png](assets/image285.png){.image-2x}
+![image285.png](assets/image285.png)
 ```
 
 ```
@@ -1476,7 +1564,7 @@ or stamped ink on the stage. Also, `touching` will
 not detect hidden sprites, but a hidden sprite can use it to detect
 visible sprites.
 
-![image305.png](assets/image305.png){.image-inline} <!--  style="width:2.43333in;height:0.3in" alt="Macintosh HD:Users:bh:Desktop:video-on.png" / --> 
+![image305.png](assets/image305.png)  
 ```
 
 ```
@@ -1484,13 +1572,13 @@ The `video on` block
  that takes a
 snapshot and reports it as a costume. It is hyperized with respect to its second input.
 
-:::{.evenly-spaced-images layout-ncol=2}
-![image306.png](assets/image306.png){.image-inline}
+
+![image306.png](assets/image306.png)
 ```
 
 ```
 
-![image304.png](assets/image304.png){.image-inline} 
+![image304.png](assets/image304.png) 
 ```
 
 ```
@@ -1500,17 +1588,17 @@ The “neg” option is a monadic\index{of block
 “id” is the identity function, which reports its input. “sign” reports 1
 for positive input, 0 for zero input, or -1 for negative input.
 
-:::
 
-<!-- ::: {.callout-tip} -->
-<!-- ## Two Different Length Of Blocks -->
 
-The ![length of text block](../blocks/images/block_reportTextAttribute.png){.image-inline} 
+
+
+
+The ![length of text block](../blocks/images/block_reportTextAttribute.png) 
 ```
 
 ```
-name was changed to clarify it is different from ![length of text block](../blocks/images/block_reportListAttribute.png){.image-inline}
-<!-- ::: -->
+name was changed to clarify it is different from ![length of text block](../blocks/images/block_reportListAttribute.png)
+
 ```
 
 ```
@@ -1523,7 +1611,7 @@ name was changed to clarify it is different from ![length of text block](../bloc
 you drop a list on the arrowheads, the block name
 changes to `sum` or `product`.
 
-::: {.evenly-spaced-images layout-ncol=2}
+ 
 ![image309.png](assets/image309.png)
 ```
 
@@ -1534,19 +1622,19 @@ clicking, dragging, hovering, etc. The “stopped” option triggers when
 all scripts are stopped, as with the stop button; it is useful for
 robots whose hardware interface must be told to turn off motors. A `when I am stopped` script can run only for a
 limited time.
-:::
 
-::: {.evenly-spaced-images layout-ncol=2}
+
+ 
 ![image310.png](assets/image310.png)
 ```
 
 ```
 
 Extended broadcast
-:::
 
-::: {.evenly-spaced-images layout-ncol=2}
-![image311.png](assets/image311.png){.image-4x}
+
+ 
+![image311.png](assets/image311.png)
 ```
 
 ```
@@ -1557,30 +1645,30 @@ like any script variable) that will be set to the data of a matching
 broadcast. If the first input is set to “any message,” then the data
 variable will be set to the message, if no payload is included with the
 broadcast, or to a two-item list containing the message and the payload.
-:::
 
-![image312.png](assets/image312.png){.image-2x}
 
-![image355.png](assets/image355.png){.image-2x}
+![image312.png](assets/image312.png)
+
+![image355.png](assets/image355.png)
 
 If the input is set to “any key,” then a right arrowhead appears:
-![image357.png](assets/image357.png){.image-inline-tall} and if you click it,
+![image357.png](assets/image357.png) and if you click it,
 a script variable key is created whose value is the key that was
 pressed. (If the key is one that’ represented in the input menu by a
 word or phrase, e.g., “enter” or “up arrow,” then the value of key
 will be that word or phrase, *except for* the space character, which
 is represented as itself in key.)
 
-![image356.png](assets/image356.png){.image-4x} <!--  style="width:2.25in;height:0.41944in"   alt="Website Description automatically generated with medium confidence" -->
+![image356.png](assets/image356.png) 
 
 The RGB(A) option accepts a single number, which
 is a grayscale value 0-255; a two-number list, grayscale plus opacity
 0-255; a three-item RGB list, or a four-item RGBA list.
 
-<!-- TODO: Images like this should have index entries defined after this image. -->
+
 ![image358.png](assets/image358.png)
 
-### Using Lists with the Ask Block {#sec-ask-lists}
+### Using Lists with the Ask Block 
 These ask features and more in the Menus
 library.
 
@@ -1604,8 +1692,8 @@ library.
 
 ```
 
-::: {.evenly-spaced-images layout-ncol=2}
-![image363.png](assets/image363.png){.image-4x}
+ 
+![image363.png](assets/image363.png)
 ```
 
 ```
@@ -1617,18 +1705,18 @@ the Looks category. Left, right, etc. report the stage coordinates of
 the corresponding edge of the sprite’s bounding box. Variables reports a
 list of the names of all variables in scope (global, sprite-local, and
 script variables if the right input is a script.)
-:::
 
-## Libraries {#sec-libraries-intro}
 
-There are several collections of useful procedures that aren’t [Snap]{.snap}
+## Libraries 
+
+There are several collections of useful procedures that aren’t *Snap!*
 primitives, but are provided as libraries. To include a library in your
 project, choose the Libraries… option in the
-file (![file menu icon](assets/image384.png){.image-inline}) menu.
+file (![file menu icon](assets/image384.png)) menu.
 
 ![The import libraries dialog](assets/image385.png)
 
-<!-- TODO: This is out of date. It is somewhat redudant with chapter 12. -->
+
 The library menu is divided into five broad categories. The first is,
 broadly, utilities: blocks that might well be primitives. They might be
 useful in all kinds of projects.
@@ -1658,7 +1746,7 @@ needs.
 The libraries and their contents may change, but as of this writing the
 list library has these blocks:
 
-![image387.png](assets/image387.png){.image-4x} <!-- {width=1.84861in height=2.49236in} -->
+![image387.png](assets/image387.png) -->
 
 (The lightning bolt (⚡️) before the name in several of these
 blocks means that they use compiled HOFs or JavaScript primitives to achieve
@@ -1690,8 +1778,8 @@ reports a compact representation of the list as a text string.
 The iteration, composition library has these
 blocks:
 
-![image388.png](assets/image388.png) <!-- {width=1.68889in height=4.75in} -->
-![image389.png](assets/image389.png) <!-- {width=1.04444in height=0.16111in} -->
+![image388.png](assets/image388.png) 
+![image389.png](assets/image389.png) 
 
 `Catch` provide a nonlocal
 exit facility. You can drag the tag from a `catch` block to a `throw` inside
@@ -1721,7 +1809,7 @@ false to continue repeating. The last repeat block is like the `repeat`
 primitive, but makes the number of repetitions so far available to the
 repeated script. The next two blocks are variations on `for`\index{$for$
 block} : the first allows an explicit step instead of using ±1, and the
-second allows any values, not just numbers; inside the script you say ![image390.png](assets/image390.png){.image-inline} <!-- {width=3.15278in height=0.29861in} -->
+second allows any values, not just numbers; inside the script you say ![image390.png](assets/image390.png) -->
 ```
 
 ```
@@ -1731,18 +1819,18 @@ desired value for the loop index.
 
 `Pipe` allows reordering a nested composition with a left-to-right one:
 
-![image392.png](assets/image392.png) <!--  style="width:3.70972in;height:1.17153in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (1).png" / --> 
+![image392.png](assets/image392.png)  
 ```
 
 ```
-![image391.png](assets/image391.png) <!--  style="width:3.44097in;height:1.36111in" alt="Macintosh HD:Users:bh:Desktop:untitled script pic (2).png" / -->
+![image391.png](assets/image391.png) 
 ```
 
 ```
 
 The stream library has these blocks:
 
-![image393.png](assets/image393.png) <!-- {width=3.16111in height=2.15347in} -->
+![image393.png](assets/image393.png) 
 ```
 
 ```
@@ -1769,7 +1857,7 @@ of numbers.
 <a name="word-and-sentence-library"></a>
 The **word and sentence library** has these blocks:
 
-<!-- TODO: Index Entries for all these blocks -->
+
 ![image394.png](assets/image394.png)
 
 ```
@@ -1793,13 +1881,13 @@ Inexplicably, the designers of Scratch chose to abandon that tradition,
 and to focus on the representation of text as a string of characters.
 The one vestige of the Logo tradition from which
 Scratch developed is the block named letter (1) of (world)\index{letter
-(1) of (world) block} , rather than character (1) of (world). [Snap]{.snap}
+(1) of (world) block} , rather than character (1) of (world). *Snap!*
 inherits its text handling from Scratch.
 
 In Logo, the visual representation of a sentence\index{visual
 representation of a sentence} (a list of words) looks like a natural
 language sentence: a string of words with spaces between them. In
-[Snap]{.snap}, the visual representation of a list looks nothing at all like
+*Snap!*, the visual representation of a list looks nothing at all like
 natural language. On the other hand, representing a sentence as a string
 means that the program must continually re-parse the text on every
 operation, looking for spaces, treating multiple consecutive spaces as
@@ -1833,10 +1921,10 @@ Lisp/Scheme.
 
 The pixels library has one block:
 
-![image395.png](assets/image395.png{.image-4x} <!-- {width=0.77917in height=0.62986in} -->
+![image395.png](assets/image395.png -->
 
 Costumes are first class data
-in [Snap]{.snap}. Most of the processing of costume data is done by primitive
+in *Snap!*. Most of the processing of costume data is done by primitive
 blocks in the Looks category. (See page
 [79](#media-computation-with-costumes).) This library provides snap
 , which takes a picture using your computer’s camera
@@ -1844,7 +1932,7 @@ and reports it as a costume.
 
 The bar charts library has these blocks:
 
-![image396.png](assets/image396.png) <!-- {width=3.43056in height=1.91667in} -->
+![image396.png](assets/image396.png) 
 ```
 
 ```
@@ -1876,7 +1964,7 @@ Analysis" library instead.
 The multi-branched conditional library\index{conditional
 library:multiple-branch} has these blocks:
 
-![image397.png](assets/image397.png) <!-- {width=1.85in height=2.47986in} -->
+![image397.png](assets/image397.png) 
 
 The `catch` and `throw` blocks duplicate ones in the iteration library, and are
 included because they are used to implement the others. The `cases: if/then` block
@@ -1896,7 +1984,7 @@ tested.
 
 The variadic library has these blocks:
 
-![image398.png](assets/image398.png) <!-- {width=1.19653in height=0.41667in} -->
+![image398.png](assets/image398.png) 
 
 These are
 versions of the associative
@@ -1911,7 +1999,7 @@ The colors and crayons library has these blocks:
 
 It is intended as a more powerful replacement for the primitive `set pen`
 block specification as a better alternative to the HSV
-that [Snap]{.snap} inherits from JavaScript; a “fair hue ”
+that *Snap!* inherits from JavaScript; a “fair hue ”
 scale that compensates for the eye’s grouping a wide range of light
 frequencies as green while labelling mere slivers as orange or yellow;
 the `X11/W3C standard color names`; `RGB in
@@ -1920,20 +2008,20 @@ on fair hues and including shades (darker colors) and grayscale. Another
 linear scale is a curated set of 100 “crayons,” explained further on the
 next page.
 
-![image412.png](assets/image412.png) <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / -->
+![image412.png](assets/image412.png) 
 
 Colors are
-created by the ![image414.png](assets/image414.png){.image-inline} <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / --> block (for direct user selection), the `color from`
- <!--  style="width:1.13333in;height:0.23333in" alt="Macintosh HD:Users:bh:Desktop:pen-color.png" / --> , which
+created by the ![image414.png](assets/image414.png)  block (for direct user selection), the `color from`
+  , which
 reports the color currently in use by the pen. The `from color` block
  reports names or numbers associated with a
 color:
 
-![image411.png](assets/image411.png){.image-4x} <!--  style="width:0.95in;height:0.225in" alt="Macintosh HD:Users:bh:Desktop:color picker.png" / -->
+![image411.png](assets/image411.png) 
 
 Colors can be created from
 other colors:
-![image415.png](assets/image415.png) <!-- {width=4.83333in height=0.43056in} -->
+![image415.png](assets/image415.png) 
 
 The three blocks with pen in their names are improved versions of
 primitive Pen blocks. In principle `set pen`, for
@@ -1946,24 +2034,24 @@ The
 recommended way to choose a color is from one of two linear scales: the
 continuous *color numbers* and the discrete *crayons:*
 
-![image416.png](assets/image416.png) <!-- {width=7.5in height=0.25in} -->
+![image416.png](assets/image416.png) 
 
-![image417.png](assets/image417.png) <!-- {width=7.5in height=0.25in} -->
+![image417.png](assets/image417.png) 
 
 Color numbers are based on *fair hues,* a modification
 of the spectrum (rainbow) hue scale that devotes less space to green and
 more to orange and yellow, as well as promoting brown to a real color.
 Here is the normal hue scale, for reference:
 
-![image418.png](assets/image418.png) <!-- {width=4in height=0.20833in} -->
+![image418.png](assets/image418.png) 
 
 Here is the fair hue scale:
 
-![image419.png](assets/image419.png) <!-- {width=4in height=0.20833in} -->
+![image419.png](assets/image419.png) 
 
 Here is the color number scale:
 
-![image416.png](assets/image416.png) <!-- {width=5in height=0.20833in} -->
+![image416.png](assets/image416.png) 
 
 (The picture is wider so that pure spectral colors line up with the fair
 hue scale.)
@@ -1971,32 +2059,32 @@ hue scale.)
  And
 here are the 100 crayons :
 
-![image417.png](assets/image417.png) <!-- {width=5in height=0.20833in} -->
+![image417.png](assets/image417.png) 
 
 The `color from` block, for example, provides different pulldown menus
 depending on which scale you choose:
 
-![image410.png](assets/image410.png) <!--  style="width:2.41667in;height:0.34444in" alt="Macintosh HD:Users:bh:Desktop:color-by-name.png" / -->
+![image410.png](assets/image410.png) 
 
  You can also
 type the crayon name:
 
-![image420.png](assets/image420.png) <!--  style="width:2.41667in;height:0.34444in" alt="Macintosh HD:Users:bh:Desktop:color-by-name.png" / -->
+![image420.png](assets/image420.png) 
 
 There are many scales:
 
-![image427.png](assets/image427.png) <!-- {width=4.29167in height=1.90972in} -->
+![image427.png](assets/image427.png) 
 
 The white slot at the end of some of the blocks has two purposes. It can
 be used to add a transparency to a color (0=opaque,
 100=transparent):
 
-![image428.png](assets/image428.png) <!-- {width=4.29167in height=1.90972in} -->
+![image428.png](assets/image428.png) 
 
 or it can be expanded to enter three or four numbers for a vector
 directly into the block, so these are equivalent:
 
-![image429.png](assets/image429.png) <!-- {width=4.29167in height=1.90972in} -->
+![image429.png](assets/image429.png) 
 
 But note that a transparency number in a four-number RGBA vector is on
 the scale 255=opaque, 0=transparent, so the following are *not*
@@ -2042,7 +2130,7 @@ your program is run within the program, instead of stopping the script
 with a red halo and an obscure error message. The block runs the script
 in its first C-slot. If it finishes without an error, nothing else
 happens. But if an error happens, the code in the second C-slot is run.
-While that second script is running, the variable ![image443.png](assets/image443.png) <!-- {width=0.43056in height=0.15278in} -->  contains the text of
+While that second script is running, the variable ![image443.png](assets/image443.png)   contains the text of
 the error message that would have been displayed if you weren’t catching
 the error. The `error` block is sort of the opposite:
 it lets your program *generate* an error message, which will be
@@ -2051,15 +2139,15 @@ displayed with a red halo unless it is caught by `safely try`. `Safely try repor
 The text costumes library has only two
 blocks:
 
- ![image446.png](assets/image446.png) <!--  style="width:1.92in;height:0.45078in" alt="Macintosh HD:Users:bh:Desktop:textcostume.png" / -->
- ![image447.png](assets/image447.png){.image-4x} <!-- {width=3.25972in height=0.18958in} -->
+ ![image446.png](assets/image446.png) 
+ ![image447.png](assets/image447.png) -->
 
 `Costume from text`
 reports a costume that can be used with
 the `switch to costume` block to make a
 button:
 
-![image445.png](assets/image445.png) <!--  style="width:0.53472in;height:0.20833in" alt="Macintosh HD:Users:bh:Desktop:Snaplabel.png" / -->
+![image445.png](assets/image445.png) 
 
 `Costume with background` reports a
 costume made from another costume by coloring its background, taking a
@@ -2067,12 +2155,12 @@ color input like the `set pen color to RGB(A)` block and a number of
 turtle steps of padding around the original costume. These two blocks
 work together to make even better buttons:
 
-![image448.png](assets/image448.png) <!-- {width=5.51in height=0.68in} -->
+![image448.png](assets/image448.png) 
 
 The text to speech library has these
 blocks:
 
-![image449.png](assets/image449.png) <!--  style="width:2.275in;height:0.8in" alt="Macintosh HD:Users:bh:Desktop:speechlib.png" / -->
+![image449.png](assets/image449.png) 
 
 This library
 interfaces with a capability in up-to-date browsers, so it might not
@@ -2082,7 +2170,7 @@ the text!
 The parallelization library contains
 these blocks:
 
-![image450.png](assets/image450.png) <!-- {width=1.17986in height=1.25972in} -->
+![image450.png](assets/image450.png) 
 
 The two `do in parallel`blocks
  take any number of scripts as inputs.
@@ -2093,7 +2181,7 @@ scripts have finished before continuing the script below the block.
 The create variables library
 
 
-![image451.png](assets/image451.png) <!-- {width=1.37778in height=1.48333in} -->
+![image451.png](assets/image451.png) 
 
 These blocks allow a program to perform the same operation as the
 button, making global, sprite local, or script variables, but allowing
@@ -2104,7 +2192,7 @@ delete them, and find out if they already exist.
 The getters and setters library has these
 blocks:
 
-![image452.png](assets/image452.png) <!-- {width=1.875in height=1.05in} -->
+![image452.png](assets/image452.png) 
 
 The purpose of this library
 is to allow program access to the settings controlled by user interface
@@ -2136,14 +2224,14 @@ of functions applicable to Scheme numbers, including subtype predicates
 such as rational? and infinite?, and selectors such as numerator and
 real-part.
 
-<!-- I cannot figure out an index format that compiles this...  -->
+
 The `!` block computes the factorial function, useful to test whether bignums are turned on. Without bignums:
 
-![image455.png](assets/image455.png) <!-- {width=0.29167in height=0.16667in} -->
+![image455.png](assets/image455.png) 
 
 With bignums:
 
-![image456.png](assets/image456.png) <!-- {width=0.29167in height=0.16667in} -->
+![image456.png](assets/image456.png) 
 
 The 375-digit value of 200! isn’t readable on this page, but if you
 right-click on the block and choose “result pic,” you can open the
@@ -2157,10 +2245,10 @@ type.
 The strings, multi-line input library
 provides these blocks:
 
-![image463.png](assets/image463.png) <!-- {width=3.9375in height=2.04167in} -->
+![image463.png](assets/image463.png) 
 
 All
-of these could be written in [Snap]{.snap} itself, but these are implemented
+of these could be written in *Snap!* itself, but these are implemented
 using the corresponding JavaScript library functions directly, so they
 run fast. They can be used, for example, in scraping data from a web
 site. The command use case-independent comparisons applies only to this
@@ -2169,7 +2257,7 @@ a text input that can include newline characters.
 
 The animation library has these blocks:
 
-![image464.png](assets/image464.png) <!-- {width=4.0125in height=2.33125in} -->
+![image464.png](assets/image464.png) 
 
 Despite the name, this isn’t only about graphics; you can animate the values
 of a variable, or anything else that’s expressed numerically.
@@ -2193,18 +2281,18 @@ sprite’s direction or size. The `animate setter` block in
 Control lets you animate any numeric quantity with any easing function.
 The getter and setter inputs are best explained by example:
 
-![image466.png](assets/image466.png) <!--  style="width:4.63194in;height:0.63194in" alt="Macintosh HD:Users:bh:Desktop:pix:animate-control.png" / -->
+![image466.png](assets/image466.png) 
 
 is equivalent to
 
-![image467.png](assets/image467.png) <!--  style="width:3.40972in;height:0.25694in" alt="Macintosh HD:Users:bh:Desktop:pix:animate-motion.png" / -->
+![image467.png](assets/image467.png) 
 
 The other blocks in the library are helpers for these four.
 
 The serial ports library contains these
 blocks:
 
-![image468.png](assets/image468.png) <!--  style="width:1.73264in;height:1.03472in" -->
+![image468.png](assets/image468.png) 
 
 It
 is used to allow hardware developers to control devices such as robots
@@ -2214,7 +2302,7 @@ connected to your computer via a serial port.
 The frequency distribution analysis library\index{frequency
 distribution analysis library} has these blocks:
 
-![image469.png](assets/image469.png) <!-- {width=4.02708in height=2.39583in} -->
+![image469.png](assets/image469.png) 
 
 This is a collection of tools for analyzing large data sets and plotting
 histogram s of how often some value is found in some
@@ -2227,7 +2315,7 @@ https://tinyurl.com/jens-data
 The audio comp library includes these
 blocks:
 
-![image470.png](assets/image470.png) <!-- {width=3.54167in height=2.98125in} -->
+![image470.png](assets/image470.png) 
 
 This library takes a sound,
 one that you record or one from our collection of sounds, and
@@ -2258,12 +2346,12 @@ The database library contains these blocks:
 
 ![image472.png](assets/image472.png)
 
-It is used to keep data that persist from one [Snap]{.snap} session
+It is used to keep data that persist from one *Snap!* session
  to the next, if you use the same browser and the same login.
 
 The world map library has these blocks:
 
-![image473.png](assets/image473.png) <!-- {width=2.44236in height=3.40278in} -->
+![image473.png](assets/image473.png) 
 
 Using any of the command
 blocks puts a map on the screen, in a layer in front of the stage’s
@@ -2338,7 +2426,7 @@ to take lists as inputs. See @sec-ask-lists.
 
 ![image486.png](assets/image486.png)
 
-The **Sci[Snap]{.snap} library** and the **TuneScope
+The **Sci*Snap!* library** and the **TuneScope
 library** are too big to discuss here and are
 documented separately at
 <http://emu-online.de/ProgrammingWithSciSnap.pdf> and
