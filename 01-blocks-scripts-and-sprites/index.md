@@ -6,11 +6,7 @@ toc: true
 
 This chapter describes the *Snap!* features inherited from Scratch; experienced Scratch users can skip to @sec-sprites-parallelism.
 
-*Snap!* is a programming language—a notation in which you can tell a
-computer what you want it to do. Unlike most programming languages,
-though, *Snap!* is a *visual* language; instead of writing a program
-using the keyboard, the *Snap!* programmer uses the same drag-and-drop
-interface familiar to computer users.
+*Snap!* is a programming language—a notation in which you can tell a computer what you want it to do. Unlike most programming languages, though, *Snap!* is a *visual* language; instead of writing a program using the keyboard, the *Snap!* programmer uses the same drag-and-drop interface familiar to computer users.
 
 Start *Snap!*. You should see the following
 arrangement of regions in the window:
@@ -84,28 +80,18 @@ that.[^1]
 ```
 (receiveConditionEvent nil)
 ```
-, is subtly different from the others. When the stop
-sign is clicked, or when a project or sprite is loaded, this block
-doesn’t test whether the condition in its hexagonal input slot is true,
-so the script beneath it will not run, until some *other* script in the
-project runs (because, for example, you click the green flag). When
-generic when blocks are disabled, the stop sign
+, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true,
+so the script beneath it will not run, until some *other* script in the project runs (because, for example, you click the green flag). When generic when blocks are disabled, the stop sign instead of octagonal. 
 
-instead of octagonal. 
+The other blocks in our example script are *command* blocks corresponds to an action that *Snap!* already knows how to carry out.
+For example, the block ![Blue move 10 steps block](../blocks/images/block_forward.png "This block with move the sprite") 
 
-The other blocks in our example script are *command* blocks
-
-corresponds to an action that *Snap!* already knows how to carry out.
-For example, the block ![image9.png](../blocks/images/block_forward.png) 
 ```
 (move 10)
 ```
-tells the sprite (the arrowhead
-shape on the *stage* at the right end of the window) to
-move ten steps (a step is a very small unit of distance) in the
-direction in which the arrowhead is pointing. We’ll see shortly that
-there can be more than one sprite, and that each sprite has its own
-scripts. Also, a sprite doesn’t have to look like an arrowhead, but can
+
+tells the sprite (the arrowhead shape on the *stage* at the right end of the window) to
+move ten steps (a step is a very small unit of distance) in the direction in which the arrowhead is pointing. We’ll see shortly that there can be more than one sprite, and that each sprite has its own scripts. Also, a sprite doesn’t have to look like an arrowhead, but can
 have any picture as a *costume.* The shape of the
 move block is meant to remind you of a Lego™ brick; a script,
 the action, that the block carries out.)
