@@ -1476,106 +1476,111 @@ vector (x,y).
 
 **First class procedure blocks (see @sec-ch06):**
  ![image226.png](assets/image226.png)
+
+```
+(run nil)
 ```
 
 ```
-
+(fork nil)
 ```
 
 ```
-
+(call nil)
 ```
 
 ```
-
+(report nil)
 ```
 
 ```
-
+(cmd nil)
 ```
 
 ```
-
+(ring nil)
 ```
 
 ```
-
+(pred nil)
 ```
 
-```
 **First class sprite, costume, and sound blocks (see @sec-ch07):**
 
  ![image228.png](assets/image228.png)
+
+```
+(newClone [myself])
 ```
 
 ```
-
+(tell nil nil)
 ```
 
 ```
-
+(ask nil nil)
 ```
 
-```
  ![image229.png](assets/image229.png)
+
+```
+(my [neighbors])
 ```
 
 ```
-
+(object [myself])
 ```
 
 ```
-
+(inherit nil)
 ```
 
 ```
-
+(costume [width] [current])
 ```
 
 ```
-
+(stretch [current] 100 50)
 ```
 
 ```
-
+(newCostume nil nil nil)
 ```
 
 ```
-
+(newSound nil 44100)
 ```
 
 ```
-
+(playAt nil 44100)
 ```
 
 ```
-
+(sound [duration] nil)
 ```
 
 ```
-
+(freq 440)
 ```
 
 ```
-
+(stopFreq)
 ```
 
 ```
-
+(audio [volume])
 ```
 
 ```
-
+(pan= 0)
 ```
 
 ```
-
+(+pan 10)
 ```
 
 ```
-
-```
-
+(pan)
 ```
 
  Object is a hyperblock.
@@ -1583,34 +1588,33 @@ vector (x,y).
 **Scenes:**
 
 ![image280.png](assets/image280.png)
-```
 
 ```
+(scene [next])
+```
 
-The major new feature of version 7.0 is *scenes:* A project can include
-within it sub-projects, called scenes, each with its own stage, sprites,
-scripts, and so on. This block makes another scene active, replacing the
+The major new feature of version 7.0 is *scenes:* A project can include within it sub-projects, called scenes, each with its own stage, sprites, scripts, and so on. This block makes another scene active, replacing the
 current one.
 
-Nothing is automatically shared between scenes: no sprites, no blocks,
-no variables. But the old scene can send a message to the new one, to
-start it running, with optional payload as in broadcast\index{broadcast
-block} (See @sec-broadcast).
+Nothing is automatically shared between scenes: no sprites, no blocks, no variables. But the old scene can send a message to the new one, to start it running, with optional payload as in broadcast (See @sec-broadcast).
 
 ![image282.png](assets/image282.png)
+
+```
+(scene [next] nil)
 ```
 
 ```
-
+(scene [next] nil nil)
 ```
 
-```
 
 In particular, you can say
 
 ![image281.png](assets/image281.png)
-```
 
+```
+(scene [next] __shout__go__)
 ```
 
 if the new scene expects to be started with a green flag signal.
@@ -1621,80 +1625,108 @@ These accept two-item (x,y) lists
 including other sprites):
 
 ![image283.png](assets/image283.png)
+
+```
+(goto nil)
 ```
 
 ```
+(face nil)
+```
 
-“Center” means the center of the stage, the
-point at (0,0). “Direction” is in the point in direction sense, the
-direction that would leave this sprite pointing toward another sprite,
-the mouse, or the center. “Ray length” is the distance from the center
-of this sprite to the nearest point on the other sprite, in the current
-direction.
+```
+(relation [distance] nil)
+```
+
+
+“Center” means the center of the stage, the point at (0,0). “Direction” is in the point in direction sense, the direction that would leave this sprite pointing toward another sprite,
+the mouse, or the center. “Ray length” is the distance from the center of this sprite to the nearest point on the other sprite, in the current direction.
 
 ![image284.png](assets/image284.png)
-```
 
+```
+(stop [all])
 ```
 The `stop` block has two extra menu choices. `Stop this block` is used inside the definition of a custom block to stop just this
 invocation of this custom block and continue the script that called it.
-`Stop all` but this script is good at the end of a game to stop all the
-game pieces from moving around, but keep running this script to provide
-the user’s final score. The last two menu choices add a tab at the
-bottom of the block because the current script can continue after it.
+
+`Stop all` but this script is good at the end of a game to stop all the game pieces from moving around, but keep running this script to provide the user’s final score. The last two menu choices add a tab at the bottom of the block because the current script can continue after it.
 
 ![image285.png](assets/image285.png)
-```
 
 ```
+(touch nil)
+```
 
-The new “pen trails” option is true if the sprite is touching any drawn
-or stamped ink on the stage. Also, `touching` will
+The new “pen trails” option is true if the sprite is touching any drawn or stamped ink on the stage. Also, `touching` will
 not detect hidden sprites, but a hidden sprite can use it to detect
 visible sprites.
 
 ![image305.png](assets/image305.png)  
-```
 
 ```
-The `video on` block
- that takes a
+(video [motion] [myself])
+```
+
+The `video on` block that takes a
 snapshot and reports it as a costume. It is hyperized with respect to its second input.
 
 
 ![image306.png](assets/image306.png)
-```
 
 ```
-
-![image304.png](assets/image304.png) 
+(fn [sqrt] 10)
 ```
+---
+
+![image304.png](assets/image304.png)
+
+
 
 ```
-The “neg” option is a monadic\index{of block
-(operators)} negation operator
-, equivalent to “lg” is log<sub>2</sub>.
+(- 0 nil)
+```
+The “neg” option is a monadic s{of block (operators)} negation operator, equivalent to “lg” is log<sub>2</sub>.
 “id” is the identity function, which reports its input. “sign” reports 1
 for positive input, 0 for zero input, or -1 for negative input.
 
-
-
-
-
-
 The ![length of text block](../blocks/images/block_reportTextAttribute.png) 
 ```
-
+(text [length] word)
 ```
 name was changed to clarify it is different from ![length of text block](../blocks/images/block_reportListAttribute.png)
 
 ```
-
+(data [length] nil) 
 ```
 
 ![image308.png](assets/image308.png)
 ```
+(+ nil nil)
+```
 
+```
+(+ nil nil nil)
+```
+
+```
+(+ : 
+    (list 7 8 1)
+)
+```
+
+```
+(* nil nil)
+```
+
+```
+(* nil nil nil)
+```
+
+```
+(* : 
+    (list 7 8 1)
+)
 ```
 `+` and `×` are *variadic*: they take two or more inputs. If
 you drop a list on the arrowheads, the block name
@@ -1703,7 +1735,7 @@ changes to `sum` or `product`.
  
 ![image309.png](assets/image309.png)
 ```
-
+(receiveInteraction [clicked])
 ```
 
 Extended mouse interaction events, sensing
@@ -1716,40 +1748,38 @@ limited time.
  
 ![image310.png](assets/image310.png)
 ```
-
+(send nil)
 ```
 
 ```
-
+(send nil all)
 ```
 
 ```
-
+(send nil all nil)
 ```
 
 ```
-
+(sendAll nil)
 ```
 
 ```
-
+(sendAll nil all)
 ```
 
 ```
-
+(sendAll nil all nil)
 ```
 
 Extended broadcast
 
-
- 
 ![image311.png](assets/image311.png)
 ```
-
+(receiveMessage nil)
 ```
 
 ```
-
+(receiveMessage nil data)
 ```
 Extended `when I receive`: Click the right
 arrowhead to expose a script variable (click on it to change its name,
@@ -1762,26 +1792,36 @@ broadcast, or to a two-item list containing the message and the payload.
 ![image312.png](assets/image312.png)
 
 ```
-
+(send foo all bar)
 ```
 
 ```
-
+(
+    (receiveMessage foo data) 
+    (say 
+        (get data)
+    )
+)
 ```
 
 ```
-
+(
+    (receiveMessage "[any message]" data) 
+    (say 
+        (get data)
+    )
+)
 ```
 
 ![image355.png](assets/image355.png)
 
 ```
-
+(receiveKey [space])
 ```
 If the input is set to “any key,” then a right arrowhead appears:
 ![image357.png](assets/image357.png)
 ```
-
+(receiveKey "[any key]")
 ```
  and if you click it,
 a script variable key is created whose value is the key that was
@@ -1793,7 +1833,7 @@ is represented as itself in key.)
 ![image356.png](assets/image356.png) 
 
 ```
-
+(receiveKey [space])
 ```
 
 The RGB(A) option accepts a single number, which
@@ -1804,15 +1844,15 @@ is a grayscale value 0-255; a two-number list, grayscale plus opacity
 ![image358.png](assets/image358.png)
 
 ```
-
+(pen= [hue] 50)
 ```
 
 ```
-
+(receiveKey "[any key]" key)
 ```
 
 ```
-
+(+pen [hue] 10)
 ```
 ### Using Lists with the Ask Block 
 These ask features and more in the Menus
@@ -1820,28 +1860,48 @@ library.
 
 ![image359.png](assets/image359.png)
 ```
-
+(doAsk 
+    (list Yakko Wakko Dot)
+)
 ```
 
 ![image360.png](assets/image360.png)
 ```
-
+(doAsk 
+    (list "Snap! Gang" 
+        (list Bernat Brian Jadga Jens Joan Michael)
+    )
+)
 ```
 
 ![image361.png](assets/image361.png)
 ```
-
+(doAsk 
+    (list 
+        (list nil "What are we going to do tonight, Brian!") 
+        (list "Same thing we we do every night, Pinky. Try to take over the world!")
+    )
+)
 ```
 
 ![image362.png](assets/image362.png)
 ```
-
+(doAsk 
+    (list 
+        (list Animaniacs 
+            (list Yakko Wakko Dot)
+        ) 
+        (list Beatles 
+            (list John Paul George Ringo)
+        )
+    )
+)
 ```
 
  
 ![image363.png](assets/image363.png)
 ```
-
+(attribute "[costume #]" nil)
 ```
 
 The `of` block has an extended menu of
