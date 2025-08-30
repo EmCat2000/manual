@@ -1,1017 +1,1989 @@
 ---
-toc: true 
---- 
+toc: true
+---
 
-# Blocks, Scripts, and Sprites  
+# Blocks, Scripts, and Sprites 
 
-This chapter describes the *Snap!* features inherited from Scratch; experienced Scratch users can skip to @sec-sprites-parallelism. 
+This chapter describes the *Snap!* features inherited from Scratch; experienced Scratch users can skip to @sec-sprites-parallelism.
 
-*Snap!* is a programming language—a notation in which you can tell a computer what you want it to do. Unlike most programming languages, though, *Snap!* is a *visual* language; instead of writing a program using the keyboard, the *Snap!* programmer uses the same drag-and-drop interface familiar to computer users. 
+*Snap!* is a programming language—a notation in which you can tell a computer what you want it to do. Unlike most programming languages, though, *Snap!* is a *visual* language; instead of writing a program using the keyboard, the *Snap!* programmer uses the same drag-and-drop interface familiar to computer users.
 
-Start *Snap!*. You should see the following arrangement of regions in the window: 
+Start *Snap!*. You should see the following arrangement of regions in the window:
 
-![An annotated screenshot of blank Snap! editor](../12-user-interface-elements/assets/snap-ide-annotated.png) 
+![An annotated screenshot of blank Snap! editor](../12-user-interface-elements/assets/snap-ide-annotated.png)
 
-(The proportions of these areas may be different, depending on the size and shape of your browser window.) 
+(The proportions of these areas may be different, depending on the size and shape of your browser window.)
 
-A *Snap!* program consists of one or more *scripts,* each of which is made of *blocks.* Here’s a typical script  : 
+A *Snap!* program consists of one or more *scripts,* each of which is made of *blocks.* Here’s a typical script
+ :
 
-![image6.png](assets/image6.png) 
+![image6.png](assets/image6.png)
 
-``` (     (receiveGo)      (down)      (repeat 4 (         (move 100)          (right 90)     )) ) ``` 
+```
+(
+    (receiveGo) 
+    (down) 
+    (repeat 4 (
+        (move 100) 
+        (right 90)
+    ))
+)
+```
 
-The five blocks that make up this script have three different colors, corresponding to three of the eight *palettes* in which blocks can be found. The palette area at the left edge of the window shows one palette at a time, chosen with the eight buttons just above the palette area. In this script, the gold blocks are from the Control palette; the green block is from the Pen palette; and the blue blocks are from the Motion palette. A script is assembled by dragging blocks from a palette into the *scripting area* in the middle part of the window. Blocks snap together (hence the name *Snap!* for the language) when you drag a block so that its indentation is near the tab of the one above it: 
-
-  
-
-![image7.png](assets/image7.png) 
-
-![image8.png](assets/image8.png) 
-
- ``` (     (receiveGo)      (down) ) ``` The white horizontal line is a signal that if you let go of the green block it will snap into the tab of the gold one. 
-
-## Hat Blocks and Command Blocks 
-
-At the top of the script is a *hat* block, which indicates when the script should be carried out. Hat block names typically start with the word “when”; in the square-drawing example in @fig-draw-square, the script should be run when the green flag near the right end of the *Snap!* tool bar tool bar is part of the *Snap!* window, not the same as the browser’s or operating system’s menu bar.) A script isn’t required to have a hat block , but if not, then the script will be run only if the user clicks on the script itself. A script can’t have more than one hat block, and the hat block can be used only at the top of the script; its distinctive shape is meant to remind you of that.[^1] 
-
- [^1]: One of the hat blocks, the generic “when anything” block ![generic when hat block](assets/image10.png) ``` (receiveConditionEvent nil) ``` , is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true, so the script beneath it will not run, until some *other* script in the project runs (because, for example, you click the green flag). When generic when blocks are disabled, the stop sign instead of octagonal.  
-
-The other blocks in our example script are *command* blocks corresponds to an action that *Snap!* already knows how to carry out. For example, the block ![Blue move 10 steps block](../blocks/images/block_forward.png "This block with move the sprite")  
-
-``` (move 10) ``` 
-
-tells the sprite (the arrowhead shape on the *stage* at the right end of the window) to move ten steps (a step is a very small unit of distance) in the direction in which the arrowhead is pointing. We’ll see shortly that there can be more than one sprite, and that each sprite has its own scripts. Also, a sprite doesn’t have to look like an arrowhead, but can have any picture as a *costume.* The shape of the move block is meant to remind you of a Lego™ brick; a script, the action, that the block carries out.) 
-
-The number 10 in the `move` block above is called an *input* to the block. By clicking on the white oval, you can type any number in place of the 10. The sample script on the previous page uses 100 as the input  value. We’ll see later that inputs can have non-oval shapes that accept values other than numbers. We’ll also see that you can compute input values, instead of typing a particular value into the oval. A block can have more than one input slot. For example, the `glide` block located about halfway down the Motion palette has three inputs. 
-
-Most command blocks have that brick shape, but some, like the `repeat` block in the sample script, are *C‑shaped.* Most C-shaped blocks are found in the Control palette. The slot inside the C shape is a special kind of input slot that accepts a *script* as the input. 
-
-   In the sample script 
-
-![image6.png](assets/image6.png) ``` (     (receiveGo)      (down)      (repeat 4 (         (move 100)          (right 90)     )) ) ``` the `repeat` block has two inputs: the number 4 and the script 
-
-![image11.png](assets/image11.png) ``` (     (move 100)      (right 90) ) ``` 
-
-C-shaped blocks can be put in a script in two ways. If you see a white line and let go, the block will be inserted into the script like any command block: 
-
- ![image12.png](assets/image12.png) 
-
-![image13.png](assets/image13.png) 
-
-``` (     (move 100)      (repeat 10 nil)      (right 90) ) ``` 
+The five blocks that make up this script have three different colors, corresponding to three of the eight *palettes* in which blocks can be found. The palette area at the left edge of the window shows one palette at a time, chosen with the eight buttons just above the palette area. In this script, the gold blocks are from the Control palette; the green block is from the Pen palette; and the blue blocks are from the Motion palette. A script is assembled by dragging blocks from a palette into the *scripting area*
+in the middle part of the window. Blocks snap together (hence the name
+*Snap!* for the language) when you drag a block so that its indentation is near the tab of the one above it:
 
  
 
-But if you see an orange halo and let go, the block will *wrap* around the haloed blocks: 
+![image7.png](assets/image7.png)
 
- ![image16.png](assets/image16.png) 
+![image8.png](assets/image8.png)
 
-![image17.png](assets/image17.png) ``` (     (move 100)      (repeat 10          (right 90)     ) ) ``` The halo will always extend from the cursor position to the bottom of the script: 
 
- ![image18.png](assets/image18.png) 
+```
+(
+    (receiveGo) 
+    (down)
+)
+```
+The white horizontal line is a signal that if you let go of the green block it will snap into the tab of the gold one.
 
-![image19.png](assets/image19.png) 
+## Hat Blocks and Command Blocks
 
-``` (repeat 10 (     (move 100)      (right 90) )) ``` 
+At the top of the script is a *hat* block, which indicates when the script should be carried out. Hat block names typically start with the word “when”; in the square-drawing example in @fig-draw-square, the script should be run when the green flag near the right end of the
+*Snap!* tool bar tool bar is part of the *Snap!* window, not the same as the browser’s or operating system’s menu bar.) A script isn’t required to have a hat block
+, but if not, then the script will be run only if the user clicks on the script itself. A script can’t have more than one hat block, and the hat block can be used only at the top of the script; its distinctive shape is meant to remind you of that.[^1]
 
-If you want only some of those blocks, after wrapping you can grab the first block you don’t want wrapped, pull it down, and snap it under the C-shaped block. 
 
-For “E-shaped” blocks with more than one C-shaped slot, only the first slot will wrap around existing blocks in a script, and only if that C-shaped slot is empty before wrapping. (You can fill the other slots by dragging blocks into the desired slot.) 
+[^1]: One of the hat blocks, the generic
+“when anything” block ![generic when hat block](assets/image10.png)
+```
+(receiveConditionEvent nil)
+```
+, is subtly different from the others. When the stop sign is clicked, or when a project or sprite is loaded, this block doesn’t test whether the condition in its hexagonal input slot is true,
+so the script beneath it will not run, until some *other* script in the project runs (because, for example, you click the green flag). When generic when blocks are disabled, the stop sign instead of octagonal. 
 
-![image24.png](assets/image24.png) ``` (ifElse      (mouseDown)      (sayFor down 2)      (sayFor up 2) ) ``` 
+The other blocks in our example script are *command* blocks corresponds to an action that *Snap!* already knows how to carry out.
+For example, the block ![Blue move 10 steps block](../blocks/images/block_forward.png "This block with move the sprite") 
 
-## Sprites and Parallelism  
+```
+(move 10)
+```
 
-Just below the stage is the “new sprite button” ![image25.png](assets/image25.png). Click the button to add a new sprite to the stage. The new sprite will appear in a random position on the stage, with a random color, but always facing to the right. 
+tells the sprite (the arrowhead shape on the *stage* at the right end of the window) to move ten steps (a step is a very small unit of distance) in the direction in which the arrowhead is pointing. We’ll see shortly that there can be more than one sprite, and that each sprite has its own scripts. Also, a sprite doesn’t have to look like an arrowhead, but can have any picture as a *costume.* The shape of the move block is meant to remind you of a Lego™ brick; a script,
+the action, that the block carries out.)
 
-Each sprite has its own scripts. To see the scripts for a particular sprite in the scripting area, click on the picture of that sprite in the *sprite corral* in the bottom right corner of the window. Try putting one of the following scripts in each sprite’s scripting area: 
+The number 10 in the `move` block above is called an *input* to the block. By clicking on the white oval, you can type any number in place of the 10.
+The sample script on the previous page uses 100 as the input
+ value. We’ll see later that inputs can have non-oval shapes that accept values other than numbers. We’ll also see that you can compute input values, instead of typing a particular value into the oval. A block can have more than one input slot. For example, the `glide`
+block located about halfway down the Motion palette has three inputs.
 
-  ![image26.png](assets/image26.png) ``` (     (receiveGo)      (repeat 50          (right 36)     ) ) ``` 
+Most command blocks have that brick shape, but some, like the `repeat`
+block in the sample script, are *C‑shaped.* Most C-shaped blocks are found in the Control palette. The slot inside the C shape is a special kind of input slot that accepts a *script* as the input.
 
-![image27.png](assets/image27.png) ``` (     (receiveGo)      (repeat 50 (         (move 180)          (right 180)     )) ) ``` 
 
-When you click the green flag, you should see one sprite rotate while the other moves back and forth. This experiment illustrates the way different scripts can run in parallel. The turning and the moving happen together. Parallelism can be seen with multiple scripts of a single sprite also. Try this example: 
+ 
+In the sample script
 
-  ![image28.png](assets/image28.png) ``` (     (receiveKey [space])      (forever          (move 10)     ) ) ``` 
-
-![image29.png](assets/image29.png) ``` (     (receiveKey [space])      (forever          (right 15)     ) ) ``` 
-
-When you click the green flag, the sprite should move back and forth 
-
-When you press the space key, the sprite should move forever in a circle, because the move and turn blocks are run in parallel. (To stop the program, click the red stop sign at the right end of the tool bar.) 
-
-### Costumes and Sounds 
-
-To change the appearance of a sprite, paint or import a new *costume* for it. To paint a costume, click on the Costumes tab above the scripting area, and click the paint button ![image32.png](assets/image32.png). The *Paint Editor* that appears is explained in @sec-the-paint-editor. There are three ways to import a costume. First select the desired sprite in the sprite corral. Then, one way is to click on the file icon in the tool bar, then choose ![image30.png](assets/image30.png) the “`Costumes…`” menu item. You will see a list of costumes from the public media library, and can choose one. The second way, for a costume stored on your own computer, is to click on the file icon and choose the “Import…” menu item. You can then select a file in any picture format (PNG, JPEG, etc.) supported by your browser. The third way is quicker if the file you want is visible on the desktop: Just drag the file onto the *Snap!* window. In any of these cases, the scripting area will be replaced by something like this: 
-
-![image31.png](assets/image31.png) 
-
-Just above this part of the window is a set of three tabs: Scripts, Costumes, and Sounds. You’ll see that the Costumes tab\index{Costumes tab} is now selected. In this view, the sprite’s *wardrobe,*  you can choose whether the sprite should wear its Turtle costume or its Alonzo costume. (Alonzo, the *Snap!* mascot, is named after Alonzo Church, a mathematician who invented the idea of procedures as data  is different from Scratch.) You can give a sprite as many costumes as you like, and then choose which it will wear either by clicking in its wardrobe or by using the  
-
-![image35.png](../blocks/images/block_doSwitchToCostume.png) 
-
-``` (wear [Turtle]) ``` 
-
- or ![Next Costume](../blocks/images/block_doWearNextCostume.png)  
-
-``` (next) ``` 
-
-block in a script. (Every costume has a number as well as a name. The `next` costume block selects the next costume by number; after the highest-numbered costume it switches to costume 1. The Turtle, costume 0, is never chosen by next costume.) The Turtle costume is the only one that changes color to match a change in the sprite’s pen color. 
-
- Protip: ![Switch to costumer (() - 1)](assets/image33.png)  ``` (wear      (- nil 1) ) ``` switches to the *previous* costume, wrapping like `next costume`. 
-
- In addition to its costumes, a sprite can have *sounds;* the equivalent for sounds of the sprite’s wardrobe is called its *jukebox.* Sound files can be imported in any format (WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish the task of playing sounds. If you would like a script to continue running while the sound is playing, use the block ![image39.png](assets/image39.png) ``` (play nil) ``` . In contrast, you can use the block ![image38.png](assets/image38.png) ``` (playAll nil) ```  to wait for the sound's completion before continuing the rest of the script. 
-
-### Inter-Sprite Communication with Broadcast 
-
-Earlier we saw an example of two sprites moving at the same time. In a more interesting program, though, the sprites on stage will *interact* to tell a story, play a game, etc. Often one sprite will have to tell another sprite to run a script. Here’s a simple example: 
-
-  
-
-![image41.png](assets/image41.png) 
-
-![image42.png](assets/image42.png) ``` (     (receiveGo)      (sayFor "Hi! What's your name?" 2)      (sendAll bark)      (sayFor "Hi, Woof!  What do you like to do?" 2)      (sendAll bark)      (sayFor "What a coincidence" 2) ) ``` 
-
-![image43.png](assets/image43.png) 
-
-![image44.png](assets/image44.png) ``` (     (receiveMessage bark)      (sayFor Woof! 2) ) ``` 
-
-In the block ![image40.png](assets/image40.png) ``` (sendAll bark) ``` , the word “bark” is just an arbitrary name I made up. When you click on the downward arrowhead in that input slot, one of the choices (the only choice, the first time) is “new,” which then prompts you to enter a name for the new broadcast. When this block is run, the chosen message is sent to *every* sprite, which is why the block is called “broadcast.” (But if you click the right arrow after the message name, the block becomes ![image45.png](assets/image45.png) ``` (sendAll bark all) ``` , and you can change it to ![image46.png](assets/image46.png) ``` (sendAll bark dog) ```  to send the message just to one sprite.) In this program, though, only one sprite has a script to run when that broadcast is sent, namely the dog. Because the boy’s script uses `broadcast and wait` rather than just broadcast, the boy doesn’t go on to his next say block until the dog’s script finishes. That’s why the two sprites take turns talking, instead of both talking at once. In @sec-ch07 you’ll see a more flexible way to send a message to a specific sprite using the tell and ask blocks. 
-
-Notice, by the way, that the say block’s first input slot is rectangular rather than oval. This means the input can be any text string, not only a number. In text input slots, a space character is shown as a brown dot, so that you can count the number of spaces between words, and in particular you can tell the difference between an empty slot and one containing spaces. The brown dots are *not* shown on the stage if the text is displayed. 
-
-The stage has its own scripting area. It can be selected by clicking on the Stage icon at the left of the sprite corral. Unlike a sprite, though, the stage can’t move. Instead of costumes, it has *backgrounds:* pictures that fill the entire stage area. The sprites appear in front of the current background. In a complicated project, it’s often convenient to use a script in the stage’s scripting area as the overall director of the action. 
-
-## Nesting Sprites: Anchors and Parts 
-
-Sometimes it’s desirable to make a sort of “super-sprite” composed of pieces that can move together but can also be separately articulated. The classic example is a person’s body made up of a torso, limbs, and a head. *Snap!* allows one sprite to be designated as the *anchor*  of the combined shape, with other sprites as its *parts.* 
-
- To set up sprite nesting , drag the sprite corral icon of a *part* sprite onto the stage display (not the sprite corral icon!) of the desired *anchor* sprite. The precise place where you let go of the mouse button will be the attachment point of the part on the anchor. 
-
-Sprite nesting is shown in the sprite corral icons of both anchors and parts: ![image47.png](assets/image47.png)  
-
-In this illustration, it is desired to animate Alonzo’s arm. (The arm has been colored green in this picture to make the relationship of the two sprites clearer, but in a real project they’d be the same color, probably.) Sprite, representing Alonzo’s body, is the anchor; Sprite(2) is the arm. The icon for the anchor shows small images of up to three attached parts at the bottom. The icon for each part shows a small image of the anchor in its top left corner, and a *synchronous*  *dangling rotation*\index{dangling rotation} *flag* in the top right corner. In its initial, synchronous setting, as shown above, it means that the when the anchor sprite rotates, the part sprite also rotates as well as revolving around the anchor. When clicked, it changes from a circular arrow to a straight arrow, and indicates that when the anchor sprite rotates, the part sprite revolves around it, but does not rotate, keeping its original orientation. (The part can also be rotated separately, using its turn blocks.) Any change in the position or size of the anchor is always extended to its parts. Also, cloning the anchor (see Section VII. B) will also clone all its parts. 
-
-![image56.png](assets/image56.png)   ``` (     (repeat 3 (         (right 20)          (wait 0.05)     ))      (repeat 3 (         (left 20)          (wait 0.05)     )) ) ``` ![image48.png](assets/image48.png)  ![image49.png](assets/image49.png)  
-
-*Top: turning the part: the green arm. Bottom: turning the anchor, with the arm synchronous (left) and dangling (right).* 
-
-## Reporter Blocks and Expressions 
-
-So far, we’ve used two kinds of blocks: hat blocks and command blocks. Another kind is the *reporter* block,\index{Reporter block} which has an oval shape: ![image66.png](assets/image66.png)   ``` (x) ``` . It’s called a “reporter” because when it’s run, instead of carrying out an action, it reports a value that can be used as an input to another block. If you drag a ![image65.png](assets/image65.png) --> reporter into the scripting area by itself and click on it, the value it reports will appear in a speech balloon next to the block: 
-
-When you drag a reporter block over another block’s input slot, a white “halo ” appears around that input slot, analogous to the white line that appears when snapping command blocks together: 
-
-![image67.png](assets/image67.png)  ``` (move      (+ 5 2) ) ``` 
-
-Here’s a simple script that uses a reporter block: 
-
-![image72.png](assets/image72.png)  ``` (     (receiveGo)      (forever (         (move 10)          (right 15)          (sayFor              (+                  (round                      (x)                 ) 100             ) 2         )     )) ) ``` 
-
-Here the `x position` reporter provides the first input to the say block. (The sprite’s X position is its horizontal position, how far left (negative values) or right (positive values) it is compared to the center of the stage. Similarly, the Y position is measured vertically, in steps above (positive) or below (negative) the center.) 
-
-You can do arithmetic using reporters in the Operators palette: 
-
-![image73.png](assets/image73.png)  ``` (     (receiveGo)      (forever (         (move 10)          (right 15)          (sayFor              (+                  (round                      (x)                 ) 100             ) 2         )     )) ) ``` 
-
-The `round` block rounds 35.3905… to 35, and the `+` block adds 100 to that. (By the way, the `round` block is in the Operators palette, just like `+`, but in this script it’s a lighter color with black lettering because *Snap!* alternates light and dark versions of the palette colors when a block is nested inside another block from the same palette: 
-
-![image80.png](assets/image80.png)  ``` (repeat 10      (if          (and              (<                  (x) nil             )              (=                  (y) nil             )         )          (repeat 4 (             (move                  (*                      (+ 5                          (+ 2 3)                     )                      (-                          (* 3                              (- 2                                  (fn [sqrt] nil)                             )                         ) 5                     )                 )             )              (right                  (join                      (* 3 3) 0                 )             )         ))     ) ) ``` 
-
-This aid to readability is called *zebra coloring.* A reporter block with its inputs, maybe including other reporter blocks, such as ![image81.png](assets/image81.png)  ``` (+      (round          (x)     ) 100 ) ``` , is called an *expression.* 
-
-##  Predicates and Conditional Evaluation  
-
-Most reporters report ``` (+ nil nil) ``` , or a text string, like ![image83.png](../blocks/images/block_reportJoinWords.png) ``` (join "hello " world) ``` . A *predicate* is a special kind of reporter that always reports true or false. Predicates have a hexagonal shape ``` (mouseDown) ``` 
-
-The special shape is a reminder that predicates don’t generally make sense in an input slot of blocks that are expecting a number or text. You wouldn’t say ![image84.png](assets/image84.png) ``` (move      (mouseDown) ) ``` , although (as you can see from the picture) *Snap!* lets you do it if you really want. Instead, you normally use predicates in special hexagonal input slots like this one: 
-
-![image86.png](../blocks/images/block_doIf.png) ``` (if nil nil) ``` 
-
-The C-shaped if block runs its input script if (and only if) the expression in its hexagonal input reports true. ![image87.png](assets/image87.png) ```(if      (<          (y) 0     )      (say "I'm below the middle!") ) 
-
-``` 
-
-A really useful block in animations  runs its input script *repeatedly* until a predicate is satisfied: ![image89.png](assets/image89.png) ``` (     (face Sprite2)      (until          (touch Sprite2)          (move 3)     ) ) ``` 
-
-If, while working on a project, you want to omit temporarily some commands in a script, but you don’t want to forget where they belong, you can say 
-
-![image88.png](assets/image88.png)  ``` (     (move 10)      (right 15)      (if          (bool f) (         (sayFor "I'm no going to do this" 2)          (glide 1 0 0)     )     )      (head 90) ) ``` 
-
-Sometimes you want to take the same action whether some condition is true or false, but with a different input value. For this purpose you can use the *reporter* `if` block : 
-
-![image90.png](assets/image90.png)  ``` (say      (join "I'm on the "          (ifThen              (<                  (x) 0             ) left right         )     ) ) ``` 
-
-The technical term for a true or false value is a “Boolean ” value; it has a capital B because it’s named after a person, George Boole, who developed the mathematical theory of Boolean values. Don’t get confused; a hexagonal block is a *predicate,* but the value it reports is a *Boolean.* 
-
-Another quibble about vocabulary: Many programming languages reserve the name “procedure” for Commands (that carry out an action) and use the name “function” for Reporters and Predicates. In this manual, a *procedure* is any computational capability, including those that report values and those that don’t. Commands, Reporters, and Predicates are all procedures. The words “a Procedure type” are shorthand for “Command type, Reporter type, or Predicate type.” 
-
-If you want to put a *constant* Boolean value in a hexagonal slot instead of a predicate-based expression, hover the mouse over the block and click on the control that appears: 
-
-![image91.png](assets/image91.png)   ``` (global= "[turbo mode]" f) ``` ![image92.png](assets/image92.png)  ``` (global= "[turbo mode]" t) ``` 
-
-## Variables 
-
-Try this script: ![image93.png](assets/image93.png)  ``` (     (receiveGo)      (down)      (for i 1 200 (         (move              (get i)         )          (right 92)     )) ) ``` 
-
-The input to the move block is an orange oval. To get it there, drag the orange oval that’s part of the `for` block : ![image94.png](assets/image94.png)  ``` (     (receiveGo)      (down)      (for i 1 10          (move              (get i)         )     ) ) ``` 
-
-The orange oval is a *variable:* a symbol that represents a value. (I took this screenshot before changing the second number input to the `for` block from the default 10 to 200, and before dragging in a `turn` block.) `For` runs its script input repeatedly, just like `repeat`, but before each repetition it sets the variable  <var>i</var> to a number starting with its first numeric input, adding 1 for each repetition, until it reaches the second numeric input. In this case, there will be 200 repetitions, first with <var>i</var>=1, then with <var>i</var>=2, then <var>i</var>=3, and so on until <var>i</var>=200 for the final repetition. The result is that each move draws a longer and longer line segment, and that’s why the picture you see is a kind of spiral. (If you try again with a turn of 90 degrees instead of 92, you’ll see why this picture is called a “squiral.”) 
-
-The variable <var>i</var> is created by the `for` block, and it can only be used in the script inside the block’s C-slot. (By the way, if you don’t like the name <var>i</var>, you can change it by clicking on the orange oval without dragging it, which will pop up a dialog window in which you can enter a different name: ![image95.png](assets/image95.png)  
-
-“<var>I</var>” isn’t a very descriptive name; you might prefer “length” to indicate its purpose in the script. “<var>I</var>” is traditional because mathematicians tend to use letters between <var>i</var> and <var>n</var> to represent integer values, but in programming languages we don’t have to restrict ourselves to single-letter variable names.) 
-
-### Global Variable 
-
-You can create variables “by hand” that aren’t limited to being used within a single block. At the top of the Variables palette, click the “Make a variable” button: 
-
-![image97.png](assets/image97.png)  
-
-This will bring up a dialog window in which you can give your variable a name: 
-
-![image96.png](assets/image96.png)  
-
-The dialog also gives you a choice to make the variable available to all sprites (which is almost always what you want) or to make it visible only in the current sprite. You’d do that if you’re going to give several sprites individual variables *with the same name,* so that you can share a script between sprites (by dragging it from the current sprite’s scripting area to the picture of another sprite in the sprite corral), and the different sprites will do slightly different things when running that script because each has a different value for that variable name. 
-
-If you give your variable the name “name” then the Variables palette will look like this: 
-
-![image98.png](assets/image98.png)  
-
-There’s now a “Delete a variable” button, and there’s an orange oval with the variable name in it, just like the orange oval in the for block. You can drag the variable into any script in the scripting area. Next to the oval is a checkbox, initially checked. When it’s checked, you’ll also see a *variable watcher*\index{variable watcher} on the stage: ![image99.png](assets/image99.png)  
-
-When you give the variable a value, the orange box in its watcher  will display the value. 
-
-How *do* you give it a value? You use the `set` block : ![image100.png](assets/image100.png)  ``` (     (doAsk "what's your name?")      (set name          (answer)     ) ) ``` 
-
-Note that you *don’t* drag the variable’s oval into the `set` block! You click on the downarrow in the first input slot, and you get a menu of all the available variable names. 
-
-If you do choose “For this sprite only ” when creating a variable, its block in the palette looks like this:![image101.png](assets/image101.png)  ``` (get variable) ``` 
-
-The *location*-pin  icon is a bit of a pun on a sprite-*local* variable . It’s shown only in the palette. 
-
-### Script Variables 
-
-In the name example above, our project is going to carry on an interaction with the user, and we want to remember their name throughout the project. That’s a good example of a situation in which a *global* variable (the kind you make with the “Make a variable” button) is appropriate. Another common example is a variable called “score” in a game project. But sometimes you only need a variable temporarily, during the running of a particular script. In that case you can use the script variables block to make the variable: 
-
-![image105.png](assets/image105.png)  ``` (     (receiveGo)      (var wiggle)      (set wiggle          (rand 1 10)     )      (down)      (move 50)      (left          (* 5              (get wiggle)         )     )      (move 50)      (right          (* 5              (get wiggle)         )     )      (move 50) ) ``` 
-
-As in the `for` block, you can click on an orange oval in the script variables block without dragging to change its name. You can also make more than one temporary variable by clicking on the right arrow at the end of the block to add another variable oval: 
-
-![image106.png](assets/image106.png)  ``` (var a b c) ``` 
-
-### Renaming variables 
-
-There are several reasons why you might want to change the name of a variable: 
-
-1.  It has a default name, such as the <var>a</var> in script variables or the     <var>i</var> in the `for` block. 
-
-2.  It conflicts with another name, such as a global variable, that you     want to use in the same script. 
-
-3.  You just decide a different name would be more self-documenting. 
-
-In the first and third case, you probably want to change the name everywhere it appears in that script, or even in all scripts. In the second case, if you’ve already used both variables in the script before realizing that they have the same name, you’ll want to look at each instance separately to decide which ones to rename. Both of these operations are possible by right-clicking or control-clicking on a variable oval. 
-
-If you right-click on an orange oval in a context in which the variable is *used,* then you are able to rename just that one orange oval: 
-
-![image104.png](assets/image104.png)  
-
-If you right-click on the place where the variable is *defined* (a script variables block, the orange oval for a global variable in the Variables palette, or an orange oval that’s built into a block such as the “i” in for), then you are given two renaming options, “rename” and “rename all.” If you choose “rename,” then the name is changed only in that one orange oval, as in the previous case: 
-
-![image103.png](assets/image103.png)  
-
-But if you choose “rename all,” then the name will be changed throughout the scope of the variable (the script for a script variable, or everywhere for a global variable): 
+![image6.png](assets/image6.png)
+```
+(
+    (receiveGo) 
+    (down) 
+    (repeat 4 (
+        (move 100) 
+        (right 90)
+    ))
+)
+```
+the `repeat` block has two inputs: the number 4 and the script
+
+![image11.png](assets/image11.png)
+```
+(
+    (move 100) 
+    (right 90)
+)
+```
+
+C-shaped blocks can be put in a script in two ways. If you see a white line and let go, the block will be inserted into the script like any command block:
+
+ ![image12.png](assets/image12.png)
+
+![image13.png](assets/image13.png)
+
+```
+(
+    (move 100) 
+    (repeat 10 nil) 
+    (right 90)
+)
+```
+
+
+
+But if you see an orange halo and let go, the block will *wrap* around the haloed blocks:
+
+
+![image16.png](assets/image16.png)
+
+![image17.png](assets/image17.png)
+```
+(
+    (move 100) 
+    (repeat 10 
+        (right 90)
+    )
+)
+```
+The halo will always extend from the cursor position to the bottom of the script:
+
+
+![image18.png](assets/image18.png)
+
+![image19.png](assets/image19.png)
+
+```
+(repeat 10 (
+    (move 100) 
+    (right 90)
+))
+```
+
+If you want only some of those blocks, after wrapping you can grab the first block you don’t want wrapped, pull it down, and snap it under the C-shaped block.
+
+For “E-shaped” blocks with more than one C-shaped slot, only the first slot will wrap around existing blocks in a script, and only if that C-shaped slot is empty before wrapping. (You can fill the other slots by dragging blocks into the desired slot.)
+
+![image24.png](assets/image24.png)
+```
+(ifElse 
+    (mouseDown) 
+    (sayFor down 2) 
+    (sayFor up 2)
+)
+```
+
+## Sprites and Parallelism 
+
+Just below the stage is the “new sprite button”
+![image25.png](assets/image25.png). Click the button to add a new sprite to the stage. The new sprite will appear in a random position on the stage, with a random color, but always facing to the right.
+
+Each sprite has its own scripts. To see the scripts for a particular sprite in the scripting area, click on the picture of that sprite in the
+*sprite corral* in the bottom right corner of the window. Try putting one of the following scripts in each sprite’s scripting area:
+
+ 
+![image26.png](assets/image26.png)
+```
+(
+    (receiveGo) 
+    (repeat 50 
+        (right 36)
+    )
+)
+```
+
+![image27.png](assets/image27.png)
+```
+(
+    (receiveGo) 
+    (repeat 50 (
+        (move 180) 
+        (right 180)
+    ))
+)
+```
+
+When you click the green flag, you should see one sprite rotate while the other moves back and forth. This experiment illustrates the way different scripts can run in parallel. The turning and the moving happen together. Parallelism can be seen with multiple scripts of a single sprite also. Try this example:
+
+ 
+![image28.png](assets/image28.png)
+```
+(
+    (receiveKey [space]) 
+    (forever 
+        (move 10)
+    )
+)
+```
+
+![image29.png](assets/image29.png)
+```
+(
+    (receiveKey [space]) 
+    (forever 
+        (right 15)
+    )
+)
+```
+
+When you click the green flag, the sprite should move back and forth
+
+When you press the space key, the sprite should move forever in a circle, because the move and turn blocks are run in parallel. (To stop the program, click the red stop sign at the right end of the tool bar.)
+
+### Costumes and Sounds
+
+To change the appearance of a sprite, paint or import a new *costume* for it. To paint a costume, click on the Costumes tab above the scripting area, and click the paint button ![image32.png](assets/image32.png). The *Paint Editor* that appears is explained in @sec-the-paint-editor. There are three ways to import a costume. First select the desired sprite in the sprite corral. Then, one way is to click on the file icon in the tool bar,
+then choose ![image30.png](assets/image30.png) the “`Costumes…`” menu item. You will see a list of costumes from the public media library, and can choose one. The second way, for a costume stored on your own computer, is to click on the file icon and choose the “Import…” menu item. You can then select a file in any picture format (PNG, JPEG, etc.) supported by your browser. The third way is quicker if the file you want is visible on the desktop: Just drag the file onto the *Snap!* window. In any of these cases, the scripting area will be replaced by something like this:
+
+![image31.png](assets/image31.png)
+
+Just above this part of the window is a set of three tabs: Scripts,
+Costumes, and Sounds. You’ll see that the Costumes tab\index{Costumes tab} is now selected. In this view, the sprite’s *wardrobe,*
+ you can choose whether the sprite should wear its Turtle costume or its Alonzo costume. (Alonzo, the
+*Snap!* mascot, is named after Alonzo Church, a mathematician who invented the idea of procedures as data
+ is different from Scratch.) You can give a sprite as many costumes as you like, and then choose which it will wear either by clicking in its wardrobe or by using the 
+
+![image35.png](../blocks/images/block_doSwitchToCostume.png)
+
+```
+(wear [Turtle])
+```
+
+ or ![Next Costume](../blocks/images/block_doWearNextCostume.png) 
+
+```
+(next)
+```
+
+block in a script.
+(Every costume has a number as well as a name. The `next` costume block selects the next costume by number; after the highest-numbered costume it switches to costume 1. The Turtle, costume 0, is never chosen by next costume.) The Turtle costume is the only one that changes color to match a change in the sprite’s pen color.
+
+
+Protip: ![Switch to costumer (() - 1)](assets/image33.png) 
+```
+(wear 
+    (- nil 1)
+)
+```
+switches to the *previous* costume, wrapping like `next costume`.
+
+
+In addition to its costumes, a sprite can have *sounds;* the equivalent for sounds of the sprite’s wardrobe is called its *jukebox.*
+Sound files can be imported in any format
+(WAV, OGG, MP3, etc.) supported by your browser. Two blocks accomplish the task of playing sounds. If you would like a script to continue running while the sound is playing, use the block ![image39.png](assets/image39.png)
+```
+(play nil)
+```
+.
+In contrast, you can use the block ![image38.png](assets/image38.png)
+```
+(playAll nil)
+```
+ to wait for the sound's completion before continuing the rest of the script.
+
+### Inter-Sprite Communication with Broadcast
+
+Earlier we saw an example of two sprites moving at the same time. In a more interesting program, though, the sprites on stage will *interact*
+to tell a story, play a game, etc. Often one sprite will have to tell another sprite to run a script. Here’s a simple example:
 
  
 
-### Transient variables 
+![image41.png](assets/image41.png)
 
-So far we’ve talked about variables with numeric values, or with short text strings such as someone’s name. But there’s no limit to the amount of information you can put in a variable; in Chapter IV you’ll see how to use *lists* to collect many values in one data structure, and in Chapter VIII you’ll see how to read information from web sites. 
+![image42.png](assets/image42.png)
+```
+(
+    (receiveGo) 
+    (sayFor "Hi! What's your name?" 2) 
+    (sendAll bark) 
+    (sayFor "Hi, Woof!  What do you like to do?" 2) 
+    (sendAll bark) 
+    (sayFor "What a coincidence" 2)
+)
+```
 
-![image102.png](assets/image102.png)  
+![image43.png](assets/image43.png)
 
-When you use these capabilities, your project may take up a lot of memory in the computer. If you get close to the amount of memory available to *Snap!*, then it may become impossible to save your project. (Extra space is needed temporarily to convert from *Snap!*’s internal representation to the form in which projects are exported or saved.) If your program reads a lot of data from the outside world that will still be available when you use it next, you might want to have values containing a lot of data removed from memory before saving the project. To do this, right-click or control-click on the orange oval in the Variables palette, to see this menu: ![image114.png](assets/image114.png)  
+![image44.png](assets/image44.png)
+```
+(
+    (receiveMessage bark) 
+    (sayFor Woof! 2)
+)
+```
 
-You already know about the rename options, and "help…" displays a help screen about variables in general. Here we’re interested in the check box next to transient. If you check it, this variable’s value will not be saved when you save your project. Of course, you’ll have to ensure that when your project is loaded, it recreates the needed value and sets the variable to it. 
+In the block ![image40.png](assets/image40.png)
+```
+(sendAll bark)
+```
+, the word “bark” is just an arbitrary name I made up. When you click on the downward arrowhead in that input slot, one of the choices
+(the only choice, the first time) is “new,” which then prompts you to enter a name for the new broadcast. When this block is run, the chosen message is sent to *every* sprite, which is why the block is called
+“broadcast.” (But if you click the right arrow after the message name,
+the block becomes ![image45.png](assets/image45.png)
+```
+(sendAll bark all)
+```
+, and you can change it to ![image46.png](assets/image46.png)
+```
+(sendAll bark dog)
+```
+ to send the message just to one sprite.) In this program, though, only one sprite has a script to run when that broadcast is sent, namely the dog. Because the boy’s script uses `broadcast and wait` rather than just broadcast, the boy doesn’t go on to his next say block until the dog’s script finishes. That’s why the two sprites take turns talking, instead of both talking at once. In @sec-ch07 you’ll see a more flexible way to send a message to a specific sprite using the tell and ask blocks.
 
-## Debugging 
+Notice, by the way, that the say block’s first input slot is rectangular rather than oval. This means the input can be any text string, not only a number. In text input slots, a space character is shown as a brown dot, so that you can count the number of spaces between words, and in particular you can tell the difference between an empty slot and one containing spaces. The brown dots are *not* shown on the stage if the text is displayed.
 
-*Snap!* provides several tools to help you debug a program. They center around the idea of *pausing* the running of a script partway through, so that you can examine the values of variables. 
+The stage has its own scripting area. It can be selected by clicking on the Stage icon at the left of the sprite corral. Unlike a sprite,
+though, the stage can’t move. Instead of costumes, it has *backgrounds:*
+pictures that fill the entire stage area. The sprites appear in front of the current background. In a complicated project, it’s often convenient to use a script in the stage’s scripting area as the overall director of the action.
 
-### The pause button 
+## Nesting Sprites: Anchors and Parts
 
-The simplest way to pause a program is manually, by clicking the pause button ![image116.png](assets/image116.png)  in the top right corner of the window. While the program is paused, you can run other scripts by clicking on them, show variables on stage with the checkbox next to the variable in the Variables palette or with the `show variable`block, and do all the other things you can generally do, including modifying the paused scripts by adding or removing blocks. The ![image115.png](assets/image115.png)   button changes shape too and clicking it again resumes the paused scripts. 
+Sometimes it’s desirable to make a sort of “super-sprite” composed of pieces that can move together but can also be separately articulated.
+The classic example is a person’s body made up of a torso, limbs, and a head. *Snap!* allows one sprite to be designated as the *anchor*
+ of the combined shape, with other sprites as its *parts.*
 
-### Breakpoints 
 
-The pause button is great if your program seems to be in an infinite loop, but more often you’ll want to set a *breakpoint,* a particular point in a script at which you want to pause. The ![image117.png](../blocks/images/block_doPauseAll.png) block ``` (pause) ``` , near the bottom of the Control palette, can be inserted in a script to pause when it is run. So, for example, if your program is getting an error message in a particular block, you could use `pause all` just before that block to look at the values of variables just before the error happens. 
+To set up sprite nesting , drag the sprite corral icon of a *part* sprite onto the stage display (not the sprite corral icon!) of the desired
+*anchor* sprite. The precise place where you let go of the mouse button will be the attachment point of the part on the anchor.
 
-The `pause all` block turns bright cyan while paused. Also, during the pause, you can right-click on a running script and the menu that appears will give you the option to show watchers for temporary variables of the script: 
+Sprite nesting is shown in the sprite corral icons of both anchors and parts:
+![image47.png](assets/image47.png) 
 
-![image118.png](assets/image118.png) ``` (     (var foo bar)      (set foo -5)      (pause)      (move          (get foo)     ) ) ``` But what if the block with the error is run many times in a loop, and it only errors when a particular condition is true — for example, when the value of some variable is negative, which shouldn’t ever happen. In the iteration library (see @sec-libraries-intro for more about how to use libraries) is a breakpoint block that lets you set a *conditional* breakpoint, and automatically display the relevant variables before pausing. Here’s a sample use of it: 
+In this illustration, it is desired to animate Alonzo’s arm. (The arm has been colored green in this picture to make the relationship of the two sprites clearer, but in a real project they’d be the same color,
+probably.) Sprite, representing Alonzo’s body, is the anchor; Sprite(2)
+is the arm. The icon for the anchor shows small images of up to three attached parts at the bottom. The icon for each part shows a small image of the anchor in its top left corner, and a *synchronous*
+ *dangling rotation*\index{dangling rotation} *flag* in the top right corner. In its initial, synchronous setting, as shown above, it means that the when the anchor sprite rotates, the part sprite also rotates as well as revolving around the anchor. When clicked, it changes from a circular arrow to a straight arrow, and indicates that when the anchor sprite rotates, the part sprite revolves around it, but does not rotate, keeping its original orientation. (The part can also be rotated separately, using its turn blocks.) Any change in the position or size of the anchor is always extended to its parts. Also, cloning the anchor (see Section VII. B)
+will also clone all its parts.
 
-![image119.png](assets/image119.png)  ``` (     (var foo bar)      (set foo 0)      (if          (<              (get foo) 0         ) (         (showVar foo)          (showVar bar)          (pause)     )     )      (move          (get foo)     ) ) ``` (In this contrived example, variable <var>zot</var> comes from outside the script but is relevant to its behavior.) When you continue (with the pause button), the temporary variable watchers are removed by this breakpoint block before resuming the script. The breakpoint block isn’t magic; you could alternatively just put a `pause all` inside an `if`.[^2] 
+![image56.png](assets/image56.png)  
+```
+(
+    (repeat 3 (
+        (right 20) 
+        (wait 0.05)
+    )) 
+    (repeat 3 (
+        (left 20) 
+        (wait 0.05)
+    ))
+)
+```
+![image48.png](assets/image48.png) 
+![image49.png](assets/image49.png) 
 
-[^2]: The hide variable and show variable block s can also be used to hide and show primitives in the palette. The pulldown menu doesn’t include primitive blocks, but there’s a generally useful technique to give a block input values it wasn’t expecting using run or call:![image120.png](assets/image120.png)  ``` (run      (cmd          (hideVar nil)     )      (cmd          (move 10)     ) ) ``` <br> In order to use a block as an input this way, you must explicitly put a ring around it, by right-clicking on it and choosing ringify. More about rings in Chapter VI. 
+*Top: turning the part: the green arm. Bottom: turning the anchor, with the arm synchronous (left) and dangling (right).*
 
-### Visible stepping 
+## Reporter Blocks and Expressions
 
-Sometimes you’re not exactly sure where the error is, or you don’t understand how the program got there. To understand better, you’d like to watch the program as it runs, at human speed rather than at computer speed. You can do this by clicking the *visible stepping* --> ), before running a script or while the script is paused. The button will light up ( ![image123.png](assets/image123.png)  ) and a speed control slider ![image122.png](assets/image122.png)  will appear in the toolbar. When you start or continue the script, its blocks and input slots will light up cyan one at a time: 
+So far, we’ve used two kinds of blocks: hat blocks and command blocks. Another kind is the *reporter* block,\index{Reporter block} which has an oval shape: ![image66.png](assets/image66.png)  
+```
+(x)
+```
+. It’s called a “reporter” because when it’s run, instead of carrying out an action, it reports a value that can be used as an input to another block. If you drag a ![image65.png](assets/image65.png) --> reporter into the scripting area by itself and click on it, the value it reports will appear in a speech balloon next to the block:
 
-![image124.png](assets/image124.png)  
+When you drag a reporter block over another block’s input slot, a white
+“halo ” appears around that input slot, analogous to the white line that appears when snapping command blocks together:
 
-In this simple example, the inputs to the blocks are constant values, but if an input were a more complicated expression involving several reporter blocks, each of those would light up as they are called. Note that the input to a block is evaluated before the block itself is called, so, for example, the 100 lights up before the move. 
+![image67.png](assets/image67.png) 
+```
+(move 
+    (+ 5 2)
+)
+```
 
-The speed of stepping is controlled by the slider. If you move the slider all the way to the left, the speed is zero, the pause button turns into a step button ![image134.png](assets/image134.png)  , and the script takes a single step each time you push it. The name for this is *single stepping.*\index{single stepping} 
+Here’s a simple script that uses a reporter block:
 
-If several scripts that are visible in the scripting area are running at the same time, all of them are stepped in parallel. However, consider the case of two repeat loops with different numbers of blocks. While not stepping, each script goes through a complete cycle of its loop in each display cycle, despite the difference in the length of a cycle. In order to ensure that the visible result of a program on the stage is the same when stepped as when not stepped, the shorter script will wait at the bottom of its loop for the longer script to catch up. 
+![image72.png](assets/image72.png) 
+```
+(
+    (receiveGo) 
+    (forever (
+        (move 10) 
+        (right 15) 
+        (sayFor 
+            (+ 
+                (round 
+                    (x)
+                ) 100
+            ) 2
+        )
+    ))
+)
+```
 
-When we talk about custom blocks in @sec-ch03, we’ll have more to say about visible stepping as it affects those blocks. 
+Here the `x position` reporter provides the first input to the say block.
+(The sprite’s X position is its horizontal position,
+how far left (negative values) or right (positive values) it is compared to the center of the stage. Similarly, the Y position is measured vertically, in steps above (positive) or below (negative)
+the center.)
 
-## Etcetera 
+You can do arithmetic using reporters in the Operators palette:
 
-This manual doesn’t (yet)explain every block in detail. There are many more motion blocks, sound blocks, costume and graphics effects blocks, and so on. If you would like to find information on specific blocks, go to @sec-all-blocks. You can also learn what they all do by experimentation, and by reading the “help screens” that you can get by right-clicking or control-clicking a block and selecting “`help…`” from the menu that appears. If you forget what palette (color) a block is, but you remember at least part of its name, type <kbd>control-F</kbd> and enter the name in the text block that appears in the palette area. 
+![image73.png](assets/image73.png) 
+```
+(
+    (receiveGo) 
+    (forever (
+        (move 10) 
+        (right 15) 
+        (sayFor 
+            (+ 
+                (round 
+                    (x)
+                ) 100
+            ) 2
+        )
+    ))
+)
+```
 
-Here are some of the primitive blocks that don’t exist in Scratch: 
+The `round` block rounds 35.3905… to 35, and the `+` block adds 100 to that.
+(By the way, the `round` block is in the Operators palette, just like `+`,
+but in this script it’s a lighter color with black lettering because
+*Snap!* alternates light and dark versions of the palette colors when a block is nested inside another block from the same palette:
 
-![image136.png](assets/image136.png) ``` (trails) ``` reports\index{pen trails block}, a new costume consisting of everything that’s drawn on the stage by any sprite. Right-clicking the block in the scripting area gives the option to change it to ![image135.png](assets/image135.png) ``` (svgTrails) ``` if vector logging is enabled. See @para-log-pen-vectors. 
+![image80.png](assets/image80.png) 
+```
+(repeat 10 
+    (if 
+        (and 
+            (< 
+                (x) nil
+            ) 
+            (= 
+                (y) nil
+            )
+        ) 
+        (repeat 4 (
+            (move 
+                (* 
+                    (+ 5 
+                        (+ 2 3)
+                    ) 
+                    (- 
+                        (* 3 
+                            (- 2 
+                                (fn [sqrt] nil)
+                            )
+                        ) 5
+                    )
+                )
+            ) 
+            (right 
+                (join 
+                    (* 3 3) 0
+                )
+            )
+        ))
+    )
+)
+```
 
-![image137.png](assets/image137.png) Print characters ``` (write Hello! 12) ```  in the given point size on the stage, at the sprite’s position and in its direction. The sprite moves to the end of the text. (That’s not always what you want, but you can save the sprite’s position before using it, and sometimes you need to know how big the text turned out to be, in turtle steps.) If the pen is down, the text will be underlined. 
+This aid to readability is called *zebra coloring.*
+A reporter block with its inputs, maybe including other reporter blocks, such as ![image81.png](assets/image81.png) 
+```
+(+ 
+    (round 
+        (x)
+    ) 100
+)
+```
+, is called an *expression.*
 
-![image138.png](assets/image138.png) ``` (paste nil) ``` 
+##  Predicates and Conditional Evaluation 
 
-Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.) 
+Most reporters report
+```
+(+ nil nil)
+```
+,
+or a text string, like
+![image83.png](../blocks/images/block_reportJoinWords.png)
+```
+(join "hello " world)
+```
+.
+A *predicate* is a special kind of reporter that always reports true or false. Predicates have a hexagonal shape
+```
+(mouseDown)
+```
 
-![image139.png](assets/image139.png) ``` (cut nil) ``` 
+The special shape is a reminder that predicates don’t generally make sense in an input slot of blocks that are expecting a number or text. You wouldn’t say ![image84.png](assets/image84.png)
+```
+(move 
+    (mouseDown)
+)
+```
+, although (as you can see from the picture) *Snap!* lets you do it if you really want. Instead, you normally use predicates in special hexagonal input slots like this one:
 
-Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.) 
+![image86.png](../blocks/images/block_doIf.png)
+```
+(if nil nil)
+```
 
-![image142.png](assets/image142.png) See @fig-generic-when. ``` (receiveConditionEvent nil) ``` 
+The C-shaped if block runs its input script if (and only if) the expression in its hexagonal input reports true.
+![image87.png](assets/image87.png)
+```(if 
+    (< 
+        (y) 0
+    ) 
+    (say "I'm below the middle!")
+)
 
-![image141.png](assets/image141.png) See @sec-pause-all. ``` (pause) ``` 
+```
 
-![image140.png](assets/image140.png) Runs only this script until finished. In the Control palette even though it’s gray. ``` (warp nil) ``` 
+A really useful block in animations
+ runs its input script *repeatedly* until a predicate is satisfied: ![image89.png](assets/image89.png)
+```
+(
+    (face Sprite2) 
+    (until 
+        (touch Sprite2) 
+        (move 3)
+    )
+)
+```
 
-![image143.png](assets/image143.png)   ``` (playAll nil) ``` Reporter version of the `if/else` primitive command block\index{if else reporter block} . Only one of the two branches is evaluated, depending on the value of the first input. 
+If, while working on a project, you want to omit temporarily some commands in a script, but you don’t want to forget where they belong, you can say
 
-![image144.png](assets/image144.png)  ``` (ifThen nil nil nil) ``` Looping block like `repeat` but with an index variable\index{index variable} . 
+![image88.png](assets/image88.png) 
+```
+(
+    (move 10) 
+    (right 15) 
+    (if 
+        (bool f) (
+        (sayFor "I'm no going to do this" 2) 
+        (glide 1 0 0)
+    )
+    ) 
+    (head 90)
+)
+```
 
-![image145.png](assets/image145.png)   ``` (var a) ``` Declare local variables in a script.\index{script variables block} 
+Sometimes you want to take the same action whether some condition is true or false, but with a different input value. For this purpose you can use the *reporter* `if` block :
 
-![image148.png](assets/image148.png) See @sec-ch09. ``` (url snap.berkeley.edu) ``` 
+![image90.png](assets/image90.png) 
+```
+(say 
+    (join "I'm on the " 
+        (ifThen 
+            (< 
+                (x) 0
+            ) left right
+        )
+    )
+)
+```
 
-![image146.png](assets/image146.png) reports the value of a graphics effect. ``` (effect [ghost]) ``` 
+The technical term for a true or false value is a “Boolean ”
+value; it has a capital B because it’s named after a person, George Boole, who developed the mathematical theory of Boolean values. Don’t get confused; a hexagonal block is a *predicate,*
+but the value it reports is a *Boolean.*
 
-![image147.png](assets/image147.png) Constant true value. See @sec-predicates-and-conditional-evaluation. ``` (bool t) ``` 
+Another quibble about vocabulary: Many programming languages reserve the name “procedure” for Commands (that carry out an action) and use the name “function” for Reporters and Predicates. In this manual, a *procedure* is any computational capability, including those that report values and those that don’t. Commands, Reporters, and Predicates are all procedures. The words “a Procedure type” are shorthand for “Command type, Reporter type, or Predicate type.”
 
-![image149.png](assets/image149.png) ``` (shown) ``` 
+If you want to put a *constant* Boolean value in a hexagonal slot instead of a predicate-based expression, hover the mouse over the block and click on the control that appears:
 
-``` (down?) ``` 
+![image91.png](assets/image91.png)  
+```
+(global= "[turbo mode]" f)
+```
+![image92.png](assets/image92.png) 
+```
+(global= "[turbo mode]" t)
+```
 
-![image153.png](assets/image153.png) ``` (js nil nil) ``` 
+## Variables
 
-Create a primitive using JavaScript. (This block is disabled by default; the user must check “Javascript extensions” in the setting menu *each time* a project is loaded.) 
+Try this script:
+![image93.png](assets/image93.png) 
+```
+(
+    (receiveGo) 
+    (down) 
+    (for i 1 200 (
+        (move 
+            (get i)
+        ) 
+        (right 92)
+    ))
+)
+```
 
-  ![image150.png](assets/image150.png) ``` (aspect [hue] nil) ``` 
+The input to the move block is an orange oval. To get it there, drag the orange oval that’s part of the `for` block :
+![image94.png](assets/image94.png) 
+```
+(
+    (receiveGo) 
+    (down) 
+    (for i 1 10 
+        (move 
+            (get i)
+        )
+    )
+)
+```
 
-The `at` block directly behind the rotation center of a sprite, the mouse, or an arbitrary (x,y) coordinate pair dropped onto the second menu slot. The first five items of the left menu let you examine the color visible at the position. (The “RGBA” option reports a list.) The “sprites” option reports a list of all sprites, including this one, any point of which overlaps this sprite’s rotation center (behind or in front). This is a hyperblock with respect to its second input. 
+The orange oval is a *variable:* a symbol that represents a value. (I took this screenshot before changing the second number input to the `for` block from the default 10 to 200, and before dragging in a `turn` block.)
+`For` runs its script input repeatedly, just like `repeat`, but before each repetition it sets the variable
+ <var>i</var> to a number starting with its first numeric input,
+adding 1 for each repetition, until it reaches the second numeric input.
+In this case, there will be 200 repetitions, first with <var>i</var>=1, then with
+<var>i</var>=2, then <var>i</var>=3, and so on until <var>i</var>=200 for the final repetition. The result is that each move draws a longer and longer line segment, and that’s why the picture you see is a kind of spiral. (If you try again with a turn of 90 degrees instead of 92, you’ll see why this picture is called a
+“squiral.”)
+
+The variable <var>i</var> is created by the `for` block, and it can only be used in the script inside the block’s C-slot. (By the way, if you don’t like the name <var>i</var>, you can change it by clicking on the orange oval without dragging it, which will pop up a dialog window in which you can enter a different name:
+![image95.png](assets/image95.png) 
+
+“<var>I</var>” isn’t a very descriptive name; you might prefer “length” to indicate its purpose in the script. “<var>I</var>” is traditional because mathematicians tend to use letters between <var>i</var> and <var>n</var> to represent integer values, but in programming languages we don’t have to restrict ourselves to single-letter variable names.)
+
+### Global Variable
+
+You can create variables “by hand” that aren’t limited to being used within a single block. At the top of the Variables palette, click the
+“Make a variable” button:
+
+![image97.png](assets/image97.png) 
+
+This will bring up a dialog window in which you can give your variable a name:
+
+![image96.png](assets/image96.png) 
+
+The dialog also gives you a choice to make the variable available to all sprites (which is almost always what you want) or to make it visible only in the current sprite. You’d do that if you’re going to give several sprites individual variables *with the same name,* so that you can share a script between sprites (by dragging it from the current sprite’s scripting area to the picture of another sprite in the sprite corral), and the different sprites will do slightly different things when running that script because each has a different value for that variable name.
+
+If you give your variable the name “name” then the Variables palette will look like this:
+
+![image98.png](assets/image98.png) 
+
+There’s now a “Delete a variable” button, and there’s an orange oval with the variable name in it, just like the orange oval in the for block. You can drag the variable into any script in the scripting area. Next to the oval is a checkbox, initially checked. When it’s checked, you’ll also see a *variable watcher*\index{variable watcher} on the stage: ![image99.png](assets/image99.png) 
+
+When you give the variable a value, the orange box in its watcher
+ will display the value.
+
+How *do* you give it a value?
+You use the `set` block :
+![image100.png](assets/image100.png) 
+```
+(
+    (doAsk "what's your name?") 
+    (set name 
+        (answer)
+    )
+)
+```
+
+Note that you *don’t* drag the variable’s oval into the `set` block! You click on the downarrow in the first input slot, and you get a menu of all the available variable names.
+
+If you do choose “For this sprite only ”
+when creating a variable, its block in the palette looks like this:![image101.png](assets/image101.png) 
+```
+(get variable)
+```
+
+The *location*-pin
+ icon is a bit of a pun on a sprite-*local* variable
+. It’s shown only in the palette.
+
+### Script Variables
+
+In the name example above, our project is going to carry on an interaction with the user, and we want to remember their name throughout the project. That’s a good example of a situation in which a *global* variable (the kind you make with the “Make a variable” button) is appropriate. Another common example is a variable called “score” in a game project. But sometimes you only need a variable temporarily,
+during the running of a particular script. In that case you can use the script variables block to make the variable:
+
+![image105.png](assets/image105.png) 
+```
+(
+    (receiveGo) 
+    (var wiggle) 
+    (set wiggle 
+        (rand 1 10)
+    ) 
+    (down) 
+    (move 50) 
+    (left 
+        (* 5 
+            (get wiggle)
+        )
+    ) 
+    (move 50) 
+    (right 
+        (* 5 
+            (get wiggle)
+        )
+    ) 
+    (move 50)
+)
+```
+
+As in the `for` block, you can click on an orange oval in the script variables block without dragging to change its name. You can also make more than one temporary variable by clicking on the right arrow at the end of the block to add another variable oval:
+
+![image106.png](assets/image106.png) 
+```
+(var a b c)
+```
+
+### Renaming variables
+
+There are several reasons why you might want to change the name of a variable:
+
+1.  It has a default name, such as the <var>a</var> in script variables or the
+    <var>i</var> in the `for` block.
+
+2.  It conflicts with another name, such as a global variable, that you
+    want to use in the same script.
+
+3.  You just decide a different name would be more self-documenting.
+
+In the first and third case, you probably want to change the name everywhere it appears in that script, or even in all scripts. In the second case, if you’ve already used both variables in the script before realizing that they have the same name, you’ll want to look at each instance separately to decide which ones to rename. Both of these operations are possible by right-clicking or control-clicking on a variable oval.
+
+If you right-click on an orange oval in a context in which the variable is *used,* then you are able to rename just that one orange oval:
+
+![image104.png](assets/image104.png) 
+
+If you right-click on the place where the variable is *defined* (a script variables block, the orange oval for a global variable in the Variables palette, or an orange oval that’s built into a block such as the “i” in for), then you are given two renaming options, “rename” and “rename all.” If you choose
+“rename,” then the name is changed only in that one orange oval, as in the previous case:
+
+![image103.png](assets/image103.png) 
+
+But if you choose “rename all,” then the name will be changed throughout the scope of the variable
+(the script for a script variable, or everywhere for a global variable):
+
+
+
+### Transient variables
+
+So far we’ve talked about variables with numeric values, or with short text strings such as someone’s name. But there’s no limit to the amount of information you can put in a variable; in Chapter IV you’ll see how to use *lists* to collect many values in one data structure, and in Chapter VIII you’ll see how to read information from web sites.
+
+![image102.png](assets/image102.png) 
+
+When you use these capabilities, your project may take up a lot of memory in the computer. If you get close to the amount of memory available to
+*Snap!*, then it may become impossible to save your project. (Extra space is needed temporarily to convert from *Snap!*’s internal representation to the form in which projects are exported or saved.) If your program reads a lot of data from the outside world that will still be available when you use it next, you might want to have values containing a lot of data removed from memory before saving the project.
+To do this, right-click or control-click on the orange oval in the Variables palette, to see this menu: ![image114.png](assets/image114.png) 
+
+You already know about the rename options, and "help…" displays a help screen about variables in general. Here we’re interested in the check box next to transient. If you check it, this variable’s value will not be saved when you save your project. Of course, you’ll have to ensure that when your project is loaded, it recreates the needed value and sets the variable to it.
+
+## Debugging
+
+*Snap!* provides several tools to help you debug a program. They center around the idea of *pausing* the running of a script partway through, so that you can examine the values of variables.
+
+### The pause button
+
+The simplest way to pause a program is manually, by clicking the pause button ![image116.png](assets/image116.png) 
+in the top right corner of the window. While the program is paused, you can run other scripts by clicking on them, show variables on stage with the checkbox next to the variable in the Variables palette or with the
+`show variable`block, and do all the other things you can generally do, including modifying the paused scripts by adding or removing blocks. The ![image115.png](assets/image115.png)   button changes shape too and clicking it again resumes the paused scripts.
+
+### Breakpoints
+
+The pause button is great if your program seems to be in an infinite loop,
+but more often you’ll want to set a *breakpoint,* a particular point in a script at which you want to pause. The ![image117.png](../blocks/images/block_doPauseAll.png) block
+```
+(pause)
+```
+, near the bottom of the Control palette, can be inserted in a script to pause when it is run. So, for example, if your program is getting an error message in a particular block, you could use
+`pause all` just before that block to look at the values of variables just before the error happens.
+
+The `pause all` block turns bright cyan while paused. Also, during the pause, you can right-click on a running script and the menu that appears will give you the option to show watchers for temporary variables of the script:
+
+![image118.png](assets/image118.png)
+```
+(
+    (var foo bar) 
+    (set foo -5) 
+    (pause) 
+    (move 
+        (get foo)
+    )
+)
+```
+But what if the block with the error is run many times in a loop, and it only errors when a particular condition is true — for example, when the value of some variable is negative, which shouldn’t ever happen. In the iteration library (see @sec-libraries-intro for more about how to use libraries) is a breakpoint block that lets you set a *conditional*
+breakpoint, and automatically display the relevant variables before pausing. Here’s a sample use of it:
+
+![image119.png](assets/image119.png) 
+```
+(
+    (var foo bar) 
+    (set foo 0) 
+    (if 
+        (< 
+            (get foo) 0
+        ) (
+        (showVar foo) 
+        (showVar bar) 
+        (pause)
+    )
+    ) 
+    (move 
+        (get foo)
+    )
+)
+```
+(In this contrived example,
+variable <var>zot</var> comes from outside the script but is relevant to its behavior.) When you continue (with the pause button), the temporary variable watchers are removed by this breakpoint block before resuming the script. The breakpoint block isn’t magic; you could alternatively just put a `pause all` inside an `if`.[^2]
+
+[^2]: The hide variable and show variable block s can also be used to hide and show primitives in the palette. The pulldown menu doesn’t include primitive blocks, but there’s a generally useful technique to give a block input values it wasn’t expecting using run or call:![image120.png](assets/image120.png) 
+```
+(run 
+    (cmd 
+        (hideVar nil)
+    ) 
+    (cmd 
+        (move 10)
+    )
+)
+```
+<br>
+In order to use a block as an input this way, you must explicitly put a ring around it, by right-clicking on it and choosing ringify. More about rings in Chapter VI.
+
+### Visible stepping
+
+Sometimes you’re not exactly sure where the error is, or you don’t understand how the program got there. To understand better, you’d like to watch the program as it runs, at human speed rather than at computer speed. You can do this by clicking the *visible stepping* --> ), before running a script or while the script is paused. The button will light up ( ![image123.png](assets/image123.png)  ) and a speed control slider ![image122.png](assets/image122.png)  will appear in the toolbar. When you start or continue the script, its blocks and input slots will light up cyan one at a time:
+
+![image124.png](assets/image124.png) 
+
+In this simple example, the inputs to the blocks are constant values,
+but if an input were a more complicated expression involving several reporter blocks, each of those would light up as they are called. Note that the input to a block is evaluated before the block itself is called, so, for example, the 100 lights up before the move.
+
+The speed of stepping is controlled by the slider. If you move the slider all the way to the left, the speed is zero, the pause button turns into a step button ![image134.png](assets/image134.png)  , and the script takes a single step each time you push it. The name for this is *single stepping.*\index{single stepping}
+
+If several scripts that are visible in the scripting area are running at the same time, all of them are stepped in parallel. However, consider the case of two repeat loops with different numbers of blocks. While not stepping, each script goes through a complete cycle of its loop in each display cycle, despite the difference in the length of a cycle. In order to ensure that the visible result of a program on the stage is the same when stepped as when not stepped, the shorter script will wait at the bottom of its loop for the longer script to catch up.
+
+When we talk about custom blocks in @sec-ch03, we’ll have more to say about visible stepping as it affects those blocks.
+
+## Etcetera
+
+This manual doesn’t (yet)explain every block in detail. There are many more motion blocks, sound blocks, costume and graphics effects blocks, and so on. If you would like to find information on specific blocks, go to @sec-all-blocks. You can also learn what they all do by experimentation, and by reading the “help screens” that you can get by right-clicking or control-clicking a block and selecting “`help…`” from the menu that appears. If you forget what palette (color) a block is, but you remember at least part of its name, type <kbd>control-F</kbd> and enter the name in the text block that appears in the palette area.
+
+Here are some of the primitive blocks that don’t exist in Scratch:
+
+![image136.png](assets/image136.png)
+```
+(trails)
+```
+reports\index{pen trails block}, a new costume consisting of everything that’s drawn on the stage by any sprite. Right-clicking the block in the scripting area gives the option to change it to ![image135.png](assets/image135.png)
+```
+(svgTrails)
+```
+if vector logging is enabled. See @para-log-pen-vectors.
+
+![image137.png](assets/image137.png) Print characters
+```
+(write Hello! 12)
+```
+ in the given point size on the stage, at the sprite’s position and in its direction. The sprite moves to the end of the text. (That’s not always what you want, but you can save the sprite’s position before using it, and sometimes you need to know how big the text turned out to be, in turtle steps.) If the pen is down, the text will be underlined.
+
+![image138.png](assets/image138.png)
+```
+(paste nil)
+```
+
+Takes a sprite as input. Like stamp except that the costume is stamped onto the selected sprite instead of onto the stage. (Does nothing if the current sprite doesn’t overlap the chosen sprite.)
+
+![image139.png](assets/image139.png)
+```
+(cut nil)
+```
+
+Takes a sprite as input. Erases from that sprite’s costume the area that overlaps with the current sprite’s costume. (Does not affect the costume in the chosen sprite’s wardrobe, only the copy currently visible.)
+
+![image142.png](assets/image142.png) See @fig-generic-when.
+```
+(receiveConditionEvent nil)
+```
+
+![image141.png](assets/image141.png) See @sec-pause-all.
+```
+(pause)
+```
+
+![image140.png](assets/image140.png) Runs only this script until finished. In the Control palette even though it’s gray.
+```
+(warp nil)
+```
+
+![image143.png](assets/image143.png)  
+```
+(playAll nil)
+```
+Reporter version of the `if/else` primitive command block\index{if else reporter block} . Only one of the two branches is evaluated, depending on the value of the first input.
+
+![image144.png](assets/image144.png) 
+```
+(ifThen nil nil nil)
+```
+Looping block like
+`repeat` but with an index variable\index{index variable} .
+
+![image145.png](assets/image145.png)  
+```
+(var a)
+```
+Declare local variables in a script.\index{script variables block}
+
+![image148.png](assets/image148.png) See @sec-ch09.
+```
+(url snap.berkeley.edu)
+```
+
+![image146.png](assets/image146.png) reports the value of a graphics effect.
+```
+(effect [ghost])
+```
+
+![image147.png](assets/image147.png) Constant true value. See @sec-predicates-and-conditional-evaluation.
+```
+(bool t)
+```
+
+![image149.png](assets/image149.png)
+```
+(shown)
+```
+
+```
+(down?)
+```
+
+![image153.png](assets/image153.png)
+```
+(js nil nil)
+```
+
+Create a primitive using JavaScript. (This block is disabled by default; the user must check “Javascript extensions” in the setting menu *each time* a project is loaded.)
 
  
+![image150.png](assets/image150.png)
+```
+(aspect [hue] nil)
+```
+
+The `at` block directly behind the rotation center of a sprite, the mouse, or an arbitrary (x,y) coordinate pair dropped onto the second menu slot. The first five items of the left menu let you examine the color visible at the position. (The “RGBA” option reports a list.) The “sprites” option reports a list of all sprites, including this one, any point of which overlaps this sprite’s rotation center (behind or in front). This is a hyperblock with respect to its second input.
+
+
+
+![image154.png](assets/image154.png)
+```
+(is 5 [number])
+```
+
+Checks the of a value.
+
+Blocks only for the stage:
+![image151.png](assets/image151.png)
 
-![image154.png](assets/image154.png) ``` (is 5 [number]) ``` 
+```
+(
+    (setBackgroundColor "rgba(145,26,68,1)") 
+    (changeBackgroundColorDimension [hue] 10) 
+    (setBackgroundColorDimension [hue] 50)
+)
+```
+Get or set selected global flags
+![image152.png](assets/image152.png)
 
-Checks the of a value. 
+```
+(global= "[video capture]" nil)
+```
 
-Blocks only for the stage: ![image151.png](assets/image151.png) 
+```
+(global "[turbo mode]")
+```
 
-``` (     (setBackgroundColor "rgba(145,26,68,1)")      (changeBackgroundColorDimension [hue] 10)      (setBackgroundColorDimension [hue] 50) ) ``` Get or set selected global flags ![image152.png](assets/image152.png) 
+![image155.png](assets/image155.png)
 
-``` (global= "[video capture]" nil) ``` 
+```
+(split "hello world" " ")
+```
 
-``` (global "[turbo mode]") ``` 
+Turn the text into a list, using the second input as the delimiter between items. The default delimiter, indicated by the brown dot in the input slot, is a single space character. “Letter” puts each character of the text in its own list item. “Word” puts each word in an item. ( (0xd). “Csv”
+ split formatted text into lists of lists; see @sec-csv. “Blocks”
+takes a script as the first input, reporting a list structure  representing the structure of the script. See Chapter XI.
 
-![image155.png](assets/image155.png) 
 
-``` (split "hello world" " ") ``` 
+![image170.png](assets/image170.png) 
+```
+(same nil nil)
+```
+For lists,
+ reports true only if its two input values are the very same list, so changing an item in one of them is visible in the other. (For `=`, lists that look the same are the same.) For text strings,
+uses case-sensitive comparison, unlike `=`, which is case-independent.
 
-Turn the text into a list, using the second input as the delimiter between items. The default delimiter, indicated by the brown dot in the input slot, is a single space character. “Letter” puts each character of the text in its own list item. “Word” puts each word in an item. ( (0xd). “Csv”  split formatted text into lists of lists; see @sec-csv. “Blocks” takes a script as the first input, reporting a list structure  representing the structure of the script. See Chapter XI. 
+![image171.png](assets/image171.png)
+```
+(atan2 nil nil)
+```
 
- ![image170.png](assets/image170.png)  ``` (same nil nil) ``` For lists,  reports true only if its two input values are the very same list, so changing an item in one of them is visible in the other. (For `=`, lists that look the same are the same.) For text strings, uses case-sensitive comparison, unlike `=`, which is case-independent. 
+```
+(max nil nil)
+```
 
-![image171.png](assets/image171.png) ``` (atan2 nil nil) ``` 
+```
+(min nil nil)
+```
 
-``` (max nil nil) ``` 
+ These *hidden* blocks can be found with the relabel option
+ of any dyadic arithmetic block. They’re hidden partly because writing them in *Snap!* is a good, pretty easy programming exercise. Note: the two inputs to `atan2`
+are Δ*x* and Δ*y* in that order, because we measure angles clockwise from north. `max` /index are *variadic;* by clicking the arrowhead, you can provide additional inputs.
 
-``` (min nil nil) ``` 
+![image177.png](assets/image177.png) 
+```
+(<= nil nil)
+```
+![image178.png](assets/image178.png) 
+```
+(!= nil nil)
+```
+![image179.png](assets/image179.png)
+```
+(>= nil nil)
+```
+
+Similarly, these hidden predicates can be found by relabeling the relational predicates.
 
- These *hidden* blocks can be found with the relabel option  of any dyadic arithmetic block. They’re hidden partly because writing them in *Snap!* is a good, pretty easy programming exercise. Note: the two inputs to `atan2` are Δ*x* and Δ*y* in that order, because we measure angles clockwise from north. `max` /index are *variadic;* by clicking the arrowhead, you can provide additional inputs. 
+### Metaprogramming (see @sec-ch11)
+
+![image172.png](assets/image172.png)
+```
+(define block nil nil)
+```
 
-![image177.png](assets/image177.png)  ``` (<= nil nil) ``` ![image178.png](assets/image178.png)  ``` (!= nil nil) ``` ![image179.png](assets/image179.png) ``` (>= nil nil) ``` 
+```
+(deleteBlock nil)
+```
+
+```
+(setBlock [label] nil nil)
+```
 
-Similarly, these hidden predicates can be found by relabeling the relational predicates. 
+```
+(block [definition] nil)
+```
 
-### Metaprogramming (see @sec-ch11) 
+```
+(this [script])
+```
 
-![image172.png](assets/image172.png) ``` (define block nil nil) ``` 
+These blocks support *metaprogramming,* which means manipulating blocks and scripts as data. This is not the same as manipulating procedures
+(see @sec-ch06), which are what the blocks *mean;* in metaprogramming the actual blocks, what you see on the screen, are the data. This capability is new in version 8.0.
 
-``` (deleteBlock nil) ``` 
+### First class list blocks (see @sec-ch04):
 
-``` (setBlock [label] nil nil) ``` 
 
-``` (block [definition] nil) ``` 
+![image173.png](assets/image173.png)
+```
+(list nil)
+```
 
-``` (this [script]) ``` 
+```
+(cons nil nil)
+```
 
-These blocks support *metaprogramming,* which means manipulating blocks and scripts as data. This is not the same as manipulating procedures (see @sec-ch06), which are what the blocks *mean;* in metaprogramming the actual blocks, what you see on the screen, are the data. This capability is new in version 8.0. 
+```
+(cdr nil)
+```
 
-### First class list blocks (see @sec-ch04): 
+```
+(cdr nil)
+```
 
- ![image173.png](assets/image173.png) ``` (list nil) ``` 
+```
+(empty nil)
+```
 
-``` (cons nil nil) ``` 
+```
+(append nil nil)
+```
 
-``` (cdr nil) ``` 
+```
+(map nil nil)
+```
 
-``` (cdr nil) ``` 
+```
+(keep nil nil)
+```
 
-``` (empty nil) ``` 
+```
+(# thing nil)
+```
 
-``` (append nil nil) ``` 
+```
+(data [length] nil)
+```
 
-``` (map nil nil) ``` 
+```
+(combine nil nil)
+```
 
-``` (keep nil nil) ``` 
+```
+(range 1 10)
+```
 
-``` (# thing nil) ``` 
+```
+(forEach item nil nil)
+```
 
-``` (data [length] nil) ``` 
+```
+(find nil nil)
+```
 
-``` (combine nil nil) ``` 
+```
+(item 1 nil)
+```
 
-``` (range 1 10) ``` 
+```
+(contains nil thing)
+```
 
-``` (forEach item nil nil) ``` 
+```
+(reshape nil 4 3)
+```
 
-``` (find nil nil) ``` 
+```
+(combinations nil nil)
+```
 
-``` (item 1 nil) ``` 
+`Numbers from` will count up or down.
 
-``` (contains nil thing) ``` 
+![image224.png](assets/image224.png)
+report
+```
+(pos)
+```
+the sprite or mouse position as a two-item vector (x,y).
 
-``` (reshape nil 4 3) ``` 
+**First class procedure blocks (see @sec-ch06):**
+ ![image226.png](assets/image226.png)
 
-``` (combinations nil nil) ``` 
+```
+(run nil)
+```
 
-`Numbers from` will count up or down. 
+```
+(fork nil)
+```
 
-![image224.png](assets/image224.png) report ``` (pos) ``` the sprite or mouse position as a two-item vector (x,y). 
+```
+(call nil)
+```
 
-**First class procedure blocks (see @sec-ch06):**  ![image226.png](assets/image226.png) 
+```
+(report nil)
+```
 
-``` (run nil) ``` 
+```
+(cmd nil)
+```
 
-``` (fork nil) ``` 
+```
+(ring nil)
+```
 
-``` (call nil) ``` 
+```
+(pred nil)
+```
 
-``` (report nil) ``` 
+**First class sprite, costume, and sound blocks (see @sec-ch07):**
 
-``` (cmd nil) ``` 
+ ![image228.png](assets/image228.png)
 
-``` (ring nil) ``` 
+```
+(newClone [myself])
+```
 
-``` (pred nil) ``` 
+```
+(tell nil nil)
+```
 
-**First class sprite, costume, and sound blocks (see @sec-ch07):** 
+```
+(ask nil nil)
+```
 
- ![image228.png](assets/image228.png) 
+ ![image229.png](assets/image229.png)
 
-``` (newClone [myself]) ``` 
+```
+(my [neighbors])
+```
 
-``` (tell nil nil) ``` 
+```
+(object [myself])
+```
 
-``` (ask nil nil) ``` 
+```
+(inherit nil)
+```
 
- ![image229.png](assets/image229.png) 
+```
+(costume [width] [current])
+```
 
-``` (my [neighbors]) ``` 
+```
+(stretch [current] 100 50)
+```
 
-``` (object [myself]) ``` 
+```
+(newCostume nil nil nil)
+```
 
-``` (inherit nil) ``` 
+```
+(newSound nil 44100)
+```
 
-``` (costume [width] [current]) ``` 
+```
+(playAt nil 44100)
+```
 
-``` (stretch [current] 100 50) ``` 
+```
+(sound [duration] nil)
+```
 
-``` (newCostume nil nil nil) ``` 
+```
+(freq 440)
+```
 
-``` (newSound nil 44100) ``` 
+```
+(stopFreq)
+```
 
-``` (playAt nil 44100) ``` 
+```
+(audio [volume])
+```
 
-``` (sound [duration] nil) ``` 
+```
+(pan= 0)
+```
 
-``` (freq 440) ``` 
+```
+(+pan 10)
+```
 
-``` (stopFreq) ``` 
+```
+(pan)
+```
 
-``` (audio [volume]) ``` 
+ Object is a hyperblock.
 
-``` (pan= 0) ``` 
+**Scenes:**
 
-``` (+pan 10) ``` 
+![image280.png](assets/image280.png)
 
-``` (pan) ``` 
+```
+(scene [next])
+```
 
- Object is a hyperblock. 
+The major new feature of version 7.0 is *scenes:* A project can include within it sub-projects, called scenes, each with its own stage, sprites, scripts, and so on. This block makes another scene active, replacing the current one.
 
-**Scenes:** 
+Nothing is automatically shared between scenes: no sprites, no blocks, no variables. But the old scene can send a message to the new one, to start it running, with optional payload as in broadcast (See @sec-broadcast).
 
-![image280.png](assets/image280.png) 
+![image282.png](assets/image282.png)
 
-``` (scene [next]) ``` 
+```
+(scene [next] nil)
+```
 
-The major new feature of version 7.0 is *scenes:* A project can include within it sub-projects, called scenes, each with its own stage, sprites, scripts, and so on. This block makes another scene active, replacing the current one. 
+```
+(scene [next] nil nil)
+```
 
-Nothing is automatically shared between scenes: no sprites, no blocks, no variables. But the old scene can send a message to the new one, to start it running, with optional payload as in broadcast (See @sec-broadcast). 
 
-![image282.png](assets/image282.png) 
+In particular, you can say
 
-``` (scene [next] nil) ``` 
+![image281.png](assets/image281.png)
 
-``` (scene [next] nil nil) ``` 
+```
+(scene [next] __shout__go__)
+```
 
- In particular, you can say 
+if the new scene expects to be started with a green flag signal.
 
-![image281.png](assets/image281.png) 
+***These aren’t new blocks but they have a new feature:***
+These accept two-item (x,y) lists
+ as input, and have extended menus (also including other sprites):
 
-``` (scene [next] __shout__go__) ``` 
+![image283.png](assets/image283.png)
 
-if the new scene expects to be started with a green flag signal. 
+```
+(goto nil)
+```
 
-***These aren’t new blocks but they have a new feature:*** These accept two-item (x,y) lists  as input, and have extended menus (also including other sprites): 
+```
+(face nil)
+```
 
-![image283.png](assets/image283.png) 
+```
+(relation [distance] nil)
+```
 
-``` (goto nil) ``` 
 
-``` (face nil) ``` 
+“Center” means the center of the stage, the point at (0,0). “Direction” is in the point in direction sense, the direction that would leave this sprite pointing toward another sprite,
+the mouse, or the center. “Ray length” is the distance from the center of this sprite to the nearest point on the other sprite, in the current direction.
 
-``` (relation [distance] nil) ``` 
+![image284.png](assets/image284.png)
 
- “Center” means the center of the stage, the point at (0,0). “Direction” is in the point in direction sense, the direction that would leave this sprite pointing toward another sprite, the mouse, or the center. “Ray length” is the distance from the center of this sprite to the nearest point on the other sprite, in the current direction. 
+```
+(stop [all])
+```
+The `stop` block has two extra menu choices. `Stop this block` is used inside the definition of a custom block to stop just this invocation of this custom block and continue the script that called it.
 
-![image284.png](assets/image284.png) 
+`Stop all` but this script is good at the end of a game to stop all the game pieces from moving around, but keep running this script to provide the user’s final score. The last two menu choices add a tab at the bottom of the block because the current script can continue after it.
 
-``` (stop [all]) ``` The `stop` block has two extra menu choices. `Stop this block` is used inside the definition of a custom block to stop just this invocation of this custom block and continue the script that called it. 
+![image285.png](assets/image285.png)
 
-`Stop all` but this script is good at the end of a game to stop all the game pieces from moving around, but keep running this script to provide the user’s final score. The last two menu choices add a tab at the bottom of the block because the current script can continue after it. 
+```
+(touch nil)
+```
 
-![image285.png](assets/image285.png) 
+The new “pen trails” option is true if the sprite is touching any drawn or stamped ink on the stage. Also, `touching` will not detect hidden sprites, but a hidden sprite can use it to detect visible sprites.
 
-``` (touch nil) ``` 
+![image305.png](assets/image305.png)  
 
-The new “pen trails” option is true if the sprite is touching any drawn or stamped ink on the stage. Also, `touching` will not detect hidden sprites, but a hidden sprite can use it to detect visible sprites. 
+```
+(video [motion] [myself])
+```
 
-![image305.png](assets/image305.png)   
+The `video on` block that takes a snapshot and reports it as a costume. It is hyperized with respect to its second input.
 
-``` (video [motion] [myself]) ``` 
 
-The `video on` block that takes a snapshot and reports it as a costume. It is hyperized with respect to its second input. 
+![image306.png](assets/image306.png)
 
- ![image306.png](assets/image306.png) 
+```
+(fn [sqrt] 10)
+```
+---
 
-``` (fn [sqrt] 10) ``` --- 
+![image304.png](assets/image304.png)
 
-![image304.png](assets/image304.png) 
+
+
+```
+(- 0 nil)
+```
+The “neg” option is a monadic s{of block (operators)} negation operator, equivalent to “lg” is log<sub>2</sub>.
+“id” is the identity function, which reports its input. “sign” reports 1 for positive input, 0 for zero input, or -1 for negative input.
+
+The ![length of text block](../blocks/images/block_reportTextAttribute.png) 
+```
+(text [length] word)
+```
+name was changed to clarify it is different from ![length of text block](../blocks/images/block_reportListAttribute.png)
+
+```
+(data [length] nil) 
+```
+
+![image308.png](assets/image308.png)
+```
+(+ nil nil)
+```
+
+```
+(+ nil nil nil)
+```
+
+```
+(+ : 
+    (list 7 8 1)
+)
+```
+
+```
+(* nil nil)
+```
+
+```
+(* nil nil nil)
+```
+
+```
+(* : 
+    (list 7 8 1)
+)
+```
+`+` and `×` are *variadic*: they take two or more inputs. If you drop a list on the arrowheads, the block name changes to `sum` or `product`.
 
  
+![image309.png](assets/image309.png)
+```
+(receiveInteraction [clicked])
+```
 
-``` (- 0 nil) ``` The “neg” option is a monadic s{of block (operators)} negation operator, equivalent to “lg” is log<sub>2</sub>. “id” is the identity function, which reports its input. “sign” reports 1 for positive input, 0 for zero input, or -1 for negative input. 
+Extended mouse interaction events, sensing clicking, dragging, hovering, etc. The “stopped” option triggers when all scripts are stopped, as with the stop button; it is useful for robots whose hardware interface must be told to turn off motors. A `when I am stopped` script can run only for a limited time.
+
+
+ 
+![image310.png](assets/image310.png)
+```
+(send nil)
+```
+
+```
+(send nil all)
+```
+
+```
+(send nil all nil)
+```
+
+```
+(sendAll nil)
+```
+
+```
+(sendAll nil all)
+```
+
+```
+(sendAll nil all nil)
+```
+
+Extended broadcast
+
+![image311.png](assets/image311.png)
+```
+(receiveMessage nil)
+```
+
+```
+(receiveMessage nil data)
+```
+Extended `when I receive`: Click the right arrowhead to expose a script variable (click on it to change its name,
+like any script variable) that will be set to the data of a matching broadcast. If the first input is set to “any message,” then the data variable will be set to the message, if no payload is included with the broadcast, or to a two-item list containing the message and the payload.
+
+
+![image312.png](assets/image312.png)
+
+```
+(send foo all bar)
+```
+
+```
+(
+    (receiveMessage foo data) 
+    (say 
+        (get data)
+    )
+)
+```
+
+```
+(
+    (receiveMessage "[any message]" data) 
+    (say 
+        (get data)
+    )
+)
+```
+
+![image355.png](assets/image355.png)
+
+```
+(receiveKey [space])
+```
+If the input is set to “any key,” then a right arrowhead appears:
+![image357.png](assets/image357.png)
+```
+(receiveKey "[any key]")
+```
+ and if you click it,
+a script variable key is created whose value is the key that was pressed. (If the key is one that’ represented in the input menu by a word or phrase, e.g., “enter” or “up arrow,” then the value of key will be that word or phrase, *except for* the space character, which is represented as itself in key.)
+
+![image356.png](assets/image356.png) 
+
+```
+(receiveKey [space])
+```
+
+The RGB(A) option accepts a single number, which is a grayscale value 0-255; a two-number list, grayscale plus opacity 0-255; a three-item RGB list, or a four-item RGBA list.
+
+
+![image358.png](assets/image358.png)
+
+```
+(pen= [hue] 50)
+```
 
-The ![length of text block](../blocks/images/block_reportTextAttribute.png)  ``` (text [length] word) ``` name was changed to clarify it is different from ![length of text block](../blocks/images/block_reportListAttribute.png) 
+```
+(receiveKey "[any key]" key)
+```
 
-``` (data [length] nil)  ``` 
+```
+(+pen [hue] 10)
+```
+### Using Lists with the Ask Block 
+These ask features and more in the Menus library.
 
-![image308.png](assets/image308.png) ``` (+ nil nil) ``` 
+![image359.png](assets/image359.png)
+```
+(doAsk 
+    (list Yakko Wakko Dot)
+)
+```
 
-``` (+ nil nil nil) ``` 
+![image360.png](assets/image360.png)
+```
+(doAsk 
+    (list "Snap! Gang" 
+        (list Bernat Brian Jadga Jens Joan Michael)
+    )
+)
+```
 
-``` (+ :      (list 7 8 1) ) ``` 
+![image361.png](assets/image361.png)
+```
+(doAsk 
+    (list 
+        (list nil "What are we going to do tonight, Brian!") 
+        (list "Same thing we we do every night, Pinky. Try to take over the world!")
+    )
+)
+```
 
-``` (* nil nil) ``` 
+![image362.png](assets/image362.png)
+```
+(doAsk 
+    (list 
+        (list Animaniacs 
+            (list Yakko Wakko Dot)
+        ) 
+        (list Beatles 
+            (list John Paul George Ringo)
+        )
+    )
+)
+```
 
-``` (* nil nil nil) ``` 
+ 
+![image363.png](assets/image363.png)
+```
+(attribute "[costume #]" nil)
+```
 
-``` (* :      (list 7 8 1) ) ``` `+` and `×` are *variadic*: they take two or more inputs. If you drop a list on the arrowheads, the block name changes to `sum` or `product`. 
+The `of` block has an extended menu of attributes of a sprite. Position reports an (x,y) vector. Size reports the percentage of normal size, as controlled by the set size block in the Looks category. Left, right, etc. report the stage coordinates of the corresponding edge of the sprite’s bounding box. Variables reports a list of the names of all variables in scope (global, sprite-local, and script variables if the right input is a script.)
 
-  ![image309.png](assets/image309.png) ``` (receiveInteraction [clicked]) ``` 
 
-Extended mouse interaction events, sensing clicking, dragging, hovering, etc. The “stopped” option triggers when all scripts are stopped, as with the stop button; it is useful for robots whose hardware interface must be told to turn off motors. A `when I am stopped` script can run only for a limited time. 
+## Libraries 
 
-   ![image310.png](assets/image310.png) ``` (send nil) ``` 
+There are several collections of useful procedures that aren’t *Snap!*
+primitives, but are provided as libraries. To include a library in your project, choose the Libraries… option in the file (![file menu icon](assets/image384.png)) menu.
 
-``` (send nil all) ``` 
+![The import libraries dialog](assets/image385.png)
 
-``` (send nil all nil) ``` 
 
-``` (sendAll nil) ``` 
+The library menu is divided into five broad categories. The first is,
+broadly, utilities: blocks that might well be primitives. They might be useful in all kinds of projects.
 
-``` (sendAll nil all) ``` 
+The second category is blocks related to media computation: ones that help in dealing with costumes and sounds (a/k/a Jens libraries). There is some overlap with “big data” libraries, for dealing with large lists of lists.
 
-``` (sendAll nil all nil) ``` 
+The third category is, roughly, specific to non-media applications
+(a/k/a Brian libraries). Three of them are imports from other programming languages: words and sentences from Logo, array functions from APL, and streams from Scheme. Most of the others are to meet the needs of the BJC curriculum.
 
-Extended broadcast 
+The fourth category is major packages (extensions) provided by users.
 
-![image311.png](assets/image311.png) ``` (receiveMessage nil) ``` 
+The fifth category provides support for hardware devices such as robots,
+through general interfaces, replacing specific hardware libraries in versions before 7.0.
 
-``` (receiveMessage nil data) ``` Extended `when I receive`: Click the right arrowhead to expose a script variable (click on it to change its name, like any script variable) that will be set to the data of a matching broadcast. If the first input is set to “any message,” then the data variable will be set to the message, if no payload is included with the broadcast, or to a two-item list containing the message and the payload. 
+When you click on the one-line description of a library, you are shown the actual blocks in the library and a longer explanation of its purpose. You can browse the libraries to find one that will satisfy your needs.
 
- ![image312.png](assets/image312.png) 
+The libraries and their contents may change, but as of this writing the list library has these blocks:
 
-``` (send foo all bar) ``` 
+![image387.png](assets/image387.png) -->
 
-``` (     (receiveMessage foo data)      (say          (get data)     ) ) ``` 
+(The lightning bolt (⚡️) before the name in several of these blocks means that they use compiled HOFs or JavaScript primitives to achieve optimal speed. They are officially considered experimental.) `Remove duplicates from` reports a list in which no two items are equal. The `sort` block takes a list and a two-input comparison predicate, such as `<`, and reports a list with the items sorted according to that comparison. The `assoc` block
+ is for looking up a key in an *association list:* a list of two-item lists. In each two-item list, the first is a *key* and the second is a *value.* The inputs are a key and an association list;
+the block reports the first key-value pair whose key is equal to the input key.
 
-``` (     (receiveMessage "[any message]" data)      (say          (get data)     ) ) ``` 
+`For each item` is a variant of the primitive version that provides a \# variable containing the position in the input list of the currently considered item. `Multimap`
+ is a version of `map` that allows multiple list inputs, in which case the mapping function must take as many inputs as there are lists; it will be called with all the first items, all the second items, and so on. `Zip` takes any number of lists as inputs; it reports a list of lists: all the first items, all the second items, and so on. The `no-name` identity function reports its input.
 
-![image355.png](assets/image355.png) 
+`Sentence` and `sentence ➔ list`
+ are borrowed from the [word and sentence library](#word-and-sentence-library) to serve as a variant of append that accepts non-lists as inputs. `Printable` takes a list structure of any depth as input and reports a compact representation of the list as a text string.
 
-``` (receiveKey [space]) ``` If the input is set to “any key,” then a right arrowhead appears: ![image357.png](assets/image357.png) ``` (receiveKey "[any key]") ```  and if you click it, a script variable key is created whose value is the key that was pressed. (If the key is one that’ represented in the input menu by a word or phrase, e.g., “enter” or “up arrow,” then the value of key will be that word or phrase, *except for* the space character, which is represented as itself in key.) 
+The iteration, composition library has these blocks:
 
-![image356.png](assets/image356.png)  
+![image388.png](assets/image388.png) 
+![image389.png](assets/image389.png) 
 
-``` (receiveKey [space]) ``` 
+`Catch` provide a nonlocal exit facility. You can drag the tag from a `catch` block to a `throw` inside its C-slot, and the throw will then jump directly out to the matching catch without doing anything in between.
 
-The RGB(A) option accepts a single number, which is a grayscale value 0-255; a two-number list, grayscale plus opacity 0-255; a three-item RGB list, or a four-item RGBA list. 
+`If do and pause all` is for setting a breakpoint while debugging code. The idea is to put show variable blocks for local variables in the C-slot; the watchers will be deleted when the user continues from the pause.
 
- ![image358.png](assets/image358.png) 
+`Ignore` is used when you need to call a reporter but you don’t care about the value it reports. (For example, you are writing a script to time how long the reporter takes.)
 
-``` (pen= [hue] 50) ``` 
+The `cascade` blocks take an initial value and call a function repeatedly on that value, *f*(*f*(*f*(*f*…(*x*)))).
 
-``` (receiveKey "[any key]" key) ``` 
+The `compose` block takes two functions and reports the function *f*(*g*(*x*)).
 
-``` (+pen [hue] 10) ``` ### Using Lists with the Ask Block  These ask features and more in the Menus library. 
+The first three repeat blocks
+ are variants of the primitive `repeat until` block,
+giving all four combinations of whether the first test happens before or after the first repetition, and whether the condition must be true or false to continue repeating. The last repeat block is like the `repeat`
+primitive, but makes the number of repetitions so far available to the repeated script. The next two blocks are variations on `for`\index{$for$
+block} : the first allows an explicit step instead of using ±1, and the second allows any values, not just numbers; inside the script you say ![image390.png](assets/image390.png) -->
+```
 
-![image359.png](assets/image359.png) ``` (doAsk      (list Yakko Wakko Dot) ) ``` 
+```
 
-![image360.png](assets/image360.png) ``` (doAsk      (list "Snap! Gang"          (list Bernat Brian Jadga Jens Joan Michael)     ) ) ``` 
+replacing the grey block in the picture with an expression to give the next desired value for the loop index.
 
-![image361.png](assets/image361.png) ``` (doAsk      (list          (list nil "What are we going to do tonight, Brian!")          (list "Same thing we we do every night, Pinky. Try to take over the world!")     ) ) ``` 
+`Pipe` allows reordering a nested composition with a left-to-right one:
 
-![image362.png](assets/image362.png) ``` (doAsk      (list          (list Animaniacs              (list Yakko Wakko Dot)         )          (list Beatles              (list John Paul George Ringo)         )     ) ) ``` 
+![image392.png](assets/image392.png)  
+```
 
-  ![image363.png](assets/image363.png) ``` (attribute "[costume #]" nil) ``` 
+```
+![image391.png](assets/image391.png) 
+```
 
-The `of` block has an extended menu of attributes of a sprite. Position reports an (x,y) vector. Size reports the percentage of normal size, as controlled by the set size block in the Looks category. Left, right, etc. report the stage coordinates of the corresponding edge of the sprite’s bounding box. Variables reports a list of the names of all variables in scope (global, sprite-local, and script variables if the right input is a script.) 
+```
 
- ## Libraries  
+The stream library has these blocks:
 
-There are several collections of useful procedures that aren’t *Snap!* primitives, but are provided as libraries. To include a library in your project, choose the Libraries… option in the file (![file menu icon](assets/image384.png)) menu. 
+![image393.png](assets/image393.png) 
+```
 
-![The import libraries dialog](assets/image385.png) 
+```
 
- The library menu is divided into five broad categories. The first is, broadly, utilities: blocks that might well be primitives. They might be useful in all kinds of projects. 
+*Streams* are a special kind of list whose items are not computed until they are needed. This makes certain computations more efficient, and also allows the creation of lists with infinitely many items, such as a list of all the positive integers. The first five blocks are stream versions of the list blocks.
 
-The second category is blocks related to media computation: ones that help in dealing with costumes and sounds (a/k/a Jens libraries). There is some overlap with “big data” libraries, for dealing with large lists of lists. 
+`in front of`, `item 1 of`\index{item 1 of stream block}, `all but first of`\index{all but first of stream block}, `map`, and `keep`. `Show stream`
+ takes a stream and a number as inputs, and reports an ordinary list of the first *n* items of the stream. `Stream`
+ is like the primitive list; it makes a finite stream from explicit items. `Sieve` is an example block that takes as input the stream of integers starting with 2 and reports the stream of all the prime numbers. `Stream with numbers from` is
+ like the numbers from block for lists, except that there is no endpoint; it reports an infinite stream of numbers.
 
-The third category is, roughly, specific to non-media applications (a/k/a Brian libraries). Three of them are imports from other programming languages: words and sentences from Logo, array functions from APL, and streams from Scheme. Most of the others are to meet the needs of the BJC curriculum. 
+<a name="word-and-sentence-library"></a>
+The **word and sentence library** has these blocks:
 
-The fourth category is major packages (extensions) provided by users. 
 
-The fifth category provides support for hardware devices such as robots, through general interfaces, replacing specific hardware libraries in versions before 7.0. 
+![image394.png](assets/image394.png)
 
-When you click on the one-line description of a library, you are shown the actual blocks in the library and a longer explanation of its purpose. You can browse the libraries to find one that will satisfy your needs. 
+```
 
-The libraries and their contents may change, but as of this writing the list library has these blocks: 
+```
 
-![image387.png](assets/image387.png) --> 
+This library has the goal of recreating the Logo approach to handling text:
+A text isn’t best viewed as a string of characters, but rather as a *sentence*, made of *words,*
+each of which is a string of *letters.* With a few specialized exceptions, this is why people put text into computers: The text is sentences of natural (i.e., human) language, and the emphasis is on words as constitutive of sentences. You barely notice the letters of the words, and you don’t notice the spaces between them at all, unless you’re proof-reading. (Even then: Proofreading is *diffciult,* because you see what you expect to see, what will make the snetence make sense,
+rather than the misspelling in front of of your eyes.) Internally, Logo stores a sentence as a list of words, and a word as a string of letters.
 
-(The lightning bolt (⚡️) before the name in several of these blocks means that they use compiled HOFs or JavaScript primitives to achieve optimal speed. They are officially considered experimental.) `Remove duplicates from` reports a list in which no two items are equal. The `sort` block takes a list and a two-input comparison predicate, such as `<`, and reports a list with the items sorted according to that comparison. The `assoc` block  is for looking up a key in an *association list:* a list of two-item lists. In each two-item list, the first is a *key* and the second is a *value.* The inputs are a key and an association list; the block reports the first key-value pair whose key is equal to the input key. 
 
-`For each item` is a variant of the primitive version that provides a \# variable containing the position in the input list of the currently considered item. `Multimap`  is a version of `map` that allows multiple list inputs, in which case the mapping function must take as many inputs as there are lists; it will be called with all the first items, all the second items, and so on. `Zip` takes any number of lists as inputs; it reports a list of lists: all the first items, all the second items, and so on. The `no-name` identity function reports its input. 
+Inexplicably, the designers of Scratch chose to abandon that tradition,
+and to focus on the representation of text as a string of characters.
+The one vestige of the Logo tradition from which Scratch developed is the block named letter (1) of (world)\index{letter
+(1) of (world) block} , rather than character (1) of (world). *Snap!*
+inherits its text handling from Scratch.
 
-`Sentence` and `sentence ➔ list`  are borrowed from the [word and sentence library](#word-and-sentence-library) to serve as a variant of append that accepts non-lists as inputs. `Printable` takes a list structure of any depth as input and reports a compact representation of the list as a text string. 
+In Logo, the visual representation of a sentence\index{visual representation of a sentence} (a list of words) looks like a natural language sentence: a string of words with spaces between them. In
+*Snap!*, the visual representation of a list looks nothing at all like natural language. On the other hand, representing a sentence as a string means that the program must continually re-parse the text on every operation, looking for spaces, treating multiple consecutive spaces as one, and so on. Also, it’s more convenient to treat a sentence as a list of words rather than a string of words because in the former case you can use the higher order functions `map`, `keep`, and `combine` on them. This library attempts to be agnostic as to the internal representation of sentences. The sentence selectors accept any combination of lists and strings; there are two sentence constructors, one to make a string (join words) and one to make a list (sentence).
 
-The iteration, composition library has these blocks: 
+The selector names come from Logo, and should be self-explanatory.
+However, because in a block language you don’t have to type the block name, instead of the terse butfirst or the cryptic bf we spell out “all but first of” and include “word” or “sentence” to indicate the intended domain. There’s no first letter of block because `letter 1 of` serves that need. `Join words` (the sentence-as-string constructor) is like the primitive `join` except that it puts a space in the reported value between each of the inputs. `Sentence` (the List-colored sentence-as-list constructor) accepts any number of inputs, which can be words,
+sentences-as-lists, or sentences-as-strings. (If inputs are lists of lists, only one level of flattening is done.) `Sentence` reports a list of words; there will be no empty words or words containing spaces. The four blocks with right-arrows in their names convert back and forth between text strings (words or sentences) and lists. (Splitting a word into a list of letters is unusual unless you’re a linguist investigating orthography.) `Printable`
+takes a list (including a deep list) of words as input and reports a text string in which parentheses are used to show the structure, as in Lisp/Scheme.
 
-![image388.png](assets/image388.png)  ![image389.png](assets/image389.png)  
+The pixels library has one block:
 
-`Catch` provide a nonlocal exit facility. You can drag the tag from a `catch` block to a `throw` inside its C-slot, and the throw will then jump directly out to the matching catch without doing anything in between. 
+![image395.png](assets/image395.png -->
 
-`If do and pause all` is for setting a breakpoint while debugging code. The idea is to put show variable blocks for local variables in the C-slot; the watchers will be deleted when the user continues from the pause. 
+Costumes are first class data in *Snap!*. Most of the processing of costume data is done by primitive blocks in the Looks category. (See page
+[79](#media-computation-with-costumes).) This library provides snap
+, which takes a picture using your computer’s camera and reports it as a costume.
 
-`Ignore` is used when you need to call a reporter but you don’t care about the value it reports. (For example, you are writing a script to time how long the reporter takes.) 
+The bar charts library has these blocks:
 
-The `cascade` blocks take an initial value and call a function repeatedly on that value, *f*(*f*(*f*(*f*…(*x*)))). 
+![image396.png](assets/image396.png) 
+```
 
-The `compose` block takes two functions and reports the function *f*(*g*(*x*)). 
+```
 
-The first three repeat blocks  are variants of the primitive `repeat until` block, giving all four combinations of whether the first test happens before or after the first repetition, and whether the condition must be true or false to continue repeating. The last repeat block is like the `repeat` primitive, but makes the number of repetitions so far available to the repeated script. The next two blocks are variations on `for`\index{$for$ block} : the first allows an explicit step instead of using ±1, and the second allows any values, not just numbers; inside the script you say ![image390.png](assets/image390.png) --> ``` 
+`Bar chart of table`\index{bar chart block} takes a table (typically from a CSV data set) as input and reports a summary of the table grouped by the field in the specified column number. The remaining three inputs are used only if the field values are numbers, in which case they can be grouped into buckets
+(e.g., decades, centuries, etc.). Those inputs specify the smallest and largest values of interest and, most importantly, the width of a bucket
+(10 for decades, 100 for centuries). If the field isn't numeric, leave these three inputs empty or set them to zero. Each string value of the field is its own bucket, and they appear sorted alphabetically.
 
-``` 
+`Bar chart of table` reports a new table with three columns. The first column contains the bucket name or smallest number. The second column contains a nonnegative integer that says how many records in the input table fall into this bucket. The third column is a subtable containing the actual records from the original table that fall into the bucket. `Plot bar chart`
+ takes the table reported by bar chart and graphs it on the stage, with axes labelled appropriately. The remaining blocks are helpers for those.
 
-replacing the grey block in the picture with an expression to give the next desired value for the loop index. 
+If your buckets aren't of constant width, or you want to group by some function of more than one field, load the "Frequency Distribution Analysis" library instead.
 
-`Pipe` allows reordering a nested composition with a left-to-right one: 
+The multi-branched conditional library\index{conditional library:multiple-branch} has these blocks:
 
-![image392.png](assets/image392.png)   ``` 
+![image397.png](assets/image397.png) 
 
-``` ![image391.png](assets/image391.png)  ``` 
+The `catch` and `throw` blocks duplicate ones in the iteration library, and are included because they are used to implement the others. The `cases: if/then` block
+ sets up a multi-branch conditional, similar to cond in Lisp -family languages. The first branch is built into the cases block; it consists of a Boolean test in the first hexagonal slot and an action script, in the C-slot, to be run if the test reports true. The remaining branches go in the variadic hexagonal input at the end; each branch consists of an `else if` block, which includes the Boolean test and the corresponding action script, except possibly for the last branch, which can use the unconditional `else` block.
+As in other languages, once a branch succeeds, no other branches are tested.
 
-``` 
+###
 
-The stream library has these blocks: 
+The variadic library has these blocks:
 
-![image393.png](assets/image393.png)  ``` 
+![image398.png](assets/image398.png) 
 
-``` 
+These are versions of the associative operators `and`, and `or` that take any number of inputs instead of exactly two inputs. As with any variadic input, you can also drop a list of values onto the arrowheads instead of providing the inputs one at a time As of version 8.0, the arithmetic operators sum, product, minimum, and maximum are no longer included, because the primitive operators `+` `x`,
+`min`, and `max` are themselves variadic.
 
-*Streams* are a special kind of list whose items are not computed until they are needed. This makes certain computations more efficient, and also allows the creation of lists with infinitely many items, such as a list of all the positive integers. The first five blocks are stream versions of the list blocks. 
+The colors and crayons library has these blocks:
 
-`in front of`, `item 1 of`\index{item 1 of stream block}, `all but first of`\index{all but first of stream block}, `map`, and `keep`. `Show stream`  takes a stream and a number as inputs, and reports an ordinary list of the first *n* items of the stream. `Stream`  is like the primitive list; it makes a finite stream from explicit items. `Sieve` is an example block that takes as input the stream of integers starting with 2 and reports the stream of all the prime numbers. `Stream with numbers from` is  like the numbers from block for lists, except that there is no endpoint; it reports an infinite stream of numbers. 
+It is intended as a more powerful replacement for the primitive `set pen`
+block specification as a better alternative to the HSV that *Snap!* inherits from JavaScript; a “fair hue ”
+scale that compensates for the eye’s grouping a wide range of light frequencies as green while labelling mere slivers as orange or yellow;
+the `X11/W3C standard color names`; `RGB in hexadecimal`; a linear color scale (as in the old days, but better) based on fair hues and including shades (darker colors) and grayscale. Another linear scale is a curated set of 100 “crayons,” explained further on the next page.
 
-<a name="word-and-sentence-library"></a> The **word and sentence library** has these blocks: 
+![image412.png](assets/image412.png) 
 
- ![image394.png](assets/image394.png) 
+Colors are created by the ![image414.png](assets/image414.png)  block (for direct user selection), the `color from`
+  , which reports the color currently in use by the pen. The `from color` block
+ reports names or numbers associated with a color:
 
-``` 
+![image411.png](assets/image411.png) 
 
-``` 
+Colors can be created from other colors:
+![image415.png](assets/image415.png) 
 
-This library has the goal of recreating the Logo approach to handling text: A text isn’t best viewed as a string of characters, but rather as a *sentence*, made of *words,* each of which is a string of *letters.* With a few specialized exceptions, this is why people put text into computers: The text is sentences of natural (i.e., human) language, and the emphasis is on words as constitutive of sentences. You barely notice the letters of the words, and you don’t notice the spaces between them at all, unless you’re proof-reading. (Even then: Proofreading is *diffciult,* because you see what you expect to see, what will make the snetence make sense, rather than the misspelling in front of of your eyes.) Internally, Logo stores a sentence as a list of words, and a word as a string of letters. 
+The three blocks with pen in their names are improved versions of primitive Pen blocks. In principle `set pen`, for example, could be implemented using a (hypothetical) `set pen` to color composed with the `color from` block, but in fact `set pen` benefits from knowing how the pen color was set in its previous invocation, so it’s implemented separately from `color from`. Details in Appendix A.
 
- Inexplicably, the designers of Scratch chose to abandon that tradition, and to focus on the representation of text as a string of characters. The one vestige of the Logo tradition from which Scratch developed is the block named letter (1) of (world)\index{letter (1) of (world) block} , rather than character (1) of (world). *Snap!* inherits its text handling from Scratch. 
+The recommended way to choose a color is from one of two linear scales: the continuous *color numbers* and the discrete *crayons:*
 
-In Logo, the visual representation of a sentence\index{visual representation of a sentence} (a list of words) looks like a natural language sentence: a string of words with spaces between them. In *Snap!*, the visual representation of a list looks nothing at all like natural language. On the other hand, representing a sentence as a string means that the program must continually re-parse the text on every operation, looking for spaces, treating multiple consecutive spaces as one, and so on. Also, it’s more convenient to treat a sentence as a list of words rather than a string of words because in the former case you can use the higher order functions `map`, `keep`, and `combine` on them. This library attempts to be agnostic as to the internal representation of sentences. The sentence selectors accept any combination of lists and strings; there are two sentence constructors, one to make a string (join words) and one to make a list (sentence). 
+![image416.png](assets/image416.png) 
 
-The selector names come from Logo, and should be self-explanatory. However, because in a block language you don’t have to type the block name, instead of the terse butfirst or the cryptic bf we spell out “all but first of” and include “word” or “sentence” to indicate the intended domain. There’s no first letter of block because `letter 1 of` serves that need. `Join words` (the sentence-as-string constructor) is like the primitive `join` except that it puts a space in the reported value between each of the inputs. `Sentence` (the List-colored sentence-as-list constructor) accepts any number of inputs, which can be words, sentences-as-lists, or sentences-as-strings. (If inputs are lists of lists, only one level of flattening is done.) `Sentence` reports a list of words; there will be no empty words or words containing spaces. The four blocks with right-arrows in their names convert back and forth between text strings (words or sentences) and lists. (Splitting a word into a list of letters is unusual unless you’re a linguist investigating orthography.) `Printable` takes a list (including a deep list) of words as input and reports a text string in which parentheses are used to show the structure, as in Lisp/Scheme. 
+![image417.png](assets/image417.png) 
 
-The pixels library has one block: 
+Color numbers are based on *fair hues,* a modification of the spectrum (rainbow) hue scale that devotes less space to green and more to orange and yellow, as well as promoting brown to a real color.
+Here is the normal hue scale, for reference:
 
-![image395.png](assets/image395.png --> 
+![image418.png](assets/image418.png) 
 
-Costumes are first class data in *Snap!*. Most of the processing of costume data is done by primitive blocks in the Looks category. (See page [79](#media-computation-with-costumes).) This library provides snap , which takes a picture using your computer’s camera and reports it as a costume. 
+Here is the fair hue scale:
 
-The bar charts library has these blocks: 
+![image419.png](assets/image419.png) 
 
-![image396.png](assets/image396.png)  ``` 
+Here is the color number scale:
 
-``` 
+![image416.png](assets/image416.png) 
 
-`Bar chart of table`\index{bar chart block} takes a table (typically from a CSV data set) as input and reports a summary of the table grouped by the field in the specified column number. The remaining three inputs are used only if the field values are numbers, in which case they can be grouped into buckets (e.g., decades, centuries, etc.). Those inputs specify the smallest and largest values of interest and, most importantly, the width of a bucket (10 for decades, 100 for centuries). If the field isn't numeric, leave these three inputs empty or set them to zero. Each string value of the field is its own bucket, and they appear sorted alphabetically. 
+(The picture is wider so that pure spectral colors line up with the fair hue scale.)
 
-`Bar chart of table` reports a new table with three columns. The first column contains the bucket name or smallest number. The second column contains a nonnegative integer that says how many records in the input table fall into this bucket. The third column is a subtable containing the actual records from the original table that fall into the bucket. `Plot bar chart`  takes the table reported by bar chart and graphs it on the stage, with axes labelled appropriately. The remaining blocks are helpers for those. 
+ And here are the 100 crayons :
 
-If your buckets aren't of constant width, or you want to group by some function of more than one field, load the "Frequency Distribution Analysis" library instead. 
+![image417.png](assets/image417.png) 
 
-The multi-branched conditional library\index{conditional library:multiple-branch} has these blocks: 
+The `color from` block, for example, provides different pulldown menus depending on which scale you choose:
 
-![image397.png](assets/image397.png)  
+![image410.png](assets/image410.png) 
 
-The `catch` and `throw` blocks duplicate ones in the iteration library, and are included because they are used to implement the others. The `cases: if/then` block  sets up a multi-branch conditional, similar to cond in Lisp -family languages. The first branch is built into the cases block; it consists of a Boolean test in the first hexagonal slot and an action script, in the C-slot, to be run if the test reports true. The remaining branches go in the variadic hexagonal input at the end; each branch consists of an `else if` block, which includes the Boolean test and the corresponding action script, except possibly for the last branch, which can use the unconditional `else` block. As in other languages, once a branch succeeds, no other branches are tested. 
+ You can also type the crayon name:
 
-### 
+![image420.png](assets/image420.png) 
 
-The variadic library has these blocks: 
+There are many scales:
 
-![image398.png](assets/image398.png)  
+![image427.png](assets/image427.png) 
 
-These are versions of the associative operators `and`, and `or` that take any number of inputs instead of exactly two inputs. As with any variadic input, you can also drop a list of values onto the arrowheads instead of providing the inputs one at a time As of version 8.0, the arithmetic operators sum, product, minimum, and maximum are no longer included, because the primitive operators `+` `x`, `min`, and `max` are themselves variadic. 
+The white slot at the end of some of the blocks has two purposes. It can be used to add a transparency to a color (0=opaque,
+100=transparent):
 
-The colors and crayons library has these blocks: 
+![image428.png](assets/image428.png) 
 
-It is intended as a more powerful replacement for the primitive `set pen` block specification as a better alternative to the HSV that *Snap!* inherits from JavaScript; a “fair hue ” scale that compensates for the eye’s grouping a wide range of light frequencies as green while labelling mere slivers as orange or yellow; the `X11/W3C standard color names`; `RGB in hexadecimal`; a linear color scale (as in the old days, but better) based on fair hues and including shades (darker colors) and grayscale. Another linear scale is a curated set of 100 “crayons,” explained further on the next page. 
+or it can be expanded to enter three or four numbers for a vector directly into the block, so these are equivalent:
 
-![image412.png](assets/image412.png)  
+![image429.png](assets/image429.png) 
 
-Colors are created by the ![image414.png](assets/image414.png)  block (for direct user selection), the `color from`   , which reports the color currently in use by the pen. The `from color` block  reports names or numbers associated with a color: 
+But note that a transparency number in a four-number RGBA vector is on the scale 255=opaque, 0=transparent, so the following are *not*
+equivalent:
 
-![image411.png](assets/image411.png)  
+![image430.png](assets/image430.png)
 
-Colors can be created from other colors: ![image415.png](assets/image415.png)  
+`Set pen crayon to` provides the equivalent of a box of 100 crayons. They are divided into color groups, so the menu in the set pen crayon to input slot has submenus. The colors are chosen so that starting from crayon 0, `change pen crayon by` 10 rotates through an interesting,
+basic set of ten colors:
 
-The three blocks with pen in their names are improved versions of primitive Pen blocks. In principle `set pen`, for example, could be implemented using a (hypothetical) `set pen` to color composed with the `color from` block, but in fact `set pen` benefits from knowing how the pen color was set in its previous invocation, so it’s implemented separately from `color from`. Details in Appendix A. 
+![image440.png](assets/image440.png)
 
-The recommended way to choose a color is from one of two linear scales: the continuous *color numbers* and the discrete *crayons:* 
+Using `change pen crayon by` 5 instead gives ten more colors, for a total of 20:
 
-![image416.png](assets/image416.png)  
+![image441.png](assets/image441.png)
 
-![image417.png](assets/image417.png)  
+(Why didn’t we use the colors of the 100-crayon Crayola™ box? A few reasons, one of which is that some Crayola colors aren’t representable on RGB screens. Some year when you have nothing else to do, look up
+“color space” on Wikipedia. Also “crayon.” Oh, it’s deliberate that
+`change pen crayon by` 5 doesn’t include white, since that’s the usual stage background color. White is crayon 14.) Note that crayon 43 is
+“Variables”; all the standard block colors are included.
 
-Color numbers are based on *fair hues,* a modification of the spectrum (rainbow) hue scale that devotes less space to green and more to orange and yellow, as well as promoting brown to a real color. Here is the normal hue scale, for reference: 
+See Appendix A (@sec-crayons-and-color-numbers) for more information.
 
-![image418.png](assets/image418.png)  
+The **crayon library** has only the crayon features,
+without the rest of the colors package.
 
-Here is the fair hue scale: 
+![image442.png](assets/image442.png)
 
-![image419.png](assets/image419.png)  
+The catch errors library has these blocks:
 
-Here is the color number scale: 
+![image444.png](assets/image444.png)
 
-![image416.png](assets/image416.png)  
+The `safely try` block
+ allows you to handle errors that happen when your program is run within the program, instead of stopping the script with a red halo and an obscure error message. The block runs the script in its first C-slot. If it finishes without an error, nothing else happens. But if an error happens, the code in the second C-slot is run.
+While that second script is running, the variable ![image443.png](assets/image443.png)   contains the text of the error message that would have been displayed if you weren’t catching the error. The `error` block is sort of the opposite:
+it lets your program *generate* an error message, which will be displayed with a red halo unless it is caught by `safely try`. `Safely try reporting` is the reporter version of `safely try`.
 
-(The picture is wider so that pure spectral colors line up with the fair hue scale.) 
+The text costumes library has only two blocks:
 
- And here are the 100 crayons : 
+ ![image446.png](assets/image446.png) 
+ ![image447.png](assets/image447.png) -->
 
-![image417.png](assets/image417.png)  
+`Costume from text`
+reports a costume that can be used with the `switch to costume` block to make a button:
 
-The `color from` block, for example, provides different pulldown menus depending on which scale you choose: 
+![image445.png](assets/image445.png) 
 
-![image410.png](assets/image410.png)  
+`Costume with background` reports a costume made from another costume by coloring its background, taking a color input like the `set pen color to RGB(A)` block and a number of turtle steps of padding around the original costume. These two blocks work together to make even better buttons:
 
- You can also type the crayon name: 
+![image448.png](assets/image448.png) 
 
-![image420.png](assets/image420.png)  
+The text to speech library has these blocks:
 
-There are many scales: 
+![image449.png](assets/image449.png) 
 
-![image427.png](assets/image427.png)  
+This library interfaces with a capability in up-to-date browsers, so it might not work for you. It works best if the accent matches the text!
 
-The white slot at the end of some of the blocks has two purposes. It can be used to add a transparency to a color (0=opaque, 100=transparent): 
+The parallelization library contains these blocks:
 
-![image428.png](assets/image428.png)  
+![image450.png](assets/image450.png) 
 
-or it can be expanded to enter three or four numbers for a vector directly into the block, so these are equivalent: 
+The two `do in parallel`blocks
+ take any number of scripts as inputs.
+Those scripts will be run in parallel, like ordinary independent scripts in the scripting area. `The do in parallel and wait` version waits until all of those scripts have finished before continuing the script below the block.
 
-![image429.png](assets/image429.png)  
+The create variables library
 
-But note that a transparency number in a four-number RGBA vector is on the scale 255=opaque, 0=transparent, so the following are *not* equivalent: 
 
-![image430.png](assets/image430.png) 
+![image451.png](assets/image451.png) 
 
-`Set pen crayon to` provides the equivalent of a box of 100 crayons. They are divided into color groups, so the menu in the set pen crayon to input slot has submenus. The colors are chosen so that starting from crayon 0, `change pen crayon by` 10 rotates through an interesting, basic set of ten colors: 
+These blocks allow a program to perform the same operation as the button, making global, sprite local, or script variables, but allowing the program to compute the variable name(s). It can also set and find the values of these variables, show and hide their stage watchers,
+delete them, and find out if they already exist.
 
-![image440.png](assets/image440.png) 
+The getters and setters library has these blocks:
 
-Using `change pen crayon by` 5 instead gives ten more colors, for a total of 20: 
+![image452.png](assets/image452.png) 
 
-![image441.png](assets/image441.png) 
+The purpose of this library is to allow program access to the settings controlled by user interface elements, such as the settings menu ![image453.png](assets/image453.png). The `setting` block\index{setting block} reports a setting; the `set flag` block sets yes-or-no options that have checkboxes in the user interface, while the
+`set value` block controls settings with numeric or text values, such as project name.
 
-(Why didn’t we use the colors of the 100-crayon Crayola™ box? A few reasons, one of which is that some Crayola colors aren’t representable on RGB screens. Some year when you have nothing else to do, look up “color space” on Wikipedia. Also “crayon.” Oh, it’s deliberate that `change pen crayon by` 5 doesn’t include white, since that’s the usual stage background color. White is crayon 14.) Note that crayon 43 is “Variables”; all the standard block colors are included. 
+Certain settings are ordinarily remembered on a per-user basis, such as the “zoom blocks” value. But when these settings are changed by this library, the change is in effect only while the project using the library is loaded. No permanent changes are made. Note: this library has not been converted for version 7.0, so you’ll have to enable Javascript extensions to use it.
 
-See Appendix A (@sec-crayons-and-color-numbers) for more information. 
+The bignums, rationals, complex \#s library\index{infinite precision integer library} has these blocks:
 
-The **crayon library** has only the crayon features, without the rest of the colors package. 
+![image454.png](assets/image454.png)
 
-![image442.png](assets/image442.png) 
+The `USE BIGNUMS` block takes a Boolean input, to turn the infinite precision feature on or off. When on, all of the arithmetic operators are redefined to accept and report integers of any number of digits (limited only by the memory of your computer) and, in fact, the entire Scheme numeric tower, with exact rationals and with complex numbers. The `Scheme number` block has a list of functions applicable to Scheme numbers, including subtype predicates such as rational? and infinite?, and selectors such as numerator and real-part.
 
-The catch errors library has these blocks: 
 
-![image444.png](assets/image444.png) 
+The `!` block computes the factorial function, useful to test whether bignums are turned on. Without bignums:
 
-The `safely try` block  allows you to handle errors that happen when your program is run within the program, instead of stopping the script with a red halo and an obscure error message. The block runs the script in its first C-slot. If it finishes without an error, nothing else happens. But if an error happens, the code in the second C-slot is run. While that second script is running, the variable ![image443.png](assets/image443.png)   contains the text of the error message that would have been displayed if you weren’t catching the error. The `error` block is sort of the opposite: it lets your program *generate* an error message, which will be displayed with a red halo unless it is caught by `safely try`. `Safely try reporting` is the reporter version of `safely try`. 
+![image455.png](assets/image455.png) 
 
-The text costumes library has only two blocks: 
+With bignums:
 
- ![image446.png](assets/image446.png)   ![image447.png](assets/image447.png) --> 
+![image456.png](assets/image456.png) 
 
-`Costume from text` reports a costume that can be used with the `switch to costume` block to make a button: 
+The 375-digit value of 200! isn’t readable on this page, but if you right-click on the block and choose “result pic,” you can open the resulting picture in a browser window and scroll through it. (These values end with a bunch of zero digits. That’s not roundoff error; the prime factors of 100! and 200! include many copies of 2 and 5.) The block with no name is a way to enter things like 3/4 and 4+7i into numeric input slots by converting the slot to Any type.
 
-![image445.png](assets/image445.png)  
+The strings, multi-line input library provides these blocks:
 
-`Costume with background` reports a costume made from another costume by coloring its background, taking a color input like the `set pen color to RGB(A)` block and a number of turtle steps of padding around the original costume. These two blocks work together to make even better buttons: 
+![image463.png](assets/image463.png) 
 
-![image448.png](assets/image448.png)  
+All of these could be written in *Snap!* itself, but these are implemented using the corresponding JavaScript library functions directly, so they run fast. They can be used, for example, in scraping data from a web site. The command use case-independent comparisons applies only to this library. The `multiline` block accepts and reports a text input that can include newline characters.
 
-The text to speech library has these blocks: 
+The animation library has these blocks:
 
-![image449.png](assets/image449.png)  
+![image464.png](assets/image464.png) 
 
-This library interfaces with a capability in up-to-date browsers, so it might not work for you. It works best if the accent matches the text! 
+Despite the name, this isn’t only about graphics; you can animate the values of a variable, or anything else that’s expressed numerically.
 
-The parallelization library contains these blocks: 
 
-![image450.png](assets/image450.png)  
+The central idea of this library is an *easing function* *,* a reporter whose domain and range are real numbers between 0 and 1 inclusive. The function represents what fraction of the “distance” (in quotes because it might be any numeric value, such as temperature in a simulation of weather) from here to there should be covered in what fraction of the time. A linear easing function means steady progression. A quadratic easing function means starting slowly and accelerating. (Note that, since it’s a requirement that
+*f*(0)=0 and *f*(1)=1, there is only one linear easing function,
+*f*(*x*)=*x*, and similarly for other categories.) The ![image465.png](assets/image465.png) block reports some of the common easing functions.
 
-The two `do in parallel`blocks  take any number of scripts as inputs. Those scripts will be run in parallel, like ordinary independent scripts in the scripting area. `The do in parallel and wait` version waits until all of those scripts have finished before continuing the script below the block. 
+The two Motion blocks in this library animate a sprite. `Glide` always animates the sprite’s motion. `Animate's` first pulldown menu input allows you to animate horizontal or vertical motion, but will also animate the sprite’s direction or size. The `animate setter` block in Control lets you animate any numeric quantity with any easing function.
+The getter and setter inputs are best explained by example:
 
-The create variables library 
+![image466.png](assets/image466.png) 
 
- ![image451.png](assets/image451.png)  
+is equivalent to
 
-These blocks allow a program to perform the same operation as the button, making global, sprite local, or script variables, but allowing the program to compute the variable name(s). It can also set and find the values of these variables, show and hide their stage watchers, delete them, and find out if they already exist. 
+![image467.png](assets/image467.png) 
 
-The getters and setters library has these blocks: 
+The other blocks in the library are helpers for these four.
 
-![image452.png](assets/image452.png)  
+The serial ports library contains these blocks:
 
-The purpose of this library is to allow program access to the settings controlled by user interface elements, such as the settings menu ![image453.png](assets/image453.png). The `setting` block\index{setting block} reports a setting; the `set flag` block sets yes-or-no options that have checkboxes in the user interface, while the `set value` block controls settings with numeric or text values, such as project name. 
+![image468.png](assets/image468.png) 
 
-Certain settings are ordinarily remembered on a per-user basis, such as the “zoom blocks” value. But when these settings are changed by this library, the change is in effect only while the project using the library is loaded. No permanent changes are made. Note: this library has not been converted for version 7.0, so you’ll have to enable Javascript extensions to use it. 
+It is used to allow hardware developers to control devices such as robots that are connected to your computer via a serial port.
 
-The bignums, rationals, complex \#s library\index{infinite precision integer library} has these blocks: 
+The frequency distribution analysis library\index{frequency distribution analysis library} has these blocks:
 
-![image454.png](assets/image454.png) 
+![image469.png](assets/image469.png) 
 
-The `USE BIGNUMS` block takes a Boolean input, to turn the infinite precision feature on or off. When on, all of the arithmetic operators are redefined to accept and report integers of any number of digits (limited only by the memory of your computer) and, in fact, the entire Scheme numeric tower, with exact rationals and with complex numbers. The `Scheme number` block has a list of functions applicable to Scheme numbers, including subtype predicates such as rational? and infinite?, and selectors such as numerator and real-part. 
+This is a collection of tools for analyzing large data sets and plotting histogram s of how often some value is found in some column of the table holding the data.
 
- The `!` block computes the factorial function, useful to test whether bignums are turned on. Without bignums: 
+For more information go here:
 
-![image455.png](assets/image455.png)  
+https://tinyurl.com/jens-data
 
-With bignums: 
+The audio comp library includes these blocks:
 
-![image456.png](assets/image456.png)  
+![image470.png](assets/image470.png) 
 
-The 375-digit value of 200! isn’t readable on this page, but if you right-click on the block and choose “result pic,” you can open the resulting picture in a browser window and scroll through it. (These values end with a bunch of zero digits. That’s not roundoff error; the prime factors of 100! and 200! include many copies of 2 and 5.) The block with no name is a way to enter things like 3/4 and 4+7i into numeric input slots by converting the slot to Any type. 
+This library takes a sound,
+one that you record or one from our collection of sounds, and manipulates it by systematically changing the intensity of the samples in the sound and by changing the sampling rate at which the sound is reproduced. Many of the blocks are helpers for the `plot sound` block,
+used to plot the waveform of a sound plays a sound. \_\_ `Hz for`
+ reports a sine wave as a list of samples.
 
-The strings, multi-line input library provides these blocks: 
+The web services library has these blocks:
 
-![image463.png](assets/image463.png)  
+![image471.png](assets/image471.png)
 
-All of these could be written in *Snap!* itself, but these are implemented using the corresponding JavaScript library functions directly, so they run fast. They can be used, for example, in scraping data from a web site. The command use case-independent comparisons applies only to this library. The `multiline` block accepts and reports a text input that can include newline characters. 
+The first block is a generalization of the primitive
+`url` block , allowing more control over the various options in web requests:
+`GET`, `POST`, `PUT`, and `DELETE`, and fine control over the content of the message sent to the server. `Current location`\index{current location block} reports your latitude and longitude. `Listify`\index{listify block} takes some text in JSON format (see page
+[54](#multi-dimensional-lists-and-json)) and converts it to a structured list. `Value at key` looks up a key-value pair in a (listified) JSON dictionary. The `key:value:` block
+ is just a constructor for an abstract data type used with the other blocks
 
-The animation library has these blocks: 
+The database library contains these blocks:
 
-![image464.png](assets/image464.png)  
+![image472.png](assets/image472.png)
 
-Despite the name, this isn’t only about graphics; you can animate the values of a variable, or anything else that’s expressed numerically. 
+It is used to keep data that persist from one *Snap!* session
+ to the next, if you use the same browser and the same login.
 
- The central idea of this library is an *easing function* *,* a reporter whose domain and range are real numbers between 0 and 1 inclusive. The function represents what fraction of the “distance” (in quotes because it might be any numeric value, such as temperature in a simulation of weather) from here to there should be covered in what fraction of the time. A linear easing function means steady progression. A quadratic easing function means starting slowly and accelerating. (Note that, since it’s a requirement that *f*(0)=0 and *f*(1)=1, there is only one linear easing function, *f*(*x*)=*x*, and similarly for other categories.) The ![image465.png](assets/image465.png) block reports some of the common easing functions. 
+The world map library has these blocks:
 
-The two Motion blocks in this library animate a sprite. `Glide` always animates the sprite’s motion. `Animate's` first pulldown menu input allows you to animate horizontal or vertical motion, but will also animate the sprite’s direction or size. The `animate setter` block in Control lets you animate any numeric quantity with any easing function. The getter and setter inputs are best explained by example: 
+![image473.png](assets/image473.png) 
 
-![image466.png](assets/image466.png)  
+Using any of the command blocks puts a map on the screen, in a layer in front of the stage’s background but behind the pen trails layer (which is in turn behind all the sprites). The first block asks your browser for your current physical location, for which you may be asked to give permission. The next two blocks get and set the map’s zoom amount; the default zoom of 10 ﬁts from San Francisco not quite down to Palo Alto on the screen. A zoom of 1 ﬁts almost the entire world. A zoom of 3 fits the United States; a zoom of 5 ﬁts Germany. The zoom can be changed in half steps,
+i.e., 5.5 is different from 5, but 5.25 isn’t.
 
-is equivalent to 
+The next five blocks convert between stage coordinates (pixels) and Earth coordinates (latitude and longitude). The change by x: y: block shifts the map relative to the stage. The distance to block measures the map distance (in meters) between two sprites. The three reporters with current in their names find *your* actual location, again supposing that geolocation is enabled on your device. Update redraws the map; as costume reports the visible section of the map as a costume. `Set style`
+allows things like satellite pictures.
 
-![image467.png](assets/image467.png)  
+The APL primitives library contains these blocks:
 
-The other blocks in the library are helpers for these four. 
+![image474.png](assets/image474.png)
 
-The serial ports library contains these blocks: 
+![image475.png](assets/image475.png)
 
-![image468.png](assets/image468.png)  
+For more information about APL, see @sec-appendix-b-apl).
 
-It is used to allow hardware developers to control devices such as robots that are connected to your computer via a serial port. 
+The  **list comprehension library** has one block, `zip`:
 
-The frequency distribution analysis library\index{frequency distribution analysis library} has these blocks: 
+![image476.png](assets/image476.png)
 
-![image469.png](assets/image469.png)  
+Its first input is a function of two inputs. The two Any-type inputs are deep lists (lists of lists of…) interpreted as trees, and the function is called with every possible combination of a leaf node of the first tree and a leaf node of the second tree. But instead of taking atoms
+(non-lists) as the leaves, `zip` allows the leaves of each tree to be vectors (one-dimensional lists), matrices (two-dimensional lists), etc.
+The Number-type inputs specify the leaf dimension for each tree, so the function input might be called with a vector from the first tree and an atom from the second tree.
 
-This is a collection of tools for analyzing large data sets and plotting histogram s of how often some value is found in some column of the table holding the data. 
+The **bitwise library** provides bitwise logic functions; each bit of the reported value is the result of applying the corresponding Boolean function to the corresponding bits of the input(s). The Boolean functions are `not for ¬`, ` and for ∧`, ` or for ∨`, and `xor (exclusive or) for
+⊻` . The remaining functions shift their first input left or right by the number of bits given by the second input. `\<\<` is left shift, `\>\>` is arithmetic right shift (shifting in one bits from the left), and `\>\>\>`
+is logical right shift (shifting in zero bits from the left). If you don’t already know what these mean, find a tutorial online.
 
-For more information go here: 
+![image477.png](assets/image477.png)
 
-https://tinyurl.com/jens-data 
+The **MQTT library** supports the Message Queuing Telemetry Transport protocol, for connecting with IOT devices. See
+<https://mqtt.org/> for more information.
 
-The audio comp library includes these blocks: 
+![image487.png](assets/image487.png)
 
-![image470.png](assets/image470.png)  
+The **Signada library** allows you to control a microBit or similar device that works with the Signada MicroBlocks project.
 
-This library takes a sound, one that you record or one from our collection of sounds, and manipulates it by systematically changing the intensity of the samples in the sound and by changing the sampling rate at which the sound is reproduced. Many of the blocks are helpers for the `plot sound` block, used to plot the waveform of a sound plays a sound. \_\_ `Hz for`  reports a sine wave as a list of samples. 
+![image488.png](assets/image488.png)
 
-The web services library has these blocks: 
+The **menus library** provides the ability to display hierarchical menus on the stage, using the ask block’s ability to take lists as inputs. See @sec-ask-lists.
 
-![image471.png](assets/image471.png) 
+![image486.png](assets/image486.png)
 
-The first block is a generalization of the primitive `url` block , allowing more control over the various options in web requests: `GET`, `POST`, `PUT`, and `DELETE`, and fine control over the content of the message sent to the server. `Current location`\index{current location block} reports your latitude and longitude. `Listify`\index{listify block} takes some text in JSON format (see page [54](#multi-dimensional-lists-and-json)) and converts it to a structured list. `Value at key` looks up a key-value pair in a (listified) JSON dictionary. The `key:value:` block  is just a constructor for an abstract data type used with the other blocks 
-
-The database library contains these blocks: 
-
-![image472.png](assets/image472.png) 
-
-It is used to keep data that persist from one *Snap!* session  to the next, if you use the same browser and the same login. 
-
-The world map library has these blocks: 
-
-![image473.png](assets/image473.png)  
-
-Using any of the command blocks puts a map on the screen, in a layer in front of the stage’s background but behind the pen trails layer (which is in turn behind all the sprites). The first block asks your browser for your current physical location, for which you may be asked to give permission. The next two blocks get and set the map’s zoom amount; the default zoom of 10 ﬁts from San Francisco not quite down to Palo Alto on the screen. A zoom of 1 ﬁts almost the entire world. A zoom of 3 fits the United States; a zoom of 5 ﬁts Germany. The zoom can be changed in half steps, i.e., 5.5 is different from 5, but 5.25 isn’t. 
-
-The next five blocks convert between stage coordinates (pixels) and Earth coordinates (latitude and longitude). The change by x: y: block shifts the map relative to the stage. The distance to block measures the map distance (in meters) between two sprites. The three reporters with current in their names find *your* actual location, again supposing that geolocation is enabled on your device. Update redraws the map; as costume reports the visible section of the map as a costume. `Set style` allows things like satellite pictures. 
-
-The APL primitives library contains these blocks: 
-
-![image474.png](assets/image474.png) 
-
-![image475.png](assets/image475.png) 
-
-For more information about APL, see @sec-appendix-b-apl). 
-
-The  **list comprehension library** has one block, `zip`: 
-
-![image476.png](assets/image476.png) 
-
-Its first input is a function of two inputs. The two Any-type inputs are deep lists (lists of lists of…) interpreted as trees, and the function is called with every possible combination of a leaf node of the first tree and a leaf node of the second tree. But instead of taking atoms (non-lists) as the leaves, `zip` allows the leaves of each tree to be vectors (one-dimensional lists), matrices (two-dimensional lists), etc. The Number-type inputs specify the leaf dimension for each tree, so the function input might be called with a vector from the first tree and an atom from the second tree. 
-
-The **bitwise library** provides bitwise logic functions; each bit of the reported value is the result of applying the corresponding Boolean function to the corresponding bits of the input(s). The Boolean functions are `not for ¬`, ` and for ∧`, ` or for ∨`, and `xor (exclusive or) for ⊻` . The remaining functions shift their first input left or right by the number of bits given by the second input. `\<\<` is left shift, `\>\>` is arithmetic right shift (shifting in one bits from the left), and `\>\>\>` is logical right shift (shifting in zero bits from the left). If you don’t already know what these mean, find a tutorial online. 
-
-![image477.png](assets/image477.png) 
-
-The **MQTT library** supports the Message Queuing Telemetry Transport protocol, for connecting with IOT devices. See <https://mqtt.org/> for more information. 
-
-![image487.png](assets/image487.png) 
-
-The **Signada library** allows you to control a microBit or similar device that works with the Signada MicroBlocks project. 
-
-![image488.png](assets/image488.png) 
-
-The **menus library** provides the ability to display hierarchical menus on the stage, using the ask block’s ability to take lists as inputs. See @sec-ask-lists. 
-
-![image486.png](assets/image486.png) 
-
-The **Sci*Snap!* library** and the **TuneScope library** are too big to discuss here and are documented separately at <http://emu-online.de/ProgrammingWithSciSnap.pdf> and <https://maketolearn.org/creating-art-animations-and-music/> respectively. 
+The **Sci*Snap!* library** and the **TuneScope library** are too big to discuss here and are documented separately at
+<http://emu-online.de/ProgrammingWithSciSnap.pdf> and
+<https://maketolearn.org/creating-art-animations-and-music/>
+respectively.
